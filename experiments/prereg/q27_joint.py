@@ -1,5 +1,5 @@
 """Pre-registration of the consolidated-primitive read (ledger m3_prereg tag q27_joint), written before any of its episodes: plan C
-with consolidation (docs/PLAN_PRIMITIVES.md).  For each of the 20 pool tasks in results/robot/q27_plan.json, each step whose key is
+with consolidation (docs/history/PLAN_PRIMITIVES.md).  For each of the 20 pool tasks in results/robot/q27_plan.json, each step whose key is
 shared by >= 3 OTHER LIBERO-90 tasks gets one rank-16 primitive fitted jointly on those tasks' demos (c0_fit --joint; the scored
 task's own demo never enters); other steps run the policy itself.  The acceptance test keeps the primitive arm or the policy."""
 import json

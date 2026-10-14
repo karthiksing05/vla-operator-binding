@@ -4,7 +4,7 @@ Plan of 2026-09-28, written after the user's goal statement: "focus on how proto
 transfer and continual learning, leveraging the research we're already investigating". Decisions taken with the user: object
 poses from the simulator are used as an ORACLE first, then replaced by a learned reader before any headline claim; the
 continual-learning stream starts MINIMAL (about 14 tasks, two mirrored orders) and grows only if it shows falling marginal cost.
-The history (M0-M3, every retraction) stays in [docs/PLAN_2026-09.md](PLAN_2026-09.md); every number below is in `ledger/` and audited.
+The history (M0-M3, every retraction) stays in [docs/history/PLAN_2026-09.md](PLAN_2026-09.md); every number below is in `ledger/` and audited.
 
 ## 0. Status (2026-09-30, night): the ladder is run, iterated (rules v2), and the compositional stream confirmed
 

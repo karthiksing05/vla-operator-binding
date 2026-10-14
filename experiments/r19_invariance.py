@@ -1,6 +1,6 @@
 """WHERE in the prototype hierarchy is a task's motion structure invariant across instances yet specific to the task?
 
-The higher levels of the 40-task library lose as TEMPLATES (a mode of a blurred mixture is a slow average: docs/PROTOTYPES.md);
+The higher levels of the 40-task library lose as TEMPLATES (a mode of a blurred mixture is a slow average: docs/history/PROTOTYPES.md);
 this asks whether they win as CATEGORIES.  Every chunk of an episode (one per policy query, every 5th frame) is labelled at every
 level by the tree's own rule -- the mode its diffused copy converges to under that level's mixture (the basin, as r2b_marginal
 built the tree) -- and an episode becomes the sequence of its labels with repeats collapsed.  Episodes: up to --demos human

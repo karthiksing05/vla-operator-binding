@@ -273,7 +273,7 @@ def main():
                           H=bk.H, A=bk.A)
         logging.info(f"dsrl: task {t}, LoRA {lp} on, noise dim {bk.H * bk.A}, train {hooks.train}")
     elif a.mode.startswith("prims:"):
-        # prims:<task>?paths=<p0>+<p1>[&bind=1&proto=<k>&rho=0.7] -- plan C (docs/PLAN_PRIMITIVES.md): the task's steps in turn, each
+        # prims:<task>?paths=<p0>+<p1>[&bind=1&proto=<k>&rho=0.7] -- plan C (docs/history/PLAN_PRIMITIVES.md): the task's steps in turn, each
         # with its motion primitive (a keyed LoRA; "none" = the policy itself), switched at the policy's own release; bind=1
         # raises attention on the object prototype during the first step (lifelong_ood/policy/primitives.py); goal=1 switches each
         # primitive on only from the grasp to the release, apaths=<a0>+<a1> (plan E) the object primitives before the grasp

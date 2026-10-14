@@ -1,5 +1,5 @@
 """BIND: an additive bias on the ACTION EXPERT's attention logits over the image tokens of a referent (plan of 2026-10-01,
-evening; docs/METHOD.md).
+evening; docs/history/METHOD_2026-10-01.md).
 
 The frozen policy's action expert attends, at every layer and every Euler step, to the cached prefix: 256 agent-view tokens
 (columns 0-255, a 16 x 16 grid of 14-px patches of the 224 image, row-major), 256 wrist tokens (256-511), a zeroed third

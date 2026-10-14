@@ -1,4 +1,4 @@
-"""Media for the results site (experiments/site_page.py): side-by-side rollout videos on the same init state, prototype clips from
+"""Media for the results site (experiments/paper_page.py; the earlier archive/2026-10-program/pages/site_page.py): side-by-side rollout videos on the same init state, prototype clips from
 the demos, scene stills.  Every clip is cut from recorded episodes; nothing is rendered anew.
 
     ~/flash/miniconda3/envs/chunks/bin/python experiments/site_media.py      (CPU; ffmpeg from the LIBERO venv)

@@ -1,4 +1,4 @@
-"""Plan C (docs/PLAN_PRIMITIVES.md): fit one motion PRIMITIVE per step of a task from its one demonstration.
+"""Plan C (docs/history/PLAN_PRIMITIVES.md): fit one motion PRIMITIVE per step of a task from its one demonstration.
 
 The instruction's steps (primitives.steps_of) cut the demo at its first sustained release (primitives.segment); each segment's
 frames, prompted with the step's clause, fit a keyed LoRA on the action expert by flow matching (adapt.train, the one-demo LoRA's

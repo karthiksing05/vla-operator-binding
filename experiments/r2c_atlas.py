@@ -10,7 +10,7 @@ moving less than 2 cm is "hold".  Each prototype
 is described by its hand displacement over the chunk, its rotation, and its gripper behaviour, and named from those:
 e.g. "down + open", "lift + closed", "closing", "twist wrist + closed", "hold".  Per level: the vocabulary, how many
 tasks and frames use each word, examples as end-effector paths, and the coarse-to-fine tree of the top levels.
-Writes docs/PROTOTYPES.md, figures/robot/atlas_*.png and a ledger row r2c_atlas (the numbers the doc quotes).
+Writes docs/history/PROTOTYPES.md, figures/robot/atlas_*.png and a ledger row r2c_atlas (the numbers the doc quotes).
 """
 import argparse
 import collections

@@ -1,4 +1,4 @@
-"""Arrival streams: the populations of docs/PLAN_2026-09.md Section 4, ordered, split and hashed.
+"""Arrival streams: the populations of docs/history/PLAN_2026-09.md Section 4, ordered, split and hashed.
 
     S = build_stream("colormnist", spec="q5-v1", split="dev", seed=0)
     for a in S.arrivals: a.pop, a.tup, a.image (one real row or None for coordinates-only), a.prereq

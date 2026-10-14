@@ -1,6 +1,6 @@
 # What the task is
 
-Revised 2026-09-25 for the rework (`docs/PLAN_2026-09.md`). Read this before any result.
+Revised 2026-09-25 for the rework (`docs/history/PLAN_2026-09.md`). Read this before any result.
 
 ## The task, in one line
 
@@ -22,7 +22,7 @@ query is perfectly accurate and covers nothing, so coverage is a headline number
 
 *Not reconstruction.* Samples are scored against real held-out members of the arrival's class, with
 the arrival itself excluded, in Inception space; pixel-space recall rewards diversity and is never
-quoted (docs/REVIEW_2026-09.md, audit fault 7).
+quoted (docs/history/REVIEW_2026-09.md, audit fault 7).
 
 *Not test-time composition.* Zekun Wang et al.'s method discovers and composes prototypes for one query
 and keeps nothing (its stated limitation is "detecting, consolidating and reusing genuinely new
@@ -68,5 +68,5 @@ reproduce.
 
 The claim in the form it must take for policies: experiences accumulate as codes over prototypes and
 as folded prototypes, so cost tracks the vocabulary of the world rather than the length of the
-stream, and nothing already learned is overwritten. `docs/PLAN_2026-09.md` Section 7 states the
+stream, and nothing already learned is overwritten. `docs/history/PLAN_2026-09.md` Section 7 states the
 prerequisites and the benchmarks (LIBERO, THE COLOSSEUM).

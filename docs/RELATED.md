@@ -2,8 +2,8 @@
 
 > **2026-09-25.** The sections below the rule were written for the retired address / extend-basis
 > architecture. Their statements about OTHER papers stand; every number quoted for "ours" in them
-> predates the rework and is superseded by `ledger/` (see docs/REVIEW_2026-09.md for the verdicts).
-> The literature sweep for the rework is appended at the end; `docs/PLAN_2026-09.md` Section 3 is
+> predates the rework and is superseded by `ledger/` (see docs/history/REVIEW_2026-09.md for the verdicts).
+> The literature sweep for the rework is appended at the end; `docs/history/PLAN_2026-09.md` Section 3 is
 > its source.
 
 Compiled from a systematic sweep (arXiv API + abs-page verification) rather than recall. Every entry

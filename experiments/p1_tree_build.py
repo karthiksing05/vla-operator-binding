@@ -3,7 +3,7 @@ against held-out LABELS (evaluation only; the build never sees them).
 
     sbatch --export=ALL,SCRIPT="experiments/p1_tree_build.py --bench colormnist --seed 0" slurm/jobs/c_gpu.sbatch
 
-Kill criterion (docs/PLAN_2026-09.md, Section 5, phase 0): no level gives background purity >= 0.9 and
+Kill criterion (docs/history/PLAN_2026-09.md, Section 5, phase 0): no level gives background purity >= 0.9 and
 digit purity >= 0.7 with <= 300 nodes -> the pixel-space tree is dead.  Writes the tree to
 results/trees/, a mode-grid figure to figures/p1/, and a ledger row (bytes = the tree's).
 """

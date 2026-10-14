@@ -9,7 +9,7 @@ passes (mechanism, benchmark, restructure). Sections 1-8 are the plan; Appendix 
 `lifelong-ood-learner` is the primary repo for the lifelong/OOD thesis. Its current architecture is the three-tier ladder
 ADDRESS (72 B point in a linear factor basis over the class-embedding table) / EXTEND (1 KB new basis direction) /
 BLOCK (a value-gated rank-1 LoRA, 276 KB on ColorMNIST, 1.2 MB on Shapes3D), with a Cobweb-flavoured
-create/merge router over *factor hypotheses* (C5). The September review (`docs/REVIEW_2026-09.md`) retracted the
+create/merge router over *factor hypotheses* (C5). The September review (`docs/history/REVIEW_2026-09.md`) retracted the
 earlier headlines and left two honest findings: (i) a per-VALUE gated adapter is the only thing that renders a
 genuinely new value while preserving old classes exactly; (ii) parameter sparsity is not functional sparsity, the
 gate/anchor is what preserves.
@@ -576,12 +576,12 @@ login node SIGTERMs torch processes)
 
 ### 6g. Docs that survive
 
-`docs/REVIEW_2026-09.md` (frozen: the verdicts the archive maps to), `docs/COBWEB_UPDATE.md` (theory spine, to be
+`docs/history/REVIEW_2026-09.md` (frozen: the verdicts the archive maps to), `docs/COBWEB_UPDATE.md` (theory spine, to be
 extended with P8/P9 and the label-free P7), `docs/RELATED.md` (extended with Section 3), `docs/THE_TASK.md` revised
 (task = "given a stream, decompose each instance into the prototypes that explain it; store a code when they do;
 fold a new prototype only where they do not; charge every byte"; axes gain depth-of-novelty and bytes charged; the
 "where shown" table emptied until ledger rows exist), a five-line `docs/README.md`, and this plan as
-`docs/PLAN_2026-09.md`. New top-level README: thesis paragraph; the three-operator table; the ladder of results
+`docs/history/PLAN_2026-09.md`. New top-level README: thesis paragraph; the three-operator table; the ladder of results
 (propositions -> sampler parity -> tree -> decompose -> address -> fold frontier -> new-with-old -> consolidate ->
 second primitive / new factor -> CelebA + pretrained CIFAR), each rung quoting only audited numbers; reproduce;
 layout; archive pointer. Rule enforced by `tests/test_audit.py`: no numeral enters README, docs or paper unless

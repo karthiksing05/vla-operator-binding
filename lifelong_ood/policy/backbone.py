@@ -2,7 +2,7 @@
 
 openpi trains the action expert by flow matching on x_t = t * eps + (1 - t) * a (t = 1 noise, t = 0 data)
 with target u = eps - a and samples by Euler x <- x + dt * v, dt = -1/num_steps.  The identities this
-module rests on (docs/PLAN_2026-09.md Section 3):
+module rests on (docs/history/PLAN_2026-09.md Section 3):
 
     E[a | x_t]   = x_t - t * v            (Tweedie)
     E[eps | x_t] = x_t + (1 - t) * v

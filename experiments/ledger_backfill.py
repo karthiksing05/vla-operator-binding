@@ -1,4 +1,4 @@
-"""Backfill ledger rows for the runs docs/REVIEW_2026-09.md quotes, from the result files on disk.
+"""Backfill ledger rows for the runs docs/history/REVIEW_2026-09.md quotes, from the result files on disk.
 
 The review's numbers were produced at commit af8f07a by the commands in its appendix; the result files
 are gitignored.  This writes one small tracked row per (run, seed[, arm]) with `backfilled: true`, the
@@ -24,7 +24,7 @@ from lifelong_ood import ledger                                       # noqa: E4
 SOURCE = "af8f07a"
 NOTE_C = ("legacy accounting: the c-series charged adapters and codes only; 8 self-generated samples "
           "and a deepcopy of the backbone kept per stored concept were not charged "
-          "(docs/REVIEW_2026-09.md, audit 2026-09-25)")
+          "(docs/history/REVIEW_2026-09.md, audit 2026-09-25)")
 
 C1 = {"colormnist": ["F3A", "F3B", "F3C", "F3D"], "shapes3d": ["S3A", "S3Ae", "S3Av", "S3Ac", "S3B"]}
 C1_CMD = ("experiments/c1_cobweb_update.py --bench {bench} --seed {seed} --criterion all --u-high "

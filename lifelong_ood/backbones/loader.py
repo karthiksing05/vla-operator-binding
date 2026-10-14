@@ -12,7 +12,7 @@ Three families load through `load_backbone(spec)`:
 
 Every downstream function takes the handle, never the bare model, so the sampler / reads / ascent
 cannot be run in the wrong layout or range -- the two conventions whose silent mismatch cost the
-previous repository three results (docs/REVIEW_2026-09.md, RESULTS 7bb / 7ee).
+previous repository three results (docs/history/REVIEW_2026-09.md, RESULTS 7bb / 7ee).
 """
 from __future__ import annotations
 

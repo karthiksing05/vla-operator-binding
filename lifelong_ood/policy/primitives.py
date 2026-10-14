@@ -1,4 +1,4 @@
-"""REUSABLE MOTION PRIMITIVES (docs/PLAN_PRIMITIVES.md, plan C): a step of an instruction, a keyed LoRA on the action expert fitted
+"""REUSABLE MOTION PRIMITIVES (docs/history/PLAN_PRIMITIVES.md, plan C): a step of an instruction, a keyed LoRA on the action expert fitted
 on the matching segment of one demonstration, stored by its STEP KEY and reused by later tasks with the same step.
 
     steps_of(language)          -> the instruction's steps (bind_hooks.split_conj, else the whole instruction)

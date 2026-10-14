@@ -1,6 +1,6 @@
 """FOLD: add a genuinely new prototype to the manifold with a responsibility-gated minimal expert.
 
-The two halves of Proposition 2, made explicit for a network (docs/REVIEW_2026-09.md Part 2):
+The two halves of Proposition 2, made explicit for a network (docs/history/REVIEW_2026-09.md Part 2):
 
     L = E_{x ~ arrival, u} [ r_k(x_u) || eps(x_u; w_k = r_k) - eps ||^2 ]                    (r ~ 1 half)
       + lam E_{x ~ the model's OWN samples of other nodes, u} [ || eps(x_u; w_k = r_k(x_u)) - eps_base(x_u) ||^2 ]   (r ~ 0 half)

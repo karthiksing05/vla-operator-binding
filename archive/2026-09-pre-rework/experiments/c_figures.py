@@ -1,4 +1,4 @@
-"""Figures for docs/REVIEW_2026-09.md, drawn from the c-series result files.
+"""Figures for docs/history/REVIEW_2026-09.md, drawn from the c-series result files.
 
     python experiments/c_figures.py --c1 colormnist:'results/c1_cobweb_update_colormnist_F3*__seed*.json' \
         --c1 shapes3d:'results/c1_cobweb_update_shapes3d_S3*__seed*.json' \

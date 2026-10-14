@@ -2,8 +2,8 @@
 
 This directory is a record, not a codebase. It holds the experiments, tests, docs, launchers, figures
 and modules of the address / extend-basis / block architecture that the September 2026 review
-(`docs/REVIEW_2026-09.md`, kept at the top level) audited, and that the rework replaced with
-prototype composition and folding (`docs/PLAN_2026-09.md`). Paths were moved with `git mv`, so
+(`docs/history/REVIEW_2026-09.md`, kept at the top level) audited, and that the rework replaced with
+prototype composition and folding (`docs/history/PLAN_2026-09.md`). Paths were moved with `git mv`, so
 `git log --follow <file>` shows each file's full history. The old top-level README is
 [README_pre_rework.md](README_pre_rework.md); the old docs index is `docs/README.md`.
 
@@ -25,7 +25,7 @@ numbers.
 
 ## Retired claims, and the review's verdict on each
 
-| retired claim | where it was made | verdict (docs/REVIEW_2026-09.md unless noted) |
+| retired claim | where it was made | verdict (docs/history/REVIEW_2026-09.md unless noted) |
 |---|---|---|
 | Composition F1 0.605 vs poe-guided 0.003 (n9) | README, SCOREBOARD | pixel-space k=3 recall rewards diversity (audit fault 7); the canonical run gives 0.630; superseded by Inception-space coverage |
 | Bit-identical preservation (n5/n22, "0.25 bit-identical") | README, FINAL_REPORT | true by construction (old classes sampled with no adapter on); "0.25" is 1/(number of batches); a construction property, not a result |
