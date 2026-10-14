@@ -1,0 +1,109 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_89.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 18710528,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 18710528,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 89",
+ "config": {
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "",
+  "task": 89
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "sonny.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4083577",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "ece015f3be19567f751119423f7adc510b726500",
+  "short": "ece015f3"
+ },
+ "keys": {
+  "task": 89
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.1761072874069214,
+    0.015521423891186714,
+    0.008017406798899174,
+    0.0029908379074186087,
+    0.005951578263193369,
+    0.0026219524443149567,
+    0.0019086962565779686,
+    0.0010132266907021403,
+    0.0013041249476373196,
+    0.005256531294435263,
+    0.0037632137537002563
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 1984,
+  "final_loss": 0.0037632137537002563,
+  "first_loss": 0.1761072874069214,
+  "n_banks": 163,
+  "n_frames": 123,
+  "n_params": 9355264,
+  "task": 89,
+  "text": "pick up the book on the right and place it under the cabinet shelf",
+  "train_secs": 128.2382218837738
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90__base__task-89__s0__ece015f3",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-14T22:50:36+00:00",
+ "stream": null,
+ "tag": ""
+}

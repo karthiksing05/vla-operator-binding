@@ -1,6 +1,7 @@
 """Part I of the results page: the current program -- a factored, hierarchical prototype library for a frozen policy (plans D,
 E, W; docs/METHOD.md).  Each function returns one section's HTML from ledger rows; a read not yet recorded renders as Running."""
-from .base import L, esc, fig, pending, row, table
+from . import diagrams
+from .base import L, esc, fig, pending, row, table, video
 
 
 def _ci(d):
@@ -107,7 +108,10 @@ def method():
             "composition and the policy (ties go to the policy). As a stream, an arrival requests its one demonstration only when "
             "neither reaches 8 of 10 in practice; the demonstration refits every concept on its path (instance, type, goal). Reads are "
             "pre-registered, scored on fresh start states from LIBERO's own sampler, paired by start state and noise, and tested with "
-            "the exact sign test and a two-level bootstrap. The method is written out in <code>docs/METHOD.md</code>.</p>")
+            "the exact sign test and a two-level bootstrap. The method is written out in <code>docs/METHOD.md</code>.</p>"
+            + fig(diagrams.episode(), "<b>One composed step.</b> The object prototype is switched on from the start until the policy's own "
+                  "gripper has stayed closed for three queries; the goal prototype then acts until the gripper opens. The frozen policy "
+                  "generates every action throughout; a prototype only adds its low-rank update while it is on.", wide=True))
 
 
 def factored():
@@ -150,6 +154,14 @@ def factored():
                 f"against {h1['y']} zero-shot and {h2['x']} of {h2['n']} against {h2['y']} for the per-task LoRA with acceptance "
                 f"(difference {_ci(h2['diff'])}). Most of the remaining gap sits on four tasks that name an instance of the black "
                 f"bowl.</p>")
+    out += fig(video("fac_53_0"), "<b>The approach is where the policy fails.</b> Pick up the orange juice and put it in the basket, on a "
+               "fresh start state: the policy alone takes the milk; the composed object and goal prototypes take the orange juice and "
+               "place it; the per-task LoRA, fitted on this task's demonstration, succeeds too.", wide=True)
+    out += fig(video("fac_71_0"), "<b>Put the red mug on the plate.</b> The policy alone takes the porcelain mug; the red mug's object "
+               "prototype takes the named mug.", wide=True)
+    out += fig(video("fac_41_1"), "<b>Put the frying pan on top of the cabinet.</b> The policy alone reaches for the white bowl; the "
+               "frying pan's object prototype, consolidated over six demonstrations of the pan, and the cabinet's goal prototype "
+               "complete the task.", wide=True)
     return out
 
 
@@ -171,6 +183,13 @@ def hierarchy():
                 f"{de['hfac_vs_lora']['y']}); the instance children succeed {de['instance_child_vs_type']['x']} of "
                 f"{de['instance_child_vs_type']['n']} against {de['instance_child_vs_type']['y']} for the type prototype. The "
                 f"library stores {b['library'] / 1e6:.1f} MB where the per-task LoRAs store {b['per_task_lora'] / 1e6:.1f} MB.</p>")
+    out += fig(diagrams.hierarchy(), "<b>The library as concepts.</b> Object types with their instance children (approach) and goal "
+               "concepts (transport), each a prototype consolidated over the demonstrations shown; a task names one object node and one "
+               "goal node and composes them.", wide=True)
+    out += fig(video("inst_14_0"), "<b>The middle black bowl.</b> The type prototype, pooled over every black bowl, reaches for the wrong "
+               "one; the instance child takes the middle bowl; on this start state the per-task LoRA fails.", wide=True)
+    out += fig(video("inst_13_0"), "<b>The black bowl at the front.</b> The policy and the type prototype take the bowl at the back; the "
+               "instance child takes the front one.", wide=True)
     if i4:
         sm, st = i4["similarity"], i4["stability"]
         out += (f"<p>In weight space (exploratory) each object prototype points its own way: the mean cosine between object "
@@ -201,7 +220,10 @@ def streams():
     e4, w1, w2 = row("e4_stream", "read"), row("w1_stream", "read"), row("w2_stream", "read")
     if not e4:
         return ""
-    out = ("<p>Learned as a stream, the library starts from the demonstrations of the LIBERO-90 tasks outside the stream, and the "
+    flow = fig(diagrams.stream(), "<b>The learner on one arrival.</b> A demonstration is requested only when neither the policy nor the "
+               "composition reaches 8 of 10 practice episodes (W1; E4 asked only whether the composition beat the policy). The "
+               "demonstration is written into every concept on its path, and later arrivals read the updated library.", wide=True)
+    out = flow + ("<p>Learned as a stream, the library starts from the demonstrations of the LIBERO-90 tasks outside the stream, and the "
            "30 tasks arrive one at a time in two orders, each composed from the current library; a demonstration, when requested, "
            "updates every concept on its path, as Cobweb updates every node an instance passes. Each task is served at the end by the "
            "final library where it kept the library (pre-registered, m3_prereg tags e4_stream, w1_stream, w2_stream).</p>")

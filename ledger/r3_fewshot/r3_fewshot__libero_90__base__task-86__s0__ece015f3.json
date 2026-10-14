@@ -1,0 +1,109 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_86.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 18710528,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 18710528,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 86",
+ "config": {
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "",
+  "task": 86
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "optimistprime.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4083574",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "ece015f3be19567f751119423f7adc510b726500",
+  "short": "ece015f3"
+ },
+ "keys": {
+  "task": 86
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.20160634815692902,
+    0.027580339461565018,
+    0.010209623724222183,
+    0.0062523456290364265,
+    0.010226194746792316,
+    0.00384603813290596,
+    0.002984162187203765,
+    0.002686567371711135,
+    0.003517350647598505,
+    0.008005187846720219,
+    0.004932136740535498
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 1048,
+  "final_loss": 0.004932136740535498,
+  "first_loss": 0.20160634815692902,
+  "n_banks": 163,
+  "n_frames": 167,
+  "n_params": 9355264,
+  "task": 86,
+  "text": "pick up the book in the middle and place it on the cabinet shelf",
+  "train_secs": 132.18546199798584
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90__base__task-86__s0__ece015f3",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-14T22:49:59+00:00",
+ "stream": null,
+ "tag": ""
+}

@@ -1,0 +1,109 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_76.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 18710528,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 18710528,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 76",
+ "config": {
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "",
+  "task": 76
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "chitti.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4083564",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "ece015f3be19567f751119423f7adc510b726500",
+  "short": "ece015f3"
+ },
+ "keys": {
+  "task": 76
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.13343799114227295,
+    0.01813429594039917,
+    0.004804261494427919,
+    0.0022922512143850327,
+    0.006577692925930023,
+    0.0015996017027646303,
+    0.001711912453174591,
+    0.0015385996084660292,
+    0.0012858760310336947,
+    0.006773278117179871,
+    0.002684708684682846
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 1003,
+  "final_loss": 0.002684708684682846,
+  "first_loss": 0.13343799114227295,
+  "n_banks": 163,
+  "n_frames": 129,
+  "n_params": 9355264,
+  "task": 76,
+  "text": "pick up the yellow and white mug and place it to the right of the caddy",
+  "train_secs": 131.1948540210724
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90__base__task-76__s0__ece015f3",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-14T22:46:55+00:00",
+ "stream": null,
+ "tag": ""
+}

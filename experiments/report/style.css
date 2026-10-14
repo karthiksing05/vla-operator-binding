@@ -77,3 +77,17 @@ details.sec>summary h3{margin:10px 0}
 table.reads td:first-child{white-space:nowrap}
 .tag{display:inline-block;font:500 11px/1.6 var(--sans);padding:0 6px;border-radius:3px;background:var(--wash);color:var(--ink2)}
 .tag.pre{color:var(--good)} .tag.run{color:var(--hold);background:var(--hold-bg)}
+/* process diagrams */
+svg.dg{min-width:560px}
+svg.dg .box{fill:var(--paper);stroke:var(--ink2);stroke-width:1.2}
+svg.dg .box.hl{fill:var(--wash);stroke:var(--accent);stroke-width:2}
+svg.dg .box.hl2{fill:var(--wash);stroke:var(--base);stroke-width:2}
+svg.dg .box.task{fill:var(--wash);stroke:var(--ink);stroke-width:1.6}
+svg.dg .box.store{fill:var(--wash);stroke:var(--muted);stroke-dasharray:4 3}
+svg.dg .t{font-size:13px;font-weight:600;fill:var(--ink)}
+svg.dg .s{font-size:11.5px;fill:var(--muted)}
+svg.dg .ln{stroke:var(--ink2);stroke-width:1.4;fill:none}
+svg.dg .ln.dash{stroke-dasharray:5 4}
+svg.dg .ev{stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3}
+svg.dg .ah{fill:var(--ink2)}
+.vid{margin:22px 0}

@@ -1,0 +1,109 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_26.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 18710528,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 18710528,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 26",
+ "config": {
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "",
+  "task": 26
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cheetah.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4083552",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "ece015f3be19567f751119423f7adc510b726500",
+  "short": "ece015f3"
+ },
+ "keys": {
+  "task": 26
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.12225965410470963,
+    0.017948320135474205,
+    0.012912111356854439,
+    0.007602065801620483,
+    0.010055306367576122,
+    0.003454858437180519,
+    0.004564519971609116,
+    0.002479537157341838,
+    0.003535830182954669,
+    0.009070639498531818,
+    0.005720692221075296
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 1323,
+  "final_loss": 0.005720692221075296,
+  "first_loss": 0.12225965410470963,
+  "n_banks": 163,
+  "n_frames": 169,
+  "n_params": 9355264,
+  "task": 26,
+  "text": "put the wine bottle in the bottom drawer of the cabinet",
+  "train_secs": 123.72372198104858
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90__base__task-26__s0__ece015f3",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-14T22:39:18+00:00",
+ "stream": null,
+ "tag": ""
+}

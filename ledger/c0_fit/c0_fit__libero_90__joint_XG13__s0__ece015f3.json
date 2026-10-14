@@ -1,0 +1,128 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 65+67 --key on|the_left_plate --name XG13 --rank 4 --goal",
+ "config": {
+  "approach": false,
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "65+67",
+  "key": "on|the left plate",
+  "lr": 0.0001,
+  "name": "XG13",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "megazord.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4083537",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "ece015f3be19567f751119423f7adc510b726500",
+  "short": "ece015f3"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.05346880108118057,
+    0.01565670035779476,
+    0.009094360284507275,
+    0.007834726013243198,
+    0.007607693318277597,
+    0.004226264543831348,
+    0.0041342019103467464,
+    0.0029662493616342545,
+    0.003199181752279401,
+    0.009559684433043003,
+    0.0048057036474347115
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 150,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the red mug on the left plate",
+    "frames": [
+     53,
+     143
+    ],
+    "task": 65
+   },
+   {
+    "clause": "put the white mug on the left plate",
+    "frames": [
+     28,
+     88
+    ],
+    "task": 67
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "on|the left plate"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_XG13__s0__ece015f3",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-14T23:06:14+00:00",
+ "stream": null,
+ "tag": "joint_XG13"
+}

@@ -1,0 +1,128 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 66+68 --key on|the_right_plate --name XG14 --rank 4 --goal",
+ "config": {
+  "approach": false,
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "66+68",
+  "key": "on|the right plate",
+  "lr": 0.0001,
+  "name": "XG14",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "hk47.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4083538",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "ece015f3be19567f751119423f7adc510b726500",
+  "short": "ece015f3"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.05320556089282036,
+    0.02988801896572113,
+    0.022298473864793777,
+    0.01080747228115797,
+    0.011817442253232002,
+    0.006528133060783148,
+    0.005174972116947174,
+    0.005030486732721329,
+    0.0035914022009819746,
+    0.009194082580506802,
+    0.008116597309708595
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 185,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the red mug on the right plate",
+    "frames": [
+     55,
+     180
+    ],
+    "task": 66
+   },
+   {
+    "clause": "put the yellow and white mug on the right plate",
+    "frames": [
+     61,
+     121
+    ],
+    "task": 68
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "on|the right plate"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_XG14__s0__ece015f3",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-14T23:05:48+00:00",
+ "stream": null,
+ "tag": "joint_XG14"
+}

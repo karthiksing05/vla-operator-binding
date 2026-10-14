@@ -41,7 +41,7 @@ def table(head, rows, caption, num_from=1, cls=""):
 
 
 def video(name):
-    m = MEDIA["overhaul"].get(name) or MEDIA.get("bind", {})[name]
+    m = next(g[name] for g in MEDIA.values() if isinstance(g, dict) and name in g)
     return (f'<video src="media/{m["file"]}" poster="media/{m["file"][:-4]}.jpg" controls playsinline muted preload="metadata">'
             f'</video>')
 

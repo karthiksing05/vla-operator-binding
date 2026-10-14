@@ -1,0 +1,136 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 76+84+85 --key to_the_right_of|the_caddy --name XG20 --rank 4 --goal",
+ "config": {
+  "approach": false,
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "76+84+85",
+  "key": "to the right of|the caddy",
+  "lr": 0.0001,
+  "name": "XG20",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "perseverance.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4083544",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "ece015f3be19567f751119423f7adc510b726500",
+  "short": "ece015f3"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.1580825299024582,
+    0.039565231651067734,
+    0.02142004482448101,
+    0.018507719039916992,
+    0.014562034979462624,
+    0.010519701056182384,
+    0.007573538925498724,
+    0.00755987036973238,
+    0.0082686273381114,
+    0.012534706853330135,
+    0.009209869429469109
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 210,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the yellow and white mug and place it to the right of the caddy",
+    "frames": [
+     52,
+     129
+    ],
+    "task": 76
+   },
+   {
+    "clause": "pick up the red mug and place it to the right of the caddy",
+    "frames": [
+     54,
+     119
+    ],
+    "task": 84
+   },
+   {
+    "clause": "pick up the white mug and place it to the right of the caddy",
+    "frames": [
+     33,
+     101
+    ],
+    "task": 85
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "to the right of|the caddy"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_XG20__s0__ece015f3",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-14T23:08:22+00:00",
+ "stream": null,
+ "tag": "joint_XG20"
+}

@@ -1,0 +1,109 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_73_sc.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 18710528,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 18710528,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 73 --tag _sc",
+ "config": {
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_sc",
+  "task": 73
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "perseverance.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4083561",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "ece015f3be19567f751119423f7adc510b726500",
+  "short": "ece015f3"
+ },
+ "keys": {
+  "task": 73
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.030158130452036858,
+    0.005573462229222059,
+    0.002352624898776412,
+    0.0034321178682148457,
+    0.006225530989468098,
+    0.0012765380088239908,
+    0.0009209800628013909,
+    0.0006651980220340192,
+    0.0022395558189600706,
+    0.007220813538879156,
+    0.002356763696298003
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 1691,
+  "final_loss": 0.002356763696298003,
+  "first_loss": 0.030158130452036858,
+  "n_banks": 163,
+  "n_frames": 165,
+  "n_params": 9355264,
+  "task": 73,
+  "text": "pick up the book and place it in the front compartment of the caddy",
+  "train_secs": 122.65246319770813
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___sc__task-73__s0__ece015f3",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-14T22:45:15+00:00",
+ "stream": null,
+ "tag": "_sc"
+}

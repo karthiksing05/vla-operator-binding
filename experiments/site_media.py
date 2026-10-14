@@ -386,6 +386,35 @@ def main():
             if r:
                 r["language"] = lang.get(t)
                 meta["bind"][name] = r
+    if "factored" in only:                                   # the current program: factored prototypes on fresh start states (E3)
+        import importlib.util as _iu
+        sp = _iu.spec_from_file_location("e1", os.path.join(ROOT, "experiments", "e1_read.py"))
+        e1 = _iu.module_from_spec(sp)
+        sp.loader.exec_module(e1)
+        texts = e1.texts90()
+        plan = json.load(open(os.path.join(R, "e3_plan.json")))
+        run = lambda t, a: f"e3_main_{t}_{a.replace('@', '_')}_seed13"                        # noqa: E731
+        lib = lambda t: f"fac@{plan[str(t)]['object_proto']}.{plan[str(t)]['goal_proto']}"     # noqa: E731
+        typ = lambda t: f"fac@{plan[str(t)]['type_proto']}.{plan[str(t)]['goal_proto']}"      # noqa: E731
+        FAC = [("fac_53_0", 53, 0, [(run(53, "zs"), "pi0.5, zero-shot", "takes the milk"),
+                                    (run(53, lib(53)), "Object + goal prototypes", "shared library, 4.7 MB each"),
+                                    (run(53, "lorasc"), "Per-task LoRA", "18.8 MB for this task")]),
+               ("fac_71_0", 71, 0, [(run(71, "zs"), "pi0.5, zero-shot", "takes the porcelain mug"),
+                                    (run(71, lib(71)), "Object + goal prototypes", "the red mug's prototype")]),
+               ("fac_41_1", 41, 1, [(run(41, "zs"), "pi0.5, zero-shot", "takes the white bowl"),
+                                    (run(41, lib(41)), "Object + goal prototypes", "frying pan, top of the cabinet")]),
+               ("inst_14_0", 14, 0, [(run(14, typ(14)), "Type prototype", "pooled over 14 black bowls"),
+                                     (run(14, lib(14)), "Instance child", "the middle black bowl"),
+                                     (run(14, "lorasc"), "Per-task LoRA", "18.8 MB for this task")]),
+               ("inst_13_0", 13, 0, [(run(13, "zs"), "pi0.5, zero-shot", "the black bowl at the front"),
+                                     (run(13, typ(13)), "Type prototype", "pooled over 14 black bowls"),
+                                     (run(13, lib(13)), "Instance child", "the bowl at the front")])]
+        meta["factored"] = {}
+        for name, t, k, specs in FAC:
+            r = side_by_side(specs, f"{name}.mp4", t, k)
+            if r:
+                r["language"] = texts[t]
+                meta["factored"][name] = r
     if "exec" in only:
         meta["proto_exec"] = proto_exec_video()
     json.dump(meta, open(os.path.join(OUT, "media.json"), "w"), indent=1)

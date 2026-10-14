@@ -1,0 +1,109 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_65.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 18710528,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 18710528,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 65",
+ "config": {
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "",
+  "task": 65
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "synapse.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4083556",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "ece015f3be19567f751119423f7adc510b726500",
+  "short": "ece015f3"
+ },
+ "keys": {
+  "task": 65
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.08057179301977158,
+    0.012876282446086407,
+    0.007444876711815596,
+    0.004039903171360493,
+    0.006054853554815054,
+    0.001401674235239625,
+    0.0020802211947739124,
+    0.0010191890178248286,
+    0.0017320821061730385,
+    0.005627257749438286,
+    0.0032908811699599028
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 923,
+  "final_loss": 0.0032908811699599028,
+  "first_loss": 0.08057179301977158,
+  "n_banks": 163,
+  "n_frames": 143,
+  "n_params": 9355264,
+  "task": 65,
+  "text": "put the red mug on the left plate",
+  "train_secs": 124.83553218841553
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90__base__task-65__s0__ece015f3",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-14T22:41:11+00:00",
+ "stream": null,
+ "tag": ""
+}

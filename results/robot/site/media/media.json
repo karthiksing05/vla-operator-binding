@@ -1,0 +1,463 @@
+{
+ "comparisons": [
+  {
+   "file": "cmp_35_30.mp4",
+   "task": 35,
+   "trial": 30,
+   "outcomes": [
+    false,
+    false,
+    true
+   ],
+   "frames": 420,
+   "language": "open the microwave"
+  },
+  {
+   "file": "cmp_42_30.mp4",
+   "task": 42,
+   "trial": 30,
+   "outcomes": [
+    false,
+    false,
+    true
+   ],
+   "frames": 420,
+   "language": "put the frying pan under the cabinet shelf"
+  },
+  {
+   "file": "cmp_32_31.mp4",
+   "task": 32,
+   "trial": 31,
+   "outcomes": [
+    false,
+    false,
+    true
+   ],
+   "frames": 420,
+   "language": "put the ketchup in the top drawer of the cabinet"
+  },
+  {
+   "file": "cmp_1_30.mp4",
+   "task": 1,
+   "trial": 30,
+   "outcomes": [
+    false,
+    false,
+    true
+   ],
+   "frames": 420,
+   "language": "close the top drawer of the cabinet and put the black bowl on top of it"
+  },
+  {
+   "file": "cmp_34_30.mp4",
+   "task": 34,
+   "trial": 30,
+   "outcomes": [
+    false,
+    false,
+    true
+   ],
+   "frames": 420,
+   "language": "put the yellow and white mug to the front of the white mug"
+  },
+  {
+   "file": "cmp_5_31.mp4",
+   "task": 5,
+   "trial": 31,
+   "outcomes": [
+    false,
+    false,
+    true
+   ],
+   "frames": 420,
+   "language": "put the chocolate pudding in the top drawer of the cabinet and close it"
+  },
+  {
+   "file": "cmp_37_31.mp4",
+   "task": 37,
+   "trial": 31,
+   "outcomes": [
+    false,
+    false,
+    true
+   ],
+   "frames": 420,
+   "language": "put the white bowl to the right of the plate"
+  },
+  {
+   "file": "cmp_39_30.mp4",
+   "task": 39,
+   "trial": 30,
+   "outcomes": [
+    false,
+    true,
+    false
+   ],
+   "frames": 420,
+   "language": "turn off the stove"
+  }
+ ],
+ "compositions": [
+  {
+   "file": "comp_fix_3.mp4",
+   "task": 3,
+   "trial": 0,
+   "outcomes": [
+    false,
+    true
+   ],
+   "frames": 420,
+   "language": "put the butter at the back in the top drawer of the cabinet and close it",
+   "name": "fix_3"
+  },
+  {
+   "file": "comp_fix_48.mp4",
+   "task": 48,
+   "trial": 0,
+   "outcomes": [
+    false,
+    true
+   ],
+   "frames": 420,
+   "language": "pick up the ketchup and put it in the basket",
+   "name": "fix_48"
+  },
+  {
+   "file": "comp_carries_16.mp4",
+   "task": 16,
+   "trial": 0,
+   "outcomes": [
+    false,
+    false,
+    true
+   ],
+   "frames": 420,
+   "language": "stack the black bowl at the front on the black bowl in the middle",
+   "name": "carries_16"
+  },
+  {
+   "file": "comp_carries_13.mp4",
+   "task": 13,
+   "trial": 0,
+   "outcomes": [
+    false,
+    true,
+    false
+   ],
+   "frames": 420,
+   "language": "put the black bowl at the front on the plate",
+   "name": "carries_13"
+  }
+ ],
+ "stills": {
+  "mosaic_tasks": 50,
+  "demo48_frames": 173,
+  "demo48_keys": {
+   "start": 0,
+   "reach": 70,
+   "grasp": 80,
+   "lift": 100,
+   "carry": 140,
+   "release": 166
+  },
+  "roll48_frames": 174
+ },
+ "prototypes": [
+  {
+   "verb": "open move",
+   "gloss": "move to the object, gripper open",
+   "file": "proto_open_move.mp4",
+   "prototype_ids": [
+    0,
+    8,
+    15,
+    16,
+    25,
+    30,
+    75,
+    84,
+    93,
+    94,
+    119,
+    120,
+    152,
+    154,
+    159,
+    172,
+    174
+   ],
+   "tasks": [
+    23,
+    35,
+    6,
+    42
+   ],
+   "n_tasks": 50,
+   "frames": 44
+  },
+  {
+   "verb": "open reach down",
+   "gloss": "reach down onto it",
+   "file": "proto_open_reach_down.mp4",
+   "prototype_ids": [
+    1,
+    2,
+    3,
+    13,
+    22,
+    23
+   ],
+   "tasks": [
+    21,
+    89,
+    85,
+    80
+   ],
+   "n_tasks": 46,
+   "frames": 22
+  },
+  {
+   "verb": "open grip change",
+   "gloss": "close the gripper on it",
+   "file": "proto_open_grip_change.mp4",
+   "prototype_ids": [
+    9
+   ],
+   "tasks": [
+    89,
+    85,
+    80,
+    76
+   ],
+   "n_tasks": 46,
+   "frames": 17
+  },
+  {
+   "verb": "closed lift",
+   "gloss": "lift it",
+   "file": "proto_closed_lift.mp4",
+   "prototype_ids": [
+    10,
+    11,
+    68,
+    69,
+    80,
+    86,
+    100,
+    113,
+    114
+   ],
+   "tasks": [
+    53,
+    58,
+    21,
+    25
+   ],
+   "n_tasks": 38,
+   "frames": 44
+  },
+  {
+   "verb": "closed transport",
+   "gloss": "carry it",
+   "file": "proto_closed_transport.mp4",
+   "prototype_ids": [
+    4,
+    18,
+    47,
+    53,
+    54,
+    57,
+    105,
+    115,
+    186,
+    187,
+    188,
+    189,
+    204,
+    208
+   ],
+   "tasks": [
+    80,
+    73,
+    40,
+    36
+   ],
+   "n_tasks": 46,
+   "frames": 44
+  },
+  {
+   "verb": "closed lower",
+   "gloss": "lower it into place",
+   "file": "proto_closed_lower.mp4",
+   "prototype_ids": [
+    5,
+    6,
+    7,
+    12,
+    31,
+    99,
+    106,
+    145,
+    161,
+    211,
+    240
+   ],
+   "tasks": [
+    87,
+    74,
+    4,
+    85
+   ],
+   "n_tasks": 35,
+   "frames": 21
+  }
+ ],
+ "proto_exec": {
+  "file": "proto_exec.mp4",
+  "language": "open the bottom drawer of the cabinet",
+  "moves": "Net hand displacement after four repetitions: open move: -0 forward, +0 left, +2 up (cm); open reach down: -6 forward, -0 left, -11 up (cm); open grip change: -4 forward, +0 left, -7 up (cm); closed lift: +3 forward, +40 left, +3 up (cm); closed transport: -2 forward, +0 left, -2 up (cm); closed lower: -1 forward, +0 left, -2 up (cm)."
+ },
+ "overhaul": {
+  "ov_habit_48": {
+   "file": "ov_habit_48.mp4",
+   "task": 48,
+   "trial": 0,
+   "outcomes": [
+    true,
+    false
+   ],
+   "frames": 420,
+   "language": "pick up the ketchup and put it in the basket"
+  },
+  "ov_48_30": {
+   "file": "ov_48_30.mp4",
+   "task": 48,
+   "trial": 30,
+   "outcomes": [
+    false,
+    true,
+    false
+   ],
+   "frames": 420,
+   "language": "pick up the ketchup and put it in the basket"
+  },
+  "ov_58_0": {
+   "file": "ov_58_0.mp4",
+   "task": 58,
+   "trial": 0,
+   "outcomes": [
+    false,
+    true
+   ],
+   "frames": 420,
+   "language": "pick up the ketchup and put it in the tray"
+  },
+  "ov_3_31": {
+   "file": "ov_3_31.mp4",
+   "task": 3,
+   "trial": 31,
+   "outcomes": [
+    false,
+    true
+   ],
+   "frames": 420,
+   "language": "put the butter at the back in the top drawer of the cabinet and close it"
+  }
+ },
+ "bind": {
+  "bd_53_1": {
+   "file": "bd_53_1.mp4",
+   "task": 53,
+   "trial": 1,
+   "outcomes": [
+    false,
+    true,
+    true
+   ],
+   "frames": 420,
+   "language": "pick up the orange juice and put it in the basket"
+  },
+  "bd_59_0": {
+   "file": "bd_59_0.mp4",
+   "task": 59,
+   "trial": 0,
+   "outcomes": [
+    true,
+    true
+   ],
+   "frames": 251,
+   "language": null
+  },
+  "bd_48_0": {
+   "file": "bd_48_0.mp4",
+   "task": 48,
+   "trial": 0,
+   "outcomes": [
+    false,
+    false
+   ],
+   "frames": 420,
+   "language": "pick up the ketchup and put it in the basket"
+  }
+ },
+ "factored": {
+  "fac_53_0": {
+   "file": "fac_53_0.mp4",
+   "task": 53,
+   "trial": 0,
+   "outcomes": [
+    false,
+    true,
+    true
+   ],
+   "frames": 420,
+   "language": "pick up the orange juice and put it in the basket"
+  },
+  "fac_71_0": {
+   "file": "fac_71_0.mp4",
+   "task": 71,
+   "trial": 0,
+   "outcomes": [
+    false,
+    true
+   ],
+   "frames": 420,
+   "language": "put the red mug on the plate"
+  },
+  "fac_41_1": {
+   "file": "fac_41_1.mp4",
+   "task": 41,
+   "trial": 1,
+   "outcomes": [
+    false,
+    true
+   ],
+   "frames": 420,
+   "language": "put the frying pan on top of the cabinet"
+  },
+  "inst_14_0": {
+   "file": "inst_14_0.mp4",
+   "task": 14,
+   "trial": 0,
+   "outcomes": [
+    false,
+    true,
+    false
+   ],
+   "frames": 420,
+   "language": "put the middle black bowl on the plate"
+  },
+  "inst_13_0": {
+   "file": "inst_13_0.mp4",
+   "task": 13,
+   "trial": 0,
+   "outcomes": [
+    false,
+    false,
+    true
+   ],
+   "frames": 420,
+   "language": "put the black bowl at the front on the plate"
+  }
+ }
+}
