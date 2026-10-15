@@ -1,0 +1,50 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G5a",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "22540f502bb37b826c5bad0570d5fe52cdf69d0a",
+  "short": "22540f50"
+ },
+ "keys": {},
+ "metrics": {
+  "context": "G0 and G2 were read before this registration (recombination supplies a missing skill and interferes with a present one: exploratory)",
+  "hypotheses": {
+   "H1": "factor-level selection > selection over {policy, both concepts} (G0's H1b arm), exact sign test, alpha 0.05",
+   "reported": "factor-level selection against zero-shot; each factor alone against zero-shot; which arm kept"
+  },
+  "written_before": "any episode of g5"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__g5_factors__s15__22540f50",
+ "schema": 1,
+ "script": "experiments/prereg/g5_factors.py",
+ "seconds": null,
+ "seed": 15,
+ "source_commit": null,
+ "started": "2026-10-15T13:57:04+00:00",
+ "stream": null,
+ "tag": "g5_factors"
+}
