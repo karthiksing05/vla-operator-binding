@@ -1,0 +1,162 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 1708032,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 1708032,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 18+21+40+41+42+45 --key put|the_frying_pan --name VOsc6 --rank 4 --approach --backbone smolvla",
+ "config": {
+  "approach": true,
+  "backbone": "smolvla",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "18+21+40+41+42+45",
+  "key": "put|the frying pan",
+  "lr": 0.0001,
+  "name": "VOsc6",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cyborg.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4088083",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "49a33537ea41d0b8d328311eeecfb951f3630d54",
+  "short": "49a33537"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "smolvla",
+  "bind": false,
+  "bytes": 1708032,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.9862538576126099,
+    0.20766448974609375,
+    0.11083491891622543,
+    0.0878131240606308,
+    0.08605118840932846,
+    0.06545669585466385,
+    0.0578860267996788,
+    0.05022866278886795,
+    0.0478193573653698,
+    0.05457778647542,
+    0.043175552040338516
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 567,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the frying pan on the stove",
+    "frames": [
+     0,
+     92
+    ],
+    "task": 18
+   },
+   {
+    "clause": "put the frying pan on the stove",
+    "frames": [
+     101,
+     192
+    ],
+    "task": 21
+   },
+   {
+    "clause": "put the frying pan on the cabinet shelf",
+    "frames": [
+     0,
+     101
+    ],
+    "task": 40
+   },
+   {
+    "clause": "put the frying pan on top of the cabinet",
+    "frames": [
+     0,
+     88
+    ],
+    "task": 41
+   },
+   {
+    "clause": "put the frying pan under the cabinet shelf",
+    "frames": [
+     0,
+     121
+    ],
+    "task": 42
+   },
+   {
+    "clause": "put the frying pan on the stove",
+    "frames": [
+     113,
+     187
+    ],
+    "task": 45
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the frying pan"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_VOsc6__s0__49a33537",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T05:07:58+00:00",
+ "stream": null,
+ "tag": "joint_VOsc6"
+}

@@ -150,7 +150,15 @@ def read(record):
     desc = {"mono_vs_zs": C({t: {"x": x["mono"], "y": x["zs"]} for t, x in test.items()}),
             "gfac_vs_lora": C({t: {"x": x["gfac"], "y": x["lora"]} for t, x in test.items() if "lora" in x}),
             "lora_vs_zs": C({t: {"x": x["lora"], "y": x["zs"]} for t, x in test.items() if "lora" in x})}
-    res = dict(missing=missing, acceptance=acc, hypotheses=hyp, descriptive=desc,
+    groups = {}                                         # EXPLORATORY (not pre-registered): split by whether the policy alone
+    for t, x in test.items():                           # succeeds on at least half of the task's test episodes
+        z = int(sum(x["zs"].values()))
+        g = groups.setdefault("policy_fails" if z < len(x["zs"]) / 2 else "policy_succeeds",
+                              dict(tasks=0, zs=0, gfac=0, mono=0, gfac_better=0, gfac_worse=0))
+        f_ = int(sum(x["gfac"].values()))
+        g["tasks"] += 1; g["zs"] += z; g["gfac"] += f_; g["mono"] += int(sum(x["mono"].values()))   # noqa: E702
+        g["gfac_better"] += f_ > z; g["gfac_worse"] += f_ < z                                        # noqa: E702
+    res = dict(missing=missing, acceptance=acc, hypotheses=hyp, descriptive=desc, exploratory_by_policy=groups,
                per_task={t: {k: int(sum(z.values())) for k, z in x.items()} for t, x in test.items()})
     for k, v in list(hyp.items()) + list(desc.items()):
         print(f"[g0] {k}: {v['x']} vs {v['y']} of {v['n']} ({v['tasks']} tasks), diff {v['diff']['diff']:+.3f} "

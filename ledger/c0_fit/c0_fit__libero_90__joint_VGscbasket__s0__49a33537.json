@@ -1,0 +1,178 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 1708032,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 1708032,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 46+47+48+49+50+51+52+53+54 --key in|the_basket --name VGscbasket --rank 4 --goal --backbone smolvla",
+ "config": {
+  "approach": false,
+  "backbone": "smolvla",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "46+47+48+49+50+51+52+53+54",
+  "key": "in|the basket",
+  "lr": 0.0001,
+  "name": "VGscbasket",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "spd-13.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4088090",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "49a33537ea41d0b8d328311eeecfb951f3630d54",
+  "short": "49a33537"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "backbone": "smolvla",
+  "bind": false,
+  "bytes": 1708032,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.4166377782821655,
+    0.11178881675004959,
+    0.08554557710886002,
+    0.04235009104013443,
+    0.03873463720083237,
+    0.029752572998404503,
+    0.022341636940836906,
+    0.030173497274518013,
+    0.017785606905817986,
+    0.02427102066576481,
+    0.026495423167943954
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 682,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the alphabet soup and put it in the basket",
+    "frames": [
+     51,
+     154
+    ],
+    "task": 46
+   },
+   {
+    "clause": "pick up the cream cheese box and put it in the basket",
+    "frames": [
+     63,
+     158
+    ],
+    "task": 47
+   },
+   {
+    "clause": "pick up the ketchup and put it in the basket",
+    "frames": [
+     77,
+     173
+    ],
+    "task": 48
+   },
+   {
+    "clause": "pick up the tomato sauce and put it in the basket",
+    "frames": [
+     75,
+     160
+    ],
+    "task": 49
+   },
+   {
+    "clause": "pick up the alphabet soup and put it in the basket",
+    "frames": [
+     49,
+     130
+    ],
+    "task": 50
+   },
+   {
+    "clause": "pick up the milk and put it in the basket",
+    "frames": [
+     35,
+     104
+    ],
+    "task": 52
+   },
+   {
+    "clause": "pick up the orange juice and put it in the basket",
+    "frames": [
+     59,
+     148
+    ],
+    "task": 53
+   },
+   {
+    "clause": "pick up the tomato sauce and put it in the basket",
+    "frames": [
+     39,
+     103
+    ],
+    "task": 54
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "in|the basket"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_VGscbasket__s0__49a33537",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T05:16:03+00:00",
+ "stream": null,
+ "tag": "joint_VGscbasket"
+}

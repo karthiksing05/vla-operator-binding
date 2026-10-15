@@ -1,0 +1,122 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 1708032,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 1708032,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 52 --key put|the_milk --name VOsc8 --rank 4 --approach --backbone smolvla",
+ "config": {
+  "approach": true,
+  "backbone": "smolvla",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "52",
+  "key": "put|the milk",
+  "lr": 0.0001,
+  "name": "VOsc8",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "ig-88.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4088092",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "49a33537ea41d0b8d328311eeecfb951f3630d54",
+  "short": "49a33537"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "smolvla",
+  "bind": false,
+  "bytes": 1708032,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.8287532329559326,
+    0.04483738914132118,
+    0.024470364674925804,
+    0.01299128495156765,
+    0.022437801584601402,
+    0.011375288479030132,
+    0.010158881545066833,
+    0.010279767215251923,
+    0.009572809562087059,
+    0.01713724434375763,
+    0.012732308357954025
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 35,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the milk and put it in the basket",
+    "frames": [
+     0,
+     35
+    ],
+    "task": 52
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the milk"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_VOsc8__s0__49a33537",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T05:15:13+00:00",
+ "stream": null,
+ "tag": "joint_VOsc8"
+}

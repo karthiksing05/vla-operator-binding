@@ -1,0 +1,122 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 1708032,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 1708032,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 53 --key put|the_orange_juice --name VOsc9 --rank 4 --approach --backbone smolvla",
+ "config": {
+  "approach": true,
+  "backbone": "smolvla",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "53",
+  "key": "put|the orange juice",
+  "lr": 0.0001,
+  "name": "VOsc9",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "baymax.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4088093",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "49a33537ea41d0b8d328311eeecfb951f3630d54",
+  "short": "49a33537"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "smolvla",
+  "bind": false,
+  "bytes": 1708032,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.35985076427459717,
+    0.02765217237174511,
+    0.01551124732941389,
+    0.00925592239946127,
+    0.016207922250032425,
+    0.008665964007377625,
+    0.007587752304971218,
+    0.006797563284635544,
+    0.006638701539486647,
+    0.013373792171478271,
+    0.009269854985177517
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 59,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the orange juice and put it in the basket",
+    "frames": [
+     0,
+     59
+    ],
+    "task": 53
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the orange juice"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_VOsc9__s0__49a33537",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T05:15:50+00:00",
+ "stream": null,
+ "tag": "joint_VOsc9"
+}

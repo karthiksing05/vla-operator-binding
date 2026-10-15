@@ -16,8 +16,9 @@ kept library succeeds 499 of 600 times against 273 for the policy alone, and lev
 per task given the same acceptance test: over 66 tasks, 931 against 935 of 1,320 (difference -0.003, 95% interval -0.063 to
 0.058), with 22 prototypes for 30 tasks in place of 29 adapters (102.9 MB against 545.4 MB). Learned as a stream that requests
 a demonstration only when practice fails, it needs 17 and 16 demonstrations over 30 arrivals and damages no earlier task.
-PENDING: whether concepts learned only from other tasks recombine (G0), whether factorisation beats a monolithic adapter on the
-same data (G1), against adapter-composition baselines (G2), and on a second policy (G3).
+Concepts learned only from other tasks recombine where the policy lacks the skill (145 against 25 on the tasks it fails) and
+interfere where it has it, so practice must choose; factorisation beats a monolithic adapter trained on the same data (365 against
+190). PENDING: a second policy (G3).
 
 ## 1 Introduction
 
@@ -81,8 +82,17 @@ non-inferiority at 0.05 is just missed (the lower bound misses it by 0.013).
 With the request rule (W1): 17 and 16 demonstrations in two orders (21 and 20 under a looser rule), no damage to earlier
 arrivals in either order, served 465 and 496 of 600 against 273 zero-shot.
 
-### Does composition generalise? (PENDING: G0, G1)
-### Against adapter composition (PENDING: G2)
+### Does composition generalise?
+With each concept refit with no demonstration of a held-out fold (5 folds, 53 eligible tasks), recombined concepts alone succeed
+365 of 1,060 times against 354 for the policy: the pre-registered test fails. With practice choosing, 484 against 354. A
+monolithic adapter trained on the same demonstrations succeeds 190 times, below the policy, so the factorisation matters (365
+against 190). Exploratory: on the 33 tasks the policy fails, recombination gives 145 against 25; on the 20 it performs, 220 against
+329. Recombination supplies a missing skill and interferes with a present one; practice separates the two.
+
+### Against adapter composition
+On 52 of the held-out tasks, summing the per-task adapters of an object donor and a goal donor collapses (71 of 1,040); averaging
+them stays at the policy's level (328 against 336); the recombined concepts reach 345; with practice they reach 466 against 375 for the
+better baseline.
 ### A second policy (PENDING: G3)
 
 ### What the prototypes encode

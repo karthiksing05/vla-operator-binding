@@ -1,0 +1,130 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 1708032,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 1708032,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 14+15 --key put|the_black_bowl --name VSch2 --rank 4 --approach --backbone smolvla",
+ "config": {
+  "approach": true,
+  "backbone": "smolvla",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "14+15",
+  "key": "put|the black bowl",
+  "lr": 0.0001,
+  "name": "VSch2",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "omgwth.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4088081",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "49a33537ea41d0b8d328311eeecfb951f3630d54",
+  "short": "49a33537"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "smolvla",
+  "bind": false,
+  "bytes": 1708032,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.5737622976303101,
+    0.08722896128892899,
+    0.03848525881767273,
+    0.02032496966421604,
+    0.026708509773015976,
+    0.015861816704273224,
+    0.013384663499891758,
+    0.012637565843760967,
+    0.014302420429885387,
+    0.02021130733191967,
+    0.016296200454235077
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 81,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the middle black bowl on the plate",
+    "frames": [
+     0,
+     38
+    ],
+    "task": 14
+   },
+   {
+    "clause": "put the middle black bowl on top of the cabinet",
+    "frames": [
+     0,
+     43
+    ],
+    "task": 15
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the black bowl"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_VSch2__s0__49a33537",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T05:06:51+00:00",
+ "stream": null,
+ "tag": "joint_VSch2"
+}

@@ -1,0 +1,138 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 1708032,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 1708032,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 67+72+85 --key put|the_white_mug --name VOsc14 --rank 4 --approach --backbone smolvla",
+ "config": {
+  "approach": true,
+  "backbone": "smolvla",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "67+72+85",
+  "key": "put|the white mug",
+  "lr": 0.0001,
+  "name": "VOsc14",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "nestor.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4088088",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "49a33537ea41d0b8d328311eeecfb951f3630d54",
+  "short": "49a33537"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "smolvla",
+  "bind": false,
+  "bytes": 1708032,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.5968865156173706,
+    0.10801567137241364,
+    0.03920295462012291,
+    0.019807979464530945,
+    0.027348799630999565,
+    0.014039348810911179,
+    0.012933735735714436,
+    0.012241275049746037,
+    0.01427320297807455,
+    0.017864540219306946,
+    0.014381751418113708
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 118,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the white mug on the left plate",
+    "frames": [
+     0,
+     28
+    ],
+    "task": 67
+   },
+   {
+    "clause": "put the white mug on the plate",
+    "frames": [
+     0,
+     57
+    ],
+    "task": 72
+   },
+   {
+    "clause": "pick up the white mug and place it to the right of the caddy",
+    "frames": [
+     0,
+     33
+    ],
+    "task": 85
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the white mug"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_VOsc14__s0__49a33537",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T05:12:53+00:00",
+ "stream": null,
+ "tag": "joint_VOsc14"
+}

@@ -1,0 +1,513 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g2_baselines.py --read --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g2_baselines",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "49a33537ea41d0b8d328311eeecfb951f3630d54",
+  "short": "49a33537"
+ },
+ "keys": {},
+ "metrics": {
+  "comparisons": {
+   "avg_vs_zs": {
+    "diff": {
+     "diff": -0.007692307692307693,
+     "hi": 0.038461538461538464,
+     "hi90": 0.03173076923076923,
+     "lo": -0.05673076923076923,
+     "lo90": -0.04903846153846154,
+     "n_pairs": 1040,
+     "n_tasks": 52
+    },
+    "discordant": [
+     64,
+     72
+    ],
+    "n": 1040,
+    "sign_p": 0.5485023614867376,
+    "tasks": 52,
+    "x": 328,
+    "y": 336
+   },
+   "gfac_vs_avg": {
+    "diff": {
+     "diff": 0.016346153846153847,
+     "hi": 0.1125,
+     "hi90": 0.09711538461538462,
+     "lo": -0.08076923076923077,
+     "lo90": -0.06346153846153846,
+     "n_pairs": 1040,
+     "n_tasks": 52
+    },
+    "discordant": [
+     145,
+     128
+    ],
+    "n": 1040,
+    "sign_p": 0.33287249537889074,
+    "tasks": 52,
+    "x": 345,
+    "y": 328
+   },
+   "gfac_vs_sum": {
+    "diff": {
+     "diff": 0.26346153846153847,
+     "hi": 0.3663461538461538,
+     "hi90": 0.3490384615384615,
+     "lo": 0.16538461538461538,
+     "lo90": 0.1798076923076923,
+     "n_pairs": 1040,
+     "n_tasks": 52
+    },
+    "discordant": [
+     293,
+     19
+    ],
+    "n": 1040,
+    "sign_p": 2.9480712815072874e-64,
+    "tasks": 52,
+    "x": 345,
+    "y": 71
+   },
+   "kept_gfac_vs_kept_best_baseline": {
+    "diff": {
+     "diff": 0.0875,
+     "hi": 0.1548076923076923,
+     "hi90": 0.14423076923076922,
+     "lo": 0.026923076923076925,
+     "lo90": 0.035576923076923075,
+     "n_pairs": 1040,
+     "n_tasks": 52
+    },
+    "discordant": [
+     113,
+     22
+    ],
+    "n": 1040,
+    "sign_p": 6.086034249619751e-16,
+    "tasks": 52,
+    "x": 466,
+    "y": 375
+   },
+   "sum_vs_zs": {
+    "diff": {
+     "diff": -0.2548076923076923,
+     "hi": -0.1576923076923077,
+     "hi90": -0.17206730769230838,
+     "lo": -0.35865384615384616,
+     "lo90": -0.3403846153846154,
+     "n_pairs": 1040,
+     "n_tasks": 52
+    },
+    "discordant": [
+     16,
+     281
+    ],
+    "n": 1040,
+    "sign_p": 9.666352480195942e-64,
+    "tasks": 52,
+    "x": 71,
+    "y": 336
+   }
+  },
+  "missing": [],
+  "per_task": {
+   "10": {
+    "gfac": 4,
+    "loraavg": 18,
+    "lorasum": 0,
+    "mono": 13,
+    "zs": 19
+   },
+   "12": {
+    "gfac": 0,
+    "loraavg": 11,
+    "lorasum": 4,
+    "mono": 0,
+    "zs": 6
+   },
+   "13": {
+    "gfac": 0,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "14": {
+    "gfac": 17,
+    "loraavg": 18,
+    "lorasum": 0,
+    "mono": 1,
+    "zs": 12
+   },
+   "15": {
+    "gfac": 17,
+    "loraavg": 7,
+    "lorasum": 0,
+    "mono": 15,
+    "zs": 1
+   },
+   "18": {
+    "gfac": 1,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "19": {
+    "gfac": 4,
+    "loraavg": 18,
+    "lorasum": 0,
+    "mono": 2,
+    "zs": 18
+   },
+   "2": {
+    "gfac": 0,
+    "loraavg": 6,
+    "lorasum": 5,
+    "mono": 6,
+    "zs": 13
+   },
+   "24": {
+    "gfac": 14,
+    "loraavg": 20,
+    "lorasum": 0,
+    "mono": 10,
+    "zs": 20
+   },
+   "25": {
+    "gfac": 0,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "26": {
+    "gfac": 0,
+    "loraavg": 3,
+    "lorasum": 0,
+    "mono": 1,
+    "zs": 0
+   },
+   "29": {
+    "gfac": 6,
+    "loraavg": 14,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 13
+   },
+   "30": {
+    "gfac": 8,
+    "loraavg": 10,
+    "lorasum": 0,
+    "mono": 15,
+    "zs": 14
+   },
+   "31": {
+    "gfac": 13,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 5,
+    "zs": 6
+   },
+   "32": {
+    "gfac": 0,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "36": {
+    "gfac": 15,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "38": {
+    "gfac": 0,
+    "loraavg": 11,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 11
+   },
+   "40": {
+    "gfac": 0,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "41": {
+    "gfac": 12,
+    "loraavg": 4,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 1
+   },
+   "42": {
+    "gfac": 0,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "43": {
+    "gfac": 0,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 1
+   },
+   "46": {
+    "gfac": 20,
+    "loraavg": 17,
+    "lorasum": 0,
+    "mono": 3,
+    "zs": 20
+   },
+   "48": {
+    "gfac": 3,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 3,
+    "zs": 0
+   },
+   "49": {
+    "gfac": 0,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 1,
+    "zs": 0
+   },
+   "50": {
+    "gfac": 16,
+    "loraavg": 19,
+    "lorasum": 11,
+    "mono": 12,
+    "zs": 16
+   },
+   "51": {
+    "gfac": 14,
+    "loraavg": 20,
+    "lorasum": 17,
+    "mono": 6,
+    "zs": 19
+   },
+   "54": {
+    "gfac": 6,
+    "loraavg": 6,
+    "lorasum": 1,
+    "mono": 9,
+    "zs": 17
+   },
+   "55": {
+    "gfac": 20,
+    "loraavg": 18,
+    "lorasum": 0,
+    "mono": 14,
+    "zs": 20
+   },
+   "58": {
+    "gfac": 5,
+    "loraavg": 0,
+    "lorasum": 3,
+    "mono": 0,
+    "zs": 0
+   },
+   "59": {
+    "gfac": 17,
+    "loraavg": 8,
+    "lorasum": 2,
+    "mono": 1,
+    "zs": 3
+   },
+   "60": {
+    "gfac": 0,
+    "loraavg": 7,
+    "lorasum": 0,
+    "mono": 4,
+    "zs": 11
+   },
+   "61": {
+    "gfac": 8,
+    "loraavg": 20,
+    "lorasum": 0,
+    "mono": 1,
+    "zs": 20
+   },
+   "65": {
+    "gfac": 0,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "67": {
+    "gfac": 18,
+    "loraavg": 20,
+    "lorasum": 0,
+    "mono": 5,
+    "zs": 20
+   },
+   "71": {
+    "gfac": 3,
+    "loraavg": 0,
+    "lorasum": 1,
+    "mono": 1,
+    "zs": 0
+   },
+   "72": {
+    "gfac": 20,
+    "loraavg": 19,
+    "lorasum": 12,
+    "mono": 7,
+    "zs": 19
+   },
+   "73": {
+    "gfac": 0,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 2,
+    "zs": 0
+   },
+   "74": {
+    "gfac": 6,
+    "loraavg": 6,
+    "lorasum": 6,
+    "mono": 0,
+    "zs": 2
+   },
+   "75": {
+    "gfac": 0,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "76": {
+    "gfac": 1,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "78": {
+    "gfac": 0,
+    "loraavg": 2,
+    "lorasum": 1,
+    "mono": 2,
+    "zs": 0
+   },
+   "79": {
+    "gfac": 19,
+    "loraavg": 3,
+    "lorasum": 0,
+    "mono": 4,
+    "zs": 5
+   },
+   "80": {
+    "gfac": 13,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "81": {
+    "gfac": 0,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 1,
+    "zs": 0
+   },
+   "82": {
+    "gfac": 5,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 8,
+    "zs": 10
+   },
+   "83": {
+    "gfac": 0,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "84": {
+    "gfac": 0,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "85": {
+    "gfac": 0,
+    "loraavg": 2,
+    "lorasum": 0,
+    "mono": 4,
+    "zs": 0
+   },
+   "86": {
+    "gfac": 0,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "88": {
+    "gfac": 20,
+    "loraavg": 3,
+    "lorasum": 0,
+    "mono": 8,
+    "zs": 0
+   },
+   "89": {
+    "gfac": 0,
+    "loraavg": 0,
+    "lorasum": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "9": {
+    "gfac": 20,
+    "loraavg": 18,
+    "lorasum": 8,
+    "mono": 19,
+    "zs": 19
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g2_baselines__libero_90__read__s15__49a33537",
+ "schema": 1,
+ "script": "experiments/g2_baselines.py",
+ "seconds": null,
+ "seed": 15,
+ "source_commit": null,
+ "started": "2026-10-15T13:53:15+00:00",
+ "stream": null,
+ "tag": "read"
+}

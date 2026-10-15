@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g0_accept_89_bcl_joint_g0f1_seed15.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/bcl_joint_g0f1.pt SUITE=libero_90 TASKS=89 TRIALS=10 (job 4089557)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g0_accept_89_bcl_joint_g0f1_seed15.json",
+   "port": 9801,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "89",
+   "trials": 10,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4089557",
+  "mode": "lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/bcl_joint_g0f1.pt"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "nestor.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4089557",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g0_accept",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "49a33537ea41d0b8d328311eeecfb951f3630d54",
+  "short": "49a33537"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/bcl_joint_g0f1.pt",
+  "tasks": "89",
+  "trials": 10
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 10,
+  "secs": 507.65728306770325,
+  "success_rate": 0.0,
+  "tasks": {
+   "89": {
+    "errors": 0,
+    "language": "pick up the book on the right and place it under the cabinet shelf",
+    "mean_steps": 400.0,
+    "n": 10,
+    "success_rate": 0.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g0_accept__libero_90__bcl_joint_g0f1_seed15__first_trial-0__mode12d863898de9__tasks-89__trials-10__s7__49a33537",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-15T06:42:01+00:00",
+ "stream": null,
+ "tag": "bcl_joint_g0f1_seed15"
+}

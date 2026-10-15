@@ -50,6 +50,14 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"object prototypes nearly orthogonal (cos {m['similarity']['object_object']:.3f}); stable without one demo "
                f"(cos {m['stability']['same_object']:.2f})"),
     ("E5 replication on 37 new tasks", "e5_replicate", "read", True, "c-repl", _v_e5),
+    ("G0 recombination, held out", "g0_recombine", "read", True, "c-gen",
+     lambda m: f"concepts from other tasks alone {m['hypotheses']['H1']['x']} vs {m['hypotheses']['H1']['y']} zero-shot (fails); "
+               f"with practice {m['hypotheses']['H1b']['x']}; vs monolithic same-data adapter {m['hypotheses']['H2']['y']} (passes)"),
+    ("G2 adapter composition baselines", "g2_baselines", "read", True, "c-gen",
+     lambda m: f"task arithmetic {m['comparisons']['gfac_vs_sum']['y']}, averaging {m['comparisons']['gfac_vs_avg']['y']}, "
+               f"composed concepts {m['comparisons']['gfac_vs_sum']['x']}"),
+    ("G3 a second policy (SmolVLA)", "g3_crossmodel", "read_smolvla", True, "c-gen", lambda m: _v_e3(m) if "bytes" in m else
+     f"{m['hypotheses']['H1']['x']} vs {m['hypotheses']['H1']['y']} zero-shot; vs LoRA + acc. {_ci(m['hypotheses']['H2']['diff'])}"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -216,6 +224,38 @@ def replication():
             f"difference {_ci(h['H3']['diff'])}; non-inferiority {'holds' if h['H3']['noninferior'] else 'is not established'}.</p>")
 
 
+def generalise():
+    g0, g2 = row("g0_recombine", "read"), row("g2_baselines", "read")
+    if not g0:
+        return pending("G0: held-out recombination", "Pre-registered (m3_prereg tag g0_recombine).")
+    h, d, x = g0["hypotheses"], g0["descriptive"], g0["exploratory_by_policy"]
+    out = (f"<p>The library above holds each task's own demonstration in its concepts. The decisive test of composition removes it "
+           f"(m3_prereg tag g0_recombine): the 67 single-step tasks are split into 5 folds, and every concept a fold needs is refit "
+           f"with no demonstration of that fold's tasks, so each of the {h['H1']['tasks']} eligible tasks can be solved only by "
+           f"recombining an object and a goal learned from other tasks. Alone, the recombined concepts succeed {h['H1']['x']} of "
+           f"{h['H1']['n']} times against {h['H1']['y']} for the policy (sign p {h['H1']['sign_p']:.2g}): the pre-registered test "
+           f"fails. With practice choosing between them and the policy, {h['H1b']['x']} (sign p {h['H1b']['sign_p']:.2g}). The "
+           f"factorisation matters: a monolithic adapter trained on the same demonstrations succeeds {h['H2']['y']} times, below the "
+           f"policy (sign p {h['H2']['sign_p']:.2g} for the recombined concepts against it).</p>")
+    rows = [[f"the policy {'fails' if k == 'policy_fails' else 'succeeds'} ({v['tasks']} tasks)",
+             v["zs"], v["gfac"], v["mono"], f"{v['gfac_better']} / {v['gfac_worse']}"] for k, v in
+            sorted(x.items(), key=lambda kv: kv[0] != "policy_fails")]
+    out += table(["held-out tasks where", "policy alone", "recombined concepts", "monolithic adapter", "better / worse tasks"], rows,
+                 "Recombination of concepts learned only from other tasks, split by whether the policy alone succeeds on at least half "
+                 "of a task's 20 test episodes (exploratory, not pre-registered). Successes on fresh start states.", num_from=1)
+    out += ("<p>Recombination is a large gain exactly where the policy lacks the skill and interferes where it has it; the two cancel "
+            "in the pooled test, and practice tells them apart.</p>")
+    if g2:
+        c = g2["comparisons"]
+        out += (f"<p>Composing adapters the usual way does not do this (m3_prereg tag g2_baselines). On the same held-out tasks, the "
+                f"per-task adapters of an object donor and a goal donor, both always on: summed (task arithmetic) they succeed "
+                f"{c['gfac_vs_sum']['y']} times, averaged {c['gfac_vs_avg']['y']}, against {c['gfac_vs_sum']['x']} for the recombined "
+                f"concepts; with practice choosing, {c['kept_gfac_vs_kept_best_baseline']['x']} against "
+                f"{c['kept_gfac_vs_kept_best_baseline']['y']} for the better baseline. Averaging is level with the recombined concepts "
+                f"without practice (sign p {c['gfac_vs_avg']['sign_p']:.2g}).</p>")
+    return out
+
+
 def streams():
     e4, w1, w2 = row("e4_stream", "read"), row("w1_stream", "read"), row("w2_stream", "read")
     if not e4:
@@ -298,6 +338,8 @@ def verification():
 SECTIONS = [("c-overview", "", "In brief", overview, False), ("c-reads", "", "The reads at a glance", reads_index, False),
             ("c-method", "1", "The method", method, False), ("c-factored", "2", "Factored steps: object and goal prototypes", factored, False),
             ("c-hier", "3", "Instance children: a hierarchy of prototypes", hierarchy, False),
-            ("c-repl", "4", "Replication on new tasks", replication, False), ("c-stream", "5", "The library learned as a stream", streams, False),
-            ("c-limits", "6", "What does not work", limits_of_method, False), ("c-limitations", "7", "Limitations", limitations, False),
+            ("c-repl", "4", "Replication on new tasks", replication, False),
+            ("c-gen", "5", "Does composition generalise?", generalise, False),
+            ("c-stream", "6", "The library learned as a stream", streams, False),
+            ("c-limits", "7", "What does not work", limits_of_method, False), ("c-limitations", "8", "Limitations", limitations, False),
             ("c-verify", "", "Verification", verification, False)]

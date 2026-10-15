@@ -1,0 +1,210 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 73+74+75+77+78+80+81+82+83+86+87+89 --key put|the_book --name G0O10 --rank 4 --approach",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "73+74+75+77+78+80+81+82+83+86+87+89",
+  "key": "put|the book",
+  "lr": 0.0001,
+  "name": "G0O10",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "qt-1.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4085850",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "49a33537ea41d0b8d328311eeecfb951f3630d54",
+  "short": "49a33537"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.038617540150880814,
+    0.023058349266648293,
+    0.02157091535627842,
+    0.013582932762801647,
+    0.014492325484752655,
+    0.01078097429126501,
+    0.011429190635681152,
+    0.00710394186899066,
+    0.006550376769155264,
+    0.008577823638916016,
+    0.006759279873222113
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 596,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the book and place it in the front compartment of the caddy",
+    "frames": [
+     0,
+     55
+    ],
+    "task": 73
+   },
+   {
+    "clause": "pick up the book and place it in the left compartment of the caddy",
+    "frames": [
+     0,
+     42
+    ],
+    "task": 74
+   },
+   {
+    "clause": "pick up the book and place it in the right compartment of the caddy",
+    "frames": [
+     0,
+     62
+    ],
+    "task": 75
+   },
+   {
+    "clause": "pick up the book and place it in the back compartment of the caddy",
+    "frames": [
+     0,
+     34
+    ],
+    "task": 77
+   },
+   {
+    "clause": "pick up the book and place it in the front compartment of the caddy",
+    "frames": [
+     0,
+     58
+    ],
+    "task": 78
+   },
+   {
+    "clause": "pick up the book and place it in the right compartment of the caddy",
+    "frames": [
+     0,
+     47
+    ],
+    "task": 80
+   },
+   {
+    "clause": "pick up the book and place it in the front compartment of the caddy",
+    "frames": [
+     0,
+     58
+    ],
+    "task": 81
+   },
+   {
+    "clause": "pick up the book and place it in the left compartment of the caddy",
+    "frames": [
+     0,
+     49
+    ],
+    "task": 82
+   },
+   {
+    "clause": "pick up the book and place it in the right compartment of the caddy",
+    "frames": [
+     0,
+     48
+    ],
+    "task": 83
+   },
+   {
+    "clause": "pick up the book in the middle and place it on the cabinet shelf",
+    "frames": [
+     0,
+     51
+    ],
+    "task": 86
+   },
+   {
+    "clause": "pick up the book on the left and place it on top of the shelf",
+    "frames": [
+     0,
+     53
+    ],
+    "task": 87
+   },
+   {
+    "clause": "pick up the book on the right and place it under the cabinet shelf",
+    "frames": [
+     0,
+     39
+    ],
+    "task": 89
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the book"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_G0O10__s0__49a33537",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T05:33:54+00:00",
+ "stream": null,
+ "tag": "joint_G0O10"
+}

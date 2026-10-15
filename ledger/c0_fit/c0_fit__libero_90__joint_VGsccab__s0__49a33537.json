@@ -1,0 +1,162 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 1708032,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 1708032,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 10+15+25+31+41+43 --key on_top_of|the_cabinet --name VGsccab --rank 4 --goal --backbone smolvla",
+ "config": {
+  "approach": false,
+  "backbone": "smolvla",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "10+15+25+31+41+43",
+  "key": "on top of|the cabinet",
+  "lr": 0.0001,
+  "name": "VGsccab",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "nestor.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4088080",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "49a33537ea41d0b8d328311eeecfb951f3630d54",
+  "short": "49a33537"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "backbone": "smolvla",
+  "bind": false,
+  "bytes": 1708032,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.6899954080581665,
+    0.17020881175994873,
+    0.07953736931085587,
+    0.06441936641931534,
+    0.05989093706011772,
+    0.0469118095934391,
+    0.03919082507491112,
+    0.03719009459018707,
+    0.030009815469384193,
+    0.0378788597881794,
+    0.0277496837079525
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 568,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the black bowl on top of the cabinet",
+    "frames": [
+     47,
+     151
+    ],
+    "task": 10
+   },
+   {
+    "clause": "put the middle black bowl on top of the cabinet",
+    "frames": [
+     43,
+     137
+    ],
+    "task": 15
+   },
+   {
+    "clause": "put the black bowl on top of the cabinet",
+    "frames": [
+     62,
+     147
+    ],
+    "task": 25
+   },
+   {
+    "clause": "put the black bowl on top of the cabinet",
+    "frames": [
+     61,
+     146
+    ],
+    "task": 31
+   },
+   {
+    "clause": "put the frying pan on top of the cabinet",
+    "frames": [
+     88,
+     195
+    ],
+    "task": 41
+   },
+   {
+    "clause": "put the white bowl on top of the cabinet",
+    "frames": [
+     51,
+     144
+    ],
+    "task": 43
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "on top of|the cabinet"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_VGsccab__s0__49a33537",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T05:06:59+00:00",
+ "stream": null,
+ "tag": "joint_VGsccab"
+}

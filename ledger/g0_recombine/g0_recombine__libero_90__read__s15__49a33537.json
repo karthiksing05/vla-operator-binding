@@ -1,0 +1,849 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g0_recombine.py --read --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g0_recombine",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "49a33537ea41d0b8d328311eeecfb951f3630d54",
+  "short": "49a33537"
+ },
+ "keys": {},
+ "metrics": {
+  "acceptance": {
+   "10": {
+    "gfac": 3,
+    "lora": 10,
+    "mono": 4,
+    "zs": 10
+   },
+   "12": {
+    "gfac": 0,
+    "lora": 10,
+    "mono": 0,
+    "zs": 3
+   },
+   "13": {
+    "gfac": 0,
+    "lora": 7,
+    "mono": 0,
+    "zs": 0
+   },
+   "14": {
+    "gfac": 9,
+    "lora": 7,
+    "mono": 2,
+    "zs": 4
+   },
+   "15": {
+    "gfac": 7,
+    "lora": 8,
+    "mono": 6,
+    "zs": 1
+   },
+   "18": {
+    "gfac": 0,
+    "lora": 5,
+    "mono": 0,
+    "zs": 0
+   },
+   "19": {
+    "gfac": 2,
+    "lora": 6,
+    "mono": 1,
+    "zs": 10
+   },
+   "2": {
+    "gfac": 0,
+    "lora": 8,
+    "mono": 5,
+    "zs": 8
+   },
+   "24": {
+    "gfac": 8,
+    "lora": 10,
+    "mono": 8,
+    "zs": 10
+   },
+   "25": {
+    "gfac": 0,
+    "lora": 8,
+    "mono": 0,
+    "zs": 0
+   },
+   "26": {
+    "gfac": 0,
+    "lora": 5,
+    "mono": 0,
+    "zs": 0
+   },
+   "29": {
+    "gfac": 1,
+    "lora": 10,
+    "mono": 1,
+    "zs": 6
+   },
+   "30": {
+    "gfac": 5,
+    "lora": 10,
+    "mono": 6,
+    "zs": 8
+   },
+   "31": {
+    "gfac": 6,
+    "lora": 10,
+    "mono": 1,
+    "zs": 1
+   },
+   "32": {
+    "gfac": 0,
+    "lora": 2,
+    "mono": 0,
+    "zs": 0
+   },
+   "36": {
+    "gfac": 4,
+    "lora": 6,
+    "mono": 0,
+    "zs": 0
+   },
+   "38": {
+    "gfac": 0,
+    "lora": 7,
+    "mono": 0,
+    "zs": 5
+   },
+   "40": {
+    "gfac": 0,
+    "lora": 4,
+    "mono": 0,
+    "zs": 0
+   },
+   "41": {
+    "gfac": 6,
+    "lora": 6,
+    "mono": 0,
+    "zs": 0
+   },
+   "42": {
+    "gfac": 0,
+    "lora": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "43": {
+    "gfac": 0,
+    "lora": 8,
+    "mono": 0,
+    "zs": 1
+   },
+   "46": {
+    "gfac": 10,
+    "lora": 8,
+    "mono": 3,
+    "zs": 10
+   },
+   "48": {
+    "gfac": 1,
+    "lora": 8,
+    "mono": 3,
+    "zs": 0
+   },
+   "49": {
+    "gfac": 0,
+    "lora": 8,
+    "mono": 0,
+    "zs": 0
+   },
+   "50": {
+    "gfac": 10,
+    "lora": 8,
+    "mono": 6,
+    "zs": 10
+   },
+   "51": {
+    "gfac": 10,
+    "mono": 6,
+    "zs": 10
+   },
+   "54": {
+    "gfac": 3,
+    "lora": 9,
+    "mono": 6,
+    "zs": 7
+   },
+   "55": {
+    "gfac": 10,
+    "lora": 10,
+    "mono": 4,
+    "zs": 10
+   },
+   "56": {
+    "gfac": 10,
+    "lora": 10,
+    "mono": 3,
+    "zs": 10
+   },
+   "58": {
+    "gfac": 3,
+    "lora": 7,
+    "mono": 0,
+    "zs": 0
+   },
+   "59": {
+    "gfac": 6,
+    "lora": 7,
+    "mono": 0,
+    "zs": 2
+   },
+   "60": {
+    "gfac": 0,
+    "lora": 10,
+    "mono": 1,
+    "zs": 6
+   },
+   "61": {
+    "gfac": 4,
+    "lora": 10,
+    "mono": 0,
+    "zs": 10
+   },
+   "65": {
+    "gfac": 0,
+    "lora": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "67": {
+    "gfac": 9,
+    "lora": 10,
+    "mono": 1,
+    "zs": 10
+   },
+   "71": {
+    "gfac": 2,
+    "lora": 7,
+    "mono": 0,
+    "zs": 0
+   },
+   "72": {
+    "gfac": 9,
+    "lora": 9,
+    "mono": 3,
+    "zs": 10
+   },
+   "73": {
+    "gfac": 0,
+    "lora": 3,
+    "mono": 0,
+    "zs": 0
+   },
+   "74": {
+    "gfac": 3,
+    "lora": 6,
+    "mono": 0,
+    "zs": 0
+   },
+   "75": {
+    "gfac": 0,
+    "lora": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "76": {
+    "gfac": 0,
+    "lora": 4,
+    "mono": 0,
+    "zs": 0
+   },
+   "78": {
+    "gfac": 0,
+    "lora": 2,
+    "mono": 1,
+    "zs": 0
+   },
+   "79": {
+    "gfac": 9,
+    "lora": 10,
+    "mono": 2,
+    "zs": 3
+   },
+   "80": {
+    "gfac": 4,
+    "lora": 5,
+    "mono": 1,
+    "zs": 0
+   },
+   "81": {
+    "gfac": 0,
+    "lora": 3,
+    "mono": 0,
+    "zs": 0
+   },
+   "82": {
+    "gfac": 2,
+    "lora": 4,
+    "mono": 6,
+    "zs": 3
+   },
+   "83": {
+    "gfac": 0,
+    "lora": 5,
+    "mono": 0,
+    "zs": 0
+   },
+   "84": {
+    "gfac": 0,
+    "lora": 1,
+    "mono": 0,
+    "zs": 0
+   },
+   "85": {
+    "gfac": 1,
+    "lora": 9,
+    "mono": 1,
+    "zs": 0
+   },
+   "86": {
+    "gfac": 0,
+    "lora": 5,
+    "mono": 0,
+    "zs": 0
+   },
+   "88": {
+    "gfac": 9,
+    "lora": 10,
+    "mono": 4,
+    "zs": 0
+   },
+   "89": {
+    "gfac": 0,
+    "lora": 10,
+    "mono": 0,
+    "zs": 0
+   },
+   "9": {
+    "gfac": 8,
+    "lora": 10,
+    "mono": 9,
+    "zs": 10
+   }
+  },
+  "descriptive": {
+   "gfac_vs_lora": {
+    "diff": {
+     "diff": -0.35096153846153844,
+     "hi": -0.24711538461538463,
+     "hi90": -0.2625,
+     "lo": -0.4567307692307692,
+     "lo90": -0.4394230769230769,
+     "n_pairs": 1040,
+     "n_tasks": 52
+    },
+    "discordant": [
+     46,
+     411
+    ],
+    "n": 1040,
+    "sign_p": 2.3944240793686134e-74,
+    "tasks": 52,
+    "x": 351,
+    "y": 716
+   },
+   "lora_vs_zs": {
+    "diff": {
+     "diff": 0.3663461538461538,
+     "hi": 0.4701923076923077,
+     "hi90": 0.4528846153846154,
+     "lo": 0.2625,
+     "lo90": 0.27884615384615385,
+     "n_pairs": 1040,
+     "n_tasks": 52
+    },
+    "discordant": [
+     425,
+     44
+    ],
+    "n": 1040,
+    "sign_p": 2.3321716893342305e-79,
+    "tasks": 52,
+    "x": 716,
+    "y": 335
+   },
+   "mono_vs_zs": {
+    "diff": {
+     "diff": -0.15471698113207547,
+     "hi": -0.06792452830188679,
+     "hi90": -0.08018867924528301,
+     "lo": -0.24622641509433962,
+     "lo90": -0.23113207547169812,
+     "n_pairs": 1060,
+     "n_tasks": 53
+    },
+    "discordant": [
+     60,
+     224
+    ],
+    "n": 1060,
+    "sign_p": 2.0069745787376294e-23,
+    "tasks": 53,
+    "x": 190,
+    "y": 354
+   }
+  },
+  "exploratory_by_policy": {
+   "policy_fails": {
+    "gfac": 145,
+    "gfac_better": 14,
+    "gfac_worse": 2,
+    "mono": 48,
+    "tasks": 33,
+    "zs": 25
+   },
+   "policy_succeeds": {
+    "gfac": 220,
+    "gfac_better": 4,
+    "gfac_worse": 13,
+    "mono": 142,
+    "tasks": 20,
+    "zs": 329
+   }
+  },
+  "hypotheses": {
+   "H1": {
+    "diff": {
+     "diff": 0.010377358490566037,
+     "hi": 0.11509433962264151,
+     "hi90": 0.09811320754716982,
+     "lo": -0.09339622641509433,
+     "lo90": -0.07641509433962264,
+     "n_pairs": 1060,
+     "n_tasks": 53
+    },
+    "discordant": [
+     151,
+     140
+    ],
+    "n": 1060,
+    "passes": false,
+    "sign_p": 0.5578087504946171,
+    "tasks": 53,
+    "x": 365,
+    "y": 354
+   },
+   "H1b": {
+    "diff": {
+     "diff": 0.12264150943396226,
+     "hi": 0.19716981132075473,
+     "hi90": 0.18396226415094338,
+     "lo": 0.05660377358490566,
+     "lo90": 0.0660377358490566,
+     "n_pairs": 1060,
+     "n_tasks": 53
+    },
+    "discordant": [
+     137,
+     7
+    ],
+    "n": 1060,
+    "passes": true,
+    "sign_p": 2.0745989755018755e-32,
+    "tasks": 53,
+    "x": 484,
+    "y": 354
+   },
+   "H2": {
+    "diff": {
+     "diff": 0.1650943396226415,
+     "hi": 0.25849056603773585,
+     "hi90": 0.24150943396226415,
+     "lo": 0.07452830188679245,
+     "lo90": 0.08962264150943396,
+     "n_pairs": 1060,
+     "n_tasks": 53
+    },
+    "discordant": [
+     243,
+     68
+    ],
+    "n": 1060,
+    "passes": true,
+    "sign_p": 3.1232827076979727e-24,
+    "tasks": 53,
+    "x": 365,
+    "y": 190
+   },
+   "H2b": {
+    "diff": {
+     "diff": 0.09528301886792453,
+     "hi": 0.15943396226415094,
+     "hi90": 0.1490566037735849,
+     "lo": 0.038679245283018866,
+     "lo90": 0.04622641509433962,
+     "n_pairs": 1060,
+     "n_tasks": 53
+    },
+    "discordant": [
+     121,
+     20
+    ],
+    "n": 1060,
+    "passes": true,
+    "sign_p": 8.25373008593751e-19,
+    "tasks": 53,
+    "x": 484,
+    "y": 383
+   }
+  },
+  "missing": [],
+  "per_task": {
+   "10": {
+    "gfac": 4,
+    "lora": 17,
+    "mono": 13,
+    "zs": 19
+   },
+   "12": {
+    "gfac": 0,
+    "lora": 20,
+    "mono": 0,
+    "zs": 6
+   },
+   "13": {
+    "gfac": 0,
+    "lora": 19,
+    "mono": 0,
+    "zs": 0
+   },
+   "14": {
+    "gfac": 17,
+    "lora": 17,
+    "mono": 1,
+    "zs": 12
+   },
+   "15": {
+    "gfac": 17,
+    "lora": 17,
+    "mono": 15,
+    "zs": 1
+   },
+   "18": {
+    "gfac": 1,
+    "lora": 14,
+    "mono": 0,
+    "zs": 0
+   },
+   "19": {
+    "gfac": 4,
+    "lora": 12,
+    "mono": 2,
+    "zs": 18
+   },
+   "2": {
+    "gfac": 0,
+    "lora": 19,
+    "mono": 6,
+    "zs": 13
+   },
+   "24": {
+    "gfac": 14,
+    "lora": 18,
+    "mono": 10,
+    "zs": 20
+   },
+   "25": {
+    "gfac": 0,
+    "lora": 20,
+    "mono": 0,
+    "zs": 0
+   },
+   "26": {
+    "gfac": 0,
+    "lora": 10,
+    "mono": 1,
+    "zs": 0
+   },
+   "29": {
+    "gfac": 6,
+    "lora": 20,
+    "mono": 0,
+    "zs": 13
+   },
+   "30": {
+    "gfac": 8,
+    "lora": 20,
+    "mono": 15,
+    "zs": 14
+   },
+   "31": {
+    "gfac": 13,
+    "lora": 20,
+    "mono": 5,
+    "zs": 6
+   },
+   "32": {
+    "gfac": 0,
+    "lora": 6,
+    "mono": 0,
+    "zs": 0
+   },
+   "36": {
+    "gfac": 15,
+    "lora": 13,
+    "mono": 0,
+    "zs": 0
+   },
+   "38": {
+    "gfac": 0,
+    "lora": 16,
+    "mono": 0,
+    "zs": 11
+   },
+   "40": {
+    "gfac": 0,
+    "lora": 13,
+    "mono": 0,
+    "zs": 0
+   },
+   "41": {
+    "gfac": 12,
+    "lora": 15,
+    "mono": 0,
+    "zs": 1
+   },
+   "42": {
+    "gfac": 0,
+    "lora": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "43": {
+    "gfac": 0,
+    "lora": 16,
+    "mono": 0,
+    "zs": 1
+   },
+   "46": {
+    "gfac": 20,
+    "lora": 10,
+    "mono": 3,
+    "zs": 20
+   },
+   "48": {
+    "gfac": 3,
+    "lora": 17,
+    "mono": 3,
+    "zs": 0
+   },
+   "49": {
+    "gfac": 0,
+    "lora": 18,
+    "mono": 1,
+    "zs": 0
+   },
+   "50": {
+    "gfac": 16,
+    "lora": 19,
+    "mono": 12,
+    "zs": 16
+   },
+   "51": {
+    "gfac": 14,
+    "mono": 6,
+    "zs": 19
+   },
+   "54": {
+    "gfac": 6,
+    "lora": 14,
+    "mono": 9,
+    "zs": 17
+   },
+   "55": {
+    "gfac": 20,
+    "lora": 18,
+    "mono": 14,
+    "zs": 20
+   },
+   "56": {
+    "gfac": 20,
+    "lora": 20,
+    "mono": 7,
+    "zs": 18
+   },
+   "58": {
+    "gfac": 5,
+    "lora": 10,
+    "mono": 0,
+    "zs": 0
+   },
+   "59": {
+    "gfac": 17,
+    "lora": 12,
+    "mono": 1,
+    "zs": 3
+   },
+   "60": {
+    "gfac": 0,
+    "lora": 20,
+    "mono": 4,
+    "zs": 11
+   },
+   "61": {
+    "gfac": 8,
+    "lora": 20,
+    "mono": 1,
+    "zs": 20
+   },
+   "65": {
+    "gfac": 0,
+    "lora": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "67": {
+    "gfac": 18,
+    "lora": 20,
+    "mono": 5,
+    "zs": 20
+   },
+   "71": {
+    "gfac": 3,
+    "lora": 16,
+    "mono": 1,
+    "zs": 0
+   },
+   "72": {
+    "gfac": 20,
+    "lora": 20,
+    "mono": 7,
+    "zs": 19
+   },
+   "73": {
+    "gfac": 0,
+    "lora": 3,
+    "mono": 2,
+    "zs": 0
+   },
+   "74": {
+    "gfac": 6,
+    "lora": 12,
+    "mono": 0,
+    "zs": 2
+   },
+   "75": {
+    "gfac": 0,
+    "lora": 0,
+    "mono": 0,
+    "zs": 0
+   },
+   "76": {
+    "gfac": 1,
+    "lora": 6,
+    "mono": 0,
+    "zs": 0
+   },
+   "78": {
+    "gfac": 0,
+    "lora": 3,
+    "mono": 2,
+    "zs": 0
+   },
+   "79": {
+    "gfac": 19,
+    "lora": 20,
+    "mono": 4,
+    "zs": 5
+   },
+   "80": {
+    "gfac": 13,
+    "lora": 12,
+    "mono": 0,
+    "zs": 0
+   },
+   "81": {
+    "gfac": 0,
+    "lora": 6,
+    "mono": 1,
+    "zs": 0
+   },
+   "82": {
+    "gfac": 5,
+    "lora": 7,
+    "mono": 8,
+    "zs": 10
+   },
+   "83": {
+    "gfac": 0,
+    "lora": 7,
+    "mono": 0,
+    "zs": 0
+   },
+   "84": {
+    "gfac": 0,
+    "lora": 1,
+    "mono": 0,
+    "zs": 0
+   },
+   "85": {
+    "gfac": 0,
+    "lora": 15,
+    "mono": 4,
+    "zs": 0
+   },
+   "86": {
+    "gfac": 0,
+    "lora": 9,
+    "mono": 0,
+    "zs": 0
+   },
+   "88": {
+    "gfac": 20,
+    "lora": 19,
+    "mono": 8,
+    "zs": 0
+   },
+   "89": {
+    "gfac": 0,
+    "lora": 20,
+    "mono": 0,
+    "zs": 0
+   },
+   "9": {
+    "gfac": 20,
+    "lora": 20,
+    "mono": 19,
+    "zs": 19
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g0_recombine__libero_90__read__s15__49a33537",
+ "schema": 1,
+ "script": "experiments/g0_recombine.py",
+ "seconds": null,
+ "seed": 15,
+ "source_commit": null,
+ "started": "2026-10-15T13:52:52+00:00",
+ "stream": null,
+ "tag": "read"
+}
