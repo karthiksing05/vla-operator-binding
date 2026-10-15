@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/e5_main_80_lorasc_seed14.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_80.pt SUITE=libero_90 TASKS=80 TRIALS=20 (job 4084796)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_states_b",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/e5_main_80_lorasc_seed14.json",
+   "port": 9438,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "80",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4084796",
+  "mode": "lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_80.pt"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "tachikoma.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4084796",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "e5_main",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "45b7f1e33ded893450ae3e6c5cd9117ef54eab32",
+  "short": "45b7f1e3"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_80.pt",
+  "tasks": "80",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 624.1145896911621,
+  "success_rate": 0.6,
+  "tasks": {
+   "80": {
+    "errors": 0,
+    "language": "pick up the book and place it in the right compartment of the caddy",
+    "mean_steps": 248.25,
+    "n": 20,
+    "success_rate": 0.6
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "e5_main__libero_90__lorasc_seed14__first_trial-0__mode680d2a213cc6__tasks-80__trials-20__s7__45b7f1e3",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-15T01:15:03+00:00",
+ "stream": null,
+ "tag": "lorasc_seed14"
+}

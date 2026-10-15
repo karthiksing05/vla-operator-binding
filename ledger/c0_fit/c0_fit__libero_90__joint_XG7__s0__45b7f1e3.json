@@ -1,0 +1,120 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 34 --key to_the_front_of|the_white_mug --name XG7 --rank 4 --goal",
+ "config": {
+  "approach": false,
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "34",
+  "key": "to the front of|the white mug",
+  "lr": 0.0001,
+  "name": "XG7",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "optimistprime.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4083531",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "45b7f1e33ded893450ae3e6c5cd9117ef54eab32",
+  "short": "45b7f1e3"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.2066338062286377,
+    0.04419805109500885,
+    0.021361513063311577,
+    0.013065734878182411,
+    0.012043174356222153,
+    0.004612910095602274,
+    0.0037211503367871046,
+    0.0033443209249526262,
+    0.00321111804805696,
+    0.008918908424675465,
+    0.0055221677757799625
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 87,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the yellow and white mug to the front of the white mug",
+    "frames": [
+     57,
+     144
+    ],
+    "task": 34
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "to the front of|the white mug"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_XG7__s0__45b7f1e3",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-14T23:29:17+00:00",
+ "stream": null,
+ "tag": "joint_XG7"
+}

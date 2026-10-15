@@ -1,0 +1,136 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 74+79+82 --key in|the_left_compartment_of_the_caddy --name XG18 --rank 4 --goal",
+ "config": {
+  "approach": false,
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "74+79+82",
+  "key": "in|the left compartment of the caddy",
+  "lr": 0.0001,
+  "name": "XG18",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "sonny.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4083542",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "45b7f1e33ded893450ae3e6c5cd9117ef54eab32",
+  "short": "45b7f1e3"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.0700337365269661,
+    0.04171768203377724,
+    0.032934125512838364,
+    0.015790317207574844,
+    0.01732531003654003,
+    0.009654399938881397,
+    0.00535884452983737,
+    0.006068008486181498,
+    0.007354785688221455,
+    0.011191241443157196,
+    0.008822477422654629
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 314,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the book and place it in the left compartment of the caddy",
+    "frames": [
+     42,
+     182
+    ],
+    "task": 74
+   },
+   {
+    "clause": "pick up the book and place it in the left compartment of the caddy",
+    "frames": [
+     44,
+     108
+    ],
+    "task": 79
+   },
+   {
+    "clause": "pick up the book and place it in the left compartment of the caddy",
+    "frames": [
+     49,
+     159
+    ],
+    "task": 82
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "in|the left compartment of the caddy"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_XG18__s0__45b7f1e3",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-14T23:30:09+00:00",
+ "stream": null,
+ "tag": "joint_XG18"
+}

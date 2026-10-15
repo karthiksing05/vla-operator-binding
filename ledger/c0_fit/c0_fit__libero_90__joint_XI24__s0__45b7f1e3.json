@@ -1,0 +1,120 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 87 --key put|the_book --name XI24 --rank 4 --approach",
+ "config": {
+  "approach": true,
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "87",
+  "key": "put|the book",
+  "lr": 0.0001,
+  "name": "XI24",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "qt-1.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4083548",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "45b7f1e33ded893450ae3e6c5cd9117ef54eab32",
+  "short": "45b7f1e3"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.07104673236608505,
+    0.014200108125805855,
+    0.009204076603055,
+    0.0027556263376027346,
+    0.008212938904762268,
+    0.0023546169977635145,
+    0.004700202029198408,
+    0.0011943995486944914,
+    0.0028785113245248795,
+    0.008978823199868202,
+    0.002270130207762122
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 53,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the book on the left and place it on top of the shelf",
+    "frames": [
+     0,
+     53
+    ],
+    "task": 87
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the book"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_XI24__s0__45b7f1e3",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-14T23:11:10+00:00",
+ "stream": null,
+ "tag": "joint_XI24"
+}
