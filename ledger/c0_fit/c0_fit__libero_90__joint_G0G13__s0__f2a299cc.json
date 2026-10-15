@@ -1,0 +1,130 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 76+84 --key to_the_right_of|the_caddy --name G0G13 --rank 4 --goal",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "76+84",
+  "key": "to the right of|the caddy",
+  "lr": 0.0001,
+  "name": "G0G13",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "nestor.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4085859",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "f2a299ccbc84f50e899e291ab28e40925e1a78d6",
+  "short": "f2a299cc"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.1432010978460312,
+    0.03172507882118225,
+    0.01518056821078062,
+    0.011317146942019463,
+    0.01044123899191618,
+    0.005024981684982777,
+    0.003275178372859955,
+    0.0026464310940355062,
+    0.003196495119482279,
+    0.006744267884641886,
+    0.007133412640541792
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 142,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the yellow and white mug and place it to the right of the caddy",
+    "frames": [
+     52,
+     129
+    ],
+    "task": 76
+   },
+   {
+    "clause": "pick up the red mug and place it to the right of the caddy",
+    "frames": [
+     54,
+     119
+    ],
+    "task": 84
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "to the right of|the caddy"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_G0G13__s0__f2a299cc",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T04:01:20+00:00",
+ "stream": null,
+ "tag": "joint_G0G13"
+}

@@ -89,6 +89,18 @@ class SmolVLABackbone(PolicyBackbone):
                                lang_masks=b["observation.language.attention_mask"], state=self.policy.prepare_state(b))
 
     @torch.no_grad()
+    def observations(self, obs_dicts):
+        """A list of raw observation dicts -> one batched input (per-row conditioning), through the same pre-processor."""
+        img = lambda k: torch.stack([torch.from_numpy(np.ascontiguousarray(o[k])).permute(2, 0, 1) for o in obs_dicts]).float() / 255.0  # noqa: E731
+        batch = {"observation.images.image": img("observation/image"), "observation.images.image2": img("observation/wrist_image"),
+                 "observation.state": torch.as_tensor(np.stack([np.asarray(o["observation/state"], np.float32) for o in obs_dicts])),
+                 "task": [str(o["prompt"]) for o in obs_dicts]}
+        b = self.pre(batch)
+        images, img_masks = self.policy.prepare_images(b)
+        return SmolObservation(images=images, img_masks=img_masks, lang_tokens=b["observation.language.tokens"],
+                               lang_masks=b["observation.language.attention_mask"], state=self.policy.prepare_state(b))
+
+    @torch.no_grad()
     def prefix(self, observation):
         from lerobot.policies.smolvla.modeling_smolvla import make_att_2d_masks
         m = self.model

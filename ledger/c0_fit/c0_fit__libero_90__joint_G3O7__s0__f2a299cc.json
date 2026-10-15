@@ -1,0 +1,130 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 36+37 --key put|the_white_bowl --name G3O7 --rank 4 --approach",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "36+37",
+  "key": "put|the white bowl",
+  "lr": 0.0001,
+  "name": "G3O7",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "tachikoma.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4085818",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "f2a299ccbc84f50e899e291ab28e40925e1a78d6",
+  "short": "f2a299cc"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.05512410029768944,
+    0.012216790579259396,
+    0.01089489459991455,
+    0.00419754208996892,
+    0.006210451480001211,
+    0.004558079410344362,
+    0.004596609156578779,
+    0.001183926360681653,
+    0.001782656880095601,
+    0.007178023457527161,
+    0.003344874829053879
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 137,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the white bowl on the plate",
+    "frames": [
+     0,
+     87
+    ],
+    "task": 36
+   },
+   {
+    "clause": "put the white bowl to the right of the plate",
+    "frames": [
+     0,
+     50
+    ],
+    "task": 37
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the white bowl"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_G3O7__s0__f2a299cc",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T04:21:10+00:00",
+ "stream": null,
+ "tag": "joint_G3O7"
+}

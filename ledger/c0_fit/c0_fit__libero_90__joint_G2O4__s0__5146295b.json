@@ -1,0 +1,120 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 48 --key put|the_ketchup --name G2O4 --rank 4 --approach",
+ "config": {
+  "approach": true,
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "48",
+  "key": "put|the ketchup",
+  "lr": 0.0001,
+  "name": "G2O4",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "uniblab.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4085810",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5146295b930490a4ec9713cecd6e692e24ef16ea",
+  "short": "5146295b"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.04572591185569763,
+    0.011378585360944271,
+    0.002141714794561267,
+    0.0031686730217188597,
+    0.006473608314990997,
+    0.0009059099829755723,
+    0.0029560427647083998,
+    0.0006446180050261319,
+    0.0015566865913569927,
+    0.004084398038685322,
+    0.001792796771042049
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 77,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the ketchup and put it in the basket",
+    "frames": [
+     0,
+     77
+    ],
+    "task": 48
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the ketchup"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_G2O4__s0__5146295b",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T03:03:18+00:00",
+ "stream": null,
+ "tag": "joint_G2O4"
+}

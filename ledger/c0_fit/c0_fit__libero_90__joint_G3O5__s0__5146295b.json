@@ -1,0 +1,120 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 27 --key put|the_wine_bottle --name G3O5 --rank 4 --approach",
+ "config": {
+  "approach": true,
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "27",
+  "key": "put|the wine bottle",
+  "lr": 0.0001,
+  "name": "G3O5",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "qt-1.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4085806",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5146295b930490a4ec9713cecd6e692e24ef16ea",
+  "short": "5146295b"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.054682500660419464,
+    0.01612338237464428,
+    0.015364891849458218,
+    0.0077971043065190315,
+    0.006545209791511297,
+    0.007074696011841297,
+    0.004112142603844404,
+    0.0023393186274915934,
+    0.0029959026724100113,
+    0.006687086075544357,
+    0.00497698737308383
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 137,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the wine bottle on the wine rack",
+    "frames": [
+     0,
+     137
+    ],
+    "task": 27
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the wine bottle"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_G3O5__s0__5146295b",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T03:00:07+00:00",
+ "stream": null,
+ "tag": "joint_G3O5"
+}

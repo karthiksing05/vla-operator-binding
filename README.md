@@ -24,7 +24,7 @@ concepts, reused by later tasks.
 | composition beats the policy on tasks it fails | kept library 499 of 600 against 273 zero-shot, on start states no design decision saw (`ledger/e3_hier`) |
 | close to a separate adapter per task, at a fifth of the storage | 480 against 494 of 580 for the per-task LoRA with the same acceptance test (difference -0.024, 95% interval -0.074 to 0.024); 22 prototypes, 102.9 MB, against 29 adapters, 545.4 MB. Non-inferiority at the margin of 0.05 is NOT established |
 | learned as a stream, nothing damaged | the request rule of the thesis: 17 and 16 demonstrations in two orders (21 and 20 under the earlier rule); no damage to earlier arrivals in either order (`ledger/w1_stream`) |
-| replication on 37 new tasks | pre-registered and running (`ledger/m3_prereg` tag e5_replicate) |
+| replication on 37 new tasks | 451 of 740 against 151 zero-shot; 451 against 441 for the per-task LoRA with acceptance; pooled over 66 tasks 931 against 935 of 1,320 (difference -0.003, 95% interval -0.063 to 0.058): level, non-inferiority at 0.05 just missed (`ledger/e5_replicate`) |
 | limits | a new object needs its one demonstration (object prototypes do not transfer between objects, `ledger/t0_transfer`); selecting prototypes by a demonstration's likelihood, as Wang et al. do, is at chance here (`ledger/w0_select`) |
 
 ## How to view everything

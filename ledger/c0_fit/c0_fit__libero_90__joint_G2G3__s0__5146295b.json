@@ -1,0 +1,144 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 19+21+38+45 --key on|the_stove --name G2G3 --rank 4 --goal",
+ "config": {
+  "approach": false,
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "19+21+38+45",
+  "key": "on|the stove",
+  "lr": 0.0001,
+  "name": "G2G3",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "megazord.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4085800",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5146295b930490a4ec9713cecd6e692e24ef16ea",
+  "short": "5146295b"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.06783775240182877,
+    0.032498933374881744,
+    0.03134758397936821,
+    0.014367485418915749,
+    0.0129121458157897,
+    0.01108676940202713,
+    0.005024136509746313,
+    0.007458394858986139,
+    0.0053687915205955505,
+    0.011969341896474361,
+    0.00698823481798172
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 288,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the moka pot on the stove",
+    "frames": [
+     77,
+     135
+    ],
+    "task": 19
+   },
+   {
+    "clause": "put the frying pan on the stove",
+    "frames": [
+     192,
+     272
+    ],
+    "task": 21
+   },
+   {
+    "clause": "put the right moka pot on the stove",
+    "frames": [
+     104,
+     188
+    ],
+    "task": 38
+   },
+   {
+    "clause": "put the frying pan on the stove",
+    "frames": [
+     187,
+     253
+    ],
+    "task": 45
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "on|the stove"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_G2G3__s0__5146295b",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T02:56:18+00:00",
+ "stream": null,
+ "tag": "joint_G2G3"
+}

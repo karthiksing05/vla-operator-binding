@@ -1,0 +1,130 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 67+85 --key put|the_white_mug --name G2O12 --rank 4 --approach",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "67+85",
+  "key": "put|the white mug",
+  "lr": 0.0001,
+  "name": "G2O12",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "hk47.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4085841",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "f2a299ccbc84f50e899e291ab28e40925e1a78d6",
+  "short": "f2a299cc"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.06474675983190536,
+    0.019419880583882332,
+    0.00890082772821188,
+    0.004463010001927614,
+    0.006982095539569855,
+    0.0033446706365793943,
+    0.0035970197059214115,
+    0.0021124589256942272,
+    0.0017834823811426759,
+    0.0069495923817157745,
+    0.0035537981893867254
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 61,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the white mug on the left plate",
+    "frames": [
+     0,
+     28
+    ],
+    "task": 67
+   },
+   {
+    "clause": "pick up the white mug and place it to the right of the caddy",
+    "frames": [
+     0,
+     33
+    ],
+    "task": 85
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the white mug"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_G2O12__s0__f2a299cc",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T03:40:41+00:00",
+ "stream": null,
+ "tag": "joint_G2O12"
+}

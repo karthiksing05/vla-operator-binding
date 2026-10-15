@@ -1,0 +1,138 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 66+71+84 --key put|the_red_mug --name G1O10 --rank 4 --approach",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "66+71+84",
+  "key": "put|the red mug",
+  "lr": 0.0001,
+  "name": "G1O10",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "megazord.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4085836",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5146295b930490a4ec9713cecd6e692e24ef16ea",
+  "short": "5146295b"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.05876196175813675,
+    0.019890228286385536,
+    0.01048219669610262,
+    0.005988062359392643,
+    0.013562619686126709,
+    0.005407421384006739,
+    0.0036735848989337683,
+    0.001899508060887456,
+    0.004497428424656391,
+    0.009783180430531502,
+    0.005175709258764982
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 150,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the red mug on the right plate",
+    "frames": [
+     0,
+     55
+    ],
+    "task": 66
+   },
+   {
+    "clause": "put the red mug on the plate",
+    "frames": [
+     0,
+     41
+    ],
+    "task": 71
+   },
+   {
+    "clause": "pick up the red mug and place it to the right of the caddy",
+    "frames": [
+     0,
+     54
+    ],
+    "task": 84
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the red mug"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_G1O10__s0__5146295b",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T03:35:34+00:00",
+ "stream": null,
+ "tag": "joint_G1O10"
+}

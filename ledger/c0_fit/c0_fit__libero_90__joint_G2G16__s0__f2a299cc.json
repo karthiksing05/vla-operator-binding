@@ -1,0 +1,130 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 84+85 --key to_the_right_of|the_caddy --name G2G16 --rank 4 --goal",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "84+85",
+  "key": "to the right of|the caddy",
+  "lr": 0.0001,
+  "name": "G2G16",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "tachikoma.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4085849",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "f2a299ccbc84f50e899e291ab28e40925e1a78d6",
+  "short": "f2a299cc"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.13069169223308563,
+    0.03717407211661339,
+    0.025015288963913918,
+    0.014059498906135559,
+    0.014878429472446442,
+    0.008214125409722328,
+    0.00560359051451087,
+    0.005520598031580448,
+    0.004610375966876745,
+    0.010080670937895775,
+    0.008437608368694782
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 133,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the red mug and place it to the right of the caddy",
+    "frames": [
+     54,
+     119
+    ],
+    "task": 84
+   },
+   {
+    "clause": "pick up the white mug and place it to the right of the caddy",
+    "frames": [
+     33,
+     101
+    ],
+    "task": 85
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "to the right of|the caddy"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_G2G16__s0__f2a299cc",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T03:41:19+00:00",
+ "stream": null,
+ "tag": "joint_G2G16"
+}

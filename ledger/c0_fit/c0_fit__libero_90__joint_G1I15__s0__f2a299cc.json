@@ -1,0 +1,122 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 88 --key put|the_book --name G1I15 --rank 4 --approach",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "88",
+  "key": "put|the book",
+  "lr": 0.0001,
+  "name": "G1I15",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "uniblab.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4085863",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "f2a299ccbc84f50e899e291ab28e40925e1a78d6",
+  "short": "f2a299cc"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.01446839701384306,
+    0.004477884154766798,
+    0.00193873792886734,
+    0.000819561944808811,
+    0.005268679466098547,
+    0.0006129724206402898,
+    0.000971691042650491,
+    0.0005568123888224363,
+    0.0007452251156792045,
+    0.00441895704716444,
+    0.0011565227760002017
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 37,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the book on the right and place it on the cabinet shelf",
+    "frames": [
+     0,
+     37
+    ],
+    "task": 88
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the book"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_G1I15__s0__f2a299cc",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T04:05:33+00:00",
+ "stream": null,
+ "tag": "joint_G1I15"
+}

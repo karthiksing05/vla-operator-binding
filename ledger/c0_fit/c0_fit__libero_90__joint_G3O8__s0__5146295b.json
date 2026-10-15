@@ -1,0 +1,122 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 46 --key put|the_alphabet_soup --name G3O8 --rank 4 --approach",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "46",
+  "key": "put|the alphabet soup",
+  "lr": 0.0001,
+  "name": "G3O8",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "uniblab.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4085825",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5146295b930490a4ec9713cecd6e692e24ef16ea",
+  "short": "5146295b"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.03597366809844971,
+    0.01225307583808899,
+    0.00618432043120265,
+    0.0018120624590665102,
+    0.006319516804069281,
+    0.001046996214427054,
+    0.0012113703414797783,
+    0.0007347690989263356,
+    0.0017819214845076203,
+    0.0058399527333676815,
+    0.0018736247438937426
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 51,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the alphabet soup and put it in the basket",
+    "frames": [
+     0,
+     51
+    ],
+    "task": 46
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the alphabet soup"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_G3O8__s0__5146295b",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T03:25:26+00:00",
+ "stream": null,
+ "tag": "joint_G3O8"
+}

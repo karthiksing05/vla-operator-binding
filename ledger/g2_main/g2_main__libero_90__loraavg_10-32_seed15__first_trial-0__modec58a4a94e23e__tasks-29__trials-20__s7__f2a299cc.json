@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g2_main_29_loraavg_10+32_seed15.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=loras:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_10_sc.pt+/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_32.pt?w=0.5 SUITE=libero_90 TASKS=29 TRIALS=20 (job 4087111)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_states_b",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g2_main_29_loraavg_10+32_seed15.json",
+   "port": 9424,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "29",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4087111",
+  "mode": "loras:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_10_sc.pt+/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_32.pt?w=0.5"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "nestor.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4087111",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g2_main",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "f2a299ccbc84f50e899e291ab28e40925e1a78d6",
+  "short": "f2a299cc"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "loras:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_10_sc.pt+/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_32.pt?w=0.5",
+  "tasks": "29",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 916.5642037391663,
+  "success_rate": 0.7,
+  "tasks": {
+   "29": {
+    "errors": 0,
+    "language": "put the black bowl in the top drawer of the cabinet",
+    "mean_steps": 227.75,
+    "n": 20,
+    "success_rate": 0.7
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g2_main__libero_90__loraavg_10-32_seed15__first_trial-0__modec58a4a94e23e__tasks-29__trials-20__s7__f2a299cc",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-15T04:42:32+00:00",
+ "stream": null,
+ "tag": "loraavg_10+32_seed15"
+}

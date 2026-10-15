@@ -199,6 +199,9 @@ def arm_spec(tid, arm, fold, demo=0):
             return None
         w = 1.0 if arm.startswith("lorasum") else 1.0 / len(fs)
         return (f"loras:{'+'.join(fs)}?w={w}", "0", False)
+    if arm.startswith("lorat@"):                                        # plan G3: per-task LoRA r3_lora_<task><tag>.pt (another backbone)
+        f_ = os.path.join(R, f"r3_lora_{tid}{arm.split('@', 1)[1]}.pt")
+        return (f"lora:{f_}", "0", False) if os.path.exists(f_) else None
     if arm == "lorasc":                                                  # the per-task LoRA on the task's OWN scene's demonstration:
         from lifelong_ood import ledger as _L                            # refit (_sc) where the first episode of its text was another
         wrong = set(_L.load("l90_scenes", tag="map")[-1]["metrics"]["wrong_scene_tasks"])   # scene's (experiments/l90_scenes.py)

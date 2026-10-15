@@ -1,0 +1,130 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 40+86 --key on|the_cabinet_shelf --name G0G15 --rank 4 --goal",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "40+86",
+  "key": "on|the cabinet shelf",
+  "lr": 0.0001,
+  "name": "G0G15",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "gundam.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4085862",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "f2a299ccbc84f50e899e291ab28e40925e1a78d6",
+  "short": "f2a299cc"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.1925642043352127,
+    0.05174325034022331,
+    0.025172507390379906,
+    0.014804163947701454,
+    0.015944046899676323,
+    0.008714541792869568,
+    0.006623595952987671,
+    0.004129172768443823,
+    0.005708526819944382,
+    0.01118933130055666,
+    0.008192852139472961
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 192,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the frying pan on the cabinet shelf",
+    "frames": [
+     101,
+     177
+    ],
+    "task": 40
+   },
+   {
+    "clause": "pick up the book in the middle and place it on the cabinet shelf",
+    "frames": [
+     51,
+     167
+    ],
+    "task": 86
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "on|the cabinet shelf"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_G0G15__s0__f2a299cc",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T04:02:57+00:00",
+ "stream": null,
+ "tag": "joint_G0G15"
+}

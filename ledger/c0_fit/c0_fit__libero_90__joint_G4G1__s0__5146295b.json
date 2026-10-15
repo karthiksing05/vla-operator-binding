@@ -1,0 +1,152 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 9+13+14+36+72 --key on|the_plate --name G4G1 --rank 4 --goal",
+ "config": {
+  "approach": false,
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "9+13+14+36+72",
+  "key": "on|the plate",
+  "lr": 0.0001,
+  "name": "G4G1",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "synapse.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4085792",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5146295b930490a4ec9713cecd6e692e24ef16ea",
+  "short": "5146295b"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.08413718640804291,
+    0.03611626476049423,
+    0.028748303651809692,
+    0.01838536374270916,
+    0.016818081960082054,
+    0.00797776598483324,
+    0.005462742410600185,
+    0.003980516921728849,
+    0.005419197026640177,
+    0.01066411193460226,
+    0.008848053403198719
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 434,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the black bowl on the plate",
+    "frames": [
+     57,
+     137
+    ],
+    "task": 9
+   },
+   {
+    "clause": "put the black bowl at the front on the plate",
+    "frames": [
+     71,
+     134
+    ],
+    "task": 13
+   },
+   {
+    "clause": "put the middle black bowl on the plate",
+    "frames": [
+     38,
+     108
+    ],
+    "task": 14
+   },
+   {
+    "clause": "put the white bowl on the plate",
+    "frames": [
+     87,
+     218
+    ],
+    "task": 36
+   },
+   {
+    "clause": "put the white mug on the plate",
+    "frames": [
+     57,
+     147
+    ],
+    "task": 72
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "on|the plate"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_G4G1__s0__5146295b",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T02:45:52+00:00",
+ "stream": null,
+ "tag": "joint_G4G1"
+}
