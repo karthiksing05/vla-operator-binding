@@ -59,6 +59,9 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
     ("G5a factor-level selection", "g5_factors", "read", True, "c-gen",
      lambda m: f"per-factor choice {m['H1']['x']} vs both-only {m['H1']['y']} (n.s.); object alone {m['alone_vs_zs']['obj']['x']}, "
                f"goal alone {m['alone_vs_zs']['goal']['x']}, policy {m['alone_vs_zs']['obj']['y']}"),
+    ("G5b the switch at the grasp", "g5b_gating", "read", True, "c-gen",
+     lambda m: f"gated {m['H1']['x']} vs both always on {m['H1']['y']} (sign p {m['H1']['sign_p']:.1g}); always on vs policy "
+               f"{m['ungated_vs_zs']['y']}"),
     ("i5 the library in weight space", "i5_library", "read", False, "c-library",
      lambda m: f"{m['n_prototypes']} prototypes; instance to own type cos {m['instance_to_own_type']:.3f} vs {m['instance_to_other_types']:.3f}"),
     ("G3 a second policy (SmolVLA)", "g3_crossmodel", "read_smolvla", True, "c-gen", lambda m: _v_e3(m) if "bytes" in m else
@@ -341,6 +344,13 @@ def generalise():
                 f"{g5['H1']['sign_p']:.2g}, not significant). Alone, the object concept succeeds {a['obj']['x']} times, below the policy's "
                 f"{a['obj']['y']}, and the goal concept {a['goal']['x']}: the object factor, which changes which object the arm reaches "
                 f"for, is the one that interferes when the policy already knows the task.</p>")
+    g5b = row("g5b_gating", "read")
+    if g5b:
+        h, u = g5b["H1"], g5b["ungated_vs_zs"]
+        out += (f"<p>Does the switch at the grasp matter (m3_prereg tag g5b_gating)? With both prototypes on for the whole episode the "
+                f"library succeeds {h['y']} of {h['n']} times, level with the policy's {u['y']} (sign p {u['sign_p']:.2g}); switched at "
+                f"the policy's own grasp it succeeds {h['x']} (discordant pairs {h['discordant'][0]} against {h['discordant'][1]}). "
+                f"The same two prototypes, summed without the phase, give nothing: the gain is carried by the gating.</p>")
     return out
 
 

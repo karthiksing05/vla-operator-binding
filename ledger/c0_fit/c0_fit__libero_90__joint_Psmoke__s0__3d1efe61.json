@@ -1,0 +1,100 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 3465216,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 3465216,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 1+2+9 --key put|the_black_bowl --name Psmoke --rank 4 --approach --backbone pi0_libero --steps 5",
+ "config": {
+  "approach": true,
+  "backbone": "pi0_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "1+2+9",
+  "key": "put|the black bowl",
+  "lr": 0.0001,
+  "name": "Psmoke",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 5,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "voltron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094576",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "3d1efe61499b0033e3351c6c81df21706565ec21",
+  "short": "3d1efe61"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi0_libero",
+  "bind": false,
+  "bytes": 3465216,
+  "curve": {
+   "anchor": [
+    0.0
+   ],
+   "loss": [
+    0.10582317411899567
+   ],
+   "step": [
+    1
+   ]
+  },
+  "frames": 97,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the black bowl in the top drawer of the cabinet",
+    "frames": [
+     0,
+     40
+    ],
+    "task": 2
+   },
+   {
+    "clause": "put the black bowl on the plate",
+    "frames": [
+     0,
+     57
+    ],
+    "task": 9
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the black bowl"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_Psmoke__s0__3d1efe61",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T20:26:06+00:00",
+ "stream": null,
+ "tag": "joint_Psmoke"
+}
