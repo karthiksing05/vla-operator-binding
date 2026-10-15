@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g3_main_62_lorat__sv_seed13_smolvla.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_62_sv.pt SUITE=libero_90 TASKS=62 TRIALS=20 (job 4092945)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_states_b",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g3_main_62_lorat__sv_seed13_smolvla.json",
+   "port": 9525,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "62",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4092945",
+  "mode": "lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_62_sv.pt"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "nestor.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4092945",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g3_main",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "2e3b1a35a7af769ed3e1b4cfe5af2629802f1a56",
+  "short": "2e3b1a35"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_62_sv.pt",
+  "tasks": "62",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 666.1849448680878,
+  "success_rate": 0.3,
+  "tasks": {
+   "62": {
+    "errors": 0,
+    "language": "pick up the salad dressing and put it in the tray",
+    "mean_steps": 316.55,
+    "n": 20,
+    "success_rate": 0.3
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g3_main__libero_90__lorat__sv_seed13_smolvla__first_trial-0__mode3c0da2d92539__tasks-62__trials-20__s7__2e3b1a35",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-15T15:08:13+00:00",
+ "stream": null,
+ "tag": "lorat__sv_seed13_smolvla"
+}

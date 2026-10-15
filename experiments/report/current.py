@@ -326,6 +326,13 @@ def generalise():
                 f"concepts; with practice choosing, {c['kept_gfac_vs_kept_best_baseline']['x']} against "
                 f"{c['kept_gfac_vs_kept_best_baseline']['y']} for the better baseline. Averaging is level with the recombined concepts "
                 f"without practice (sign p {c['gfac_vs_avg']['sign_p']:.2g}).</p>")
+    g3 = row("g3_crossmodel", "read_smolvla")
+    if g3:
+        h1, h2 = g3["hypotheses"]["H1"], g3["hypotheses"]["H2"]
+        out += (f"<p>On a second policy (m3_prereg tag g3_crossmodel): the same concepts refit on SmolVLA, at the same tasks, start states "
+                f"and seed. SmolVLA alone succeeds {h1['y']} of {h1['n']} times; the kept library {h1['x']} (sign p {h1['sign_p']:.2g}). "
+                f"Against SmolVLA's own per-task LoRA with acceptance, {h2['x']} against {h2['y']} of {h2['n']} (difference "
+                f"{_ci(h2['diff'])}): the gain over the frozen policy carries over, the parity with a per-task adapter does not.</p>")
     g5 = row("g5_factors", "read")
     if g5:
         a = g5["alone_vs_zs"]

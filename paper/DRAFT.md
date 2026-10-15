@@ -18,7 +18,7 @@ per task given the same acceptance test: over 66 tasks, 931 against 935 of 1,320
 a demonstration only when practice fails, it needs 17 and 16 demonstrations over 30 arrivals and damages no earlier task.
 Concepts learned only from other tasks recombine where the policy lacks the skill (145 against 25 on the tasks it fails) and
 interfere where it has it, so practice must choose; factorisation beats a monolithic adapter trained on the same data (365 against
-190). PENDING: a second policy (G3).
+190). On a second policy (SmolVLA) the library lifts 20 to 203 of 600 successes, though a per-task adapter leads there.
 
 ## 1 Introduction
 
@@ -93,7 +93,10 @@ against 190). Exploratory: on the 33 tasks the policy fails, recombination gives
 On 52 of the held-out tasks, summing the per-task adapters of an object donor and a goal donor collapses (71 of 1,040); averaging
 them stays at the policy's level (328 against 336); the recombined concepts reach 345; with practice they reach 466 against 375 for the
 better baseline.
-### A second policy (PENDING: G3)
+### A second policy
+The same library refit on SmolVLA, at the same tasks, start states and seed: 203 of 600 against 20 for SmolVLA alone; against
+SmolVLA's per-task LoRA with acceptance 189 against 274 of 580 (difference -0.147, 95% interval -0.266 to -0.029). Composition
+carries over as a large gain over the frozen policy; the per-task adapter leads by more on the weaker policy.
 
 ### What the prototypes encode
 Object prototypes are nearly orthogonal to one another (mean cosine 0.058) and to goal prototypes (0.037); both act in the same

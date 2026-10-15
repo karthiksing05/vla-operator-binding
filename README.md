@@ -26,6 +26,7 @@ concepts, reused by later tasks.
 | learned as a stream, nothing damaged | the request rule of the thesis: 17 and 16 demonstrations in two orders (21 and 20 under the earlier rule); no damage to earlier arrivals in either order (`ledger/w1_stream`) |
 | replication on 37 new tasks | 451 of 740 against 151 zero-shot; 451 against 441 for the per-task LoRA with acceptance; pooled over 66 tasks 931 against 935 of 1,320 (difference -0.003, 95% interval -0.063 to 0.058): level, non-inferiority at 0.05 just missed (`ledger/e5_replicate`) |
 | recombination of concepts learned only from OTHER tasks (5-fold held out, 53 tasks) | alone, level with the policy (365 against 354 of 1,060: the pre-registered test fails); with practice choosing, 484 against 354; on the tasks the policy fails, 145 against 25 (exploratory); factorisation beats a monolithic adapter on the same data, 365 against 190 (`ledger/g0_recombine`); summing donor adapters collapses (71), averaging them stays at the policy's level (328) (`ledger/g2_baselines`) |
+| a second policy (SmolVLA) | the same library refit on SmolVLA: 203 of 600 against 20 for SmolVLA alone; 189 against 274 of 580 for its per-task LoRA with acceptance (`ledger/g3_crossmodel`) |
 | limits | a new object needs its one demonstration (object prototypes do not transfer between objects, `ledger/t0_transfer`); selecting prototypes by a demonstration's likelihood, as Wang et al. do, is at chance here (`ledger/w0_select`) |
 
 ## How to view everything
