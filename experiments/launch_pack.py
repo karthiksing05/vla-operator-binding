@@ -37,6 +37,15 @@ GROUP_A = {35, 36, 39, 42, 1, 6, 34, 37, 40, 52, 53, 62}             # the cross
 SUITE_OF = {}
 
 
+def _lorasc(tid):
+    """The per-task LoRA on the task's OWN scene's demonstration: refit (_sc) where the first episode of its text was another
+    scene's (experiments/l90_scenes.py).  -> its path, or None."""
+    from lifelong_ood import ledger as _L
+    wrong = set(_L.load("l90_scenes", tag="map")[-1]["metrics"]["wrong_scene_tasks"])
+    f_ = os.path.join(R, f"r3_lora_{tid}_sc.pt" if tid in wrong else f"r3_lora_{tid}.pt")
+    return f_ if os.path.exists(f_) else None
+
+
 def arm_spec(tid, arm, fold, demo=0):
     """-> (MODE, PROGRAM_BYTES, needs_prep) or None when the arm does not apply.  demo k > 0: the programs, fold and LoRA
     built from IPEC episode k of the task's text (files with the suffix _d<k>)."""
@@ -206,11 +215,9 @@ def arm_spec(tid, arm, fold, demo=0):
     if arm.startswith("lorat@"):                                        # plan G3: per-task LoRA r3_lora_<task><tag>.pt (another backbone)
         f_ = os.path.join(R, f"r3_lora_{tid}{arm.split('@', 1)[1]}.pt")
         return (f"lora:{f_}", "0", False) if os.path.exists(f_) else None
-    if arm == "lorasc":                                                  # the per-task LoRA on the task's OWN scene's demonstration:
-        from lifelong_ood import ledger as _L                            # refit (_sc) where the first episode of its text was another
-        wrong = set(_L.load("l90_scenes", tag="map")[-1]["metrics"]["wrong_scene_tasks"])   # scene's (experiments/l90_scenes.py)
-        f_ = os.path.join(R, f"r3_lora_{tid}_sc.pt" if tid in wrong else f"r3_lora_{tid}.pt")
-        return (f"lora:{f_}", "0", False) if os.path.exists(f_) else None
+    if arm == "lorasc":                                                  # the per-task LoRA on the task's OWN scene's demonstration
+        f_ = _lorasc(tid)
+        return (f"lora:{f_}", "0", False) if f_ else None
     if arm.startswith("fac@"):                                          # plan E: fac@<object>.<goal>[_bind] -- the object primitive
         spec_, _, fl = arm.split("@", 1)[1].partition("_")               # prim_<object>_0.pt before the grasp, the goal primitive
         o_, g_ = spec_.split(".")                                        # prim_<goal>_0.pt from the grasp to the release ("x" = none)
@@ -275,6 +282,13 @@ def arm_spec(tid, arm, fold, demo=0):
         return (f"dsrl:{tid}?train=1&official=1&save={os.path.join(R, f'dsrlo_{tid}_actor.pt')}&warmup=10", "0", False)
     if arm == "dsrlo":
         return (f"dsrl:{tid}?train=0&official=1&load={os.path.join(R, f'dsrlo_{tid}_actor.pt')}", "0", False)
+    if arm in ("dsrlz_train", "dsrls_train", "dsrlz", "dsrls"):          # plan G7: DSRL (authors' configuration) steering the frozen
+        base = "none" if arm.startswith("dsrlz") else _lorasc(tid)        # policy (z) or the task's scene-correct one-demo LoRA (s)
+        if base is None:
+            return None
+        act = os.path.join(R, f"{arm.split('_')[0]}_{tid}_actor.pt")
+        mode = f"train=1&save={act}&warmup=10" if arm.endswith("_train") else f"train=0&load={act}"
+        return (f"dsrl:{tid}?{mode}&official=1&lora={base}", "0", False)
     if arm == "dsrl":                                                    # DSRL scored: the trained actor, deterministic noise
         return (f"dsrl:{tid}?train=0&load={os.path.join(R, f'dsrl_{tid}_actor.pt')}&beta=2", "0", False)
     if arm == "phasebind2_rjpred_e":                                     # own demo, events fire on arrival (PhaseBindHooks events=1)
@@ -374,7 +388,7 @@ def main():
                         PROGRAM_BYTES=s[1], OUT=out, **({"RECORD": "1"} if a.record else {}), **({"SERVE_SEED": str(a.seed)} if a.seed else {}),
                         **({"OBJECTS": "1"} if arm in ("phasebind", "phasebind_nofold", "phasebind2_nofold", "compose2", "sibling2") else {}),
                         **({"LIGHT": "1"} if a.light else {}), **({"OBJECTS": "1", "ALL_OBJECTS": "1"} if a.all_objects else {}),
-                        **({"STATE_MOD": "30"} if arm in ("dsrl_train", "dsrlo_train") else {}),
+                        **({"STATE_MOD": "30"} if arm in ("dsrl_train", "dsrlo_train", "dsrlz_train", "dsrls_train") else {}),
                         **({"SEG": "1"} if "src=oracle" in (s[0] or "") else {}), **({"BIND": a.bind} if a.bind else {}),
                         **({"FRESH": os.path.join(R, a.fresh_dir)} if a.fresh else {}),
                         **(s[3] if len(s) > 3 else {}),

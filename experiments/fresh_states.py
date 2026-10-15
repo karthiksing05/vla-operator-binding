@@ -10,6 +10,11 @@ import pathlib
 import sys
 
 import numpy as np
+
+SUITE = os.environ.get("SUITE", "libero_90")
+if SUITE.endswith("_ood"):                                      # plan G4: Li's OOD suites, in their modified LIBERO (libero_client.py)
+    sys.path.insert(0, "/coc/flash10/ksingara3/ext_dl/pi0tl/pi0-text-latent/third_party/modified_libero")
+    os.environ["LIBERO_CONFIG_PATH"] = "/coc/flash10/ksingara3/robot/libero_ood_config"
 from libero.libero import benchmark, get_libero_path
 from libero.libero.envs import OffScreenRenderEnv
 
@@ -21,12 +26,12 @@ def main():
     tasks = [int(x) for x in os.environ["TASKS"].split("+")]
     n, base = int(os.environ.get("N", 20)), int(os.environ.get("BASE", 100000))
     os.makedirs(OUT, exist_ok=True)
-    suite = benchmark.get_benchmark_dict()["libero_90"]()
+    suite = benchmark.get_benchmark_dict()[SUITE]()
     for tid in tasks:
-        if os.path.exists(os.path.join(OUT, f"libero_90_{tid}.npy")):
+        if os.path.exists(os.path.join(OUT, f"{SUITE}_{tid}.npy")):
             continue                                            # done by an earlier (interrupted) job: the seeds fix the states
         task = suite.get_task(tid)
-        stored = suite.get_task_init_states(tid)
+        stored = None if SUITE.endswith("_ood") else suite.get_task_init_states(tid)   # the OOD suites store none
         bddl = pathlib.Path(get_libero_path("bddl_files")) / task.problem_folder / task.bddl_file
         env = OffScreenRenderEnv(bddl_file_name=str(bddl), camera_heights=64, camera_widths=64)
         states = []
@@ -35,11 +40,11 @@ def main():
             env.seed(base + k)
             env.reset()                                         # a new placement from the task's regions
             s = env.sim.get_state().flatten()
-            assert s.shape == stored[0].shape, (s.shape, stored[0].shape)
+            assert stored is None or s.shape == stored[0].shape, (s.shape, stored[0].shape)
             states.append(s)
         states = np.stack(states)
-        d = np.min(np.linalg.norm(states[:, None, :] - stored[None, :, :], axis=-1))
-        np.save(os.path.join(OUT, f"libero_90_{tid}.npy"), states)
+        d = np.min(np.linalg.norm(states[:, None, :] - stored[None, :, :], axis=-1)) if stored is not None else float("nan")
+        np.save(os.path.join(OUT, f"{SUITE}_{tid}.npy"), states)
         print(f"[fresh] task {tid}: {n} states (seed base {base}), min distance to a stored init state {d:.3f}", flush=True)
         env.close()
 

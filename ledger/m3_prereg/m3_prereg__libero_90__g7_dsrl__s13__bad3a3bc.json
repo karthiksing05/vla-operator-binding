@@ -1,0 +1,55 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G7 (DSRL)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "bad3a3bcc28d6390e7c62a0d66b8801c1f1b18e7",
+  "short": "bad3a3bc"
+ },
+ "keys": {},
+ "metrics": {
+  "arms": {
+   "dsrls": "DSRL on the per-task one-demo LoRA, 100 practice episodes",
+   "dsrlz": "DSRL on the frozen policy, 100 practice episodes, no demonstration"
+  },
+  "context": "E3 read; DSRL on a LoRA base was a token-era baseline (archive/2026-10-program/README_demo_rows.md); a three-episode dsrlz training smoke (seed 99) preceded this registration",
+  "hypotheses": {
+   "H1": "E3's kept library is non-inferior to dsrlz with acceptance (task-level bootstrap 95% lower bound of library minus dsrlz+acc above -0.05)",
+   "H2": "E3's kept library is non-inferior to dsrls with acceptance (same criterion)",
+   "descriptive": "each DSRL arm vs zero-shot; dsrls+acc vs LoRA+acc; DSRL practice success in its first 10 and last 20 training episodes"
+  },
+  "written_before": "any DSRL training or scored episode of g7"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__g7_dsrl__s13__bad3a3bc",
+ "schema": 1,
+ "script": "experiments/prereg/g7_dsrl.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-15T20:38:46+00:00",
+ "stream": null,
+ "tag": "g7_dsrl"
+}

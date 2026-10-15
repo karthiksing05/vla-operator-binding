@@ -18,7 +18,13 @@ import os
 import pathlib
 import time
 
+import sys
+
 import numpy as np
+
+if any(x.endswith("_ood") for x in sys.argv):    # plan G4: Li's compositional OOD suites (arXiv 2505.03500) run in THEIR modified
+    sys.path.insert(0, "/coc/flash10/ksingara3/ext_dl/pi0tl/pi0-text-latent/third_party/modified_libero")   # LIBERO (its looser
+    os.environ["LIBERO_CONFIG_PATH"] = "/coc/flash10/ksingara3/robot/libero_ood_config"                     # On, its flat stove)
 from libero.libero import benchmark, get_libero_path
 from libero.libero.envs import OffScreenRenderEnv
 from openpi_client import image_tools
@@ -245,7 +251,8 @@ def movable_positions(env, obs):
         P.append(np.asarray(obs[f"{n}_pos"], np.float64) if f"{n}_pos" in obs
                  else np.array(env.env.sim.data.body_xpos[env.env.obj_body_id[n]]))
     return names, np.asarray(P)
-MAX_STEPS = {"libero_spatial": 220, "libero_object": 280, "libero_goal": 300, "libero_10": 520, "libero_90": 400}
+MAX_STEPS = {"libero_spatial": 220, "libero_object": 280, "libero_goal": 300, "libero_10": 520, "libero_90": 400,
+             "libero_spatial_ood": 300, "libero_goal_ood": 300}                 # Li's evaluation (examples/libero/main.py)
 
 
 def quat2axisangle(quat):

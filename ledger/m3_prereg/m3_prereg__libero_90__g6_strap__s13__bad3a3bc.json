@@ -1,0 +1,81 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G6 (STRAP)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "bad3a3bcc28d6390e7c62a0d66b8801c1f1b18e7",
+  "short": "bad3a3bc"
+ },
+ "keys": {},
+ "metrics": {
+  "context": "E3 read (kept library 480 vs 494 for LoRA+acc); STRAP on the earlier 21-task set was a baseline of the token era (ledger b_baselines tags strap, strap2)",
+  "hypotheses": {
+   "H1": "E3's kept library is non-inferior to STRAP with acceptance (task-level bootstrap 95% lower bound of library minus STRAP+acc above -0.05), E3's criterion",
+   "descriptive": "STRAP alone vs zero-shot; STRAP+acc vs the per-task LoRA+acc; library vs STRAP alone"
+  },
+  "tasks": [
+   9,
+   10,
+   12,
+   13,
+   14,
+   15,
+   25,
+   30,
+   31,
+   36,
+   41,
+   43,
+   46,
+   47,
+   48,
+   49,
+   50,
+   52,
+   53,
+   54,
+   55,
+   56,
+   57,
+   58,
+   59,
+   61,
+   62,
+   71,
+   72
+  ],
+  "written_before": "any STRAP fit or episode of g6"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__g6_strap__s13__bad3a3bc",
+ "schema": 1,
+ "script": "experiments/prereg/g6_strap.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-15T20:38:48+00:00",
+ "stream": null,
+ "tag": "g6_strap"
+}

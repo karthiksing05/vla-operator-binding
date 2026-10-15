@@ -260,8 +260,9 @@ def main():
         kv = dict(x.split("=", 1) for x in q.split("&") if x)
         t = int(body)
         lp = kv.get("lora", os.path.join(ROOT, "results", "robot", f"r3_lora_{t}.pt"))
-        state, key, banks = adapt.load(bk, lp)
-        state["on"] = frozenset({key})
+        if lp != "none":                                              # plan G7: lora=none steers the frozen policy itself
+            state, key, banks = adapt.load(bk, lp)
+            state["on"] = frozenset({key})
         enc = VinnPolicy(np.zeros((1, 7), np.float32), np.zeros((1, 224, 224, 3), np.uint8), np.zeros((1, 224, 224, 3), np.uint8), device="cuda")
 
         def feat(obs):
