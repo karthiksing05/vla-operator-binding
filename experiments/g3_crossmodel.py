@@ -21,8 +21,11 @@ spec_.loader.exec_module(E1)
 
 R = os.path.join(ROOT, "results", "robot")
 PY = os.path.expanduser("~/flash/miniconda3/envs/chunks/bin/python")
-PLAN = os.path.join(R, "g3_plan.json")
-SEED, RANK, BK, LTAG = 13, 4, "smolvla", "_sv"
+BK = sys.argv[sys.argv.index("--backbone") + 1] if "--backbone" in sys.argv else "smolvla"
+SHORT = BK.split("_")[0]                                     # smolvla, pi0
+PREFIX, LTAG, ENV = {"smolvla": ("V", "_sv", "smolvla"), "pi0": ("P", "_p0", "openpi")}[SHORT]
+PLAN = os.path.join(R, "g3_plan.json" if SHORT == "smolvla" else f"g3_plan_{SHORT}.json")
+SEED, RANK = 13, 4
 ORDER = ("zs", "hfac")
 
 
@@ -32,15 +35,15 @@ def plan():
     for t, v in e3.items():
         for proto, tasks, key, flag in ((v["object_proto"], v["object_tasks"], v["object_key"], "--approach"),
                                         (v["goal_proto"], v["goal_tasks"], v["goal_key"], "--goal")):
-            names.setdefault(proto, dict(name="V" + proto, tasks=tasks, key=key, flag=flag))
-        out[t] = dict(object_proto="V" + v["object_proto"], goal_proto="V" + v["goal_proto"], lora=bool(v["lora"]))
+            names.setdefault(proto, dict(name=PREFIX + proto, tasks=tasks, key=key, flag=flag))
+        out[t] = dict(object_proto=PREFIX + v["object_proto"], goal_proto=PREFIX + v["goal_proto"], lora=bool(v["lora"]))
     json.dump(dict(tasks=out, protos=names), open(PLAN, "w"), indent=1)
     print(f"[g3] {len(out)} tasks, {len(names)} prototypes on {BK}", flush=True)
 
 
 def sb(script):
     out = subprocess.run(["sbatch", "--parsable", "--exclude=hal,tars,t1000,vicki,johnny5,c3po", "--partition=overcap",
-                          "--account=overcap", "--qos=short", f"--export=ALL,ENV=smolvla,SCRIPT={script}", "slurm/jobs/robot_gpu.sbatch"],
+                          "--account=overcap", "--qos=short", f"--export=ALL,ENV={ENV},SCRIPT={script}", "slurm/jobs/robot_gpu.sbatch"],
                          capture_output=True, text=True, cwd=ROOT)
     return out.stdout.strip() or out.stderr.strip()
 
@@ -64,7 +67,7 @@ def arms(v):
 
 
 def tag(a):
-    return a.replace("@", "_") + f"_seed{SEED}_{BK}"
+    return a.replace("@", "_") + f"_seed{SEED}_{SHORT}"
 
 
 def launch(exp, trials, fresh):
@@ -108,10 +111,10 @@ def read(record):
     for k, v in list(res["hypotheses"].items()) + list(desc.items()):
         print(f"[g3] {k}: {v['x']} vs {v['y']} of {v['n']} ({v['tasks']} tasks), diff {v['diff']['diff']:+.3f} "
               f"[{v['diff']['lo']:+.3f}, {v['diff']['hi']:+.3f}], sign p {v['sign_p']:.3g}", flush=True)
-    json.dump(res, open(os.path.join(R, "g3_read.json"), "w"), indent=1)
+    json.dump(res, open(os.path.join(R, "g3_read.json" if SHORT == "smolvla" else f"g3_read_{SHORT}.json"), "w"), indent=1)
     if record and not missing:
         from lifelong_ood import ledger
-        print(ledger.record("g3_crossmodel", bench="libero_90", tag="read_smolvla", seed=SEED, metrics=res,
+        print(ledger.record("g3_crossmodel", bench="libero_90", tag=f"read_{SHORT}", seed=SEED, metrics=res,
                             bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config=dict(backbone=BK),
                             script="experiments/g3_crossmodel.py", command=" ".join(sys.argv)))
 

@@ -1,0 +1,238 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g5b_gating.py --read --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g5b_gating",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "97a48ff7d9f29c8f33b1c95213243959c352ec60",
+  "short": "97a48ff7"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": {
+   "diff": {
+    "diff": 0.3566666666666667,
+    "hi": 0.47333333333333333,
+    "hi90": 0.455,
+    "lo": 0.24333333333333335,
+    "lo90": 0.26166666666666666,
+    "n_pairs": 600,
+    "n_tasks": 30
+   },
+   "discordant": [
+    235,
+    21
+   ],
+   "n": 600,
+   "passes": true,
+   "sign_p": 5.972306808364968e-47,
+   "tasks": 30,
+   "x": 495,
+   "y": 281
+  },
+  "missing": [],
+  "per_task": {
+   "10": {
+    "gated": 20,
+    "ungated": 13,
+    "zs": 18
+   },
+   "12": {
+    "gated": 20,
+    "ungated": 16,
+    "zs": 9
+   },
+   "13": {
+    "gated": 19,
+    "ungated": 8,
+    "zs": 0
+   },
+   "14": {
+    "gated": 17,
+    "ungated": 9,
+    "zs": 12
+   },
+   "15": {
+    "gated": 18,
+    "ungated": 0,
+    "zs": 1
+   },
+   "25": {
+    "gated": 17,
+    "ungated": 6,
+    "zs": 0
+   },
+   "30": {
+    "gated": 20,
+    "ungated": 19,
+    "zs": 14
+   },
+   "31": {
+    "gated": 19,
+    "ungated": 16,
+    "zs": 3
+   },
+   "36": {
+    "gated": 10,
+    "ungated": 8,
+    "zs": 0
+   },
+   "41": {
+    "gated": 10,
+    "ungated": 0,
+    "zs": 1
+   },
+   "43": {
+    "gated": 18,
+    "ungated": 0,
+    "zs": 3
+   },
+   "46": {
+    "gated": 18,
+    "ungated": 15,
+    "zs": 20
+   },
+   "47": {
+    "gated": 20,
+    "ungated": 7,
+    "zs": 20
+   },
+   "48": {
+    "gated": 14,
+    "ungated": 0,
+    "zs": 0
+   },
+   "49": {
+    "gated": 15,
+    "ungated": 0,
+    "zs": 0
+   },
+   "50": {
+    "gated": 18,
+    "ungated": 19,
+    "zs": 17
+   },
+   "51": {
+    "gated": 15,
+    "ungated": 11,
+    "zs": 19
+   },
+   "52": {
+    "gated": 13,
+    "ungated": 14,
+    "zs": 0
+   },
+   "53": {
+    "gated": 20,
+    "ungated": 20,
+    "zs": 1
+   },
+   "54": {
+    "gated": 18,
+    "ungated": 3,
+    "zs": 17
+   },
+   "55": {
+    "gated": 20,
+    "ungated": 18,
+    "zs": 20
+   },
+   "56": {
+    "gated": 20,
+    "ungated": 20,
+    "zs": 18
+   },
+   "57": {
+    "gated": 19,
+    "ungated": 19,
+    "zs": 20
+   },
+   "58": {
+    "gated": 9,
+    "ungated": 1,
+    "zs": 0
+   },
+   "59": {
+    "gated": 10,
+    "ungated": 0,
+    "zs": 1
+   },
+   "61": {
+    "gated": 20,
+    "ungated": 2,
+    "zs": 20
+   },
+   "62": {
+    "gated": 5,
+    "ungated": 3,
+    "zs": 0
+   },
+   "71": {
+    "gated": 13,
+    "ungated": 0,
+    "zs": 0
+   },
+   "72": {
+    "gated": 20,
+    "ungated": 20,
+    "zs": 20
+   },
+   "9": {
+    "gated": 20,
+    "ungated": 14,
+    "zs": 19
+   }
+  },
+  "ungated_vs_zs": {
+   "diff": {
+    "diff": 0.013333333333333334,
+    "hi": 0.15833333333333333,
+    "hi90": 0.13166666666666665,
+    "lo": -0.12833333333333333,
+    "lo90": -0.10833333333333334,
+    "n_pairs": 600,
+    "n_tasks": 30
+   },
+   "discordant": [
+    96,
+    88
+   ],
+   "n": 600,
+   "sign_p": 0.6059427533583791,
+   "tasks": 30,
+   "x": 281,
+   "y": 273
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g5b_gating__libero_90__read__s13__97a48ff7",
+ "schema": 1,
+ "script": "experiments/g5b_gating.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-15T20:18:29+00:00",
+ "stream": null,
+ "tag": "read"
+}

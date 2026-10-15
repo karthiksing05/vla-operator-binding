@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g5b_main_9_ungated_Osc1.Gscplate_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=loras:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Osc1_0.pt+/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Gscplate_0.pt?w=1.0 SUITE=libero_90 TASKS=9 TRIALS=20 (job 4094333)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_states_b",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g5b_main_9_ungated_Osc1.Gscplate_seed13.json",
+   "port": 9339,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "9",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4094333",
+  "mode": "loras:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Osc1_0.pt+/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Gscplate_0.pt?w=1.0"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "perseverance.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094333",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g5b_main",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "97a48ff7d9f29c8f33b1c95213243959c352ec60",
+  "short": "97a48ff7"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "loras:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Osc1_0.pt+/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Gscplate_0.pt?w=1.0",
+  "tasks": "9",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 578.3351774215698,
+  "success_rate": 0.7,
+  "tasks": {
+   "9": {
+    "errors": 0,
+    "language": "put the black bowl on the plate",
+    "mean_steps": 208.85,
+    "n": 20,
+    "success_rate": 0.7
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g5b_main__libero_90__ungated_Osc1.Gscplate_seed13__first_trial-0__mode6745deae1fb8__tasks-9__trials-20__s7__97a48ff7",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-15T19:19:25+00:00",
+ "stream": null,
+ "tag": "ungated_Osc1.Gscplate_seed13"
+}

@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g5b_main_59_ungated_Osc12.Ghtray_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=loras:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Osc12_0.pt+/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Ghtray_0.pt?w=1.0 SUITE=libero_90 TASKS=59 TRIALS=20 (job 4094356)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_states_b",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g5b_main_59_ungated_Osc12.Ghtray_seed13.json",
+   "port": 9408,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "59",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4094356",
+  "mode": "loras:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Osc12_0.pt+/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Ghtray_0.pt?w=1.0"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "heistotron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094356",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g5b_main",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "97a48ff7d9f29c8f33b1c95213243959c352ec60",
+  "short": "97a48ff7"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "loras:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Osc12_0.pt+/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Ghtray_0.pt?w=1.0",
+  "tasks": "59",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 1254.4605708122253,
+  "success_rate": 0.0,
+  "tasks": {
+   "59": {
+    "errors": 0,
+    "language": "pick up the tomato sauce and put it in the tray",
+    "mean_steps": 400.0,
+    "n": 20,
+    "success_rate": 0.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g5b_main__libero_90__ungated_Osc12.Ghtray_seed13__first_trial-0__mode22674cd91483__tasks-59__trials-20__s7__97a48ff7",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-15T19:34:13+00:00",
+ "stream": null,
+ "tag": "ungated_Osc12.Ghtray_seed13"
+}

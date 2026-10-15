@@ -101,6 +101,10 @@ The same library refit on SmolVLA, at the same tasks, start states and seed: 203
 SmolVLA's per-task LoRA with acceptance 189 against 274 of 580 (difference -0.147, 95% interval -0.266 to -0.029). Composition
 carries over as a large gain over the frozen policy; the per-task adapter leads by more on the weaker policy.
 
+### The switch at the grasp
+With both prototypes on for the whole episode the library succeeds 281 of 600 times, level with the policy (273); switched at
+the policy's own grasp it succeeds 495. The phase gating carries the gain.
+
 ### What the prototypes encode
 Object prototypes are nearly orthogonal to one another (mean cosine 0.058) and to goal prototypes (0.037); both act in the same
 layers, differing in direction; refit without one demonstration a prototype keeps a cosine of 0.64 with the full one.
