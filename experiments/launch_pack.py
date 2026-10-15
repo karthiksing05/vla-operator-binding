@@ -190,6 +190,10 @@ def arm_spec(tid, arm, fold, demo=0):
         bind = "&bind=1" if "bind" in fl else ""
         bind += "&goal=1" if "goal" in fl else ""                         # plan D: the primitive only from grasp to release
         return (f"prims:{tid}?suite={SUITE_OF.get('suite', 'libero_90')}&paths={'+'.join(ps)}{bind}", "0", False)
+    if arm.startswith("ungated@"):                                      # plan G5b: the object and goal prototypes both on for the whole
+        o_, g_ = arm.split("@", 1)[1].split(".")                         # episode (no switch at the policy's grasp)
+        fs = [os.path.join(R, f"prim_{n_}_0.pt") for n_ in (o_, g_)]
+        return (f"loras:{'+'.join(fs)}?w=1.0", "0", False) if all(os.path.exists(f_) for f_ in fs) else None
     if arm.startswith(("lorasum@", "loraavg@")):                        # plan G2: per-task LoRAs of donor tasks composed by
         from lifelong_ood import ledger as _L                            # task arithmetic (sum) or averaging
         wrong = set(_L.load("l90_scenes", tag="map")[-1]["metrics"]["wrong_scene_tasks"])
