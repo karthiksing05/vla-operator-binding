@@ -1,0 +1,451 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G3 (SmolVLA)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "b91eaa32477482d36d0254a21be51e8203774815",
+  "short": "b91eaa32"
+ },
+ "keys": {},
+ "metrics": {
+  "backbone": "smolvla",
+  "context": "E3 (pi0.5) read; a five-step SmolVLA fit and a one-episode SmolVLA serving smoke preceded this registration",
+  "hypotheses": {
+   "H1": "on SmolVLA, the kept arm > zero-shot (exact sign test, alpha 0.05)",
+   "H2": "on SmolVLA, non-inferiority to its per-task LoRA with acceptance (task-level bootstrap 95% lower bound above -0.05), E3's criterion",
+   "correction": "H1 alone in the Holm family; H2 a separate criterion"
+  },
+  "plan": {
+   "protos": {
+    "Ghtray": {
+     "flag": "--goal",
+     "key": "in|the tray",
+     "name": "VGhtray",
+     "tasks": [
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+     ]
+    },
+    "Gscbasket": {
+     "flag": "--goal",
+     "key": "in|the basket",
+     "name": "VGscbasket",
+     "tasks": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54
+     ]
+    },
+    "Gsccab": {
+     "flag": "--goal",
+     "key": "on top of|the cabinet",
+     "name": "VGsccab",
+     "tasks": [
+      10,
+      15,
+      25,
+      31,
+      41,
+      43
+     ]
+    },
+    "Gscplate": {
+     "flag": "--goal",
+     "key": "on|the plate",
+     "name": "VGscplate",
+     "tasks": [
+      9,
+      12,
+      13,
+      14,
+      30,
+      36,
+      71,
+      72
+     ]
+    },
+    "Osc0": {
+     "flag": "--approach",
+     "key": "put|the alphabet soup",
+     "name": "VOsc0",
+     "tasks": [
+      46,
+      50,
+      55
+     ]
+    },
+    "Osc1": {
+     "flag": "--approach",
+     "key": "put|the black bowl",
+     "name": "VOsc1",
+     "tasks": [
+      1,
+      2,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      24,
+      25,
+      29,
+      30,
+      31,
+      60
+     ]
+    },
+    "Osc10": {
+     "flag": "--approach",
+     "key": "put|the red mug",
+     "name": "VOsc10",
+     "tasks": [
+      65,
+      66,
+      71,
+      84
+     ]
+    },
+    "Osc11": {
+     "flag": "--approach",
+     "key": "put|the salad dressing",
+     "name": "VOsc11",
+     "tasks": [
+      62
+     ]
+    },
+    "Osc12": {
+     "flag": "--approach",
+     "key": "put|the tomato sauce",
+     "name": "VOsc12",
+     "tasks": [
+      49,
+      54,
+      59
+     ]
+    },
+    "Osc13": {
+     "flag": "--approach",
+     "key": "put|the white bowl",
+     "name": "VOsc13",
+     "tasks": [
+      36,
+      37,
+      43
+     ]
+    },
+    "Osc14": {
+     "flag": "--approach",
+     "key": "put|the white mug",
+     "name": "VOsc14",
+     "tasks": [
+      67,
+      72,
+      85
+     ]
+    },
+    "Osc2": {
+     "flag": "--approach",
+     "key": "put|the butter",
+     "name": "VOsc2",
+     "tasks": [
+      3,
+      4,
+      51,
+      56
+     ]
+    },
+    "Osc3": {
+     "flag": "--approach",
+     "key": "put|the chocolate pudding",
+     "name": "VOsc3",
+     "tasks": [
+      5,
+      61,
+      69,
+      70
+     ]
+    },
+    "Osc4": {
+     "flag": "--approach",
+     "key": "put|the cream cheese",
+     "name": "VOsc4",
+     "tasks": [
+      57
+     ]
+    },
+    "Osc5": {
+     "flag": "--approach",
+     "key": "put|the cream cheese box",
+     "name": "VOsc5",
+     "tasks": [
+      47
+     ]
+    },
+    "Osc6": {
+     "flag": "--approach",
+     "key": "put|the frying pan",
+     "name": "VOsc6",
+     "tasks": [
+      18,
+      21,
+      40,
+      41,
+      42,
+      45
+     ]
+    },
+    "Osc7": {
+     "flag": "--approach",
+     "key": "put|the ketchup",
+     "name": "VOsc7",
+     "tasks": [
+      32,
+      48,
+      58
+     ]
+    },
+    "Osc8": {
+     "flag": "--approach",
+     "key": "put|the milk",
+     "name": "VOsc8",
+     "tasks": [
+      52
+     ]
+    },
+    "Osc9": {
+     "flag": "--approach",
+     "key": "put|the orange juice",
+     "name": "VOsc9",
+     "tasks": [
+      53
+     ]
+    },
+    "Sch0": {
+     "flag": "--approach",
+     "key": "put|the black bowl",
+     "name": "VSch0",
+     "tasks": [
+      12
+     ]
+    },
+    "Sch1": {
+     "flag": "--approach",
+     "key": "put|the black bowl",
+     "name": "VSch1",
+     "tasks": [
+      13
+     ]
+    },
+    "Sch2": {
+     "flag": "--approach",
+     "key": "put|the black bowl",
+     "name": "VSch2",
+     "tasks": [
+      14,
+      15
+     ]
+    }
+   },
+   "tasks": {
+    "10": {
+     "goal_proto": "VGsccab",
+     "lora": true,
+     "object_proto": "VOsc1"
+    },
+    "12": {
+     "goal_proto": "VGscplate",
+     "lora": true,
+     "object_proto": "VSch0"
+    },
+    "13": {
+     "goal_proto": "VGscplate",
+     "lora": true,
+     "object_proto": "VSch1"
+    },
+    "14": {
+     "goal_proto": "VGscplate",
+     "lora": true,
+     "object_proto": "VSch2"
+    },
+    "15": {
+     "goal_proto": "VGsccab",
+     "lora": true,
+     "object_proto": "VSch2"
+    },
+    "25": {
+     "goal_proto": "VGsccab",
+     "lora": true,
+     "object_proto": "VOsc1"
+    },
+    "30": {
+     "goal_proto": "VGscplate",
+     "lora": true,
+     "object_proto": "VOsc1"
+    },
+    "31": {
+     "goal_proto": "VGsccab",
+     "lora": true,
+     "object_proto": "VOsc1"
+    },
+    "36": {
+     "goal_proto": "VGscplate",
+     "lora": true,
+     "object_proto": "VOsc13"
+    },
+    "41": {
+     "goal_proto": "VGsccab",
+     "lora": true,
+     "object_proto": "VOsc6"
+    },
+    "43": {
+     "goal_proto": "VGsccab",
+     "lora": true,
+     "object_proto": "VOsc13"
+    },
+    "46": {
+     "goal_proto": "VGscbasket",
+     "lora": true,
+     "object_proto": "VOsc0"
+    },
+    "47": {
+     "goal_proto": "VGscbasket",
+     "lora": true,
+     "object_proto": "VOsc5"
+    },
+    "48": {
+     "goal_proto": "VGscbasket",
+     "lora": true,
+     "object_proto": "VOsc7"
+    },
+    "49": {
+     "goal_proto": "VGscbasket",
+     "lora": true,
+     "object_proto": "VOsc12"
+    },
+    "50": {
+     "goal_proto": "VGscbasket",
+     "lora": true,
+     "object_proto": "VOsc0"
+    },
+    "51": {
+     "goal_proto": "VGscbasket",
+     "lora": false,
+     "object_proto": "VOsc2"
+    },
+    "52": {
+     "goal_proto": "VGscbasket",
+     "lora": true,
+     "object_proto": "VOsc8"
+    },
+    "53": {
+     "goal_proto": "VGscbasket",
+     "lora": true,
+     "object_proto": "VOsc9"
+    },
+    "54": {
+     "goal_proto": "VGscbasket",
+     "lora": true,
+     "object_proto": "VOsc12"
+    },
+    "55": {
+     "goal_proto": "VGhtray",
+     "lora": true,
+     "object_proto": "VOsc0"
+    },
+    "56": {
+     "goal_proto": "VGhtray",
+     "lora": true,
+     "object_proto": "VOsc2"
+    },
+    "57": {
+     "goal_proto": "VGhtray",
+     "lora": true,
+     "object_proto": "VOsc4"
+    },
+    "58": {
+     "goal_proto": "VGhtray",
+     "lora": true,
+     "object_proto": "VOsc7"
+    },
+    "59": {
+     "goal_proto": "VGhtray",
+     "lora": true,
+     "object_proto": "VOsc12"
+    },
+    "61": {
+     "goal_proto": "VGhtray",
+     "lora": true,
+     "object_proto": "VOsc3"
+    },
+    "62": {
+     "goal_proto": "VGhtray",
+     "lora": true,
+     "object_proto": "VOsc11"
+    },
+    "71": {
+     "goal_proto": "VGscplate",
+     "lora": true,
+     "object_proto": "VOsc10"
+    },
+    "72": {
+     "goal_proto": "VGscplate",
+     "lora": true,
+     "object_proto": "VOsc14"
+    },
+    "9": {
+     "goal_proto": "VGscplate",
+     "lora": true,
+     "object_proto": "VOsc1"
+    }
+   }
+  },
+  "written_before": "any fit (other than the smoke) or episode of g3"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__g3_crossmodel__s13__b91eaa32",
+ "schema": 1,
+ "script": "experiments/prereg/g3_crossmodel.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-15T04:57:54+00:00",
+ "stream": null,
+ "tag": "g3_crossmodel"
+}
