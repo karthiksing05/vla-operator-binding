@@ -32,6 +32,7 @@ export HF_HOME=/coc/flash10/ksingara3/robot/data/hf/home HF_LEROBOT_HOME=/coc/fl
 ROBOT=/coc/flash10/ksingara3/robot/openpi
 case "${ENV:-openpi}" in
   openpi) PY=$ROBOT/.venv/bin/python ;;
+  smolvla) PY=/coc/flash10/ksingara3/robot/smolvla/.venv/bin/python ;;
   libero) PY=$ROBOT/examples/libero/.venv/bin/python; export PYTHONPATH=$PYTHONPATH:$ROBOT/third_party/libero ;;
   *) echo "unknown ENV=$ENV"; exit 2 ;;
 esac

@@ -35,6 +35,7 @@ def main():
     ap.add_argument("--scope", default="expert", help="where the adapter goes (adapt.SCOPES): expert | last2 | out")
     ap.add_argument("--full", action="store_true", help="FULL fine-tuning of the action expert instead of a LoRA (lr 2.5e-5)")
     ap.add_argument("--tag", default="")
+    ap.add_argument("--backbone", default="pi05_libero", help="plan G3: pi05_libero, pi0_libero or smolvla")
     a = ap.parse_args()
     sys.argv_saved = list(sys.argv)
     import importlib.util
@@ -42,8 +43,10 @@ def main():
     r3p = importlib.util.module_from_spec(spec); spec.loader.exec_module(r3p)
     texts, names = r3p.libero90_texts()
     text = texts[a.task]
-    from lifelong_ood.policy.backbone import PolicyBackbone
-    bk = PolicyBackbone("pi05_libero", device="cuda")
+    spec_c0 = importlib.util.spec_from_file_location("c0", os.path.join(ROOT, "experiments", "c0_fit.py"))
+    c0 = importlib.util.module_from_spec(spec_c0)
+    spec_c0.loader.exec_module(c0)
+    bk, norm = c0.backbone(a.backbone)
     print(f"[r3f] {bk.describe()}", flush=True)
     d90 = D.Demos90()
     ep_idx = d90.episodes_of_task(a.task)[a.demo]
@@ -53,7 +56,7 @@ def main():
     obs = [d90.observation(ep, i) for i in range(T)]
     bank = adapt.PrefixBank(bk, obs)
     idx, _ = D.chunk_indices(T, bk.H)
-    rows = D.to_rows(ep["actions"][idx], D.Norm.load())
+    rows = c0.chunk_rows(ep, idx, range(T), norm)
     full = D.pad_rows(rows, bk.H)
     print(f"[r3f] task {a.task} '{text}': demo episode {ep_idx}, {T} frames; prefixes cached in {time.time() - t0:.0f}s ({bank.bytes() / 1e9:.2f} GB)", flush=True)
     if a.full:

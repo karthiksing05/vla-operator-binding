@@ -46,6 +46,8 @@ def main():
     ap.add_argument("--init", default="", help="plan E2: start --joint from this primitive's weights (a child concept starts from "
                                                 "its parent's prototype and specialises on its own demonstrations)")
     ap.add_argument("--name", default="", help="the file name of --joint")
+    ap.add_argument("--backbone", default="pi05_libero", help="plan G3: the policy the primitive is fitted on (pi05_libero, "
+                                                                 "pi0_libero, smolvla); its own action normalisation and chunk length")
     ap.add_argument("--bind", action="store_true", help="--joint: fit under attention binding (each task's own demo prototype, "
                                                         "top-4 patches, mass 0.7, before the demo's first grasp), as at test")
     a = ap.parse_args()
@@ -100,6 +102,26 @@ def main():
                         config=vars(a), script="experiments/c0_fit.py", command=" ".join(sys.argv)))
 
 
+def backbone(name):
+    """-> (the policy, its action normalisation).  pi0.5 keeps the normalisation every earlier fit used."""
+    if name.startswith("smolvla"):
+        from lifelong_ood.policy.backbone_smolvla import SmolVLABackbone
+        bk = SmolVLABackbone(device="cuda")
+        return bk, D.Norm.for_backbone(bk)
+    from lifelong_ood.policy.backbone import PolicyBackbone
+    bk = PolicyBackbone(name, device="cuda")
+    return bk, (D.Norm.load() if name == "pi05_libero" else D.Norm.for_backbone(bk))
+
+
+def chunk_rows(ep, chunk_idx, frames, norm):
+    """Normalised flat rows of the chunks at `frames`; a state-relative checkpoint (pi0) takes each chunk relative to its frame's
+    raw state."""
+    if not norm.delta:
+        return D.to_rows(ep["actions"][chunk_idx], norm)
+    st = np.asarray(ep["state"], np.float32)
+    return np.stack([norm.normalize(ep["actions"][ci], state=st[f]).reshape(-1) for ci, f in zip(chunk_idx, frames)])
+
+
 def joint(a):
     """Plan C, consolidation: a step's primitive fitted on SEVERAL arrivals' demos that share its key (different objects and
     rooms), so it can learn the step rather than one object's grasp (docs/COBWEB_UPDATE.md, Proposition 7)."""
@@ -108,9 +130,8 @@ def joint(a):
     spec.loader.exec_module(r3p)
     texts, _ = r3p.libero90_texts()
     from lifelong_ood.policy.backbone import PolicyBackbone
-    bk = PolicyBackbone("pi05_libero", device="cuda")
+    bk, norm = backbone(a.backbone)
     d90 = D.Demos90()
-    norm = D.Norm.load()
     obs, rows, used, frame_info = [], [], [], []
     for t in [int(x) for x in a.joint.split("+")]:
         steps = P.steps_of(texts[t])
@@ -139,7 +160,7 @@ def joint(a):
                 continue
             lo, hi = ap_
         idx, _ = D.chunk_indices(len(ep["actions"]), bk.H)
-        rows.append(D.pad_rows(D.to_rows(ep["actions"][idx[lo:hi]], norm), bk.H))
+        rows.append(D.pad_rows(chunk_rows(ep, idx[lo:hi], range(lo, hi), norm), bk.H))
         g = np.asarray(ep["actions"])[:, 6] > 0
         first = int(np.argmax(g)) if g.any() else len(g)
         for i in range(lo, hi):
@@ -191,6 +212,7 @@ def joint(a):
                        gate_of=gate_of)
     path = os.path.join(R, f"prim_{a.name}_0.pt")
     meta = dict(joint=used, step_key=a.key, rank=a.rank, scope=a.scope, frames=int(len(obs)), bind=bool(a.bind), goal=bool(a.goal),
+                backbone=a.backbone,
                 approach=bool(a.approach), init=a.init)
     nb = adapt.save(banks, key, path, meta=meta)
     print(f"[c0j] {a.name}: key {a.key}, {len(used)} demos, {len(obs)} frames, {nb / 1e6:.1f} MB, flow {hist['loss'][0]:.4f} -> "
