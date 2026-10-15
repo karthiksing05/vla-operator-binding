@@ -91,3 +91,9 @@ svg.dg .ln.dash{stroke-dasharray:5 4}
 svg.dg .ev{stroke:var(--muted);stroke-width:1;stroke-dasharray:3 3}
 svg.dg .ah{fill:var(--ink2)}
 .vid{margin:22px 0}
+svg.dg .seg{stroke:var(--ink2);stroke-width:1}
+svg.dg .seg.pol{fill:var(--paper);stroke-dasharray:3 3}
+svg.dg .seg.tok{fill:var(--rule)} svg.dg .seg.step{fill:var(--wash)}
+svg.dg .seg.obj{fill:var(--wash);stroke:var(--accent);stroke-width:1.6} svg.dg .seg.inst{fill:var(--wash);stroke:#5b4fa0;stroke-width:1.6}
+svg.dg .seg.goal{fill:var(--wash);stroke:var(--base);stroke-width:1.6}
+svg.dg .segt{fill:var(--ink)}

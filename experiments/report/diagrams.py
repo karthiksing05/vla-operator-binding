@@ -119,3 +119,28 @@ def stream():
     out.append('<text x="620" y="178" class="s">E4 asked</text><text x="620" y="192" class="s">instead: does</text>'
                '<text x="620" y="206" class="s">composition</text><text x="620" y="220" class="s">beat policy?</text>')
     return "".join(out) + "</svg>"
+
+
+def lineage(rows):
+    """How the unit was factored, approach by approach.  rows: [(name, [(start, end, label, cls)], result)] with start / end the
+    fraction of an episode (approach before the grasp, transport after it); cls in {pol, tok, step, obj, inst, goal}."""
+    W, top, rh, x0, x1 = 720, 34, 46, 182, 470
+    H = top + len(rows) * rh + 8
+    out = [f'<svg viewBox="0 0 {W} {H}" class="chart dg" role="img" aria-label="How the unit stored per task was factored, approach by '
+           f'approach: one unit for the whole task, one per step, then a goal unit after the grasp, then an object unit before it, '
+           f'then instance children; each row with its result.">']
+    gx = x0 + 0.5 * (x1 - x0)
+    out.append(f'<text x="{x0}" y="14" class="s">approach</text>'
+               f'<text x="{x1}" y="14" class="s" text-anchor="end">transport</text>'
+               f'<text x="{gx}" y="14" class="s" text-anchor="middle">grasp</text>'
+               f'<line x1="{gx}" y1="20" x2="{gx}" y2="{H - 6}" class="ev"/>')
+    for i, (name, segs, res) in enumerate(rows):
+        y = top + i * rh
+        out.append(f'<text x="0" y="{y + 19}" class="t">{esc(name)}</text>')
+        for s0, s1, lab, cls in segs:
+            xa, xb = x0 + s0 * (x1 - x0), x0 + s1 * (x1 - x0)
+            out.append(f'<rect x="{xa + 1}" y="{y + 4}" width="{xb - xa - 2}" height="24" rx="4" class="seg {cls}"/>'
+                       f'<text x="{(xa + xb) / 2}" y="{y + 20}" text-anchor="middle" class="s segt">{esc(lab)}</text>')
+        for k, part in enumerate(res.split("; ")[:2]):
+            out.append(f'<text x="{x1 + 12}" y="{y + 14 + 14 * k}" class="s">{esc(part)}</text>')
+    return "".join(out) + "</svg>"

@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g3_accept_71_lorat__sv_seed13_smolvla.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_71_sv.pt SUITE=libero_90 TASKS=71 TRIALS=10 (job 4092846)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g3_accept_71_lorat__sv_seed13_smolvla.json",
+   "port": 9228,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "71",
+   "trials": 10,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4092846",
+  "mode": "lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_71_sv.pt"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "deebot.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4092846",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g3_accept",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "6f94ea3ddb54794af0203c81e4b807d48128e2da",
+  "short": "6f94ea3d"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_71_sv.pt",
+  "tasks": "71",
+  "trials": 10
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 10,
+  "secs": 237.48771262168884,
+  "success_rate": 0.6,
+  "tasks": {
+   "71": {
+    "errors": 0,
+    "language": "put the red mug on the plate",
+    "mean_steps": 222.8,
+    "n": 10,
+    "success_rate": 0.6
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g3_accept__libero_90__lorat__sv_seed13_smolvla__first_trial-0__mode8be8f4d76283__tasks-71__trials-10__s7__6f94ea3d",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-15T14:44:12+00:00",
+ "stream": null,
+ "tag": "lorat__sv_seed13_smolvla"
+}

@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g5_main_38_fac_x.G1G5_seed15.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:38?suite=libero_90&paths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_G1G5_0.pt&apaths=none&goal=1 SUITE=libero_90 TASKS=38 TRIALS=20 (job 4092641)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_states_b",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g5_main_38_fac_x.G1G5_seed15.json",
+   "port": 9484,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "38",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4092641",
+  "mode": "prims:38?suite=libero_90&paths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_G1G5_0.pt&apaths=none&goal=1"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "samantha.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4092641",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g5_main",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "6f94ea3ddb54794af0203c81e4b807d48128e2da",
+  "short": "6f94ea3d"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:38?suite=libero_90&paths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_G1G5_0.pt&apaths=none&goal=1",
+  "tasks": "38",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 851.8195803165436,
+  "success_rate": 0.45,
+  "tasks": {
+   "38": {
+    "errors": 0,
+    "language": "put the right moka pot on the stove",
+    "mean_steps": 385.1,
+    "n": 20,
+    "success_rate": 0.45
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g5_main__libero_90__fac_x.G1G5_seed15__first_trial-0__modea2af1e2b217b__tasks-38__trials-20__s7__6f94ea3d",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-15T14:31:11+00:00",
+ "stream": null,
+ "tag": "fac_x.G1G5_seed15"
+}

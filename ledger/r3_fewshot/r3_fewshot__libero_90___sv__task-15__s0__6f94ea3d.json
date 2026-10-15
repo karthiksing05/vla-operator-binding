@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_15_sv.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 6832128,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 6832128,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 15 --tag _sv --backbone smolvla",
+ "config": {
+  "backbone": "smolvla",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_sv",
+  "task": 15
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "ig-88.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4092533",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "6f94ea3ddb54794af0203c81e4b807d48128e2da",
+  "short": "6f94ea3d"
+ },
+ "keys": {
+  "task": 15
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    1.0003663301467896,
+    0.043147772550582886,
+    0.026047538965940475,
+    0.01192655973136425,
+    0.022202571853995323,
+    0.012813513167202473,
+    0.008624588139355183,
+    0.009820287115871906,
+    0.007819768972694874,
+    0.01418630313128233,
+    0.012146771885454655
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 638,
+  "final_loss": 0.012146771885454655,
+  "first_loss": 1.0003663301467896,
+  "n_banks": 112,
+  "n_frames": 137,
+  "n_params": 3416064,
+  "task": 15,
+  "text": "put the middle black bowl on top of the cabinet",
+  "train_secs": 447.11619997024536
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___sv__task-15__s0__6f94ea3d",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T14:04:53+00:00",
+ "stream": null,
+ "tag": "_sv"
+}

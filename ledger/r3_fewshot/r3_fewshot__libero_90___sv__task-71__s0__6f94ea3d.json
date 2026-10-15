@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_71_sv.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 6832128,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 6832128,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 71 --tag _sv --backbone smolvla",
+ "config": {
+  "backbone": "smolvla",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_sv",
+  "task": 71
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cheetah.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4092539",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "6f94ea3ddb54794af0203c81e4b807d48128e2da",
+  "short": "6f94ea3d"
+ },
+ "keys": {
+  "task": 71
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.6165546178817749,
+    0.022704873234033585,
+    0.020263373851776123,
+    0.009919211268424988,
+    0.01845037192106247,
+    0.009408285841345787,
+    0.007076654117554426,
+    0.00905102863907814,
+    0.008114024996757507,
+    0.012721297331154346,
+    0.010321331210434437
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 686,
+  "final_loss": 0.010321331210434437,
+  "first_loss": 0.6165546178817749,
+  "n_banks": 112,
+  "n_frames": 116,
+  "n_params": 3416064,
+  "task": 71,
+  "text": "put the red mug on the plate",
+  "train_secs": 431.6164929866791
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___sv__task-71__s0__6f94ea3d",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T14:04:43+00:00",
+ "stream": null,
+ "tag": "_sv"
+}

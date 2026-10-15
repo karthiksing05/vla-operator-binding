@@ -56,6 +56,11 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
     ("G2 adapter composition baselines", "g2_baselines", "read", True, "c-gen",
      lambda m: f"task arithmetic {m['comparisons']['gfac_vs_sum']['y']}, averaging {m['comparisons']['gfac_vs_avg']['y']}, "
                f"composed concepts {m['comparisons']['gfac_vs_sum']['x']}"),
+    ("G5a factor-level selection", "g5_factors", "read", True, "c-gen",
+     lambda m: f"per-factor choice {m['H1']['x']} vs both-only {m['H1']['y']} (n.s.); object alone {m['alone_vs_zs']['obj']['x']}, "
+               f"goal alone {m['alone_vs_zs']['goal']['x']}, policy {m['alone_vs_zs']['obj']['y']}"),
+    ("i5 the library in weight space", "i5_library", "read", False, "c-library",
+     lambda m: f"{m['n_prototypes']} prototypes; instance to own type cos {m['instance_to_own_type']:.3f} vs {m['instance_to_other_types']:.3f}"),
     ("G3 a second policy (SmolVLA)", "g3_crossmodel", "read_smolvla", True, "c-gen", lambda m: _v_e3(m) if "bytes" in m else
      f"{m['hypotheses']['H1']['x']} vs {m['hypotheses']['H1']['y']} zero-shot; vs LoRA + acc. {_ci(m['hypotheses']['H2']['diff'])}"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
@@ -120,6 +125,74 @@ def method():
             + fig(diagrams.episode(), "<b>One composed step.</b> The object prototype is switched on from the start until the policy's own "
                   "gripper has stayed closed for three queries; the goal prototype then acts until the gripper opens. The frozen policy "
                   "generates every action throughout; a prototype only adds its low-rank update while it is on.", wide=True))
+
+
+def lineage():
+    q13, f1, d1, e1, e3, e5 = (row("q13_main", "read"), row("f1_fresh", "read"), row("d1_factored", "read"), row("e1_factored", "read"),
+                               row("e3_hier", "read"), row("e5_replicate", "read"))
+    rows = []
+    if q13:
+        h = q13["hypotheses"]["H1"]
+        rows.append(("binding + folded token", [(0, 1, "the policy, attention bound; a token per task", "tok")],
+                     f"{h['x']} vs {h['control']} of {h['n']} zero-shot"))
+    if f1:
+        h, l_ = f1["hypotheses"]["H1"], f1["descriptive"]["c2_vs_lora_acc"]
+        rows.append(("step primitive", [(0, 1, "one LoRA per step key", "step")], f"{h['x']} vs {h['y']}; vs per-task LoRA {l_['x']} vs {l_['y']} of {l_['n']}"))
+    for name, m, segs in (("goal primitive", d1, [(0, 0.5, "policy", "pol"), (0.5, 1, "goal", "goal")]),
+                          ("object + goal", e1, [(0, 0.5, "object", "obj"), (0.5, 1, "goal", "goal")]),
+                          ("+ instance children", e3, [(0, 0.5, "instance or type", "inst"), (0.5, 1, "goal", "goal")])):
+        if m:
+            h1, h2 = m["hypotheses"]["H1"], m["hypotheses"]["H2"]
+            rows.append((name, segs, f"{h1['x']} vs {h1['y']}; vs per-task LoRA {h2['x']} vs {h2['y']} of {h2['n']}"))
+    if e5:
+        h = e5["hypotheses"]["H3"]
+        rows.append(("+ 37 new tasks (pooled)", [(0, 0.5, "instance or type", "inst"), (0.5, 1, "goal", "goal")],
+                     f"vs per-task LoRA {h['x']} vs {h['y']} of {h['n']:,}"))
+    return ("<p>Each approach stored a different unit per task; the factorisation got finer as each measured failure pointed at the "
+            "phase it lived in. Every row's numbers come from its pre-registered read (kept arms against the policy alone, then against "
+            "the per-task LoRA with the same acceptance test, successes on fresh start states).</p>"
+            + fig(diagrams.lineage(rows), "<b>From one unit per task to concepts per phase.</b> What acts in each phase of an episode, "
+                  "approach by approach, and its result. Dashed: the policy alone.", wide=True))
+
+
+def library_view():
+    out = ("<p>The library is a small hierarchy of concepts. In weight space each prototype is its own direction; the dendrogram "
+           "clusters the full library's prototypes by the cosine of their updates, labelled with the number of demonstrations each "
+           "consolidates (exploratory).</p>")
+    i5 = row("i5_library", "read")
+    if i5:
+        out += fig('<img src="media/i5_dendrogram.png" alt="dendrograms of the object and goal prototypes in weight space" style="width:100%">',
+                   f"<b>The full library in weight space</b> ({i5['n_prototypes']} prototypes over the 67 single-step tasks). Average "
+                   f"linkage on one minus the cosine of the updates; blue object types, violet instance children, brown goals. An "
+                   f"instance child's cosine to its own type is {i5['instance_to_own_type']:.2f} against "
+                   f"{i5['instance_to_other_types']:.2f} to other types.", wide=True)
+    story = None
+    try:
+        import json as _j
+        import os as _o
+        from .base import R as _R
+        story = _j.load(open(_o.path.join(_R, "stream_story.json")))
+    except (OSError, ValueError):
+        pass
+    if story:
+        out += ("<h3>A continual-learning walk-through</h3><p>Tasks arrive one at a time (the W1 stream, order a). Each lane is a concept; "
+                "a square is a concept the library held from tasks outside the stream, a filled circle a concept a demonstration "
+                "created, a ring a concept a later demonstration refit, a tick an arrival the concept serves, a star an arrival served "
+                "with no demonstration. Demonstrations and stored prototypes grow far slower than one per arrival.</p>")
+        out += fig('<img src="media/stream_lanes_a.png" alt="concept swimlanes over the arrivals of the stream" style="width:100%">',
+                   "<b>The library as it learns.</b> Concepts (rows) over arrivals (columns) in the W1 stream, order a; below, "
+                   "demonstrations requested and prototypes stored.", wide=True)
+        rows = []
+        for s_ in story["a"]["story"][:12]:
+            dec = ("the policy holds it" if not s_["demo"] and s_["kept"] == "policy" else
+                   "composed, no demonstration" if not s_["demo"] else
+                   f"demonstration; refits {', '.join(s_['refit']) or '(none)'}")
+            rows.append([s_["arrival"], esc(s_["text"]), s_["policy"], "&ndash;" if s_["composition"] is None else s_["composition"],
+                         esc(dec), "&ndash;" if s_.get("after") is None else s_["after"], s_["kept"]])
+        out += table(["#", "arrival", "policy", "composed", "decision", "after refit", "kept"], rows,
+                     "The first twelve arrivals of the W1 stream (order a): practice successes of 10 for the policy alone and for the "
+                     "composition from the library as it stood, the decision, and the practice after the refit.", num_from=2)
+    return out
 
 
 def factored():
@@ -253,6 +326,14 @@ def generalise():
                 f"concepts; with practice choosing, {c['kept_gfac_vs_kept_best_baseline']['x']} against "
                 f"{c['kept_gfac_vs_kept_best_baseline']['y']} for the better baseline. Averaging is level with the recombined concepts "
                 f"without practice (sign p {c['gfac_vs_avg']['sign_p']:.2g}).</p>")
+    g5 = row("g5_factors", "read")
+    if g5:
+        a = g5["alone_vs_zs"]
+        out += (f"<p>Where does the interference come from? Letting practice choose per factor (m3_prereg tag g5_factors) gives "
+                f"{g5['H1']['x']} against {g5['H1']['y']} for choosing only between the policy and both concepts (sign p "
+                f"{g5['H1']['sign_p']:.2g}, not significant). Alone, the object concept succeeds {a['obj']['x']} times, below the policy's "
+                f"{a['obj']['y']}, and the goal concept {a['goal']['x']}: the object factor, which changes which object the arm reaches "
+                f"for, is the one that interferes when the policy already knows the task.</p>")
     return out
 
 
@@ -336,7 +417,8 @@ def verification():
 
 
 SECTIONS = [("c-overview", "", "In brief", overview, False), ("c-reads", "", "The reads at a glance", reads_index, False),
-            ("c-method", "1", "The method", method, False), ("c-factored", "2", "Factored steps: object and goal prototypes", factored, False),
+            ("c-method", "1", "The method", method, False), ("c-lineage", "", "How the unit was factored", lineage, False),
+            ("c-library", "", "The library, and how it grows", library_view, False), ("c-factored", "2", "Factored steps: object and goal prototypes", factored, False),
             ("c-hier", "3", "Instance children: a hierarchy of prototypes", hierarchy, False),
             ("c-repl", "4", "Replication on new tasks", replication, False),
             ("c-gen", "5", "Does composition generalise?", generalise, False),

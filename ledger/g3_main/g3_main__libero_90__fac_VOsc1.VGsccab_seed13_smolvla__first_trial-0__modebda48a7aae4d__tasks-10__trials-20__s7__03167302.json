@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g3_main_10_fac_VOsc1.VGsccab_seed13_smolvla.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:10?suite=libero_90&paths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_VGsccab_0.pt&apaths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_VOsc1_0.pt&goal=1 SUITE=libero_90 TASKS=10 TRIALS=20 (job 4092901)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_states_b",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g3_main_10_fac_VOsc1.VGsccab_seed13_smolvla.json",
+   "port": 9394,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "10",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4092901",
+  "mode": "prims:10?suite=libero_90&paths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_VGsccab_0.pt&apaths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_VOsc1_0.pt&goal=1"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "randotron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4092901",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g3_main",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "031673027e57a47b99bf0ec77592ba0caec941cb",
+  "short": "03167302"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:10?suite=libero_90&paths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_VGsccab_0.pt&apaths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_VOsc1_0.pt&goal=1",
+  "tasks": "10",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 607.8242676258087,
+  "success_rate": 0.5,
+  "tasks": {
+   "10": {
+    "errors": 0,
+    "language": "put the black bowl on top of the cabinet",
+    "mean_steps": 270.75,
+    "n": 20,
+    "success_rate": 0.5
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g3_main__libero_90__fac_VOsc1.VGsccab_seed13_smolvla__first_trial-0__modebda48a7aae4d__tasks-10__trials-20__s7__03167302",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-15T14:57:34+00:00",
+ "stream": null,
+ "tag": "fac_VOsc1.VGsccab_seed13_smolvla"
+}

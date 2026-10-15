@@ -1,0 +1,382 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/i5_library.py --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "hal.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4092964",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i5_library",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "6f94ea3ddb54794af0203c81e4b807d48128e2da",
+  "short": "6f94ea3d"
+ },
+ "keys": {},
+ "metrics": {
+  "instance_to_other_types": 0.05256320479415609,
+  "instance_to_own_type": 0.1551663532494586,
+  "kinds": {
+   "Ghtray": "goal",
+   "Gscbasket": "goal",
+   "Gsccab": "goal",
+   "Gscplate": "goal",
+   "Osc0": "object",
+   "Osc1": "object",
+   "Osc10": "object",
+   "Osc11": "object",
+   "Osc12": "object",
+   "Osc13": "object",
+   "Osc14": "object",
+   "Osc2": "object",
+   "Osc3": "object",
+   "Osc4": "object",
+   "Osc5": "object",
+   "Osc6": "object",
+   "Osc7": "object",
+   "Osc8": "object",
+   "Osc9": "object",
+   "Sch0": "instance",
+   "Sch1": "instance",
+   "Sch2": "instance",
+   "XG0": "goal",
+   "XG1": "goal",
+   "XG10": "goal",
+   "XG11": "goal",
+   "XG13": "goal",
+   "XG14": "goal",
+   "XG15": "goal",
+   "XG17": "goal",
+   "XG18": "goal",
+   "XG19": "goal",
+   "XG20": "goal",
+   "XG21": "goal",
+   "XG23": "goal",
+   "XG3": "goal",
+   "XG5": "goal",
+   "XG7": "goal",
+   "XG8": "goal",
+   "XI12": "instance",
+   "XI22": "instance",
+   "XI24": "instance",
+   "XI25": "instance",
+   "XI9": "instance",
+   "XO16": "object",
+   "XO2": "object",
+   "XO4": "object",
+   "XO6": "object"
+  },
+  "labels": {
+   "Ghtray": "the tray",
+   "Gscbasket": "the basket",
+   "Gsccab": "the cabinet",
+   "Gscplate": "the plate",
+   "Osc0": "the alphabet soup",
+   "Osc1": "the black bowl",
+   "Osc10": "the red mug",
+   "Osc11": "the salad dressing",
+   "Osc12": "the tomato sauce",
+   "Osc13": "the white bowl",
+   "Osc14": "the white mug",
+   "Osc2": "the butter",
+   "Osc3": "the chocolate pudding",
+   "Osc4": "the cream cheese",
+   "Osc5": "the cream cheese box",
+   "Osc6": "the frying pan",
+   "Osc7": "the ketchup",
+   "Osc8": "the milk",
+   "Osc9": "the orange juice",
+   "Sch0": "the black bowl \u00b7 back",
+   "Sch1": "the black bowl \u00b7 front",
+   "Sch2": "the black bowl \u00b7 middle",
+   "XG0": "the top drawer of the cabinet",
+   "XG1": "the stove",
+   "XG10": "the cabinet shelf",
+   "XG11": "the cabinet shelf",
+   "XG13": "the left plate",
+   "XG14": "the right plate",
+   "XG15": "the plate",
+   "XG17": "the front compartment of the caddy",
+   "XG18": "the left compartment of the caddy",
+   "XG19": "the right compartment of the caddy",
+   "XG20": "the caddy",
+   "XG21": "the back compartment of the caddy",
+   "XG23": "the shelf",
+   "XG3": "the bottom drawer of the cabinet",
+   "XG5": "the wine rack",
+   "XG7": "the white mug",
+   "XG8": "the plate",
+   "XI12": "the black bowl \u00b7 left",
+   "XI22": "the book \u00b7 middle",
+   "XI24": "the book \u00b7 left",
+   "XI25": "the book \u00b7 right",
+   "XI9": "the moka pot \u00b7 right",
+   "XO16": "the book",
+   "XO2": "the moka pot",
+   "XO4": "the wine bottle",
+   "XO6": "the yellow and white mug"
+  },
+  "mean_offdiag": 0.04532566476823137,
+  "n_prototypes": 48,
+  "names": [
+   "Ghtray",
+   "Gscbasket",
+   "Gsccab",
+   "Gscplate",
+   "Osc0",
+   "Osc1",
+   "Osc10",
+   "Osc11",
+   "Osc12",
+   "Osc13",
+   "Osc14",
+   "Osc2",
+   "Osc3",
+   "Osc4",
+   "Osc5",
+   "Osc6",
+   "Osc7",
+   "Osc8",
+   "Osc9",
+   "Sch0",
+   "Sch1",
+   "Sch2",
+   "XG0",
+   "XG1",
+   "XG10",
+   "XG11",
+   "XG13",
+   "XG14",
+   "XG15",
+   "XG17",
+   "XG18",
+   "XG19",
+   "XG20",
+   "XG21",
+   "XG23",
+   "XG3",
+   "XG5",
+   "XG7",
+   "XG8",
+   "XI12",
+   "XI22",
+   "XI24",
+   "XI25",
+   "XI9",
+   "XO16",
+   "XO2",
+   "XO4",
+   "XO6"
+  ],
+  "nearest_goal": {
+   "the back compartment of the caddy": [
+    "the front compartment of the caddy",
+    0.133
+   ],
+   "the basket": [
+    "the tray",
+    0.145
+   ],
+   "the bottom drawer of the cabinet": [
+    "the top drawer of the cabinet",
+    0.102
+   ],
+   "the cabinet": [
+    "the top drawer of the cabinet",
+    0.128
+   ],
+   "the cabinet shelf": [
+    "the cabinet shelf",
+    0.209
+   ],
+   "the caddy": [
+    "the right compartment of the caddy",
+    0.099
+   ],
+   "the front compartment of the caddy": [
+    "the back compartment of the caddy",
+    0.133
+   ],
+   "the left compartment of the caddy": [
+    "the front compartment of the caddy",
+    0.122
+   ],
+   "the left plate": [
+    "the tray",
+    0.107
+   ],
+   "the plate": [
+    "the cabinet",
+    0.089
+   ],
+   "the right compartment of the caddy": [
+    "the left compartment of the caddy",
+    0.112
+   ],
+   "the right plate": [
+    "the plate",
+    0.112
+   ],
+   "the shelf": [
+    "the cabinet shelf",
+    0.143
+   ],
+   "the stove": [
+    "the tray",
+    0.111
+   ],
+   "the top drawer of the cabinet": [
+    "the cabinet",
+    0.128
+   ],
+   "the tray": [
+    "the basket",
+    0.145
+   ],
+   "the white mug": [
+    "the cabinet shelf",
+    0.094
+   ],
+   "the wine rack": [
+    "the cabinet",
+    0.08
+   ]
+  },
+  "nearest_object": {
+   "the alphabet soup": [
+    "the tomato sauce",
+    0.093
+   ],
+   "the black bowl": [
+    "the black bowl \u00b7 middle",
+    0.13
+   ],
+   "the black bowl \u00b7 back": [
+    "the cream cheese",
+    0.106
+   ],
+   "the black bowl \u00b7 front": [
+    "the black bowl",
+    0.1
+   ],
+   "the black bowl \u00b7 left": [
+    "the book \u00b7 left",
+    0.102
+   ],
+   "the black bowl \u00b7 middle": [
+    "the black bowl",
+    0.13
+   ],
+   "the book": [
+    "the book \u00b7 middle",
+    0.163
+   ],
+   "the book \u00b7 left": [
+    "the book",
+    0.135
+   ],
+   "the book \u00b7 middle": [
+    "the book",
+    0.163
+   ],
+   "the book \u00b7 right": [
+    "the black bowl \u00b7 middle",
+    0.108
+   ],
+   "the butter": [
+    "the chocolate pudding",
+    0.086
+   ],
+   "the chocolate pudding": [
+    "the tomato sauce",
+    0.105
+   ],
+   "the cream cheese": [
+    "the black bowl \u00b7 back",
+    0.106
+   ],
+   "the cream cheese box": [
+    "the cream cheese",
+    0.099
+   ],
+   "the frying pan": [
+    "the tomato sauce",
+    0.107
+   ],
+   "the ketchup": [
+    "the book",
+    0.111
+   ],
+   "the milk": [
+    "the book \u00b7 right",
+    0.059
+   ],
+   "the moka pot": [
+    "the moka pot \u00b7 right",
+    0.438
+   ],
+   "the moka pot \u00b7 right": [
+    "the moka pot",
+    0.438
+   ],
+   "the orange juice": [
+    "the book \u00b7 right",
+    0.089
+   ],
+   "the red mug": [
+    "the yellow and white mug",
+    0.108
+   ],
+   "the salad dressing": [
+    "the ketchup",
+    0.093
+   ],
+   "the tomato sauce": [
+    "the yellow and white mug",
+    0.109
+   ],
+   "the white bowl": [
+    "the black bowl",
+    0.115
+   ],
+   "the white mug": [
+    "the tomato sauce",
+    0.091
+   ],
+   "the wine bottle": [
+    "the ketchup",
+    0.085
+   ],
+   "the yellow and white mug": [
+    "the tomato sauce",
+    0.109
+   ]
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i5_library__libero_90__read__s0__6f94ea3d",
+ "schema": 1,
+ "script": "experiments/i5_library.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T14:50:52+00:00",
+ "stream": null,
+ "tag": "read"
+}
