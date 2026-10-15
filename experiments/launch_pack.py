@@ -190,6 +190,15 @@ def arm_spec(tid, arm, fold, demo=0):
         bind = "&bind=1" if "bind" in fl else ""
         bind += "&goal=1" if "goal" in fl else ""                         # plan D: the primitive only from grasp to release
         return (f"prims:{tid}?suite={SUITE_OF.get('suite', 'libero_90')}&paths={'+'.join(ps)}{bind}", "0", False)
+    if arm.startswith(("lorasum@", "loraavg@")):                        # plan G2: per-task LoRAs of donor tasks composed by
+        from lifelong_ood import ledger as _L                            # task arithmetic (sum) or averaging
+        wrong = set(_L.load("l90_scenes", tag="map")[-1]["metrics"]["wrong_scene_tasks"])
+        ds = [int(x) for x in arm.split("@", 1)[1].split("+")]
+        fs = [os.path.join(R, f"r3_lora_{d}_sc.pt" if d in wrong else f"r3_lora_{d}.pt") for d in ds]
+        if not all(os.path.exists(f_) for f_ in fs):
+            return None
+        w = 1.0 if arm.startswith("lorasum") else 1.0 / len(fs)
+        return (f"loras:{'+'.join(fs)}?w={w}", "0", False)
     if arm == "lorasc":                                                  # the per-task LoRA on the task's OWN scene's demonstration:
         from lifelong_ood import ledger as _L                            # refit (_sc) where the first episode of its text was another
         wrong = set(_L.load("l90_scenes", tag="map")[-1]["metrics"]["wrong_scene_tasks"])   # scene's (experiments/l90_scenes.py)

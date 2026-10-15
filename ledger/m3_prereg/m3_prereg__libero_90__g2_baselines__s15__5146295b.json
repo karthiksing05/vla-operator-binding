@@ -1,0 +1,425 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G2",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5146295b930490a4ec9713cecd6e692e24ef16ea",
+  "short": "5146295b"
+ },
+ "keys": {},
+ "metrics": {
+  "context": "a two-episode smoke run of the serving mode (experiment g2_smoke) preceded this registration",
+  "hypotheses": {
+   "H1": "the composed concepts (G0's gfac) > task arithmetic (lorasum), exact sign test",
+   "H2": "the composed concepts > LoRA averaging (loraavg), exact sign test",
+   "correction": "Holm over H1 and H2; each baseline against zero-shot and the kept arms reported as descriptive"
+  },
+  "plan": {
+   "10": {
+    "fold": 3,
+    "goal_donor": 41,
+    "object_donor": 9,
+    "ok": true
+   },
+   "12": {
+    "fold": 4,
+    "goal_donor": 36,
+    "object_donor": 2,
+    "ok": true
+   },
+   "13": {
+    "fold": 2,
+    "goal_donor": 71,
+    "object_donor": 2,
+    "ok": true
+   },
+   "14": {
+    "fold": 1,
+    "goal_donor": 36,
+    "object_donor": 15,
+    "ok": true
+   },
+   "15": {
+    "fold": 4,
+    "goal_donor": 41,
+    "object_donor": 14,
+    "ok": true
+   },
+   "18": {
+    "fold": 2,
+    "goal_donor": 19,
+    "object_donor": 41,
+    "ok": true
+   },
+   "19": {
+    "fold": 3,
+    "goal_donor": 18,
+    "object_donor": 38,
+    "ok": true
+   },
+   "2": {
+    "fold": 3,
+    "goal_donor": 32,
+    "object_donor": 9,
+    "ok": true
+   },
+   "24": {
+    "fold": 4,
+    "goal_donor": 26,
+    "object_donor": 2,
+    "ok": true
+   },
+   "25": {
+    "fold": 1,
+    "goal_donor": 41,
+    "object_donor": 2,
+    "ok": true
+   },
+   "26": {
+    "fold": 3,
+    "goal_donor": 24,
+    "object_donor": 27,
+    "ok": true
+   },
+   "29": {
+    "fold": 0,
+    "goal_donor": 32,
+    "object_donor": 10,
+    "ok": true
+   },
+   "30": {
+    "fold": 4,
+    "goal_donor": 36,
+    "object_donor": 2,
+    "ok": true
+   },
+   "31": {
+    "fold": 0,
+    "goal_donor": 43,
+    "object_donor": 2,
+    "ok": true
+   },
+   "32": {
+    "fold": 2,
+    "goal_donor": 2,
+    "object_donor": 48,
+    "ok": true
+   },
+   "36": {
+    "fold": 2,
+    "goal_donor": 9,
+    "object_donor": 37,
+    "ok": true
+   },
+   "38": {
+    "fold": 1,
+    "goal_donor": 18,
+    "object_donor": 19,
+    "ok": true
+   },
+   "40": {
+    "fold": 2,
+    "goal_donor": 86,
+    "object_donor": 41,
+    "ok": true
+   },
+   "41": {
+    "fold": 0,
+    "goal_donor": 10,
+    "object_donor": 18,
+    "ok": true
+   },
+   "42": {
+    "fold": 2,
+    "goal_donor": 89,
+    "object_donor": 41,
+    "ok": true
+   },
+   "43": {
+    "fold": 3,
+    "goal_donor": 15,
+    "object_donor": 36,
+    "ok": true
+   },
+   "46": {
+    "fold": 2,
+    "goal_donor": 47,
+    "object_donor": 55,
+    "ok": true
+   },
+   "48": {
+    "fold": 0,
+    "goal_donor": 46,
+    "object_donor": 32,
+    "ok": true
+   },
+   "49": {
+    "fold": 1,
+    "goal_donor": 46,
+    "object_donor": 59,
+    "ok": true
+   },
+   "50": {
+    "fold": 3,
+    "goal_donor": 47,
+    "object_donor": 46,
+    "ok": true
+   },
+   "51": {
+    "fold": 0,
+    "goal_donor": 46,
+    "object_donor": 56,
+    "ok": true
+   },
+   "54": {
+    "fold": 1,
+    "goal_donor": 46,
+    "object_donor": 59,
+    "ok": true
+   },
+   "55": {
+    "fold": 3,
+    "goal_donor": 56,
+    "object_donor": 46,
+    "ok": true
+   },
+   "56": {
+    "fold": 1,
+    "goal_donor": 55,
+    "object_donor": null,
+    "ok": false
+   },
+   "58": {
+    "fold": 2,
+    "goal_donor": 55,
+    "object_donor": 48,
+    "ok": true
+   },
+   "59": {
+    "fold": 0,
+    "goal_donor": 55,
+    "object_donor": 49,
+    "ok": true
+   },
+   "60": {
+    "fold": 4,
+    "goal_donor": 55,
+    "object_donor": 2,
+    "ok": true
+   },
+   "61": {
+    "fold": 3,
+    "goal_donor": 56,
+    "object_donor": 69,
+    "ok": true
+   },
+   "65": {
+    "fold": 1,
+    "goal_donor": 67,
+    "object_donor": 66,
+    "ok": true
+   },
+   "67": {
+    "fold": 4,
+    "goal_donor": 65,
+    "object_donor": 72,
+    "ok": true
+   },
+   "71": {
+    "fold": 4,
+    "goal_donor": 9,
+    "object_donor": 65,
+    "ok": true
+   },
+   "72": {
+    "fold": 2,
+    "goal_donor": 9,
+    "object_donor": 67,
+    "ok": true
+   },
+   "73": {
+    "fold": 2,
+    "goal_donor": 81,
+    "object_donor": 74,
+    "ok": true
+   },
+   "74": {
+    "fold": 4,
+    "goal_donor": 79,
+    "object_donor": 73,
+    "ok": true
+   },
+   "75": {
+    "fold": 1,
+    "goal_donor": 80,
+    "object_donor": 73,
+    "ok": true
+   },
+   "76": {
+    "fold": 2,
+    "goal_donor": 84,
+    "object_donor": 34,
+    "ok": true
+   },
+   "78": {
+    "fold": 2,
+    "goal_donor": 81,
+    "object_donor": 74,
+    "ok": true
+   },
+   "79": {
+    "fold": 0,
+    "goal_donor": 74,
+    "object_donor": 73,
+    "ok": true
+   },
+   "80": {
+    "fold": 3,
+    "goal_donor": 75,
+    "object_donor": 73,
+    "ok": true
+   },
+   "81": {
+    "fold": 4,
+    "goal_donor": 73,
+    "object_donor": 75,
+    "ok": true
+   },
+   "82": {
+    "fold": 1,
+    "goal_donor": 74,
+    "object_donor": 73,
+    "ok": true
+   },
+   "83": {
+    "fold": 1,
+    "goal_donor": 80,
+    "object_donor": 73,
+    "ok": true
+   },
+   "84": {
+    "fold": 3,
+    "goal_donor": 76,
+    "object_donor": 65,
+    "ok": true
+   },
+   "85": {
+    "fold": 0,
+    "goal_donor": 76,
+    "object_donor": 67,
+    "ok": true
+   },
+   "86": {
+    "fold": 4,
+    "goal_donor": 40,
+    "object_donor": 73,
+    "ok": true
+   },
+   "88": {
+    "fold": 0,
+    "goal_donor": 40,
+    "object_donor": 89,
+    "ok": true
+   },
+   "89": {
+    "fold": 1,
+    "goal_donor": 42,
+    "object_donor": 88,
+    "ok": true
+   },
+   "9": {
+    "fold": 0,
+    "goal_donor": 36,
+    "object_donor": 2,
+    "ok": true
+   }
+  },
+  "tasks": [
+   2,
+   9,
+   10,
+   12,
+   13,
+   14,
+   15,
+   18,
+   19,
+   24,
+   25,
+   26,
+   29,
+   30,
+   31,
+   32,
+   36,
+   38,
+   40,
+   41,
+   42,
+   43,
+   46,
+   48,
+   49,
+   50,
+   51,
+   54,
+   55,
+   58,
+   59,
+   60,
+   61,
+   65,
+   67,
+   71,
+   72,
+   73,
+   74,
+   75,
+   76,
+   78,
+   79,
+   80,
+   81,
+   82,
+   83,
+   84,
+   85,
+   86,
+   88,
+   89
+  ],
+  "written_before": "any episode of g2_accept or g2_main"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__g2_baselines__s15__5146295b",
+ "schema": 1,
+ "script": "experiments/prereg/g2_baselines.py",
+ "seconds": null,
+ "seed": 15,
+ "source_commit": null,
+ "started": "2026-10-15T03:37:07+00:00",
+ "stream": null,
+ "tag": "g2_baselines"
+}

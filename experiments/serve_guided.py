@@ -305,6 +305,18 @@ def main():
         state, key, banks = adapt.load(bk, a.mode.split(":", 1)[1])
         state["on"] = frozenset({key})
         logging.info(f"expert {key} loaded into {len(banks)} banks and switched on")
+    elif a.mode.startswith("loras:"):
+        # loras:<p1>+<p2>?w=<weight> -- adapter-composition baselines (plan G2): several per-task LoRAs on at once, each scaled
+        # by w (task arithmetic: w=1; averaging: w=1/n)
+        from lifelong_ood.policy import adapt
+        body, q = (a.mode[len("loras:"):].split("?", 1) + [""])[:2]
+        kv = dict(x.split("=", 1) for x in q.split("&") if x)
+        state, keys = None, []
+        for p_ in body.split("+"):
+            state, k_, _ = adapt.load(bk, p_, state=state)
+            keys.append(k_)
+        state["on"] = {k_: float(kv.get("w", 1.0)) for k_ in keys}
+        logging.info(f"adapters {keys} on with weight {kv.get('w', 1.0)}")
     elif a.mode.startswith("learned:"):
         # learned:<task>?w0=1.0&sched=const&var=0.001&key=pose&stall=3&window=20[&mem=0][&fold=orig]
         # compose -> practise -> consolidate: recall a stored composition (demo or practice success) by the first frames,
