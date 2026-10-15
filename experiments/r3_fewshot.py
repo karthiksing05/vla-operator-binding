@@ -54,7 +54,7 @@ def main():
     T = len(ep["actions"])
     t0 = time.time()
     obs = [d90.observation(ep, i) for i in range(T)]
-    bank = adapt.PrefixBank(bk, obs)
+    bank = adapt.LazyPrefixBank(bk, obs) if a.backbone.startswith("smolvla") else adapt.PrefixBank(bk, obs)   # SmolVLA's cache is a dict
     idx, _ = D.chunk_indices(T, bk.H)
     rows = c0.chunk_rows(ep, idx, range(T), norm)
     full = D.pad_rows(rows, bk.H)
