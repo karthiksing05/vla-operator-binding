@@ -1,8 +1,7 @@
 # One Example In, New Tasks Out: Composing a Frozen Robot Policy's Object and Goal Prototypes
 
 *Working draft. Every number is read from `ledger/` and audited by `experiments/audit_numbers.py`; sections marked PENDING wait
-on pre-registered reads that are running. Citations marked [cite: verify] are to be checked against their sources before
-submission (docs/RELATED.md lists the verified ones).*
+on pre-registered reads that are running. Citations were checked against their arXiv pages on 2026-10-15.*
 
 ## Abstract
 
@@ -39,10 +38,14 @@ interfere where it has it, so practice must choose; factorisation beats a monoli
 
 ## 2 Related work
 
-Composition of generative models and adapters (Composable Diffusion; task arithmetic and LoRA merging [cite: verify]); test-time
-prototype discovery (Wang et al., [arXiv](https://arxiv.org/abs/2605.07078)); vision-language-action policies (pi0.5, pi0, SmolVLA [cite: verify]);
-adapting VLAs from few demonstrations and with practice (STRAP retrieval, DSRL [cite: verify]); continual learning with frozen
-backbones and per-task modules (PackNet, Piggyback, SupSup, C-LoRA; docs/RELATED.md); LIBERO [cite: verify].
+Composition of generative models (Composable Diffusion, Liu et al., ECCV 2022, [arXiv](https://arxiv.org/abs/2206.01714)) and of
+fine-tuned weights (task arithmetic, Ilharco et al., ICLR 2023, [arXiv](https://arxiv.org/abs/2212.04089)); test-time prototype
+discovery (Wang et al., [arXiv](https://arxiv.org/abs/2605.07078), our group's companion work); vision-language-action policies
+(pi0, [arXiv](https://arxiv.org/abs/2410.24164); pi0.5, CoRL 2025, [arXiv](https://arxiv.org/abs/2504.16054); SmolVLA,
+[arXiv](https://arxiv.org/abs/2506.01844)); adapting a policy from few demonstrations by retrieval (STRAP, ICLR 2025,
+[arXiv](https://arxiv.org/abs/2412.15182)) and by reinforcement learning in its noise space (DSRL, CoRL 2025,
+[arXiv](https://arxiv.org/abs/2506.15799)); continual learning with frozen backbones and per-task modules (PackNet, Piggyback, SupSup,
+C-LoRA; docs/RELATED.md); the benchmark (LIBERO, NeurIPS 2023, [arXiv](https://arxiv.org/abs/2306.03310)).
 
 ## 3 Method
 
