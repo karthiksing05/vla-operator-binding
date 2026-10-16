@@ -1,0 +1,50 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G4b (policy-field composition)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1b659831e90b199fee3144cde318ec999353cd57",
+  "short": "1b659831"
+ },
+ "keys": {},
+ "metrics": {
+  "hypotheses": {
+   "H1": "the kept arm > the policy over the 20 tasks on set c (exact sign test, alpha 0.05)",
+   "descriptive": "the policy-field composition alone vs the policy; the prototype composition alone vs the policy; per suite"
+  },
+  "screen": "set a, 10 episodes per task: policy 66, prototypes 67, policy field 75 of 200 (gains on 3 tasks, losses on 3); the arm and its source rule were fixed before the screen",
+  "written_before": "any episode on start states set c"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__g4b_field__s13__1b659831",
+ "schema": 1,
+ "script": "experiments/prereg/g4b_field.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-16T03:52:26+00:00",
+ "stream": null,
+ "tag": "g4b_field"
+}

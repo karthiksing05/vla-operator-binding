@@ -197,6 +197,61 @@ def screen(launch_it):
     return rows
 
 
+def arms_b(v, pl):
+    a = arms(v)
+    a["pfield"] = pfield(v, pl)
+    return a
+
+
+def launch_b():
+    """G4b test: zero-shot, the prototype composition and the policy-field composition on start states set c (seeds 500000+)."""
+    pl = json.load(open(PLAN))
+    for k, v in pl["tasks"].items():
+        cmd = [PY, "experiments/launch_pack.py", "--tasks", str(v["index"]), "--arms", ",".join(arms_b(v, pl).values()),
+               "--experiment", f"g4b_main_{k.split(':')[0]}", "--first", "0", "--trials", "20", "--seed", str(SEED), "--bind",
+               "track", "--partition", "overcap", "--per", "3", "--suite", v["suite"], "--fresh", "--fresh-dir", "fresh_ood_c"]
+        print(k, subprocess.run(cmd, capture_output=True, text=True, cwd=ROOT).stdout.strip()[-100:], flush=True)
+
+
+def read_b(record):
+    """G4b (m3_prereg g4b_field): acceptance on set a keeps the best of {policy, prototype composition, policy-field composition}
+    (ties to the policy, then the prototypes); H1 kept > policy on set c."""
+    import e1_read as E1
+    pl = json.load(open(PLAN))
+    order = ("zs", "fac", "pfield")
+    acc, test, kept, missing = {}, {}, {}, []
+    for k, v in pl["tasks"].items():
+        sh, A = k.split(":")[0], arms_b(v, pl)
+        s_ = {a: load(f"g4_accept_{sh}", v["suite"], v["index"], x) for a, x in A.items()}
+        x_ = {a: load(f"g4b_main_{sh}", v["suite"], v["index"], x) for a, x in A.items()}
+        if None in s_.values() or None in x_.values():
+            missing.append(k)
+            continue
+        acc[k] = {a: int(sum(z.values())) for a, z in s_.items()}
+        kept[k] = max(order, key=lambda a: (acc[k][a], -order.index(a)))
+        test[k] = x_
+    C = E1.compare
+    res = dict(missing=missing, acceptance=acc, kept=kept,
+               H1=C({k: {"x": x[kept[k]], "y": x["zs"]} for k, x in test.items()}),
+               pfield_vs_zs=C({k: {"x": x["pfield"], "y": x["zs"]} for k, x in test.items()}),
+               fac_vs_zs=C({k: {"x": x["fac"], "y": x["zs"]} for k, x in test.items()}),
+               per_task={k: {a: int(sum(z.values())) for a, z in x.items()} | {"kept": kept[k]} for k, x in test.items()})
+    for sub in ("goal", "spatial"):
+        res[sub] = C({k: {"x": x[kept[k]], "y": x["zs"]} for k, x in test.items() if k.startswith(sub)})
+    res["H1"]["passes"] = bool(res["H1"]["x"] > res["H1"]["y"] and res["H1"]["sign_p"] < 0.05)
+    for n_ in ("H1", "pfield_vs_zs", "fac_vs_zs", "goal", "spatial"):
+        h = res[n_]
+        print(f"[g4b] {n_:13} {h['x']} vs {h['y']} of {h['n']}, discordant {h['discordant']}, sign p {h['sign_p']:.3g}, "
+              f"diff {h['diff']['diff']:+.3f} [{h['diff']['lo']:+.3f}, {h['diff']['hi']:+.3f}]", flush=True)
+    print("[g4b] kept", {a: sum(v == a for v in kept.values()) for a in order}, "| missing", missing, flush=True)
+    json.dump(res, open(os.path.join(R, "g4b_read.json"), "w"), indent=1)
+    if record and not missing:
+        from lifelong_ood import ledger
+        print(ledger.record("g4_ood", bench="libero_ood", tag="read_field", seed=SEED, metrics=res,
+                            bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config={},
+                            script="experiments/g4_ood.py", command=" ".join(sys.argv)))
+
+
 def diagnose(record):
     """Why the library adds nothing here: each prototype's flow loss on its first logged batch and its last three (ledger c0_fit), G4's
     prototypes (pi0.5's own training demonstrations) against E3's (LIBERO-90 demonstrations the policy never saw)."""
@@ -224,6 +279,10 @@ def diagnose(record):
 
 
 if __name__ == "__main__":
+    if "--test-b" in sys.argv:
+        launch_b()
+    if "--read-b" in sys.argv:
+        read_b("--record" in sys.argv)
     if "--screen" in sys.argv:
         screen("--launch" in sys.argv)
     if "--diagnose" in sys.argv:
