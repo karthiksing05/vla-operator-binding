@@ -298,6 +298,13 @@ def arm_spec(tid, arm, fold, demo=0):
         act = os.path.join(R, f"{arm.split('_')[0]}_{tid}_actor.pt")
         mode = f"train=1&save={act}&warmup=10" if arm.endswith("_train") else f"train=0&load={act}"
         return (f"dsrl:{tid}?{mode}&official=1&lora={base}", "0", False)
+    if arm.startswith(("dsrlf_train@", "dsrlf@")):                       # plan G7b: DSRL steering the library composition
+        o_, g_ = arm.split("@", 1)[1].split(".")                          # dsrlf[_train]@<object proto>.<goal proto>
+        pth = lambda n_: "none" if n_ == "x" else os.path.join(R, f"prim_{n_}_0.pt")   # noqa: E731
+        act = os.path.join(R, f"dsrlf_{tid}_actor.pt")
+        mode = f"train=1&save={act}&warmup=10" if arm.startswith("dsrlf_train") else f"train=0&load={act}"
+        return (f"dsrl:{tid}?{mode}&official=1&lora=none&apath={pth(o_)}&gpath={pth(g_)}"
+                f"&suite={SUITE_OF.get('suite', 'libero_90')}", "0", False)
     if arm == "dsrl":                                                    # DSRL scored: the trained actor, deterministic noise
         return (f"dsrl:{tid}?train=0&load={os.path.join(R, f'dsrl_{tid}_actor.pt')}&beta=2", "0", False)
     if arm == "phasebind2_rjpred_e":                                     # own demo, events fire on arrival (PhaseBindHooks events=1)
@@ -397,7 +404,7 @@ def main():
                         PROGRAM_BYTES=s[1], OUT=out, **({"RECORD": "1"} if a.record else {}), **({"SERVE_SEED": str(a.seed)} if a.seed else {}),
                         **({"OBJECTS": "1"} if arm in ("phasebind", "phasebind_nofold", "phasebind2_nofold", "compose2", "sibling2") else {}),
                         **({"LIGHT": "1"} if a.light else {}), **({"OBJECTS": "1", "ALL_OBJECTS": "1"} if a.all_objects else {}),
-                        **({"STATE_MOD": "30"} if arm in ("dsrl_train", "dsrlo_train", "dsrlz_train", "dsrls_train") else {}),
+                        **({"STATE_MOD": "30"} if (arm in ("dsrl_train", "dsrlo_train", "dsrlz_train", "dsrls_train") or arm.startswith("dsrlf_train@")) else {}),
                         **({"SEG": "1"} if "src=oracle" in (s[0] or "") else {}), **({"BIND": a.bind} if a.bind else {}),
                         **({"FRESH": os.path.join(R, a.fresh_dir)} if a.fresh else {}),
                         **(s[3] if len(s) > 3 else {}),

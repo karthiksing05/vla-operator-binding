@@ -273,6 +273,15 @@ def main():
                           seed=int(os.environ.get("SERVE_SEED", "0") or 0), log=logging.info, official=kv.get("official") == "1",
                           H=bk.H, A=bk.A)
         logging.info(f"dsrl: task {t}, LoRA {lp} on, noise dim {bk.H * bk.A}, train {hooks.train}")
+        if "apath" in kv or "gpath" in kv:                            # plan G7b: steer the library's composition (fac@)
+            from lifelong_ood.policy import factors as F
+            from lifelong_ood.policy import primitives as PR
+            from lifelong_ood.policy.dsrl import StackHooks
+            task = next(x for x in F.load() if x.suite == kv.get("suite", "libero_90") and x.index == t)
+            pth = lambda k: None if kv.get(k, "none") == "none" else kv[k]   # noqa: E731
+            comp = PR.PrimHooks(bk, [task.language], [pth("gpath")], goal_only=True, approach_paths=[pth("apath")])
+            hooks = StackHooks(comp, hooks)
+            logging.info(f"dsrl: steering the composition approach {pth('apath')} goal {pth('gpath')}")
     elif a.mode.startswith("prims:"):
         # prims:<task>?paths=<p0>+<p1>[&bind=1&proto=<k>&rho=0.7] -- plan C (docs/history/PLAN_PRIMITIVES.md): the task's steps in turn, each
         # with its motion primitive (a keyed LoRA; "none" = the policy itself), switched at the policy's own release; bind=1

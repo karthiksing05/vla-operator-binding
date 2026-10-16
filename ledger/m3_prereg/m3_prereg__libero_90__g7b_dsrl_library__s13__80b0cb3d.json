@@ -1,0 +1,51 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G7b",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "80b0cb3d793caf3f3808e15f66859ef5fc881abe",
+  "short": "80b0cb3d"
+ },
+ "keys": {},
+ "metrics": {
+  "context": "G7: dsrls+acc 503 vs library 480 of 580 (-0.040 [-0.098, 0.012]); G5c: capacity does not close the gap",
+  "hypotheses": {
+   "H1": "DSRL on the library with acceptance is non-inferior to DSRL on the per-task LoRA with acceptance (G7's dsrls; task-level bootstrap 95% lower bound above -0.05)",
+   "H2": "DSRL on the library with acceptance > E3's kept library (exact sign test, alpha 0.05)",
+   "descriptive": "DSRL on the library alone vs zero-shot"
+  },
+  "written_before": "any G7b episode other than two smokes on task 14 at seed 99 (three and four training episodes; the second beside the plain composition)"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__g7b_dsrl_library__s13__80b0cb3d",
+ "schema": 1,
+ "script": "experiments/prereg/g7b_dsrl_library.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-16T13:22:08+00:00",
+ "stream": null,
+ "tag": "g7b_dsrl_library"
+}

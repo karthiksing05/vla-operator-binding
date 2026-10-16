@@ -193,3 +193,28 @@ class DSRLHooks:
                 for p, pt in zip(self.q.parameters(), self.qt.parameters()):
                     pt.mul_(0.995).add_(0.005 * p)
         return dict(updates=n, buffer=B, q_loss=round(float(ql), 5), q_mean=round(float(qa.mean()), 3), alpha=round(float(self.log_alpha.exp()), 4))
+
+
+class StackHooks:
+    """Plan G7b: DSRL steering a COMPOSED policy -- the composition's hooks (PrimHooks: which prototype or prompt is on in each
+    phase) decide the field, the DSRL agent decides each chunk's initial noise."""
+
+    def __init__(self, compose, steer):
+        self._comp, self._steer = compose, steer   # not .compose: serve.py reads that name
+
+    def reset(self, meta=None):
+        self._comp.reset(meta)
+        self._steer.reset(meta)
+
+    def rewrite(self, obs, meta):
+        return self._comp.rewrite(obs, meta)
+
+    def observe(self, actions):
+        self._comp.observe(actions)
+
+    def noise_for(self, obs, meta=None):
+        return self._steer.noise_for(obs, meta)
+
+    def __call__(self, obs, pre, meta=None):
+        return self._comp(obs, pre, meta)
+
