@@ -252,6 +252,57 @@ def read_b(record):
                             script="experiments/g4_ood.py", command=" ".join(sys.argv)))
 
 
+def launch_c(backbone, stage):
+    """G4c: G4b's policy-field composition on another flow-matching policy (pi0_libero, smolvla): zero-shot and pfield, acceptance
+    on set a (stage accept) and test on set c (stage main)."""
+    pl = json.load(open(PLAN))
+    trials, fresh = (10, "fresh_ood_a") if stage == "accept" else (20, "fresh_ood_c")
+    for k, v in pl["tasks"].items():
+        cmd = [PY, "experiments/launch_pack.py", "--tasks", str(v["index"]), "--arms", f"zs,{pfield(v, pl)}", "--experiment",
+               f"g4c_{stage}_{k.split(':')[0]}", "--first", "0", "--trials", str(trials), "--seed", str(SEED), "--bind", "track",
+               "--partition", "overcap", "--per", "2", "--suite", v["suite"], "--fresh", "--fresh-dir", fresh, "--backbone", backbone]
+        print(k, subprocess.run(cmd, capture_output=True, text=True, cwd=ROOT).stdout.strip()[-90:], flush=True)
+
+
+def read_c(backbone, record):
+    """G4c (m3_prereg g4c_field): acceptance on set a keeps pfield over the policy only if it beats it; H1 kept > policy on set c."""
+    import e1_read as E1
+    pl, short = json.load(open(PLAN)), backbone.split("_")[0]
+    acc, test, kept, missing = {}, {}, {}, []
+    for k, v in pl["tasks"].items():
+        sh = k.split(":")[0]
+        A = {"zs": "zs", "pfield": pfield(v, pl)}
+        f = lambda st, a: os.path.join(R, f"g4c_{st}_{sh}_{v['suite']}_{v['index']}_{a.replace('@', '_')}_seed{SEED}_{short}.json")   # noqa: E731
+        ld = lambda st, a: ({int(e["trial"]): int(bool(e["success"])) for t_ in json.load(open(f(st, a)))["tasks"].values()
+                             for e in t_["episodes"]} if os.path.exists(f(st, a)) else None)   # noqa: E731
+        s_, x_ = {a: ld("accept", x) for a, x in A.items()}, {a: ld("main", x) for a, x in A.items()}
+        if None in s_.values() or None in x_.values():
+            missing.append(k)
+            continue
+        acc[k] = {a: int(sum(z.values())) for a, z in s_.items()}
+        kept[k] = "pfield" if acc[k]["pfield"] > acc[k]["zs"] else "zs"
+        test[k] = x_
+    C = E1.compare
+    res = dict(backbone=backbone, missing=missing, acceptance=acc, kept=kept,
+               H1=C({k: {"x": x[kept[k]], "y": x["zs"]} for k, x in test.items()}),
+               pfield_vs_zs=C({k: {"x": x["pfield"], "y": x["zs"]} for k, x in test.items()}),
+               per_task={k: {a: int(sum(z.values())) for a, z in x.items()} | {"kept": kept[k]} for k, x in test.items()})
+    for sub in ("goal", "spatial"):
+        res[sub] = C({k: {"x": x[kept[k]], "y": x["zs"]} for k, x in test.items() if k.startswith(sub)})
+    res["H1"]["passes"] = bool(res["H1"]["x"] > res["H1"]["y"] and res["H1"]["sign_p"] < 0.05)
+    for n_ in ("H1", "pfield_vs_zs", "goal", "spatial"):
+        h = res[n_]
+        print(f"[g4c {short}] {n_:13} {h['x']} vs {h['y']} of {h['n']}, discordant {h['discordant']}, sign p {h['sign_p']:.3g}, "
+              f"diff {h['diff']['diff']:+.3f} [{h['diff']['lo']:+.3f}, {h['diff']['hi']:+.3f}]", flush=True)
+    print(f"[g4c {short}] kept pfield on {sum(v == 'pfield' for v in kept.values())} | missing {missing}", flush=True)
+    json.dump(res, open(os.path.join(R, f"g4c_read_{short}.json"), "w"), indent=1)
+    if record and not missing:
+        from lifelong_ood import ledger
+        print(ledger.record("g4_ood", bench="libero_ood", tag=f"read_field_{short}", seed=SEED, metrics=res,
+                            bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config=dict(backbone=backbone),
+                            script="experiments/g4_ood.py", command=" ".join(sys.argv)))
+
+
 def diagnose(record):
     """Why the library adds nothing here: each prototype's flow loss on its first logged batch and its last three (ledger c0_fit), G4's
     prototypes (pi0.5's own training demonstrations) against E3's (LIBERO-90 demonstrations the policy never saw)."""
@@ -279,6 +330,13 @@ def diagnose(record):
 
 
 if __name__ == "__main__":
+    BKC = sys.argv[sys.argv.index("--backbone") + 1] if "--backbone" in sys.argv else None
+    if "--accept-c" in sys.argv:
+        launch_c(BKC, "accept")
+    if "--test-c" in sys.argv:
+        launch_c(BKC, "main")
+    if "--read-c" in sys.argv:
+        read_c(BKC, "--record" in sys.argv)
     if "--test-b" in sys.argv:
         launch_b()
     if "--read-b" in sys.argv:
