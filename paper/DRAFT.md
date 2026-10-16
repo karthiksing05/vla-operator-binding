@@ -18,6 +18,11 @@ a demonstration only when practice fails, it needs 17 and 16 demonstrations over
 Concepts learned only from other tasks recombine where the policy lacks the skill (145 against 25 on the tasks it fails) and
 interfere where it has it, so practice must choose; factorisation beats a monolithic adapter trained on the same data (365 against
 190). On two more flow-matching policies the library lifts SmolVLA from 20 to 203 and pi0 from 85 to 324 of 600 successes; per-task adapters lead on both, by less on pi0.
+It beats retrieval (STRAP, 480 against 296 of 580) and noise-space reinforcement learning on the frozen policy (DSRL, 499 against
+314 of 600). On a published compositional OOD benchmark with no demonstration of any test task, where every concept is one the
+policy already holds, prototypes learn nothing; composing the policy's own fields under each concept's training instruction,
+switched at the grasp, lifts 147 to 174 of 400. The policy's own likelihood tells the two kinds of concept apart without overlap
+(AUC 1.0), the detector of new primitives Wang et al. lack.
 
 ## 1 Introduction
 
@@ -27,13 +32,16 @@ interfere where it has it, so practice must choose; factorisation beats a monoli
   over every demonstration of it, and compose.
 - Lineage: Wang et al. ([arXiv](https://arxiv.org/abs/2605.07078), our group's companion work) select and compose a frozen generative model's prototypes
   for an out-of-distribution query; their stated gap is a mechanism to detect, consolidate and reuse new primitives. We supply
-  one for an embodied policy, and report that their likelihood-based selection does not carry over to robot trajectories.
+  one for an embodied policy: likelihood detects a new concept, and practice, not likelihood, selects among concepts.
 - Contributions (Limitations states the limits):
-  1. a factored, hierarchical prototype library for a frozen VLA, composed at the policy's own grasp;
+  1. a factored, hierarchical library of concepts for a frozen flow-matching VLA, composed at the policy's own grasp: a concept
+     the policy lacks is a low-rank prototype, a concept it holds is its own field under the instruction that taught it;
   2. a continual learner that asks for a demonstration only when practice fails, with Cobweb-style updates of every concept on
      the demonstration's path;
   3. a diagnosis of where a VLA fails new tasks (the approach), and of what its prototypes encode;
-  4. negative results that scope the claim: query-likelihood selection, demonstration-free transfer to new objects;
+  4. the policy's own likelihood as a detector of new concepts (Wang et al.'s missing mechanism), and negative results that scope
+     the claim: query-likelihood selection among new concepts, demonstration-free transfer to new objects, prototypes of held
+     concepts;
   5. a pre-registered, paired, audited protocol on fresh start states, and a defect found and fixed in a public LIBERO-90 port.
 - Scope: flow-matching and diffusion policies. A prototype is a low-rank change to the policy's velocity field, and a step
   switches which concept's change is on in each phase. Our companion ICLR-2027 submission finds the same split for image
