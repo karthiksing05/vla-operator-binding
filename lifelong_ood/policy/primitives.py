@@ -114,9 +114,11 @@ class PrimHooks:
     `inner`: hooks for the first step (e.g. BindHooks binding the step's object); its bias applies only during that step.
     `approach_paths` (plan E, with goal_only): per step, the OBJECT primitive switched on before the grasp."""
 
-    def __init__(self, bk, steps, paths, inner=None, goal_only=False, approach_paths=None):
+    def __init__(self, bk, steps, paths, inner=None, goal_only=False, approach_paths=None, phase_prompts=None):
         from . import adapt
         self.steps, self.inner = list(steps), inner
+        self.phase_prompts = phase_prompts               # plan G4b: per step (approach prompt, carry prompt): a concept the policy
+        #                                                  already holds is its own conditional field under the instruction that taught it
         self.goal_only = bool(goal_only)                 # plan D: a primitive acts only from the grasp to the release
         self.carrying = False
         self.state, self.keys, self.akeys = None, [], []
@@ -152,6 +154,9 @@ class PrimHooks:
     def rewrite(self, obs, meta):
         obs = dict(obs)
         obs["prompt"] = self.steps[self.step]
+        if self.phase_prompts and self.step < len(self.phase_prompts):
+            pp = self.phase_prompts[self.step][1 if self.carrying else 0]
+            obs["prompt"] = pp or obs["prompt"]
         return obs
 
     def observe(self, actions):

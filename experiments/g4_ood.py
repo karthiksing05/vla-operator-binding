@@ -156,6 +156,47 @@ def read(record):
                             script="experiments/g4_ood.py", command=" ".join(sys.argv)))
 
 
+def source(tasks, suite):
+    """Plan G4b: the training task whose instruction stands for a concept in this scene -- the concept's source tasks from the test
+    task's own base suite (libero_goal_ood -> libero_goal), else all of them; the first in benchmark order."""
+    from lifelong_ood.policy import data as D
+    base = D.SUITES[suite.replace("_ood", "")]
+    own = [t for t in tasks if t in base]
+    return (own or tasks)[0]
+
+
+def pfield(v, pl):
+    o = source(pl["protos"][v["object_proto"]]["tasks"], v["suite"]) if v["object_proto"] else "x"
+    g = source(pl["protos"][v["goal_proto"]]["tasks"], v["suite"]) if v["goal_proto"] else "x"
+    return f"pfield@{o}.{g}"
+
+
+def screen(launch_it):
+    """Plan G4b screen (exploratory): the policy's own fields under the concepts' source instructions, switched at the grasp, on
+    start states set a (10 per task, noise seed 13), against the policy's recorded episodes there."""
+    pl = json.load(open(PLAN))
+    if launch_it:
+        for k, v in pl["tasks"].items():
+            cmd = [PY, "experiments/launch_pack.py", "--tasks", str(v["index"]), "--arms", pfield(v, pl), "--experiment",
+                   f"g4_accept_{k.split(':')[0]}", "--first", "0", "--trials", "10", "--seed", str(SEED), "--bind", "track",
+                   "--partition", "overcap", "--per", "1", "--suite", v["suite"], "--fresh", "--fresh-dir", "fresh_ood_a"]
+            print(k, pfield(v, pl), subprocess.run(cmd, capture_output=True, text=True, cwd=ROOT).stdout.strip()[-60:], flush=True)
+        return
+    tot, rows = dict(zs=0, fac=0, pf=0), {}
+    for k, v in pl["tasks"].items():
+        sh = k.split(":")[0]
+        z, f, p_ = (load(f"g4_accept_{sh}", v["suite"], v["index"], a) for a in ("zs", arms(v)["fac"], pfield(v, pl)))
+        if p_ is None:
+            continue
+        rows[k] = dict(zs=sum(z.values()), fac=sum(f.values()), pf=sum(p_.values()), arm=pfield(v, pl))
+        for a in tot:
+            tot[a] += rows[k][a]
+        print(f"[g4b] {k:11} {v['language'][:44]:44} zs {rows[k]['zs']:2} fac {rows[k]['fac']:2} pfield {rows[k]['pf']:2} "
+              f"({rows[k]['arm']})", flush=True)
+    print(f"[g4b] {len(rows)} tasks: zs {tot['zs']} fac {tot['fac']} pfield {tot['pf']}", flush=True)
+    return rows
+
+
 def diagnose(record):
     """Why the library adds nothing here: each prototype's flow loss on its first logged batch and its last three (ledger c0_fit), G4's
     prototypes (pi0.5's own training demonstrations) against E3's (LIBERO-90 demonstrations the policy never saw)."""
@@ -183,6 +224,8 @@ def diagnose(record):
 
 
 if __name__ == "__main__":
+    if "--screen" in sys.argv:
+        screen("--launch" in sys.argv)
     if "--diagnose" in sys.argv:
         diagnose("--record" in sys.argv)
     if "--plan" in sys.argv:

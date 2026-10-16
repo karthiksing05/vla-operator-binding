@@ -298,8 +298,10 @@ def main():
                                  proto=np.load(os.path.join(ROOT, "results", "robot", kv.get("pfile", "q4_object_protos") + ".npz"))[
                                      kv.get("proto", body)])
         apaths = [None if p_ == "none" else p_ for p_ in kv["apaths"].split("+")][:len(steps)] if "apaths" in kv else None
-        hooks = PR.PrimHooks(bk, steps, paths, inner=inner, goal_only=kv.get("goal") == "1", approach_paths=apaths)
-        logging.info(f"prims: task {body}, steps {steps}, primitives {paths}, approach {apaths}, bind {inner is not None}")
+        pp = ([(kv.get("pa", "").replace("_", " ") or None, kv.get("pg", "").replace("_", " ") or None)]   # plan G4b: the source
+              if ("pa" in kv or "pg" in kv) else None)                                                    # instructions per phase
+        hooks = PR.PrimHooks(bk, steps, paths, inner=inner, goal_only=kv.get("goal") == "1", approach_paths=apaths, phase_prompts=pp)
+        logging.info(f"prims: task {body}, steps {steps}, primitives {paths}, approach {apaths}, bind {inner is not None}, phase prompts {pp}")
     elif a.mode.startswith("lora:"):
         # lora:<expert.pt> -- the few-shot baseline: a flat adapter on the action expert, always on
         from lifelong_ood.policy import adapt

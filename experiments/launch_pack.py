@@ -226,6 +226,15 @@ def arm_spec(tid, arm, fold, demo=0):
             return None
         bind = "&bind=1" if "bind" in fl else ""
         return (f"prims:{tid}?suite={SUITE_OF.get('suite', 'libero_90')}&paths={pth(g_)}&apaths={pth(o_)}&goal=1{bind}", "0", False)
+    if arm.startswith("pfield@"):                                       # plan G4b: pfield@<a>.<g>[.<object proto>.<goal proto>] -- the
+        from lifelong_ood.policy import data as D                        # policy's own field under training task a's instruction before
+        parts = arm.split("@", 1)[1].split(".")                          # its grasp and task g's from the grasp to the release ("x" =
+        tx = D.Demos().tasks                                             # the test instruction); optional prototypes on as in fac@
+        u = lambda i: "" if i == "x" else tx[int(i)].replace(" ", "_")   # noqa: E731
+        pth = lambda n_: os.path.join(R, f"prim_{n_}_0.pt") if len(parts) > 2 and n_ != "x" else "none"   # noqa: E731
+        po, pg = (parts[2], parts[3]) if len(parts) > 2 else ("x", "x")
+        return (f"prims:{tid}?suite={SUITE_OF.get('suite', 'libero_90')}&paths={pth(pg)}&apaths={pth(po)}&goal=1"
+                f"&pa={u(parts[0])}&pg={u(parts[1])}", "0", False)
     if arm == "seqzs":                                                   # sequencing alone: the instruction's two clauses in turn
         return (f"bind:{tid}?suite={SUITE_OF.get('suite', 'libero_90')}&src=w4&rho=0.7&band=all&proto=none&nobind=1&seq=1", "0", False)
     if arm.startswith("bindw4g@"):                                       # the goal slot: attention on the demo's goal prototype while

@@ -22,7 +22,9 @@ import runpy
 from dataclasses import dataclass, field
 
 LIBERO = "/coc/flash10/ksingara3/robot/openpi/third_party/libero/libero/libero"
+LIBERO_OOD = "/coc/flash10/ksingara3/ext_dl/pi0tl/pi0-text-latent/third_party/modified_libero/libero/libero"   # Li's suites
 TRAIN_SUITES = ("libero_spatial", "libero_object", "libero_goal", "libero_10")
+OOD_SUITES = ("libero_goal_ood", "libero_spatial_ood")          # plan G4 (arXiv 2505.03500): only in Li's modified LIBERO
 QUALIFIERS = ("left", "right", "front", "back", "middle")
 DIRS = ("left", "right", "front", "back")
 FAMILY = {"KITCHEN": "kitchen", "LIVING_ROOM": "living_room", "STUDY": "study"}
@@ -30,7 +32,9 @@ FAMILY = {"KITCHEN": "kitchen", "LIVING_ROOM": "living_room", "STUDY": "study"}
 
 def task_map():
     """suite -> task names in LIBERO's benchmark order (the order of every task id in ledger/)."""
-    return runpy.run_path(os.path.join(LIBERO, "benchmark", "libero_suite_task_map.py"))["libero_task_map"]
+    tm = runpy.run_path(os.path.join(LIBERO, "benchmark", "libero_suite_task_map.py"))["libero_task_map"]
+    ood = runpy.run_path(os.path.join(LIBERO_OOD, "benchmark", "libero_suite_task_map.py"))["libero_task_map"]
+    return dict(tm, **{k: ood[k] for k in OOD_SUITES})
 
 
 def _section(text, head):
@@ -118,7 +122,7 @@ def prompt_of(name):
 
 
 def parse(suite, index, name):
-    path = os.path.join(LIBERO, "bddl_files", suite, name + ".bddl")
+    path = os.path.join(LIBERO_OOD if suite in OOD_SUITES else LIBERO, "bddl_files", suite, name + ".bddl")
     text = open(path).read()
     lang = prompt_of(name)
     objects = _typed(_section(text, "objects"))
