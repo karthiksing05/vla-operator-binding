@@ -1,0 +1,335 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g4_ood.py --read-c --record --backbone smolvla",
+ "config": {
+  "backbone": "smolvla"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g4_ood",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "fa31834140ebe0dabaa0003b4f1cbfb047f66e1e",
+  "short": "fa318341"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": {
+   "diff": {
+    "diff": 0.0425,
+    "hi": 0.12,
+    "hi90": 0.105,
+    "lo": 0.0,
+    "lo90": 0.0,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    18,
+    1
+   ],
+   "n": 400,
+   "passes": true,
+   "sign_p": 7.62939453125e-05,
+   "tasks": 20,
+   "x": 25,
+   "y": 8
+  },
+  "acceptance": {
+   "goal:0": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "goal:1": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "goal:2": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "goal:3": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "goal:4": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "goal:5": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "goal:6": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "goal:7": {
+    "pfield": 9,
+    "zs": 0
+   },
+   "goal:8": {
+    "pfield": 3,
+    "zs": 1
+   },
+   "goal:9": {
+    "pfield": 2,
+    "zs": 0
+   },
+   "spatial:0": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:1": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:2": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:3": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:4": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:5": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:6": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:7": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:8": {
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:9": {
+    "pfield": 0,
+    "zs": 0
+   }
+  },
+  "backbone": "smolvla",
+  "goal": {
+   "diff": {
+    "diff": 0.085,
+    "hi": 0.225,
+    "hi90": 0.205,
+    "lo": 0.0,
+    "lo90": 0.0,
+    "n_pairs": 200,
+    "n_tasks": 10
+   },
+   "discordant": [
+    18,
+    1
+   ],
+   "n": 200,
+   "sign_p": 7.62939453125e-05,
+   "tasks": 10,
+   "x": 25,
+   "y": 8
+  },
+  "kept": {
+   "goal:0": "zs",
+   "goal:1": "zs",
+   "goal:2": "zs",
+   "goal:3": "zs",
+   "goal:4": "zs",
+   "goal:5": "zs",
+   "goal:6": "zs",
+   "goal:7": "pfield",
+   "goal:8": "pfield",
+   "goal:9": "pfield",
+   "spatial:0": "zs",
+   "spatial:1": "zs",
+   "spatial:2": "zs",
+   "spatial:3": "zs",
+   "spatial:4": "zs",
+   "spatial:5": "zs",
+   "spatial:6": "zs",
+   "spatial:7": "zs",
+   "spatial:8": "zs",
+   "spatial:9": "zs"
+  },
+  "missing": [],
+  "per_task": {
+   "goal:0": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 1
+   },
+   "goal:1": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "goal:2": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "goal:3": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "goal:4": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "goal:5": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "goal:6": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "goal:7": {
+    "kept": "pfield",
+    "pfield": 14,
+    "zs": 1
+   },
+   "goal:8": {
+    "kept": "pfield",
+    "pfield": 9,
+    "zs": 6
+   },
+   "goal:9": {
+    "kept": "pfield",
+    "pfield": 1,
+    "zs": 0
+   },
+   "spatial:0": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:1": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:2": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:3": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:4": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:5": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:6": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:7": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:8": {
+    "kept": "zs",
+    "pfield": 1,
+    "zs": 0
+   },
+   "spatial:9": {
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   }
+  },
+  "pfield_vs_zs": {
+   "diff": {
+    "diff": 0.0425,
+    "hi": 0.12,
+    "hi90": 0.1075,
+    "lo": -0.0025,
+    "lo90": 0.0,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    19,
+    2
+   ],
+   "n": 400,
+   "sign_p": 0.00022125244140625,
+   "tasks": 20,
+   "x": 25,
+   "y": 8
+  },
+  "spatial": {
+   "diff": {
+    "diff": 0.0,
+    "hi": 0.0,
+    "hi90": 0.0,
+    "lo": 0.0,
+    "lo90": 0.0,
+    "n_pairs": 200,
+    "n_tasks": 10
+   },
+   "discordant": [
+    0,
+    0
+   ],
+   "n": 200,
+   "sign_p": 1.0,
+   "tasks": 10,
+   "x": 0,
+   "y": 0
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g4_ood__libero_ood__read_field_smolvla__s13__fa318341",
+ "schema": 1,
+ "script": "experiments/g4_ood.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-16T11:38:38+00:00",
+ "stream": null,
+ "tag": "read_field_smolvla"
+}

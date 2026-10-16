@@ -1,0 +1,291 @@
+{
+ "backbone": "pi0_libero",
+ "missing": [],
+ "acceptance": {
+  "goal:0": {
+   "zs": 2,
+   "pfield": 1
+  },
+  "goal:1": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "goal:2": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "goal:3": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "goal:4": {
+   "zs": 4,
+   "pfield": 1
+  },
+  "goal:5": {
+   "zs": 1,
+   "pfield": 0
+  },
+  "goal:6": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "goal:7": {
+   "zs": 1,
+   "pfield": 10
+  },
+  "goal:8": {
+   "zs": 0,
+   "pfield": 10
+  },
+  "goal:9": {
+   "zs": 0,
+   "pfield": 10
+  },
+  "spatial:0": {
+   "zs": 5,
+   "pfield": 1
+  },
+  "spatial:1": {
+   "zs": 8,
+   "pfield": 2
+  },
+  "spatial:2": {
+   "zs": 1,
+   "pfield": 0
+  },
+  "spatial:3": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "spatial:4": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "spatial:5": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "spatial:6": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "spatial:7": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "spatial:8": {
+   "zs": 0,
+   "pfield": 4
+  },
+  "spatial:9": {
+   "zs": 0,
+   "pfield": 0
+  }
+ },
+ "kept": {
+  "goal:0": "zs",
+  "goal:1": "zs",
+  "goal:2": "zs",
+  "goal:3": "zs",
+  "goal:4": "zs",
+  "goal:5": "zs",
+  "goal:6": "zs",
+  "goal:7": "pfield",
+  "goal:8": "pfield",
+  "goal:9": "pfield",
+  "spatial:0": "zs",
+  "spatial:1": "zs",
+  "spatial:2": "zs",
+  "spatial:3": "zs",
+  "spatial:4": "zs",
+  "spatial:5": "zs",
+  "spatial:6": "zs",
+  "spatial:7": "zs",
+  "spatial:8": "pfield",
+  "spatial:9": "zs"
+ },
+ "H1": {
+  "x": 98,
+  "y": 35,
+  "n": 400,
+  "tasks": 20,
+  "diff": {
+   "diff": 0.1575,
+   "lo": 0.0275,
+   "hi": 0.3175,
+   "lo90": 0.0475,
+   "hi90": 0.29,
+   "n_pairs": 400,
+   "n_tasks": 20
+  },
+  "discordant": [
+   63,
+   0
+  ],
+  "sign_p": 2.168404344971009e-19,
+  "passes": true
+ },
+ "pfield_vs_zs": {
+  "x": 74,
+  "y": 35,
+  "n": 400,
+  "tasks": 20,
+  "diff": {
+   "diff": 0.0975,
+   "lo": -0.07,
+   "hi": 0.28,
+   "lo90": -0.045,
+   "hi90": 0.25,
+   "n_pairs": 400,
+   "n_tasks": 20
+  },
+  "discordant": [
+   68,
+   29
+  ],
+  "sign_p": 9.340687100229205e-05
+ },
+ "per_task": {
+  "goal:0": {
+   "zs": 0,
+   "pfield": 2,
+   "kept": "zs"
+  },
+  "goal:1": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "goal:2": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "goal:3": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "goal:4": {
+   "zs": 5,
+   "pfield": 1,
+   "kept": "zs"
+  },
+  "goal:5": {
+   "zs": 2,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "goal:6": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "goal:7": {
+   "zs": 3,
+   "pfield": 19,
+   "kept": "pfield"
+  },
+  "goal:8": {
+   "zs": 0,
+   "pfield": 20,
+   "kept": "pfield"
+  },
+  "goal:9": {
+   "zs": 0,
+   "pfield": 20,
+   "kept": "pfield"
+  },
+  "spatial:0": {
+   "zs": 11,
+   "pfield": 1,
+   "kept": "zs"
+  },
+  "spatial:1": {
+   "zs": 13,
+   "pfield": 3,
+   "kept": "zs"
+  },
+  "spatial:2": {
+   "zs": 1,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "spatial:3": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "spatial:4": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "spatial:5": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "spatial:6": {
+   "zs": 0,
+   "pfield": 1,
+   "kept": "zs"
+  },
+  "spatial:7": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "spatial:8": {
+   "zs": 0,
+   "pfield": 7,
+   "kept": "pfield"
+  },
+  "spatial:9": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  }
+ },
+ "goal": {
+  "x": 66,
+  "y": 10,
+  "n": 200,
+  "tasks": 10,
+  "diff": {
+   "diff": 0.28,
+   "lo": 0.0,
+   "hi": 0.57,
+   "lo90": 0.08,
+   "hi90": 0.52,
+   "n_pairs": 200,
+   "n_tasks": 10
+  },
+  "discordant": [
+   56,
+   0
+  ],
+  "sign_p": 2.7755575615628914e-17
+ },
+ "spatial": {
+  "x": 32,
+  "y": 25,
+  "n": 200,
+  "tasks": 10,
+  "diff": {
+   "diff": 0.035,
+   "lo": 0.0,
+   "hi": 0.12,
+   "lo90": 0.0,
+   "hi90": 0.1,
+   "n_pairs": 200,
+   "n_tasks": 10
+  },
+  "discordant": [
+   7,
+   0
+  ],
+  "sign_p": 0.015625
+ }
+}

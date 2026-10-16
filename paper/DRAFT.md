@@ -21,7 +21,7 @@ interfere where it has it, so practice must choose; factorisation beats a monoli
 It beats retrieval (STRAP, 480 against 296 of 580) and noise-space reinforcement learning on the frozen policy (DSRL, 499 against
 314 of 600). On a published compositional OOD benchmark with no demonstration of any test task, where every concept is one the
 policy already holds, prototypes learn nothing; composing the policy's own fields under each concept's training instruction,
-switched at the grasp, lifts 147 to 174 of 400. The policy's own likelihood tells the two kinds of concept apart without overlap
+switched at the grasp, lifts 147 to 174 of 400 on pi0.5, 35 to 98 on pi0 and 8 to 25 on SmolVLA. The policy's own likelihood tells the two kinds of concept apart without overlap
 (AUC 1.0), the detector of new primitives Wang et al. lack.
 
 ## 1 Introduction
@@ -126,6 +126,8 @@ policy's own field under the instruction of a training task that taught it, swit
 kept arms succeed 174 of 400 times against 147 for the policy (discordant pairs 30 to 3; task-level difference 0.068, 95%
 interval 0.007 to 0.145), in both suites. This is score composition in the sense of our ICLR-2027 companion: the policy
 carries each concept under the instruction that taught it, and the composed step reads them one phase at a time.
+The same composition, unchanged, lifts pi0 from 35 to 98 and SmolVLA from 8 to 25 of 400 on the same tasks (both pass under
+Holm).
 
 ### The policy's likelihood detects a new concept
 Wang et al. name a detector of new primitives as their missing mechanism. The frozen policy's flow-matching loss on a

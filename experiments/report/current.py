@@ -77,6 +77,10 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"kept {m['H1']['x']} vs policy {m['H1']['y']} of {m['H1']['n']}: fails (concepts the policy already holds)"),
     ("G4b composing the policy's own fields", "g4_ood", "read_field", True, "c-limits",
      lambda m: f"kept {m['H1']['x']} vs policy {m['H1']['y']} of {m['H1']['n']} (sign p {m['H1']['sign_p']:.1g}): passes"),
+    ("G4c the policy's own fields on pi0", "g4_ood", "read_field_pi0", True, "c-limits",
+     lambda m: f"kept {m['H1']['x']} vs policy {m['H1']['y']} of {m['H1']['n']}: passes"),
+    ("G4c the policy's own fields on SmolVLA", "g4_ood", "read_field_smolvla", True, "c-limits",
+     lambda m: f"kept {m['H1']['x']} vs policy {m['H1']['y']} of {m['H1']['n']}: passes"),
     ("i6 likelihood detects a new concept", "i6_novelty", "read", False, "c-limits",
      lambda m: f"AUC {m['auc']:.2f}: held at most {m['held_max']:.2g}, new at least {m['new_min']:.2g}"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
@@ -467,6 +471,12 @@ def limits_of_method():
                 f"{pt['spatial:8']['zs']}. Unfiltered the field composition gives {g4b['pfield_vs_zs']['x']}: it helps where the "
                 f"source concepts are scene-matched, so practice must choose. It is score composition in the sense of our ICLR-2027 "
                 f"study, applied to a policy's phases.</p>")
+    cp, cs = row("g4_ood", "read_field_pi0"), row("g4_ood", "read_field_smolvla")
+    if cp and cs:
+        out += (f"<p>The same composition, unchanged, on the two other flow-matching policies (m3_prereg tag g4c_field): pi0 "
+                f"{cp['H1']['x']} against {cp['H1']['y']} of {cp['H1']['n']} (discordant pairs {cp['H1']['discordant'][0]} to "
+                f"{cp['H1']['discordant'][1]}; Goal-OOD {cp['goal']['x']} against {cp['goal']['y']}), SmolVLA {cs['H1']['x']} "
+                f"against {cs['H1']['y']}. It carries across the three policies.</p>")
     i6 = row("i6_novelty", "read")
     if i6:
         out += (f"<p><b>Which kind of unit a concept gets.</b> The frozen policy's own flow-matching loss on a concept's frames "
