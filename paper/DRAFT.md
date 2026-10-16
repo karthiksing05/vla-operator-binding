@@ -67,6 +67,13 @@ the policy's gripper stays closed for three queries; the goal prototype then act
 the composition only if it beats the policy. As a stream, an arrival requests its one demonstration only when neither the
 policy nor the composition reaches 8 of 10; the demonstration refits the instance, type and goal concepts it belongs to.
 
+Two kinds of unit, one rule to choose. A concept is scored by the frozen policy's own flow-matching loss on its phase frames
+(the detector of new primitives Wang et al. lack). A concept the policy holds under its instruction and scene is stored as a
+pointer to the policy's own field under the training instruction that taught it (zero bytes); a new concept is fitted as a
+prototype. Both act on the same phase of the same step, and practice decides what is kept. The learner thus composes held
+concepts the way composable diffusion composes the scores of single prompts, and grows the library only where the policy's
+likelihood says it must.
+
 ## 4 Protocol
 
 Pre-registered before any episode; paired episodes (same start state and noise for every arm); fresh start states from LIBERO's
