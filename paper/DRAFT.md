@@ -155,6 +155,10 @@ composition equals the policy (88 against 85 of 200) and the prototypes the rout
 On pi0 the library succeeds 324 of 600 times against 85 for pi0 alone; against pi0's per-task LoRA with acceptance, 308
 against 330 of 580 (difference -0.038, 95% interval -0.166 to 0.081): non-inferiority is not established.
 
+### Capacity
+Refit at rank 8 or rank 16 instead of 4, the library is unchanged (498 and 504 against 499 of 600) and stays short of
+non-inferiority to the per-task adapter (rank 16: 485 against 494 of 580; difference -0.016, 95% interval -0.064 to 0.033).
+
 ### The switch at the grasp
 With both prototypes on for the whole episode the library succeeds 281 of 600 times, level with the policy (273); switched at
 the policy's own grasp it succeeds 495. The phase gating carries the gain.

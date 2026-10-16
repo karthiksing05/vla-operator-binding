@@ -1,0 +1,125 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 18710528,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 18710528,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 13 --key put|the_black_bowl --name Sch1R16 --rank 16 --approach",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "13",
+  "key": "put|the black bowl",
+  "lr": 0.0001,
+  "name": "Sch1R16",
+  "ndemo": 1,
+  "rank": 16,
+  "scope": "expert",
+  "score": false,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "puma.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4108619",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "114a0c5f6671d5b530f5a612996244364fc08889",
+  "short": "114a0c5f"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 18710528,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.059418607503175735,
+    0.006123281084001064,
+    0.0023814549203962088,
+    0.0015450253849849105,
+    0.004681676626205444,
+    0.0008861771784722805,
+    0.002119301352649927,
+    0.0005211324314586818,
+    0.0011484913993626833,
+    0.004834859631955624,
+    0.0013659849064424634
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 71,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the black bowl at the front on the plate",
+    "frames": [
+     0,
+     71
+    ],
+    "task": 13
+   }
+  ],
+  "rank": 16,
+  "scope": "expert",
+  "step_key": "put|the black bowl"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_Sch1R16__s0__114a0c5f",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T12:35:47+00:00",
+ "stream": null,
+ "tag": "joint_Sch1R16"
+}

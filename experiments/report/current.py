@@ -85,6 +85,8 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"AUC {m['auc']:.2f}: held at most {m['held_max']:.2g}, new at least {m['new_min']:.2g}"),
     ("U1 one learner, both kinds of task", "u1_joint", "read", False, "c-stream",
      lambda m: f"50 arrivals: demos {m['a']['demos']}/{m['b']['demos']}; served {m['a']['H1']['x']}/{m['b']['H1']['x']} vs {m['a']['H1']['y']} of {m['a']['H1']['n']}"),
+    ("G5c prototype rank 8 / 16", "g5c_rank", "read", True, "c-gen",
+     lambda m: f"rank 16 vs LoRA + acc. {_ci(m['r16']['vs_lora_acc']['diff'])}; vs rank 4 {m['r16']['vs_rank4']['x']} vs {m['r16']['vs_rank4']['y']}"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
