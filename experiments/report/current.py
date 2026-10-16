@@ -75,6 +75,8 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"{m['H1']['x']} vs STRAP + acc. {m['H1']['y']} of {m['H1']['n']}"),
     ("G4 Li's compositional OOD suites", "g4_ood", "read", True, "c-limits",
      lambda m: f"kept {m['H1']['x']} vs policy {m['H1']['y']} of {m['H1']['n']}: fails (concepts the policy already holds)"),
+    ("G4b composing the policy's own fields", "g4_ood", "read_field", True, "c-limits",
+     lambda m: f"kept {m['H1']['x']} vs policy {m['H1']['y']} of {m['H1']['n']} (sign p {m['H1']['sign_p']:.1g}): passes"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -450,6 +452,19 @@ def limits_of_method():
                 f"The prototypes learned nothing: their flow loss starts at {dg['g4']['first']:.2g} and ends at {dg['g4']['last']:.2g}, "
                 f"where E3's fall from {dg['e3']['first']:.2g} to {dg['e3']['last']:.2g}. The library supplies a concept the policy "
                 f"lacks; it does not undo the policy's binding of names to the layouts it was trained on.</p>")
+    g4b = row("g4_ood", "read_field")
+    if g4b:
+        h, pt = g4b["H1"], g4b["per_task"]
+        out += (f"<p><b>The remedy: compose the policy's own fields.</b> A concept the policy already holds is its own field under the "
+                f"instruction of a training task that taught it; the step runs under the object concept's instruction until the "
+                f"grasp and the goal concept's after it, and practice chooses (m3_prereg tag g4b_field, a new set of start states). "
+                f"The kept arms succeed {h['x']} of {h['n']} times against {h['y']} (discordant pairs {h['discordant'][0]} to "
+                f"{h['discordant'][1]}; task-level difference {_ci(h['diff'])}), in both suites; the orange juice onto the stove "
+                f"{pt['goal:1']['pfield']} against {pt['goal:1']['zs']}, the cream cheese onto the plate {pt['goal:7']['pfield']} "
+                f"against {pt['goal:7']['zs']}, the bowl at table center onto the cabinet {pt['spatial:8']['pfield']} against "
+                f"{pt['spatial:8']['zs']}. Unfiltered the field composition gives {g4b['pfield_vs_zs']['x']}: it helps where the "
+                f"source concepts are scene-matched, so practice must choose. It is score composition in the sense of our ICLR-2027 "
+                f"study, applied to a policy's phases.</p>")
     return out
 
 

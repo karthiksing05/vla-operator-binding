@@ -20,6 +20,14 @@ Every prototype is consolidated over every demonstration of its concept, each de
 (`data.Demos90.episodes_of_task`; the dataset merges tasks that share an instruction, see RESULTS.md, "DATA DEFECT"). A task is
 the composition of its object (or instance) prototype and its goal prototype; a missing factor is left to the policy.
 
+**A concept the policy already holds** (read G4b): when a concept's demonstrations are ones the policy was trained on, a fitted
+prototype learns nothing (its flow loss does not fall). Such a concept is stored as the policy's own field under the instruction
+of a training task that taught it (the source task in the test scene's base suite, else the first), at zero bytes; the step
+runs under the object concept's instruction until the policy's grasp and under the goal concept's after it (`PrimHooks`
+`phase_prompts`; arm `pfield@<object source>.<goal source>`). Practice chooses between the policy, the prototype composition and
+this field composition. Both kinds of unit change the policy's velocity field for one phase: a prototype adds a low-rank change,
+a held concept selects the conditional field the policy already has. The scope is flow-matching and diffusion policies.
+
 ## The learner
 
 1. **Compose** the arrival from the current library.

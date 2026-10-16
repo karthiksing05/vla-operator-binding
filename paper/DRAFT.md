@@ -111,6 +111,14 @@ adapter is the strongest arm we ran: 503 of 580 with acceptance against 480 for 
 -0.098 to 0.012), at ten times the practice and a per-task adapter and actor. STRAP, retrieving from the library's own data and
 more, succeeds 192 of 580 alone and 296 with acceptance, against 480 (difference 0.317, 95% interval 0.200 to 0.440).
 
+### Composing the policy's own fields: a published compositional OOD benchmark
+On Li's LIBERO-Goal-OOD and LIBERO-Spatial-OOD ([arXiv](https://arxiv.org/abs/2505.03500); 20 tasks, each pairing one
+training task's object with another's target, no demonstration of any test task), a concept the policy already holds is the
+policy's own field under the instruction of a training task that taught it, switched at the grasp. With practice choosing, the
+kept arms succeed 174 of 400 times against 147 for the policy (discordant pairs 30 to 3; task-level difference 0.068, 95%
+interval 0.007 to 0.145), in both suites. This is score composition in the sense of our ICLR-2027 companion: the policy
+carries each concept under the instruction that taught it, and the composed step reads them one phase at a time.
+
 ### A third policy
 On pi0 the library succeeds 324 of 600 times against 85 for pi0 alone; against pi0's per-task LoRA with acceptance, 308
 against 330 of 580 (difference -0.038, 95% interval -0.166 to 0.081): non-inferiority is not established.
@@ -124,10 +132,10 @@ Object prototypes are nearly orthogonal to one another (mean cosine 0.058) and t
 layers, differing in direction; refit without one demonstration a prototype keeps a cosine of 0.64 with the full one.
 
 ## 6 What does not work
-- Recombining concepts the policy already holds (Li's compositional OOD suites, 20 tasks): prototypes fitted on pi0.5's own
-  training demonstrations learn nothing (flow loss 0.0024 at the start, 0.0038 at the end, against 0.060 to 0.0062 on
-  LIBERO-90 demonstrations), and the kept arms equal the policy (154 against 157 of 400). The library adds a missing concept; it
-  does not undo the policy's binding of names to trained layouts.
+- Prototypes of concepts the policy already holds (Li's compositional OOD suites, 20 tasks): fitted on pi0.5's own training
+  demonstrations they learn nothing (flow loss 0.0024 at the start, 0.0038 at the end, against 0.060 to 0.0062 on LIBERO-90
+  demonstrations), and the kept arms equal the policy (154 against 157 of 400). Results, "Composing the policy's own fields",
+  gives the remedy.
 - Selecting prototypes by a held-out demonstration's likelihood (as Wang et al. do): the right object concept on top for 12 of
   29 queries.
 - A new object without a demonstration: borrowed prototypes help on 2 of the 17 tasks the policy fails.

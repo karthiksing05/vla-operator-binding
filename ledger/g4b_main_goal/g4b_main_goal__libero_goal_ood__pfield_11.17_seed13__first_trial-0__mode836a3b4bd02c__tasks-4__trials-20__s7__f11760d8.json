@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g4b_main_goal_libero_goal_ood_4_pfield_11.17_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_goal_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:4?suite=libero_goal_ood&paths=none&apaths=none&goal=1&pa=put_the_wine_bottle_on_the_rack&pg=put_the_bowl_on_the_stove SUITE=libero_goal_ood TASKS=4 TRIALS=20 (job 4107409)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_c",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g4b_main_goal_libero_goal_ood_4_pfield_11.17_seed13.json",
+   "port": 9419,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_goal_ood",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "4",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4107409",
+  "mode": "prims:4?suite=libero_goal_ood&paths=none&apaths=none&goal=1&pa=put_the_wine_bottle_on_the_rack&pg=put_the_bowl_on_the_stove"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cheetah.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107409",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g4b_main_goal",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "f11760d83f9aab25943ecb92c0aede31221e1d40",
+  "short": "f11760d8"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:4?suite=libero_goal_ood&paths=none&apaths=none&goal=1&pa=put_the_wine_bottle_on_the_rack&pg=put_the_bowl_on_the_stove",
+  "tasks": "4",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 270.93539357185364,
+  "success_rate": 1.0,
+  "tasks": {
+   "4": {
+    "errors": 0,
+    "language": "put the wine bottle on the stove",
+    "mean_steps": 116.25,
+    "n": 20,
+    "success_rate": 1.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g4b_main_goal__libero_goal_ood__pfield_11.17_seed13__first_trial-0__mode836a3b4bd02c__tasks-4__trials-20__s7__f11760d8",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-16T10:24:08+00:00",
+ "stream": null,
+ "tag": "pfield_11.17_seed13"
+}

@@ -1,0 +1,350 @@
+{
+ "missing": [],
+ "acceptance": {
+  "goal:0": {
+   "zs": 2,
+   "fac": 2,
+   "pfield": 2
+  },
+  "goal:1": {
+   "zs": 4,
+   "fac": 4,
+   "pfield": 8
+  },
+  "goal:2": {
+   "zs": 2,
+   "fac": 3,
+   "pfield": 1
+  },
+  "goal:3": {
+   "zs": 0,
+   "fac": 0,
+   "pfield": 0
+  },
+  "goal:4": {
+   "zs": 10,
+   "fac": 10,
+   "pfield": 10
+  },
+  "goal:5": {
+   "zs": 3,
+   "fac": 2,
+   "pfield": 0
+  },
+  "goal:6": {
+   "zs": 2,
+   "fac": 1,
+   "pfield": 0
+  },
+  "goal:7": {
+   "zs": 1,
+   "fac": 2,
+   "pfield": 7
+  },
+  "goal:8": {
+   "zs": 2,
+   "fac": 0,
+   "pfield": 0
+  },
+  "goal:9": {
+   "zs": 6,
+   "fac": 8,
+   "pfield": 8
+  },
+  "spatial:0": {
+   "zs": 10,
+   "fac": 10,
+   "pfield": 10
+  },
+  "spatial:1": {
+   "zs": 10,
+   "fac": 10,
+   "pfield": 10
+  },
+  "spatial:2": {
+   "zs": 2,
+   "fac": 3,
+   "pfield": 2
+  },
+  "spatial:3": {
+   "zs": 10,
+   "fac": 10,
+   "pfield": 10
+  },
+  "spatial:4": {
+   "zs": 0,
+   "fac": 0,
+   "pfield": 0
+  },
+  "spatial:5": {
+   "zs": 0,
+   "fac": 0,
+   "pfield": 0
+  },
+  "spatial:6": {
+   "zs": 0,
+   "fac": 0,
+   "pfield": 0
+  },
+  "spatial:7": {
+   "zs": 0,
+   "fac": 0,
+   "pfield": 0
+  },
+  "spatial:8": {
+   "zs": 2,
+   "fac": 2,
+   "pfield": 7
+  },
+  "spatial:9": {
+   "zs": 0,
+   "fac": 0,
+   "pfield": 0
+  }
+ },
+ "kept": {
+  "goal:0": "zs",
+  "goal:1": "pfield",
+  "goal:2": "fac",
+  "goal:3": "zs",
+  "goal:4": "zs",
+  "goal:5": "zs",
+  "goal:6": "zs",
+  "goal:7": "pfield",
+  "goal:8": "zs",
+  "goal:9": "fac",
+  "spatial:0": "zs",
+  "spatial:1": "zs",
+  "spatial:2": "fac",
+  "spatial:3": "zs",
+  "spatial:4": "zs",
+  "spatial:5": "zs",
+  "spatial:6": "zs",
+  "spatial:7": "zs",
+  "spatial:8": "pfield",
+  "spatial:9": "zs"
+ },
+ "H1": {
+  "x": 174,
+  "y": 147,
+  "n": 400,
+  "tasks": 20,
+  "diff": {
+   "diff": 0.0675,
+   "lo": 0.0075,
+   "hi": 0.145,
+   "lo90": 0.015,
+   "hi90": 0.1325,
+   "n_pairs": 400,
+   "n_tasks": 20
+  },
+  "discordant": [
+   30,
+   3
+  ],
+  "sign_p": 1.4011748135089874e-06,
+  "passes": true
+ },
+ "pfield_vs_zs": {
+  "x": 160,
+  "y": 147,
+  "n": 400,
+  "tasks": 20,
+  "diff": {
+   "diff": 0.0325,
+   "lo": -0.0775,
+   "hi": 0.1375,
+   "lo90": -0.06,
+   "hi90": 0.12,
+   "n_pairs": 400,
+   "n_tasks": 20
+  },
+  "discordant": [
+   46,
+   33
+  ],
+  "sign_p": 0.17661055306016413
+ },
+ "fac_vs_zs": {
+  "x": 142,
+  "y": 147,
+  "n": 400,
+  "tasks": 20,
+  "diff": {
+   "diff": -0.0125,
+   "lo": -0.065,
+   "hi": 0.035,
+   "lo90": -0.055,
+   "hi90": 0.0275,
+   "n_pairs": 400,
+   "n_tasks": 20
+  },
+  "discordant": [
+   21,
+   26
+  ],
+  "sign_p": 0.5600646295802107
+ },
+ "per_task": {
+  "goal:0": {
+   "zs": 3,
+   "fac": 3,
+   "pfield": 2,
+   "kept": "zs"
+  },
+  "goal:1": {
+   "zs": 11,
+   "fac": 10,
+   "pfield": 16,
+   "kept": "pfield"
+  },
+  "goal:2": {
+   "zs": 1,
+   "fac": 1,
+   "pfield": 3,
+   "kept": "fac"
+  },
+  "goal:3": {
+   "zs": 0,
+   "fac": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "goal:4": {
+   "zs": 20,
+   "fac": 20,
+   "pfield": 20,
+   "kept": "zs"
+  },
+  "goal:5": {
+   "zs": 12,
+   "fac": 8,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "goal:6": {
+   "zs": 9,
+   "fac": 3,
+   "pfield": 2,
+   "kept": "zs"
+  },
+  "goal:7": {
+   "zs": 6,
+   "fac": 7,
+   "pfield": 14,
+   "kept": "pfield"
+  },
+  "goal:8": {
+   "zs": 3,
+   "fac": 3,
+   "pfield": 5,
+   "kept": "zs"
+  },
+  "goal:9": {
+   "zs": 15,
+   "fac": 17,
+   "pfield": 14,
+   "kept": "fac"
+  },
+  "spatial:0": {
+   "zs": 20,
+   "fac": 20,
+   "pfield": 19,
+   "kept": "zs"
+  },
+  "spatial:1": {
+   "zs": 20,
+   "fac": 20,
+   "pfield": 19,
+   "kept": "zs"
+  },
+  "spatial:2": {
+   "zs": 2,
+   "fac": 3,
+   "pfield": 6,
+   "kept": "fac"
+  },
+  "spatial:3": {
+   "zs": 20,
+   "fac": 20,
+   "pfield": 20,
+   "kept": "zs"
+  },
+  "spatial:4": {
+   "zs": 0,
+   "fac": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "spatial:5": {
+   "zs": 0,
+   "fac": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "spatial:6": {
+   "zs": 0,
+   "fac": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "spatial:7": {
+   "zs": 0,
+   "fac": 0,
+   "pfield": 1,
+   "kept": "zs"
+  },
+  "spatial:8": {
+   "zs": 4,
+   "fac": 6,
+   "pfield": 15,
+   "kept": "pfield"
+  },
+  "spatial:9": {
+   "zs": 1,
+   "fac": 1,
+   "pfield": 4,
+   "kept": "zs"
+  }
+ },
+ "goal": {
+  "x": 95,
+  "y": 80,
+  "n": 200,
+  "tasks": 10,
+  "diff": {
+   "diff": 0.075,
+   "lo": 0.0,
+   "hi": 0.18,
+   "lo90": 0.01,
+   "hi90": 0.16,
+   "n_pairs": 200,
+   "n_tasks": 10
+  },
+  "discordant": [
+   18,
+   3
+  ],
+  "sign_p": 0.0014896392822265625
+ },
+ "spatial": {
+  "x": 79,
+  "y": 67,
+  "n": 200,
+  "tasks": 10,
+  "diff": {
+   "diff": 0.06,
+   "lo": 0.0,
+   "hi": 0.185,
+   "lo90": 0.0,
+   "hi90": 0.165,
+   "n_pairs": 200,
+   "n_tasks": 10
+  },
+  "discordant": [
+   12,
+   0
+  ],
+  "sign_p": 0.00048828125
+ }
+}

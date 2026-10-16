@@ -1,0 +1,392 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g4_ood.py --read-b --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g4_ood",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "f11760d83f9aab25943ecb92c0aede31221e1d40",
+  "short": "f11760d8"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": {
+   "diff": {
+    "diff": 0.0675,
+    "hi": 0.145,
+    "hi90": 0.1325,
+    "lo": 0.0075,
+    "lo90": 0.015,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    30,
+    3
+   ],
+   "n": 400,
+   "passes": true,
+   "sign_p": 1.4011748135089874e-06,
+   "tasks": 20,
+   "x": 174,
+   "y": 147
+  },
+  "acceptance": {
+   "goal:0": {
+    "fac": 2,
+    "pfield": 2,
+    "zs": 2
+   },
+   "goal:1": {
+    "fac": 4,
+    "pfield": 8,
+    "zs": 4
+   },
+   "goal:2": {
+    "fac": 3,
+    "pfield": 1,
+    "zs": 2
+   },
+   "goal:3": {
+    "fac": 0,
+    "pfield": 0,
+    "zs": 0
+   },
+   "goal:4": {
+    "fac": 10,
+    "pfield": 10,
+    "zs": 10
+   },
+   "goal:5": {
+    "fac": 2,
+    "pfield": 0,
+    "zs": 3
+   },
+   "goal:6": {
+    "fac": 1,
+    "pfield": 0,
+    "zs": 2
+   },
+   "goal:7": {
+    "fac": 2,
+    "pfield": 7,
+    "zs": 1
+   },
+   "goal:8": {
+    "fac": 0,
+    "pfield": 0,
+    "zs": 2
+   },
+   "goal:9": {
+    "fac": 8,
+    "pfield": 8,
+    "zs": 6
+   },
+   "spatial:0": {
+    "fac": 10,
+    "pfield": 10,
+    "zs": 10
+   },
+   "spatial:1": {
+    "fac": 10,
+    "pfield": 10,
+    "zs": 10
+   },
+   "spatial:2": {
+    "fac": 3,
+    "pfield": 2,
+    "zs": 2
+   },
+   "spatial:3": {
+    "fac": 10,
+    "pfield": 10,
+    "zs": 10
+   },
+   "spatial:4": {
+    "fac": 0,
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:5": {
+    "fac": 0,
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:6": {
+    "fac": 0,
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:7": {
+    "fac": 0,
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:8": {
+    "fac": 2,
+    "pfield": 7,
+    "zs": 2
+   },
+   "spatial:9": {
+    "fac": 0,
+    "pfield": 0,
+    "zs": 0
+   }
+  },
+  "fac_vs_zs": {
+   "diff": {
+    "diff": -0.0125,
+    "hi": 0.035,
+    "hi90": 0.0275,
+    "lo": -0.065,
+    "lo90": -0.055,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    21,
+    26
+   ],
+   "n": 400,
+   "sign_p": 0.5600646295802107,
+   "tasks": 20,
+   "x": 142,
+   "y": 147
+  },
+  "goal": {
+   "diff": {
+    "diff": 0.075,
+    "hi": 0.18,
+    "hi90": 0.16,
+    "lo": 0.0,
+    "lo90": 0.01,
+    "n_pairs": 200,
+    "n_tasks": 10
+   },
+   "discordant": [
+    18,
+    3
+   ],
+   "n": 200,
+   "sign_p": 0.0014896392822265625,
+   "tasks": 10,
+   "x": 95,
+   "y": 80
+  },
+  "kept": {
+   "goal:0": "zs",
+   "goal:1": "pfield",
+   "goal:2": "fac",
+   "goal:3": "zs",
+   "goal:4": "zs",
+   "goal:5": "zs",
+   "goal:6": "zs",
+   "goal:7": "pfield",
+   "goal:8": "zs",
+   "goal:9": "fac",
+   "spatial:0": "zs",
+   "spatial:1": "zs",
+   "spatial:2": "fac",
+   "spatial:3": "zs",
+   "spatial:4": "zs",
+   "spatial:5": "zs",
+   "spatial:6": "zs",
+   "spatial:7": "zs",
+   "spatial:8": "pfield",
+   "spatial:9": "zs"
+  },
+  "missing": [],
+  "per_task": {
+   "goal:0": {
+    "fac": 3,
+    "kept": "zs",
+    "pfield": 2,
+    "zs": 3
+   },
+   "goal:1": {
+    "fac": 10,
+    "kept": "pfield",
+    "pfield": 16,
+    "zs": 11
+   },
+   "goal:2": {
+    "fac": 1,
+    "kept": "fac",
+    "pfield": 3,
+    "zs": 1
+   },
+   "goal:3": {
+    "fac": 0,
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "goal:4": {
+    "fac": 20,
+    "kept": "zs",
+    "pfield": 20,
+    "zs": 20
+   },
+   "goal:5": {
+    "fac": 8,
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 12
+   },
+   "goal:6": {
+    "fac": 3,
+    "kept": "zs",
+    "pfield": 2,
+    "zs": 9
+   },
+   "goal:7": {
+    "fac": 7,
+    "kept": "pfield",
+    "pfield": 14,
+    "zs": 6
+   },
+   "goal:8": {
+    "fac": 3,
+    "kept": "zs",
+    "pfield": 5,
+    "zs": 3
+   },
+   "goal:9": {
+    "fac": 17,
+    "kept": "fac",
+    "pfield": 14,
+    "zs": 15
+   },
+   "spatial:0": {
+    "fac": 20,
+    "kept": "zs",
+    "pfield": 19,
+    "zs": 20
+   },
+   "spatial:1": {
+    "fac": 20,
+    "kept": "zs",
+    "pfield": 19,
+    "zs": 20
+   },
+   "spatial:2": {
+    "fac": 3,
+    "kept": "fac",
+    "pfield": 6,
+    "zs": 2
+   },
+   "spatial:3": {
+    "fac": 20,
+    "kept": "zs",
+    "pfield": 20,
+    "zs": 20
+   },
+   "spatial:4": {
+    "fac": 0,
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:5": {
+    "fac": 0,
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:6": {
+    "fac": 0,
+    "kept": "zs",
+    "pfield": 0,
+    "zs": 0
+   },
+   "spatial:7": {
+    "fac": 0,
+    "kept": "zs",
+    "pfield": 1,
+    "zs": 0
+   },
+   "spatial:8": {
+    "fac": 6,
+    "kept": "pfield",
+    "pfield": 15,
+    "zs": 4
+   },
+   "spatial:9": {
+    "fac": 1,
+    "kept": "zs",
+    "pfield": 4,
+    "zs": 1
+   }
+  },
+  "pfield_vs_zs": {
+   "diff": {
+    "diff": 0.0325,
+    "hi": 0.1375,
+    "hi90": 0.12,
+    "lo": -0.0775,
+    "lo90": -0.06,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    46,
+    33
+   ],
+   "n": 400,
+   "sign_p": 0.17661055306016413,
+   "tasks": 20,
+   "x": 160,
+   "y": 147
+  },
+  "spatial": {
+   "diff": {
+    "diff": 0.06,
+    "hi": 0.185,
+    "hi90": 0.165,
+    "lo": 0.0,
+    "lo90": 0.0,
+    "n_pairs": 200,
+    "n_tasks": 10
+   },
+   "discordant": [
+    12,
+    0
+   ],
+   "n": 200,
+   "sign_p": 0.00048828125,
+   "tasks": 10,
+   "x": 79,
+   "y": 67
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g4_ood__libero_ood__read_field__s13__f11760d8",
+ "schema": 1,
+ "script": "experiments/g4_ood.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-16T10:43:49+00:00",
+ "stream": null,
+ "tag": "read_field"
+}
