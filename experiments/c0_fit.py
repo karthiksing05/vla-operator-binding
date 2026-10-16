@@ -47,6 +47,7 @@ def main():
                                                 "its parent's prototype and specialises on its own demonstrations)")
     ap.add_argument("--name", default="", help="the file name of --joint")
     ap.add_argument("--source", default="l90", help="--joint: l90 (LIBERO-90 tasks) or d40 (pi0.5's 40 training tasks; plan G4)")
+    ap.add_argument("--score", action="store_true", help="--joint: only score the frozen policy's flow loss on the frames (plan I6)")
     ap.add_argument("--ndemo", type=int, default=1, help="--joint: demonstrations per task (from --demo on)")
     ap.add_argument("--backbone", default="pi05_libero", help="plan G3: the policy the primitive is fitted on (pi05_libero, "
                                                                  "pi0_libero, smolvla); its own action normalisation and chunk length")
@@ -124,6 +125,33 @@ def chunk_rows(ep, chunk_idx, frames, norm):
     return np.stack([norm.normalize(ep["actions"][ci], state=st[f]).reshape(-1) for ci, f in zip(chunk_idx, frames)])
 
 
+def score(a, bk, bank, full, used, n_draws=8, batch=64):
+    """Plan I6: mean flow-matching loss of the frozen policy (no adapter) on the concept's frames, over n_draws fixed draws of
+    (frames, time, noise); recorded in ledger i6_novelty keyed by the concept's name."""
+    import torch
+    from lifelong_ood import ledger
+    gen = torch.Generator(device="cpu").manual_seed(0)
+    rng = np.random.default_rng(0)
+    A = torch.as_tensor(np.asarray(full, np.float32), device=bk.device)
+    losses = []
+    with torch.no_grad():
+        for _ in range(n_draws):
+            idx = rng.integers(0, bank.n, size=min(batch, bank.n))
+            t, eps = adapt._flow_batch(len(idx), bk.H, bk.A, gen, bk.device)
+            x = A[idx]
+            xt = t[:, None, None] * eps + (1 - t[:, None, None]) * x
+            u = (eps - x).reshape(len(idx), -1)
+            v = bk.v_full(xt, t, bank.take(idx))
+            losses.append(float(((v - u) ** 2).mean()))
+    m = dict(name=a.name, key=a.key, source=a.source, goal=a.goal, approach=a.approach, frames=int(bank.n), tasks=used,
+             loss=float(np.mean(losses)), loss_sd=float(np.std(losses)), draws=losses, backbone=a.backbone)
+    print(f"[i6] {a.name} ({a.source}, {a.key}): frozen-policy flow loss {m['loss']:.4f} +- {m['loss_sd']:.4f} on {bank.n} frames",
+          flush=True)
+    print(ledger.record("i6_novelty", bench="libero", tag="score", seed=0, keys=dict(name=a.name), metrics=m,
+                        bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config=vars(a),
+                        script="experiments/c0_fit.py", command=" ".join(sys.argv)))
+
+
 def joint(a):
     """Plan C, consolidation: a step's primitive fitted on SEVERAL arrivals' demos that share its key (different objects and
     rooms), so it can learn the step rather than one object's grasp (docs/COBWEB_UPDATE.md, Proposition 7)."""
@@ -182,6 +210,8 @@ def joint(a):
         print(f"[c0j] task {t} step {s} '{steps[s]}': frames {lo}-{hi}", flush=True)
     full = np.concatenate(rows, 0)
     bank = adapt.LazyPrefixBank(bk, obs)                                    # ~26 MB per cached prefix: computed per batch
+    if a.score:                                                             # plan I6: the FROZEN policy's flow loss on the concept's
+        return score(a, bk, bank, full, used)                               # phase frames (Wang's missing detector of new primitives)
     gate_of = None
     if a.bind:                                                              # binding-aware primitive: the same attention as at test
         import torch
