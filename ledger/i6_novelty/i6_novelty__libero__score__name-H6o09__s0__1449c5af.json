@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 30 --key put|the_black_bowl_next_to_the_cookie_box --name H6o09 --rank 4 --approach --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "30",
+  "key": "put|the black bowl next to the cookie box",
+  "lr": 0.0001,
+  "name": "H6o09",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "chappie.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107791",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6o09"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.0037593338638544083,
+   0.0035979903768748045,
+   0.0032461818773299456,
+   0.005343488417565823,
+   0.002822346519678831,
+   0.0036975815892219543,
+   0.001847274019382894,
+   0.0026506560388952494
+  ],
+  "frames": 47,
+  "goal": false,
+  "key": "put|the black bowl next to the cookie box",
+  "loss": 0.0033706065878504887,
+  "loss_sd": 0.0009589661859391872,
+  "name": "H6o09",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "pick up the black bowl next to the cookie box and place it on the plate",
+    "frames": [
+     0,
+     47
+    ],
+    "task": 30
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6o09__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:30+00:00",
+ "stream": null,
+ "tag": "score"
+}

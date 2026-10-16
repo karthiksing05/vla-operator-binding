@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 26 --key put|the_salad_dressing --name H6o24 --rank 4 --approach --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "26",
+  "key": "put|the salad dressing",
+  "lr": 0.0001,
+  "name": "H6o24",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "kitt.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107806",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6o24"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.0024408160243183374,
+   0.004520704038441181,
+   0.0034855452831834555,
+   0.0030769279692322016,
+   0.004078430123627186,
+   0.0034303932916373014,
+   0.004499581642448902,
+   0.0038730360101908445
+  ],
+  "frames": 51,
+  "goal": false,
+  "key": "put|the salad dressing",
+  "loss": 0.003675679297884926,
+  "loss_sd": 0.0006683698836939823,
+  "name": "H6o24",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "pick up the salad dressing and place it in the basket",
+    "frames": [
+     0,
+     51
+    ],
+    "task": 26
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6o24__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:24+00:00",
+ "stream": null,
+ "tag": "score"
+}

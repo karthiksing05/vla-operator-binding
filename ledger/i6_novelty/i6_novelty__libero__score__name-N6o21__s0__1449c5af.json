@@ -1,0 +1,111 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 46+50+55 --key put|the_alphabet_soup --name N6o21 --rank 4 --approach --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "46+50+55",
+  "key": "put|the alphabet soup",
+  "lr": 0.0001,
+  "name": "N6o21",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "sonny.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107838",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6o21"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.021618971601128578,
+   0.034783441573381424,
+   0.02951992116868496,
+   0.02924133837223053,
+   0.017691442742943764,
+   0.02607591263949871,
+   0.02601584792137146,
+   0.020505649968981743
+  ],
+  "frames": 146,
+  "goal": false,
+  "key": "put|the alphabet soup",
+  "loss": 0.025681565748527646,
+  "loss_sd": 0.005215999329518112,
+  "name": "N6o21",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "pick up the alphabet soup and put it in the basket",
+    "frames": [
+     0,
+     51
+    ],
+    "task": 46
+   },
+   {
+    "clause": "pick up the alphabet soup and put it in the basket",
+    "frames": [
+     0,
+     49
+    ],
+    "task": 50
+   },
+   {
+    "clause": "pick up the alphabet soup and put it in the tray",
+    "frames": [
+     0,
+     46
+    ],
+    "task": 55
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6o21__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:55:33+00:00",
+ "stream": null,
+ "tag": "score"
+}

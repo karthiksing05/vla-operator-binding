@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 27 --key put|the_butter --name H6o18 --rank 4 --approach --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "27",
+  "key": "put|the butter",
+  "lr": 0.0001,
+  "name": "H6o18",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "hk47.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107800",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6o18"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.005276884883642197,
+   0.003396400948986411,
+   0.002653868170455098,
+   0.004622973967343569,
+   0.007719589862972498,
+   0.002670127898454666,
+   0.006250598933547735,
+   0.004213177133351564
+  ],
+  "frames": 46,
+  "goal": false,
+  "key": "put|the butter",
+  "loss": 0.004600452724844217,
+  "loss_sd": 0.0016592594392470675,
+  "name": "H6o18",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "pick up the butter and place it in the basket",
+    "frames": [
+     0,
+     46
+    ],
+    "task": 27
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6o18__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:22+00:00",
+ "stream": null,
+ "tag": "score"
+}

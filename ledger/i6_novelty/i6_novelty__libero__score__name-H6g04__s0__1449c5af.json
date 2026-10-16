@@ -1,0 +1,175 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 10+30+31+32+33+34+35+36+37+38+39 --key on|the_plate --name H6g04 --rank 4 --goal --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "10+30+31+32+33+34+35+36+37+38+39",
+  "key": "on|the plate",
+  "lr": 0.0001,
+  "name": "H6g04",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "samantha.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107813",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6g04"
+ },
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.004823239054530859,
+   0.004281709436327219,
+   0.0025508885737508535,
+   0.0023707770742475986,
+   0.002265596529468894,
+   0.00285117095336318,
+   0.0041296775452792645,
+   0.0042269728146493435
+  ],
+  "frames": 792,
+  "goal": true,
+  "key": "on|the plate",
+  "loss": 0.0034375039977021515,
+  "loss_sd": 0.0009602380235794101,
+  "name": "H6g04",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "put the bowl on the plate",
+    "frames": [
+     48,
+     112
+    ],
+    "task": 10
+   },
+   {
+    "clause": "pick up the black bowl next to the cookie box and place it on the plate",
+    "frames": [
+     47,
+     110
+    ],
+    "task": 30
+   },
+   {
+    "clause": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+    "frames": [
+     46,
+     138
+    ],
+    "task": 31
+   },
+   {
+    "clause": "pick up the black bowl on the ramekin and place it on the plate",
+    "frames": [
+     33,
+     100
+    ],
+    "task": 32
+   },
+   {
+    "clause": "pick up the black bowl on the stove and place it on the plate",
+    "frames": [
+     25,
+     124
+    ],
+    "task": 33
+   },
+   {
+    "clause": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+    "frames": [
+     36,
+     84
+    ],
+    "task": 34
+   },
+   {
+    "clause": "pick up the black bowl on the cookie box and place it on the plate",
+    "frames": [
+     46,
+     101
+    ],
+    "task": 35
+   },
+   {
+    "clause": "pick up the black bowl next to the plate and place it on the plate",
+    "frames": [
+     56,
+     107
+    ],
+    "task": 36
+   },
+   {
+    "clause": "pick up the black bowl next to the ramekin and place it on the plate",
+    "frames": [
+     48,
+     112
+    ],
+    "task": 37
+   },
+   {
+    "clause": "pick up the black bowl from table center and place it on the plate",
+    "frames": [
+     55,
+     135
+    ],
+    "task": 38
+   },
+   {
+    "clause": "pick up the black bowl on the wooden cabinet and place it on the plate",
+    "frames": [
+     55,
+     164
+    ],
+    "task": 39
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6g04__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:38+00:00",
+ "stream": null,
+ "tag": "score"
+}

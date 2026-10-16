@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 31 --key put|the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet --name H6o08 --rank 4 --approach --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "31",
+  "key": "put|the black bowl in the top drawer of the wooden cabinet",
+  "lr": 0.0001,
+  "name": "H6o08",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "chappie.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107790",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6o08"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.005331928376108408,
+   0.005977672524750233,
+   0.004454037640243769,
+   0.00415756506845355,
+   0.004203431773930788,
+   0.004102401901036501,
+   0.004296780563890934,
+   0.005960128735750914
+  ],
+  "frames": 46,
+  "goal": false,
+  "key": "put|the black bowl in the top drawer of the wooden cabinet",
+  "loss": 0.004810493323020637,
+  "loss_sd": 0.0007618281737293011,
+  "name": "H6o08",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+    "frames": [
+     0,
+     46
+    ],
+    "task": 31
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6o08__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:30+00:00",
+ "stream": null,
+ "tag": "score"
+}

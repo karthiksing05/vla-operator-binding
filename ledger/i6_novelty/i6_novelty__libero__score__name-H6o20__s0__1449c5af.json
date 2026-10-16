@@ -1,0 +1,103 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 13+22 --key put|the_cream_cheese --name H6o20 --rank 4 --approach --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "13+22",
+  "key": "put|the cream cheese",
+  "lr": 0.0001,
+  "name": "H6o20",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cheetah.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107802",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6o20"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.005073738284409046,
+   0.0038396776653826237,
+   0.002879074541851878,
+   0.004741673357784748,
+   0.003149236086755991,
+   0.004427947569638491,
+   0.0040305620059370995,
+   0.0038518912624567747
+  ],
+  "frames": 100,
+  "goal": false,
+  "key": "put|the cream cheese",
+  "loss": 0.0039992250967770815,
+  "loss_sd": 0.0006995511235549896,
+  "name": "H6o20",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "put the cream cheese in the bowl",
+    "frames": [
+     0,
+     49
+    ],
+    "task": 13
+   },
+   {
+    "clause": "pick up the cream cheese and place it in the basket",
+    "frames": [
+     0,
+     51
+    ],
+    "task": 22
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6o20__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:21+00:00",
+ "stream": null,
+ "tag": "score"
+}

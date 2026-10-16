@@ -37,8 +37,10 @@ def concepts():
             goal.setdefault(P.goal_key(text), []).append(ti)
     for i, (k, ts) in enumerate(sorted(obj.items())):
         out.append((f"H6o{i:02d}", "object", k, ts, "d40", True))
+    pushed = {P.goal_key(t) for t in D.Demos().tasks.values() if len(P.steps_of(t)) == 1 and not P.object_key(t).startswith("put|")}
     for i, (k, ts) in enumerate(sorted(goal.items())):
-        out.append((f"H6g{i:02d}", "goal", k, ts, "d40", True))
+        if k not in pushed:                                         # a carried goal (the plate pushed to the stove carries nothing)
+            out.append((f"H6g{i:02d}", "goal", k, ts, "d40", True))
     e3 = json.load(open(os.path.join(R, "e3_plan.json")))
     seen = {}
     for v in e3.values():

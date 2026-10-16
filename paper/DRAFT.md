@@ -119,6 +119,14 @@ kept arms succeed 174 of 400 times against 147 for the policy (discordant pairs 
 interval 0.007 to 0.145), in both suites. This is score composition in the sense of our ICLR-2027 companion: the policy
 carries each concept under the instruction that taught it, and the composed step reads them one phase at a time.
 
+### The policy's likelihood detects a new concept
+Wang et al. name a detector of new primitives as their missing mechanism. The frozen policy's flow-matching loss on a
+concept's frames separates the 34 concepts of its own training tasks from the 40 LIBERO-90 concepts it never saw without
+overlap (AUC 1.0; held at most 0.0082, new at least 0.026), and the same words are new in new scenes (the cream cheese 0.039
+against 0.0040). Likelihood detects novelty although it does not select among new concepts (W0); it decides whether a concept is
+stored as a pointer to the policy's own field or fitted as a prototype. Exploratory; the held concepts are scored on their
+training demonstrations.
+
 ### A third policy
 On pi0 the library succeeds 324 of 600 times against 85 for pi0 alone; against pi0's per-task LoRA with acceptance, 308
 against 330 of 580 (difference -0.038, 95% interval -0.166 to 0.081): non-inferiority is not established.

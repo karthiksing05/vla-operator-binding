@@ -1,0 +1,191 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 1+2+9+10+12+13+14+15+24+25+29+30+31+60 --key put|the_black_bowl --name N6o22 --rank 4 --approach --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "1+2+9+10+12+13+14+15+24+25+29+30+31+60",
+  "key": "put|the black bowl",
+  "lr": 0.0001,
+  "name": "N6o22",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "qt-1.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107839",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6o22"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.060785531997680664,
+   0.08896341919898987,
+   0.06401902437210083,
+   0.06959545612335205,
+   0.06949465721845627,
+   0.061027657240629196,
+   0.06294651329517365,
+   0.06782930344343185
+  ],
+  "frames": 654,
+  "goal": false,
+  "key": "put|the black bowl",
+  "loss": 0.0680826953612268,
+  "loss_sd": 0.008560569935929374,
+  "name": "N6o22",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "put the black bowl in the top drawer of the cabinet",
+    "frames": [
+     0,
+     40
+    ],
+    "task": 2
+   },
+   {
+    "clause": "put the black bowl on the plate",
+    "frames": [
+     0,
+     57
+    ],
+    "task": 9
+   },
+   {
+    "clause": "put the black bowl on top of the cabinet",
+    "frames": [
+     0,
+     47
+    ],
+    "task": 10
+   },
+   {
+    "clause": "put the black bowl at the back on the plate",
+    "frames": [
+     0,
+     36
+    ],
+    "task": 12
+   },
+   {
+    "clause": "put the black bowl at the front on the plate",
+    "frames": [
+     0,
+     71
+    ],
+    "task": 13
+   },
+   {
+    "clause": "put the middle black bowl on the plate",
+    "frames": [
+     0,
+     38
+    ],
+    "task": 14
+   },
+   {
+    "clause": "put the middle black bowl on top of the cabinet",
+    "frames": [
+     0,
+     43
+    ],
+    "task": 15
+   },
+   {
+    "clause": "put the black bowl in the bottom drawer of the cabinet",
+    "frames": [
+     0,
+     72
+    ],
+    "task": 24
+   },
+   {
+    "clause": "put the black bowl on top of the cabinet",
+    "frames": [
+     0,
+     62
+    ],
+    "task": 25
+   },
+   {
+    "clause": "put the black bowl in the top drawer of the cabinet",
+    "frames": [
+     0,
+     46
+    ],
+    "task": 29
+   },
+   {
+    "clause": "put the black bowl on the plate",
+    "frames": [
+     0,
+     45
+    ],
+    "task": 30
+   },
+   {
+    "clause": "put the black bowl on top of the cabinet",
+    "frames": [
+     0,
+     61
+    ],
+    "task": 31
+   },
+   {
+    "clause": "pick up the black bowl on the left and put it in the tray",
+    "frames": [
+     0,
+     36
+    ],
+    "task": 60
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6o22__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:55:39+00:00",
+ "stream": null,
+ "tag": "score"
+}

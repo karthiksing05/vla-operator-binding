@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 37 --key put|the_black_bowl_next_to_the_ramekin --name H6o11 --rank 4 --approach --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "37",
+  "key": "put|the black bowl next to the ramekin",
+  "lr": 0.0001,
+  "name": "H6o11",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "qt-1.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107793",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6o11"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.0027331954333931208,
+   0.002250147983431816,
+   0.005068304017186165,
+   0.002430300461128354,
+   0.003416600404307246,
+   0.002287649316713214,
+   0.003038618713617325,
+   0.005383467301726341
+  ],
+  "frames": 48,
+  "goal": false,
+  "key": "put|the black bowl next to the ramekin",
+  "loss": 0.0033260354539379478,
+  "loss_sd": 0.0011591438669393392,
+  "name": "H6o11",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "pick up the black bowl next to the ramekin and place it on the plate",
+    "frames": [
+     0,
+     48
+    ],
+    "task": 37
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6o11__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:23+00:00",
+ "stream": null,
+ "tag": "score"
+}

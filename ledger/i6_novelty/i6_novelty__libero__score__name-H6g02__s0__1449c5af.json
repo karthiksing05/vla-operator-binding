@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 13 --key in|the_bowl --name H6g02 --rank 4 --goal --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "13",
+  "key": "in|the bowl",
+  "lr": 0.0001,
+  "name": "H6g02",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "protocol.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107811",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6g02"
+ },
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.0029299266170710325,
+   0.0026649527717381716,
+   0.0027615793514996767,
+   0.001991539727896452,
+   0.0021533076651394367,
+   0.0037287636660039425,
+   0.00241242628544569,
+   0.002681501442566514
+  ],
+  "frames": 63,
+  "goal": true,
+  "key": "in|the bowl",
+  "loss": 0.0026654996909201145,
+  "loss_sd": 0.0004988171493554412,
+  "name": "H6g02",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "put the cream cheese in the bowl",
+    "frames": [
+     49,
+     112
+    ],
+    "task": 13
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6g02__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:42+00:00",
+ "stream": null,
+ "tag": "score"
+}

@@ -1,0 +1,111 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 3+4+51+56 --key put|the_butter --name N6o24 --rank 4 --approach --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "3+4+51+56",
+  "key": "put|the butter",
+  "lr": 0.0001,
+  "name": "N6o24",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "randotron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107841",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6o24"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.061918485909700394,
+   0.06125775724649429,
+   0.053326912224292755,
+   0.06645193696022034,
+   0.06997474282979965,
+   0.05773038789629936,
+   0.061587657779455185,
+   0.06306524574756622
+  ],
+  "frames": 142,
+  "goal": false,
+  "key": "put|the butter",
+  "loss": 0.061914140824228525,
+  "loss_sd": 0.004725881849685489,
+  "name": "N6o24",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "put the butter at the back in the top drawer of the cabinet",
+    "frames": [
+     0,
+     53
+    ],
+    "task": 3
+   },
+   {
+    "clause": "put the butter at the front in the top drawer of the cabinet",
+    "frames": [
+     0,
+     51
+    ],
+    "task": 4
+   },
+   {
+    "clause": "pick up the butter and put it in the tray",
+    "frames": [
+     0,
+     38
+    ],
+    "task": 56
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6o24__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:55:38+00:00",
+ "stream": null,
+ "tag": "score"
+}

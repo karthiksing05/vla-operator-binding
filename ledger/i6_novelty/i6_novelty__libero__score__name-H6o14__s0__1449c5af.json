@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 33 --key put|the_black_bowl_on_the_stove --name H6o14 --rank 4 --approach --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "33",
+  "key": "put|the black bowl on the stove",
+  "lr": 0.0001,
+  "name": "H6o14",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "randotron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107796",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6o14"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.00535237230360508,
+   0.009614350274205208,
+   0.005870903376489878,
+   0.005297895986586809,
+   0.014645397663116455,
+   0.005457229912281036,
+   0.005892097018659115,
+   0.004814798943698406
+  ],
+  "frames": 25,
+  "goal": false,
+  "key": "put|the black bowl on the stove",
+  "loss": 0.007118130684830248,
+  "loss_sd": 0.003171054249251118,
+  "name": "H6o14",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "pick up the black bowl on the stove and place it on the plate",
+    "frames": [
+     0,
+     25
+    ],
+    "task": 33
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6o14__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:19+00:00",
+ "stream": null,
+ "tag": "score"
+}

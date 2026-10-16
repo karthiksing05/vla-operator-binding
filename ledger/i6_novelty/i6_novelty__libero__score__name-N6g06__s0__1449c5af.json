@@ -1,0 +1,135 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 2+3+4+5+8+29+32 --key in|the_top_drawer_of_the_cabinet --name N6g06 --rank 4 --goal --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "2+3+4+5+8+29+32",
+  "key": "in|the top drawer of the cabinet",
+  "lr": 0.0001,
+  "name": "N6g06",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "synapse.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107823",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6g06"
+ },
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.05825250223278999,
+   0.07015392929315567,
+   0.07585440576076508,
+   0.055174149572849274,
+   0.06803683936595917,
+   0.05324702337384224,
+   0.052231814712285995,
+   0.06499471515417099
+  ],
+  "frames": 436,
+  "goal": true,
+  "key": "in|the top drawer of the cabinet",
+  "loss": 0.0622431724332273,
+  "loss_sd": 0.008185641581686793,
+  "name": "N6g06",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "put the black bowl in the top drawer of the cabinet",
+    "frames": [
+     40,
+     116
+    ],
+    "task": 2
+   },
+   {
+    "clause": "put the butter at the back in the top drawer of the cabinet",
+    "frames": [
+     53,
+     117
+    ],
+    "task": 3
+   },
+   {
+    "clause": "put the butter at the front in the top drawer of the cabinet",
+    "frames": [
+     51,
+     110
+    ],
+    "task": 4
+   },
+   {
+    "clause": "put the chocolate pudding in the top drawer of the cabinet",
+    "frames": [
+     44,
+     97
+    ],
+    "task": 5
+   },
+   {
+    "clause": "put the black bowl in the top drawer of the cabinet",
+    "frames": [
+     46,
+     122
+    ],
+    "task": 29
+   },
+   {
+    "clause": "put the ketchup in the top drawer of the cabinet",
+    "frames": [
+     92,
+     200
+    ],
+    "task": 32
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6g06__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:18+00:00",
+ "stream": null,
+ "tag": "score"
+}

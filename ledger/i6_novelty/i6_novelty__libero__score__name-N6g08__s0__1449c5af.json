@@ -1,0 +1,135 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 10+15+25+31+41+43 --key on_top_of|the_cabinet --name N6g08 --rank 4 --goal --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "10+15+25+31+41+43",
+  "key": "on top of|the cabinet",
+  "lr": 0.0001,
+  "name": "N6g08",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "synapse.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107825",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6g08"
+ },
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.06772241741418839,
+   0.09490462392568588,
+   0.07650070637464523,
+   0.08366936445236206,
+   0.08122141659259796,
+   0.07784201949834824,
+   0.07307111471891403,
+   0.0859958752989769
+  ],
+  "frames": 568,
+  "goal": true,
+  "key": "on top of|the cabinet",
+  "loss": 0.08011594228446484,
+  "loss_sd": 0.007815028064162326,
+  "name": "N6g08",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "put the black bowl on top of the cabinet",
+    "frames": [
+     47,
+     151
+    ],
+    "task": 10
+   },
+   {
+    "clause": "put the middle black bowl on top of the cabinet",
+    "frames": [
+     43,
+     137
+    ],
+    "task": 15
+   },
+   {
+    "clause": "put the black bowl on top of the cabinet",
+    "frames": [
+     62,
+     147
+    ],
+    "task": 25
+   },
+   {
+    "clause": "put the black bowl on top of the cabinet",
+    "frames": [
+     61,
+     146
+    ],
+    "task": 31
+   },
+   {
+    "clause": "put the frying pan on top of the cabinet",
+    "frames": [
+     88,
+     195
+    ],
+    "task": 41
+   },
+   {
+    "clause": "put the white bowl on top of the cabinet",
+    "frames": [
+     51,
+     144
+    ],
+    "task": 43
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6g08__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:17+00:00",
+ "stream": null,
+ "tag": "score"
+}

@@ -1,0 +1,119 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 5+61+69+70 --key put|the_chocolate_pudding --name N6o25 --rank 4 --approach --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "5+61+69+70",
+  "key": "put|the chocolate pudding",
+  "lr": 0.0001,
+  "name": "N6o25",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "randotron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107842",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6o25"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.041882939636707306,
+   0.03511632978916168,
+   0.05034015327692032,
+   0.04551519826054573,
+   0.03491560369729996,
+   0.03481508046388626,
+   0.050979580730199814,
+   0.04631397873163223
+  ],
+  "frames": 187,
+  "goal": false,
+  "key": "put|the chocolate pudding",
+  "loss": 0.04248485807329416,
+  "loss_sd": 0.00640788301318274,
+  "name": "N6o25",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "put the chocolate pudding in the top drawer of the cabinet",
+    "frames": [
+     0,
+     44
+    ],
+    "task": 5
+   },
+   {
+    "clause": "pick up the chocolate pudding and put it in the tray",
+    "frames": [
+     0,
+     58
+    ],
+    "task": 61
+   },
+   {
+    "clause": "put the chocolate pudding to the left of the plate",
+    "frames": [
+     0,
+     50
+    ],
+    "task": 69
+   },
+   {
+    "clause": "put the chocolate pudding to the right of the plate",
+    "frames": [
+     0,
+     35
+    ],
+    "task": 70
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6o25__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:55:38+00:00",
+ "stream": null,
+ "tag": "score"
+}

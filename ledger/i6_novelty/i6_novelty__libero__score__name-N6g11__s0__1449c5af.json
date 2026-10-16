@@ -1,0 +1,103 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 65+67 --key on|the_left_plate --name N6g11 --rank 4 --goal --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "65+67",
+  "key": "on|the left plate",
+  "lr": 0.0001,
+  "name": "N6g11",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "voltron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107828",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6g11"
+ },
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.0322820246219635,
+   0.05021653324365616,
+   0.04640532657504082,
+   0.07728781551122665,
+   0.04813701659440994,
+   0.04577064514160156,
+   0.059345901012420654,
+   0.049981217831373215
+  ],
+  "frames": 150,
+  "goal": true,
+  "key": "on|the left plate",
+  "loss": 0.05117831006646156,
+  "loss_sd": 0.012088823049820414,
+  "name": "N6g11",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "put the red mug on the left plate",
+    "frames": [
+     53,
+     143
+    ],
+    "task": 65
+   },
+   {
+    "clause": "put the white mug on the left plate",
+    "frames": [
+     28,
+     88
+    ],
+    "task": 67
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6g11__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:55:22+00:00",
+ "stream": null,
+ "tag": "score"
+}

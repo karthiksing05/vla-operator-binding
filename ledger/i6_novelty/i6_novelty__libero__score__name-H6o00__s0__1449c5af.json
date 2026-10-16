@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 6 --key put|both_moka_pots --name H6o00 --rank 4 --approach --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "6",
+  "key": "put|both moka pots",
+  "lr": 0.0001,
+  "name": "H6o00",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "major.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107782",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6o00"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.0022616495843976736,
+   0.001652954495511949,
+   0.0071526034735143185,
+   0.0018577385926619172,
+   0.0012245046673342586,
+   0.002382169710472226,
+   0.003077410627156496,
+   0.002309551229700446
+  ],
+  "frames": 92,
+  "goal": false,
+  "key": "put|both moka pots",
+  "loss": 0.0027398227975936607,
+  "loss_sd": 0.0017458465746480838,
+  "name": "H6o00",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "put both moka pots on the stove",
+    "frames": [
+     0,
+     92
+    ],
+    "task": 6
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6o00__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:19+00:00",
+ "stream": null,
+ "tag": "score"
+}

@@ -1,0 +1,111 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 73+78+81 --key in|the_front_compartment_of_the_caddy --name N6g03 --rank 4 --goal --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "73+78+81",
+  "key": "in|the front compartment of the caddy",
+  "lr": 0.0001,
+  "name": "N6g03",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "puma.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107820",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6g03"
+ },
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.03574791178107262,
+   0.04058794304728508,
+   0.04789990931749344,
+   0.03638897091150284,
+   0.03679744154214859,
+   0.036316752433776855,
+   0.048763226717710495,
+   0.04008304700255394
+  ],
+  "frames": 266,
+  "goal": true,
+  "key": "in|the front compartment of the caddy",
+  "loss": 0.04032315034419298,
+  "loss_sd": 0.004920141677482982,
+  "name": "N6g03",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "pick up the book and place it in the front compartment of the caddy",
+    "frames": [
+     55,
+     165
+    ],
+    "task": 73
+   },
+   {
+    "clause": "pick up the book and place it in the front compartment of the caddy",
+    "frames": [
+     58,
+     133
+    ],
+    "task": 78
+   },
+   {
+    "clause": "pick up the book and place it in the front compartment of the caddy",
+    "frames": [
+     58,
+     139
+    ],
+    "task": 81
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6g03__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:10+00:00",
+ "stream": null,
+ "tag": "score"
+}

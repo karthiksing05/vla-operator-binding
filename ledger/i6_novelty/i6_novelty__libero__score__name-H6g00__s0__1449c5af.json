@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 9 --key in|the_back_compartment_of_the_caddy --name H6g00 --rank 4 --goal --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "9",
+  "key": "in|the back compartment of the caddy",
+  "lr": 0.0001,
+  "name": "H6g00",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "perseverance.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107809",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6g00"
+ },
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.0027566070202738047,
+   0.0020041433162987232,
+   0.0024186638183891773,
+   0.0011965207522735,
+   0.0018597797024995089,
+   0.0038530391175299883,
+   0.0020191322546452284,
+   0.0019325430039316416
+  ],
+  "frames": 177,
+  "goal": true,
+  "key": "in|the back compartment of the caddy",
+  "loss": 0.0022550536232301965,
+  "loss_sd": 0.000735802540698243,
+  "name": "H6g00",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "pick up the book and place it in the back compartment of the caddy",
+    "frames": [
+     57,
+     234
+    ],
+    "task": 9
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6g00__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:18+00:00",
+ "stream": null,
+ "tag": "score"
+}

@@ -1,0 +1,135 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 18+21+40+41+42+45 --key put|the_frying_pan --name N6o28 --rank 4 --approach --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "18+21+40+41+42+45",
+  "key": "put|the frying pan",
+  "lr": 0.0001,
+  "name": "N6o28",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "hk47.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107845",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6o28"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.10502924025058746,
+   0.09222923964262009,
+   0.07437111437320709,
+   0.07974012941122055,
+   0.12944482266902924,
+   0.08168407529592514,
+   0.10316359996795654,
+   0.08261305838823318
+  ],
+  "frames": 567,
+  "goal": false,
+  "key": "put|the frying pan",
+  "loss": 0.09353440999984741,
+  "loss_sd": 0.01707825393416601,
+  "name": "N6o28",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "put the frying pan on the stove",
+    "frames": [
+     0,
+     92
+    ],
+    "task": 18
+   },
+   {
+    "clause": "put the frying pan on the stove",
+    "frames": [
+     101,
+     192
+    ],
+    "task": 21
+   },
+   {
+    "clause": "put the frying pan on the cabinet shelf",
+    "frames": [
+     0,
+     101
+    ],
+    "task": 40
+   },
+   {
+    "clause": "put the frying pan on top of the cabinet",
+    "frames": [
+     0,
+     88
+    ],
+    "task": 41
+   },
+   {
+    "clause": "put the frying pan under the cabinet shelf",
+    "frames": [
+     0,
+     121
+    ],
+    "task": 42
+   },
+   {
+    "clause": "put the frying pan on the stove",
+    "frames": [
+     113,
+     187
+    ],
+    "task": 45
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6o28__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:55:37+00:00",
+ "stream": null,
+ "tag": "score"
+}

@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 29 --key put|the_chocolate_pudding --name H6o19 --rank 4 --approach --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "29",
+  "key": "put|the chocolate pudding",
+  "lr": 0.0001,
+  "name": "H6o19",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cheetah.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107801",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6o19"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.003507461166009307,
+   0.003415226936340332,
+   0.004572349134832621,
+   0.002918217796832323,
+   0.0024187976960092783,
+   0.0029676654376089573,
+   0.003039728384464979,
+   0.007566072046756744
+  ],
+  "frames": 58,
+  "goal": false,
+  "key": "put|the chocolate pudding",
+  "loss": 0.0038006898248568177,
+  "loss_sd": 0.0015398660953145685,
+  "name": "H6o19",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "pick up the chocolate pudding and place it in the basket",
+    "frames": [
+     0,
+     58
+    ],
+    "task": 29
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6o19__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:22+00:00",
+ "stream": null,
+ "tag": "score"
+}

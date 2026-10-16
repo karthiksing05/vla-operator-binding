@@ -1,0 +1,111 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 32+48+58 --key put|the_ketchup --name N6o29 --rank 4 --approach --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "32+48+58",
+  "key": "put|the ketchup",
+  "lr": 0.0001,
+  "name": "N6o29",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cheetah.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107846",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6o29"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.06960336118936539,
+   0.06989136338233948,
+   0.07048588991165161,
+   0.06815662235021591,
+   0.08242010325193405,
+   0.06516698747873306,
+   0.06462807953357697,
+   0.0839715376496315
+  ],
+  "frames": 230,
+  "goal": false,
+  "key": "put|the ketchup",
+  "loss": 0.071790493093431,
+  "loss_sd": 0.006890525187692924,
+  "name": "N6o29",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "put the ketchup in the top drawer of the cabinet",
+    "frames": [
+     0,
+     92
+    ],
+    "task": 32
+   },
+   {
+    "clause": "pick up the ketchup and put it in the basket",
+    "frames": [
+     0,
+     77
+    ],
+    "task": 48
+   },
+   {
+    "clause": "pick up the ketchup and put it in the tray",
+    "frames": [
+     0,
+     61
+    ],
+    "task": 58
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6o29__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:55:26+00:00",
+ "stream": null,
+ "tag": "score"
+}

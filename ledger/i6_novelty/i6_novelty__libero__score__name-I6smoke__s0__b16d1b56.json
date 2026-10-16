@@ -1,0 +1,103 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 13+22 --key put|the_cream_cheese --name I6smoke --rank 4 --approach --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "13+22",
+  "key": "put|the cream cheese",
+  "lr": 0.0001,
+  "name": "I6smoke",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "voltron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107773",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "b16d1b56050bb766da89448dbeff2d5f680ec185",
+  "short": "b16d1b56"
+ },
+ "keys": {
+  "name": "I6smoke"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.007176979910582304,
+   0.003182430285960436,
+   0.0036094726528972387,
+   0.005391428712755442,
+   0.0036018702667206526,
+   0.008372977375984192,
+   0.00314946542493999,
+   0.0019587890710681677
+  ],
+  "frames": 100,
+  "goal": false,
+  "key": "put|the cream cheese",
+  "loss": 0.004555426712613553,
+  "loss_sd": 0.002078268688462527,
+  "name": "I6smoke",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "put the cream cheese in the bowl",
+    "frames": [
+     0,
+     49
+    ],
+    "task": 13
+   },
+   {
+    "clause": "pick up the cream cheese and place it in the basket",
+    "frames": [
+     0,
+     51
+    ],
+    "task": 22
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-I6smoke__s0__b16d1b56",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:50:28+00:00",
+ "stream": null,
+ "tag": "score"
+}

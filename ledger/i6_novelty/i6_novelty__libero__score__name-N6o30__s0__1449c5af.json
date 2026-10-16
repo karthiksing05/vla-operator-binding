@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 52 --key put|the_milk --name N6o30 --rank 4 --approach --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "52",
+  "key": "put|the milk",
+  "lr": 0.0001,
+  "name": "N6o30",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cheetah.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107847",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6o30"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.055358875542879105,
+   0.057613469660282135,
+   0.0631183311343193,
+   0.06767591089010239,
+   0.05964557081460953,
+   0.06576347351074219,
+   0.05564485862851143,
+   0.07210616767406464
+  ],
+  "frames": 35,
+  "goal": false,
+  "key": "put|the milk",
+  "loss": 0.06211583223193884,
+  "loss_sd": 0.005689189212334535,
+  "name": "N6o30",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "pick up the milk and put it in the basket",
+    "frames": [
+     0,
+     35
+    ],
+    "task": 52
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6o30__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:55:10+00:00",
+ "stream": null,
+ "tag": "score"
+}

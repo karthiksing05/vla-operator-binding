@@ -1,0 +1,191 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 4+5+7+20+21+22+23+24+25+26+27+28+29 --key in|the_basket --name H6g01 --rank 4 --goal --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "4+5+7+20+21+22+23+24+25+26+27+28+29",
+  "key": "in|the basket",
+  "lr": 0.0001,
+  "name": "H6g01",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "protocol.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107810",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6g01"
+ },
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.00145042035728693,
+   0.005002051126211882,
+   0.003608185797929764,
+   0.0034962210338562727,
+   0.002174482448026538,
+   0.0025167313870042562,
+   0.004740564152598381,
+   0.004030417650938034
+  ],
+  "frames": 1565,
+  "goal": true,
+  "key": "in|the basket",
+  "loss": 0.003377384244231507,
+  "loss_sd": 0.001166861817202805,
+  "name": "H6g01",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "put both the alphabet soup and the cream cheese box in the basket",
+    "frames": [
+     61,
+     272
+    ],
+    "task": 4
+   },
+   {
+    "clause": "put both the alphabet soup and the tomato sauce in the basket",
+    "frames": [
+     56,
+     259
+    ],
+    "task": 5
+   },
+   {
+    "clause": "put both the cream cheese box and the butter in the basket",
+    "frames": [
+     54,
+     279
+    ],
+    "task": 7
+   },
+   {
+    "clause": "pick up the orange juice and place it in the basket",
+    "frames": [
+     52,
+     143
+    ],
+    "task": 20
+   },
+   {
+    "clause": "pick up the ketchup and place it in the basket",
+    "frames": [
+     51,
+     148
+    ],
+    "task": 21
+   },
+   {
+    "clause": "pick up the cream cheese and place it in the basket",
+    "frames": [
+     51,
+     130
+    ],
+    "task": 22
+   },
+   {
+    "clause": "pick up the bbq sauce and place it in the basket",
+    "frames": [
+     56,
+     132
+    ],
+    "task": 23
+   },
+   {
+    "clause": "pick up the alphabet soup and place it in the basket",
+    "frames": [
+     52,
+     155
+    ],
+    "task": 24
+   },
+   {
+    "clause": "pick up the milk and place it in the basket",
+    "frames": [
+     55,
+     175
+    ],
+    "task": 25
+   },
+   {
+    "clause": "pick up the salad dressing and place it in the basket",
+    "frames": [
+     51,
+     124
+    ],
+    "task": 26
+   },
+   {
+    "clause": "pick up the butter and place it in the basket",
+    "frames": [
+     46,
+     152
+    ],
+    "task": 27
+   },
+   {
+    "clause": "pick up the tomato sauce and place it in the basket",
+    "frames": [
+     55,
+     132
+    ],
+    "task": 28
+   },
+   {
+    "clause": "pick up the chocolate pudding and place it in the basket",
+    "frames": [
+     58,
+     162
+    ],
+    "task": 29
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6g01__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:42+00:00",
+ "stream": null,
+ "tag": "score"
+}

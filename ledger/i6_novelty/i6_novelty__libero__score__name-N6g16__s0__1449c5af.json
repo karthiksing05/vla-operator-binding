@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 34 --key to_the_front_of|the_white_mug --name N6g16 --rank 4 --goal --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "34",
+  "key": "to the front of|the white mug",
+  "lr": 0.0001,
+  "name": "N6g16",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "consu.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107833",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6g16"
+ },
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.18682868778705597,
+   0.19119632244110107,
+   0.1678641140460968,
+   0.16764099895954132,
+   0.17620326578617096,
+   0.19981437921524048,
+   0.1841125786304474,
+   0.1814107894897461
+  ],
+  "frames": 87,
+  "goal": true,
+  "key": "to the front of|the white mug",
+  "loss": 0.181883892044425,
+  "loss_sd": 0.010425625270060641,
+  "name": "N6g16",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "put the yellow and white mug to the front of the white mug",
+    "frames": [
+     57,
+     144
+    ],
+    "task": 34
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6g16__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:55:17+00:00",
+ "stream": null,
+ "tag": "score"
+}

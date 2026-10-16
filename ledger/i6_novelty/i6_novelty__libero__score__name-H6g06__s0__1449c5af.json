@@ -1,0 +1,103 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 6+17 --key on|the_stove --name H6g06 --rank 4 --goal --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "6+17",
+  "key": "on|the stove",
+  "lr": 0.0001,
+  "name": "H6g06",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "samantha.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107815",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6g06"
+ },
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.0014803268713876605,
+   0.003431755816563964,
+   0.00283511052839458,
+   0.00386388273909688,
+   0.0024080981966108084,
+   0.0016693491488695145,
+   0.0038644105661660433,
+   0.0014337303582578897
+  ],
+  "frames": 352,
+  "goal": true,
+  "key": "on|the stove",
+  "loss": 0.0026233330281684175,
+  "loss_sd": 0.0009653796543576134,
+  "name": "H6g06",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "put both moka pots on the stove",
+    "frames": [
+     92,
+     383
+    ],
+    "task": 6
+   },
+   {
+    "clause": "put the bowl on the stove",
+    "frames": [
+     42,
+     103
+    ],
+    "task": 17
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6g06__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:33+00:00",
+ "stream": null,
+ "tag": "score"
+}

@@ -1,0 +1,167 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 55+56+57+58+59+60+61+62+63+64 --key in|the_tray --name N6g07 --rank 4 --goal --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "55+56+57+58+59+60+61+62+63+64",
+  "key": "in|the tray",
+  "lr": 0.0001,
+  "name": "N6g07",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "synapse.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107824",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6g07"
+ },
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.05972624942660332,
+   0.06536213308572769,
+   0.05969197303056717,
+   0.062053132802248,
+   0.05416536331176758,
+   0.06958272308111191,
+   0.06712480634450912,
+   0.057351674884557724
+  ],
+  "frames": 714,
+  "goal": true,
+  "key": "in|the tray",
+  "loss": 0.061882256995886564,
+  "loss_sd": 0.0048533824884214325,
+  "name": "N6g07",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "pick up the alphabet soup and put it in the tray",
+    "frames": [
+     46,
+     111
+    ],
+    "task": 55
+   },
+   {
+    "clause": "pick up the butter and put it in the tray",
+    "frames": [
+     38,
+     103
+    ],
+    "task": 56
+   },
+   {
+    "clause": "pick up the cream cheese and put it in the tray",
+    "frames": [
+     66,
+     148
+    ],
+    "task": 57
+   },
+   {
+    "clause": "pick up the ketchup and put it in the tray",
+    "frames": [
+     61,
+     143
+    ],
+    "task": 58
+   },
+   {
+    "clause": "pick up the tomato sauce and put it in the tray",
+    "frames": [
+     72,
+     128
+    ],
+    "task": 59
+   },
+   {
+    "clause": "pick up the black bowl on the left and put it in the tray",
+    "frames": [
+     36,
+     110
+    ],
+    "task": 60
+   },
+   {
+    "clause": "pick up the chocolate pudding and put it in the tray",
+    "frames": [
+     58,
+     151
+    ],
+    "task": 61
+   },
+   {
+    "clause": "pick up the salad dressing and put it in the tray",
+    "frames": [
+     39,
+     114
+    ],
+    "task": 62
+   },
+   {
+    "clause": "place the bowls in the tray",
+    "frames": [
+     144,
+     195
+    ],
+    "task": 63
+   },
+   {
+    "clause": "place the bowls in the tray",
+    "frames": [
+     157,
+     228
+    ],
+    "task": 64
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6g07__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:19+00:00",
+ "stream": null,
+ "tag": "score"
+}

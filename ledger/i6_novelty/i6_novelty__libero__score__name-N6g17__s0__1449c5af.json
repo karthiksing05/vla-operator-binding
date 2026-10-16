@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 69 --key to_the_left_of|the_plate --name N6g17 --rank 4 --goal --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "69",
+  "key": "to the left of|the plate",
+  "lr": 0.0001,
+  "name": "N6g17",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "conroy.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107834",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6g17"
+ },
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.09595286101102829,
+   0.10645853728055954,
+   0.09280543029308319,
+   0.08950627595186234,
+   0.09644623100757599,
+   0.08777707070112228,
+   0.09097843617200851,
+   0.1173454076051712
+  ],
+  "frames": 60,
+  "goal": true,
+  "key": "to the left of|the plate",
+  "loss": 0.09715878125280142,
+  "loss_sd": 0.009351958199356244,
+  "name": "N6g17",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "put the chocolate pudding to the left of the plate",
+    "frames": [
+     50,
+     110
+    ],
+    "task": 69
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6g17__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:55:17+00:00",
+ "stream": null,
+ "tag": "score"
+}

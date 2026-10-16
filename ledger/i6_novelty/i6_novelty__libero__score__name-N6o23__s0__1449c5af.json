@@ -1,0 +1,199 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 73+74+75+77+78+79+80+81+82+83+86+87+88+89 --key put|the_book --name N6o23 --rank 4 --approach --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "73+74+75+77+78+79+80+81+82+83+86+87+88+89",
+  "key": "put|the book",
+  "lr": 0.0001,
+  "name": "N6o23",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cyborg.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107840",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6o23"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.03715835139155388,
+   0.04756362363696098,
+   0.03422169014811516,
+   0.04268611595034599,
+   0.04958302900195122,
+   0.04563402757048607,
+   0.04025093466043472,
+   0.04313471540808678
+  ],
+  "frames": 677,
+  "goal": false,
+  "key": "put|the book",
+  "loss": 0.04252906097099185,
+  "loss_sd": 0.0048500564201532335,
+  "name": "N6o23",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "pick up the book and place it in the front compartment of the caddy",
+    "frames": [
+     0,
+     55
+    ],
+    "task": 73
+   },
+   {
+    "clause": "pick up the book and place it in the left compartment of the caddy",
+    "frames": [
+     0,
+     42
+    ],
+    "task": 74
+   },
+   {
+    "clause": "pick up the book and place it in the right compartment of the caddy",
+    "frames": [
+     0,
+     62
+    ],
+    "task": 75
+   },
+   {
+    "clause": "pick up the book and place it in the back compartment of the caddy",
+    "frames": [
+     0,
+     34
+    ],
+    "task": 77
+   },
+   {
+    "clause": "pick up the book and place it in the front compartment of the caddy",
+    "frames": [
+     0,
+     58
+    ],
+    "task": 78
+   },
+   {
+    "clause": "pick up the book and place it in the left compartment of the caddy",
+    "frames": [
+     0,
+     44
+    ],
+    "task": 79
+   },
+   {
+    "clause": "pick up the book and place it in the right compartment of the caddy",
+    "frames": [
+     0,
+     47
+    ],
+    "task": 80
+   },
+   {
+    "clause": "pick up the book and place it in the front compartment of the caddy",
+    "frames": [
+     0,
+     58
+    ],
+    "task": 81
+   },
+   {
+    "clause": "pick up the book and place it in the left compartment of the caddy",
+    "frames": [
+     0,
+     49
+    ],
+    "task": 82
+   },
+   {
+    "clause": "pick up the book and place it in the right compartment of the caddy",
+    "frames": [
+     0,
+     48
+    ],
+    "task": 83
+   },
+   {
+    "clause": "pick up the book in the middle and place it on the cabinet shelf",
+    "frames": [
+     0,
+     51
+    ],
+    "task": 86
+   },
+   {
+    "clause": "pick up the book on the left and place it on top of the shelf",
+    "frames": [
+     0,
+     53
+    ],
+    "task": 87
+   },
+   {
+    "clause": "pick up the book on the right and place it on the cabinet shelf",
+    "frames": [
+     0,
+     37
+    ],
+    "task": 88
+   },
+   {
+    "clause": "pick up the book on the right and place it under the cabinet shelf",
+    "frames": [
+     0,
+     39
+    ],
+    "task": 89
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6o23__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:55:41+00:00",
+ "stream": null,
+ "tag": "score"
+}

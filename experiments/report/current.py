@@ -77,6 +77,8 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"kept {m['H1']['x']} vs policy {m['H1']['y']} of {m['H1']['n']}: fails (concepts the policy already holds)"),
     ("G4b composing the policy's own fields", "g4_ood", "read_field", True, "c-limits",
      lambda m: f"kept {m['H1']['x']} vs policy {m['H1']['y']} of {m['H1']['n']} (sign p {m['H1']['sign_p']:.1g}): passes"),
+    ("i6 likelihood detects a new concept", "i6_novelty", "read", False, "c-limits",
+     lambda m: f"AUC {m['auc']:.2f}: held at most {m['held_max']:.2g}, new at least {m['new_min']:.2g}"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -465,6 +467,14 @@ def limits_of_method():
                 f"{pt['spatial:8']['zs']}. Unfiltered the field composition gives {g4b['pfield_vs_zs']['x']}: it helps where the "
                 f"source concepts are scene-matched, so practice must choose. It is score composition in the sense of our ICLR-2027 "
                 f"study, applied to a policy's phases.</p>")
+    i6 = row("i6_novelty", "read")
+    if i6:
+        out += (f"<p><b>Which kind of unit a concept gets.</b> The frozen policy's own flow-matching loss on a concept's frames "
+                f"separates the {i6['n_held']} concepts of its training tasks from the {i6['n_new']} LIBERO-90 concepts it never saw "
+                f"(AUC {i6['auc']:.2f}; held at most {i6['held_max']:.2g}, new at least {i6['new_min']:.2g}; exploratory). This is the "
+                f"detector of new primitives Wang et al. lack: a held concept is a pointer to the policy's own field, a new one is "
+                f"fitted as a prototype. The same words are new in new scenes, so held means held under its instruction and scene. "
+                f"Caveat: held concepts are scored on demonstrations the policy was trained on.</p>")
     return out
 
 

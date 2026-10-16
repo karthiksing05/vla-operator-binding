@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 77 --key in|the_back_compartment_of_the_caddy --name N6g00 --rank 4 --goal --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "77",
+  "key": "in|the back compartment of the caddy",
+  "lr": 0.0001,
+  "name": "N6g00",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "megazord.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107817",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6g00"
+ },
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.05221294239163399,
+   0.05635742098093033,
+   0.0681556984782219,
+   0.06073292717337608,
+   0.05655521899461746,
+   0.062014173716306686,
+   0.06524062901735306,
+   0.07316475361585617
+  ],
+  "frames": 163,
+  "goal": true,
+  "key": "in|the back compartment of the caddy",
+  "loss": 0.06180422054603696,
+  "loss_sd": 0.006438321753217335,
+  "name": "N6g00",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "pick up the book and place it in the back compartment of the caddy",
+    "frames": [
+     34,
+     197
+    ],
+    "task": 77
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6g00__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:32+00:00",
+ "stream": null,
+ "tag": "score"
+}

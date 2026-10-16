@@ -1,0 +1,547 @@
+{
+ "n_held": 34,
+ "n_new": 40,
+ "missing": [],
+ "auc": 1.0,
+ "held_median": 0.0036901364073855802,
+ "held_max": 0.008194515015929937,
+ "new_median": 0.06809878163039684,
+ "new_min": 0.025681565748527646,
+ "new_below_threshold": 0,
+ "by_kind": {
+  "object": {
+   "held": [
+    0.00274,
+    0.00282,
+    0.00401,
+    0.0045,
+    0.00359,
+    0.00251,
+    0.00353,
+    0.0058,
+    0.00481,
+    0.00337,
+    0.00378,
+    0.00333,
+    0.00379,
+    0.00611,
+    0.00712,
+    0.00819,
+    0.00336,
+    0.00384,
+    0.0046,
+    0.0038,
+    0.004,
+    0.00309,
+    0.0029,
+    0.0037,
+    0.00368,
+    0.0028,
+    0.00385
+   ],
+   "new": [
+    0.02568,
+    0.06808,
+    0.04253,
+    0.06191,
+    0.04248,
+    0.039,
+    0.0523,
+    0.09353,
+    0.07179,
+    0.06212,
+    0.07865,
+    0.03183,
+    0.07779,
+    0.0814,
+    0.05137,
+    0.06811,
+    0.04775,
+    0.07259,
+    0.06612
+   ]
+  },
+  "goal": {
+   "held": [
+    0.00226,
+    0.00338,
+    0.00267,
+    0.00462,
+    0.00344,
+    0.00568,
+    0.00262
+   ],
+   "new": [
+    0.0618,
+    0.05524,
+    0.08729,
+    0.04032,
+    0.07935,
+    0.07575,
+    0.06224,
+    0.06188,
+    0.08012,
+    0.16316,
+    0.184,
+    0.05118,
+    0.06324,
+    0.05691,
+    0.08109,
+    0.08626,
+    0.18188,
+    0.09716,
+    0.13289,
+    0.15651,
+    0.14447
+   ]
+  }
+ },
+ "held": {
+  "H6o00": {
+   "kind": "object",
+   "key": "put|both moka pots",
+   "loss": 0.0027398227975936607,
+   "frames": 92
+  },
+  "H6o01": {
+   "kind": "object",
+   "key": "put|both the alphabet soup and the cream cheese box",
+   "loss": 0.002816382300807163,
+   "frames": 61
+  },
+  "H6o02": {
+   "kind": "object",
+   "key": "put|both the alphabet soup and the tomato sauce",
+   "loss": 0.004009207827039063,
+   "frames": 56
+  },
+  "H6o03": {
+   "kind": "object",
+   "key": "put|both the cream cheese box and the butter",
+   "loss": 0.00450412166537717,
+   "frames": 54
+  },
+  "H6o04": {
+   "kind": "object",
+   "key": "put|the alphabet soup",
+   "loss": 0.0035914376931032166,
+   "frames": 52
+  },
+  "H6o05": {
+   "kind": "object",
+   "key": "put|the bbq sauce",
+   "loss": 0.002513095911126584,
+   "frames": 56
+  },
+  "H6o06": {
+   "kind": "object",
+   "key": "put|the black bowl between the plate and the ramekin",
+   "loss": 0.0035260802251286805,
+   "frames": 36
+  },
+  "H6o07": {
+   "kind": "object",
+   "key": "put|the black bowl from table center",
+   "loss": 0.005803396692499518,
+   "frames": 55
+  },
+  "H6o08": {
+   "kind": "object",
+   "key": "put|the black bowl in the top drawer of the wooden cabinet",
+   "loss": 0.004810493323020637,
+   "frames": 46
+  },
+  "H6o09": {
+   "kind": "object",
+   "key": "put|the black bowl next to the cookie box",
+   "loss": 0.0033706065878504887,
+   "frames": 47
+  },
+  "H6o10": {
+   "kind": "object",
+   "key": "put|the black bowl next to the plate",
+   "loss": 0.0037760550330858678,
+   "frames": 56
+  },
+  "H6o11": {
+   "kind": "object",
+   "key": "put|the black bowl next to the ramekin",
+   "loss": 0.0033260354539379478,
+   "frames": 48
+  },
+  "H6o12": {
+   "kind": "object",
+   "key": "put|the black bowl on the cookie box",
+   "loss": 0.0037863214674871415,
+   "frames": 46
+  },
+  "H6o13": {
+   "kind": "object",
+   "key": "put|the black bowl on the ramekin",
+   "loss": 0.006108791974838823,
+   "frames": 33
+  },
+  "H6o14": {
+   "kind": "object",
+   "key": "put|the black bowl on the stove",
+   "loss": 0.007118130684830248,
+   "frames": 25
+  },
+  "H6o15": {
+   "kind": "object",
+   "key": "put|the black bowl on the wooden cabinet",
+   "loss": 0.008194515015929937,
+   "frames": 55
+  },
+  "H6o16": {
+   "kind": "object",
+   "key": "put|the book",
+   "loss": 0.0033572590036783367,
+   "frames": 57
+  },
+  "H6o17": {
+   "kind": "object",
+   "key": "put|the bowl",
+   "loss": 0.003836956078885123,
+   "frames": 121
+  },
+  "H6o18": {
+   "kind": "object",
+   "key": "put|the butter",
+   "loss": 0.004600452724844217,
+   "frames": 46
+  },
+  "H6o19": {
+   "kind": "object",
+   "key": "put|the chocolate pudding",
+   "loss": 0.0038006898248568177,
+   "frames": 58
+  },
+  "H6o20": {
+   "kind": "object",
+   "key": "put|the cream cheese",
+   "loss": 0.0039992250967770815,
+   "frames": 100
+  },
+  "H6o21": {
+   "kind": "object",
+   "key": "put|the ketchup",
+   "loss": 0.0030859130492899567,
+   "frames": 51
+  },
+  "H6o22": {
+   "kind": "object",
+   "key": "put|the milk",
+   "loss": 0.0029006581753492355,
+   "frames": 55
+  },
+  "H6o23": {
+   "kind": "object",
+   "key": "put|the orange juice",
+   "loss": 0.0037045935168862343,
+   "frames": 52
+  },
+  "H6o24": {
+   "kind": "object",
+   "key": "put|the salad dressing",
+   "loss": 0.003675679297884926,
+   "frames": 51
+  },
+  "H6o25": {
+   "kind": "object",
+   "key": "put|the tomato sauce",
+   "loss": 0.002800450849463232,
+   "frames": 55
+  },
+  "H6o26": {
+   "kind": "object",
+   "key": "put|the wine bottle",
+   "loss": 0.0038451999134849757,
+   "frames": 107
+  },
+  "H6g00": {
+   "kind": "goal",
+   "key": "in|the back compartment of the caddy",
+   "loss": 0.0022550536232301965,
+   "frames": 177
+  },
+  "H6g01": {
+   "kind": "goal",
+   "key": "in|the basket",
+   "loss": 0.003377384244231507,
+   "frames": 1565
+  },
+  "H6g02": {
+   "kind": "goal",
+   "key": "in|the bowl",
+   "loss": 0.0026654996909201145,
+   "frames": 63
+  },
+  "H6g03": {
+   "kind": "goal",
+   "key": "on top of|the cabinet",
+   "loss": 0.004620691935997456,
+   "frames": 132
+  },
+  "H6g04": {
+   "kind": "goal",
+   "key": "on|the plate",
+   "loss": 0.0034375039977021515,
+   "frames": 792
+  },
+  "H6g05": {
+   "kind": "goal",
+   "key": "on|the rack",
+   "loss": 0.005678127694409341,
+   "frames": 75
+  },
+  "H6g06": {
+   "kind": "goal",
+   "key": "on|the stove",
+   "loss": 0.0026233330281684175,
+   "frames": 352
+  }
+ },
+ "new": {
+  "N6g00": {
+   "kind": "goal",
+   "key": "in|the back compartment of the caddy",
+   "loss": 0.06180422054603696,
+   "frames": 163
+  },
+  "N6g01": {
+   "kind": "goal",
+   "key": "in|the basket",
+   "loss": 0.055239837151020765,
+   "frames": 682
+  },
+  "N6g02": {
+   "kind": "goal",
+   "key": "in|the bottom drawer of the cabinet",
+   "loss": 0.0872946074232459,
+   "frames": 221
+  },
+  "N6g03": {
+   "kind": "goal",
+   "key": "in|the front compartment of the caddy",
+   "loss": 0.04032315034419298,
+   "frames": 266
+  },
+  "N6g04": {
+   "kind": "goal",
+   "key": "in|the left compartment of the caddy",
+   "loss": 0.07934881374239922,
+   "frames": 314
+  },
+  "N6g05": {
+   "kind": "goal",
+   "key": "in|the right compartment of the caddy",
+   "loss": 0.075748804025352,
+   "frames": 281
+  },
+  "N6g06": {
+   "kind": "goal",
+   "key": "in|the top drawer of the cabinet",
+   "loss": 0.0622431724332273,
+   "frames": 436
+  },
+  "N6g07": {
+   "kind": "goal",
+   "key": "in|the tray",
+   "loss": 0.061882256995886564,
+   "frames": 714
+  },
+  "N6g08": {
+   "kind": "goal",
+   "key": "on top of|the cabinet",
+   "loss": 0.08011594228446484,
+   "frames": 568
+  },
+  "N6g09": {
+   "kind": "goal",
+   "key": "on top of|the shelf",
+   "loss": 0.16316286101937294,
+   "frames": 93
+  },
+  "N6g10": {
+   "kind": "goal",
+   "key": "on|the cabinet shelf",
+   "loss": 0.18400109186768532,
+   "frames": 247
+  },
+  "N6g11": {
+   "kind": "goal",
+   "key": "on|the left plate",
+   "loss": 0.05117831006646156,
+   "frames": 150
+  },
+  "N6g12": {
+   "kind": "goal",
+   "key": "on|the plate",
+   "loss": 0.06324075488373637,
+   "frames": 667
+  },
+  "N6g13": {
+   "kind": "goal",
+   "key": "on|the right plate",
+   "loss": 0.056908247992396355,
+   "frames": 185
+  },
+  "N6g14": {
+   "kind": "goal",
+   "key": "on|the stove",
+   "loss": 0.08109266357496381,
+   "frames": 380
+  },
+  "N6g15": {
+   "kind": "goal",
+   "key": "on|the wine rack",
+   "loss": 0.08625844586640596,
+   "frames": 172
+  },
+  "N6g16": {
+   "kind": "goal",
+   "key": "to the front of|the white mug",
+   "loss": 0.181883892044425,
+   "frames": 87
+  },
+  "N6g17": {
+   "kind": "goal",
+   "key": "to the left of|the plate",
+   "loss": 0.09715878125280142,
+   "frames": 60
+  },
+  "N6g18": {
+   "kind": "goal",
+   "key": "to the right of|the caddy",
+   "loss": 0.1328868241980672,
+   "frames": 210
+  },
+  "N6g19": {
+   "kind": "goal",
+   "key": "to the right of|the plate",
+   "loss": 0.15650938637554646,
+   "frames": 112
+  },
+  "N6g20": {
+   "kind": "goal",
+   "key": "under|the cabinet shelf",
+   "loss": 0.14446809981018305,
+   "frames": 135
+  },
+  "N6o21": {
+   "kind": "object",
+   "key": "put|the alphabet soup",
+   "loss": 0.025681565748527646,
+   "frames": 146
+  },
+  "N6o22": {
+   "kind": "object",
+   "key": "put|the black bowl",
+   "loss": 0.0680826953612268,
+   "frames": 654
+  },
+  "N6o23": {
+   "kind": "object",
+   "key": "put|the book",
+   "loss": 0.04252906097099185,
+   "frames": 677
+  },
+  "N6o24": {
+   "kind": "object",
+   "key": "put|the butter",
+   "loss": 0.061914140824228525,
+   "frames": 142
+  },
+  "N6o25": {
+   "kind": "object",
+   "key": "put|the chocolate pudding",
+   "loss": 0.04248485807329416,
+   "frames": 187
+  },
+  "N6o26": {
+   "kind": "object",
+   "key": "put|the cream cheese",
+   "loss": 0.038998721400275826,
+   "frames": 66
+  },
+  "N6o27": {
+   "kind": "object",
+   "key": "put|the cream cheese box",
+   "loss": 0.052295596338808537,
+   "frames": 63
+  },
+  "N6o28": {
+   "kind": "object",
+   "key": "put|the frying pan",
+   "loss": 0.09353440999984741,
+   "frames": 567
+  },
+  "N6o29": {
+   "kind": "object",
+   "key": "put|the ketchup",
+   "loss": 0.071790493093431,
+   "frames": 230
+  },
+  "N6o30": {
+   "kind": "object",
+   "key": "put|the milk",
+   "loss": 0.06211583223193884,
+   "frames": 35
+  },
+  "N6o31": {
+   "kind": "object",
+   "key": "put|the moka pot",
+   "loss": 0.07864758465439081,
+   "frames": 181
+  },
+  "N6o32": {
+   "kind": "object",
+   "key": "put|the orange juice",
+   "loss": 0.031826060730963945,
+   "frames": 59
+  },
+  "N6o33": {
+   "kind": "object",
+   "key": "put|the red mug",
+   "loss": 0.07779318932443857,
+   "frames": 203
+  },
+  "N6o34": {
+   "kind": "object",
+   "key": "put|the salad dressing",
+   "loss": 0.08139506727457047,
+   "frames": 39
+  },
+  "N6o35": {
+   "kind": "object",
+   "key": "put|the tomato sauce",
+   "loss": 0.051369982305914164,
+   "frames": 186
+  },
+  "N6o36": {
+   "kind": "object",
+   "key": "put|the white bowl",
+   "loss": 0.06811486789956689,
+   "frames": 188
+  },
+  "N6o37": {
+   "kind": "object",
+   "key": "put|the white mug",
+   "loss": 0.04774944018572569,
+   "frames": 118
+  },
+  "N6o38": {
+   "kind": "object",
+   "key": "put|the wine bottle",
+   "loss": 0.0725892037153244,
+   "frames": 179
+  },
+  "N6o39": {
+   "kind": "object",
+   "key": "put|the yellow and white mug",
+   "loss": 0.06611817516386509,
+   "frames": 170
+  }
+ }
+}

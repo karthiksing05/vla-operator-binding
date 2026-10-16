@@ -1,0 +1,111 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 36+37+43 --key put|the_white_bowl --name N6o36 --rank 4 --approach --source l90 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "36+37+43",
+  "key": "put|the white bowl",
+  "lr": 0.0001,
+  "name": "N6o36",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "perseverance.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107853",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "N6o36"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.0641569122672081,
+   0.06513021141290665,
+   0.08179398626089096,
+   0.07000481337308884,
+   0.06871058791875839,
+   0.059244561940431595,
+   0.07103124260902405,
+   0.06484662741422653
+  ],
+  "frames": 188,
+  "goal": false,
+  "key": "put|the white bowl",
+  "loss": 0.06811486789956689,
+  "loss_sd": 0.006259868285685,
+  "name": "N6o36",
+  "source": "l90",
+  "tasks": [
+   {
+    "clause": "put the white bowl on the plate",
+    "frames": [
+     0,
+     87
+    ],
+    "task": 36
+   },
+   {
+    "clause": "put the white bowl to the right of the plate",
+    "frames": [
+     0,
+     50
+    ],
+    "task": 37
+   },
+   {
+    "clause": "put the white bowl on top of the cabinet",
+    "frames": [
+     0,
+     51
+    ],
+    "task": 43
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-N6o36__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:55:18+00:00",
+ "stream": null,
+ "tag": "score"
+}

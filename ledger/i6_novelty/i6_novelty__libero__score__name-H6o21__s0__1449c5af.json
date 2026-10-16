@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 21 --key put|the_ketchup --name H6o21 --rank 4 --approach --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "21",
+  "key": "put|the ketchup",
+  "lr": 0.0001,
+  "name": "H6o21",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cheetah.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107803",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6o21"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.0021996714640408754,
+   0.0037057125009596348,
+   0.002137619536370039,
+   0.0018351292237639427,
+   0.0023909008596092463,
+   0.004660762846469879,
+   0.0020934732165187597,
+   0.0056640347465872765
+  ],
+  "frames": 51,
+  "goal": false,
+  "key": "put|the ketchup",
+  "loss": 0.0030859130492899567,
+  "loss_sd": 0.001333610625697531,
+  "name": "H6o21",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "pick up the ketchup and place it in the basket",
+    "frames": [
+     0,
+     51
+    ],
+    "task": 21
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6o21__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:19+00:00",
+ "stream": null,
+ "tag": "score"
+}

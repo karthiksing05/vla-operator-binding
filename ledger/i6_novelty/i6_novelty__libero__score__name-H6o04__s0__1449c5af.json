@@ -1,0 +1,95 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 24 --key put|the_alphabet_soup --name H6o04 --rank 4 --approach --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "24",
+  "key": "put|the alphabet soup",
+  "lr": 0.0001,
+  "name": "H6o04",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "voltron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107786",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6o04"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.0037115076556801796,
+   0.0013979945797473192,
+   0.008760268799960613,
+   0.0018148199887946248,
+   0.002447796054184437,
+   0.001826852560043335,
+   0.0060411780141294,
+   0.002731083892285824
+  ],
+  "frames": 52,
+  "goal": false,
+  "key": "put|the alphabet soup",
+  "loss": 0.0035914376931032166,
+  "loss_sd": 0.002394313788934322,
+  "name": "H6o04",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "pick up the alphabet soup and place it in the basket",
+    "frames": [
+     0,
+     52
+    ],
+    "task": 24
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6o04__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:08+00:00",
+ "stream": null,
+ "tag": "score"
+}

@@ -1,0 +1,103 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 11+14 --key put|the_wine_bottle --name H6o26 --rank 4 --approach --source d40 --ndemo 1 --score",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "11+14",
+  "key": "put|the wine bottle",
+  "lr": 0.0001,
+  "name": "H6o26",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": true,
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "perseverance.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4107808",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1449c5af5a5199dfa3a8b9f96b3572120c04427f",
+  "short": "1449c5af"
+ },
+ "keys": {
+  "name": "H6o26"
+ },
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "draws": [
+   0.002175362315028906,
+   0.0031409249641001225,
+   0.0030837866943329573,
+   0.007319950964301825,
+   0.003929926548153162,
+   0.0043915631249547005,
+   0.0032532550394535065,
+   0.0034668296575546265
+  ],
+  "frames": 107,
+  "goal": false,
+  "key": "put|the wine bottle",
+  "loss": 0.0038451999134849757,
+  "loss_sd": 0.0014464292201372766,
+  "name": "H6o26",
+  "source": "d40",
+  "tasks": [
+   {
+    "clause": "put the wine bottle on the rack",
+    "frames": [
+     0,
+     80
+    ],
+    "task": 11
+   },
+   {
+    "clause": "put the wine bottle on top of the cabinet",
+    "frames": [
+     0,
+     27
+    ],
+    "task": 14
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__score__name-H6o26__s0__1449c5af",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T10:53:17+00:00",
+ "stream": null,
+ "tag": "score"
+}
