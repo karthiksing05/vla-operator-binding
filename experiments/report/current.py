@@ -83,6 +83,8 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"kept {m['H1']['x']} vs policy {m['H1']['y']} of {m['H1']['n']}: passes"),
     ("i6 likelihood detects a new concept", "i6_novelty", "read", False, "c-limits",
      lambda m: f"AUC {m['auc']:.2f}: held at most {m['held_max']:.2g}, new at least {m['new_min']:.2g}"),
+    ("U1 one learner, both kinds of task", "u1_joint", "read", False, "c-stream",
+     lambda m: f"50 arrivals: demos {m['a']['demos']}/{m['b']['demos']}; served {m['a']['H1']['x']}/{m['b']['H1']['x']} vs {m['a']['H1']['y']} of {m['a']['H1']['n']}"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -431,6 +433,15 @@ def streams():
     cap = ("<b>Demonstrations requested as the stream arrives.</b> E4 requests one whenever the composition does not beat the policy"
            + ("; W1 only when neither the policy nor the composition reaches 8 of 10 practice episodes" if w1 else "")
            + ". Hollow markers: arrivals kept without a demonstration; dotted: one demonstration per arrival.")
+    u1 = row("u1_joint", "read")
+    if u1:
+        a_, b_ = u1["a"], u1["b"]
+        out += (f"<p><b>One learner, both kinds of task.</b> A joint stream of {a_['arrivals']} arrivals adds Li's 20 compositional "
+                f"OOD tasks, which have no demonstrations, to W1's 30 LIBERO-90 tasks; held concepts become pointers to the "
+                f"policy's own fields, new ones prototypes, and practice keeps what beats the policy (an exact replay: pointers carry "
+                f"no weights, so they change no request). It requests {a_['demos']} and {b_['demos']} demonstrations, all for "
+                f"LIBERO-90 concepts, and serves {a_['H1']['x']} and {b_['H1']['x']} of {a_['H1']['n']} against {a_['H1']['y']} "
+                f"for the policy alone.</p>")
     return out + fig('<img src="media/streams_demos.png" alt="cumulative demonstrations requested against arrivals" style="width:100%">', cap)
 
 

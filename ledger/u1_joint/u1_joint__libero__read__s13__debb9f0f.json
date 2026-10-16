@@ -1,0 +1,184 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/u1_joint.py --read --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "u1_joint",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "debb9f0f38568a8d984aec7b79d76203c6f17112",
+  "short": "debb9f0f"
+ },
+ "keys": {},
+ "metrics": {
+  "a": {
+   "H1": {
+    "diff": {
+     "diff": 0.221,
+     "hi": 0.313,
+     "hi90": 0.3,
+     "lo": 0.137,
+     "lo90": 0.149,
+     "n_pairs": 1000,
+     "n_tasks": 50
+    },
+    "discordant": [
+     230,
+     9
+    ],
+    "n": 1000,
+    "sign_p": 1.417916281139271e-56,
+    "tasks": 50,
+    "x": 641,
+    "y": 420
+   },
+   "arrivals": 50,
+   "demos": 17,
+   "kept_changed_to_pointer": [
+    "9",
+    "54",
+    "47"
+   ],
+   "l90": {
+    "diff": {
+     "diff": 0.3233333333333333,
+     "hi": 0.4533333333333333,
+     "hi90": 0.43333333333333335,
+     "lo": 0.19833333333333333,
+     "lo90": 0.21666666666666667,
+     "n_pairs": 600,
+     "n_tasks": 30
+    },
+    "discordant": [
+     200,
+     6
+    ],
+    "n": 600,
+    "sign_p": 1.976537684649587e-51,
+    "tasks": 30,
+    "x": 467,
+    "y": 273
+   },
+   "ood": {
+    "diff": {
+     "diff": 0.0675,
+     "hi": 0.145,
+     "hi90": 0.1325,
+     "lo": 0.0075,
+     "lo90": 0.015,
+     "n_pairs": 400,
+     "n_tasks": 20
+    },
+    "discordant": [
+     30,
+     3
+    ],
+    "n": 400,
+    "sign_p": 1.4011748135089874e-06,
+    "tasks": 20,
+    "x": 174,
+    "y": 147
+   },
+   "requests_changed_by_pointers": []
+  },
+  "b": {
+   "H1": {
+    "diff": {
+     "diff": 0.252,
+     "hi": 0.349,
+     "hi90": 0.333,
+     "lo": 0.163,
+     "lo90": 0.176,
+     "n_pairs": 1000,
+     "n_tasks": 50
+    },
+    "discordant": [
+     259,
+     7
+    ],
+    "n": 1000,
+    "sign_p": 2.9924547755265756e-67,
+    "tasks": 50,
+    "x": 672,
+    "y": 420
+   },
+   "arrivals": 50,
+   "demos": 16,
+   "kept_changed_to_pointer": [
+    "54",
+    "47",
+    "9"
+   ],
+   "l90": {
+    "diff": {
+     "diff": 0.375,
+     "hi": 0.5033333333333333,
+     "hi90": 0.485,
+     "lo": 0.245,
+     "lo90": 0.2633333333333333,
+     "n_pairs": 600,
+     "n_tasks": 30
+    },
+    "discordant": [
+     229,
+     4
+    ],
+    "n": 600,
+    "sign_p": 1.7644068889409057e-62,
+    "tasks": 30,
+    "x": 498,
+    "y": 273
+   },
+   "ood": {
+    "diff": {
+     "diff": 0.0675,
+     "hi": 0.145,
+     "hi90": 0.1325,
+     "lo": 0.0075,
+     "lo90": 0.015,
+     "n_pairs": 400,
+     "n_tasks": 20
+    },
+    "discordant": [
+     30,
+     3
+    ],
+    "n": 400,
+    "sign_p": 1.4011748135089874e-06,
+    "tasks": 20,
+    "x": 174,
+    "y": 147
+   },
+   "requests_changed_by_pointers": []
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "u1_joint__libero__read__s13__debb9f0f",
+ "schema": 1,
+ "script": "experiments/u1_joint.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-16T11:54:26+00:00",
+ "stream": null,
+ "tag": "read"
+}

@@ -103,6 +103,11 @@ non-inferiority at 0.05 is just missed (the lower bound misses it by 0.013).
 With the request rule (W1): 17 and 16 demonstrations in two orders (21 and 20 under a looser rule), no damage to earlier
 arrivals in either order, served 465 and 496 of 600 against 273 zero-shot.
 
+### One learner, both kinds of task
+On a joint stream of 50 arrivals (Li's 20 OOD tasks, which have no demonstrations, and W1's 30 LIBERO-90 tasks), one
+learner with both kinds of unit requests 17 and 16 demonstrations, all for LIBERO-90 concepts, and serves 641 and 672 of 1,000
+against 420 for the policy alone. Pointers carry no weights, so they change no request and damage nothing.
+
 ### Does composition generalise?
 With each concept refit with no demonstration of a held-out fold (5 folds, 53 eligible tasks), recombined concepts alone succeed
 365 of 1,060 times against 354 for the policy: the pre-registered test fails. With practice choosing, 484 against 354. A

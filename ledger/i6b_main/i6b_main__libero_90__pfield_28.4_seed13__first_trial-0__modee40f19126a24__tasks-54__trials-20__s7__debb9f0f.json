@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/i6b_main_54_pfield_28.4_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:54?suite=libero_90&paths=none&apaths=none&goal=1&pa=pick_up_the_tomato_sauce_and_place_it_in_the_basket&pg=put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket SUITE=libero_90 TASKS=54 TRIALS=20 (job 4108421)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_states_b",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/i6b_main_54_pfield_28.4_seed13.json",
+   "port": 9843,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "54",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4108421",
+  "mode": "prims:54?suite=libero_90&paths=none&apaths=none&goal=1&pa=pick_up_the_tomato_sauce_and_place_it_in_the_basket&pg=put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "chappie.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4108421",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6b_main",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "debb9f0f38568a8d984aec7b79d76203c6f17112",
+  "short": "debb9f0f"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:54?suite=libero_90&paths=none&apaths=none&goal=1&pa=pick_up_the_tomato_sauce_and_place_it_in_the_basket&pg=put_both_the_alphabet_soup_and_the_cream_cheese_box_in_the_basket",
+  "tasks": "54",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 564.3621549606323,
+  "success_rate": 0.9,
+  "tasks": {
+   "54": {
+    "errors": 0,
+    "language": "pick up the tomato sauce and put it in the basket",
+    "mean_steps": 291.85,
+    "n": 20,
+    "success_rate": 0.9
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6b_main__libero_90__pfield_28.4_seed13__first_trial-0__modee40f19126a24__tasks-54__trials-20__s7__debb9f0f",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-16T11:53:01+00:00",
+ "stream": null,
+ "tag": "pfield_28.4_seed13"
+}
