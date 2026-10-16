@@ -1,0 +1,54 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G5c (rank)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c47f9ad485d7d8ef022ccf448ed75c5d51f0bb61",
+  "short": "c47f9ad4"
+ },
+ "keys": {},
+ "metrics": {
+  "context": "E3 rank 4: 480 vs 494 of 580 against LoRA+acc (-0.024 [-0.074, 0.024]); the rank ablation was planned in docs/PLAN_GENERALIZE.md G5",
+  "hypotheses": {
+   "H1": "at rank 16, the kept library is non-inferior to the per-task LoRA with acceptance (task-level bootstrap 95% lower bound above -0.05), E3's criterion",
+   "descriptive": "rank 8 the same; each rank's kept arm vs E3's rank-4 kept arm and vs zero-shot; bytes"
+  },
+  "ranks": [
+   8,
+   16
+  ],
+  "written_before": "any G5c fit or episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__g5c_rank__s13__c47f9ad4",
+ "schema": 1,
+ "script": "experiments/prereg/g5c_rank.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-16T11:56:47+00:00",
+ "stream": null,
+ "tag": "g5c_rank"
+}
