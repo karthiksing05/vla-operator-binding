@@ -17,7 +17,7 @@ per task given the same acceptance test: over 66 tasks, 931 against 935 of 1,320
 a demonstration only when practice fails, it needs 17 and 16 demonstrations over 30 arrivals and damages no earlier task.
 Concepts learned only from other tasks recombine where the policy lacks the skill (145 against 25 on the tasks it fails) and
 interfere where it has it, so practice must choose; factorisation beats a monolithic adapter trained on the same data (365 against
-190). On a second policy (SmolVLA) the library lifts 20 to 203 of 600 successes, though a per-task adapter leads there.
+190). On two more flow-matching policies the library lifts SmolVLA from 20 to 203 and pi0 from 85 to 324 of 600 successes; per-task adapters lead on both, by less on pi0.
 
 ## 1 Introduction
 
@@ -35,6 +35,9 @@ interfere where it has it, so practice must choose; factorisation beats a monoli
   3. a diagnosis of where a VLA fails new tasks (the approach), and of what its prototypes encode;
   4. negative results that scope the claim: query-likelihood selection, demonstration-free transfer to new objects;
   5. a pre-registered, paired, audited protocol on fresh start states, and a defect found and fixed in a public LIBERO-90 port.
+- Scope: flow-matching and diffusion policies. A prototype is a low-rank change to the policy's velocity field, and a step
+  switches which concept's change is on in each phase. Our companion ICLR-2027 submission finds the same split for image
+  diffusion: composing the scores of single-object prompts places objects that one prompt naming them all does not.
 
 ## 2 Related work
 
@@ -101,6 +104,17 @@ The same library refit on SmolVLA, at the same tasks, start states and seed: 203
 SmolVLA's per-task LoRA with acceptance 189 against 274 of 580 (difference -0.147, 95% interval -0.266 to -0.029). Composition
 carries over as a large gain over the frozen policy; the per-task adapter leads by more on the weaker policy.
 
+### Against reinforcement learning in the noise space and retrieval
+DSRL steering the frozen policy from 100 practice episodes per task, no demonstration, succeeds 313 of 600 times (314 with
+acceptance); the library reaches 499 (difference 0.308, 95% interval 0.188 to 0.433). DSRL steering each task's one-demo
+adapter is the strongest arm we ran: 503 of 580 with acceptance against 480 for the library (difference -0.040, 95% interval
+-0.098 to 0.012), at ten times the practice and a per-task adapter and actor. STRAP, retrieving from the library's own data and
+more, succeeds 192 of 580 alone and 296 with acceptance, against 480 (difference 0.317, 95% interval 0.200 to 0.440).
+
+### A third policy
+On pi0 the library succeeds 324 of 600 times against 85 for pi0 alone; against pi0's per-task LoRA with acceptance, 308
+against 330 of 580 (difference -0.038, 95% interval -0.166 to 0.081): non-inferiority is not established.
+
 ### The switch at the grasp
 With both prototypes on for the whole episode the library succeeds 281 of 600 times, level with the policy (273); switched at
 the policy's own grasp it succeeds 495. The phase gating carries the gain.
@@ -110,6 +124,10 @@ Object prototypes are nearly orthogonal to one another (mean cosine 0.058) and t
 layers, differing in direction; refit without one demonstration a prototype keeps a cosine of 0.64 with the full one.
 
 ## 6 What does not work
+- Recombining concepts the policy already holds (Li's compositional OOD suites, 20 tasks): prototypes fitted on pi0.5's own
+  training demonstrations learn nothing (flow loss 0.0024 at the start, 0.0038 at the end, against 0.060 to 0.0062 on
+  LIBERO-90 demonstrations), and the kept arms equal the policy (154 against 157 of 400). The library adds a missing concept; it
+  does not undo the policy's binding of names to trained layouts.
 - Selecting prototypes by a held-out demonstration's likelihood (as Wang et al. do): the right object concept on top for 12 of
   29 queries.
 - A new object without a demonstration: borrowed prototypes help on 2 of the 17 tasks the policy fails.
@@ -120,5 +138,5 @@ The IPEC port of LIBERO-90 merges tasks that share an instruction: 16 tasks were
 the per-task baselines. Fixed by matching each scene's block of episodes to the task's rendered first frames.
 
 ## 8 Limitations
-Single-step pick-and-place; one benchmark (LIBERO-90); practice needs a simulator; a new object needs its one demonstration;
+Single-step pick-and-place; flow-matching policies only; one benchmark (LIBERO-90); practice needs a simulator; a new object needs its one demonstration;
 non-inferiority to per-task adapters not established at 0.05.

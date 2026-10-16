@@ -1,0 +1,122 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 3465216,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 3465216,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 62 --key put|the_salad_dressing --name POsc11 --rank 4 --approach --backbone pi0_libero",
+ "config": {
+  "approach": true,
+  "backbone": "pi0_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "62",
+  "key": "put|the salad dressing",
+  "lr": 0.0001,
+  "name": "POsc11",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "samantha.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094609",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c2da69081ce7670f8e4ed81d8cbe21df917a768a",
+  "short": "c2da6908"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi0_libero",
+  "bind": false,
+  "bytes": 3465216,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.13632827997207642,
+    0.013859535567462444,
+    0.009714851155877113,
+    0.005222830455750227,
+    0.009678616188466549,
+    0.0038097675424069166,
+    0.0029028013814240694,
+    0.0028439760208129883,
+    0.002776258857920766,
+    0.0070405262522399426,
+    0.004001738503575325
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 39,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the salad dressing and put it in the tray",
+    "frames": [
+     0,
+     39
+    ],
+    "task": 62
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the salad dressing"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_POsc11__s0__c2da6908",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T21:04:06+00:00",
+ "stream": null,
+ "tag": "joint_POsc11"
+}

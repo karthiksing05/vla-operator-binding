@@ -1,0 +1,636 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 4+5+7+20+21+22+23+24+25+26+27+28+29 --key in|the_basket --name QG01 --rank 4 --goal --source d40 --ndemo 5",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "4+5+7+20+21+22+23+24+25+26+27+28+29",
+  "key": "in|the basket",
+  "lr": 0.0001,
+  "name": "QG01",
+  "ndemo": 5,
+  "rank": 4,
+  "scope": "expert",
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "kitt.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4096282",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a677d14be0902a075f1fffea751d3ba2f8d3d790",
+  "short": "a677d14b"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.003588366089388728,
+    0.001901536132209003,
+    0.0013218653621152043,
+    0.0011037465883418918,
+    0.005352307576686144,
+    0.003656323766335845,
+    0.0034008794464170933,
+    0.003158779814839363,
+    0.0019634750206023455,
+    0.004100346472114325,
+    0.0042971232905983925
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 8007,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put both the alphabet soup and the cream cheese box in the basket",
+    "frames": [
+     61,
+     272
+    ],
+    "task": 4
+   },
+   {
+    "clause": "put both the alphabet soup and the cream cheese box in the basket",
+    "frames": [
+     89,
+     302
+    ],
+    "task": 4
+   },
+   {
+    "clause": "put both the alphabet soup and the cream cheese box in the basket",
+    "frames": [
+     48,
+     255
+    ],
+    "task": 4
+   },
+   {
+    "clause": "put both the alphabet soup and the cream cheese box in the basket",
+    "frames": [
+     70,
+     288
+    ],
+    "task": 4
+   },
+   {
+    "clause": "put both the alphabet soup and the cream cheese box in the basket",
+    "frames": [
+     55,
+     284
+    ],
+    "task": 4
+   },
+   {
+    "clause": "put both the alphabet soup and the tomato sauce in the basket",
+    "frames": [
+     56,
+     259
+    ],
+    "task": 5
+   },
+   {
+    "clause": "put both the alphabet soup and the tomato sauce in the basket",
+    "frames": [
+     56,
+     285
+    ],
+    "task": 5
+   },
+   {
+    "clause": "put both the alphabet soup and the tomato sauce in the basket",
+    "frames": [
+     54,
+     296
+    ],
+    "task": 5
+   },
+   {
+    "clause": "put both the alphabet soup and the tomato sauce in the basket",
+    "frames": [
+     63,
+     288
+    ],
+    "task": 5
+   },
+   {
+    "clause": "put both the alphabet soup and the tomato sauce in the basket",
+    "frames": [
+     57,
+     292
+    ],
+    "task": 5
+   },
+   {
+    "clause": "put both the cream cheese box and the butter in the basket",
+    "frames": [
+     54,
+     279
+    ],
+    "task": 7
+   },
+   {
+    "clause": "put both the cream cheese box and the butter in the basket",
+    "frames": [
+     52,
+     249
+    ],
+    "task": 7
+   },
+   {
+    "clause": "put both the cream cheese box and the butter in the basket",
+    "frames": [
+     61,
+     241
+    ],
+    "task": 7
+   },
+   {
+    "clause": "put both the cream cheese box and the butter in the basket",
+    "frames": [
+     52,
+     244
+    ],
+    "task": 7
+   },
+   {
+    "clause": "put both the cream cheese box and the butter in the basket",
+    "frames": [
+     62,
+     272
+    ],
+    "task": 7
+   },
+   {
+    "clause": "pick up the orange juice and place it in the basket",
+    "frames": [
+     52,
+     143
+    ],
+    "task": 20
+   },
+   {
+    "clause": "pick up the orange juice and place it in the basket",
+    "frames": [
+     52,
+     136
+    ],
+    "task": 20
+   },
+   {
+    "clause": "pick up the orange juice and place it in the basket",
+    "frames": [
+     46,
+     136
+    ],
+    "task": 20
+   },
+   {
+    "clause": "pick up the orange juice and place it in the basket",
+    "frames": [
+     46,
+     129
+    ],
+    "task": 20
+   },
+   {
+    "clause": "pick up the orange juice and place it in the basket",
+    "frames": [
+     45,
+     125
+    ],
+    "task": 20
+   },
+   {
+    "clause": "pick up the ketchup and place it in the basket",
+    "frames": [
+     51,
+     148
+    ],
+    "task": 21
+   },
+   {
+    "clause": "pick up the ketchup and place it in the basket",
+    "frames": [
+     47,
+     141
+    ],
+    "task": 21
+   },
+   {
+    "clause": "pick up the ketchup and place it in the basket",
+    "frames": [
+     55,
+     152
+    ],
+    "task": 21
+   },
+   {
+    "clause": "pick up the ketchup and place it in the basket",
+    "frames": [
+     56,
+     151
+    ],
+    "task": 21
+   },
+   {
+    "clause": "pick up the ketchup and place it in the basket",
+    "frames": [
+     42,
+     137
+    ],
+    "task": 21
+   },
+   {
+    "clause": "pick up the cream cheese and place it in the basket",
+    "frames": [
+     51,
+     130
+    ],
+    "task": 22
+   },
+   {
+    "clause": "pick up the cream cheese and place it in the basket",
+    "frames": [
+     58,
+     153
+    ],
+    "task": 22
+   },
+   {
+    "clause": "pick up the cream cheese and place it in the basket",
+    "frames": [
+     52,
+     167
+    ],
+    "task": 22
+   },
+   {
+    "clause": "pick up the cream cheese and place it in the basket",
+    "frames": [
+     57,
+     138
+    ],
+    "task": 22
+   },
+   {
+    "clause": "pick up the cream cheese and place it in the basket",
+    "frames": [
+     56,
+     171
+    ],
+    "task": 22
+   },
+   {
+    "clause": "pick up the bbq sauce and place it in the basket",
+    "frames": [
+     56,
+     132
+    ],
+    "task": 23
+   },
+   {
+    "clause": "pick up the bbq sauce and place it in the basket",
+    "frames": [
+     54,
+     132
+    ],
+    "task": 23
+   },
+   {
+    "clause": "pick up the bbq sauce and place it in the basket",
+    "frames": [
+     48,
+     161
+    ],
+    "task": 23
+   },
+   {
+    "clause": "pick up the bbq sauce and place it in the basket",
+    "frames": [
+     54,
+     135
+    ],
+    "task": 23
+   },
+   {
+    "clause": "pick up the bbq sauce and place it in the basket",
+    "frames": [
+     43,
+     133
+    ],
+    "task": 23
+   },
+   {
+    "clause": "pick up the alphabet soup and place it in the basket",
+    "frames": [
+     52,
+     155
+    ],
+    "task": 24
+   },
+   {
+    "clause": "pick up the alphabet soup and place it in the basket",
+    "frames": [
+     59,
+     164
+    ],
+    "task": 24
+   },
+   {
+    "clause": "pick up the alphabet soup and place it in the basket",
+    "frames": [
+     50,
+     153
+    ],
+    "task": 24
+   },
+   {
+    "clause": "pick up the alphabet soup and place it in the basket",
+    "frames": [
+     51,
+     152
+    ],
+    "task": 24
+   },
+   {
+    "clause": "pick up the alphabet soup and place it in the basket",
+    "frames": [
+     51,
+     169
+    ],
+    "task": 24
+   },
+   {
+    "clause": "pick up the milk and place it in the basket",
+    "frames": [
+     55,
+     175
+    ],
+    "task": 25
+   },
+   {
+    "clause": "pick up the milk and place it in the basket",
+    "frames": [
+     43,
+     143
+    ],
+    "task": 25
+   },
+   {
+    "clause": "pick up the milk and place it in the basket",
+    "frames": [
+     50,
+     168
+    ],
+    "task": 25
+   },
+   {
+    "clause": "pick up the milk and place it in the basket",
+    "frames": [
+     48,
+     137
+    ],
+    "task": 25
+   },
+   {
+    "clause": "pick up the milk and place it in the basket",
+    "frames": [
+     44,
+     141
+    ],
+    "task": 25
+   },
+   {
+    "clause": "pick up the salad dressing and place it in the basket",
+    "frames": [
+     51,
+     124
+    ],
+    "task": 26
+   },
+   {
+    "clause": "pick up the salad dressing and place it in the basket",
+    "frames": [
+     36,
+     115
+    ],
+    "task": 26
+   },
+   {
+    "clause": "pick up the salad dressing and place it in the basket",
+    "frames": [
+     48,
+     126
+    ],
+    "task": 26
+   },
+   {
+    "clause": "pick up the salad dressing and place it in the basket",
+    "frames": [
+     44,
+     125
+    ],
+    "task": 26
+   },
+   {
+    "clause": "pick up the salad dressing and place it in the basket",
+    "frames": [
+     46,
+     128
+    ],
+    "task": 26
+   },
+   {
+    "clause": "pick up the butter and place it in the basket",
+    "frames": [
+     46,
+     152
+    ],
+    "task": 27
+   },
+   {
+    "clause": "pick up the butter and place it in the basket",
+    "frames": [
+     54,
+     156
+    ],
+    "task": 27
+   },
+   {
+    "clause": "pick up the butter and place it in the basket",
+    "frames": [
+     56,
+     167
+    ],
+    "task": 27
+   },
+   {
+    "clause": "pick up the butter and place it in the basket",
+    "frames": [
+     45,
+     144
+    ],
+    "task": 27
+   },
+   {
+    "clause": "pick up the butter and place it in the basket",
+    "frames": [
+     44,
+     151
+    ],
+    "task": 27
+   },
+   {
+    "clause": "pick up the tomato sauce and place it in the basket",
+    "frames": [
+     55,
+     132
+    ],
+    "task": 28
+   },
+   {
+    "clause": "pick up the tomato sauce and place it in the basket",
+    "frames": [
+     56,
+     130
+    ],
+    "task": 28
+   },
+   {
+    "clause": "pick up the tomato sauce and place it in the basket",
+    "frames": [
+     57,
+     139
+    ],
+    "task": 28
+   },
+   {
+    "clause": "pick up the tomato sauce and place it in the basket",
+    "frames": [
+     50,
+     133
+    ],
+    "task": 28
+   },
+   {
+    "clause": "pick up the tomato sauce and place it in the basket",
+    "frames": [
+     65,
+     148
+    ],
+    "task": 28
+   },
+   {
+    "clause": "pick up the chocolate pudding and place it in the basket",
+    "frames": [
+     58,
+     162
+    ],
+    "task": 29
+   },
+   {
+    "clause": "pick up the chocolate pudding and place it in the basket",
+    "frames": [
+     48,
+     161
+    ],
+    "task": 29
+   },
+   {
+    "clause": "pick up the chocolate pudding and place it in the basket",
+    "frames": [
+     55,
+     159
+    ],
+    "task": 29
+   },
+   {
+    "clause": "pick up the chocolate pudding and place it in the basket",
+    "frames": [
+     50,
+     153
+    ],
+    "task": 29
+   },
+   {
+    "clause": "pick up the chocolate pudding and place it in the basket",
+    "frames": [
+     57,
+     224
+    ],
+    "task": 29
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "in|the basket"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_QG01__s0__a677d14b",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T01:39:26+00:00",
+ "stream": null,
+ "tag": "joint_QG01"
+}

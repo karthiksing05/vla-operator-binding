@@ -1,0 +1,156 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 27 --key put|the_butter --name QO10 --rank 4 --approach --source d40 --ndemo 5",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "27",
+  "key": "put|the butter",
+  "lr": 0.0001,
+  "name": "QO10",
+  "ndemo": 5,
+  "rank": 4,
+  "scope": "expert",
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "heistotron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4096291",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a677d14be0902a075f1fffea751d3ba2f8d3d790",
+  "short": "a677d14b"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.003082175273448229,
+    0.0014237205032259226,
+    0.0013908724067732692,
+    0.001213548588566482,
+    0.0054169269278645515,
+    0.0014355367748066783,
+    0.0011265176581218839,
+    0.0009739335509948432,
+    0.0015443462179973722,
+    0.007293666247278452,
+    0.0026476774364709854
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 245,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the butter and place it in the basket",
+    "frames": [
+     0,
+     46
+    ],
+    "task": 27
+   },
+   {
+    "clause": "pick up the butter and place it in the basket",
+    "frames": [
+     0,
+     54
+    ],
+    "task": 27
+   },
+   {
+    "clause": "pick up the butter and place it in the basket",
+    "frames": [
+     0,
+     56
+    ],
+    "task": 27
+   },
+   {
+    "clause": "pick up the butter and place it in the basket",
+    "frames": [
+     0,
+     45
+    ],
+    "task": 27
+   },
+   {
+    "clause": "pick up the butter and place it in the basket",
+    "frames": [
+     0,
+     44
+    ],
+    "task": 27
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the butter"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_QO10__s0__a677d14b",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T01:45:37+00:00",
+ "stream": null,
+ "tag": "joint_QO10"
+}

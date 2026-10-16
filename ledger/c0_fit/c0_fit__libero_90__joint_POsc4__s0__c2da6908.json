@@ -1,0 +1,122 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 3465216,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 3465216,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 57 --key put|the_cream_cheese --name POsc4 --rank 4 --approach --backbone pi0_libero",
+ "config": {
+  "approach": true,
+  "backbone": "pi0_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "57",
+  "key": "put|the cream cheese",
+  "lr": 0.0001,
+  "name": "POsc4",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "samantha.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094607",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c2da69081ce7670f8e4ed81d8cbe21df917a768a",
+  "short": "c2da6908"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi0_libero",
+  "bind": false,
+  "bytes": 3465216,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.059264685958623886,
+    0.00956769473850727,
+    0.006379751954227686,
+    0.003287603845819831,
+    0.007825853303074837,
+    0.003554233815521002,
+    0.002484251745045185,
+    0.0022941494826227427,
+    0.002675264608114958,
+    0.007105174008756876,
+    0.004053614102303982
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 66,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the cream cheese and put it in the tray",
+    "frames": [
+     0,
+     66
+    ],
+    "task": 57
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the cream cheese"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_POsc4__s0__c2da6908",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T21:04:05+00:00",
+ "stream": null,
+ "tag": "joint_POsc4"
+}

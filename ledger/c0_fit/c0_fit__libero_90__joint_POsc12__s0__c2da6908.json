@@ -1,0 +1,138 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 3465216,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 3465216,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 49+54+59 --key put|the_tomato_sauce --name POsc12 --rank 4 --approach --backbone pi0_libero",
+ "config": {
+  "approach": true,
+  "backbone": "pi0_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "49+54+59",
+  "key": "put|the tomato sauce",
+  "lr": 0.0001,
+  "name": "POsc12",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cheetah.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094601",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c2da69081ce7670f8e4ed81d8cbe21df917a768a",
+  "short": "c2da6908"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi0_libero",
+  "bind": false,
+  "bytes": 3465216,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.09170173108577728,
+    0.030022654682397842,
+    0.02257922664284706,
+    0.015715913847088814,
+    0.016909610480070114,
+    0.010540737770497799,
+    0.008774187415838242,
+    0.007658123970031738,
+    0.006600682623684406,
+    0.011302689090371132,
+    0.008734294213354588
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 186,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the tomato sauce and put it in the basket",
+    "frames": [
+     0,
+     75
+    ],
+    "task": 49
+   },
+   {
+    "clause": "pick up the tomato sauce and put it in the basket",
+    "frames": [
+     0,
+     39
+    ],
+    "task": 54
+   },
+   {
+    "clause": "pick up the tomato sauce and put it in the tray",
+    "frames": [
+     0,
+     72
+    ],
+    "task": 59
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the tomato sauce"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_POsc12__s0__c2da6908",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T21:03:14+00:00",
+ "stream": null,
+ "tag": "joint_POsc12"
+}

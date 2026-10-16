@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_14_p0.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 13860864,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 13860864,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 14 --tag _p0 --backbone pi0_libero",
+ "config": {
+  "backbone": "pi0_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_p0",
+  "task": 14
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "perseverance.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094622",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "bad3a3bcc28d6390e7c62a0d66b8801c1f1b18e7",
+  "short": "bad3a3bc"
+ },
+ "keys": {
+  "task": 14
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.09333502501249313,
+    0.011784136295318604,
+    0.009609414264559746,
+    0.004280836321413517,
+    0.008896484039723873,
+    0.004018625244498253,
+    0.0033614689018577337,
+    0.003155804704874754,
+    0.002518040593713522,
+    0.00577153917402029,
+    0.004256278742104769
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 224,
+  "final_loss": 0.004256278742104769,
+  "first_loss": 0.09333502501249313,
+  "n_banks": 126,
+  "n_frames": 108,
+  "n_params": 6930432,
+  "task": 14,
+  "text": "put the middle black bowl on the plate",
+  "train_secs": 207.48896026611328
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___p0__task-14__s0__bad3a3bc",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T20:34:25+00:00",
+ "stream": null,
+ "tag": "_p0"
+}

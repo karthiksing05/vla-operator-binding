@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g7_main_54_dsrlz_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=dsrl:54?train=0&load=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrlz_54_actor.pt&official=1&lora=none SUITE=libero_90 TASKS=54 TRIALS=20 (job 4096884)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_states_b",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g7_main_54_dsrlz_seed13.json",
+   "port": 9162,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "54",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4096884",
+  "mode": "dsrl:54?train=0&load=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrlz_54_actor.pt&official=1&lora=none"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "megazord.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4096884",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g7_main",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a677d14be0902a075f1fffea751d3ba2f8d3d790",
+  "short": "a677d14b"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "dsrl:54?train=0&load=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrlz_54_actor.pt&official=1&lora=none",
+  "tasks": "54",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 526.8961012363434,
+  "success_rate": 1.0,
+  "tasks": {
+   "54": {
+    "errors": 0,
+    "language": "pick up the tomato sauce and put it in the basket",
+    "mean_steps": 262.65,
+    "n": 20,
+    "success_rate": 1.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g7_main__libero_90__dsrlz_seed13__first_trial-0__modec24000c1e0ea__tasks-54__trials-20__s7__a677d14b",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-16T01:56:19+00:00",
+ "stream": null,
+ "tag": "dsrlz_seed13"
+}

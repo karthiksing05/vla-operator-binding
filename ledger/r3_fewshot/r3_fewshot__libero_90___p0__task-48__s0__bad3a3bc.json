@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_48_p0.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 13860864,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 13860864,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 48 --tag _p0 --backbone pi0_libero",
+ "config": {
+  "backbone": "pi0_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_p0",
+  "task": 48
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "trublu.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094629",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "bad3a3bcc28d6390e7c62a0d66b8801c1f1b18e7",
+  "short": "bad3a3bc"
+ },
+ "keys": {
+  "task": 48
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.08462375402450562,
+    0.007915101945400238,
+    0.006295255851000547,
+    0.004547106102108955,
+    0.006173779722303152,
+    0.0031177063938230276,
+    0.002101446269080043,
+    0.0023701461032032967,
+    0.0020574331283569336,
+    0.0048784250393509865,
+    0.0033303096424788237
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 3092,
+  "final_loss": 0.0033303096424788237,
+  "first_loss": 0.08462375402450562,
+  "n_banks": 126,
+  "n_frames": 173,
+  "n_params": 6930432,
+  "task": 48,
+  "text": "pick up the ketchup and put it in the basket",
+  "train_secs": 209.7169704437256
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___p0__task-48__s0__bad3a3bc",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T20:34:21+00:00",
+ "stream": null,
+ "tag": "_p0"
+}

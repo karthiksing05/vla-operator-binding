@@ -156,7 +156,35 @@ def read(record):
                             script="experiments/g4_ood.py", command=" ".join(sys.argv)))
 
 
+def diagnose(record):
+    """Why the library adds nothing here: each prototype's flow loss on its first logged batch and its last three (ledger c0_fit), G4's
+    prototypes (pi0.5's own training demonstrations) against E3's (LIBERO-90 demonstrations the policy never saw)."""
+    import glob
+    import numpy as np
+
+    def curve(n):
+        fs = sorted(glob.glob(os.path.join(ROOT, "ledger", "c0_fit", f"*joint_{n}__*.json")))
+        c = json.load(open(fs[-1]))["metrics"]["curve"]
+        loss = c["loss"] if isinstance(c, dict) else c
+        return float(loss[0]), float(np.mean(loss[-3:]))                    # 11 logged batches: the first, the mean of the last 3
+    e3 = json.load(open(os.path.join(R, "e3_plan.json")))
+    names = {"g4": sorted(json.load(open(PLAN))["protos"]),
+             "e3": sorted({v["object_proto"] for v in e3.values()} | {v["goal_proto"] for v in e3.values()})}
+    res = {}
+    for k, ns in names.items():
+        c = [curve(n) for n in ns]
+        res[k] = dict(n=len(c), first=float(np.mean([a for a, _ in c])), last=float(np.mean([b for _, b in c])))
+    print(json.dumps(res, indent=1), flush=True)
+    if record:
+        from lifelong_ood import ledger
+        print(ledger.record("g4_ood", bench="libero_ood", tag="diagnosis", seed=SEED, metrics=res,
+                            bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config={},
+                            script="experiments/g4_ood.py", command=" ".join(sys.argv)))
+
+
 if __name__ == "__main__":
+    if "--diagnose" in sys.argv:
+        diagnose("--record" in sys.argv)
     if "--plan" in sys.argv:
         plan()
     if "--fit" in sys.argv:

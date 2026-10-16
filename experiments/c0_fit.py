@@ -46,6 +46,8 @@ def main():
     ap.add_argument("--init", default="", help="plan E2: start --joint from this primitive's weights (a child concept starts from "
                                                 "its parent's prototype and specialises on its own demonstrations)")
     ap.add_argument("--name", default="", help="the file name of --joint")
+    ap.add_argument("--source", default="l90", help="--joint: l90 (LIBERO-90 tasks) or d40 (pi0.5's 40 training tasks; plan G4)")
+    ap.add_argument("--ndemo", type=int, default=1, help="--joint: demonstrations per task (from --demo on)")
     ap.add_argument("--backbone", default="pi05_libero", help="plan G3: the policy the primitive is fitted on (pi05_libero, "
                                                                  "pi0_libero, smolvla); its own action normalisation and chunk length")
     ap.add_argument("--bind", action="store_true", help="--joint: fit under attention binding (each task's own demo prototype, "
@@ -128,20 +130,28 @@ def joint(a):
     spec = importlib.util.spec_from_file_location("r3p", os.path.join(ROOT, "experiments", "r3_prepare.py"))
     r3p = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(r3p)
-    texts, _ = r3p.libero90_texts()
     from lifelong_ood.policy.backbone import PolicyBackbone
     bk, norm = backbone(a.backbone)
-    d90 = D.Demos90()
+    if a.source == "d40":                                                   # plan G4: pi0.5's own 40 training tasks (task_index of
+        d90 = D.Demos()                                                     # its LeRobot set), a.ndemo demonstrations each
+        texts = d90.tasks
+        demos_of = lambda t: d90.episodes(t)[a.demo:a.demo + a.ndemo]       # noqa: E731
+    else:
+        texts, _ = r3p.libero90_texts()
+        d90 = D.Demos90()
+        demos_of = lambda t: d90.episodes_of_task(t)[a.demo:a.demo + a.ndemo]   # noqa: E731
     obs, rows, used, frame_info = [], [], [], []
+    pairs = []
     for t in [int(x) for x in a.joint.split("+")]:
+        eps_ = demos_of(t)
+        if not eps_:
+            print(f"[c0j] task {t}: the dataset has no demonstration under its instruction; skipped", flush=True)
+        pairs += [(t, e) for e in eps_]
+    for t, e_ in pairs:
         steps = P.steps_of(texts[t])
         match = P.goal_key if a.goal else P.object_key if a.approach else P.step_key
         s = next((i for i, c in enumerate(steps) if match(c) == a.key), None)
-        eps_ = d90.episodes_of_task(t)
-        if len(eps_) <= a.demo:
-            print(f"[c0j] task {t}: the dataset has no demonstration under its instruction; skipped", flush=True)
-            continue
-        ep = d90.load(eps_[a.demo])
+        ep = d90.load(e_)
         segs = P.segment(ep["actions"], len(steps))
         if s is None or segs is None:
             print(f"[c0j] task {t}: no step with key {a.key} (or no release to cut at); skipped", flush=True)

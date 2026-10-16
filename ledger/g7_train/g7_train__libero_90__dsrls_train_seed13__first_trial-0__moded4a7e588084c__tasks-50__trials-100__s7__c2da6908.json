@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g7_train_50_dsrls_train_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=dsrl:50?train=1&save=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrls_50_actor.pt&warmup=10&official=1&lora=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_50_sc.pt SUITE=libero_90 TASKS=50 TRIALS=100 (job 4094745)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g7_train_50_dsrls_train_seed13.json",
+   "port": 9705,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 30,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "50",
+   "trials": 100,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4094745",
+  "mode": "dsrl:50?train=1&save=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrls_50_actor.pt&warmup=10&official=1&lora=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_50_sc.pt"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "kitt.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094745",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g7_train",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c2da69081ce7670f8e4ed81d8cbe21df917a768a",
+  "short": "c2da6908"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "dsrl:50?train=1&save=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrls_50_actor.pt&warmup=10&official=1&lora=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_50_sc.pt",
+  "tasks": "50",
+  "trials": 100
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 100,
+  "secs": 4970.332290649414,
+  "success_rate": 0.86,
+  "tasks": {
+   "50": {
+    "errors": 0,
+    "language": "pick up the alphabet soup and put it in the basket",
+    "mean_steps": 160.84,
+    "n": 100,
+    "success_rate": 0.86
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g7_train__libero_90__dsrls_train_seed13__first_trial-0__moded4a7e588084c__tasks-50__trials-100__s7__c2da6908",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-15T22:29:06+00:00",
+ "stream": null,
+ "tag": "dsrls_train_seed13"
+}

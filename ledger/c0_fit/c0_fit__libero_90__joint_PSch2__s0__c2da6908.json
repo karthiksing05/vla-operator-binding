@@ -1,0 +1,130 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 3465216,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 3465216,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 14+15 --key put|the_black_bowl --name PSch2 --rank 4 --approach --backbone pi0_libero",
+ "config": {
+  "approach": true,
+  "backbone": "pi0_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "14+15",
+  "key": "put|the black bowl",
+  "lr": 0.0001,
+  "name": "PSch2",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "deebot.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094591",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c2da69081ce7670f8e4ed81d8cbe21df917a768a",
+  "short": "c2da6908"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi0_libero",
+  "bind": false,
+  "bytes": 3465216,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.11067226529121399,
+    0.02428663894534111,
+    0.01670258305966854,
+    0.007735310588032007,
+    0.012415804900228977,
+    0.0055253636091947556,
+    0.004941058810800314,
+    0.004355882294476032,
+    0.0045558190904557705,
+    0.009360024705529213,
+    0.006413416936993599
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 81,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the middle black bowl on the plate",
+    "frames": [
+     0,
+     38
+    ],
+    "task": 14
+   },
+   {
+    "clause": "put the middle black bowl on top of the cabinet",
+    "frames": [
+     0,
+     43
+    ],
+    "task": 15
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the black bowl"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_PSch2__s0__c2da6908",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T21:04:17+00:00",
+ "stream": null,
+ "tag": "joint_PSch2"
+}

@@ -1,0 +1,498 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g3_crossmodel.py --read --record --backbone pi0_libero",
+ "config": {
+  "backbone": "pi0_libero"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g3_crossmodel",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c2da69081ce7670f8e4ed81d8cbe21df917a768a",
+  "short": "c2da6908"
+ },
+ "keys": {},
+ "metrics": {
+  "acceptance": {
+   "10": {
+    "hfac": 7,
+    "lora": 8,
+    "zs": 3
+   },
+   "12": {
+    "hfac": 10,
+    "lora": 8,
+    "zs": 0
+   },
+   "13": {
+    "hfac": 4,
+    "lora": 4,
+    "zs": 0
+   },
+   "14": {
+    "hfac": 5,
+    "lora": 5,
+    "zs": 1
+   },
+   "15": {
+    "hfac": 9,
+    "lora": 5,
+    "zs": 0
+   },
+   "25": {
+    "hfac": 2,
+    "lora": 2,
+    "zs": 0
+   },
+   "30": {
+    "hfac": 0,
+    "lora": 5,
+    "zs": 0
+   },
+   "31": {
+    "hfac": 4,
+    "lora": 9,
+    "zs": 0
+   },
+   "36": {
+    "hfac": 3,
+    "lora": 7,
+    "zs": 0
+   },
+   "41": {
+    "hfac": 2,
+    "lora": 9,
+    "zs": 0
+   },
+   "43": {
+    "hfac": 9,
+    "lora": 9,
+    "zs": 9
+   },
+   "46": {
+    "hfac": 2,
+    "lora": 4,
+    "zs": 2
+   },
+   "47": {
+    "hfac": 8,
+    "lora": 8,
+    "zs": 5
+   },
+   "48": {
+    "hfac": 1,
+    "lora": 0,
+    "zs": 0
+   },
+   "49": {
+    "hfac": 5,
+    "lora": 8,
+    "zs": 0
+   },
+   "50": {
+    "hfac": 9,
+    "lora": 10,
+    "zs": 0
+   },
+   "51": {
+    "hfac": 8,
+    "zs": 3
+   },
+   "52": {
+    "hfac": 4,
+    "lora": 2,
+    "zs": 0
+   },
+   "53": {
+    "hfac": 7,
+    "lora": 6,
+    "zs": 0
+   },
+   "54": {
+    "hfac": 4,
+    "lora": 7,
+    "zs": 0
+   },
+   "55": {
+    "hfac": 5,
+    "lora": 3,
+    "zs": 1
+   },
+   "56": {
+    "hfac": 10,
+    "lora": 10,
+    "zs": 2
+   },
+   "57": {
+    "hfac": 9,
+    "lora": 1,
+    "zs": 3
+   },
+   "58": {
+    "hfac": 2,
+    "lora": 0,
+    "zs": 0
+   },
+   "59": {
+    "hfac": 0,
+    "lora": 4,
+    "zs": 0
+   },
+   "61": {
+    "hfac": 8,
+    "lora": 6,
+    "zs": 0
+   },
+   "62": {
+    "hfac": 0,
+    "lora": 2,
+    "zs": 0
+   },
+   "71": {
+    "hfac": 3,
+    "lora": 4,
+    "zs": 0
+   },
+   "72": {
+    "hfac": 9,
+    "lora": 8,
+    "zs": 6
+   },
+   "9": {
+    "hfac": 5,
+    "lora": 10,
+    "zs": 0
+   }
+  },
+  "descriptive": {
+   "hfac_vs_lora": {
+    "diff": {
+     "diff": -0.05517241379310345,
+     "hi": 0.06900862068965455,
+     "hi90": 0.05,
+     "lo": -0.18275862068965518,
+     "lo90": -0.16206896551724137,
+     "n_pairs": 580,
+     "n_tasks": 29
+    },
+    "discordant": [
+     87,
+     119
+    ],
+    "n": 580,
+    "sign_p": 0.030533701546126262,
+    "tasks": 29,
+    "x": 304,
+    "y": 336
+   },
+   "hfac_vs_zs": {
+    "diff": {
+     "diff": 0.39166666666666666,
+     "hi": 0.51,
+     "hi90": 0.49166666666666664,
+     "lo": 0.275,
+     "lo90": 0.2916666666666667,
+     "n_pairs": 600,
+     "n_tasks": 30
+    },
+    "discordant": [
+     256,
+     21
+    ],
+    "n": 600,
+    "sign_p": 1.5798425636203844e-52,
+    "tasks": 30,
+    "x": 320,
+    "y": 85
+   }
+  },
+  "hypotheses": {
+   "H1": {
+    "diff": {
+     "diff": 0.3983333333333333,
+     "hi": 0.5133333333333333,
+     "hi90": 0.495,
+     "lo": 0.2866666666666667,
+     "lo90": 0.30333333333333334,
+     "n_pairs": 600,
+     "n_tasks": 30
+    },
+    "discordant": [
+     250,
+     11
+    ],
+    "n": 600,
+    "passes": true,
+    "sign_p": 4.3721752392187246e-60,
+    "tasks": 30,
+    "x": 324,
+    "y": 85
+   },
+   "H2": {
+    "diff": {
+     "diff": -0.03793103448275862,
+     "hi": 0.08103448275862069,
+     "hi90": 0.06379310344827586,
+     "lo": -0.16551724137931034,
+     "lo90": -0.14482758620689656,
+     "n_pairs": 580,
+     "n_tasks": 29
+    },
+    "discordant": [
+     83,
+     105
+    ],
+    "n": 580,
+    "noninferior": false,
+    "sign_p": 0.12540008404533765,
+    "tasks": 29,
+    "x": 308,
+    "y": 330
+   }
+  },
+  "kept": {
+   "10": "hfac",
+   "12": "hfac",
+   "13": "hfac",
+   "14": "hfac",
+   "15": "hfac",
+   "25": "hfac",
+   "30": "zs",
+   "31": "hfac",
+   "36": "hfac",
+   "41": "hfac",
+   "43": "zs",
+   "46": "zs",
+   "47": "hfac",
+   "48": "hfac",
+   "49": "hfac",
+   "50": "hfac",
+   "51": "hfac",
+   "52": "hfac",
+   "53": "hfac",
+   "54": "hfac",
+   "55": "hfac",
+   "56": "hfac",
+   "57": "hfac",
+   "58": "hfac",
+   "59": "zs",
+   "61": "hfac",
+   "62": "zs",
+   "71": "hfac",
+   "72": "hfac",
+   "9": "hfac"
+  },
+  "kept_lora": {
+   "10": "lora",
+   "12": "lora",
+   "13": "lora",
+   "14": "lora",
+   "15": "lora",
+   "25": "lora",
+   "30": "lora",
+   "31": "lora",
+   "36": "lora",
+   "41": "lora",
+   "43": "zs",
+   "46": "lora",
+   "47": "lora",
+   "48": "zs",
+   "49": "lora",
+   "50": "lora",
+   "52": "lora",
+   "53": "lora",
+   "54": "lora",
+   "55": "lora",
+   "56": "lora",
+   "57": "zs",
+   "58": "zs",
+   "59": "lora",
+   "61": "lora",
+   "62": "lora",
+   "71": "lora",
+   "72": "lora",
+   "9": "lora"
+  },
+  "missing": [],
+  "per_task": {
+   "10": {
+    "hfac": 16,
+    "lora": 19,
+    "zs": 16
+   },
+   "12": {
+    "hfac": 18,
+    "lora": 14,
+    "zs": 0
+   },
+   "13": {
+    "hfac": 13,
+    "lora": 13,
+    "zs": 0
+   },
+   "14": {
+    "hfac": 15,
+    "lora": 4,
+    "zs": 1
+   },
+   "15": {
+    "hfac": 20,
+    "lora": 15,
+    "zs": 0
+   },
+   "25": {
+    "hfac": 9,
+    "lora": 4,
+    "zs": 0
+   },
+   "30": {
+    "hfac": 0,
+    "lora": 13,
+    "zs": 0
+   },
+   "31": {
+    "hfac": 5,
+    "lora": 20,
+    "zs": 0
+   },
+   "36": {
+    "hfac": 6,
+    "lora": 14,
+    "zs": 0
+   },
+   "41": {
+    "hfac": 2,
+    "lora": 20,
+    "zs": 0
+   },
+   "43": {
+    "hfac": 14,
+    "lora": 15,
+    "zs": 15
+   },
+   "46": {
+    "hfac": 4,
+    "lora": 4,
+    "zs": 6
+   },
+   "47": {
+    "hfac": 17,
+    "lora": 18,
+    "zs": 10
+   },
+   "48": {
+    "hfac": 5,
+    "lora": 7,
+    "zs": 0
+   },
+   "49": {
+    "hfac": 12,
+    "lora": 13,
+    "zs": 1
+   },
+   "50": {
+    "hfac": 15,
+    "lora": 17,
+    "zs": 0
+   },
+   "51": {
+    "hfac": 16,
+    "zs": 11
+   },
+   "52": {
+    "hfac": 8,
+    "lora": 7,
+    "zs": 0
+   },
+   "53": {
+    "hfac": 16,
+    "lora": 15,
+    "zs": 0
+   },
+   "54": {
+    "hfac": 8,
+    "lora": 9,
+    "zs": 0
+   },
+   "55": {
+    "hfac": 8,
+    "lora": 8,
+    "zs": 2
+   },
+   "56": {
+    "hfac": 20,
+    "lora": 20,
+    "zs": 3
+   },
+   "57": {
+    "hfac": 15,
+    "lora": 2,
+    "zs": 5
+   },
+   "58": {
+    "hfac": 4,
+    "lora": 2,
+    "zs": 0
+   },
+   "59": {
+    "hfac": 0,
+    "lora": 8,
+    "zs": 2
+   },
+   "61": {
+    "hfac": 17,
+    "lora": 12,
+    "zs": 0
+   },
+   "62": {
+    "hfac": 1,
+    "lora": 1,
+    "zs": 0
+   },
+   "71": {
+    "hfac": 11,
+    "lora": 11,
+    "zs": 0
+   },
+   "72": {
+    "hfac": 15,
+    "lora": 16,
+    "zs": 13
+   },
+   "9": {
+    "hfac": 10,
+    "lora": 15,
+    "zs": 0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g3_crossmodel__libero_90__read_pi0__s13__c2da6908",
+ "schema": 1,
+ "script": "experiments/g3_crossmodel.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-16T00:04:03+00:00",
+ "stream": null,
+ "tag": "read_pi0"
+}

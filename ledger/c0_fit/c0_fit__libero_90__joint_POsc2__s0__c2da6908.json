@@ -1,0 +1,138 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 3465216,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 3465216,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 3+4+51+56 --key put|the_butter --name POsc2 --rank 4 --approach --backbone pi0_libero",
+ "config": {
+  "approach": true,
+  "backbone": "pi0_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "3+4+51+56",
+  "key": "put|the butter",
+  "lr": 0.0001,
+  "name": "POsc2",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "samantha.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094606",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c2da69081ce7670f8e4ed81d8cbe21df917a768a",
+  "short": "c2da6908"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi0_libero",
+  "bind": false,
+  "bytes": 3465216,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.13934536278247833,
+    0.03798835352063179,
+    0.02562456578016281,
+    0.015533852390944958,
+    0.017890747636556625,
+    0.011145043186843395,
+    0.010190279223024845,
+    0.009387131780385971,
+    0.008834254927933216,
+    0.012852971442043781,
+    0.009601477533578873
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 142,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the butter at the back in the top drawer of the cabinet",
+    "frames": [
+     0,
+     53
+    ],
+    "task": 3
+   },
+   {
+    "clause": "put the butter at the front in the top drawer of the cabinet",
+    "frames": [
+     0,
+     51
+    ],
+    "task": 4
+   },
+   {
+    "clause": "pick up the butter and put it in the tray",
+    "frames": [
+     0,
+     38
+    ],
+    "task": 56
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the butter"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_POsc2__s0__c2da6908",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T21:04:04+00:00",
+ "stream": null,
+ "tag": "joint_POsc2"
+}

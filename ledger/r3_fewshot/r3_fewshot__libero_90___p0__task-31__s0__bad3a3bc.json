@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_31_p0.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 13860864,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 13860864,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 31 --tag _p0 --backbone pi0_libero",
+ "config": {
+  "backbone": "pi0_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_p0",
+  "task": 31
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "hk47.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094611",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "bad3a3bcc28d6390e7c62a0d66b8801c1f1b18e7",
+  "short": "bad3a3bc"
+ },
+ "keys": {
+  "task": 31
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.13413888216018677,
+    0.013276075944304466,
+    0.009979554452002048,
+    0.004326848313212395,
+    0.008526548743247986,
+    0.0035189602058380842,
+    0.0033676892053335905,
+    0.0029301063623279333,
+    0.002830138197168708,
+    0.005899250507354736,
+    0.004876815248280764
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 2561,
+  "final_loss": 0.004876815248280764,
+  "first_loss": 0.13413888216018677,
+  "n_banks": 126,
+  "n_frames": 146,
+  "n_params": 6930432,
+  "task": 31,
+  "text": "put the black bowl on top of the cabinet",
+  "train_secs": 209.54057574272156
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___p0__task-31__s0__bad3a3bc",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T20:34:41+00:00",
+ "stream": null,
+ "tag": "_p0"
+}

@@ -1,0 +1,556 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 10+30+31+32+33+34+35+36+37+38+39 --key on|the_plate --name QG05 --rank 4 --goal --source d40 --ndemo 5",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "10+30+31+32+33+34+35+36+37+38+39",
+  "key": "on|the plate",
+  "lr": 0.0001,
+  "name": "QG05",
+  "ndemo": 5,
+  "rank": 4,
+  "scope": "expert",
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "sonny.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4096286",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a677d14be0902a075f1fffea751d3ba2f8d3d790",
+  "short": "a677d14b"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.002470634179189801,
+    0.0016636302461847663,
+    0.0021304090041667223,
+    0.0014331709826365113,
+    0.004161172546446323,
+    0.0023990485351532698,
+    0.001987829804420471,
+    0.0017732406267896295,
+    0.0030219494365155697,
+    0.00852023996412754,
+    0.0022076540626585484
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 4166,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the bowl on the plate",
+    "frames": [
+     48,
+     112
+    ],
+    "task": 10
+   },
+   {
+    "clause": "put the bowl on the plate",
+    "frames": [
+     37,
+     87
+    ],
+    "task": 10
+   },
+   {
+    "clause": "put the bowl on the plate",
+    "frames": [
+     35,
+     103
+    ],
+    "task": 10
+   },
+   {
+    "clause": "put the bowl on the plate",
+    "frames": [
+     41,
+     106
+    ],
+    "task": 10
+   },
+   {
+    "clause": "put the bowl on the plate",
+    "frames": [
+     43,
+     105
+    ],
+    "task": 10
+   },
+   {
+    "clause": "pick up the black bowl next to the cookie box and place it on the plate",
+    "frames": [
+     47,
+     110
+    ],
+    "task": 30
+   },
+   {
+    "clause": "pick up the black bowl next to the cookie box and place it on the plate",
+    "frames": [
+     49,
+     113
+    ],
+    "task": 30
+   },
+   {
+    "clause": "pick up the black bowl next to the cookie box and place it on the plate",
+    "frames": [
+     51,
+     111
+    ],
+    "task": 30
+   },
+   {
+    "clause": "pick up the black bowl next to the cookie box and place it on the plate",
+    "frames": [
+     46,
+     125
+    ],
+    "task": 30
+   },
+   {
+    "clause": "pick up the black bowl next to the cookie box and place it on the plate",
+    "frames": [
+     47,
+     157
+    ],
+    "task": 30
+   },
+   {
+    "clause": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+    "frames": [
+     46,
+     138
+    ],
+    "task": 31
+   },
+   {
+    "clause": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+    "frames": [
+     45,
+     127
+    ],
+    "task": 31
+   },
+   {
+    "clause": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+    "frames": [
+     39,
+     129
+    ],
+    "task": 31
+   },
+   {
+    "clause": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+    "frames": [
+     58,
+     140
+    ],
+    "task": 31
+   },
+   {
+    "clause": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+    "frames": [
+     50,
+     149
+    ],
+    "task": 31
+   },
+   {
+    "clause": "pick up the black bowl on the ramekin and place it on the plate",
+    "frames": [
+     33,
+     100
+    ],
+    "task": 32
+   },
+   {
+    "clause": "pick up the black bowl on the ramekin and place it on the plate",
+    "frames": [
+     35,
+     116
+    ],
+    "task": 32
+   },
+   {
+    "clause": "pick up the black bowl on the ramekin and place it on the plate",
+    "frames": [
+     37,
+     107
+    ],
+    "task": 32
+   },
+   {
+    "clause": "pick up the black bowl on the ramekin and place it on the plate",
+    "frames": [
+     31,
+     101
+    ],
+    "task": 32
+   },
+   {
+    "clause": "pick up the black bowl on the ramekin and place it on the plate",
+    "frames": [
+     26,
+     86
+    ],
+    "task": 32
+   },
+   {
+    "clause": "pick up the black bowl on the stove and place it on the plate",
+    "frames": [
+     25,
+     124
+    ],
+    "task": 33
+   },
+   {
+    "clause": "pick up the black bowl on the stove and place it on the plate",
+    "frames": [
+     34,
+     139
+    ],
+    "task": 33
+   },
+   {
+    "clause": "pick up the black bowl on the stove and place it on the plate",
+    "frames": [
+     40,
+     148
+    ],
+    "task": 33
+   },
+   {
+    "clause": "pick up the black bowl on the stove and place it on the plate",
+    "frames": [
+     25,
+     142
+    ],
+    "task": 33
+   },
+   {
+    "clause": "pick up the black bowl on the stove and place it on the plate",
+    "frames": [
+     33,
+     140
+    ],
+    "task": 33
+   },
+   {
+    "clause": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+    "frames": [
+     36,
+     84
+    ],
+    "task": 34
+   },
+   {
+    "clause": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+    "frames": [
+     31,
+     85
+    ],
+    "task": 34
+   },
+   {
+    "clause": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+    "frames": [
+     39,
+     128
+    ],
+    "task": 34
+   },
+   {
+    "clause": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+    "frames": [
+     35,
+     84
+    ],
+    "task": 34
+   },
+   {
+    "clause": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+    "frames": [
+     36,
+     102
+    ],
+    "task": 34
+   },
+   {
+    "clause": "pick up the black bowl on the cookie box and place it on the plate",
+    "frames": [
+     46,
+     101
+    ],
+    "task": 35
+   },
+   {
+    "clause": "pick up the black bowl on the cookie box and place it on the plate",
+    "frames": [
+     45,
+     96
+    ],
+    "task": 35
+   },
+   {
+    "clause": "pick up the black bowl on the cookie box and place it on the plate",
+    "frames": [
+     48,
+     119
+    ],
+    "task": 35
+   },
+   {
+    "clause": "pick up the black bowl on the cookie box and place it on the plate",
+    "frames": [
+     41,
+     102
+    ],
+    "task": 35
+   },
+   {
+    "clause": "pick up the black bowl on the cookie box and place it on the plate",
+    "frames": [
+     46,
+     111
+    ],
+    "task": 35
+   },
+   {
+    "clause": "pick up the black bowl next to the plate and place it on the plate",
+    "frames": [
+     56,
+     107
+    ],
+    "task": 36
+   },
+   {
+    "clause": "pick up the black bowl next to the plate and place it on the plate",
+    "frames": [
+     58,
+     125
+    ],
+    "task": 36
+   },
+   {
+    "clause": "pick up the black bowl next to the plate and place it on the plate",
+    "frames": [
+     55,
+     121
+    ],
+    "task": 36
+   },
+   {
+    "clause": "pick up the black bowl next to the plate and place it on the plate",
+    "frames": [
+     53,
+     138
+    ],
+    "task": 36
+   },
+   {
+    "clause": "pick up the black bowl next to the plate and place it on the plate",
+    "frames": [
+     47,
+     125
+    ],
+    "task": 36
+   },
+   {
+    "clause": "pick up the black bowl next to the ramekin and place it on the plate",
+    "frames": [
+     48,
+     112
+    ],
+    "task": 37
+   },
+   {
+    "clause": "pick up the black bowl next to the ramekin and place it on the plate",
+    "frames": [
+     49,
+     132
+    ],
+    "task": 37
+   },
+   {
+    "clause": "pick up the black bowl next to the ramekin and place it on the plate",
+    "frames": [
+     57,
+     120
+    ],
+    "task": 37
+   },
+   {
+    "clause": "pick up the black bowl next to the ramekin and place it on the plate",
+    "frames": [
+     51,
+     116
+    ],
+    "task": 37
+   },
+   {
+    "clause": "pick up the black bowl next to the ramekin and place it on the plate",
+    "frames": [
+     56,
+     143
+    ],
+    "task": 37
+   },
+   {
+    "clause": "pick up the black bowl from table center and place it on the plate",
+    "frames": [
+     55,
+     135
+    ],
+    "task": 38
+   },
+   {
+    "clause": "pick up the black bowl from table center and place it on the plate",
+    "frames": [
+     33,
+     100
+    ],
+    "task": 38
+   },
+   {
+    "clause": "pick up the black bowl from table center and place it on the plate",
+    "frames": [
+     49,
+     120
+    ],
+    "task": 38
+   },
+   {
+    "clause": "pick up the black bowl from table center and place it on the plate",
+    "frames": [
+     46,
+     121
+    ],
+    "task": 38
+   },
+   {
+    "clause": "pick up the black bowl from table center and place it on the plate",
+    "frames": [
+     35,
+     111
+    ],
+    "task": 38
+   },
+   {
+    "clause": "pick up the black bowl on the wooden cabinet and place it on the plate",
+    "frames": [
+     55,
+     164
+    ],
+    "task": 39
+   },
+   {
+    "clause": "pick up the black bowl on the wooden cabinet and place it on the plate",
+    "frames": [
+     51,
+     137
+    ],
+    "task": 39
+   },
+   {
+    "clause": "pick up the black bowl on the wooden cabinet and place it on the plate",
+    "frames": [
+     42,
+     135
+    ],
+    "task": 39
+   },
+   {
+    "clause": "pick up the black bowl on the wooden cabinet and place it on the plate",
+    "frames": [
+     49,
+     132
+    ],
+    "task": 39
+   },
+   {
+    "clause": "pick up the black bowl on the wooden cabinet and place it on the plate",
+    "frames": [
+     51,
+     145
+    ],
+    "task": 39
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "on|the plate"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_QG05__s0__a677d14b",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T01:45:27+00:00",
+ "stream": null,
+ "tag": "joint_QG05"
+}

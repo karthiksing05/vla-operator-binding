@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g4_main_goal_libero_goal_ood_0_fac_QO00.QG01_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_goal_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:0?suite=libero_goal_ood&paths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_QG01_0.pt&apaths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_QO00_0.pt&goal=1 SUITE=libero_goal_ood TASKS=0 TRIALS=20 (job 4097060)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_b",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g4_main_goal_libero_goal_ood_0_fac_QO00.QG01_seed13.json",
+   "port": 9691,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_goal_ood",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "0",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4097060",
+  "mode": "prims:0?suite=libero_goal_ood&paths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_QG01_0.pt&apaths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_QO00_0.pt&goal=1"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "samantha.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4097060",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g4_main_goal",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a677d14be0902a075f1fffea751d3ba2f8d3d790",
+  "short": "a677d14b"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:0?suite=libero_goal_ood&paths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_QG01_0.pt&apaths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_QO00_0.pt&goal=1",
+  "tasks": "0",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 819.9704895019531,
+  "success_rate": 0.05,
+  "tasks": {
+   "0": {
+    "errors": 0,
+    "language": "put the cream cheese in the basket",
+    "mean_steps": 298.85,
+    "n": 20,
+    "success_rate": 0.05
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g4_main_goal__libero_goal_ood__fac_QO00.QG01_seed13__first_trial-0__mode567f1a2f7427__tasks-0__trials-20__s7__a677d14b",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-16T02:21:00+00:00",
+ "stream": null,
+ "tag": "fac_QO00.QG01_seed13"
+}

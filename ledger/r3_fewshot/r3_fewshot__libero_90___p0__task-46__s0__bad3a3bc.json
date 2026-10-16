@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_46_p0.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 13860864,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 13860864,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 46 --tag _p0 --backbone pi0_libero",
+ "config": {
+  "backbone": "pi0_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_p0",
+  "task": 46
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "trublu.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094631",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "bad3a3bcc28d6390e7c62a0d66b8801c1f1b18e7",
+  "short": "bad3a3bc"
+ },
+ "keys": {
+  "task": 46
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.06635139882564545,
+    0.014203193597495556,
+    0.00887428130954504,
+    0.005936469882726669,
+    0.009396510198712349,
+    0.004933926742523909,
+    0.0029976018704473972,
+    0.003078319365158677,
+    0.0024753406178206205,
+    0.006167550105601549,
+    0.00500947330147028
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 35,
+  "final_loss": 0.00500947330147028,
+  "first_loss": 0.06635139882564545,
+  "n_banks": 126,
+  "n_frames": 154,
+  "n_params": 6930432,
+  "task": 46,
+  "text": "pick up the alphabet soup and put it in the basket",
+  "train_secs": 209.06138253211975
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___p0__task-46__s0__bad3a3bc",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T20:34:28+00:00",
+ "stream": null,
+ "tag": "_p0"
+}

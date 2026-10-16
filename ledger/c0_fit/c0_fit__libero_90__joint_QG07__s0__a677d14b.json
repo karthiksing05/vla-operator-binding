@@ -1,0 +1,196 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 14+18 --key on_top_of|the_cabinet --name QG07 --rank 4 --goal --source d40 --ndemo 5",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "14+18",
+  "key": "on top of|the cabinet",
+  "lr": 0.0001,
+  "name": "QG07",
+  "ndemo": 5,
+  "rank": 4,
+  "scope": "expert",
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "kitt.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4096288",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a677d14be0902a075f1fffea751d3ba2f8d3d790",
+  "short": "a677d14b"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.001294523710384965,
+    0.0017305215587839484,
+    0.0016045948723331094,
+    0.0010429945541545749,
+    0.005928588565438986,
+    0.0016015212750062346,
+    0.0013384411577135324,
+    0.0012789582833647728,
+    0.0028656020294874907,
+    0.00852891057729721,
+    0.0043765888549387455
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 702,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the wine bottle on top of the cabinet",
+    "frames": [
+     27,
+     90
+    ],
+    "task": 14
+   },
+   {
+    "clause": "put the wine bottle on top of the cabinet",
+    "frames": [
+     37,
+     114
+    ],
+    "task": 14
+   },
+   {
+    "clause": "put the wine bottle on top of the cabinet",
+    "frames": [
+     43,
+     113
+    ],
+    "task": 14
+   },
+   {
+    "clause": "put the wine bottle on top of the cabinet",
+    "frames": [
+     29,
+     101
+    ],
+    "task": 14
+   },
+   {
+    "clause": "put the wine bottle on top of the cabinet",
+    "frames": [
+     42,
+     116
+    ],
+    "task": 14
+   },
+   {
+    "clause": "put the bowl on top of the cabinet",
+    "frames": [
+     31,
+     100
+    ],
+    "task": 18
+   },
+   {
+    "clause": "put the bowl on top of the cabinet",
+    "frames": [
+     29,
+     110
+    ],
+    "task": 18
+   },
+   {
+    "clause": "put the bowl on top of the cabinet",
+    "frames": [
+     28,
+     86
+    ],
+    "task": 18
+   },
+   {
+    "clause": "put the bowl on top of the cabinet",
+    "frames": [
+     30,
+     96
+    ],
+    "task": 18
+   },
+   {
+    "clause": "put the bowl on top of the cabinet",
+    "frames": [
+     28,
+     100
+    ],
+    "task": 18
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "on top of|the cabinet"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_QG07__s0__a677d14b",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T01:44:54+00:00",
+ "stream": null,
+ "tag": "joint_QG07"
+}

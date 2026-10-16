@@ -66,6 +66,15 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"{m['n_prototypes']} prototypes; instance to own type cos {m['instance_to_own_type']:.3f} vs {m['instance_to_other_types']:.3f}"),
     ("G3 a second policy (SmolVLA)", "g3_crossmodel", "read_smolvla", True, "c-gen", lambda m: _v_e3(m) if "bytes" in m else
      f"{m['hypotheses']['H1']['x']} vs {m['hypotheses']['H1']['y']} zero-shot; vs LoRA + acc. {_ci(m['hypotheses']['H2']['diff'])}"),
+    ("G3 a third policy (pi0)", "g3_crossmodel", "read_pi0", True, "c-gen",
+     lambda m: f"{m['hypotheses']['H1']['x']} vs {m['hypotheses']['H1']['y']} zero-shot; vs LoRA + acc. {_ci(m['hypotheses']['H2']['diff'])}"),
+    ("G7 against DSRL", "g7_dsrl", "read", True, "c-gen",
+     lambda m: f"vs DSRL on the frozen policy {m['hypotheses']['lib_vs_dsrlz_acc']['x']} vs {m['hypotheses']['lib_vs_dsrlz_acc']['y']}; "
+               f"vs DSRL on the per-task LoRA {_ci(m['hypotheses']['lib_vs_dsrls_acc']['diff'])}"),
+    ("G6 against STRAP", "g6_strap", "read", True, "c-gen",
+     lambda m: f"{m['H1']['x']} vs STRAP + acc. {m['H1']['y']} of {m['H1']['n']}"),
+    ("G4 Li's compositional OOD suites", "g4_ood", "read", True, "c-limits",
+     lambda m: f"kept {m['H1']['x']} vs policy {m['H1']['y']} of {m['H1']['n']}: fails (concepts the policy already holds)"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -336,6 +345,26 @@ def generalise():
                 f"and seed. SmolVLA alone succeeds {h1['y']} of {h1['n']} times; the kept library {h1['x']} (sign p {h1['sign_p']:.2g}). "
                 f"Against SmolVLA's own per-task LoRA with acceptance, {h2['x']} against {h2['y']} of {h2['n']} (difference "
                 f"{_ci(h2['diff'])}): the gain over the frozen policy carries over, the parity with a per-task adapter does not.</p>")
+    g3p = row("g3_crossmodel", "read_pi0")
+    if g3p:
+        h1, h2 = g3p["hypotheses"]["H1"], g3p["hypotheses"]["H2"]
+        out += (f"<p>On a third flow-matching policy, pi0 (m3_prereg tag g3_crossmodel_pi0), pi0 alone succeeds {h1['y']} of {h1['n']} "
+                f"times and the kept library {h1['x']} (sign p {h1['sign_p']:.2g}); against pi0's per-task LoRA with acceptance, "
+                f"{h2['x']} against {h2['y']} of {h2['n']} (difference {_ci(h2['diff'])}). The scope is flow-matching and diffusion "
+                f"policies: a prototype is a low-rank change to the policy's velocity field, switched on for one phase.</p>")
+    g7, g6 = row("g7_dsrl", "read"), row("g6_strap", "read")
+    if g7:
+        z, l = g7["hypotheses"]["lib_vs_dsrlz_acc"], g7["hypotheses"]["lib_vs_dsrls_acc"]
+        out += (f"<p>Against DSRL (m3_prereg tag g7_dsrl), which trains a noise-space policy from 100 practice episodes per task: "
+                f"steering the frozen policy without a demonstration it reaches {z['y']} of {z['n']} with acceptance, against "
+                f"{z['x']} for the library (difference {_ci(z['diff'])}); steering each task's one-demo LoRA it is the strongest arm "
+                f"run here, {l['y']} of {l['n']} against {l['x']} (difference {_ci(l['diff'])}), at ten times the practice and a "
+                f"per-task adapter and actor.</p>")
+    if g6:
+        h = g6["H1"]
+        out += (f"<p>Against STRAP (m3_prereg tag g6_strap), retrieving sub-trajectories from the library's own data and pi0.5's "
+                f"training data: {h['y']} of {h['n']} with acceptance, against {h['x']} for the library (difference "
+                f"{_ci(h['diff'])}); STRAP alone falls below the policy.</p>")
     g5 = row("g5_factors", "read")
     if g5:
         a = g5["alone_vs_zs"]
@@ -412,6 +441,15 @@ def limits_of_method():
                 f"(the policy's own language features) and letting practice choose helps on {t0['transfers_where_policy_fails']} of the "
                 f"{t0['policy_below_theta']} tasks the policy fails (exploratory): object prototypes do not transfer between objects, "
                 f"and a new object needs its one example. Reuse comes from objects and goals that recur across tasks.</p>")
+    g4, dg = row("g4_ood", "read"), row("g4_ood", "diagnosis")
+    if g4 and dg:
+        h = g4["H1"]
+        out += (f"<p><b>Concepts the policy already holds.</b> On Li's compositional OOD suites (20 tasks, each pairing one training "
+                f"task's object with another's target; m3_prereg tag g4_ood), every concept was fitted on pi0.5's own training "
+                f"demonstrations. The kept arms succeed {h['x']} of {h['n']} times against {h['y']} for the policy: the test fails. "
+                f"The prototypes learned nothing: their flow loss starts at {dg['g4']['first']:.2g} and ends at {dg['g4']['last']:.2g}, "
+                f"where E3's fall from {dg['e3']['first']:.2g} to {dg['e3']['last']:.2g}. The library supplies a concept the policy "
+                f"lacks; it does not undo the policy's binding of names to the layouts it was trained on.</p>")
     return out
 
 

@@ -1,0 +1,54 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g4_ood.py --diagnose --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g4_ood",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a677d14be0902a075f1fffea751d3ba2f8d3d790",
+  "short": "a677d14b"
+ },
+ "keys": {},
+ "metrics": {
+  "e3": {
+   "first": 0.060032719068906525,
+   "last": 0.0061580410878047005,
+   "n": 22
+  },
+  "g4": {
+   "first": 0.002355990516662132,
+   "last": 0.0038477912748930976,
+   "n": 16
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g4_ood__libero_ood__diagnosis__s13__a677d14b",
+ "schema": 1,
+ "script": "experiments/g4_ood.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-16T03:39:20+00:00",
+ "stream": null,
+ "tag": "diagnosis"
+}

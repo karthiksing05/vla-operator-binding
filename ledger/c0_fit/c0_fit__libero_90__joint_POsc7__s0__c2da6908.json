@@ -1,0 +1,138 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 3465216,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 3465216,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 32+48+58 --key put|the_ketchup --name POsc7 --rank 4 --approach --backbone pi0_libero",
+ "config": {
+  "approach": true,
+  "backbone": "pi0_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "32+48+58",
+  "key": "put|the ketchup",
+  "lr": 0.0001,
+  "name": "POsc7",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "kitt.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094604",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c2da69081ce7670f8e4ed81d8cbe21df917a768a",
+  "short": "c2da6908"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi0_libero",
+  "bind": false,
+  "bytes": 3465216,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.07310881465673447,
+    0.01906687766313553,
+    0.01305884774774313,
+    0.010002822615206242,
+    0.013647684827446938,
+    0.007525213062763214,
+    0.007291623391211033,
+    0.0058212983421981335,
+    0.005473275203257799,
+    0.008043481968343258,
+    0.007096721325069666
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 230,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the ketchup in the top drawer of the cabinet",
+    "frames": [
+     0,
+     92
+    ],
+    "task": 32
+   },
+   {
+    "clause": "pick up the ketchup and put it in the basket",
+    "frames": [
+     0,
+     77
+    ],
+    "task": 48
+   },
+   {
+    "clause": "pick up the ketchup and put it in the tray",
+    "frames": [
+     0,
+     61
+    ],
+    "task": 58
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the ketchup"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_POsc7__s0__c2da6908",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T21:04:18+00:00",
+ "stream": null,
+ "tag": "joint_POsc7"
+}

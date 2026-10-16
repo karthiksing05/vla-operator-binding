@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g7_main_31_dsrlz_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=dsrl:31?train=0&load=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrlz_31_actor.pt&official=1&lora=none SUITE=libero_90 TASKS=31 TRIALS=20 (job 4096850)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_states_b",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g7_main_31_dsrlz_seed13.json",
+   "port": 9060,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "31",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4096850",
+  "mode": "dsrl:31?train=0&load=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrlz_31_actor.pt&official=1&lora=none"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "puma.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4096850",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g7_main",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a677d14be0902a075f1fffea751d3ba2f8d3d790",
+  "short": "a677d14b"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "dsrl:31?train=0&load=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrlz_31_actor.pt&official=1&lora=none",
+  "tasks": "31",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 585.030419588089,
+  "success_rate": 0.15,
+  "tasks": {
+   "31": {
+    "errors": 0,
+    "language": "put the black bowl on top of the cabinet",
+    "mean_steps": 388.8,
+    "n": 20,
+    "success_rate": 0.15
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g7_main__libero_90__dsrlz_seed13__first_trial-0__mode0e37c2d9cc92__tasks-31__trials-20__s7__a677d14b",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-16T01:54:04+00:00",
+ "stream": null,
+ "tag": "dsrlz_seed13"
+}

@@ -1,0 +1,363 @@
+{
+ "missing": [],
+ "acceptance": {
+  "goal:0": {
+   "zs": 2,
+   "fac": 2
+  },
+  "goal:1": {
+   "zs": 4,
+   "fac": 4
+  },
+  "goal:2": {
+   "zs": 2,
+   "fac": 3
+  },
+  "goal:3": {
+   "zs": 0,
+   "fac": 0
+  },
+  "goal:4": {
+   "zs": 10,
+   "fac": 10
+  },
+  "goal:5": {
+   "zs": 3,
+   "fac": 2
+  },
+  "goal:6": {
+   "zs": 2,
+   "fac": 1
+  },
+  "goal:7": {
+   "zs": 1,
+   "fac": 2
+  },
+  "goal:8": {
+   "zs": 2,
+   "fac": 0
+  },
+  "goal:9": {
+   "zs": 6,
+   "fac": 8
+  },
+  "spatial:0": {
+   "zs": 10,
+   "fac": 10
+  },
+  "spatial:1": {
+   "zs": 10,
+   "fac": 10
+  },
+  "spatial:2": {
+   "zs": 2,
+   "fac": 3
+  },
+  "spatial:3": {
+   "zs": 10,
+   "fac": 10
+  },
+  "spatial:4": {
+   "zs": 0,
+   "fac": 0
+  },
+  "spatial:5": {
+   "zs": 0,
+   "fac": 0
+  },
+  "spatial:6": {
+   "zs": 0,
+   "fac": 0
+  },
+  "spatial:7": {
+   "zs": 0,
+   "fac": 0
+  },
+  "spatial:8": {
+   "zs": 2,
+   "fac": 2
+  },
+  "spatial:9": {
+   "zs": 0,
+   "fac": 0
+  }
+ },
+ "kept": {
+  "goal:0": "zs",
+  "goal:1": "zs",
+  "goal:2": "fac",
+  "goal:3": "zs",
+  "goal:4": "zs",
+  "goal:5": "zs",
+  "goal:6": "zs",
+  "goal:7": "fac",
+  "goal:8": "zs",
+  "goal:9": "fac",
+  "spatial:0": "zs",
+  "spatial:1": "zs",
+  "spatial:2": "fac",
+  "spatial:3": "zs",
+  "spatial:4": "zs",
+  "spatial:5": "zs",
+  "spatial:6": "zs",
+  "spatial:7": "zs",
+  "spatial:8": "zs",
+  "spatial:9": "zs"
+ },
+ "all": {
+  "H1": {
+   "x": 154,
+   "y": 157,
+   "n": 400,
+   "tasks": 20,
+   "diff": {
+    "diff": -0.0075,
+    "lo": -0.0375,
+    "hi": 0.0175,
+    "lo90": -0.0325,
+    "hi90": 0.0125,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    6,
+    9
+   ],
+   "sign_p": 0.60723876953125,
+   "passes": false
+  },
+  "fac_vs_zs": {
+   "x": 139,
+   "y": 157,
+   "n": 400,
+   "tasks": 20,
+   "diff": {
+    "diff": -0.045,
+    "lo": -0.0925,
+    "hi": 0.0,
+    "lo90": -0.085,
+    "hi90": -0.0075,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    15,
+    33
+   ],
+   "sign_p": 0.013283281562245008
+  },
+  "rate_kept": 0.385,
+  "rate_zs": 0.3925
+ },
+ "goal": {
+  "H1": {
+   "x": 78,
+   "y": 81,
+   "n": 200,
+   "tasks": 10,
+   "diff": {
+    "diff": -0.015,
+    "lo": -0.075,
+    "hi": 0.03,
+    "lo90": -0.06,
+    "hi90": 0.02,
+    "n_pairs": 200,
+    "n_tasks": 10
+   },
+   "discordant": [
+    4,
+    7
+   ],
+   "sign_p": 0.548828125
+  },
+  "fac_vs_zs": {
+   "x": 68,
+   "y": 81,
+   "n": 200,
+   "tasks": 10,
+   "diff": {
+    "diff": -0.065,
+    "lo": -0.15,
+    "hi": 0.01,
+    "lo90": -0.135,
+    "hi90": 0.0,
+    "n_pairs": 200,
+    "n_tasks": 10
+   },
+   "discordant": [
+    11,
+    24
+   ],
+   "sign_p": 0.04095959151163697
+  },
+  "rate_kept": 0.39,
+  "rate_zs": 0.405
+ },
+ "spatial": {
+  "H1": {
+   "x": 76,
+   "y": 76,
+   "n": 200,
+   "tasks": 10,
+   "diff": {
+    "diff": 0.0,
+    "lo": -0.02,
+    "hi": 0.02,
+    "lo90": -0.015,
+    "hi90": 0.015,
+    "n_pairs": 200,
+    "n_tasks": 10
+   },
+   "discordant": [
+    2,
+    2
+   ],
+   "sign_p": 1.0
+  },
+  "fac_vs_zs": {
+   "x": 71,
+   "y": 76,
+   "n": 200,
+   "tasks": 10,
+   "diff": {
+    "diff": -0.025,
+    "lo": -0.075,
+    "hi": 0.015,
+    "lo90": -0.065,
+    "hi90": 0.01,
+    "n_pairs": 200,
+    "n_tasks": 10
+   },
+   "discordant": [
+    4,
+    9
+   ],
+   "sign_p": 0.266845703125
+  },
+  "rate_kept": 0.38,
+  "rate_zs": 0.38
+ },
+ "H1": {
+  "x": 154,
+  "y": 157,
+  "n": 400,
+  "tasks": 20,
+  "diff": {
+   "diff": -0.0075,
+   "lo": -0.0375,
+   "hi": 0.0175,
+   "lo90": -0.0325,
+   "hi90": 0.0125,
+   "n_pairs": 400,
+   "n_tasks": 20
+  },
+  "discordant": [
+   6,
+   9
+  ],
+  "sign_p": 0.60723876953125,
+  "passes": false
+ },
+ "per_task": {
+  "goal:0": {
+   "zs": 4,
+   "fac": 1,
+   "kept": "zs"
+  },
+  "goal:1": {
+   "zs": 13,
+   "fac": 14,
+   "kept": "zs"
+  },
+  "goal:2": {
+   "zs": 3,
+   "fac": 3,
+   "kept": "fac"
+  },
+  "goal:3": {
+   "zs": 0,
+   "fac": 0,
+   "kept": "zs"
+  },
+  "goal:4": {
+   "zs": 20,
+   "fac": 20,
+   "kept": "zs"
+  },
+  "goal:5": {
+   "zs": 8,
+   "fac": 6,
+   "kept": "zs"
+  },
+  "goal:6": {
+   "zs": 4,
+   "fac": 2,
+   "kept": "zs"
+  },
+  "goal:7": {
+   "zs": 6,
+   "fac": 7,
+   "kept": "fac"
+  },
+  "goal:8": {
+   "zs": 6,
+   "fac": 2,
+   "kept": "zs"
+  },
+  "goal:9": {
+   "zs": 17,
+   "fac": 13,
+   "kept": "fac"
+  },
+  "spatial:0": {
+   "zs": 20,
+   "fac": 20,
+   "kept": "zs"
+  },
+  "spatial:1": {
+   "zs": 20,
+   "fac": 19,
+   "kept": "zs"
+  },
+  "spatial:2": {
+   "zs": 7,
+   "fac": 7,
+   "kept": "fac"
+  },
+  "spatial:3": {
+   "zs": 20,
+   "fac": 20,
+   "kept": "zs"
+  },
+  "spatial:4": {
+   "zs": 0,
+   "fac": 0,
+   "kept": "zs"
+  },
+  "spatial:5": {
+   "zs": 0,
+   "fac": 0,
+   "kept": "zs"
+  },
+  "spatial:6": {
+   "zs": 0,
+   "fac": 0,
+   "kept": "zs"
+  },
+  "spatial:7": {
+   "zs": 0,
+   "fac": 0,
+   "kept": "zs"
+  },
+  "spatial:8": {
+   "zs": 7,
+   "fac": 4,
+   "kept": "zs"
+  },
+  "spatial:9": {
+   "zs": 2,
+   "fac": 1,
+   "kept": "zs"
+  }
+ }
+}

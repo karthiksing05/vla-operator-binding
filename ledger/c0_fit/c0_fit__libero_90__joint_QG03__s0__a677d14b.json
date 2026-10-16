@@ -1,0 +1,196 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 6+17 --key on|the_stove --name QG03 --rank 4 --goal --source d40 --ndemo 5",
+ "config": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "6+17",
+  "key": "on|the stove",
+  "lr": 0.0001,
+  "name": "QG03",
+  "ndemo": 5,
+  "rank": 4,
+  "scope": "expert",
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "hk47.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4096284",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a677d14be0902a075f1fffea751d3ba2f8d3d790",
+  "short": "a677d14b"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.0009966882644221187,
+    0.0037610006984323263,
+    0.0015343171544373035,
+    0.001553876674734056,
+    0.0052840085700154305,
+    0.001515547395683825,
+    0.0019805904012173414,
+    0.0013439859030768275,
+    0.002231721533462405,
+    0.009838411584496498,
+    0.004537550266832113
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 1813,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put both moka pots on the stove",
+    "frames": [
+     92,
+     383
+    ],
+    "task": 6
+   },
+   {
+    "clause": "put both moka pots on the stove",
+    "frames": [
+     90,
+     359
+    ],
+    "task": 6
+   },
+   {
+    "clause": "put both moka pots on the stove",
+    "frames": [
+     107,
+     455
+    ],
+    "task": 6
+   },
+   {
+    "clause": "put both moka pots on the stove",
+    "frames": [
+     105,
+     409
+    ],
+    "task": 6
+   },
+   {
+    "clause": "put both moka pots on the stove",
+    "frames": [
+     105,
+     404
+    ],
+    "task": 6
+   },
+   {
+    "clause": "put the bowl on the stove",
+    "frames": [
+     42,
+     103
+    ],
+    "task": 17
+   },
+   {
+    "clause": "put the bowl on the stove",
+    "frames": [
+     48,
+     111
+    ],
+    "task": 17
+   },
+   {
+    "clause": "put the bowl on the stove",
+    "frames": [
+     42,
+     104
+    ],
+    "task": 17
+   },
+   {
+    "clause": "put the bowl on the stove",
+    "frames": [
+     43,
+     104
+    ],
+    "task": 17
+   },
+   {
+    "clause": "put the bowl on the stove",
+    "frames": [
+     39,
+     94
+    ],
+    "task": 17
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "on|the stove"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_QG03__s0__a677d14b",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T01:41:59+00:00",
+ "stream": null,
+ "tag": "joint_QG03"
+}

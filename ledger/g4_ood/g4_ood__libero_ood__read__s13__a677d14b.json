@@ -1,0 +1,407 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g4_ood.py --read --record",
+ "config": {
+  "ndemo": 5
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g4_ood",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a677d14be0902a075f1fffea751d3ba2f8d3d790",
+  "short": "a677d14b"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": {
+   "diff": {
+    "diff": -0.0075,
+    "hi": 0.0175,
+    "hi90": 0.0125,
+    "lo": -0.0375,
+    "lo90": -0.0325,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    6,
+    9
+   ],
+   "n": 400,
+   "passes": false,
+   "sign_p": 0.60723876953125,
+   "tasks": 20,
+   "x": 154,
+   "y": 157
+  },
+  "acceptance": {
+   "goal:0": {
+    "fac": 2,
+    "zs": 2
+   },
+   "goal:1": {
+    "fac": 4,
+    "zs": 4
+   },
+   "goal:2": {
+    "fac": 3,
+    "zs": 2
+   },
+   "goal:3": {
+    "fac": 0,
+    "zs": 0
+   },
+   "goal:4": {
+    "fac": 10,
+    "zs": 10
+   },
+   "goal:5": {
+    "fac": 2,
+    "zs": 3
+   },
+   "goal:6": {
+    "fac": 1,
+    "zs": 2
+   },
+   "goal:7": {
+    "fac": 2,
+    "zs": 1
+   },
+   "goal:8": {
+    "fac": 0,
+    "zs": 2
+   },
+   "goal:9": {
+    "fac": 8,
+    "zs": 6
+   },
+   "spatial:0": {
+    "fac": 10,
+    "zs": 10
+   },
+   "spatial:1": {
+    "fac": 10,
+    "zs": 10
+   },
+   "spatial:2": {
+    "fac": 3,
+    "zs": 2
+   },
+   "spatial:3": {
+    "fac": 10,
+    "zs": 10
+   },
+   "spatial:4": {
+    "fac": 0,
+    "zs": 0
+   },
+   "spatial:5": {
+    "fac": 0,
+    "zs": 0
+   },
+   "spatial:6": {
+    "fac": 0,
+    "zs": 0
+   },
+   "spatial:7": {
+    "fac": 0,
+    "zs": 0
+   },
+   "spatial:8": {
+    "fac": 2,
+    "zs": 2
+   },
+   "spatial:9": {
+    "fac": 0,
+    "zs": 0
+   }
+  },
+  "all": {
+   "H1": {
+    "diff": {
+     "diff": -0.0075,
+     "hi": 0.0175,
+     "hi90": 0.0125,
+     "lo": -0.0375,
+     "lo90": -0.0325,
+     "n_pairs": 400,
+     "n_tasks": 20
+    },
+    "discordant": [
+     6,
+     9
+    ],
+    "n": 400,
+    "passes": false,
+    "sign_p": 0.60723876953125,
+    "tasks": 20,
+    "x": 154,
+    "y": 157
+   },
+   "fac_vs_zs": {
+    "diff": {
+     "diff": -0.045,
+     "hi": 0.0,
+     "hi90": -0.0075,
+     "lo": -0.0925,
+     "lo90": -0.085,
+     "n_pairs": 400,
+     "n_tasks": 20
+    },
+    "discordant": [
+     15,
+     33
+    ],
+    "n": 400,
+    "sign_p": 0.013283281562245008,
+    "tasks": 20,
+    "x": 139,
+    "y": 157
+   },
+   "rate_kept": 0.385,
+   "rate_zs": 0.3925
+  },
+  "goal": {
+   "H1": {
+    "diff": {
+     "diff": -0.015,
+     "hi": 0.03,
+     "hi90": 0.02,
+     "lo": -0.075,
+     "lo90": -0.06,
+     "n_pairs": 200,
+     "n_tasks": 10
+    },
+    "discordant": [
+     4,
+     7
+    ],
+    "n": 200,
+    "sign_p": 0.548828125,
+    "tasks": 10,
+    "x": 78,
+    "y": 81
+   },
+   "fac_vs_zs": {
+    "diff": {
+     "diff": -0.065,
+     "hi": 0.01,
+     "hi90": 0.0,
+     "lo": -0.15,
+     "lo90": -0.135,
+     "n_pairs": 200,
+     "n_tasks": 10
+    },
+    "discordant": [
+     11,
+     24
+    ],
+    "n": 200,
+    "sign_p": 0.04095959151163697,
+    "tasks": 10,
+    "x": 68,
+    "y": 81
+   },
+   "rate_kept": 0.39,
+   "rate_zs": 0.405
+  },
+  "kept": {
+   "goal:0": "zs",
+   "goal:1": "zs",
+   "goal:2": "fac",
+   "goal:3": "zs",
+   "goal:4": "zs",
+   "goal:5": "zs",
+   "goal:6": "zs",
+   "goal:7": "fac",
+   "goal:8": "zs",
+   "goal:9": "fac",
+   "spatial:0": "zs",
+   "spatial:1": "zs",
+   "spatial:2": "fac",
+   "spatial:3": "zs",
+   "spatial:4": "zs",
+   "spatial:5": "zs",
+   "spatial:6": "zs",
+   "spatial:7": "zs",
+   "spatial:8": "zs",
+   "spatial:9": "zs"
+  },
+  "missing": [],
+  "per_task": {
+   "goal:0": {
+    "fac": 1,
+    "kept": "zs",
+    "zs": 4
+   },
+   "goal:1": {
+    "fac": 14,
+    "kept": "zs",
+    "zs": 13
+   },
+   "goal:2": {
+    "fac": 3,
+    "kept": "fac",
+    "zs": 3
+   },
+   "goal:3": {
+    "fac": 0,
+    "kept": "zs",
+    "zs": 0
+   },
+   "goal:4": {
+    "fac": 20,
+    "kept": "zs",
+    "zs": 20
+   },
+   "goal:5": {
+    "fac": 6,
+    "kept": "zs",
+    "zs": 8
+   },
+   "goal:6": {
+    "fac": 2,
+    "kept": "zs",
+    "zs": 4
+   },
+   "goal:7": {
+    "fac": 7,
+    "kept": "fac",
+    "zs": 6
+   },
+   "goal:8": {
+    "fac": 2,
+    "kept": "zs",
+    "zs": 6
+   },
+   "goal:9": {
+    "fac": 13,
+    "kept": "fac",
+    "zs": 17
+   },
+   "spatial:0": {
+    "fac": 20,
+    "kept": "zs",
+    "zs": 20
+   },
+   "spatial:1": {
+    "fac": 19,
+    "kept": "zs",
+    "zs": 20
+   },
+   "spatial:2": {
+    "fac": 7,
+    "kept": "fac",
+    "zs": 7
+   },
+   "spatial:3": {
+    "fac": 20,
+    "kept": "zs",
+    "zs": 20
+   },
+   "spatial:4": {
+    "fac": 0,
+    "kept": "zs",
+    "zs": 0
+   },
+   "spatial:5": {
+    "fac": 0,
+    "kept": "zs",
+    "zs": 0
+   },
+   "spatial:6": {
+    "fac": 0,
+    "kept": "zs",
+    "zs": 0
+   },
+   "spatial:7": {
+    "fac": 0,
+    "kept": "zs",
+    "zs": 0
+   },
+   "spatial:8": {
+    "fac": 4,
+    "kept": "zs",
+    "zs": 7
+   },
+   "spatial:9": {
+    "fac": 1,
+    "kept": "zs",
+    "zs": 2
+   }
+  },
+  "spatial": {
+   "H1": {
+    "diff": {
+     "diff": 0.0,
+     "hi": 0.02,
+     "hi90": 0.015,
+     "lo": -0.02,
+     "lo90": -0.015,
+     "n_pairs": 200,
+     "n_tasks": 10
+    },
+    "discordant": [
+     2,
+     2
+    ],
+    "n": 200,
+    "sign_p": 1.0,
+    "tasks": 10,
+    "x": 76,
+    "y": 76
+   },
+   "fac_vs_zs": {
+    "diff": {
+     "diff": -0.025,
+     "hi": 0.015,
+     "hi90": 0.01,
+     "lo": -0.075,
+     "lo90": -0.065,
+     "n_pairs": 200,
+     "n_tasks": 10
+    },
+    "discordant": [
+     4,
+     9
+    ],
+    "n": 200,
+    "sign_p": 0.266845703125,
+    "tasks": 10,
+    "x": 71,
+    "y": 76
+   },
+   "rate_kept": 0.38,
+   "rate_zs": 0.38
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g4_ood__libero_ood__read__s13__a677d14b",
+ "schema": 1,
+ "script": "experiments/g4_ood.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-16T03:38:39+00:00",
+ "stream": null,
+ "tag": "read"
+}

@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g7_accept_72_dsrls_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=dsrl:72?train=0&load=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrls_72_actor.pt&official=1&lora=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_72.pt SUITE=libero_90 TASKS=72 TRIALS=10 (job 4096816)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g7_accept_72_dsrls_seed13.json",
+   "port": 9828,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "72",
+   "trials": 10,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4096816",
+  "mode": "dsrl:72?train=0&load=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrls_72_actor.pt&official=1&lora=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_72.pt"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "nestor.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4096816",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g7_accept",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a677d14be0902a075f1fffea751d3ba2f8d3d790",
+  "short": "a677d14b"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "dsrl:72?train=0&load=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrls_72_actor.pt&official=1&lora=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_72.pt",
+  "tasks": "72",
+  "trials": 10
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 10,
+  "secs": 224.63376235961914,
+  "success_rate": 0.9,
+  "tasks": {
+   "72": {
+    "errors": 0,
+    "language": "put the white mug on the plate",
+    "mean_steps": 158.7,
+    "n": 10,
+    "success_rate": 0.9
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g7_accept__libero_90__dsrls_seed13__first_trial-0__mode7851d8d8895c__tasks-72__trials-10__s7__a677d14b",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-16T01:40:35+00:00",
+ "stream": null,
+ "tag": "dsrls_seed13"
+}

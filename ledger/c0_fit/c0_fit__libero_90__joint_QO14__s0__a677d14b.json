@@ -1,0 +1,156 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 36 --key put|the_black_bowl_next_to_the_plate --name QO14 --rank 4 --approach --source d40 --ndemo 5",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "36",
+  "key": "put|the black bowl next to the plate",
+  "lr": 0.0001,
+  "name": "QO14",
+  "ndemo": 5,
+  "rank": 4,
+  "scope": "expert",
+  "source": "d40",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "kitt.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4096295",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a677d14be0902a075f1fffea751d3ba2f8d3d790",
+  "short": "a677d14b"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.004444710910320282,
+    0.0016494523733854294,
+    0.001780109480023384,
+    0.0014990238705649972,
+    0.006527576129883528,
+    0.001925268559716642,
+    0.001336342073045671,
+    0.001303194323554635,
+    0.0013406883226707578,
+    0.008090470917522907,
+    0.0034750811755657196
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 269,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the black bowl next to the plate and place it on the plate",
+    "frames": [
+     0,
+     56
+    ],
+    "task": 36
+   },
+   {
+    "clause": "pick up the black bowl next to the plate and place it on the plate",
+    "frames": [
+     0,
+     58
+    ],
+    "task": 36
+   },
+   {
+    "clause": "pick up the black bowl next to the plate and place it on the plate",
+    "frames": [
+     0,
+     55
+    ],
+    "task": 36
+   },
+   {
+    "clause": "pick up the black bowl next to the plate and place it on the plate",
+    "frames": [
+     0,
+     53
+    ],
+    "task": 36
+   },
+   {
+    "clause": "pick up the black bowl next to the plate and place it on the plate",
+    "frames": [
+     0,
+     47
+    ],
+    "task": 36
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the black bowl next to the plate"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_QO14__s0__a677d14b",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T01:45:39+00:00",
+ "stream": null,
+ "tag": "joint_QO14"
+}

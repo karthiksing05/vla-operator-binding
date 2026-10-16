@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_43_p0.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 13860864,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 13860864,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 43 --tag _p0 --backbone pi0_libero",
+ "config": {
+  "backbone": "pi0_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_p0",
+  "task": 43
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "hk47.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094615",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "bad3a3bcc28d6390e7c62a0d66b8801c1f1b18e7",
+  "short": "bad3a3bc"
+ },
+ "keys": {
+  "task": 43
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.0584302693605423,
+    0.009760824032127857,
+    0.00757560133934021,
+    0.004451734479516745,
+    0.008519579656422138,
+    0.004093596711754799,
+    0.002859794534742832,
+    0.0036455716472119093,
+    0.0030567722860723734,
+    0.005744506139308214,
+    0.0053147124126553535
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 273,
+  "final_loss": 0.0053147124126553535,
+  "first_loss": 0.0584302693605423,
+  "n_banks": 126,
+  "n_frames": 144,
+  "n_params": 6930432,
+  "task": 43,
+  "text": "put the white bowl on top of the cabinet",
+  "train_secs": 208.37504863739014
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___p0__task-43__s0__bad3a3bc",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T20:34:41+00:00",
+ "stream": null,
+ "tag": "_p0"
+}

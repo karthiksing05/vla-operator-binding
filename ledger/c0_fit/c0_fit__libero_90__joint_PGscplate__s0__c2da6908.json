@@ -1,0 +1,178 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 3465216,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 3465216,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 9+12+13+14+30+36+71+72 --key on|the_plate --name PGscplate --rank 4 --goal --backbone pi0_libero",
+ "config": {
+  "approach": false,
+  "backbone": "pi0_libero",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": true,
+  "init": "",
+  "joint": "9+12+13+14+30+36+71+72",
+  "key": "on|the plate",
+  "lr": 0.0001,
+  "name": "PGscplate",
+  "rank": 4,
+  "scope": "expert",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "nestor.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4094594",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c2da69081ce7670f8e4ed81d8cbe21df917a768a",
+  "short": "c2da6908"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": false,
+  "backbone": "pi0_libero",
+  "bind": false,
+  "bytes": 3465216,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.09513669461011887,
+    0.03841916099190712,
+    0.033331986516714096,
+    0.019752122461795807,
+    0.016425957903265953,
+    0.014615587890148163,
+    0.012213427573442459,
+    0.010411822237074375,
+    0.009504703804850578,
+    0.011913611553609371,
+    0.011218799278140068
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 667,
+  "goal": true,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the black bowl on the plate",
+    "frames": [
+     57,
+     137
+    ],
+    "task": 9
+   },
+   {
+    "clause": "put the black bowl at the back on the plate",
+    "frames": [
+     36,
+     108
+    ],
+    "task": 12
+   },
+   {
+    "clause": "put the black bowl at the front on the plate",
+    "frames": [
+     71,
+     134
+    ],
+    "task": 13
+   },
+   {
+    "clause": "put the middle black bowl on the plate",
+    "frames": [
+     38,
+     108
+    ],
+    "task": 14
+   },
+   {
+    "clause": "put the black bowl on the plate",
+    "frames": [
+     45,
+     131
+    ],
+    "task": 30
+   },
+   {
+    "clause": "put the white bowl on the plate",
+    "frames": [
+     87,
+     218
+    ],
+    "task": 36
+   },
+   {
+    "clause": "put the red mug on the plate",
+    "frames": [
+     41,
+     116
+    ],
+    "task": 71
+   },
+   {
+    "clause": "put the white mug on the plate",
+    "frames": [
+     57,
+     147
+    ],
+    "task": 72
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "on|the plate"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_PGscplate__s0__c2da6908",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-15T21:03:51+00:00",
+ "stream": null,
+ "tag": "joint_PGscplate"
+}

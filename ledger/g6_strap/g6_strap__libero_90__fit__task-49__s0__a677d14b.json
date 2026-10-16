@@ -1,0 +1,62 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/strap90_49_lora.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 18710528,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 18710528,
+  "tree": 0
+ },
+ "command": "experiments/g6_strap.py train --task 49 --steps 2000",
+ "config": {
+  "K": 100,
+  "batch": 32,
+  "lr": 0.0001,
+  "rank": 16,
+  "steps": 2000
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "synapse.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4096249",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g6_strap",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a677d14be0902a075f1fffea751d3ba2f8d3d790",
+  "short": "a677d14b"
+ },
+ "keys": {
+  "task": 49
+ },
+ "metrics": {
+  "demo_frames": 160,
+  "final_loss": 0.0024676104076206684,
+  "first_loss": 0.014909826219081879,
+  "from_l90": 5,
+  "retrieved": 100,
+  "retrieved_frames": 2840,
+  "task": 49,
+  "train_secs": 432.4995403289795
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g6_strap__libero_90__fit__task-49__s0__a677d14b",
+ "schema": 1,
+ "script": "experiments/g6_strap.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-16T01:29:06+00:00",
+ "stream": null,
+ "tag": "fit"
+}
