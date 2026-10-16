@@ -1,0 +1,448 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G4 (Li's OOD suites)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "fc4d0abfd17a3d1900c24d07f69ceb0dd25cac25",
+  "short": "fc4d0abf"
+ },
+ "keys": {},
+ "metrics": {
+  "context": "E3, G0 (recombination from other tasks only), G5b read; the matching rule was written from the 20 instructions and the 40 training instructions before any episode; it maps 'bbq source' to 'bbq sauce'",
+  "hypotheses": {
+   "H1": "over the 20 tasks, the kept arm > the frozen policy (exact sign test on discordant pairs, alpha 0.05)",
+   "descriptive": "per suite success rates of the kept arm, the composition alone and the policy; the published rates (pi0.5 35.5 / 46.6, pi0 + text latent interpolation 81.0 / 85.0, pi0.5 trained on synthesized compositions 88.2 / 95.6 on Spatial-OOD / Goal-OOD, arXiv 2607.00351 Table I) are context only: their start states differ from ours"
+  },
+  "plan": {
+   "ndemo": 5,
+   "protos": {
+    "QG01": {
+     "flag": "--goal",
+     "key": "in|the basket",
+     "kind": "goal",
+     "name": "QG01",
+     "tasks": [
+      4,
+      5,
+      7,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29
+     ]
+    },
+    "QG03": {
+     "flag": "--goal",
+     "key": "on|the stove",
+     "kind": "goal",
+     "name": "QG03",
+     "tasks": [
+      6,
+      17
+     ]
+    },
+    "QG05": {
+     "flag": "--goal",
+     "key": "on|the plate",
+     "kind": "goal",
+     "name": "QG05",
+     "tasks": [
+      10,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39
+     ]
+    },
+    "QG07": {
+     "flag": "--goal",
+     "key": "on top of|the cabinet",
+     "kind": "goal",
+     "name": "QG07",
+     "tasks": [
+      14,
+      18
+     ]
+    },
+    "QG09": {
+     "flag": "--goal",
+     "key": "in|the bowl",
+     "kind": "goal",
+     "name": "QG09",
+     "tasks": [
+      13
+     ]
+    },
+    "QO00": {
+     "flag": "--approach",
+     "key": "put|the cream cheese",
+     "kind": "object",
+     "name": "QO00",
+     "tasks": [
+      13,
+      22
+     ]
+    },
+    "QO02": {
+     "flag": "--approach",
+     "key": "put|the orange juice",
+     "kind": "object",
+     "name": "QO02",
+     "tasks": [
+      20
+     ]
+    },
+    "QO04": {
+     "flag": "--approach",
+     "key": "put|the bbq sauce",
+     "kind": "object",
+     "name": "QO04",
+     "tasks": [
+      23
+     ]
+    },
+    "QO06": {
+     "flag": "--approach",
+     "key": "put|the tomato sauce",
+     "kind": "object",
+     "name": "QO06",
+     "tasks": [
+      28
+     ]
+    },
+    "QO08": {
+     "flag": "--approach",
+     "key": "put|the wine bottle",
+     "kind": "object",
+     "name": "QO08",
+     "tasks": [
+      11,
+      14
+     ]
+    },
+    "QO10": {
+     "flag": "--approach",
+     "key": "put|the butter",
+     "kind": "object",
+     "name": "QO10",
+     "tasks": [
+      27
+     ]
+    },
+    "QO11": {
+     "flag": "--approach",
+     "key": "put|the chocolate pudding",
+     "kind": "object",
+     "name": "QO11",
+     "tasks": [
+      29
+     ]
+    },
+    "QO12": {
+     "flag": "--approach",
+     "key": "put|the milk",
+     "kind": "object",
+     "name": "QO12",
+     "tasks": [
+      25
+     ]
+    },
+    "QO13": {
+     "flag": "--approach",
+     "key": "put|the black bowl on the cookie box",
+     "kind": "object",
+     "name": "QO13",
+     "tasks": [
+      35
+     ]
+    },
+    "QO14": {
+     "flag": "--approach",
+     "key": "put|the black bowl next to the plate",
+     "kind": "object",
+     "name": "QO14",
+     "tasks": [
+      36
+     ]
+    },
+    "QO15": {
+     "flag": "--approach",
+     "key": "put|the black bowl from table center",
+     "kind": "object",
+     "name": "QO15",
+     "tasks": [
+      38
+     ]
+    }
+   },
+   "rank": 4,
+   "tasks": {
+    "goal:0": {
+     "goal_concept": "in|the basket",
+     "goal_key": "in|the basket",
+     "goal_proto": "QG01",
+     "index": 0,
+     "language": "put the cream cheese in the basket",
+     "object_concept": "put|the cream cheese",
+     "object_key": "put|the cream cheese",
+     "object_proto": "QO00",
+     "suite": "libero_goal_ood"
+    },
+    "goal:1": {
+     "goal_concept": "on|the stove",
+     "goal_key": "on|the stove",
+     "goal_proto": "QG03",
+     "index": 1,
+     "language": "put the orange juice on the stove",
+     "object_concept": "put|the orange juice",
+     "object_key": "put|the orange juice",
+     "object_proto": "QO02",
+     "suite": "libero_goal_ood"
+    },
+    "goal:2": {
+     "goal_concept": "on|the plate",
+     "goal_key": "on|the plate",
+     "goal_proto": "QG05",
+     "index": 2,
+     "language": "put the bbq source on the plate",
+     "object_concept": "put|the bbq sauce",
+     "object_key": "put|the bbq source",
+     "object_proto": "QO04",
+     "suite": "libero_goal_ood"
+    },
+    "goal:3": {
+     "goal_concept": "on top of|the cabinet",
+     "goal_key": "on top of|the cabinet",
+     "goal_proto": "QG07",
+     "index": 3,
+     "language": "put the tomato sauce on top of the cabinet",
+     "object_concept": "put|the tomato sauce",
+     "object_key": "put|the tomato sauce",
+     "object_proto": "QO06",
+     "suite": "libero_goal_ood"
+    },
+    "goal:4": {
+     "goal_concept": "on|the stove",
+     "goal_key": "on|the stove",
+     "goal_proto": "QG03",
+     "index": 4,
+     "language": "put the wine bottle on the stove",
+     "object_concept": "put|the wine bottle",
+     "object_key": "put|the wine bottle",
+     "object_proto": "QO08",
+     "suite": "libero_goal_ood"
+    },
+    "goal:5": {
+     "goal_concept": "on|the plate",
+     "goal_key": "on|the plate",
+     "goal_proto": "QG05",
+     "index": 5,
+     "language": "put the wine bottle on the plate",
+     "object_concept": "put|the wine bottle",
+     "object_key": "put|the wine bottle",
+     "object_proto": "QO08",
+     "suite": "libero_goal_ood"
+    },
+    "goal:6": {
+     "goal_concept": "in|the bowl",
+     "goal_key": "in|the bowl",
+     "goal_proto": "QG09",
+     "index": 6,
+     "language": "put the wine bottle in the bowl",
+     "object_concept": "put|the wine bottle",
+     "object_key": "put|the wine bottle",
+     "object_proto": "QO08",
+     "suite": "libero_goal_ood"
+    },
+    "goal:7": {
+     "goal_concept": "on|the plate",
+     "goal_key": "on|the plate",
+     "goal_proto": "QG05",
+     "index": 7,
+     "language": "put the cream cheese on the plate",
+     "object_concept": "put|the cream cheese",
+     "object_key": "put|the cream cheese",
+     "object_proto": "QO00",
+     "suite": "libero_goal_ood"
+    },
+    "goal:8": {
+     "goal_concept": "on|the stove",
+     "goal_key": "on|the stove",
+     "goal_proto": "QG03",
+     "index": 8,
+     "language": "put the cream cheese on the stove",
+     "object_concept": "put|the cream cheese",
+     "object_key": "put|the cream cheese",
+     "object_proto": "QO00",
+     "suite": "libero_goal_ood"
+    },
+    "goal:9": {
+     "goal_concept": "on top of|the cabinet",
+     "goal_key": "on top of|the cabinet",
+     "goal_proto": "QG07",
+     "index": 9,
+     "language": "put the cream cheese on top of the cabinet",
+     "object_concept": "put|the cream cheese",
+     "object_key": "put|the cream cheese",
+     "object_proto": "QO00",
+     "suite": "libero_goal_ood"
+    },
+    "spatial:0": {
+     "goal_concept": "on|the plate",
+     "goal_key": "on|the plate",
+     "goal_proto": "QG05",
+     "index": 0,
+     "language": "put the butter on the plate",
+     "object_concept": "put|the butter",
+     "object_key": "put|the butter",
+     "object_proto": "QO10",
+     "suite": "libero_spatial_ood"
+    },
+    "spatial:1": {
+     "goal_concept": "on|the plate",
+     "goal_key": "on|the plate",
+     "goal_proto": "QG05",
+     "index": 1,
+     "language": "put the chocolate pudding on the plate",
+     "object_concept": "put|the chocolate pudding",
+     "object_key": "put|the chocolate pudding",
+     "object_proto": "QO11",
+     "suite": "libero_spatial_ood"
+    },
+    "spatial:2": {
+     "goal_concept": "on|the plate",
+     "goal_key": "on|the plate",
+     "goal_proto": "QG05",
+     "index": 2,
+     "language": "put the milk on the plate",
+     "object_concept": "put|the milk",
+     "object_key": "put|the milk",
+     "object_proto": "QO12",
+     "suite": "libero_spatial_ood"
+    },
+    "spatial:3": {
+     "goal_concept": "on|the plate",
+     "goal_key": "on|the plate",
+     "goal_proto": "QG05",
+     "index": 3,
+     "language": "put the orange juice on the plate",
+     "object_concept": "put|the orange juice",
+     "object_key": "put|the orange juice",
+     "object_proto": "QO02",
+     "suite": "libero_spatial_ood"
+    },
+    "spatial:4": {
+     "goal_concept": "on|the stove",
+     "goal_key": "on|the stove",
+     "goal_proto": "QG03",
+     "index": 4,
+     "language": "put the bowl on cookie box on the stove",
+     "object_concept": "put|the black bowl on the cookie box",
+     "object_key": "put|the bowl on cookie box",
+     "object_proto": "QO13",
+     "suite": "libero_spatial_ood"
+    },
+    "spatial:5": {
+     "goal_concept": "on top of|the cabinet",
+     "goal_key": "on|the cabinet",
+     "goal_proto": "QG07",
+     "index": 5,
+     "language": "put the bowl on cookie box on the cabinet",
+     "object_concept": "put|the black bowl on the cookie box",
+     "object_key": "put|the bowl on cookie box",
+     "object_proto": "QO13",
+     "suite": "libero_spatial_ood"
+    },
+    "spatial:6": {
+     "goal_concept": "on top of|the cabinet",
+     "goal_key": "on|the cabinet",
+     "goal_proto": "QG07",
+     "index": 6,
+     "language": "put the bowl next to the plate on the cabinet",
+     "object_concept": "put|the black bowl next to the plate",
+     "object_key": "put|the bowl next to the plate",
+     "object_proto": "QO14",
+     "suite": "libero_spatial_ood"
+    },
+    "spatial:7": {
+     "goal_concept": "on|the stove",
+     "goal_key": "on|the stove",
+     "goal_proto": "QG03",
+     "index": 7,
+     "language": "put the bowl next to the plate on the stove",
+     "object_concept": "put|the black bowl next to the plate",
+     "object_key": "put|the bowl next to the plate",
+     "object_proto": "QO14",
+     "suite": "libero_spatial_ood"
+    },
+    "spatial:8": {
+     "goal_concept": "on top of|the cabinet",
+     "goal_key": "on|the cabinet",
+     "goal_proto": "QG07",
+     "index": 8,
+     "language": "put the bowl at table center on the cabinet",
+     "object_concept": "put|the black bowl from table center",
+     "object_key": "put|the bowl at table center",
+     "object_proto": "QO15",
+     "suite": "libero_spatial_ood"
+    },
+    "spatial:9": {
+     "goal_concept": "on|the stove",
+     "goal_key": "on|the stove",
+     "goal_proto": "QG03",
+     "index": 9,
+     "language": "put the bowl at table center on the stove",
+     "object_concept": "put|the black bowl from table center",
+     "object_key": "put|the bowl at table center",
+     "object_proto": "QO15",
+     "suite": "libero_spatial_ood"
+    }
+   }
+  },
+  "written_before": "any fit (other than a smoke) or scored episode of g4; a two-episode serving smoke on libero_goal_ood task 8 (seed 99) ran"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__g4_ood__s13__fc4d0abf",
+ "schema": 1,
+ "script": "experiments/prereg/g4_ood.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-16T00:13:37+00:00",
+ "stream": null,
+ "tag": "g4_ood"
+}
