@@ -95,7 +95,36 @@ def read(record):
                             script="experiments/i6_novelty.py", command=" ".join(sys.argv)))
 
 
+def read_b(record):
+    """I6b (exploratory): I6 says a concept with the same words is NEW in LIBERO-90's scenes, so on E3's tasks whose concepts share
+    words with held ones (results/robot/i6b_plan.json), the policy's field under the held concepts' training instructions
+    (pfield, switched at the grasp) should not beat the policy, while the prototypes the router would pick do.  E3's stored
+    states 0-9, noise seed 13, paired with e3_accept."""
+    sys.path.insert(0, os.path.join(ROOT, "experiments"))
+    import e1_read as E1
+    import e3_read as E3
+    pl, e3 = json.load(open(os.path.join(R, "i6b_plan.json"))), json.load(open(os.path.join(R, "e3_plan.json")))
+    x = {}
+    for t, v in pl.items():
+        x[t] = dict(zs=E3.load("e3_accept", t, "zs"), hfac=E3.load("e3_accept", t, E3.arms(e3[t])["hfac"]),
+                    pfield=E3.load("i6b_accept", t, f"pfield@{v['o']}.{v['g']}"))
+    C = E1.compare
+    res = dict(tasks=len(x), pfield_vs_zs=C({t: {"x": z["pfield"], "y": z["zs"]} for t, z in x.items()}),
+               hfac_vs_pfield=C({t: {"x": z["hfac"], "y": z["pfield"]} for t, z in x.items()}),
+               per_task={t: {k: int(sum(v.values())) for k, v in z.items()} for t, z in x.items()})
+    for k in ("pfield_vs_zs", "hfac_vs_pfield"):
+        h = res[k]
+        print(f"[i6b] {k}: {h['x']} vs {h['y']} of {h['n']}, discordant {h['discordant']}, sign p {h['sign_p']:.3g}", flush=True)
+    if record:
+        from lifelong_ood import ledger
+        print(ledger.record("i6_novelty", bench="libero_90", tag="field_on_new", seed=13, metrics=res,
+                            bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config={},
+                            script="experiments/i6_novelty.py", command=" ".join(sys.argv)))
+
+
 if __name__ == "__main__":
+    if "--read-b" in sys.argv:
+        read_b("--record" in sys.argv)
     if "--launch" in sys.argv:
         launch()
     if "--read" in sys.argv:

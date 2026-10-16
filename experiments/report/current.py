@@ -475,6 +475,12 @@ def limits_of_method():
                 f"detector of new primitives Wang et al. lack: a held concept is a pointer to the policy's own field, a new one is "
                 f"fitted as a prototype. The same words are new in new scenes, so held means held under its instruction and scene. "
                 f"Caveat: held concepts are scored on demonstrations the policy was trained on.</p>")
+    i6b = row("i6_novelty", "field_on_new")
+    if i6b:
+        h, g = i6b["pfield_vs_zs"], i6b["hfac_vs_pfield"]
+        out += (f"<p>The routing is right in both directions. On {i6b['tasks']} LIBERO-90 tasks whose concepts share words with held "
+                f"ones, the field composition equals the policy ({h['x']} against {h['y']} of {h['n']}; exploratory), while the "
+                f"prototypes the router assigns to these new concepts reach {g['x']}.</p>")
     return out
 
 

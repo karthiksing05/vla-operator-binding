@@ -1,0 +1,187 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/i6_novelty.py --read-b --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "0bc12b0561ea6116bfca680b447861f43260469c",
+  "short": "0bc12b05"
+ },
+ "keys": {},
+ "metrics": {
+  "hfac_vs_pfield": {
+   "diff": {
+    "diff": 0.425,
+    "hi": 0.605,
+    "hi90": 0.575,
+    "lo": 0.24,
+    "lo90": 0.27,
+    "n_pairs": 200,
+    "n_tasks": 20
+   },
+   "discordant": [
+    91,
+    6
+   ],
+   "n": 200,
+   "sign_p": 1.3331565348493776e-20,
+   "tasks": 20,
+   "x": 173,
+   "y": 88
+  },
+  "per_task": {
+   "10": {
+    "hfac": 9,
+    "pfield": 5,
+    "zs": 10
+   },
+   "12": {
+    "hfac": 10,
+    "pfield": 7,
+    "zs": 4
+   },
+   "13": {
+    "hfac": 10,
+    "pfield": 0,
+    "zs": 0
+   },
+   "14": {
+    "hfac": 8,
+    "pfield": 2,
+    "zs": 5
+   },
+   "15": {
+    "hfac": 10,
+    "pfield": 0,
+    "zs": 1
+   },
+   "25": {
+    "hfac": 9,
+    "pfield": 0,
+    "zs": 0
+   },
+   "30": {
+    "hfac": 10,
+    "pfield": 8,
+    "zs": 9
+   },
+   "31": {
+    "hfac": 9,
+    "pfield": 3,
+    "zs": 0
+   },
+   "36": {
+    "hfac": 4,
+    "pfield": 0,
+    "zs": 0
+   },
+   "43": {
+    "hfac": 9,
+    "pfield": 3,
+    "zs": 0
+   },
+   "46": {
+    "hfac": 8,
+    "pfield": 10,
+    "zs": 10
+   },
+   "47": {
+    "hfac": 10,
+    "pfield": 10,
+    "zs": 9
+   },
+   "48": {
+    "hfac": 6,
+    "pfield": 0,
+    "zs": 0
+   },
+   "49": {
+    "hfac": 5,
+    "pfield": 0,
+    "zs": 0
+   },
+   "50": {
+    "hfac": 9,
+    "pfield": 10,
+    "zs": 10
+   },
+   "51": {
+    "hfac": 9,
+    "pfield": 10,
+    "zs": 10
+   },
+   "52": {
+    "hfac": 9,
+    "pfield": 0,
+    "zs": 0
+   },
+   "53": {
+    "hfac": 10,
+    "pfield": 0,
+    "zs": 0
+   },
+   "54": {
+    "hfac": 9,
+    "pfield": 10,
+    "zs": 8
+   },
+   "9": {
+    "hfac": 10,
+    "pfield": 10,
+    "zs": 9
+   }
+  },
+  "pfield_vs_zs": {
+   "diff": {
+    "diff": 0.015,
+    "hi": 0.105,
+    "hi90": 0.09,
+    "lo": -0.08,
+    "lo90": -0.065,
+    "n_pairs": 200,
+    "n_tasks": 20
+   },
+   "discordant": [
+    14,
+    11
+   ],
+   "n": 200,
+   "sign_p": 0.6900379657745361,
+   "tasks": 20,
+   "x": 88,
+   "y": 85
+  },
+  "tasks": 20
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero_90__field_on_new__s13__0bc12b05",
+ "schema": 1,
+ "script": "experiments/i6_novelty.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-16T11:11:14+00:00",
+ "stream": null,
+ "tag": "field_on_new"
+}
