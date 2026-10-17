@@ -19,7 +19,7 @@ them, it beats the per-task adapter: 994 against 932 of 1,320 on new start state
 0.091), with 675.9 MB against 902.8 MB. Learned as a stream that requests a demonstration only when practice fails, it needs 17
 and 16 demonstrations over 30 arrivals and damages no earlier task. On a published compositional OOD benchmark with no
 demonstration of any test task, composing the policy's own fields lifts 147 to 174 of 400 on pi0.5, 35 to 98 on pi0 and 8 to 25
-on SmolVLA; when practice chooses each held concept's source instruction, pi0.5 reaches 269, above the 222 of a prior method's
+on SmolVLA; when practice chooses each held concept's source instruction, pi0.5 reaches 269 and passes the 222 of a prior method's
 hand-chosen pairs. The policy's own likelihood tells held from new concepts without overlap (AUC 1.0), a detector of the kind Wang
 et al. leave to future work. The system beats retrieval (STRAP, 480 against 296 of 580) and noise-space reinforcement learning on the
 frozen policy (DSRL, 499 against 314 of 600).
