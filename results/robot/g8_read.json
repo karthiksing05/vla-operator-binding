@@ -1,0 +1,563 @@
+{
+ "missing": [],
+ "tasks": 66,
+ "H1": {
+  "x": 994,
+  "y": 932,
+  "n": 1320,
+  "tasks": 66,
+  "diff": {
+   "diff": 0.04696969696969697,
+   "lo": 0.007575757575757576,
+   "hi": 0.09090909090909091,
+   "lo90": 0.012878787878787878,
+   "hi90": 0.08409090909090909,
+   "n_pairs": 1320,
+   "n_tasks": 66
+  },
+  "discordant": [
+   100,
+   38
+  ],
+  "sign_p": 1.2884816619039295e-07,
+  "noninferior": true,
+  "superior": true
+ },
+ "kept": {
+  "zs": 13,
+  "hfac": 29,
+  "lora": 24
+ },
+ "library_vs_lora_acc": {
+  "x": 906,
+  "y": 932,
+  "n": 1320,
+  "tasks": 66,
+  "diff": {
+   "diff": -0.019696969696969695,
+   "lo": -0.07729166666666665,
+   "hi": 0.04015151515151515,
+   "lo90": -0.06893939393939394,
+   "hi90": 0.030303030303030304,
+   "n_pairs": 1320,
+   "n_tasks": 66
+  },
+  "discordant": [
+   135,
+   161
+  ],
+  "sign_p": 0.1460711811957857
+ },
+ "leaves_vs_zs": {
+  "x": 994,
+  "y": 400,
+  "n": 1320,
+  "tasks": 66,
+  "diff": {
+   "diff": 0.45,
+   "lo": 0.3659090909090909,
+   "hi": 0.5356060606060606,
+   "lo90": 0.37875000000000003,
+   "hi90": 0.5204545454545455,
+   "n_pairs": 1320,
+   "n_tasks": 66
+  },
+  "discordant": [
+   606,
+   12
+  ],
+  "sign_p": 1.0914474882226157e-161
+ },
+ "leaves_vs_library": {
+  "x": 994,
+  "y": 906,
+  "n": 1320,
+  "tasks": 66,
+  "diff": {
+   "diff": 0.06666666666666667,
+   "lo": 0.03257575757575758,
+   "hi": 0.10454545454545454,
+   "lo90": 0.037121212121212124,
+   "hi90": 0.09772727272727273,
+   "n_pairs": 1320,
+   "n_tasks": 66
+  },
+  "discordant": [
+   123,
+   35
+  ],
+  "sign_p": 1.1200911360125994e-12
+ },
+ "per_task": {
+  "31": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 4,
+   "kept": "lora"
+  },
+  "15": {
+   "leaves": 19,
+   "lora_acc": 16,
+   "library": 19,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "25": {
+   "leaves": 15,
+   "lora_acc": 20,
+   "library": 15,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "10": {
+   "leaves": 19,
+   "lora_acc": 19,
+   "library": 19,
+   "zs": 19,
+   "kept": "zs"
+  },
+  "43": {
+   "leaves": 20,
+   "lora_acc": 18,
+   "library": 20,
+   "zs": 5,
+   "kept": "hfac"
+  },
+  "41": {
+   "leaves": 14,
+   "lora_acc": 14,
+   "library": 8,
+   "zs": 1,
+   "kept": "lora"
+  },
+  "9": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 18,
+   "kept": "hfac"
+  },
+  "71": {
+   "leaves": 17,
+   "lora_acc": 16,
+   "library": 17,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "13": {
+   "leaves": 20,
+   "lora_acc": 15,
+   "library": 20,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "36": {
+   "leaves": 12,
+   "lora_acc": 12,
+   "library": 14,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "12": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 10,
+   "kept": "hfac"
+  },
+  "14": {
+   "leaves": 18,
+   "lora_acc": 19,
+   "library": 18,
+   "zs": 7,
+   "kept": "hfac"
+  },
+  "72": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 20,
+   "kept": "zs"
+  },
+  "30": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 10,
+   "kept": "hfac"
+  },
+  "47": {
+   "leaves": 20,
+   "lora_acc": 19,
+   "library": 20,
+   "zs": 19,
+   "kept": "hfac"
+  },
+  "54": {
+   "leaves": 18,
+   "lora_acc": 14,
+   "library": 18,
+   "zs": 16,
+   "kept": "hfac"
+  },
+  "52": {
+   "leaves": 11,
+   "lora_acc": 9,
+   "library": 11,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "53": {
+   "leaves": 17,
+   "lora_acc": 17,
+   "library": 17,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "48": {
+   "leaves": 14,
+   "lora_acc": 14,
+   "library": 11,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "50": {
+   "leaves": 18,
+   "lora_acc": 18,
+   "library": 18,
+   "zs": 18,
+   "kept": "zs"
+  },
+  "46": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 20,
+   "kept": "zs"
+  },
+  "49": {
+   "leaves": 19,
+   "lora_acc": 19,
+   "library": 14,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "57": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 20,
+   "kept": "zs"
+  },
+  "62": {
+   "leaves": 1,
+   "lora_acc": 5,
+   "library": 1,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "55": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 20,
+   "kept": "zs"
+  },
+  "59": {
+   "leaves": 15,
+   "lora_acc": 15,
+   "library": 8,
+   "zs": 6,
+   "kept": "lora"
+  },
+  "56": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 18,
+   "kept": "hfac"
+  },
+  "58": {
+   "leaves": 10,
+   "lora_acc": 10,
+   "library": 9,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "61": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 20,
+   "kept": "zs"
+  },
+  "2": {
+   "leaves": 13,
+   "lora_acc": 13,
+   "library": 13,
+   "zs": 13,
+   "kept": "zs"
+  },
+  "18": {
+   "leaves": 13,
+   "lora_acc": 13,
+   "library": 2,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "19": {
+   "leaves": 19,
+   "lora_acc": 19,
+   "library": 19,
+   "zs": 19,
+   "kept": "zs"
+  },
+  "24": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 20,
+   "kept": "zs"
+  },
+  "26": {
+   "leaves": 11,
+   "lora_acc": 11,
+   "library": 3,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "27": {
+   "leaves": 7,
+   "lora_acc": 7,
+   "library": 0,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "29": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 14,
+   "kept": "lora"
+  },
+  "32": {
+   "leaves": 8,
+   "lora_acc": 8,
+   "library": 9,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "34": {
+   "leaves": 19,
+   "lora_acc": 19,
+   "library": 17,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "37": {
+   "leaves": 11,
+   "lora_acc": 11,
+   "library": 5,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "38": {
+   "leaves": 13,
+   "lora_acc": 13,
+   "library": 10,
+   "zs": 5,
+   "kept": "lora"
+  },
+  "40": {
+   "leaves": 9,
+   "lora_acc": 9,
+   "library": 4,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "42": {
+   "leaves": 3,
+   "lora_acc": 0,
+   "library": 3,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "60": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 9,
+   "kept": "hfac"
+  },
+  "65": {
+   "leaves": 4,
+   "lora_acc": 0,
+   "library": 4,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "66": {
+   "leaves": 16,
+   "lora_acc": 5,
+   "library": 16,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "67": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 20,
+   "kept": "zs"
+  },
+  "68": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 20,
+   "kept": "zs"
+  },
+  "69": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "70": {
+   "leaves": 15,
+   "lora_acc": 15,
+   "library": 15,
+   "zs": 15,
+   "kept": "zs"
+  },
+  "73": {
+   "leaves": 8,
+   "lora_acc": 6,
+   "library": 8,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "74": {
+   "leaves": 11,
+   "lora_acc": 13,
+   "library": 11,
+   "zs": 1,
+   "kept": "hfac"
+  },
+  "75": {
+   "leaves": 13,
+   "lora_acc": 0,
+   "library": 13,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "76": {
+   "leaves": 7,
+   "lora_acc": 7,
+   "library": 0,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "77": {
+   "leaves": 19,
+   "lora_acc": 4,
+   "library": 19,
+   "zs": 4,
+   "kept": "hfac"
+  },
+  "78": {
+   "leaves": 4,
+   "lora_acc": 4,
+   "library": 2,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "79": {
+   "leaves": 16,
+   "lora_acc": 20,
+   "library": 16,
+   "zs": 4,
+   "kept": "hfac"
+  },
+  "80": {
+   "leaves": 18,
+   "lora_acc": 16,
+   "library": 18,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "81": {
+   "leaves": 8,
+   "lora_acc": 8,
+   "library": 6,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "82": {
+   "leaves": 4,
+   "lora_acc": 4,
+   "library": 5,
+   "zs": 5,
+   "kept": "lora"
+  },
+  "83": {
+   "leaves": 7,
+   "lora_acc": 7,
+   "library": 0,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "84": {
+   "leaves": 13,
+   "lora_acc": 4,
+   "library": 13,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "85": {
+   "leaves": 18,
+   "lora_acc": 17,
+   "library": 18,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "86": {
+   "leaves": 10,
+   "lora_acc": 10,
+   "library": 7,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "87": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 15,
+   "zs": 0,
+   "kept": "lora"
+  },
+  "88": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 20,
+   "zs": 0,
+   "kept": "hfac"
+  },
+  "89": {
+   "leaves": 20,
+   "lora_acc": 20,
+   "library": 18,
+   "zs": 0,
+   "kept": "lora"
+  }
+ },
+ "bytes": {
+  "leaves": 24,
+  "per_task_loras": 48,
+  "prototypes": 48,
+  "hierarchy_mb": 675.932712,
+  "lora_acc_mb": 902.812752,
+  "all_loras_mb": 1241.367534
+ }
+}

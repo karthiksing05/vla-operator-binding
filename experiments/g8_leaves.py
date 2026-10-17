@@ -73,7 +73,14 @@ def read(record):
                leaves_vs_zs=C({t: {"x": z["leaves"], "y": z["zs"]} for t, z in test.items()}),
                leaves_vs_library=C({t: {"x": z["leaves"], "y": z["library"]} for t, z in test.items()}),
                per_task={t: {k: int(sum(v.values())) for k, v in z.items()} | {"kept": kept[t]} for t, z in test.items()})
-    res["bytes"] = dict(leaves=res["kept"]["lora"], per_task_loras=sum(v == "lora" for v in kept_lora.values()))
+    import e1_read as E1b
+    e3p, e5p = json.load(open(os.path.join(R, "e3_plan.json"))), json.load(open(os.path.join(R, "e5_plan.json")))
+    protos = ({v["object_proto"] for v in e3p.values()} | {v["goal_proto"] for v in e3p.values()} | {v["type_proto"] for v in e3p.values()}
+              | {v["object_proto"] for v in e5p["tasks"].values()} | {v["goal"] for v in e5p["tasks"].values()})
+    n_leaf, n_lora = res["kept"]["lora"], sum(v == "lora" for v in kept_lora.values())
+    res["bytes"] = dict(leaves=n_leaf, per_task_loras=n_lora, prototypes=len(protos),
+                        hierarchy_mb=(len(protos) * E1b.PRIM_BYTES + n_leaf * E1b.LORA_BYTES) / 1e6,
+                        lora_acc_mb=n_lora * E1b.LORA_BYTES / 1e6, all_loras_mb=len(test) * E1b.LORA_BYTES / 1e6)
     for k in ("H1", "library_vs_lora_acc", "leaves_vs_zs", "leaves_vs_library"):
         h = res[k]
         print(f"[g8] {k:20} {h['x']} vs {h['y']} of {h['n']}, discordant {h['discordant']}, sign p {h['sign_p']:.3g}, diff "

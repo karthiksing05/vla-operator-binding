@@ -14,7 +14,9 @@ field under the instruction that taught it; the policy's likelihood decides whic
 policy. On pi0.5 and LIBERO-90, on start states no design decision saw, the kept library succeeds 499 of 600 times against 273
 for the policy alone, and level with a separate one-demonstration adapter per task given the same acceptance test: over 66
 tasks, 931 against 935 of 1,320 (difference -0.003, 95% interval -0.063 to 0.058), with 22 prototypes for 30 tasks in place of
-29 adapters (102.9 MB against 545.4 MB). Learned as a stream that requests a demonstration only when practice fails, it needs 17
+29 adapters (102.9 MB against 545.4 MB). With task leaves at the bottom of the hierarchy, kept only where practice prefers
+them, it beats the per-task adapter: 994 against 932 of 1,320 on new start states (difference 0.047, 95% interval 0.008 to
+0.091), with 675.9 MB against 902.8 MB. Learned as a stream that requests a demonstration only when practice fails, it needs 17
 and 16 demonstrations over 30 arrivals and damages no earlier task. On a published compositional OOD benchmark with no
 demonstration of any test task, composing the policy's own fields lifts 147 to 174 of 400 on pi0.5, 35 to 98 on pi0 and 8 to 25
 on SmolVLA. The policy's own likelihood tells held from new concepts without overlap (AUC 1.0), a detector of the kind Wang
@@ -164,10 +166,12 @@ On a joint stream of 50 arrivals (Li's 20 OOD tasks, which have no demonstration
 with both kinds of unit requests 17 and 16 demonstrations, all for LIBERO-90 concepts, and serves 641 and 672 of 1,000 against
 420 for the policy alone. Pointers carry no weights, so they change no request and damage nothing.
 
-### Iteration 8 (PENDING): task leaves
+### Iteration 8: task leaves
 Weakness: the system stays level with, not above, a per-task adapter. Change: below type and instance, a task the shared
-concepts cannot serve keeps its own one-demonstration adapter as a leaf, kept only where practice prefers it (pre-registered
-G8, a new set of start states).
+concepts cannot serve keeps its own one-demonstration adapter as a leaf, kept only where practice prefers it. Result, on a new
+set of start states over the 66 tasks: 994 of 1,320 against 932 for the per-task adapter with acceptance (discordant pairs 100
+to 38; task-level difference 0.047, 95% interval 0.008 to 0.091), superior at the pre-registered criterion, with a leaf on 24
+tasks where the per-task baseline keeps an adapter on 48 and with 675.9 MB against 902.8 MB.
 
 ## 6 Tests of the system
 
@@ -228,5 +232,5 @@ the per-task baselines. Fixed by matching each scene's block of episodes to the 
 
 ## 9 Limitations
 Flow-matching policies only (pi0.5, pi0, SmolVLA; a fourth, X-VLA, in progress); single-step pick-and-place; LIBERO-90 and Li's
-OOD suites only; practice needs a simulator; a new object needs its one demonstration; non-inferiority to per-task adapters not
+OOD suites only; practice needs a simulator; a new object needs its one demonstration; non-inferiority to per-task adapters without task leaves not
 established at 0.05.

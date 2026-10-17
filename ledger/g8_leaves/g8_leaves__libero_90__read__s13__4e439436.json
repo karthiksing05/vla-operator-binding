@@ -1,0 +1,605 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g8_leaves.py --read --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g8_leaves",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "4e4394367e5a04f5b535da7696b572f520b94c5e",
+  "short": "4e439436"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": {
+   "diff": {
+    "diff": 0.04696969696969697,
+    "hi": 0.09090909090909091,
+    "hi90": 0.08409090909090909,
+    "lo": 0.007575757575757576,
+    "lo90": 0.012878787878787878,
+    "n_pairs": 1320,
+    "n_tasks": 66
+   },
+   "discordant": [
+    100,
+    38
+   ],
+   "n": 1320,
+   "noninferior": true,
+   "sign_p": 1.2884816619039295e-07,
+   "superior": true,
+   "tasks": 66,
+   "x": 994,
+   "y": 932
+  },
+  "bytes": {
+   "all_loras_mb": 1241.367534,
+   "hierarchy_mb": 675.932712,
+   "leaves": 24,
+   "lora_acc_mb": 902.812752,
+   "per_task_loras": 48,
+   "prototypes": 48
+  },
+  "kept": {
+   "hfac": 29,
+   "lora": 24,
+   "zs": 13
+  },
+  "leaves_vs_library": {
+   "diff": {
+    "diff": 0.06666666666666667,
+    "hi": 0.10454545454545454,
+    "hi90": 0.09772727272727273,
+    "lo": 0.03257575757575758,
+    "lo90": 0.037121212121212124,
+    "n_pairs": 1320,
+    "n_tasks": 66
+   },
+   "discordant": [
+    123,
+    35
+   ],
+   "n": 1320,
+   "sign_p": 1.1200911360125994e-12,
+   "tasks": 66,
+   "x": 994,
+   "y": 906
+  },
+  "leaves_vs_zs": {
+   "diff": {
+    "diff": 0.45,
+    "hi": 0.5356060606060606,
+    "hi90": 0.5204545454545455,
+    "lo": 0.3659090909090909,
+    "lo90": 0.37875000000000003,
+    "n_pairs": 1320,
+    "n_tasks": 66
+   },
+   "discordant": [
+    606,
+    12
+   ],
+   "n": 1320,
+   "sign_p": 1.0914474882226157e-161,
+   "tasks": 66,
+   "x": 994,
+   "y": 400
+  },
+  "library_vs_lora_acc": {
+   "diff": {
+    "diff": -0.019696969696969695,
+    "hi": 0.04015151515151515,
+    "hi90": 0.030303030303030304,
+    "lo": -0.07729166666666665,
+    "lo90": -0.06893939393939394,
+    "n_pairs": 1320,
+    "n_tasks": 66
+   },
+   "discordant": [
+    135,
+    161
+   ],
+   "n": 1320,
+   "sign_p": 0.1460711811957857,
+   "tasks": 66,
+   "x": 906,
+   "y": 932
+  },
+  "missing": [],
+  "per_task": {
+   "10": {
+    "kept": "zs",
+    "leaves": 19,
+    "library": 19,
+    "lora_acc": 19,
+    "zs": 19
+   },
+   "12": {
+    "kept": "hfac",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 10
+   },
+   "13": {
+    "kept": "hfac",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 15,
+    "zs": 0
+   },
+   "14": {
+    "kept": "hfac",
+    "leaves": 18,
+    "library": 18,
+    "lora_acc": 19,
+    "zs": 7
+   },
+   "15": {
+    "kept": "hfac",
+    "leaves": 19,
+    "library": 19,
+    "lora_acc": 16,
+    "zs": 0
+   },
+   "18": {
+    "kept": "lora",
+    "leaves": 13,
+    "library": 2,
+    "lora_acc": 13,
+    "zs": 0
+   },
+   "19": {
+    "kept": "zs",
+    "leaves": 19,
+    "library": 19,
+    "lora_acc": 19,
+    "zs": 19
+   },
+   "2": {
+    "kept": "zs",
+    "leaves": 13,
+    "library": 13,
+    "lora_acc": 13,
+    "zs": 13
+   },
+   "24": {
+    "kept": "zs",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "25": {
+    "kept": "hfac",
+    "leaves": 15,
+    "library": 15,
+    "lora_acc": 20,
+    "zs": 0
+   },
+   "26": {
+    "kept": "lora",
+    "leaves": 11,
+    "library": 3,
+    "lora_acc": 11,
+    "zs": 0
+   },
+   "27": {
+    "kept": "lora",
+    "leaves": 7,
+    "library": 0,
+    "lora_acc": 7,
+    "zs": 0
+   },
+   "29": {
+    "kept": "lora",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 14
+   },
+   "30": {
+    "kept": "hfac",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 10
+   },
+   "31": {
+    "kept": "lora",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 4
+   },
+   "32": {
+    "kept": "lora",
+    "leaves": 8,
+    "library": 9,
+    "lora_acc": 8,
+    "zs": 0
+   },
+   "34": {
+    "kept": "lora",
+    "leaves": 19,
+    "library": 17,
+    "lora_acc": 19,
+    "zs": 0
+   },
+   "36": {
+    "kept": "lora",
+    "leaves": 12,
+    "library": 14,
+    "lora_acc": 12,
+    "zs": 0
+   },
+   "37": {
+    "kept": "lora",
+    "leaves": 11,
+    "library": 5,
+    "lora_acc": 11,
+    "zs": 0
+   },
+   "38": {
+    "kept": "lora",
+    "leaves": 13,
+    "library": 10,
+    "lora_acc": 13,
+    "zs": 5
+   },
+   "40": {
+    "kept": "lora",
+    "leaves": 9,
+    "library": 4,
+    "lora_acc": 9,
+    "zs": 0
+   },
+   "41": {
+    "kept": "lora",
+    "leaves": 14,
+    "library": 8,
+    "lora_acc": 14,
+    "zs": 1
+   },
+   "42": {
+    "kept": "hfac",
+    "leaves": 3,
+    "library": 3,
+    "lora_acc": 0,
+    "zs": 0
+   },
+   "43": {
+    "kept": "hfac",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 18,
+    "zs": 5
+   },
+   "46": {
+    "kept": "zs",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "47": {
+    "kept": "hfac",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 19,
+    "zs": 19
+   },
+   "48": {
+    "kept": "lora",
+    "leaves": 14,
+    "library": 11,
+    "lora_acc": 14,
+    "zs": 0
+   },
+   "49": {
+    "kept": "lora",
+    "leaves": 19,
+    "library": 14,
+    "lora_acc": 19,
+    "zs": 0
+   },
+   "50": {
+    "kept": "zs",
+    "leaves": 18,
+    "library": 18,
+    "lora_acc": 18,
+    "zs": 18
+   },
+   "52": {
+    "kept": "hfac",
+    "leaves": 11,
+    "library": 11,
+    "lora_acc": 9,
+    "zs": 0
+   },
+   "53": {
+    "kept": "hfac",
+    "leaves": 17,
+    "library": 17,
+    "lora_acc": 17,
+    "zs": 0
+   },
+   "54": {
+    "kept": "hfac",
+    "leaves": 18,
+    "library": 18,
+    "lora_acc": 14,
+    "zs": 16
+   },
+   "55": {
+    "kept": "zs",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "56": {
+    "kept": "hfac",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 18
+   },
+   "57": {
+    "kept": "zs",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "58": {
+    "kept": "lora",
+    "leaves": 10,
+    "library": 9,
+    "lora_acc": 10,
+    "zs": 0
+   },
+   "59": {
+    "kept": "lora",
+    "leaves": 15,
+    "library": 8,
+    "lora_acc": 15,
+    "zs": 6
+   },
+   "60": {
+    "kept": "hfac",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 9
+   },
+   "61": {
+    "kept": "zs",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "62": {
+    "kept": "hfac",
+    "leaves": 1,
+    "library": 1,
+    "lora_acc": 5,
+    "zs": 0
+   },
+   "65": {
+    "kept": "hfac",
+    "leaves": 4,
+    "library": 4,
+    "lora_acc": 0,
+    "zs": 0
+   },
+   "66": {
+    "kept": "hfac",
+    "leaves": 16,
+    "library": 16,
+    "lora_acc": 5,
+    "zs": 0
+   },
+   "67": {
+    "kept": "zs",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "68": {
+    "kept": "zs",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "69": {
+    "kept": "hfac",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 0
+   },
+   "70": {
+    "kept": "zs",
+    "leaves": 15,
+    "library": 15,
+    "lora_acc": 15,
+    "zs": 15
+   },
+   "71": {
+    "kept": "hfac",
+    "leaves": 17,
+    "library": 17,
+    "lora_acc": 16,
+    "zs": 0
+   },
+   "72": {
+    "kept": "zs",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "73": {
+    "kept": "hfac",
+    "leaves": 8,
+    "library": 8,
+    "lora_acc": 6,
+    "zs": 0
+   },
+   "74": {
+    "kept": "hfac",
+    "leaves": 11,
+    "library": 11,
+    "lora_acc": 13,
+    "zs": 1
+   },
+   "75": {
+    "kept": "hfac",
+    "leaves": 13,
+    "library": 13,
+    "lora_acc": 0,
+    "zs": 0
+   },
+   "76": {
+    "kept": "lora",
+    "leaves": 7,
+    "library": 0,
+    "lora_acc": 7,
+    "zs": 0
+   },
+   "77": {
+    "kept": "hfac",
+    "leaves": 19,
+    "library": 19,
+    "lora_acc": 4,
+    "zs": 4
+   },
+   "78": {
+    "kept": "lora",
+    "leaves": 4,
+    "library": 2,
+    "lora_acc": 4,
+    "zs": 0
+   },
+   "79": {
+    "kept": "hfac",
+    "leaves": 16,
+    "library": 16,
+    "lora_acc": 20,
+    "zs": 4
+   },
+   "80": {
+    "kept": "hfac",
+    "leaves": 18,
+    "library": 18,
+    "lora_acc": 16,
+    "zs": 0
+   },
+   "81": {
+    "kept": "lora",
+    "leaves": 8,
+    "library": 6,
+    "lora_acc": 8,
+    "zs": 0
+   },
+   "82": {
+    "kept": "lora",
+    "leaves": 4,
+    "library": 5,
+    "lora_acc": 4,
+    "zs": 5
+   },
+   "83": {
+    "kept": "lora",
+    "leaves": 7,
+    "library": 0,
+    "lora_acc": 7,
+    "zs": 0
+   },
+   "84": {
+    "kept": "hfac",
+    "leaves": 13,
+    "library": 13,
+    "lora_acc": 4,
+    "zs": 0
+   },
+   "85": {
+    "kept": "hfac",
+    "leaves": 18,
+    "library": 18,
+    "lora_acc": 17,
+    "zs": 0
+   },
+   "86": {
+    "kept": "lora",
+    "leaves": 10,
+    "library": 7,
+    "lora_acc": 10,
+    "zs": 0
+   },
+   "87": {
+    "kept": "lora",
+    "leaves": 20,
+    "library": 15,
+    "lora_acc": 20,
+    "zs": 0
+   },
+   "88": {
+    "kept": "hfac",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 0
+   },
+   "89": {
+    "kept": "lora",
+    "leaves": 20,
+    "library": 18,
+    "lora_acc": 20,
+    "zs": 0
+   },
+   "9": {
+    "kept": "hfac",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 18
+   }
+  },
+  "tasks": 66
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g8_leaves__libero_90__read__s13__4e439436",
+ "schema": 1,
+ "script": "experiments/g8_leaves.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-17T04:53:20+00:00",
+ "stream": null,
+ "tag": "read"
+}

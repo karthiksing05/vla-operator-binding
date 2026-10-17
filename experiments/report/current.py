@@ -91,6 +91,8 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"rank 16 vs LoRA + acc. {_ci(m['r16']['vs_lora_acc']['diff'])}; vs rank 4 {m['r16']['vs_rank4']['x']} vs {m['r16']['vs_rank4']['y']}"),
     ("i7 the anatomy of a composed step", "i7_anatomy", "read", False, "c-library",
      lambda m: f"named object first: object unit {m['metrics']['obj']['named_first']}/{m['metrics']['obj']['episodes']} vs policy {m['metrics']['zs']['named_first']}"),
+    ("G8 task leaves", "g8_leaves", "read", True, "c-gen",
+     lambda m: f"{m['H1']['x']} vs per-task LoRA + acc. {m['H1']['y']} of {m['H1']['n']} ({_ci(m['H1']['diff'])}): superior"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -400,6 +402,14 @@ def generalise():
         out += (f"<p>Against STRAP (m3_prereg tag g6_strap), retrieving sub-trajectories from the library's own data and pi0.5's "
                 f"training data: {h['y']} of {h['n']} with acceptance, against {h['x']} for the library (difference "
                 f"{_ci(h['diff'])}); STRAP alone falls below the policy.</p>")
+    g8 = row("g8_leaves", "read")
+    if g8:
+        h, b = g8["H1"], g8["bytes"]
+        out += (f"<p><b>Task leaves.</b> The hierarchy gains a lowest level: a task the shared concepts cannot serve keeps its own "
+                f"one-demonstration adapter as a leaf, kept only where practice prefers it (m3_prereg tag g8_leaves, new start "
+                f"states). Over {g8['tasks']} tasks it succeeds {h['x']} of {h['n']} times against {h['y']} for the per-task LoRA with "
+                f"acceptance (difference {_ci(h['diff'])}): superior, with leaves on {g8['kept']['lora']} tasks where the baseline "
+                f"keeps {b['per_task_loras']} adapters, {b['hierarchy_mb']:.1f} MB against {b['lora_acc_mb']:.1f} MB.</p>")
     g5 = row("g5_factors", "read")
     if g5:
         a = g5["alone_vs_zs"]
