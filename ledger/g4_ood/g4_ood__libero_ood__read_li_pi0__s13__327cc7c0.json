@@ -1,0 +1,331 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g4_ood.py --read-d --record --backbone pi0_libero",
+ "config": {
+  "backbone": "pi0_libero"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g4_ood",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "327cc7c0f86bce7de86b0da4330cbe42f9fe3ee9",
+  "short": "327cc7c0"
+ },
+ "keys": {},
+ "metrics": {
+  "backbone": "pi0_libero",
+  "li_fixed_vs_ours_grasp": {
+   "diff": {
+    "diff": 0.545,
+    "hi": 0.715,
+    "hi90": 0.69,
+    "lo": 0.37,
+    "lo90": 0.3975,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    220,
+    2
+   ],
+   "n": 400,
+   "sign_p": 7.345415124329314e-63,
+   "tasks": 20,
+   "x": 292,
+   "y": 74
+  },
+  "li_fixed_vs_zs": {
+   "diff": {
+    "diff": 0.6425,
+    "hi": 0.79,
+    "hi90": 0.7675,
+    "lo": 0.4875,
+    "lo90": 0.5125,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    260,
+    3
+   ],
+   "n": 400,
+   "sign_p": 4.091557576347095e-73,
+   "tasks": 20,
+   "x": 292,
+   "y": 35
+  },
+  "li_grasp_vs_li_fixed": {
+   "diff": {
+    "diff": 0.0325,
+    "hi": 0.11,
+    "hi90": 0.0975,
+    "lo": -0.04,
+    "lo90": -0.027624999999999886,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    35,
+    22
+   ],
+   "n": 400,
+   "sign_p": 0.11116111910399348,
+   "tasks": 20,
+   "x": 305,
+   "y": 292
+  },
+  "li_grasp_vs_zs": {
+   "diff": {
+    "diff": 0.675,
+    "hi": 0.8125,
+    "hi90": 0.7925,
+    "lo": 0.53,
+    "lo90": 0.5525,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    271,
+    1
+   ],
+   "n": 400,
+   "sign_p": 7.195050096254832e-80,
+   "tasks": 20,
+   "x": 305,
+   "y": 35
+  },
+  "missing": [],
+  "ours_fixed_vs_zs": {
+   "diff": {
+    "diff": 0.1275,
+    "hi": 0.3075,
+    "hi90": 0.2775,
+    "lo": -0.03,
+    "lo90": -0.0075,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    74,
+    23
+   ],
+   "n": 400,
+   "sign_p": 2.027109075312698e-07,
+   "tasks": 20,
+   "x": 86,
+   "y": 35
+  },
+  "ours_grasp_vs_ours_fixed": {
+   "diff": {
+    "diff": -0.03,
+    "hi": 0.0,
+    "hi90": -0.0025,
+    "lo": -0.0675,
+    "lo90": -0.0625,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    6,
+    18
+   ],
+   "n": 400,
+   "sign_p": 0.022655844688415527,
+   "tasks": 20,
+   "x": 74,
+   "y": 86
+  },
+  "ours_grasp_vs_zs": {
+   "diff": {
+    "diff": 0.0975,
+    "hi": 0.28,
+    "hi90": 0.25,
+    "lo": -0.07,
+    "lo90": -0.045,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    68,
+    29
+   ],
+   "n": 400,
+   "sign_p": 9.340687100229205e-05,
+   "tasks": 20,
+   "x": 74,
+   "y": 35
+  },
+  "per_task": {
+   "goal:0": {
+    "li_fixed": 18,
+    "li_grasp": 18,
+    "ours_fixed": 2,
+    "ours_grasp": 2,
+    "zs": 0
+   },
+   "goal:1": {
+    "li_fixed": 10,
+    "li_grasp": 15,
+    "ours_fixed": 0,
+    "ours_grasp": 0,
+    "zs": 0
+   },
+   "goal:2": {
+    "li_fixed": 19,
+    "li_grasp": 17,
+    "ours_fixed": 0,
+    "ours_grasp": 0,
+    "zs": 0
+   },
+   "goal:3": {
+    "li_fixed": 20,
+    "li_grasp": 18,
+    "ours_fixed": 0,
+    "ours_grasp": 0,
+    "zs": 0
+   },
+   "goal:4": {
+    "li_fixed": 18,
+    "li_grasp": 18,
+    "ours_fixed": 0,
+    "ours_grasp": 1,
+    "zs": 5
+   },
+   "goal:5": {
+    "li_fixed": 10,
+    "li_grasp": 11,
+    "ours_fixed": 0,
+    "ours_grasp": 0,
+    "zs": 2
+   },
+   "goal:6": {
+    "li_fixed": 1,
+    "li_grasp": 4,
+    "ours_fixed": 2,
+    "ours_grasp": 0,
+    "zs": 0
+   },
+   "goal:7": {
+    "li_fixed": 20,
+    "li_grasp": 19,
+    "ours_fixed": 20,
+    "ours_grasp": 19,
+    "zs": 3
+   },
+   "goal:8": {
+    "li_fixed": 20,
+    "li_grasp": 20,
+    "ours_fixed": 20,
+    "ours_grasp": 20,
+    "zs": 0
+   },
+   "goal:9": {
+    "li_fixed": 20,
+    "li_grasp": 20,
+    "ours_fixed": 20,
+    "ours_grasp": 20,
+    "zs": 0
+   },
+   "spatial:0": {
+    "li_fixed": 18,
+    "li_grasp": 19,
+    "ours_fixed": 5,
+    "ours_grasp": 1,
+    "zs": 11
+   },
+   "spatial:1": {
+    "li_fixed": 20,
+    "li_grasp": 20,
+    "ours_fixed": 6,
+    "ours_grasp": 3,
+    "zs": 13
+   },
+   "spatial:2": {
+    "li_fixed": 20,
+    "li_grasp": 20,
+    "ours_fixed": 0,
+    "ours_grasp": 0,
+    "zs": 1
+   },
+   "spatial:3": {
+    "li_fixed": 20,
+    "li_grasp": 20,
+    "ours_fixed": 0,
+    "ours_grasp": 0,
+    "zs": 0
+   },
+   "spatial:4": {
+    "li_fixed": 17,
+    "li_grasp": 20,
+    "ours_fixed": 0,
+    "ours_grasp": 0,
+    "zs": 0
+   },
+   "spatial:5": {
+    "li_fixed": 6,
+    "li_grasp": 0,
+    "ours_fixed": 0,
+    "ours_grasp": 0,
+    "zs": 0
+   },
+   "spatial:6": {
+    "li_fixed": 1,
+    "li_grasp": 1,
+    "ours_fixed": 2,
+    "ours_grasp": 1,
+    "zs": 0
+   },
+   "spatial:7": {
+    "li_fixed": 3,
+    "li_grasp": 13,
+    "ours_fixed": 0,
+    "ours_grasp": 0,
+    "zs": 0
+   },
+   "spatial:8": {
+    "li_fixed": 12,
+    "li_grasp": 14,
+    "ours_fixed": 9,
+    "ours_grasp": 7,
+    "zs": 0
+   },
+   "spatial:9": {
+    "li_fixed": 19,
+    "li_grasp": 18,
+    "ours_fixed": 0,
+    "ours_grasp": 0,
+    "zs": 0
+   }
+  },
+  "tasks": 20
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g4_ood__libero_ood__read_li_pi0__s13__327cc7c0",
+ "schema": 1,
+ "script": "experiments/g4_ood.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-17T21:15:04+00:00",
+ "stream": null,
+ "tag": "read_li_pi0"
+}

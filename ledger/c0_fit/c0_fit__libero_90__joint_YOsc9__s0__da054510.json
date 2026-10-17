@@ -1,0 +1,125 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 3178496,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 3178496,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 53 --key put|the_orange_juice --name YOsc9 --rank 4 --approach --backbone xvla",
+ "config": {
+  "approach": true,
+  "backbone": "xvla",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "53",
+  "key": "put|the orange juice",
+  "lr": 0.0001,
+  "name": "YOsc9",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": false,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "optimistprime.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4117494",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "da054510fd3653e677342be7d51e64cc40db5d04",
+  "short": "da054510"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "xvla",
+  "bind": false,
+  "bytes": 3178496,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.04497835785150528,
+    0.006760905496776104,
+    0.0018050284124910831,
+    0.0008864187402650714,
+    0.0005748340045101941,
+    0.00040156321483664215,
+    0.00037886190693825483,
+    0.0002893994387704879,
+    0.00027953702374361455,
+    0.00023180822608992457,
+    0.00021017494145780802
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 59,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the orange juice and put it in the basket",
+    "frames": [
+     0,
+     59
+    ],
+    "task": 53
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the orange juice"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_YOsc9__s0__da054510",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T06:14:07+00:00",
+ "stream": null,
+ "tag": "joint_YOsc9"
+}

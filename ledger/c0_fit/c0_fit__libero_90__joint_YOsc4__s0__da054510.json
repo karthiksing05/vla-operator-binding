@@ -1,0 +1,125 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 3178496,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 3178496,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 57 --key put|the_cream_cheese --name YOsc4 --rank 4 --approach --backbone xvla",
+ "config": {
+  "approach": true,
+  "backbone": "xvla",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "57",
+  "key": "put|the cream cheese",
+  "lr": 0.0001,
+  "name": "YOsc4",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": false,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "tachikoma.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4117498",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "da054510fd3653e677342be7d51e64cc40db5d04",
+  "short": "da054510"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "xvla",
+  "bind": false,
+  "bytes": 3178496,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.013208023272454739,
+    0.002865187358111143,
+    0.001351186423562467,
+    0.0007254804950207472,
+    0.0012068375945091248,
+    0.0005129535566084087,
+    0.001015799818560481,
+    0.0003931891988031566,
+    0.0009437064290978014,
+    0.0013769849902018905,
+    0.00029723180341534317
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 66,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the cream cheese and put it in the tray",
+    "frames": [
+     0,
+     66
+    ],
+    "task": 57
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the cream cheese"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_YOsc4__s0__da054510",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T06:14:00+00:00",
+ "stream": null,
+ "tag": "joint_YOsc4"
+}

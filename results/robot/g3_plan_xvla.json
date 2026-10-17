@@ -1,0 +1,399 @@
+{
+ "tasks": {
+  "31": {
+   "object_proto": "YOsc1",
+   "goal_proto": "YGsccab",
+   "lora": true
+  },
+  "15": {
+   "object_proto": "YSch2",
+   "goal_proto": "YGsccab",
+   "lora": true
+  },
+  "25": {
+   "object_proto": "YOsc1",
+   "goal_proto": "YGsccab",
+   "lora": true
+  },
+  "10": {
+   "object_proto": "YOsc1",
+   "goal_proto": "YGsccab",
+   "lora": true
+  },
+  "43": {
+   "object_proto": "YOsc13",
+   "goal_proto": "YGsccab",
+   "lora": true
+  },
+  "41": {
+   "object_proto": "YOsc6",
+   "goal_proto": "YGsccab",
+   "lora": true
+  },
+  "9": {
+   "object_proto": "YOsc1",
+   "goal_proto": "YGscplate",
+   "lora": true
+  },
+  "71": {
+   "object_proto": "YOsc10",
+   "goal_proto": "YGscplate",
+   "lora": true
+  },
+  "13": {
+   "object_proto": "YSch1",
+   "goal_proto": "YGscplate",
+   "lora": true
+  },
+  "36": {
+   "object_proto": "YOsc13",
+   "goal_proto": "YGscplate",
+   "lora": true
+  },
+  "12": {
+   "object_proto": "YSch0",
+   "goal_proto": "YGscplate",
+   "lora": true
+  },
+  "14": {
+   "object_proto": "YSch2",
+   "goal_proto": "YGscplate",
+   "lora": true
+  },
+  "72": {
+   "object_proto": "YOsc14",
+   "goal_proto": "YGscplate",
+   "lora": true
+  },
+  "30": {
+   "object_proto": "YOsc1",
+   "goal_proto": "YGscplate",
+   "lora": true
+  },
+  "47": {
+   "object_proto": "YOsc5",
+   "goal_proto": "YGscbasket",
+   "lora": true
+  },
+  "54": {
+   "object_proto": "YOsc12",
+   "goal_proto": "YGscbasket",
+   "lora": true
+  },
+  "52": {
+   "object_proto": "YOsc8",
+   "goal_proto": "YGscbasket",
+   "lora": true
+  },
+  "53": {
+   "object_proto": "YOsc9",
+   "goal_proto": "YGscbasket",
+   "lora": true
+  },
+  "48": {
+   "object_proto": "YOsc7",
+   "goal_proto": "YGscbasket",
+   "lora": true
+  },
+  "50": {
+   "object_proto": "YOsc0",
+   "goal_proto": "YGscbasket",
+   "lora": true
+  },
+  "51": {
+   "object_proto": "YOsc2",
+   "goal_proto": "YGscbasket",
+   "lora": false
+  },
+  "46": {
+   "object_proto": "YOsc0",
+   "goal_proto": "YGscbasket",
+   "lora": true
+  },
+  "49": {
+   "object_proto": "YOsc12",
+   "goal_proto": "YGscbasket",
+   "lora": true
+  },
+  "57": {
+   "object_proto": "YOsc4",
+   "goal_proto": "YGhtray",
+   "lora": true
+  },
+  "62": {
+   "object_proto": "YOsc11",
+   "goal_proto": "YGhtray",
+   "lora": true
+  },
+  "55": {
+   "object_proto": "YOsc0",
+   "goal_proto": "YGhtray",
+   "lora": true
+  },
+  "59": {
+   "object_proto": "YOsc12",
+   "goal_proto": "YGhtray",
+   "lora": true
+  },
+  "56": {
+   "object_proto": "YOsc2",
+   "goal_proto": "YGhtray",
+   "lora": true
+  },
+  "58": {
+   "object_proto": "YOsc7",
+   "goal_proto": "YGhtray",
+   "lora": true
+  },
+  "61": {
+   "object_proto": "YOsc3",
+   "goal_proto": "YGhtray",
+   "lora": true
+  }
+ },
+ "protos": {
+  "Osc1": {
+   "name": "YOsc1",
+   "tasks": [
+    1,
+    2,
+    9,
+    10,
+    12,
+    13,
+    14,
+    15,
+    24,
+    25,
+    29,
+    30,
+    31,
+    60
+   ],
+   "key": "put|the black bowl",
+   "flag": "--approach"
+  },
+  "Gsccab": {
+   "name": "YGsccab",
+   "tasks": [
+    10,
+    15,
+    25,
+    31,
+    41,
+    43
+   ],
+   "key": "on top of|the cabinet",
+   "flag": "--goal"
+  },
+  "Sch2": {
+   "name": "YSch2",
+   "tasks": [
+    14,
+    15
+   ],
+   "key": "put|the black bowl",
+   "flag": "--approach"
+  },
+  "Osc13": {
+   "name": "YOsc13",
+   "tasks": [
+    36,
+    37,
+    43
+   ],
+   "key": "put|the white bowl",
+   "flag": "--approach"
+  },
+  "Osc6": {
+   "name": "YOsc6",
+   "tasks": [
+    18,
+    21,
+    40,
+    41,
+    42,
+    45
+   ],
+   "key": "put|the frying pan",
+   "flag": "--approach"
+  },
+  "Gscplate": {
+   "name": "YGscplate",
+   "tasks": [
+    9,
+    12,
+    13,
+    14,
+    30,
+    36,
+    71,
+    72
+   ],
+   "key": "on|the plate",
+   "flag": "--goal"
+  },
+  "Osc10": {
+   "name": "YOsc10",
+   "tasks": [
+    65,
+    66,
+    71,
+    84
+   ],
+   "key": "put|the red mug",
+   "flag": "--approach"
+  },
+  "Sch1": {
+   "name": "YSch1",
+   "tasks": [
+    13
+   ],
+   "key": "put|the black bowl",
+   "flag": "--approach"
+  },
+  "Sch0": {
+   "name": "YSch0",
+   "tasks": [
+    12
+   ],
+   "key": "put|the black bowl",
+   "flag": "--approach"
+  },
+  "Osc14": {
+   "name": "YOsc14",
+   "tasks": [
+    67,
+    72,
+    85
+   ],
+   "key": "put|the white mug",
+   "flag": "--approach"
+  },
+  "Osc5": {
+   "name": "YOsc5",
+   "tasks": [
+    47
+   ],
+   "key": "put|the cream cheese box",
+   "flag": "--approach"
+  },
+  "Gscbasket": {
+   "name": "YGscbasket",
+   "tasks": [
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    53,
+    54
+   ],
+   "key": "in|the basket",
+   "flag": "--goal"
+  },
+  "Osc12": {
+   "name": "YOsc12",
+   "tasks": [
+    49,
+    54,
+    59
+   ],
+   "key": "put|the tomato sauce",
+   "flag": "--approach"
+  },
+  "Osc8": {
+   "name": "YOsc8",
+   "tasks": [
+    52
+   ],
+   "key": "put|the milk",
+   "flag": "--approach"
+  },
+  "Osc9": {
+   "name": "YOsc9",
+   "tasks": [
+    53
+   ],
+   "key": "put|the orange juice",
+   "flag": "--approach"
+  },
+  "Osc7": {
+   "name": "YOsc7",
+   "tasks": [
+    32,
+    48,
+    58
+   ],
+   "key": "put|the ketchup",
+   "flag": "--approach"
+  },
+  "Osc0": {
+   "name": "YOsc0",
+   "tasks": [
+    46,
+    50,
+    55
+   ],
+   "key": "put|the alphabet soup",
+   "flag": "--approach"
+  },
+  "Osc2": {
+   "name": "YOsc2",
+   "tasks": [
+    3,
+    4,
+    51,
+    56
+   ],
+   "key": "put|the butter",
+   "flag": "--approach"
+  },
+  "Osc4": {
+   "name": "YOsc4",
+   "tasks": [
+    57
+   ],
+   "key": "put|the cream cheese",
+   "flag": "--approach"
+  },
+  "Ghtray": {
+   "name": "YGhtray",
+   "tasks": [
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64
+   ],
+   "key": "in|the tray",
+   "flag": "--goal"
+  },
+  "Osc11": {
+   "name": "YOsc11",
+   "tasks": [
+    62
+   ],
+   "key": "put|the salad dressing",
+   "flag": "--approach"
+  },
+  "Osc3": {
+   "name": "YOsc3",
+   "tasks": [
+    5,
+    61,
+    69,
+    70
+   ],
+   "key": "put|the chocolate pudding",
+   "flag": "--approach"
+  }
+ }
+}

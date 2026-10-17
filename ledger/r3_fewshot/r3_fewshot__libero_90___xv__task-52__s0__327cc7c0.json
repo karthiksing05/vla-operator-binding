@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_52_xv.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 12713984,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 12713984,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 52 --tag _xv --backbone xvla",
+ "config": {
+  "backbone": "xvla",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_xv",
+  "task": 52
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "hk47.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4117518",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "327cc7c0f86bce7de86b0da4330cbe42f9fe3ee9",
+  "short": "327cc7c0"
+ },
+ "keys": {
+  "task": 52
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.2176009863615036,
+    0.00661007734015584,
+    0.002607435919344425,
+    0.001281938748434186,
+    0.0008158639539033175,
+    0.0008650803938508034,
+    0.0006654036697000265,
+    0.0005415739142335951,
+    0.0005150859942659736,
+    0.0004111728921998292,
+    0.00044018487096764147
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 2475,
+  "final_loss": 0.00044018487096764147,
+  "first_loss": 0.2176009863615036,
+  "n_banks": 98,
+  "n_frames": 104,
+  "n_params": 6356992,
+  "task": 52,
+  "text": "pick up the milk and put it in the basket",
+  "train_secs": 1936.5949234962463
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___xv__task-52__s0__327cc7c0",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T06:47:25+00:00",
+ "stream": null,
+ "tag": "_xv"
+}

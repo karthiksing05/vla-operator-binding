@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_47_xv.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 12713984,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 12713984,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 47 --tag _xv --backbone xvla",
+ "config": {
+  "backbone": "xvla",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_xv",
+  "task": 47
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "conroy.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4117516",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "327cc7c0f86bce7de86b0da4330cbe42f9fe3ee9",
+  "short": "327cc7c0"
+ },
+ "keys": {
+  "task": 47
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.08824655413627625,
+    0.006392437499016523,
+    0.0024369750171899796,
+    0.0014193165116012096,
+    0.0008074113866314292,
+    0.0008390365983359516,
+    0.0004089462454430759,
+    0.0006834461819380522,
+    0.0004916955367662013,
+    0.0004041600041091442,
+    0.0006192283472046256
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 2291,
+  "final_loss": 0.0006192283472046256,
+  "first_loss": 0.08824655413627625,
+  "n_banks": 98,
+  "n_frames": 158,
+  "n_params": 6356992,
+  "task": 47,
+  "text": "pick up the cream cheese box and put it in the basket",
+  "train_secs": 1949.4922556877136
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___xv__task-47__s0__327cc7c0",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T06:47:26+00:00",
+ "stream": null,
+ "tag": "_xv"
+}

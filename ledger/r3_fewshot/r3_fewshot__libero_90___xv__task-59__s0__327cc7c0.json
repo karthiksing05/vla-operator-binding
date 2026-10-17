@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_59_xv.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 12713984,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 12713984,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 59 --tag _xv --backbone xvla",
+ "config": {
+  "backbone": "xvla",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_xv",
+  "task": 59
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "dave.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4117527",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "327cc7c0f86bce7de86b0da4330cbe42f9fe3ee9",
+  "short": "327cc7c0"
+ },
+ "keys": {
+  "task": 59
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.299324631690979,
+    0.014838377013802528,
+    0.006189682520925999,
+    0.0028190359007567167,
+    0.0011449768207967281,
+    0.0011941202683374286,
+    0.0008541078423149884,
+    0.0008001858368515968,
+    0.0007842323393560946,
+    0.00055609957780689,
+    0.0007028281106613576
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 2338,
+  "final_loss": 0.0007028281106613576,
+  "first_loss": 0.299324631690979,
+  "n_banks": 98,
+  "n_frames": 128,
+  "n_params": 6356992,
+  "task": 59,
+  "text": "pick up the tomato sauce and put it in the tray",
+  "train_secs": 1929.2157588005066
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___xv__task-59__s0__327cc7c0",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T06:50:14+00:00",
+ "stream": null,
+ "tag": "_xv"
+}

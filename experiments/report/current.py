@@ -95,6 +95,12 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"{m['H1']['x']} vs per-task LoRA + acc. {m['H1']['y']} of {m['H1']['n']} ({_ci(m['H1']['diff'])}): superior"),
     ("G9 rank-matched per-task LoRA", "g9_rank4lora", "read", True, "c-gen",
      lambda m: f"library {m['H1']['x']} vs rank-4 LoRA + acc. {m['H1']['y']} of {m['H1']['n']} ({_ci(m['H1']['diff'])}); {m['bytes']['library']/1e6:.1f} vs {m['bytes']['r4_total']/1e6:.1f} MB"),
+    ("G4d Li's prompt switching on our harness (pi0)", "g4_ood", "read_li_pi0", True, "c-limits",
+     lambda m: f"Li's sources {m['li_fixed_vs_zs']['x']} (fixed) / {m['li_grasp_vs_zs']['x']} (grasp); ours {m['ours_fixed_vs_zs']['x']} / {m['ours_grasp_vs_zs']['x']}; policy {m['li_fixed_vs_zs']['y']} of {m['li_fixed_vs_zs']['n']}"),
+    ("G3 X-VLA (fourth policy)", "g3_crossmodel", "read_xvla", True, "c-gen",
+     lambda m: f"{m['hypotheses']['H1']['x']} vs {m['hypotheses']['H1']['y']} zero-shot (n.s.); vs LoRA + acc. {_ci(m['hypotheses']['H2']['diff'])}"),
+    ("G4c the policy's own fields on X-VLA", "g4_ood", "read_field_xvla", True, "c-limits",
+     lambda m: f"kept {m['H1']['x']} vs policy {m['H1']['y']} of {m['H1']['n']}: passes"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -525,6 +531,14 @@ def limits_of_method():
                 f"{cp['H1']['x']} against {cp['H1']['y']} of {cp['H1']['n']} (discordant pairs {cp['H1']['discordant'][0]} to "
                 f"{cp['H1']['discordant'][1]}; Goal-OOD {cp['goal']['x']} against {cp['goal']['y']}), SmolVLA {cs['H1']['x']} "
                 f"against {cs['H1']['y']}. It carries across the three policies.</p>")
+    d0 = row("g4_ood", "read_li_pi0")
+    if d0:
+        out += (f"<p><b>Against Li's prompt switching.</b> The pointer operator is Li's, and it reproduces on our harness (m3_prereg tag "
+                f"g4d_li): with Li's hand-chosen source pairs pi0 succeeds {d0['li_fixed_vs_zs']['x']} of {d0['li_fixed_vs_zs']['n']} "
+                f"times at their fixed switching step and {d0['li_grasp_vs_zs']['x']} at its own grasp, against "
+                f"{d0['ours_fixed_vs_zs']['x']} and {d0['ours_grasp_vs_zs']['x']} with our automatically chosen sources. The gap is the "
+                f"choice of sources, not the trigger: Li's pairs pick training tasks whose motion reaches where the new object lies, "
+                f"ours match the instruction's words. Choosing sources by where their motion goes is the next iteration.</p>")
     i6 = row("i6_novelty", "read")
     if i6:
         out += (f"<p><b>Which kind of unit a concept gets.</b> The frozen policy's own flow-matching loss on a concept's frames "

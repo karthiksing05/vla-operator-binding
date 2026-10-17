@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_30_xv.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 12713984,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 12713984,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 30 --tag _xv --backbone xvla",
+ "config": {
+  "backbone": "xvla",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_xv",
+  "task": 30
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cyborg.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4117515",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "327cc7c0f86bce7de86b0da4330cbe42f9fe3ee9",
+  "short": "327cc7c0"
+ },
+ "keys": {
+  "task": 30
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.10319799929857254,
+    0.007721414789557457,
+    0.0027650627307593822,
+    0.0017579656559973955,
+    0.0011592810042202473,
+    0.0008625765331089497,
+    0.0007679489208385348,
+    0.0006580596673302352,
+    0.0007537471828982234,
+    0.0005413321196101606,
+    0.0005483226850628853
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 3601,
+  "final_loss": 0.0005483226850628853,
+  "first_loss": 0.10319799929857254,
+  "n_banks": 98,
+  "n_frames": 131,
+  "n_params": 6356992,
+  "task": 30,
+  "text": "put the black bowl on the plate",
+  "train_secs": 1930.6375586986542
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___xv__task-30__s0__327cc7c0",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T06:47:11+00:00",
+ "stream": null,
+ "tag": "_xv"
+}

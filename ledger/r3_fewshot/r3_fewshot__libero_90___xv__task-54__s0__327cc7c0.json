@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_54_xv.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 12713984,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 12713984,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 54 --tag _xv --backbone xvla",
+ "config": {
+  "backbone": "xvla",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_xv",
+  "task": 54
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "kitt.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4117517",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "327cc7c0f86bce7de86b0da4330cbe42f9fe3ee9",
+  "short": "327cc7c0"
+ },
+ "keys": {
+  "task": 54
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.10054467618465424,
+    0.0031130865681916475,
+    0.001847517560236156,
+    0.0015866445610299706,
+    0.0014201205922290683,
+    0.0009271430317312479,
+    0.0005432422622106969,
+    0.0012214540038257837,
+    0.0005215005949139595,
+    0.0004064129025209695,
+    0.0007529230206273496
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 127,
+  "final_loss": 0.0007529230206273496,
+  "first_loss": 0.10054467618465424,
+  "n_banks": 98,
+  "n_frames": 103,
+  "n_params": 6356992,
+  "task": 54,
+  "text": "pick up the tomato sauce and put it in the basket",
+  "train_secs": 1961.0620603561401
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___xv__task-54__s0__327cc7c0",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T06:47:53+00:00",
+ "stream": null,
+ "tag": "_xv"
+}

@@ -152,6 +152,12 @@ succeed 174 of 400 times against 147 for the policy (discordant pairs 30 to 3; t
 to 0.145), in both suites. This is score composition in the sense of our ICLR-2027 companion: the policy carries each concept
 under the instruction that taught it, and the composed step reads them one phase at a time. The same composition, unchanged,
 lifts pi0 from 35 to 98 and SmolVLA from 8 to 25 of 400 on the same tasks (both pass under Holm).
+The operator is Li's prompt switching, which reproduces on our harness: with Li's hand-chosen source pairs, pi0 succeeds 292
+of 400 times switched at their fixed step and 305 switched at its own grasp, against 86 and 74 with our automatically chosen
+sources (pi0.5: 218 and 222 against 157 and 160). The gap lies entirely in the sources: Li's pairs pick training tasks whose
+trained motion reaches where the new object lies, ours match the instruction's words. The grasp trigger matches the tuned fixed
+step without per-task tuning. Choosing sources by where their motion goes is the next iteration. On X-VLA the composition with
+practice lifts 75 to 120 of 400.
 
 ### Iteration 6: the likelihood decides the kind of unit
 Weakness: two kinds of unit need a rule to choose between them. Change: the frozen policy's flow-matching loss on a concept's
@@ -186,7 +192,9 @@ against 329. Recombination supplies a missing skill and interferes with a presen
 The same library refit on SmolVLA, at the same tasks, start states and seed: 203 of 600 against 20 for SmolVLA alone; against
 SmolVLA's per-task LoRA with acceptance 189 against 274 of 580 (difference -0.147, 95% interval -0.266 to -0.029). On pi0 the
 library succeeds 324 of 600 times against 85 for pi0 alone; against pi0's per-task LoRA with acceptance, 308 against 330 of 580
-(difference -0.038, 95% interval -0.166 to 0.081): non-inferiority is not established on either.
+(difference -0.038, 95% interval -0.166 to 0.081): non-inferiority is not established on either. X-VLA alone already succeeds
+534 of 600 times on these tasks; the kept library 542 (not significant), and 526 against 544 of 580 for X-VLA's per-task LoRA
+with acceptance: a strong zero-shot policy leaves the library little to add.
 
 ### Against adapter composition
 On 52 of the held-out tasks, summing the per-task adapters of an object donor and a goal donor collapses (71 of 1,040);
@@ -231,6 +239,6 @@ The IPEC port of LIBERO-90 merges tasks that share an instruction: 16 tasks were
 the per-task baselines. Fixed by matching each scene's block of episodes to the task's rendered first frames.
 
 ## 9 Limitations
-Flow-matching policies only (pi0.5, pi0, SmolVLA; a fourth, X-VLA, in progress); single-step pick-and-place; LIBERO-90 and Li's
+Flow-matching policies only (pi0.5, pi0, SmolVLA, X-VLA); automatic choice of a held concept's source task trails Li's hand-chosen pairs; single-step pick-and-place; LIBERO-90 and Li's
 OOD suites only; practice needs a simulator; a new object needs its one demonstration; non-inferiority to per-task adapters without task leaves not
 established at 0.05.

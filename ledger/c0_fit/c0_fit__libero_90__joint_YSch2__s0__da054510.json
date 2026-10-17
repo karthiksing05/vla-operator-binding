@@ -1,0 +1,133 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 3178496,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 3178496,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 14+15 --key put|the_black_bowl --name YSch2 --rank 4 --approach --backbone xvla",
+ "config": {
+  "approach": true,
+  "backbone": "xvla",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "14+15",
+  "key": "put|the black bowl",
+  "lr": 0.0001,
+  "name": "YSch2",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": false,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "xaea-12.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4117482",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "da054510fd3653e677342be7d51e64cc40db5d04",
+  "short": "da054510"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "xvla",
+  "bind": false,
+  "bytes": 3178496,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.049430958926677704,
+    0.00465385802090168,
+    0.0023105249274522066,
+    0.0014637397835031152,
+    0.0013172593899071217,
+    0.001137618557550013,
+    0.0006493926630355418,
+    0.0007763900212012231,
+    0.0006475027767010033,
+    0.0005218583391979337,
+    0.0005913273198530078
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 81,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the middle black bowl on the plate",
+    "frames": [
+     0,
+     38
+    ],
+    "task": 14
+   },
+   {
+    "clause": "put the middle black bowl on top of the cabinet",
+    "frames": [
+     0,
+     43
+    ],
+    "task": 15
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the black bowl"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_YSch2__s0__da054510",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T06:13:37+00:00",
+ "stream": null,
+ "tag": "joint_YSch2"
+}

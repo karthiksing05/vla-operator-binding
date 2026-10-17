@@ -1,0 +1,125 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 3178496,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 3178496,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 62 --key put|the_salad_dressing --name YOsc11 --rank 4 --approach --backbone xvla",
+ "config": {
+  "approach": true,
+  "backbone": "xvla",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "62",
+  "key": "put|the salad dressing",
+  "lr": 0.0001,
+  "name": "YOsc11",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": false,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "dendrite.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4117500",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "da054510fd3653e677342be7d51e64cc40db5d04",
+  "short": "da054510"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "xvla",
+  "bind": false,
+  "bytes": 3178496,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.046665556728839874,
+    0.00398353673517704,
+    0.0017555353697389364,
+    0.0009730792953632772,
+    0.0007525581168010831,
+    0.0004798988811671734,
+    0.00038716246490366757,
+    0.00033105589682236314,
+    0.00026021350640803576,
+    0.00023142290592659265,
+    0.00022610140149481595
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 39,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the salad dressing and put it in the tray",
+    "frames": [
+     0,
+     39
+    ],
+    "task": 62
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the salad dressing"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_YOsc11__s0__da054510",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T06:14:25+00:00",
+ "stream": null,
+ "tag": "joint_YOsc11"
+}

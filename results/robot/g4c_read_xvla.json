@@ -1,0 +1,291 @@
+{
+ "backbone": "xvla",
+ "missing": [],
+ "acceptance": {
+  "goal:0": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "goal:1": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "goal:2": {
+   "zs": 1,
+   "pfield": 0
+  },
+  "goal:3": {
+   "zs": 3,
+   "pfield": 4
+  },
+  "goal:4": {
+   "zs": 0,
+   "pfield": 1
+  },
+  "goal:5": {
+   "zs": 0,
+   "pfield": 3
+  },
+  "goal:6": {
+   "zs": 0,
+   "pfield": 8
+  },
+  "goal:7": {
+   "zs": 7,
+   "pfield": 10
+  },
+  "goal:8": {
+   "zs": 5,
+   "pfield": 9
+  },
+  "goal:9": {
+   "zs": 4,
+   "pfield": 7
+  },
+  "spatial:0": {
+   "zs": 8,
+   "pfield": 10
+  },
+  "spatial:1": {
+   "zs": 10,
+   "pfield": 10
+  },
+  "spatial:2": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "spatial:3": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "spatial:4": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "spatial:5": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "spatial:6": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "spatial:7": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "spatial:8": {
+   "zs": 0,
+   "pfield": 0
+  },
+  "spatial:9": {
+   "zs": 0,
+   "pfield": 0
+  }
+ },
+ "kept": {
+  "goal:0": "zs",
+  "goal:1": "zs",
+  "goal:2": "zs",
+  "goal:3": "pfield",
+  "goal:4": "pfield",
+  "goal:5": "pfield",
+  "goal:6": "pfield",
+  "goal:7": "pfield",
+  "goal:8": "pfield",
+  "goal:9": "pfield",
+  "spatial:0": "pfield",
+  "spatial:1": "zs",
+  "spatial:2": "zs",
+  "spatial:3": "zs",
+  "spatial:4": "zs",
+  "spatial:5": "zs",
+  "spatial:6": "zs",
+  "spatial:7": "zs",
+  "spatial:8": "zs",
+  "spatial:9": "zs"
+ },
+ "H1": {
+  "x": 120,
+  "y": 75,
+  "n": 400,
+  "tasks": 20,
+  "diff": {
+   "diff": 0.1125,
+   "lo": 0.027437500000000056,
+   "hi": 0.2225,
+   "lo90": 0.0375,
+   "hi90": 0.2025,
+   "n_pairs": 400,
+   "n_tasks": 20
+  },
+  "discordant": [
+   52,
+   7
+  ],
+  "sign_p": 1.3589917802203644e-09,
+  "passes": true
+ },
+ "pfield_vs_zs": {
+  "x": 122,
+  "y": 75,
+  "n": 400,
+  "tasks": 20,
+  "diff": {
+   "diff": 0.1175,
+   "lo": 0.03,
+   "hi": 0.2275,
+   "lo90": 0.0425,
+   "hi90": 0.2075,
+   "n_pairs": 400,
+   "n_tasks": 20
+  },
+  "discordant": [
+   55,
+   8
+  ],
+  "sign_p": 9.761673086614714e-10
+ },
+ "per_task": {
+  "goal:0": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "goal:1": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "goal:2": {
+   "zs": 1,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "goal:3": {
+   "zs": 5,
+   "pfield": 6,
+   "kept": "pfield"
+  },
+  "goal:4": {
+   "zs": 0,
+   "pfield": 2,
+   "kept": "pfield"
+  },
+  "goal:5": {
+   "zs": 0,
+   "pfield": 5,
+   "kept": "pfield"
+  },
+  "goal:6": {
+   "zs": 0,
+   "pfield": 17,
+   "kept": "pfield"
+  },
+  "goal:7": {
+   "zs": 18,
+   "pfield": 20,
+   "kept": "pfield"
+  },
+  "goal:8": {
+   "zs": 11,
+   "pfield": 19,
+   "kept": "pfield"
+  },
+  "goal:9": {
+   "zs": 6,
+   "pfield": 16,
+   "kept": "pfield"
+  },
+  "spatial:0": {
+   "zs": 16,
+   "pfield": 16,
+   "kept": "pfield"
+  },
+  "spatial:1": {
+   "zs": 18,
+   "pfield": 20,
+   "kept": "zs"
+  },
+  "spatial:2": {
+   "zs": 0,
+   "pfield": 1,
+   "kept": "zs"
+  },
+  "spatial:3": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "spatial:4": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "spatial:5": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "spatial:6": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "spatial:7": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "spatial:8": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  },
+  "spatial:9": {
+   "zs": 0,
+   "pfield": 0,
+   "kept": "zs"
+  }
+ },
+ "goal": {
+  "x": 86,
+  "y": 41,
+  "n": 200,
+  "tasks": 10,
+  "diff": {
+   "diff": 0.225,
+   "lo": 0.07,
+   "hi": 0.415,
+   "lo90": 0.09,
+   "hi90": 0.38,
+   "n_pairs": 200,
+   "n_tasks": 10
+  },
+  "discordant": [
+   49,
+   4
+  ],
+  "sign_p": 7.053979622639872e-11
+ },
+ "spatial": {
+  "x": 34,
+  "y": 34,
+  "n": 200,
+  "tasks": 10,
+  "diff": {
+   "diff": 0.0,
+   "lo": -0.025,
+   "hi": 0.025,
+   "lo90": -0.02,
+   "hi90": 0.02,
+   "n_pairs": 200,
+   "n_tasks": 10
+  },
+  "discordant": [
+   3,
+   3
+  ],
+  "sign_p": 1.0
+ }
+}

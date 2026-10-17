@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_10_xv.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 12713984,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 12713984,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 10 --tag _xv --backbone xvla",
+ "config": {
+  "backbone": "xvla",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_xv",
+  "task": 10
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "megazord.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4117505",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "da054510fd3653e677342be7d51e64cc40db5d04",
+  "short": "da054510"
+ },
+ "keys": {
+  "task": 10
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    1.503940224647522,
+    0.03804807364940643,
+    0.008652206510305405,
+    0.0074455635622143745,
+    0.004847412928938866,
+    0.0031152546871453524,
+    0.0023627709597349167,
+    0.002840125234797597,
+    0.0013216082006692886,
+    0.0012072395766153932,
+    0.0013456065207719803
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 1809,
+  "final_loss": 0.0013456065207719803,
+  "first_loss": 1.503940224647522,
+  "n_banks": 98,
+  "n_frames": 151,
+  "n_params": 6356992,
+  "task": 10,
+  "text": "put the black bowl on top of the cabinet",
+  "train_secs": 1964.9898784160614
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___xv__task-10__s0__da054510",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T06:16:18+00:00",
+ "stream": null,
+ "tag": "_xv"
+}

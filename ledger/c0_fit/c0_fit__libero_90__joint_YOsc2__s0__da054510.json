@@ -1,0 +1,141 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 3178496,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 3178496,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 3+4+51+56 --key put|the_butter --name YOsc2 --rank 4 --approach --backbone xvla",
+ "config": {
+  "approach": true,
+  "backbone": "xvla",
+  "batch": 32,
+  "bind": false,
+  "demo": 0,
+  "goal": false,
+  "init": "",
+  "joint": "3+4+51+56",
+  "key": "put|the butter",
+  "lr": 0.0001,
+  "name": "YOsc2",
+  "ndemo": 1,
+  "rank": 4,
+  "scope": "expert",
+  "score": false,
+  "source": "l90",
+  "steps": 1000,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "tachikoma.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4117497",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "c0_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "da054510fd3653e677342be7d51e64cc40db5d04",
+  "short": "da054510"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "xvla",
+  "bind": false,
+  "bytes": 3178496,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.04100959375500679,
+    0.006868176627904177,
+    0.0034434176050126553,
+    0.0036731529980897903,
+    0.0019360310398042202,
+    0.0017283079214394093,
+    0.001884596305899322,
+    0.001877756672911346,
+    0.001198546844534576,
+    0.0014791064895689487,
+    0.001115388236939907
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "frames": 142,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the butter at the back in the top drawer of the cabinet",
+    "frames": [
+     0,
+     53
+    ],
+    "task": 3
+   },
+   {
+    "clause": "put the butter at the front in the top drawer of the cabinet",
+    "frames": [
+     0,
+     51
+    ],
+    "task": 4
+   },
+   {
+    "clause": "pick up the butter and put it in the tray",
+    "frames": [
+     0,
+     38
+    ],
+    "task": 56
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the butter"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c0_fit__libero_90__joint_YOsc2__s0__da054510",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T06:14:01+00:00",
+ "stream": null,
+ "tag": "joint_YOsc2"
+}
