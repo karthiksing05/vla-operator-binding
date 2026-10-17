@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g4d_main_goal_libero_goal_ood_9_pfield_13.14.q10_seed13_pi0.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_goal_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:9?suite=libero_goal_ood&paths=none&apaths=none&goal=1&pa=put_the_cream_cheese_in_the_bowl&pg=put_the_wine_bottle_on_top_of_the_cabinet&sw=10 SUITE=libero_goal_ood TASKS=9 TRIALS=20 (job 4116940)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_c",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g4d_main_goal_libero_goal_ood_9_pfield_13.14.q10_seed13_pi0.json",
+   "port": 9302,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_goal_ood",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "9",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4116940",
+  "mode": "prims:9?suite=libero_goal_ood&paths=none&apaths=none&goal=1&pa=put_the_cream_cheese_in_the_bowl&pg=put_the_wine_bottle_on_top_of_the_cabinet&sw=10"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "synapse.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4116940",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g4d_main_goal",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "7478b2b49ad9569c9533b9152b8f90f3f2c79006",
+  "short": "7478b2b4"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:9?suite=libero_goal_ood&paths=none&apaths=none&goal=1&pa=put_the_cream_cheese_in_the_bowl&pg=put_the_wine_bottle_on_top_of_the_cabinet&sw=10",
+  "tasks": "9",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 241.079607963562,
+  "success_rate": 1.0,
+  "tasks": {
+   "9": {
+    "errors": 0,
+    "language": "put the cream cheese on top of the cabinet",
+    "mean_steps": 121.35,
+    "n": 20,
+    "success_rate": 1.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g4d_main_goal__libero_goal_ood__pfield_13.14.q10_seed13_pi0__first_trial-0__modeb131891bb5dc__tasks-9__trials-20__s7__7478b2b4",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-17T05:11:16+00:00",
+ "stream": null,
+ "tag": "pfield_13.14.q10_seed13_pi0"
+}

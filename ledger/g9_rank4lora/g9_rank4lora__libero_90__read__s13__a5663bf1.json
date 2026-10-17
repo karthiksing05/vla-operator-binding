@@ -1,0 +1,271 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g9_rank4lora.py --read --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g9_rank4lora",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a5663bf10e2598f1a4f6dc88783f391b6cce9e31",
+  "short": "a5663bf1"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": {
+   "diff": {
+    "diff": 0.0,
+    "hi": 0.05172413793103448,
+    "hi90": 0.04310344827586207,
+    "lo": -0.05,
+    "lo90": -0.04310344827586207,
+    "n_pairs": 580,
+    "n_tasks": 29
+   },
+   "discordant": [
+    41,
+    41
+   ],
+   "n": 580,
+   "noninferior": false,
+   "sign_p": 1.0,
+   "tasks": 29,
+   "x": 480,
+   "y": 480
+  },
+  "bytes": {
+   "library": 102907904,
+   "loras": 29,
+   "prototypes": 22,
+   "r4_each": 4677632,
+   "r4_total": 135651328
+  },
+  "kept_lora": 21,
+  "missing": [],
+  "per_task": {
+   "10": {
+    "lib": 18,
+    "r16_acc": 18,
+    "r4": 17,
+    "r4_acc": 18
+   },
+   "12": {
+    "lib": 20,
+    "r16_acc": 19,
+    "r4": 20,
+    "r4_acc": 20
+   },
+   "13": {
+    "lib": 19,
+    "r16_acc": 19,
+    "r4": 17,
+    "r4_acc": 17
+   },
+   "14": {
+    "lib": 17,
+    "r16_acc": 17,
+    "r4": 16,
+    "r4_acc": 16
+   },
+   "15": {
+    "lib": 18,
+    "r16_acc": 16,
+    "r4": 11,
+    "r4_acc": 11
+   },
+   "25": {
+    "lib": 17,
+    "r16_acc": 20,
+    "r4": 20,
+    "r4_acc": 20
+   },
+   "30": {
+    "lib": 20,
+    "r16_acc": 20,
+    "r4": 20,
+    "r4_acc": 20
+   },
+   "31": {
+    "lib": 19,
+    "r16_acc": 20,
+    "r4": 20,
+    "r4_acc": 20
+   },
+   "36": {
+    "lib": 10,
+    "r16_acc": 13,
+    "r4": 9,
+    "r4_acc": 9
+   },
+   "41": {
+    "lib": 10,
+    "r16_acc": 17,
+    "r4": 14,
+    "r4_acc": 14
+   },
+   "43": {
+    "lib": 18,
+    "r16_acc": 18,
+    "r4": 18,
+    "r4_acc": 18
+   },
+   "46": {
+    "lib": 20,
+    "r16_acc": 20,
+    "r4": 16,
+    "r4_acc": 20
+   },
+   "47": {
+    "lib": 20,
+    "r16_acc": 20,
+    "r4": 20,
+    "r4_acc": 20
+   },
+   "48": {
+    "lib": 14,
+    "r16_acc": 17,
+    "r4": 18,
+    "r4_acc": 18
+   },
+   "49": {
+    "lib": 15,
+    "r16_acc": 18,
+    "r4": 17,
+    "r4_acc": 17
+   },
+   "50": {
+    "lib": 17,
+    "r16_acc": 17,
+    "r4": 18,
+    "r4_acc": 17
+   },
+   "52": {
+    "lib": 13,
+    "r16_acc": 11,
+    "r4": 10,
+    "r4_acc": 10
+   },
+   "53": {
+    "lib": 20,
+    "r16_acc": 20,
+    "r4": 20,
+    "r4_acc": 20
+   },
+   "54": {
+    "lib": 18,
+    "r16_acc": 12,
+    "r4": 16,
+    "r4_acc": 16
+   },
+   "55": {
+    "lib": 20,
+    "r16_acc": 20,
+    "r4": 18,
+    "r4_acc": 20
+   },
+   "56": {
+    "lib": 20,
+    "r16_acc": 20,
+    "r4": 20,
+    "r4_acc": 20
+   },
+   "57": {
+    "lib": 20,
+    "r16_acc": 20,
+    "r4": 20,
+    "r4_acc": 20
+   },
+   "58": {
+    "lib": 9,
+    "r16_acc": 11,
+    "r4": 12,
+    "r4_acc": 12
+   },
+   "59": {
+    "lib": 10,
+    "r16_acc": 9,
+    "r4": 5,
+    "r4_acc": 5
+   },
+   "61": {
+    "lib": 20,
+    "r16_acc": 20,
+    "r4": 20,
+    "r4_acc": 20
+   },
+   "62": {
+    "lib": 5,
+    "r16_acc": 6,
+    "r4": 8,
+    "r4_acc": 8
+   },
+   "71": {
+    "lib": 13,
+    "r16_acc": 16,
+    "r4": 14,
+    "r4_acc": 14
+   },
+   "72": {
+    "lib": 20,
+    "r16_acc": 20,
+    "r4": 20,
+    "r4_acc": 20
+   },
+   "9": {
+    "lib": 20,
+    "r16_acc": 20,
+    "r4": 20,
+    "r4_acc": 20
+   }
+  },
+  "r4_acc_vs_r16_acc": {
+   "diff": {
+    "diff": -0.02413793103448276,
+    "hi": 0.017241379310344827,
+    "hi90": 0.010344827586206896,
+    "lo": -0.06896551724137931,
+    "lo90": -0.0603448275862069,
+    "n_pairs": 580,
+    "n_tasks": 29
+   },
+   "discordant": [
+    28,
+    42
+   ],
+   "n": 580,
+   "sign_p": 0.11960933562988493,
+   "tasks": 29,
+   "x": 480,
+   "y": 494
+  },
+  "tasks": 29
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g9_rank4lora__libero_90__read__s13__a5663bf1",
+ "schema": 1,
+ "script": "experiments/g9_rank4lora.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-17T05:51:23+00:00",
+ "stream": null,
+ "tag": "read"
+}

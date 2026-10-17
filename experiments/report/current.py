@@ -93,6 +93,8 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"named object first: object unit {m['metrics']['obj']['named_first']}/{m['metrics']['obj']['episodes']} vs policy {m['metrics']['zs']['named_first']}"),
     ("G8 task leaves", "g8_leaves", "read", True, "c-gen",
      lambda m: f"{m['H1']['x']} vs per-task LoRA + acc. {m['H1']['y']} of {m['H1']['n']} ({_ci(m['H1']['diff'])}): superior"),
+    ("G9 rank-matched per-task LoRA", "g9_rank4lora", "read", True, "c-gen",
+     lambda m: f"library {m['H1']['x']} vs rank-4 LoRA + acc. {m['H1']['y']} of {m['H1']['n']} ({_ci(m['H1']['diff'])}); {m['bytes']['library']/1e6:.1f} vs {m['bytes']['r4_total']/1e6:.1f} MB"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),

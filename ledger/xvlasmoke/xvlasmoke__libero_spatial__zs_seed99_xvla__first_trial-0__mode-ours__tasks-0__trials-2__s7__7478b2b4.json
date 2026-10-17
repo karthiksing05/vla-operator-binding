@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/xvlasmoke_libero_spatial_0_zs_seed99_xvla.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_spatial",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=ours SUITE=libero_spatial TASKS=0 TRIALS=2 (job 4117115)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/xvlasmoke_libero_spatial_0_zs_seed99_xvla.json",
+   "port": 9825,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_spatial",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "0",
+   "trials": 2,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4117115",
+  "mode": "ours"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cyborg.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4117115",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "xvlasmoke",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "7478b2b49ad9569c9533b9152b8f90f3f2c79006",
+  "short": "7478b2b4"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "ours",
+  "tasks": "0",
+  "trials": 2
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 2,
+  "secs": 19.750280141830444,
+  "success_rate": 1.0,
+  "tasks": {
+   "0": {
+    "errors": 0,
+    "language": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+    "mean_steps": 91.5,
+    "n": 2,
+    "success_rate": 1.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "xvlasmoke__libero_spatial__zs_seed99_xvla__first_trial-0__mode-ours__tasks-0__trials-2__s7__7478b2b4",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-17T05:16:42+00:00",
+ "stream": null,
+ "tag": "zs_seed99_xvla"
+}

@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_41_r4.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 41 --rank 4 --tag _r4",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 4,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_r4",
+  "task": 41
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "tachikoma.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4116759",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "7478b2b49ad9569c9533b9152b8f90f3f2c79006",
+  "short": "7478b2b4"
+ },
+ "keys": {
+  "task": 41
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.10613410919904709,
+    0.04438377544283867,
+    0.026652246713638306,
+    0.013953782618045807,
+    0.015983693301677704,
+    0.010267484001815319,
+    0.006767183542251587,
+    0.009229439310729504,
+    0.007011767011135817,
+    0.009609179571270943,
+    0.007982908748090267
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 2886,
+  "final_loss": 0.007982908748090267,
+  "first_loss": 0.10613410919904709,
+  "n_banks": 163,
+  "n_frames": 195,
+  "n_params": 2338816,
+  "task": 41,
+  "text": "put the frying pan on top of the cabinet",
+  "train_secs": 129.9396321773529
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___r4__task-41__s0__7478b2b4",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T05:02:58+00:00",
+ "stream": null,
+ "tag": "_r4"
+}

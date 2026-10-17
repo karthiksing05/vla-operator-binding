@@ -14,7 +14,7 @@ field under the instruction that taught it; the policy's likelihood decides whic
 policy. On pi0.5 and LIBERO-90, on start states no design decision saw, the kept library succeeds 499 of 600 times against 273
 for the policy alone, and level with a separate one-demonstration adapter per task given the same acceptance test: over 66
 tasks, 931 against 935 of 1,320 (difference -0.003, 95% interval -0.063 to 0.058), with 22 prototypes for 30 tasks in place of
-29 adapters (102.9 MB against 545.4 MB). With task leaves at the bottom of the hierarchy, kept only where practice prefers
+29 rank-16 adapters (102.9 MB against 545.4 MB; against rank-4 adapters, level at 480 against 480 of 580 with 102.9 MB against 135.7 MB). With task leaves at the bottom of the hierarchy, kept only where practice prefers
 them, it beats the per-task adapter: 994 against 932 of 1,320 on new start states (difference 0.047, 95% interval 0.008 to
 0.091), with 675.9 MB against 902.8 MB. Learned as a stream that requests a demonstration only when practice fails, it needs 17
 and 16 demonstrations over 30 arrivals and damages no earlier task. On a published compositional OOD benchmark with no

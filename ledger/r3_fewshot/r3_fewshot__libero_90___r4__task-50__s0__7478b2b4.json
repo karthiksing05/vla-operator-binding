@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_50_r4.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 50 --rank 4 --tag _r4",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 4,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_r4",
+  "task": 50
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "tachikoma.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4116773",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "7478b2b49ad9569c9533b9152b8f90f3f2c79006",
+  "short": "7478b2b4"
+ },
+ "keys": {
+  "task": 50
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.03684331104159355,
+    0.02589331939816475,
+    0.015517215244472027,
+    0.007344264071434736,
+    0.008578415028750896,
+    0.0035957060754299164,
+    0.002869992284104228,
+    0.001885717734694481,
+    0.003281522309407592,
+    0.008632032200694084,
+    0.005827087908983231
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 1436,
+  "final_loss": 0.005827087908983231,
+  "first_loss": 0.03684331104159355,
+  "n_banks": 163,
+  "n_frames": 130,
+  "n_params": 2338816,
+  "task": 50,
+  "text": "pick up the alphabet soup and put it in the basket",
+  "train_secs": 128.10387134552002
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___r4__task-50__s0__7478b2b4",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T05:07:05+00:00",
+ "stream": null,
+ "tag": "_r4"
+}

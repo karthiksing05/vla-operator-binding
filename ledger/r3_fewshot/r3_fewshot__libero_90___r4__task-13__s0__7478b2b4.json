@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_13_r4.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 13 --rank 4 --tag _r4",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 4,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_r4",
+  "task": 13
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "dendrite.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4116762",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "7478b2b49ad9569c9533b9152b8f90f3f2c79006",
+  "short": "7478b2b4"
+ },
+ "keys": {
+  "task": 13
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.07950318604707718,
+    0.021595751866698265,
+    0.00770874647423625,
+    0.005418724380433559,
+    0.0068926261737942696,
+    0.0038595690857619047,
+    0.0043195560574531555,
+    0.0015974848065525293,
+    0.0034613441675901413,
+    0.005723264999687672,
+    0.004741532262414694
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 1649,
+  "final_loss": 0.004741532262414694,
+  "first_loss": 0.07950318604707718,
+  "n_banks": 163,
+  "n_frames": 134,
+  "n_params": 2338816,
+  "task": 13,
+  "text": "put the black bowl at the front on the plate",
+  "train_secs": 124.87185192108154
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___r4__task-13__s0__7478b2b4",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T05:03:30+00:00",
+ "stream": null,
+ "tag": "_r4"
+}

@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_62_r4.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 62 --rank 4 --tag _r4",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 4,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_r4",
+  "task": 62
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "uniblab.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4116777",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "7478b2b49ad9569c9533b9152b8f90f3f2c79006",
+  "short": "7478b2b4"
+ },
+ "keys": {
+  "task": 62
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.05640484020113945,
+    0.023112712427973747,
+    0.010194334201514721,
+    0.005906902253627777,
+    0.006963795516639948,
+    0.003612298285588622,
+    0.0029413276351988316,
+    0.0019561524968594313,
+    0.003035255940631032,
+    0.008266432210803032,
+    0.004207930993288755
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 2922,
+  "final_loss": 0.004207930993288755,
+  "first_loss": 0.05640484020113945,
+  "n_banks": 163,
+  "n_frames": 114,
+  "n_params": 2338816,
+  "task": 62,
+  "text": "pick up the salad dressing and put it in the tray",
+  "train_secs": 137.73931860923767
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___r4__task-62__s0__7478b2b4",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T05:08:10+00:00",
+ "stream": null,
+ "tag": "_r4"
+}

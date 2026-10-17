@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_55_r4.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 55 --rank 4 --tag _r4",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 4,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_r4",
+  "task": 55
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "optimistprime.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4116778",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "7478b2b49ad9569c9533b9152b8f90f3f2c79006",
+  "short": "7478b2b4"
+ },
+ "keys": {
+  "task": 55
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.03990795835852623,
+    0.013885571621358395,
+    0.005825800355523825,
+    0.004768171347677708,
+    0.008925087749958038,
+    0.0020215995609760284,
+    0.00441785529255867,
+    0.0021127958316355944,
+    0.0025848986115306616,
+    0.00730899116024375,
+    0.004157190676778555
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 2431,
+  "final_loss": 0.004157190676778555,
+  "first_loss": 0.03990795835852623,
+  "n_banks": 163,
+  "n_frames": 111,
+  "n_params": 2338816,
+  "task": 55,
+  "text": "pick up the alphabet soup and put it in the tray",
+  "train_secs": 128.16439652442932
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___r4__task-55__s0__7478b2b4",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T05:08:00+00:00",
+ "stream": null,
+ "tag": "_r4"
+}

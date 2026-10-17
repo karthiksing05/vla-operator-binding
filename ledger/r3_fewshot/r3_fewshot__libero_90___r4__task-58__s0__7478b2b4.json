@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_58_r4.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 58 --rank 4 --tag _r4",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 4,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_r4",
+  "task": 58
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cheetah.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4116781",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "7478b2b49ad9569c9533b9152b8f90f3f2c79006",
+  "short": "7478b2b4"
+ },
+ "keys": {
+  "task": 58
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.057529766112565994,
+    0.02666190266609192,
+    0.011800042353570461,
+    0.0056651621125638485,
+    0.008710517548024654,
+    0.003565723542124033,
+    0.007782600354403257,
+    0.0014220168814063072,
+    0.0026999146211892366,
+    0.007781630847603083,
+    0.002842570189386606
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 2701,
+  "final_loss": 0.002842570189386606,
+  "first_loss": 0.057529766112565994,
+  "n_banks": 163,
+  "n_frames": 143,
+  "n_params": 2338816,
+  "task": 58,
+  "text": "pick up the ketchup and put it in the tray",
+  "train_secs": 122.25949597358704
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___r4__task-58__s0__7478b2b4",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T05:07:38+00:00",
+ "stream": null,
+ "tag": "_r4"
+}
