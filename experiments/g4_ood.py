@@ -381,6 +381,133 @@ def read_d(backbone, record):
                             script="experiments/g4_ood.py", command=" ".join(sys.argv)))
 
 
+def source_pool():
+    """G10: every single-step pick-and-place training instruction of LIBERO-Goal and LIBERO-Spatial (task indices of pi0.5's
+    training set): the candidates practice chooses among for a held concept's source."""
+    from lifelong_ood.policy import data as D
+    from lifelong_ood.policy import primitives as P
+    tx = D.Demos().tasks
+    return [i for i in D.SUITES["libero_goal"] + D.SUITES["libero_spatial"] if len(P.steps_of(tx[i])) == 1
+            and P.object_key(tx[i]).startswith("put|") and P.goal_key(tx[i]).split("|")[0]]
+
+
+def _bsfx(backbone):
+    return "" if backbone == "pi05_libero" else "_" + backbone.split("_")[0]
+
+
+def _ld(exp, v, arm, backbone):
+    f = os.path.join(R, f"{exp}_{v['suite']}_{v['index']}_{arm.replace('@', '_')}_seed{SEED}{_bsfx(backbone)}.json")
+    return ({int(e["trial"]): int(bool(e["success"])) for t_ in json.load(open(f))["tasks"].values() for e in t_["episodes"]}
+            if os.path.exists(f) else None)
+
+
+def _launch(exp, k, v, arms, trials, fresh, backbone):
+    cmd = [PY, "experiments/launch_pack.py", "--tasks", str(v["index"]), "--arms", ",".join(arms), "--experiment", exp, "--first",
+           "0", "--trials", str(trials), "--seed", str(SEED), "--bind", "track", "--partition", "overcap", "--per", "4", "--suite",
+           v["suite"], "--fresh", "--fresh-dir", fresh]
+    cmd += ["--backbone", backbone] if backbone != "pi05_libero" else []
+    return subprocess.run(cmd, capture_output=True, text=True, cwd=ROOT).stdout.strip()[-60:]
+
+
+def ours_sources(v, pl):
+    a, g = pfield(v, pl).split("@", 1)[1].split(".")
+    return int(a), int(g)
+
+
+def g10_choose(stage, backbone):
+    """-> {task: chosen source} after stage 1 (object source, our goal source fixed) or 2 (goal source, chosen object source
+    fixed): the most practice successes on set a (5 episodes), ties to our rule's source, then the lowest index."""
+    pl = json.load(open(PLAN))
+    pool = source_pool()
+    out = {}
+    for k, v in pl["tasks"].items():
+        oa, og = ours_sources(v, pl)
+        if stage == 1:
+            arms = {a: f"pfield@{a}.{og}" for a in pool}
+            pref = oa
+        else:
+            a1 = g10_choose(1, backbone)[k]
+            arms = {g: f"pfield@{a1}.{g}" for g in pool}
+            pref = og
+        sc = {c: _ld(f"g10_s{stage}_{k.split(':')[0]}", v, arm, backbone) for c, arm in arms.items()}
+        if None in sc.values():
+            out[k] = None
+            continue
+        out[k] = max(pool, key=lambda c: (sum(sc[c].values()), c == pref, -c))
+    return out
+
+
+def g10_launch(stage, backbone):
+    pl = json.load(open(PLAN))
+    pool = source_pool()
+    s1 = g10_choose(1, backbone) if stage == 2 else None
+    for k, v in pl["tasks"].items():
+        oa, og = ours_sources(v, pl)
+        arms = [f"pfield@{a}.{og}" for a in pool] if stage == 1 else [f"pfield@{s1[k]}.{g}" for g in pool]
+        print(k, _launch(f"g10_s{stage}_{k.split(':')[0]}", k, v, arms, 5, "fresh_ood_a", backbone), flush=True)
+
+
+def g10_test(backbone):
+    """The chosen pair: acceptance on set a (10 episodes; the policy's are recorded in g4c_accept / g4_accept) and test on set c."""
+    pl = json.load(open(PLAN))
+    s2 = g10_choose(2, backbone)
+    s1 = g10_choose(1, backbone)
+    for k, v in pl["tasks"].items():
+        arm = f"pfield@{s1[k]}.{s2[k]}"
+        sh = k.split(":")[0]
+        print(k, arm, _launch(f"g10_acc_{sh}", k, v, [arm], 10, "fresh_ood_a", backbone),
+              _launch(f"g10_main_{sh}", k, v, [arm], 20, "fresh_ood_c", backbone), flush=True)
+
+
+def g10_read(backbone, record):
+    import e1_read as E1
+    pl = json.load(open(PLAN))
+    short = backbone.split("_")[0]
+    s1, s2 = g10_choose(1, backbone), g10_choose(2, backbone)
+    acc_zs_exp = "g4c_accept" if backbone != "pi05_libero" else "g4_accept"
+    li_exp_sfx = short if backbone != "pi05_libero" else "pi05"
+    x, missing, kept, chosen = {}, [], {}, {}
+    for k, v in pl["tasks"].items():
+        sh = k.split(":")[0]
+        arm = f"pfield@{s1[k]}.{s2[k]}"
+        chosen[k] = arm
+        la = li_arms(v, pl)
+        main_zs = "g4c_main" if backbone != "pi05_libero" else "g4b_main"
+        z = dict(sel=_ld(f"g10_main_{sh}", v, arm, backbone), sel_acc_a=_ld(f"g10_acc_{sh}", v, arm, backbone),
+                 zs_a=_ld(f"{acc_zs_exp}_{sh}", v, "zs", backbone), zs=_ld(f"{main_zs}_{sh}", v, "zs", backbone),
+                 li_grasp=_ld(f"g4d_main_{sh}", v, la["li_grasp"], backbone), li_fixed=_ld(f"g4d_main_{sh}", v, la["li_fixed"], backbone),
+                 ours=_ld(f"{main_zs}_{sh}", v, pfield(v, pl), backbone))
+        if None in z.values():
+            missing.append(k)
+            continue
+        kept[k] = "sel" if sum(z["sel_acc_a"].values()) > sum(z["zs_a"].values()) else "zs"
+        z["kept"] = z["sel"] if kept[k] == "sel" else z["zs"]
+        x[k] = z
+    C = E1.compare
+    res = dict(backbone=backbone, missing=missing, chosen=chosen, kept={a: sum(v == a for v in kept.values()) for a in ("sel", "zs")},
+               same_as_li={k: (s1[k], s2[k]) == tuple(int(c) for c in li_arms(pl["tasks"][k], pl)["li_grasp"].split("@")[1].split("."))
+                           for k in chosen},
+               sel_vs_li_grasp=C({k: {"x": z["sel"], "y": z["li_grasp"]} for k, z in x.items()}),
+               sel_vs_li_fixed=C({k: {"x": z["sel"], "y": z["li_fixed"]} for k, z in x.items()}),
+               sel_vs_ours=C({k: {"x": z["sel"], "y": z["ours"]} for k, z in x.items()}),
+               sel_vs_zs=C({k: {"x": z["sel"], "y": z["zs"]} for k, z in x.items()}),
+               kept_vs_zs=C({k: {"x": z["kept"], "y": z["zs"]} for k, z in x.items()}),
+               per_task={k: {a: int(sum(v.values())) for a, v in z.items()} for k, z in x.items()})
+    res["sel_vs_li_grasp"]["noninferior"] = bool(res["sel_vs_li_grasp"]["diff"]["lo"] > -0.05)
+    for n_ in ("sel_vs_li_grasp", "sel_vs_li_fixed", "sel_vs_ours", "sel_vs_zs", "kept_vs_zs"):
+        h = res[n_]
+        print(f"[g10 {short}] {n_:16} {h['x']} vs {h['y']} of {h['n']}, discordant {h['discordant']}, sign p {h['sign_p']:.3g}, "
+              f"diff {h['diff']['diff']:+.3f} [{h['diff']['lo']:+.3f}, {h['diff']['hi']:+.3f}]", flush=True)
+    print(f"[g10 {short}] same pair as Li on {sum(res['same_as_li'].values())} of {len(chosen)} | kept {res['kept']} | missing {missing}",
+          flush=True)
+    json.dump(res, open(os.path.join(R, f"g10_read_{short}.json"), "w"), indent=1)
+    if record and not missing:
+        from lifelong_ood import ledger
+        print(ledger.record("g4_ood", bench="libero_ood", tag=f"read_g10_{short}", seed=SEED, metrics=res,
+                            bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config=dict(backbone=backbone),
+                            script="experiments/g4_ood.py", command=" ".join(sys.argv)))
+
+
 def diagnose(record):
     """Why the library adds nothing here: each prototype's flow loss on its first logged batch and its last three (ledger c0_fit), G4's
     prototypes (pi0.5's own training demonstrations) against E3's (LIBERO-90 demonstrations the policy never saw)."""
@@ -415,6 +542,14 @@ if __name__ == "__main__":
         launch_c(BKC, "main")
     if "--read-c" in sys.argv:
         read_c(BKC, "--record" in sys.argv)
+    if "--g10-s1" in sys.argv:
+        g10_launch(1, BKC or "pi05_libero")
+    if "--g10-s2" in sys.argv:
+        g10_launch(2, BKC or "pi05_libero")
+    if "--g10-test" in sys.argv:
+        g10_test(BKC or "pi05_libero")
+    if "--g10-read" in sys.argv:
+        g10_read(BKC or "pi05_libero", "--record" in sys.argv)
     if "--test-d" in sys.argv:
         launch_d(BKC or "pi05_libero")
     if "--read-d" in sys.argv:
