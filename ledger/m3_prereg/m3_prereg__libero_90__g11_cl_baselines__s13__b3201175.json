@@ -1,0 +1,51 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G11 (CL baselines)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "b32011757ea47bd0160b3c987106edb0642b442f",
+  "short": "b3201175"
+ },
+ "keys": {},
+ "metrics": {
+  "context": "novelty audit item 4; Liu et al. (arXiv 2603.03818) find pretrained VLAs forget little under replay",
+  "hypotheses": {
+   "H1": "W1's served library (order a) > sequential fine-tuning's final adapter (exact sign test, alpha 0.05)",
+   "H2": "W1's served library (order a) > experience replay's final adapter (same test); Holm over H1, H2",
+   "descriptive": "each baseline vs zero-shot; successes on the first and last ten arrivals (forgetting)"
+  },
+  "written_before": "any G11 fit or episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__g11_cl_baselines__s13__b3201175",
+ "schema": 1,
+ "script": "experiments/prereg/g11_cl_baselines.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-17T22:37:16+00:00",
+ "stream": null,
+ "tag": "g11_cl_baselines"
+}
