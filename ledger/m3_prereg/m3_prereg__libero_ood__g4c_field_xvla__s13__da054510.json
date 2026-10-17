@@ -1,0 +1,53 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G4c on X-VLA",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "da054510fd3653e677342be7d51e64cc40db5d04",
+  "short": "da054510"
+ },
+ "keys": {},
+ "metrics": {
+  "backbones": [
+   "xvla"
+  ],
+  "context": "G4b passed on pi0.5 (174 vs 147 of 400), G4c on pi0 (98 vs 35) and SmolVLA (25 vs 8); X-VLA backbone added (lerobot/xvla-libero)",
+  "hypotheses": {
+   "H1": "per policy, the kept arm > the policy over the 20 tasks on set c (exact sign test; Holm over the same arms, sources and states)",
+   "descriptive": "pfield alone vs the policy; per suite; pi0's published zero-shot and text-latent interpolation rates (arXiv 2505.03500) as context only"
+  },
+  "written_before": "any G4c episode other than the smoke (task goal:7, one episode per arm on X-VLA, seed 99)"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__g4c_field_xvla__s13__da054510",
+ "schema": 1,
+ "script": "experiments/prereg/g4c_field_xvla.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-17T06:20:21+00:00",
+ "stream": null,
+ "tag": "g4c_field_xvla"
+}
