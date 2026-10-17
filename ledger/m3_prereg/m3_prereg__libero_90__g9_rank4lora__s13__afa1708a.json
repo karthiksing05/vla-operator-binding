@@ -1,0 +1,50 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G9",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "afa1708ab7761247268d8cb7d4ed849f96d7ef80",
+  "short": "afa1708a"
+ },
+ "keys": {},
+ "metrics": {
+  "context": "novelty audit: the 1/5 storage ratio compares rank 4 against rank 16; G5c: library rank does not matter",
+  "hypotheses": {
+   "H1": "E3's kept library is non-inferior to the rank-4 per-task LoRA with acceptance (task-level bootstrap 95% lower bound above -0.05)",
+   "descriptive": "rank-4 vs rank-16 per-task LoRA with acceptance; bytes of 22 shared rank-4 prototypes against 29 rank-4 per-task LoRAs"
+  },
+  "written_before": "any G9 fit or episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__g9_rank4lora__s13__afa1708a",
+ "schema": 1,
+ "script": "experiments/prereg/g9_rank4lora.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-17T04:29:33+00:00",
+ "stream": null,
+ "tag": "g9_rank4lora"
+}
