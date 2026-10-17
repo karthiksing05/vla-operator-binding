@@ -23,7 +23,7 @@ R = os.path.join(ROOT, "results", "robot")
 PY = os.path.expanduser("~/flash/miniconda3/envs/chunks/bin/python")
 BK = sys.argv[sys.argv.index("--backbone") + 1] if "--backbone" in sys.argv else "smolvla"
 SHORT = BK.split("_")[0]                                     # smolvla, pi0
-PREFIX, LTAG, ENV = {"smolvla": ("V", "_sv", "smolvla"), "pi0": ("P", "_p0", "openpi")}[SHORT]
+PREFIX, LTAG, ENV = {"smolvla": ("V", "_sv", "smolvla"), "pi0": ("P", "_p0", "openpi"), "xvla": ("Y", "_xv", "smolvla")}[SHORT]
 PLAN = os.path.join(R, "g3_plan.json" if SHORT == "smolvla" else f"g3_plan_{SHORT}.json")
 SEED, RANK = 13, 4
 ORDER = ("zs", "hfac")

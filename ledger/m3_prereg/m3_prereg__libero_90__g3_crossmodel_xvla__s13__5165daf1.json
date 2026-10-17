@@ -1,0 +1,451 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G3 (X-VLA)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5165daf1c0e6380098da02dcaca5e4b75f2e3fef",
+  "short": "5165daf1"
+ },
+ "keys": {},
+ "metrics": {
+  "backbone": "xvla",
+  "context": "E3 (pi0.5) and G3 on SmolVLA read (SmolVLA: 203 vs 20 zero-shot, per-task LoRA leads); a 50-step X-VLA prototype fit and a two-episode X-VLA serving smoke (zero-shot and composition, task 13, seed 99) preceded this registration; pi0 read: 324 vs 85",
+  "hypotheses": {
+   "H1": "on X-VLA, the kept arm > zero-shot (exact sign test, alpha 0.05)",
+   "H2": "on X-VLA, non-inferiority to its per-task LoRA with acceptance (task-level bootstrap 95% lower bound above -0.05), E3's criterion",
+   "correction": "H1 alone in the Holm family; H2 a separate criterion"
+  },
+  "plan": {
+   "protos": {
+    "Ghtray": {
+     "flag": "--goal",
+     "key": "in|the tray",
+     "name": "YGhtray",
+     "tasks": [
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+     ]
+    },
+    "Gscbasket": {
+     "flag": "--goal",
+     "key": "in|the basket",
+     "name": "YGscbasket",
+     "tasks": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54
+     ]
+    },
+    "Gsccab": {
+     "flag": "--goal",
+     "key": "on top of|the cabinet",
+     "name": "YGsccab",
+     "tasks": [
+      10,
+      15,
+      25,
+      31,
+      41,
+      43
+     ]
+    },
+    "Gscplate": {
+     "flag": "--goal",
+     "key": "on|the plate",
+     "name": "YGscplate",
+     "tasks": [
+      9,
+      12,
+      13,
+      14,
+      30,
+      36,
+      71,
+      72
+     ]
+    },
+    "Osc0": {
+     "flag": "--approach",
+     "key": "put|the alphabet soup",
+     "name": "YOsc0",
+     "tasks": [
+      46,
+      50,
+      55
+     ]
+    },
+    "Osc1": {
+     "flag": "--approach",
+     "key": "put|the black bowl",
+     "name": "YOsc1",
+     "tasks": [
+      1,
+      2,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      24,
+      25,
+      29,
+      30,
+      31,
+      60
+     ]
+    },
+    "Osc10": {
+     "flag": "--approach",
+     "key": "put|the red mug",
+     "name": "YOsc10",
+     "tasks": [
+      65,
+      66,
+      71,
+      84
+     ]
+    },
+    "Osc11": {
+     "flag": "--approach",
+     "key": "put|the salad dressing",
+     "name": "YOsc11",
+     "tasks": [
+      62
+     ]
+    },
+    "Osc12": {
+     "flag": "--approach",
+     "key": "put|the tomato sauce",
+     "name": "YOsc12",
+     "tasks": [
+      49,
+      54,
+      59
+     ]
+    },
+    "Osc13": {
+     "flag": "--approach",
+     "key": "put|the white bowl",
+     "name": "YOsc13",
+     "tasks": [
+      36,
+      37,
+      43
+     ]
+    },
+    "Osc14": {
+     "flag": "--approach",
+     "key": "put|the white mug",
+     "name": "YOsc14",
+     "tasks": [
+      67,
+      72,
+      85
+     ]
+    },
+    "Osc2": {
+     "flag": "--approach",
+     "key": "put|the butter",
+     "name": "YOsc2",
+     "tasks": [
+      3,
+      4,
+      51,
+      56
+     ]
+    },
+    "Osc3": {
+     "flag": "--approach",
+     "key": "put|the chocolate pudding",
+     "name": "YOsc3",
+     "tasks": [
+      5,
+      61,
+      69,
+      70
+     ]
+    },
+    "Osc4": {
+     "flag": "--approach",
+     "key": "put|the cream cheese",
+     "name": "YOsc4",
+     "tasks": [
+      57
+     ]
+    },
+    "Osc5": {
+     "flag": "--approach",
+     "key": "put|the cream cheese box",
+     "name": "YOsc5",
+     "tasks": [
+      47
+     ]
+    },
+    "Osc6": {
+     "flag": "--approach",
+     "key": "put|the frying pan",
+     "name": "YOsc6",
+     "tasks": [
+      18,
+      21,
+      40,
+      41,
+      42,
+      45
+     ]
+    },
+    "Osc7": {
+     "flag": "--approach",
+     "key": "put|the ketchup",
+     "name": "YOsc7",
+     "tasks": [
+      32,
+      48,
+      58
+     ]
+    },
+    "Osc8": {
+     "flag": "--approach",
+     "key": "put|the milk",
+     "name": "YOsc8",
+     "tasks": [
+      52
+     ]
+    },
+    "Osc9": {
+     "flag": "--approach",
+     "key": "put|the orange juice",
+     "name": "YOsc9",
+     "tasks": [
+      53
+     ]
+    },
+    "Sch0": {
+     "flag": "--approach",
+     "key": "put|the black bowl",
+     "name": "YSch0",
+     "tasks": [
+      12
+     ]
+    },
+    "Sch1": {
+     "flag": "--approach",
+     "key": "put|the black bowl",
+     "name": "YSch1",
+     "tasks": [
+      13
+     ]
+    },
+    "Sch2": {
+     "flag": "--approach",
+     "key": "put|the black bowl",
+     "name": "YSch2",
+     "tasks": [
+      14,
+      15
+     ]
+    }
+   },
+   "tasks": {
+    "10": {
+     "goal_proto": "YGsccab",
+     "lora": true,
+     "object_proto": "YOsc1"
+    },
+    "12": {
+     "goal_proto": "YGscplate",
+     "lora": true,
+     "object_proto": "YSch0"
+    },
+    "13": {
+     "goal_proto": "YGscplate",
+     "lora": true,
+     "object_proto": "YSch1"
+    },
+    "14": {
+     "goal_proto": "YGscplate",
+     "lora": true,
+     "object_proto": "YSch2"
+    },
+    "15": {
+     "goal_proto": "YGsccab",
+     "lora": true,
+     "object_proto": "YSch2"
+    },
+    "25": {
+     "goal_proto": "YGsccab",
+     "lora": true,
+     "object_proto": "YOsc1"
+    },
+    "30": {
+     "goal_proto": "YGscplate",
+     "lora": true,
+     "object_proto": "YOsc1"
+    },
+    "31": {
+     "goal_proto": "YGsccab",
+     "lora": true,
+     "object_proto": "YOsc1"
+    },
+    "36": {
+     "goal_proto": "YGscplate",
+     "lora": true,
+     "object_proto": "YOsc13"
+    },
+    "41": {
+     "goal_proto": "YGsccab",
+     "lora": true,
+     "object_proto": "YOsc6"
+    },
+    "43": {
+     "goal_proto": "YGsccab",
+     "lora": true,
+     "object_proto": "YOsc13"
+    },
+    "46": {
+     "goal_proto": "YGscbasket",
+     "lora": true,
+     "object_proto": "YOsc0"
+    },
+    "47": {
+     "goal_proto": "YGscbasket",
+     "lora": true,
+     "object_proto": "YOsc5"
+    },
+    "48": {
+     "goal_proto": "YGscbasket",
+     "lora": true,
+     "object_proto": "YOsc7"
+    },
+    "49": {
+     "goal_proto": "YGscbasket",
+     "lora": true,
+     "object_proto": "YOsc12"
+    },
+    "50": {
+     "goal_proto": "YGscbasket",
+     "lora": true,
+     "object_proto": "YOsc0"
+    },
+    "51": {
+     "goal_proto": "YGscbasket",
+     "lora": false,
+     "object_proto": "YOsc2"
+    },
+    "52": {
+     "goal_proto": "YGscbasket",
+     "lora": true,
+     "object_proto": "YOsc8"
+    },
+    "53": {
+     "goal_proto": "YGscbasket",
+     "lora": true,
+     "object_proto": "YOsc9"
+    },
+    "54": {
+     "goal_proto": "YGscbasket",
+     "lora": true,
+     "object_proto": "YOsc12"
+    },
+    "55": {
+     "goal_proto": "YGhtray",
+     "lora": true,
+     "object_proto": "YOsc0"
+    },
+    "56": {
+     "goal_proto": "YGhtray",
+     "lora": true,
+     "object_proto": "YOsc2"
+    },
+    "57": {
+     "goal_proto": "YGhtray",
+     "lora": true,
+     "object_proto": "YOsc4"
+    },
+    "58": {
+     "goal_proto": "YGhtray",
+     "lora": true,
+     "object_proto": "YOsc7"
+    },
+    "59": {
+     "goal_proto": "YGhtray",
+     "lora": true,
+     "object_proto": "YOsc12"
+    },
+    "61": {
+     "goal_proto": "YGhtray",
+     "lora": true,
+     "object_proto": "YOsc3"
+    },
+    "62": {
+     "goal_proto": "YGhtray",
+     "lora": true,
+     "object_proto": "YOsc11"
+    },
+    "71": {
+     "goal_proto": "YGscplate",
+     "lora": true,
+     "object_proto": "YOsc10"
+    },
+    "72": {
+     "goal_proto": "YGscplate",
+     "lora": true,
+     "object_proto": "YOsc14"
+    },
+    "9": {
+     "goal_proto": "YGscplate",
+     "lora": true,
+     "object_proto": "YOsc1"
+    }
+   }
+  },
+  "written_before": "any fit (other than the smoke) or episode of g3 on X-VLA"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__g3_crossmodel_xvla__s13__5165daf1",
+ "schema": 1,
+ "script": "experiments/prereg/g3_crossmodel_xvla.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-17T05:39:58+00:00",
+ "stream": null,
+ "tag": "g3_crossmodel_xvla"
+}
