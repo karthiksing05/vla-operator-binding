@@ -1,0 +1,198 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/i7_anatomy.py --record",
+ "config": {
+  "tasks": [
+   "53",
+   "52",
+   "48",
+   "25",
+   "12",
+   "13",
+   "14",
+   "71",
+   "58",
+   "43"
+  ]
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i7_anatomy",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "f75b5d013b2d2ae0ffb848a9998c644a88fe36a3",
+  "short": "f75b5d01"
+ },
+ "keys": {},
+ "metrics": {
+  "centred_medians": {
+   "both": {
+    "app": [
+     0.299,
+     0.168,
+     0.055
+    ],
+    "tr": [
+     0.327,
+     0.264,
+     0.15
+    ]
+   },
+   "goal": {
+    "app": [
+     0.299,
+     0.261,
+     0.152
+    ],
+    "tr": [
+     0.323,
+     0.261,
+     0.12
+    ]
+   },
+   "obj": {
+    "app": [
+     0.299,
+     0.169,
+     0.056
+    ],
+    "tr": [
+     0.321,
+     0.21,
+     0.16
+    ]
+   },
+   "type": {
+    "app": [
+     0.38,
+     0.233,
+     0.146
+    ],
+    "tr": [
+     0.156,
+     0.154,
+     0.154
+    ]
+   },
+   "zs": {
+    "app": [
+     0.299,
+     0.262,
+     0.152
+    ],
+    "tr": [
+     0.323,
+     0.251,
+     0.142
+    ]
+   }
+  },
+  "first_grasp_instances": {
+   "12": {
+    "both": {
+     "akita_black_bowl_3": 5
+    },
+    "type": {
+     "akita_black_bowl_3": 4,
+     "plate_1": 1
+    },
+    "zs": {
+     "akita_black_bowl_2": 3,
+     "akita_black_bowl_3": 2
+    }
+   },
+   "13": {
+    "both": {
+     "akita_black_bowl_1": 5
+    },
+    "type": {
+     "akita_black_bowl_1": 1,
+     "akita_black_bowl_3": 4
+    },
+    "zs": {
+     "akita_black_bowl_2": 1,
+     "akita_black_bowl_3": 4
+    }
+   },
+   "14": {
+    "both": {
+     "akita_black_bowl_2": 5
+    },
+    "type": {
+     "akita_black_bowl_2": 1,
+     "akita_black_bowl_3": 3,
+     "plate_1": 1
+    },
+    "zs": {
+     "akita_black_bowl_2": 2,
+     "akita_black_bowl_3": 3
+    }
+   }
+  },
+  "metrics": {
+   "both": {
+    "episodes": 50,
+    "grasped": 49,
+    "named_first": 47,
+    "named_first_share": 0.94,
+    "successes": 40
+   },
+   "goal": {
+    "episodes": 50,
+    "grasped": 50,
+    "named_first": 12,
+    "named_first_share": 0.24,
+    "successes": 12
+   },
+   "obj": {
+    "episodes": 50,
+    "grasped": 46,
+    "named_first": 44,
+    "named_first_share": 0.88,
+    "successes": 26
+   },
+   "type": {
+    "episodes": 15,
+    "grasped": 15,
+    "named_first": 6,
+    "named_first_share": 0.4,
+    "successes": 4
+   },
+   "zs": {
+    "episodes": 50,
+    "grasped": 50,
+    "named_first": 11,
+    "named_first_share": 0.22,
+    "successes": 7
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i7_anatomy__libero_90__read__s13__f75b5d01",
+ "schema": 1,
+ "script": "experiments/i7_anatomy.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-17T04:46:06+00:00",
+ "stream": null,
+ "tag": "read"
+}

@@ -10,7 +10,7 @@ Figures (figures/robot/, copied to the site media):
   i7_paths.png      top-down end-effector paths per arm from one start state on four showcase tasks: approach solid until the
                     policy's own grasp, transport dashed; the named object starred, the other objects grey.
   i7_centred.png    the low-dimensional view: distance from the end effector to the NAMED object over the approach (time
-                    normalised to the grasp), and from the grasped object to the GOAL over the transport, median and quartiles per
+                    normalised to the grasp), and from the object actually grasped to the GOAL over the transport, median and quartiles per
                     arm over all tasks and episodes.
   i7_instances.png  the hierarchy: on the three black-bowl tasks, which bowl each unit grasps first (instance child vs type).
 Metrics (ledger i7_anatomy tag read): per arm, the share of episodes whose first grasp takes the named object, and successes.
@@ -186,13 +186,13 @@ def main(record):
                     curves[k]["app"].append(np.interp(grid, np.linspace(0, 1, len(d)), d))
                 if g is not None and goal in nm:
                     r_ = release_index(rec, g)
-                    held = op[g:r_ + 1, nm.index(obj)] if obj in nm else s[g:r_ + 1]
+                    held = op[g:r_ + 1, nm.index(nearest(rec, g))]          # the object actually grasped (named or not)
                     d = np.linalg.norm(held - op[g:r_ + 1, nm.index(goal)], axis=-1)
                     if len(d) > 1:
                         curves[k]["tr"].append(np.interp(grid, np.linspace(0, 1, len(d)), d))
     fig, axes = plt.subplots(1, 2, figsize=(10, 3.8))
     for ax, ph, title, xl in ((axes[0], "app", "approach: end effector to the NAMED object", "start -> the policy's grasp"),
-                              (axes[1], "tr", "transport: grasped object to the GOAL", "grasp -> release")):
+                              (axes[1], "tr", "transport: the grasped object (whichever it is) to the GOAL", "grasp -> release")):
         for k in COL:
             c = np.array(curves[k][ph])
             if len(c) < 2:

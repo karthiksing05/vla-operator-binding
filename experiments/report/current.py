@@ -89,6 +89,8 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"50 arrivals: demos {m['a']['demos']}/{m['b']['demos']}; served {m['a']['H1']['x']}/{m['b']['H1']['x']} vs {m['a']['H1']['y']} of {m['a']['H1']['n']}"),
     ("G5c prototype rank 8 / 16", "g5c_rank", "read", True, "c-gen",
      lambda m: f"rank 16 vs LoRA + acc. {_ci(m['r16']['vs_lora_acc']['diff'])}; vs rank 4 {m['r16']['vs_rank4']['x']} vs {m['r16']['vs_rank4']['y']}"),
+    ("i7 the anatomy of a composed step", "i7_anatomy", "read", False, "c-library",
+     lambda m: f"named object first: object unit {m['metrics']['obj']['named_first']}/{m['metrics']['obj']['episodes']} vs policy {m['metrics']['zs']['named_first']}"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -192,6 +194,25 @@ def library_view():
                    f"linkage on one minus the cosine of the updates; blue object types, violet instance children, brown goals. An "
                    f"instance child's cosine to its own type is {i5['instance_to_own_type']:.2f} against "
                    f"{i5['instance_to_other_types']:.2f} to other types.", wide=True)
+    i7 = row("i7_anatomy", "read")
+    if i7:
+        m = i7["metrics"]
+        out += ("<h3>What each unit does to the motion</h3><p>Recorded end-effector and object trajectories (ten tasks, five start "
+                "states each, exploratory) show the division of labour. ")
+        out += (f"The object unit decides which object is taken: the first grasp takes the named object in {m['obj']['named_first']} "
+                f"of {m['obj']['episodes']} episodes with the object unit alone and {m['both']['named_first']} with both units, "
+                f"against {m['zs']['named_first']} for the policy alone and {m['goal']['named_first']} with the goal unit alone. The "
+                f"transport separates the arms little: the policy already carries, and fails in the approach. Each instance child "
+                f"takes its own bowl; the type prototype mostly takes the back bowl whatever the instruction names.</p>")
+        out += fig('<img src="media/i7_paths.png" alt="top-down end-effector paths per unit from one start state on four tasks" style="width:100%">',
+                   "<b>Paths from one start state.</b> Top-down end-effector paths, approach solid until the policy's own grasp "
+                   "(dot) and transport dashed; the named object starred, the goal square, other objects grey.", wide=True)
+        out += fig('<img src="media/i7_centred.png" alt="distance to the named object over the approach and to the goal over the transport, per unit" style="width:100%">',
+                   "<b>Concept-centred view.</b> Left: distance from the end effector to the named object, time normalised to the "
+                   "grasp; right: the grasped object's distance to the goal. Median and quartiles over all tasks and episodes.", wide=True)
+        out += fig('<img src="media/i7_instances.png" alt="which bowl each unit grasps first on the three black-bowl tasks" style="width:100%">',
+                   "<b>The hierarchy at work.</b> On the three black-bowl tasks, the bowl grasped first: the instance child takes the "
+                   "named bowl in every episode; the type prototype carries the bowl its demonstrations mostly showed.", wide=True)
     story = None
     try:
         import json as _j

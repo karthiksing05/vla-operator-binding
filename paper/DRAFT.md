@@ -204,6 +204,12 @@ policy (273); switched at the policy's own grasp it succeeds 495. The phase gati
 rank 16 instead of 4, the library is unchanged (498 and 504 against 499 of 600) and stays short of non-inferiority to the
 per-task adapter (rank 16: 485 against 494 of 580; difference -0.016, 95% interval -0.064 to 0.033).
 
+### What each unit does to the motion
+Recorded trajectories on ten tasks show the division of labour: the first grasp takes the named object in 44 of 50
+episodes with the object unit alone and 47 of 50 with both units, against 11 of 50 for the policy alone and 12 of 50 with the
+goal unit alone; the transport separates the arms little. Each instance child takes its own bowl first in 15 of 15 episodes;
+the type prototype takes the named bowl in 6 of 15.
+
 ### What the prototypes encode
 Object prototypes are nearly orthogonal to one another (mean cosine 0.058) and to goal prototypes (0.037); both act in the same
 layers, differing in direction; refit without one demonstration a prototype keeps a cosine of 0.64 with the full one.
