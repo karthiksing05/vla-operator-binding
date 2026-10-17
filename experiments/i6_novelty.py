@@ -122,7 +122,31 @@ def read_b(record):
                             script="experiments/i6_novelty.py", command=" ".join(sys.argv)))
 
 
+def read_c(record):
+    """I6c (exploratory): detector baselines on I6's concepts.  A text detector calls a concept held when its words match a held
+    concept's (exactly, or by experiments/g4_ood.py's content-word rule); the likelihood detector uses the held concepts' maximum
+    loss as its threshold.  Counts the new concepts each misroutes to a pointer (I6b measured the cost of that misrouting)."""
+    sys.path.insert(0, os.path.join(ROOT, "experiments"))
+    import g4_ood as G
+    r = json.load(open(os.path.join(R, "i6_novelty.json")))
+    held_keys = {v["key"] for v in r["held"].values()}
+    thr = max(v["loss"] for v in r["held"].values())
+    new = list(r["new"].values())
+    res = dict(n_new=len(new), n_held=len(r["held"]),
+               exact_words_misrouted=sum(v["key"] in held_keys for v in new),
+               content_words_misrouted=sum(G.match(v["key"], {k: 1 for k in held_keys}) is not None for v in new),
+               likelihood_misrouted=sum(v["loss"] <= thr for v in new))
+    print(json.dumps(res, indent=1), flush=True)
+    if record:
+        from lifelong_ood import ledger
+        print(ledger.record("i6_novelty", bench="libero", tag="detectors", seed=0, metrics=res,
+                            bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config={},
+                            script="experiments/i6_novelty.py", command=" ".join(sys.argv)))
+
+
 if __name__ == "__main__":
+    if "--read-c" in sys.argv:
+        read_c("--record" in sys.argv)
     if "--read-b" in sys.argv:
         read_b("--record" in sys.argv)
     if "--launch" in sys.argv:

@@ -175,6 +175,8 @@ frames. It separates the 34 concepts of its own training tasks from the 40 LIBER
 Likelihood detects novelty although it does not select among new concepts (W0). Exploratory; the held concepts are scored on
 their training demonstrations. The routing is right in both directions: on 20 LIBERO-90 tasks whose concepts share words with
 held ones, the field composition equals the policy (88 against 85 of 200) and the prototypes the router assigns reach 173.
+A text detector that matches a concept's words to held concepts would route 16 of these 40 new concepts to a pointer (28 under
+the content-word rule); the likelihood routes none.
 
 ### Iteration 7: one learner, both kinds of task
 On a joint stream of 50 arrivals (Li's 20 OOD tasks, which have no demonstrations, and W1's 30 LIBERO-90 tasks), one learner

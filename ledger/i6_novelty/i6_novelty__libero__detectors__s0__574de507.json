@@ -1,0 +1,49 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/i6_novelty.py --read-c --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "i6_novelty",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "574de50757b391f306ee2b36fd5a5ae3cb88e3f6",
+  "short": "574de507"
+ },
+ "keys": {},
+ "metrics": {
+  "content_words_misrouted": 28,
+  "exact_words_misrouted": 16,
+  "likelihood_misrouted": 0,
+  "n_held": 34,
+  "n_new": 40
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "i6_novelty__libero__detectors__s0__574de507",
+ "schema": 1,
+ "script": "experiments/i6_novelty.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-17T22:37:51+00:00",
+ "stream": null,
+ "tag": "detectors"
+}
