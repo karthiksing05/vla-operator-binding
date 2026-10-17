@@ -1,0 +1,355 @@
+{
+ "backbone": "pi05_libero",
+ "missing": [],
+ "chosen": {
+  "goal:0": "pfield@13.11",
+  "goal:1": "pfield@14.17",
+  "goal:2": "pfield@36.35",
+  "goal:3": "pfield@10.14",
+  "goal:4": "pfield@11.17",
+  "goal:5": "pfield@14.10",
+  "goal:6": "pfield@14.13",
+  "goal:7": "pfield@13.35",
+  "goal:8": "pfield@13.17",
+  "goal:9": "pfield@13.14",
+  "spatial:0": "pfield@13.30",
+  "spatial:1": "pfield@13.30",
+  "spatial:2": "pfield@14.30",
+  "spatial:3": "pfield@14.30",
+  "spatial:4": "pfield@35.10",
+  "spatial:5": "pfield@10.18",
+  "spatial:6": "pfield@36.14",
+  "spatial:7": "pfield@36.10",
+  "spatial:8": "pfield@14.14",
+  "spatial:9": "pfield@14.17"
+ },
+ "kept": {
+  "sel": 11,
+  "zs": 9
+ },
+ "same_as_li": {
+  "goal:0": false,
+  "goal:1": true,
+  "goal:2": false,
+  "goal:3": false,
+  "goal:4": false,
+  "goal:5": true,
+  "goal:6": true,
+  "goal:7": false,
+  "goal:8": true,
+  "goal:9": false,
+  "spatial:0": false,
+  "spatial:1": false,
+  "spatial:2": false,
+  "spatial:3": false,
+  "spatial:4": false,
+  "spatial:5": false,
+  "spatial:6": false,
+  "spatial:7": false,
+  "spatial:8": false,
+  "spatial:9": false
+ },
+ "sel_vs_li_grasp": {
+  "x": 269,
+  "y": 222,
+  "n": 400,
+  "tasks": 20,
+  "diff": {
+   "diff": 0.1175,
+   "lo": 0.0225,
+   "hi": 0.24,
+   "lo90": 0.0325,
+   "hi90": 0.22,
+   "n_pairs": 400,
+   "n_tasks": 20
+  },
+  "discordant": [
+   52,
+   5
+  ],
+  "sign_p": 6.401865149108232e-11,
+  "noninferior": true
+ },
+ "sel_vs_li_fixed": {
+  "x": 269,
+  "y": 218,
+  "n": 400,
+  "tasks": 20,
+  "diff": {
+   "diff": 0.1275,
+   "lo": 0.03,
+   "hi": 0.245,
+   "lo90": 0.045,
+   "hi90": 0.225,
+   "n_pairs": 400,
+   "n_tasks": 20
+  },
+  "discordant": [
+   65,
+   14
+  ],
+  "sign_p": 5.194941262584352e-09
+ },
+ "sel_vs_ours": {
+  "x": 269,
+  "y": 160,
+  "n": 400,
+  "tasks": 20,
+  "diff": {
+   "diff": 0.2725,
+   "lo": 0.125,
+   "hi": 0.4375,
+   "lo90": 0.145,
+   "hi90": 0.41,
+   "n_pairs": 400,
+   "n_tasks": 20
+  },
+  "discordant": [
+   115,
+   6
+  ],
+  "sign_p": 3.047563595444677e-27
+ },
+ "sel_vs_zs": {
+  "x": 269,
+  "y": 147,
+  "n": 400,
+  "tasks": 20,
+  "diff": {
+   "diff": 0.305,
+   "lo": 0.1525,
+   "hi": 0.465,
+   "lo90": 0.175,
+   "hi90": 0.44,
+   "n_pairs": 400,
+   "n_tasks": 20
+  },
+  "discordant": [
+   132,
+   10
+  ],
+  "sign_p": 2.5747366898777346e-28
+ },
+ "kept_vs_zs": {
+  "x": 269,
+  "y": 147,
+  "n": 400,
+  "tasks": 20,
+  "diff": {
+   "diff": 0.305,
+   "lo": 0.1525,
+   "hi": 0.465,
+   "lo90": 0.1775,
+   "hi90": 0.44,
+   "n_pairs": 400,
+   "n_tasks": 20
+  },
+  "discordant": [
+   128,
+   6
+  ],
+  "sign_p": 6.910695671005398e-31
+ },
+ "per_task": {
+  "goal:0": {
+   "sel": 18,
+   "sel_acc_a": 9,
+   "zs_a": 2,
+   "zs": 3,
+   "li_grasp": 0,
+   "li_fixed": 0,
+   "ours": 2,
+   "kept": 18
+  },
+  "goal:1": {
+   "sel": 20,
+   "sel_acc_a": 10,
+   "zs_a": 4,
+   "zs": 11,
+   "li_grasp": 20,
+   "li_fixed": 15,
+   "ours": 16,
+   "kept": 20
+  },
+  "goal:2": {
+   "sel": 5,
+   "sel_acc_a": 5,
+   "zs_a": 2,
+   "zs": 1,
+   "li_grasp": 0,
+   "li_fixed": 0,
+   "ours": 3,
+   "kept": 5
+  },
+  "goal:3": {
+   "sel": 0,
+   "sel_acc_a": 0,
+   "zs_a": 0,
+   "zs": 0,
+   "li_grasp": 0,
+   "li_fixed": 1,
+   "ours": 0,
+   "kept": 0
+  },
+  "goal:4": {
+   "sel": 20,
+   "sel_acc_a": 10,
+   "zs_a": 10,
+   "zs": 20,
+   "li_grasp": 20,
+   "li_fixed": 20,
+   "ours": 20,
+   "kept": 20
+  },
+  "goal:5": {
+   "sel": 18,
+   "sel_acc_a": 9,
+   "zs_a": 3,
+   "zs": 12,
+   "li_grasp": 18,
+   "li_fixed": 17,
+   "ours": 0,
+   "kept": 18
+  },
+  "goal:6": {
+   "sel": 19,
+   "sel_acc_a": 10,
+   "zs_a": 2,
+   "zs": 9,
+   "li_grasp": 19,
+   "li_fixed": 19,
+   "ours": 2,
+   "kept": 19
+  },
+  "goal:7": {
+   "sel": 18,
+   "sel_acc_a": 8,
+   "zs_a": 1,
+   "zs": 6,
+   "li_grasp": 14,
+   "li_fixed": 15,
+   "ours": 14,
+   "kept": 18
+  },
+  "goal:8": {
+   "sel": 5,
+   "sel_acc_a": 0,
+   "zs_a": 2,
+   "zs": 3,
+   "li_grasp": 5,
+   "li_fixed": 8,
+   "ours": 5,
+   "kept": 3
+  },
+  "goal:9": {
+   "sel": 14,
+   "sel_acc_a": 8,
+   "zs_a": 6,
+   "zs": 15,
+   "li_grasp": 0,
+   "li_fixed": 3,
+   "ours": 14,
+   "kept": 14
+  },
+  "spatial:0": {
+   "sel": 18,
+   "sel_acc_a": 10,
+   "zs_a": 10,
+   "zs": 20,
+   "li_grasp": 18,
+   "li_fixed": 14,
+   "ours": 19,
+   "kept": 20
+  },
+  "spatial:1": {
+   "sel": 20,
+   "sel_acc_a": 10,
+   "zs_a": 10,
+   "zs": 20,
+   "li_grasp": 19,
+   "li_fixed": 19,
+   "ours": 19,
+   "kept": 20
+  },
+  "spatial:2": {
+   "sel": 20,
+   "sel_acc_a": 10,
+   "zs_a": 2,
+   "zs": 2,
+   "li_grasp": 19,
+   "li_fixed": 17,
+   "ours": 6,
+   "kept": 20
+  },
+  "spatial:3": {
+   "sel": 20,
+   "sel_acc_a": 10,
+   "zs_a": 10,
+   "zs": 20,
+   "li_grasp": 19,
+   "li_fixed": 17,
+   "ours": 20,
+   "kept": 20
+  },
+  "spatial:4": {
+   "sel": 0,
+   "sel_acc_a": 0,
+   "zs_a": 0,
+   "zs": 0,
+   "li_grasp": 0,
+   "li_fixed": 0,
+   "ours": 0,
+   "kept": 0
+  },
+  "spatial:5": {
+   "sel": 16,
+   "sel_acc_a": 9,
+   "zs_a": 0,
+   "zs": 0,
+   "li_grasp": 12,
+   "li_fixed": 15,
+   "ours": 0,
+   "kept": 16
+  },
+  "spatial:6": {
+   "sel": 0,
+   "sel_acc_a": 0,
+   "zs_a": 0,
+   "zs": 0,
+   "li_grasp": 0,
+   "li_fixed": 0,
+   "ours": 0,
+   "kept": 0
+  },
+  "spatial:7": {
+   "sel": 0,
+   "sel_acc_a": 0,
+   "zs_a": 0,
+   "zs": 0,
+   "li_grasp": 1,
+   "li_fixed": 1,
+   "ours": 1,
+   "kept": 0
+  },
+  "spatial:8": {
+   "sel": 19,
+   "sel_acc_a": 10,
+   "zs_a": 2,
+   "zs": 4,
+   "li_grasp": 20,
+   "li_fixed": 20,
+   "ours": 15,
+   "kept": 19
+  },
+  "spatial:9": {
+   "sel": 19,
+   "sel_acc_a": 10,
+   "zs_a": 0,
+   "zs": 1,
+   "li_grasp": 18,
+   "li_fixed": 17,
+   "ours": 4,
+   "kept": 19
+  }
+ }
+}

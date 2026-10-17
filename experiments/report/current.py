@@ -101,6 +101,10 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"{m['hypotheses']['H1']['x']} vs {m['hypotheses']['H1']['y']} zero-shot (n.s.); vs LoRA + acc. {_ci(m['hypotheses']['H2']['diff'])}"),
     ("G4c the policy's own fields on X-VLA", "g4_ood", "read_field_xvla", True, "c-limits",
      lambda m: f"kept {m['H1']['x']} vs policy {m['H1']['y']} of {m['H1']['n']}: passes"),
+    ("G10 practice chooses the sources (pi0.5)", "g4_ood", "read_g10_pi05", True, "c-limits",
+     lambda m: f"{m['sel_vs_li_grasp']['x']} vs Li's hand-chosen {m['sel_vs_li_grasp']['y']} of {m['sel_vs_li_grasp']['n']} ({_ci(m['sel_vs_li_grasp']['diff'])}): better"),
+    ("G10 practice chooses the sources (pi0)", "g4_ood", "read_g10_pi0", True, "c-limits",
+     lambda m: f"{m['sel_vs_li_grasp']['x']} vs Li's hand-chosen {m['sel_vs_li_grasp']['y']} of {m['sel_vs_li_grasp']['n']} ({_ci(m['sel_vs_li_grasp']['diff'])})"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -538,7 +542,14 @@ def limits_of_method():
                 f"times at their fixed switching step and {d0['li_grasp_vs_zs']['x']} at its own grasp, against "
                 f"{d0['ours_fixed_vs_zs']['x']} and {d0['ours_grasp_vs_zs']['x']} with our automatically chosen sources. The gap is the "
                 f"choice of sources, not the trigger: Li's pairs pick training tasks whose motion reaches where the new object lies, "
-                f"ours match the instruction's words. Choosing sources by where their motion goes is the next iteration.</p>")
+                f"ours match the instruction's words.</p>")
+    g10a, g10b = row("g4_ood", "read_g10_pi05"), row("g4_ood", "read_g10_pi0")
+    if g10a and g10b:
+        out += (f"<p><b>Practice chooses the sources.</b> With no hand labels, practice picks each held concept's source among 16 "
+                f"training instructions (m3_prereg tag g10_sources). On pi0.5 the chosen pairs succeed {g10a['sel_vs_li_grasp']['x']} of "
+                f"{g10a['sel_vs_li_grasp']['n']} times against {g10a['sel_vs_li_grasp']['y']} for Li's hand-chosen pairs (difference "
+                f"{_ci(g10a['sel_vs_li_grasp']['diff'])}); on pi0 {g10b['sel_vs_li_grasp']['x']} against {g10b['sel_vs_li_grasp']['y']} "
+                f"(difference {_ci(g10b['sel_vs_li_grasp']['diff'])}), level with Li's fixed-step operator.</p>")
     i6 = row("i6_novelty", "read")
     if i6:
         out += (f"<p><b>Which kind of unit a concept gets.</b> The frozen policy's own flow-matching loss on a concept's frames "

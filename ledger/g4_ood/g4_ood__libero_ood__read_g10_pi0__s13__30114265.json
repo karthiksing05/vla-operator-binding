@@ -1,0 +1,399 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g4_ood.py --g10-read --record --backbone pi0_libero",
+ "config": {
+  "backbone": "pi0_libero"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g4_ood",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "30114265389f4ceed3c7634bbbc978e3f3c53db6",
+  "short": "30114265"
+ },
+ "keys": {},
+ "metrics": {
+  "backbone": "pi0_libero",
+  "chosen": {
+   "goal:0": "pfield@11.10",
+   "goal:1": "pfield@14.17",
+   "goal:2": "pfield@13.10",
+   "goal:3": "pfield@13.18",
+   "goal:4": "pfield@14.17",
+   "goal:5": "pfield@14.32",
+   "goal:6": "pfield@14.13",
+   "goal:7": "pfield@13.10",
+   "goal:8": "pfield@13.17",
+   "goal:9": "pfield@13.14",
+   "spatial:0": "pfield@13.30",
+   "spatial:1": "pfield@13.30",
+   "spatial:2": "pfield@14.10",
+   "spatial:3": "pfield@14.30",
+   "spatial:4": "pfield@35.17",
+   "spatial:5": "pfield@35.14",
+   "spatial:6": "pfield@36.14",
+   "spatial:7": "pfield@36.17",
+   "spatial:8": "pfield@10.14",
+   "spatial:9": "pfield@38.17"
+  },
+  "kept": {
+   "sel": 17,
+   "zs": 3
+  },
+  "kept_vs_zs": {
+   "diff": {
+    "diff": 0.64,
+    "hi": 0.79,
+    "hi90": 0.7675,
+    "lo": 0.48,
+    "lo90": 0.5075,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    257,
+    1
+   ],
+   "n": 400,
+   "sign_p": 1.1183838278847306e-75,
+   "tasks": 20,
+   "x": 291,
+   "y": 35
+  },
+  "missing": [],
+  "per_task": {
+   "goal:0": {
+    "kept": 0,
+    "li_fixed": 18,
+    "li_grasp": 18,
+    "ours": 2,
+    "sel": 0,
+    "sel_acc_a": 0,
+    "zs": 0,
+    "zs_a": 2
+   },
+   "goal:1": {
+    "kept": 15,
+    "li_fixed": 10,
+    "li_grasp": 15,
+    "ours": 0,
+    "sel": 15,
+    "sel_acc_a": 7,
+    "zs": 0,
+    "zs_a": 0
+   },
+   "goal:2": {
+    "kept": 17,
+    "li_fixed": 19,
+    "li_grasp": 17,
+    "ours": 0,
+    "sel": 17,
+    "sel_acc_a": 6,
+    "zs": 0,
+    "zs_a": 0
+   },
+   "goal:3": {
+    "kept": 18,
+    "li_fixed": 20,
+    "li_grasp": 18,
+    "ours": 0,
+    "sel": 18,
+    "sel_acc_a": 8,
+    "zs": 0,
+    "zs_a": 0
+   },
+   "goal:4": {
+    "kept": 18,
+    "li_fixed": 18,
+    "li_grasp": 18,
+    "ours": 1,
+    "sel": 18,
+    "sel_acc_a": 10,
+    "zs": 5,
+    "zs_a": 4
+   },
+   "goal:5": {
+    "kept": 13,
+    "li_fixed": 10,
+    "li_grasp": 11,
+    "ours": 0,
+    "sel": 13,
+    "sel_acc_a": 6,
+    "zs": 2,
+    "zs_a": 1
+   },
+   "goal:6": {
+    "kept": 4,
+    "li_fixed": 1,
+    "li_grasp": 4,
+    "ours": 0,
+    "sel": 4,
+    "sel_acc_a": 2,
+    "zs": 0,
+    "zs_a": 0
+   },
+   "goal:7": {
+    "kept": 19,
+    "li_fixed": 20,
+    "li_grasp": 19,
+    "ours": 19,
+    "sel": 19,
+    "sel_acc_a": 10,
+    "zs": 3,
+    "zs_a": 1
+   },
+   "goal:8": {
+    "kept": 20,
+    "li_fixed": 20,
+    "li_grasp": 20,
+    "ours": 20,
+    "sel": 20,
+    "sel_acc_a": 10,
+    "zs": 0,
+    "zs_a": 0
+   },
+   "goal:9": {
+    "kept": 20,
+    "li_fixed": 20,
+    "li_grasp": 20,
+    "ours": 20,
+    "sel": 20,
+    "sel_acc_a": 10,
+    "zs": 0,
+    "zs_a": 0
+   },
+   "spatial:0": {
+    "kept": 20,
+    "li_fixed": 18,
+    "li_grasp": 19,
+    "ours": 1,
+    "sel": 20,
+    "sel_acc_a": 10,
+    "zs": 11,
+    "zs_a": 5
+   },
+   "spatial:1": {
+    "kept": 20,
+    "li_fixed": 20,
+    "li_grasp": 20,
+    "ours": 3,
+    "sel": 20,
+    "sel_acc_a": 10,
+    "zs": 13,
+    "zs_a": 8
+   },
+   "spatial:2": {
+    "kept": 20,
+    "li_fixed": 20,
+    "li_grasp": 20,
+    "ours": 0,
+    "sel": 20,
+    "sel_acc_a": 10,
+    "zs": 1,
+    "zs_a": 1
+   },
+   "spatial:3": {
+    "kept": 20,
+    "li_fixed": 20,
+    "li_grasp": 20,
+    "ours": 0,
+    "sel": 20,
+    "sel_acc_a": 9,
+    "zs": 0,
+    "zs_a": 0
+   },
+   "spatial:4": {
+    "kept": 20,
+    "li_fixed": 17,
+    "li_grasp": 20,
+    "ours": 0,
+    "sel": 20,
+    "sel_acc_a": 10,
+    "zs": 0,
+    "zs_a": 0
+   },
+   "spatial:5": {
+    "kept": 0,
+    "li_fixed": 6,
+    "li_grasp": 0,
+    "ours": 0,
+    "sel": 0,
+    "sel_acc_a": 0,
+    "zs": 0,
+    "zs_a": 0
+   },
+   "spatial:6": {
+    "kept": 0,
+    "li_fixed": 1,
+    "li_grasp": 1,
+    "ours": 1,
+    "sel": 1,
+    "sel_acc_a": 0,
+    "zs": 0,
+    "zs_a": 0
+   },
+   "spatial:7": {
+    "kept": 14,
+    "li_fixed": 3,
+    "li_grasp": 13,
+    "ours": 0,
+    "sel": 14,
+    "sel_acc_a": 7,
+    "zs": 0,
+    "zs_a": 0
+   },
+   "spatial:8": {
+    "kept": 15,
+    "li_fixed": 12,
+    "li_grasp": 14,
+    "ours": 7,
+    "sel": 15,
+    "sel_acc_a": 8,
+    "zs": 0,
+    "zs_a": 0
+   },
+   "spatial:9": {
+    "kept": 18,
+    "li_fixed": 19,
+    "li_grasp": 18,
+    "ours": 0,
+    "sel": 18,
+    "sel_acc_a": 10,
+    "zs": 0,
+    "zs_a": 0
+   }
+  },
+  "same_as_li": {
+   "goal:0": false,
+   "goal:1": true,
+   "goal:2": true,
+   "goal:3": true,
+   "goal:4": true,
+   "goal:5": false,
+   "goal:6": true,
+   "goal:7": true,
+   "goal:8": true,
+   "goal:9": false,
+   "spatial:0": false,
+   "spatial:1": false,
+   "spatial:2": false,
+   "spatial:3": false,
+   "spatial:4": true,
+   "spatial:5": false,
+   "spatial:6": false,
+   "spatial:7": true,
+   "spatial:8": false,
+   "spatial:9": true
+  },
+  "sel_vs_li_fixed": {
+   "diff": {
+    "diff": 0.0,
+    "hi": 0.1125,
+    "hi90": 0.095,
+    "lo": -0.1275,
+    "lo90": -0.105,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    38,
+    38
+   ],
+   "n": 400,
+   "sign_p": 1.0,
+   "tasks": 20,
+   "x": 292,
+   "y": 292
+  },
+  "sel_vs_li_grasp": {
+   "diff": {
+    "diff": -0.0325,
+    "hi": 0.03,
+    "hi90": 0.025,
+    "lo": -0.1375,
+    "lo90": -0.1225,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    10,
+    23
+   ],
+   "n": 400,
+   "noninferior": false,
+   "sign_p": 0.03508203336969018,
+   "tasks": 20,
+   "x": 292,
+   "y": 305
+  },
+  "sel_vs_ours": {
+   "diff": {
+    "diff": 0.545,
+    "hi": 0.725,
+    "hi90": 0.7,
+    "lo": 0.3575,
+    "lo90": 0.39,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    221,
+    3
+   ],
+   "n": 400,
+   "sign_p": 1.3897839065703165e-61,
+   "tasks": 20,
+   "x": 292,
+   "y": 74
+  },
+  "sel_vs_zs": {
+   "diff": {
+    "diff": 0.6425,
+    "hi": 0.79,
+    "hi90": 0.7675,
+    "lo": 0.485,
+    "lo90": 0.51,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    258,
+    1
+   ],
+   "n": 400,
+   "sign_p": 5.613509560811389e-76,
+   "tasks": 20,
+   "x": 292,
+   "y": 35
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g4_ood__libero_ood__read_g10_pi0__s13__30114265",
+ "schema": 1,
+ "script": "experiments/g4_ood.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-17T22:33:29+00:00",
+ "stream": null,
+ "tag": "read_g10_pi0"
+}

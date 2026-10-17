@@ -19,7 +19,8 @@ them, it beats the per-task adapter: 994 against 932 of 1,320 on new start state
 0.091), with 675.9 MB against 902.8 MB. Learned as a stream that requests a demonstration only when practice fails, it needs 17
 and 16 demonstrations over 30 arrivals and damages no earlier task. On a published compositional OOD benchmark with no
 demonstration of any test task, composing the policy's own fields lifts 147 to 174 of 400 on pi0.5, 35 to 98 on pi0 and 8 to 25
-on SmolVLA. The policy's own likelihood tells held from new concepts without overlap (AUC 1.0), a detector of the kind Wang
+on SmolVLA; when practice chooses each held concept's source instruction, pi0.5 reaches 269, above the 222 of a prior method's
+hand-chosen pairs. The policy's own likelihood tells held from new concepts without overlap (AUC 1.0), a detector of the kind Wang
 et al. leave to future work. The system beats retrieval (STRAP, 480 against 296 of 580) and noise-space reinforcement learning on the
 frozen policy (DSRL, 499 against 314 of 600).
 
@@ -44,8 +45,9 @@ frozen policy (DSRL, 499 against 314 of 600).
      demonstration of the concept, switched at the policy's own grasp; skill-level adapter banks composed by a learned router
      exist (PRISM), but we know of no prior work that factors a VLA's adapters into object and goal concepts;
   2. for concepts the policy already holds, a zero-byte unit: the policy's own field under a training instruction, switched at
-     the grasp. This extends Li's prompt switching (hand-paired base tasks, a fixed switching step, pi0) with automatic source
-     selection, a grasp trigger and practice gating, on three policies, inside a learner that also stores new concepts;
+     the grasp. This extends Li's prompt switching (hand-paired base tasks, a fixed switching step, pi0): practice chooses the
+     sources with no hand labels (better than Li's pairs on pi0.5, level with pi0^S on pi0), the grasp trigger needs no per-task
+     tuning, and the operator runs inside a learner that also stores new concepts, on four policies;
   3. the frozen policy's own flow-matching loss on a concept's phase frames as the decision to point or to fit, with no added
      parameters (earlier continual learners decide expansion with separate models, e.g. CLARE's feature similarity), and the
      finding that likelihood detects novelty but does not select among new concepts; a continual learner that asks for a
@@ -156,8 +158,15 @@ The operator is Li's prompt switching, which reproduces on our harness: with Li'
 of 400 times switched at their fixed step and 305 switched at its own grasp, against 86 and 74 with our automatically chosen
 sources (pi0.5: 218 and 222 against 157 and 160). The gap lies entirely in the sources: Li's pairs pick training tasks whose
 trained motion reaches where the new object lies, ours match the instruction's words. The grasp trigger matches the tuned fixed
-step without per-task tuning. Choosing sources by where their motion goes is the next iteration. On X-VLA the composition with
-practice lifts 75 to 120 of 400.
+step without per-task tuning. On X-VLA the composition with practice lifts 75 to 120 of 400.
+
+### Iteration 9: practice chooses the sources
+Weakness: the word-matching source rule trails Li's hand-chosen pairs. Change: practice chooses each held concept's source
+among the 16 single-step pick-and-place training instructions of LIBERO-Goal and LIBERO-Spatial (object source first, then goal
+source, 5 episodes per candidate), with no hand labels and no privileged state. Result, on new start states: on pi0.5 the chosen
+pairs succeed 269 of 400 times against 222 for Li's hand-chosen pairs at the grasp (task-level difference 0.117, 95% interval
+0.022 to 0.240), 160 for our word rule and 147 for the policy alone; on pi0 292 against 305 for Li's pairs (difference -0.033,
+95% interval -0.138 to 0.030; level with Li's fixed-step pi0^S at 292), against 74 for the word rule and 35 for the policy.
 
 ### Iteration 6: the likelihood decides the kind of unit
 Weakness: two kinds of unit need a rule to choose between them. Change: the frozen policy's flow-matching loss on a concept's
@@ -239,6 +248,6 @@ The IPEC port of LIBERO-90 merges tasks that share an instruction: 16 tasks were
 the per-task baselines. Fixed by matching each scene's block of episodes to the task's rendered first frames.
 
 ## 9 Limitations
-Flow-matching policies only (pi0.5, pi0, SmolVLA, X-VLA); automatic choice of a held concept's source task trails Li's hand-chosen pairs; single-step pick-and-place; LIBERO-90 and Li's
+Flow-matching policies only (pi0.5, pi0, SmolVLA, X-VLA); choosing a held concept's source by practice costs 160 practice episodes per task; single-step pick-and-place; LIBERO-90 and Li's
 OOD suites only; practice needs a simulator; a new object needs its one demonstration; non-inferiority to per-task adapters without task leaves not
 established at 0.05.
