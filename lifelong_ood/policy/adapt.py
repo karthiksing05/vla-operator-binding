@@ -110,6 +110,14 @@ class LazyPrefixBank:
         return 0
 
 
+def flow_loss(bk, v, u, xt, t):
+    """The flow-matching loss of a batch: mean ||v - u||^2, or the backbone's own objective when it defines one (X-VLA predicts
+    the clean chunk, so its loss lives in a_hat space: backbone_xvla.XVLABackbone.flow_loss)."""
+    if hasattr(bk, "flow_loss"):
+        return bk.flow_loss(v, u, xt, t)
+    return ((v - u) ** 2).mean()
+
+
 def _flow_batch(n, H, A, gen, device):
     b = torch.distributions.Beta(torch.tensor(1.5), torch.tensor(1.0))
     t = (b.sample((n,)) * 0.999 + 0.001).to(device)
@@ -144,7 +152,7 @@ def train(bk, state, key, params, bank, chunks_full, steps=1000, lr=1e-4, batch=
         u = (eps - a).reshape(len(idx), -1)
         with on():
             v = bk.v_full(xt, t, pre, None if gate_of is None else gate_of(idx))
-        loss = ((v - u) ** 2).mean()
+        loss = flow_loss(bk, v, u, xt, t)
         la = torch.zeros((), device=bk.device)
         if anchor is not None:
             abank, achunks = anchor

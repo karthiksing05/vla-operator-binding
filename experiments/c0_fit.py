@@ -111,6 +111,10 @@ def backbone(name):
         from lifelong_ood.policy.backbone_smolvla import SmolVLABackbone
         bk = SmolVLABackbone(device="cuda")
         return bk, D.Norm.for_backbone(bk)
+    if name.startswith("xvla"):                                         # LeRobot's X-VLA (absolute ee6d actions: backbone_xvla.py)
+        from lifelong_ood.policy.backbone_xvla import XVLABackbone
+        bk = XVLABackbone(device="cuda")
+        return bk, D.Norm.for_backbone(bk)
     from lifelong_ood.policy.backbone import PolicyBackbone
     bk = PolicyBackbone(name, device="cuda")
     return bk, (D.Norm.load() if name == "pi05_libero" else D.Norm.for_backbone(bk))
@@ -118,7 +122,10 @@ def backbone(name):
 
 def chunk_rows(ep, chunk_idx, frames, norm):
     """Normalised flat rows of the chunks at `frames`; a state-relative checkpoint (pi0) takes each chunk relative to its frame's
-    raw state."""
+    raw state; an absolute-target checkpoint (X-VLA) takes every chunk step from its own frame's state."""
+    if getattr(norm, "per_step_state", False):
+        st = np.asarray(ep["state"], np.float32)
+        return np.stack([norm.normalize(ep["actions"][ci], state=st[ci]).reshape(-1) for ci in chunk_idx])
     if not norm.delta:
         return D.to_rows(ep["actions"][chunk_idx], norm)
     st = np.asarray(ep["state"], np.float32)
@@ -142,7 +149,7 @@ def score(a, bk, bank, full, used, n_draws=8, batch=64):
             xt = t[:, None, None] * eps + (1 - t[:, None, None]) * x
             u = (eps - x).reshape(len(idx), -1)
             v = bk.v_full(xt, t, bank.take(idx))
-            losses.append(float(((v - u) ** 2).mean()))
+            losses.append(float(adapt.flow_loss(bk, v, u, xt, t)))
     m = dict(name=a.name, key=a.key, source=a.source, goal=a.goal, approach=a.approach, frames=int(bank.n), tasks=used,
              loss=float(np.mean(losses)), loss_sd=float(np.std(losses)), draws=losses, backbone=a.backbone)
     print(f"[i6] {a.name} ({a.source}, {a.key}): frozen-policy flow loss {m['loss']:.4f} +- {m['loss_sd']:.4f} on {bank.n} frames",
@@ -198,7 +205,7 @@ def joint(a):
                 continue
             lo, hi = ap_
         idx, _ = D.chunk_indices(len(ep["actions"]), bk.H)
-        rows.append(D.pad_rows(chunk_rows(ep, idx[lo:hi], range(lo, hi), norm), bk.H))
+        rows.append(D.pad_rows(chunk_rows(ep, idx[lo:hi], range(lo, hi), norm), bk.H, bk.a, bk.A))
         g = np.asarray(ep["actions"])[:, 6] > 0
         first = int(np.argmax(g)) if g.any() else len(g)
         for i in range(lo, hi):

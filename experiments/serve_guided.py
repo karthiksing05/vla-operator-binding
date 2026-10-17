@@ -67,6 +67,9 @@ def main():
     if cfg.startswith("smolvla"):                                      # LeRobot's SmolVLA (its own venv: lifelong_ood/policy/backbone_smolvla.py)
         from lifelong_ood.policy.backbone_smolvla import SmolVLABackbone
         bk = SmolVLABackbone(ck, device="cuda")
+    elif cfg.startswith("xvla"):                                       # LeRobot's X-VLA (same venv: lifelong_ood/policy/backbone_xvla.py)
+        from lifelong_ood.policy.backbone_xvla import XVLABackbone
+        bk = XVLABackbone(ck, device="cuda")
     else:
         bk = PolicyBackbone(cfg, checkpoint_dir=ck, device="cuda")
     logging.info(bk.describe())
@@ -309,7 +312,8 @@ def main():
         apaths = [None if p_ == "none" else p_ for p_ in kv["apaths"].split("+")][:len(steps)] if "apaths" in kv else None
         pp = ([(kv.get("pa", "").replace("_", " ") or None, kv.get("pg", "").replace("_", " ") or None)]   # plan G4b: the source
               if ("pa" in kv or "pg" in kv) else None)                                                    # instructions per phase
-        hooks = PR.PrimHooks(bk, steps, paths, inner=inner, goal_only=kv.get("goal") == "1", approach_paths=apaths, phase_prompts=pp)
+        hooks = PR.PrimHooks(bk, steps, paths, inner=inner, goal_only=kv.get("goal") == "1", approach_paths=apaths, phase_prompts=pp,
+                             switch_query=int(kv["sw"]) if "sw" in kv else None)
         logging.info(f"prims: task {body}, steps {steps}, primitives {paths}, approach {apaths}, bind {inner is not None}, phase prompts {pp}")
     elif a.mode.startswith("lora:"):
         # lora:<expert.pt> -- the few-shot baseline: a flat adapter on the action expert, always on
@@ -481,7 +485,8 @@ def main():
         raise SystemExit(f"unknown mode {a.mode}")
     policy = GuidedPolicy(bk, hooks=hooks, num_steps=a.num_steps, seed=a.seed)
     warm(policy)
-    serve(policy, a.port)
+    # X-VLA's actions are ABSOLUTE eef targets: the client switches the OSC controller to absolute mode on this metadata
+    serve(policy, a.port, metadata={"control": "absolute"} if getattr(bk, "kind", "") == "xvla" else None)
 
 
 if __name__ == "__main__":

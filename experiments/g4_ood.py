@@ -303,6 +303,84 @@ def read_c(backbone, record):
                             script="experiments/g4_ood.py", command=" ".join(sys.argv)))
 
 
+LI_MAPPING = "/coc/flash10/ksingara3/ext_dl/pi0tl/pi0-text-latent/examples/libero/mapping.json"
+LI_STEPS = dict(                    # Li et al.'s task_hidden_states_mapping (examples/libero/main.py), its last entry: the switch
+    put_the_cream_cheese_on_the_plate=24, put_the_cream_cheese_on_the_stove=24, put_the_cream_cheese_on_top_of_the_cabinet=24,
+    put_the_wine_bottle_in_the_bowl=12, put_the_wine_bottle_on_the_plate=24, put_the_wine_bottle_on_the_stove=24,
+    put_the_orange_juice_on_the_stove=24, put_the_tomato_sauce_on_top_of_the_cabinet=24, put_the_bbq_source_on_the_plate=24,
+    put_the_cream_cheese_in_the_basket=24, put_the_bowl_at_table_center_on_the_stove=24,
+    put_the_bowl_at_table_center_on_the_cabinet=24, put_the_bowl_next_to_the_plate_on_the_stove=30,
+    put_the_bowl_next_to_the_plate_on_the_cabinet=24, put_the_bowl_on_cookie_box_on_the_stove=24,
+    put_the_bowl_on_cookie_box_on_the_cabinet=14, put_the_orange_juice_on_the_plate=24, put_the_milk_on_the_plate=24,
+    put_the_chocolate_pudding_on_the_plate=24, put_the_butter_on_the_plate=24)
+
+
+def li_arms(v, pl):
+    """G4d: Li et al.'s pi0^S (arXiv 2505.03500) and its crossings with ours.  Li switches the prompt at environment step
+    N / 2 * 5 (N from LI_STEPS, counting the 10 settle steps); our client queries every 5 steps after them, so that is query
+    N / 2 - 2."""
+    from lifelong_ood.policy import data as D
+    inv = {t: i for i, t in D.Demos().tasks.items()}
+    row = next(r for r in json.load(open(LI_MAPPING))[v["suite"]] if r[0] == v["language"])
+    la, lg = inv[row[1]], inv[row[2]]
+    q = LI_STEPS[v["language"].replace(" ", "_")] // 2 - 2
+    ours = pfield(v, pl)
+    return {"li_fixed": f"pfield@{la}.{lg}.q{q}", "li_grasp": f"pfield@{la}.{lg}", "ours_fixed": f"{ours}.q{q}"}
+
+
+def launch_d(backbone):
+    pl = json.load(open(PLAN))
+    for k, v in pl["tasks"].items():
+        cmd = [PY, "experiments/launch_pack.py", "--tasks", str(v["index"]), "--arms", ",".join(li_arms(v, pl).values()),
+               "--experiment", f"g4d_main_{k.split(':')[0]}", "--first", "0", "--trials", "20", "--seed", str(SEED), "--bind",
+               "track", "--partition", "overcap", "--per", "3", "--suite", v["suite"], "--fresh", "--fresh-dir", "fresh_ood_c"]
+        cmd += ["--backbone", backbone] if backbone != "pi05_libero" else []
+        print(k, subprocess.run(cmd, capture_output=True, text=True, cwd=ROOT).stdout.strip()[-90:], flush=True)
+
+
+def read_d(backbone, record):
+    """G4d (m3_prereg g4d_li): unfiltered success of pi0^S (li_fixed), Li's sources at our grasp (li_grasp), our sources at Li's
+    fixed step (ours_fixed) and ours (ours_grasp: G4b / G4c's pfield arm), each against the policy, on set c."""
+    import e1_read as E1
+    pl = json.load(open(PLAN))
+    short = backbone.split("_")[0]
+    sfx = "" if backbone == "pi05_libero" else f"_{short}"
+
+    def ld(exp, v, a):
+        f = os.path.join(R, f"{exp}_{v['suite']}_{v['index']}_{a.replace('@', '_')}_seed{SEED}{sfx}.json")
+        return ({int(e["trial"]): int(bool(e["success"])) for t_ in json.load(open(f))["tasks"].values() for e in t_["episodes"]}
+                if os.path.exists(f) else None)
+    x, missing = {}, []
+    for k, v in pl["tasks"].items():
+        sh = k.split(":")[0]
+        main = "g4b_main" if backbone == "pi05_libero" else "g4c_main"
+        z = dict(zs=ld(f"{main}_{sh}", v, "zs"), ours_grasp=ld(f"{main}_{sh}", v, pfield(v, pl)),
+                 **{a: ld(f"g4d_main_{sh}", v, arm) for a, arm in li_arms(v, pl).items()})
+        if None in z.values():
+            missing.append(k)
+            continue
+        x[k] = z
+    C = E1.compare
+    res = dict(backbone=backbone, missing=missing, tasks=len(x))
+    for a in ("li_fixed", "li_grasp", "ours_fixed", "ours_grasp"):
+        res[f"{a}_vs_zs"] = C({k: {"x": z[a], "y": z["zs"]} for k, z in x.items()})
+    res["li_fixed_vs_ours_grasp"] = C({k: {"x": z["li_fixed"], "y": z["ours_grasp"]} for k, z in x.items()})
+    res["li_grasp_vs_li_fixed"] = C({k: {"x": z["li_grasp"], "y": z["li_fixed"]} for k, z in x.items()})
+    res["ours_grasp_vs_ours_fixed"] = C({k: {"x": z["ours_grasp"], "y": z["ours_fixed"]} for k, z in x.items()})
+    res["per_task"] = {k: {a: int(sum(v.values())) for a, v in z.items()} for k, z in x.items()}
+    for n_, h in res.items():
+        if isinstance(h, dict) and "sign_p" in h:
+            print(f"[g4d {short}] {n_:26} {h['x']} vs {h['y']} of {h['n']}, discordant {h['discordant']}, sign p {h['sign_p']:.3g}",
+                  flush=True)
+    print(f"[g4d {short}] missing {missing}", flush=True)
+    json.dump(res, open(os.path.join(R, f"g4d_read_{short}.json"), "w"), indent=1)
+    if record and not missing:
+        from lifelong_ood import ledger
+        print(ledger.record("g4_ood", bench="libero_ood", tag=f"read_li_{short}", seed=SEED, metrics=res,
+                            bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config=dict(backbone=backbone),
+                            script="experiments/g4_ood.py", command=" ".join(sys.argv)))
+
+
 def diagnose(record):
     """Why the library adds nothing here: each prototype's flow loss on its first logged batch and its last three (ledger c0_fit), G4's
     prototypes (pi0.5's own training demonstrations) against E3's (LIBERO-90 demonstrations the policy never saw)."""
@@ -337,6 +415,10 @@ if __name__ == "__main__":
         launch_c(BKC, "main")
     if "--read-c" in sys.argv:
         read_c(BKC, "--record" in sys.argv)
+    if "--test-d" in sys.argv:
+        launch_d(BKC or "pi05_libero")
+    if "--read-d" in sys.argv:
+        read_d(BKC or "pi05_libero", "--record" in sys.argv)
     if "--test-b" in sys.argv:
         launch_b()
     if "--read-b" in sys.argv:

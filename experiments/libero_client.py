@@ -317,6 +317,11 @@ def main():
     tasks = list(range(suite.n_tasks)) if a.tasks == "all" else [int(x) for x in a.tasks.split(",")]
     max_steps = a.max_steps or MAX_STEPS[a.suite]
     client = _wcp.WebsocketClientPolicy(a.host, a.port)
+    # a server whose actions are ABSOLUTE eef targets (X-VLA: experiments/serve_guided.py sends {"control": "absolute"}): the OSC
+    # controller runs in absolute mode after the settle steps, as in the authors' LIBERO client; every other server: deltas
+    absolute = (client.get_server_metadata() or {}).get("control") == "absolute"
+    if absolute:
+        logging.info("[client] the server's actions are absolute: OSC use_delta = False after the settle steps")
     vid_dir = pathlib.Path(a.out).with_suffix("")
     vid_dir.mkdir(parents=True, exist_ok=True)
     res = dict(suite=a.suite, tasks={}, args=vars(a), started=time.time())
@@ -374,11 +379,17 @@ def main():
                         P.append(np.array(env.env.sim.data.body_xpos[bid])); Q.append(np.array([x, y, zq, w]))
                 return names, np.asarray(P), np.asarray(Q)
             err = None
+            if absolute:                                     # the settle steps run the DUMMY delta action
+                for r_ in env.env.robots:
+                    r_.controller.use_delta = a.wait > 0
             while t < max_steps + a.wait:
                 try:
                     if t < a.wait:
                         obs, _, done, _ = env.step(DUMMY)
                         t += 1
+                        if absolute and t == a.wait:
+                            for r_ in env.env.robots:
+                                r_.controller.use_delta = False
                         continue
                     img = np.ascontiguousarray(obs["agentview_image"][::-1, ::-1])
                     wimg = np.ascontiguousarray(obs["robot0_eye_in_hand_image"][::-1, ::-1])

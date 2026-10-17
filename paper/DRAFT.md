@@ -17,8 +17,8 @@ tasks, 931 against 935 of 1,320 (difference -0.003, 95% interval -0.063 to 0.058
 29 adapters (102.9 MB against 545.4 MB). Learned as a stream that requests a demonstration only when practice fails, it needs 17
 and 16 demonstrations over 30 arrivals and damages no earlier task. On a published compositional OOD benchmark with no
 demonstration of any test task, composing the policy's own fields lifts 147 to 174 of 400 on pi0.5, 35 to 98 on pi0 and 8 to 25
-on SmolVLA. The policy's own likelihood tells held from new concepts without overlap (AUC 1.0), the detector of new primitives
-Wang et al. lack. The system beats retrieval (STRAP, 480 against 296 of 580) and noise-space reinforcement learning on the
+on SmolVLA. The policy's own likelihood tells held from new concepts without overlap (AUC 1.0), a detector of the kind Wang
+et al. leave to future work. The system beats retrieval (STRAP, 480 against 296 of 580) and noise-space reinforcement learning on the
 frozen policy (DSRL, 499 against 314 of 600).
 
 ## 1 Introduction
@@ -32,18 +32,22 @@ frozen policy (DSRL, 499 against 314 of 600).
 - The approach: one compositional system, iterated. Each iteration is a measured weakness of the previous version and one
   change motivated by it, pre-registered and tested on start states no earlier decision saw; Results follows the iterations in
   order, then tests the finished system against alternatives.
-- Lineage: Wang et al. ([arXiv](https://arxiv.org/abs/2605.07078), our group's companion work) select and compose a frozen
+- Lineage: Wang et al. ([arXiv](https://arxiv.org/abs/2605.07078)) select and compose a frozen
   generative model's prototypes for an out-of-distribution query; their stated gap is a mechanism to detect, consolidate and
   reuse new primitives. We supply one for an embodied flow policy: likelihood detects a new concept, and practice, not
   likelihood, selects among concepts.
 - Contributions (Limitations states the limits):
-  1. a compositional system for a frozen flow-matching VLA: a hierarchy of object, instance and goal concepts composed at the
-     policy's own grasp, where a concept the policy lacks is a low-rank prototype and a concept it holds is its own field under
-     the instruction that taught it;
-  2. a continual learner that asks for a demonstration only when practice fails, with Cobweb-style updates of every concept on
-     the demonstration's path;
-  3. the policy's own likelihood as a detector of new concepts (Wang et al.'s missing mechanism), which assigns each concept its
-     kind of unit;
+  1. a compositional library for a frozen flow-matching VLA whose units are instruction concepts (object type, instance as a
+     child of its type, goal), each a low-rank change to the action expert fitted on the frames of its phase pooled over every
+     demonstration of the concept, switched at the policy's own grasp; skill-level adapter banks composed by a learned router
+     exist (PRISM), but we know of no prior work that factors a VLA's adapters into object and goal concepts;
+  2. for concepts the policy already holds, a zero-byte unit: the policy's own field under a training instruction, switched at
+     the grasp. This extends Li's prompt switching (hand-paired base tasks, a fixed switching step, pi0) with automatic source
+     selection, a grasp trigger and practice gating, on three policies, inside a learner that also stores new concepts;
+  3. the frozen policy's own flow-matching loss on a concept's phase frames as the decision to point or to fit, with no added
+     parameters (earlier continual learners decide expansion with separate models, e.g. CLARE's feature similarity), and the
+     finding that likelihood detects novelty but does not select among new concepts; a continual learner that asks for a
+     demonstration only when practice fails and refits every concept on its path (cf. LOTUS, which updates and adds skills);
   4. the iteration record itself: each failure and the change it motivated, with negative results that scope the claim
      (query-likelihood selection among new concepts, demonstration-free transfer to new objects, prototypes of held concepts);
   5. a pre-registered, paired, audited protocol on fresh start states, and a defect found and fixed in a public LIBERO-90 port.
@@ -52,7 +56,7 @@ frozen policy (DSRL, 499 against 314 of 600).
 
 Composition of generative models (Composable Diffusion, Liu et al., ECCV 2022, [arXiv](https://arxiv.org/abs/2206.01714)) and of
 fine-tuned weights (task arithmetic, Ilharco et al., ICLR 2023, [arXiv](https://arxiv.org/abs/2212.04089)); test-time prototype
-discovery (Wang et al., [arXiv](https://arxiv.org/abs/2605.07078), our group's companion work); flow-matching vision-language-action
+discovery (Wang et al., [arXiv](https://arxiv.org/abs/2605.07078)); flow-matching vision-language-action
 policies (pi0, [arXiv](https://arxiv.org/abs/2410.24164); pi0.5, CoRL 2025, [arXiv](https://arxiv.org/abs/2504.16054); SmolVLA,
 [arXiv](https://arxiv.org/abs/2506.01844); GR00T N1, [arXiv](https://arxiv.org/abs/2503.14734); FLOWER, CoRL 2025,
 [arXiv](https://arxiv.org/abs/2509.04996); X-VLA, [arXiv](https://arxiv.org/abs/2510.10274)); adapting a policy from few
@@ -61,6 +65,28 @@ noise space (DSRL, CoRL 2025, [arXiv](https://arxiv.org/abs/2506.15799)); contin
 modules (PackNet, Piggyback, SupSup, C-LoRA; docs/RELATED.md); the benchmarks (LIBERO, NeurIPS 2023,
 [arXiv](https://arxiv.org/abs/2306.03310); Li's compositional OOD suites, [arXiv](https://arxiv.org/abs/2505.03500)).
 
+**Continual imitation with module libraries.** Per-task adapters on a frozen pretrained policy avoid forgetting (TAIL, ICLR 2024,
+[arXiv](https://arxiv.org/abs/2310.05905); our per-task LoRA baseline is of this kind); later work shares modules across tasks
+with learned routers (Sparse Diffusion Policy, CoRL 2024, [arXiv](https://arxiv.org/abs/2407.01531); DMPEL,
+[arXiv](https://arxiv.org/abs/2506.05985)), grows libraries of discovered skills (LOTUS, ICRA 2024,
+[arXiv](https://arxiv.org/abs/2311.02058); IsCiL, NeurIPS 2024, [arXiv](https://arxiv.org/abs/2410.22658)), or expands adapters
+only where needed (CLARE, RA-L 2026, [arXiv](https://arxiv.org/abs/2601.09512)); PRISM (NeurIPS 2026) routes frozen low-rank
+skill adapters on the action expert per chunk, and PhaseLoRA ([arXiv](https://arxiv.org/abs/2608.15285)) conditions one
+action-expert LoRA on the manipulation phase. Our units are instruction concepts, not tasks or skills, switched by the policy's own
+grasp, not a learned router, and include zero-byte pointers to the policy's own conditionals. Pretrained VLAs forget little under
+fine-tuning with replay ([arXiv](https://arxiv.org/abs/2603.03818)).
+**Compositional generalisation of VLAs.** On the suites we use, Li switches pi0's prompt mid-episode and interpolates its text
+latents; ACT-VLA ([arXiv](https://arxiv.org/abs/2607.00351)) and AC-VLA ([arXiv](https://arxiv.org/abs/2607.15714)) retrain pi0.5
+on synthesised or decomposed compositional demonstrations, training-based references for our frozen policy. Composition of
+diffusion and flow policies (PoCo, RSS 2024, [arXiv](https://arxiv.org/abs/2402.02511); GPC, ICLR 2026,
+[arXiv](https://arxiv.org/abs/2510.01068)) combines whole policies at every step; we keep one policy frozen and switch its
+conditionals per phase, and we compare with Li's operators on the same tasks (G4d).
+**Novelty in generative policies.** Denoising error detects out-of-distribution inputs (Graham et al., CVPR-W 2023,
+[arXiv](https://arxiv.org/abs/2211.07740)); flow-based densities flag failing policy rollouts (FAIL-Detect, RSS 2025,
+[arXiv](https://arxiv.org/abs/2503.08558)); interactive imitation requests help on novel states (ThriftyDAgger,
+[arXiv](https://arxiv.org/abs/2109.08273)). We use the policy's own flow loss per concept to decide whether a concept needs new
+parameters.
+
 ## 3 The system
 
 (docs/METHOD.md; Figures: one composed step; the concept hierarchy; the stream learner.)
@@ -68,7 +94,7 @@ modules (PackNet, Piggyback, SupSup, C-LoRA; docs/RELATED.md); the benchmarks (L
 **Concepts.** Object, instance and goal concepts are read from the instruction. An instance is a child of its object type.
 
 **Two kinds of unit, one rule to choose.** A concept is scored by the frozen policy's own flow-matching loss on its phase frames
-(the detector of new primitives Wang et al. lack). A concept the policy holds under its instruction and scene is stored as a
+(a detector of the kind Wang et al. leave to future work). A concept the policy holds under its instruction and scene is stored as a
 pointer to the policy's own field under the training instruction that taught it (zero bytes); a new concept is fitted as a
 prototype, a rank-4 LoRA on the action expert fitted by flow matching on the frames of its phase in every demonstration of the
 concept, each demonstration from the task's own scene.

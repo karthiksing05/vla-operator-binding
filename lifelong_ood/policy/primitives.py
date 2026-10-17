@@ -114,9 +114,11 @@ class PrimHooks:
     `inner`: hooks for the first step (e.g. BindHooks binding the step's object); its bias applies only during that step.
     `approach_paths` (plan E, with goal_only): per step, the OBJECT primitive switched on before the grasp."""
 
-    def __init__(self, bk, steps, paths, inner=None, goal_only=False, approach_paths=None, phase_prompts=None):
+    def __init__(self, bk, steps, paths, inner=None, goal_only=False, approach_paths=None, phase_prompts=None, switch_query=None):
         from . import adapt
         self.steps, self.inner = list(steps), inner
+        self.switch_query = switch_query                 # Li et al.'s pi0^S: the phase prompt switches at a FIXED query, not the grasp
+        self.nq = 0
         self.phase_prompts = phase_prompts               # plan G4b: per step (approach prompt, carry prompt): a concept the policy
         #                                                  already holds is its own conditional field under the instruction that taught it
         self.goal_only = bool(goal_only)                 # plan D: a primitive acts only from the grasp to the release
@@ -147,6 +149,7 @@ class PrimHooks:
 
     def reset(self, meta):
         self.step, self.run, self.closed, self.carrying = 0, 0, False, False
+        self.nq = 0
         self._apply()
         if self.inner is not None and hasattr(self.inner, "reset"):
             self.inner.reset(meta)
@@ -155,7 +158,9 @@ class PrimHooks:
         obs = dict(obs)
         obs["prompt"] = self.steps[self.step]
         if self.phase_prompts and self.step < len(self.phase_prompts):
-            pp = self.phase_prompts[self.step][1 if self.carrying else 0]
+            late = (self.nq >= self.switch_query) if self.switch_query is not None else self.carrying
+            self.nq += 1
+            pp = self.phase_prompts[self.step][1 if late else 0]
             obs["prompt"] = pp or obs["prompt"]
         return obs
 

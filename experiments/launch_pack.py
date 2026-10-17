@@ -232,9 +232,12 @@ def arm_spec(tid, arm, fold, demo=0):
         tx = D.Demos().tasks                                             # the test instruction); optional prototypes on as in fac@
         u = lambda i: "" if i == "x" else tx[int(i)].replace(" ", "_")   # noqa: E731
         pth = lambda n_: os.path.join(R, f"prim_{n_}_0.pt") if len(parts) > 2 and n_ != "x" else "none"   # noqa: E731
+        sw = ""
+        if parts[-1].startswith("q"):                                    # pfield@<a>.<g>.q<k>: Li's fixed switch at query k
+            sw, parts = f"&sw={parts[-1][1:]}", parts[:-1]
         po, pg = (parts[2], parts[3]) if len(parts) > 2 else ("x", "x")
         return (f"prims:{tid}?suite={SUITE_OF.get('suite', 'libero_90')}&paths={pth(pg)}&apaths={pth(po)}&goal=1"
-                f"&pa={u(parts[0])}&pg={u(parts[1])}", "0", False)
+                f"&pa={u(parts[0])}&pg={u(parts[1])}{sw}", "0", False)
     if arm == "seqzs":                                                   # sequencing alone: the instruction's two clauses in turn
         return (f"bind:{tid}?suite={SUITE_OF.get('suite', 'libero_90')}&src=w4&rho=0.7&band=all&proto=none&nobind=1&seq=1", "0", False)
     if arm.startswith("bindw4g@"):                                       # the goal slot: attention on the demo's goal prototype while
@@ -410,6 +413,8 @@ def main():
                         **(s[3] if len(s) > 3 else {}),
                         **({"BACKBONE_CONFIG": a.backbone, "BACKBONE_CKPT": "lerobot/smolvla_libero",
                             "SERVER_PY": "/coc/flash10/ksingara3/robot/smolvla/.venv/bin/python"} if a.backbone.startswith("smolvla") else
+                           {"BACKBONE_CONFIG": a.backbone, "BACKBONE_CKPT": "lerobot/xvla-libero",
+                            "SERVER_PY": "/coc/flash10/ksingara3/robot/smolvla/.venv/bin/python"} if a.backbone.startswith("xvla") else
                            {"BACKBONE_CONFIG": a.backbone, "BACKBONE_CKPT": f"/coc/flash10/ksingara3/robot/openpi_cache/openpi-assets/checkpoints/{a.backbone}_pytorch"}
                            if a.backbone else {}))
             (specs_dep if s[2] else specs_free).append(spec)
