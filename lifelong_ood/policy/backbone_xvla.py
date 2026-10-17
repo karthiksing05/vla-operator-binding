@@ -45,8 +45,9 @@ from .backbone import PolicyBackbone, Prefix, _tt
 CKPT = "lerobot/xvla-libero"
 DOMAIN_ID = 3                                   # LIBERO's soft prompt (the authors' client, LeRobot's preprocessor)
 # R_site = R_body @ C: the grip site (controller.ee_ori_mat) relative to the hand body (robot0_eef_quat), Panda in LIBERO
-# (robosuite 1.4.1); measured over 40 steps of random motion, max deviation 1e-6 (/coc/flash10/ksingara3/tmp_xvla probe)
-C_SITE = np.array([[0.0, -1.0, 0.0], [1.0, 0.0, 0.0], [0.0, 0.0, 1.0]], np.float64)
+# (robosuite 1.4.1): -90 degrees about the hand's z; measured in the simulator over 40 steps of random motion (libero_spatial
+# task 0), max deviation 2e-3 (the observation and the controller read the pose one physics substep apart)
+C_SITE = np.array([[0.0, 1.0, 0.0], [-1.0, 0.0, 0.0], [0.0, 0.0, 1.0]], np.float64)
 POS_SCALE, ROT_SCALE = 0.05, 0.5                # the OSC controller's output_max (delta action in [-1, 1] -> metres / radians)
 IMAGENET_MEAN = (0.485, 0.456, 0.406)
 IMAGENET_STD = (0.229, 0.224, 0.225)
@@ -168,7 +169,7 @@ class XVLABackbone(PolicyBackbone):
             ims = []
             for o in obs_dicts:
                 x = np.asarray(o[k])
-                ims.append(torch.from_numpy(np.ascontiguousarray(x[::-1, ::-1] if flip else x)).permute(2, 0, 1))
+                ims.append(torch.from_numpy(np.array(x[::-1, ::-1] if flip else x)).permute(2, 0, 1))
             x = torch.stack(ims).float() / 255.0
             m = torch.tensor(IMAGENET_MEAN).view(1, 3, 1, 1)
             s = torch.tensor(IMAGENET_STD).view(1, 3, 1, 1)
