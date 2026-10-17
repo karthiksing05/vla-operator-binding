@@ -151,6 +151,9 @@ training demonstrations.
 The routing is right in both directions: on 20 LIBERO-90 tasks whose concepts share words with held ones, the field
 composition equals the policy (88 against 85 of 200) and the prototypes the router assigns reach 173.
 
+DSRL steering the library's composition does not help: 493 against 499 of 600 for the library alone, and 474 against 503 of 580
+for DSRL on the per-task adapter.
+
 ### A third policy
 On pi0 the library succeeds 324 of 600 times against 85 for pi0 alone; against pi0's per-task LoRA with acceptance, 308
 against 330 of 580 (difference -0.038, 95% interval -0.166 to 0.081): non-inferiority is not established.

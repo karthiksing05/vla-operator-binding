@@ -71,6 +71,8 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
     ("G7 against DSRL", "g7_dsrl", "read", True, "c-gen",
      lambda m: f"vs DSRL on the frozen policy {m['hypotheses']['lib_vs_dsrlz_acc']['x']} vs {m['hypotheses']['lib_vs_dsrlz_acc']['y']}; "
                f"vs DSRL on the per-task LoRA {_ci(m['hypotheses']['lib_vs_dsrls_acc']['diff'])}"),
+    ("G7b DSRL steering the library", "g7_dsrl", "read_library", True, "c-gen",
+     lambda m: f"vs DSRL on the LoRA {_ci(m['H1']['diff'])}; vs the library {m['H2']['x']} vs {m['H2']['y']}: both fail"),
     ("G6 against STRAP", "g6_strap", "read", True, "c-gen",
      lambda m: f"{m['H1']['x']} vs STRAP + acc. {m['H1']['y']} of {m['H1']['n']}"),
     ("G4 Li's compositional OOD suites", "g4_ood", "read", True, "c-limits",

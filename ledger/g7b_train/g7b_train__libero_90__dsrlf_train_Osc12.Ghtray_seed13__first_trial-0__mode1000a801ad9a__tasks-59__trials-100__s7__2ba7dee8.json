@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g7b_train_59_dsrlf_train_Osc12.Ghtray_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=dsrl:59?train=1&save=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrlf_59_actor.pt&warmup=10&official=1&lora=none&apath=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Osc12_0.pt&gpath=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Ghtray_0.pt&suite=libero_90 SUITE=libero_90 TASKS=59 TRIALS=100 (job 4109453)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g7b_train_59_dsrlf_train_Osc12.Ghtray_seed13.json",
+   "port": 9459,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 30,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "59",
+   "trials": 100,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4109453",
+  "mode": "dsrl:59?train=1&save=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrlf_59_actor.pt&warmup=10&official=1&lora=none&apath=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Osc12_0.pt&gpath=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Ghtray_0.pt&suite=libero_90"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "optimistprime.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4109453",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g7b_train",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "2ba7dee8be989e831a2622f187ee3a17d434e4f3",
+  "short": "2ba7dee8"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "dsrl:59?train=1&save=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrlf_59_actor.pt&warmup=10&official=1&lora=none&apath=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Osc12_0.pt&gpath=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Ghtray_0.pt&suite=libero_90",
+  "tasks": "59",
+  "trials": 100
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 100,
+  "secs": 4560.13202381134,
+  "success_rate": 0.66,
+  "tasks": {
+   "59": {
+    "errors": 0,
+    "language": "pick up the tomato sauce and put it in the tray",
+    "mean_steps": 219.67,
+    "n": 100,
+    "success_rate": 0.66
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g7b_train__libero_90__dsrlf_train_Osc12.Ghtray_seed13__first_trial-0__mode1000a801ad9a__tasks-59__trials-100__s7__2ba7dee8",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-16T14:41:51+00:00",
+ "stream": null,
+ "tag": "dsrlf_train_Osc12.Ghtray_seed13"
+}

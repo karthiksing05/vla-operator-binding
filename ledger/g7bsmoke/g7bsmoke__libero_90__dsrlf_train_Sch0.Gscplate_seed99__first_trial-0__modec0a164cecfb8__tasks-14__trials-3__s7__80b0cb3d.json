@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g7bsmoke_14_dsrlf_train_Sch0.Gscplate_seed99.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=dsrl:14?train=1&save=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrlf_14_actor.pt&warmup=10&official=1&lora=none&apath=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Sch0_0.pt&gpath=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Gscplate_0.pt&suite=libero_90 SUITE=libero_90 TASKS=14 TRIALS=3 (job 4109328)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g7bsmoke_14_dsrlf_train_Sch0.Gscplate_seed99.json",
+   "port": 9084,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 30,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "14",
+   "trials": 3,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4109328",
+  "mode": "dsrl:14?train=1&save=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrlf_14_actor.pt&warmup=10&official=1&lora=none&apath=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Sch0_0.pt&gpath=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Gscplate_0.pt&suite=libero_90"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "chappie.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4109328",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g7bsmoke",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "80b0cb3d793caf3f3808e15f66859ef5fc881abe",
+  "short": "80b0cb3d"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "dsrl:14?train=1&save=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/dsrlf_14_actor.pt&warmup=10&official=1&lora=none&apath=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Sch0_0.pt&gpath=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Gscplate_0.pt&suite=libero_90",
+  "tasks": "14",
+  "trials": 3
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 3,
+  "secs": 164.35292863845825,
+  "success_rate": 0.0,
+  "tasks": {
+   "14": {
+    "errors": 0,
+    "language": "put the middle black bowl on the plate",
+    "mean_steps": 400.0,
+    "n": 3,
+    "success_rate": 0.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g7bsmoke__libero_90__dsrlf_train_Sch0.Gscplate_seed99__first_trial-0__modec0a164cecfb8__tasks-14__trials-3__s7__80b0cb3d",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-16T13:17:36+00:00",
+ "stream": null,
+ "tag": "dsrlf_train_Sch0.Gscplate_seed99"
+}

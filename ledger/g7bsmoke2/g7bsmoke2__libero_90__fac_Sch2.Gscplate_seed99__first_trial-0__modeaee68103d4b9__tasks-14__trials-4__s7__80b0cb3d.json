@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g7bsmoke2_14_fac_Sch2.Gscplate_seed99.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:14?suite=libero_90&paths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Gscplate_0.pt&apaths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Sch2_0.pt&goal=1 SUITE=libero_90 TASKS=14 TRIALS=4 (job 4109382)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g7bsmoke2_14_fac_Sch2.Gscplate_seed99.json",
+   "port": 9247,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "14",
+   "trials": 4,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4109382",
+  "mode": "prims:14?suite=libero_90&paths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Gscplate_0.pt&apaths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Sch2_0.pt&goal=1"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "spot.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4109382",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g7bsmoke2",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "80b0cb3d793caf3f3808e15f66859ef5fc881abe",
+  "short": "80b0cb3d"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:14?suite=libero_90&paths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Gscplate_0.pt&apaths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_Sch2_0.pt&goal=1",
+  "tasks": "14",
+  "trials": 4
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 4,
+  "secs": 90.80400657653809,
+  "success_rate": 1.0,
+  "tasks": {
+   "14": {
+    "errors": 0,
+    "language": "put the middle black bowl on the plate",
+    "mean_steps": 163.25,
+    "n": 4,
+    "success_rate": 1.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g7bsmoke2__libero_90__fac_Sch2.Gscplate_seed99__first_trial-0__modeaee68103d4b9__tasks-14__trials-4__s7__80b0cb3d",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-16T13:21:25+00:00",
+ "stream": null,
+ "tag": "fac_Sch2.Gscplate_seed99"
+}

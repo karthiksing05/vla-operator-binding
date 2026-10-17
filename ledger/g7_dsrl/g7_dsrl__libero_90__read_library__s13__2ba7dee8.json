@@ -1,0 +1,324 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g7b_dsrl_library.py --read --record",
+ "config": {
+  "episodes": 100
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g7_dsrl",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "2ba7dee8be989e831a2622f187ee3a17d434e4f3",
+  "short": "2ba7dee8"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": {
+   "diff": {
+    "diff": -0.05,
+    "hi": 0.03103448275862069,
+    "hi90": 0.020689655172413793,
+    "lo": -0.1482758620689655,
+    "lo90": -0.12931034482758622,
+    "n_pairs": 580,
+    "n_tasks": 29
+   },
+   "discordant": [
+    35,
+    64
+   ],
+   "n": 580,
+   "noninferior": false,
+   "sign_p": 0.004640654088434307,
+   "tasks": 29,
+   "x": 474,
+   "y": 503
+  },
+  "H2": {
+   "diff": {
+    "diff": -0.01,
+    "hi": 0.06833333333333333,
+    "hi90": 0.056666666666666664,
+    "lo": -0.09666666666666666,
+    "lo90": -0.08166666666666667,
+    "n_pairs": 600,
+    "n_tasks": 30
+   },
+   "discordant": [
+    49,
+    55
+   ],
+   "n": 600,
+   "passes": false,
+   "sign_p": 0.624143515844679,
+   "tasks": 30,
+   "x": 493,
+   "y": 499
+  },
+  "dsrlf_vs_zs": {
+   "diff": {
+    "diff": 0.295,
+    "hi": 0.47,
+    "hi90": 0.44166666666666665,
+    "lo": 0.12,
+    "lo90": 0.14666666666666667,
+    "n_pairs": 600,
+    "n_tasks": 30
+   },
+   "discordant": [
+    231,
+    54
+   ],
+   "n": 600,
+   "sign_p": 3.0792433103304954e-27,
+   "tasks": 30,
+   "x": 450,
+   "y": 273
+  },
+  "kept": {
+   "dsrlf": 17,
+   "zs": 13
+  },
+  "missing": [],
+  "per_task": {
+   "10": {
+    "dsrlf": 19,
+    "dsrlf_acc": 18,
+    "dsrls_acc": 18,
+    "lib": 18,
+    "zs": 18
+   },
+   "12": {
+    "dsrlf": 19,
+    "dsrlf_acc": 19,
+    "dsrls_acc": 19,
+    "lib": 20,
+    "zs": 9
+   },
+   "13": {
+    "dsrlf": 20,
+    "dsrlf_acc": 20,
+    "dsrls_acc": 19,
+    "lib": 19,
+    "zs": 0
+   },
+   "14": {
+    "dsrlf": 17,
+    "dsrlf_acc": 17,
+    "dsrls_acc": 15,
+    "lib": 17,
+    "zs": 12
+   },
+   "15": {
+    "dsrlf": 14,
+    "dsrlf_acc": 14,
+    "dsrls_acc": 20,
+    "lib": 18,
+    "zs": 1
+   },
+   "25": {
+    "dsrlf": 19,
+    "dsrlf_acc": 19,
+    "dsrls_acc": 19,
+    "lib": 17,
+    "zs": 0
+   },
+   "30": {
+    "dsrlf": 4,
+    "dsrlf_acc": 14,
+    "dsrls_acc": 14,
+    "lib": 20,
+    "zs": 14
+   },
+   "31": {
+    "dsrlf": 2,
+    "dsrlf_acc": 3,
+    "dsrls_acc": 20,
+    "lib": 19,
+    "zs": 3
+   },
+   "36": {
+    "dsrlf": 5,
+    "dsrlf_acc": 5,
+    "dsrls_acc": 19,
+    "lib": 10,
+    "zs": 0
+   },
+   "41": {
+    "dsrlf": 19,
+    "dsrlf_acc": 19,
+    "dsrls_acc": 15,
+    "lib": 10,
+    "zs": 1
+   },
+   "43": {
+    "dsrlf": 20,
+    "dsrlf_acc": 20,
+    "dsrls_acc": 18,
+    "lib": 18,
+    "zs": 3
+   },
+   "46": {
+    "dsrlf": 18,
+    "dsrlf_acc": 20,
+    "dsrls_acc": 20,
+    "lib": 20,
+    "zs": 20
+   },
+   "47": {
+    "dsrlf": 20,
+    "dsrlf_acc": 20,
+    "dsrls_acc": 20,
+    "lib": 20,
+    "zs": 20
+   },
+   "48": {
+    "dsrlf": 18,
+    "dsrlf_acc": 18,
+    "dsrls_acc": 16,
+    "lib": 14,
+    "zs": 0
+   },
+   "49": {
+    "dsrlf": 10,
+    "dsrlf_acc": 10,
+    "dsrls_acc": 18,
+    "lib": 15,
+    "zs": 0
+   },
+   "50": {
+    "dsrlf": 17,
+    "dsrlf_acc": 17,
+    "dsrls_acc": 17,
+    "lib": 17,
+    "zs": 17
+   },
+   "51": {
+    "dsrlf": 18,
+    "dsrlf_acc": 19,
+    "lib": 19,
+    "zs": 19
+   },
+   "52": {
+    "dsrlf": 14,
+    "dsrlf_acc": 14,
+    "dsrls_acc": 11,
+    "lib": 13,
+    "zs": 0
+   },
+   "53": {
+    "dsrlf": 20,
+    "dsrlf_acc": 20,
+    "dsrls_acc": 19,
+    "lib": 20,
+    "zs": 1
+   },
+   "54": {
+    "dsrlf": 6,
+    "dsrlf_acc": 17,
+    "dsrls_acc": 17,
+    "lib": 18,
+    "zs": 17
+   },
+   "55": {
+    "dsrlf": 20,
+    "dsrlf_acc": 20,
+    "dsrls_acc": 20,
+    "lib": 20,
+    "zs": 20
+   },
+   "56": {
+    "dsrlf": 20,
+    "dsrlf_acc": 20,
+    "dsrls_acc": 20,
+    "lib": 20,
+    "zs": 18
+   },
+   "57": {
+    "dsrlf": 20,
+    "dsrlf_acc": 20,
+    "dsrls_acc": 20,
+    "lib": 20,
+    "zs": 20
+   },
+   "58": {
+    "dsrlf": 17,
+    "dsrlf_acc": 17,
+    "dsrls_acc": 13,
+    "lib": 9,
+    "zs": 0
+   },
+   "59": {
+    "dsrlf": 15,
+    "dsrlf_acc": 15,
+    "dsrls_acc": 13,
+    "lib": 10,
+    "zs": 1
+   },
+   "61": {
+    "dsrlf": 20,
+    "dsrlf_acc": 20,
+    "dsrls_acc": 20,
+    "lib": 20,
+    "zs": 20
+   },
+   "62": {
+    "dsrlf": 5,
+    "dsrlf_acc": 5,
+    "dsrls_acc": 8,
+    "lib": 5,
+    "zs": 0
+   },
+   "71": {
+    "dsrlf": 14,
+    "dsrlf_acc": 14,
+    "dsrls_acc": 15,
+    "lib": 13,
+    "zs": 0
+   },
+   "72": {
+    "dsrlf": 15,
+    "dsrlf_acc": 20,
+    "dsrls_acc": 20,
+    "lib": 20,
+    "zs": 20
+   },
+   "9": {
+    "dsrlf": 5,
+    "dsrlf_acc": 19,
+    "dsrls_acc": 20,
+    "lib": 20,
+    "zs": 19
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g7_dsrl__libero_90__read_library__s13__2ba7dee8",
+ "schema": 1,
+ "script": "experiments/g7b_dsrl_library.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-17T03:53:44+00:00",
+ "stream": null,
+ "tag": "read_library"
+}
