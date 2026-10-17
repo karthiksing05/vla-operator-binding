@@ -250,6 +250,7 @@ The IPEC port of LIBERO-90 merges tasks that share an instruction: 16 tasks were
 the per-task baselines. Fixed by matching each scene's block of episodes to the task's rendered first frames.
 
 ## 9 Limitations
-Flow-matching policies only (pi0.5, pi0, SmolVLA, X-VLA); choosing a held concept's source by practice costs 160 practice episodes per task; single-step pick-and-place; LIBERO-90 and Li's
+Flow-matching policies only (pi0.5, pi0, SmolVLA, X-VLA); Li's text-latent interpolation, reported above prompt switching on
+pi0 in their setup, and routed adapter libraries (CLARE) are not rerun here; choosing a held concept's source by practice costs 160 practice episodes per task; single-step pick-and-place; LIBERO-90 and Li's
 OOD suites only; practice needs a simulator; a new object needs its one demonstration; non-inferiority to per-task adapters without task leaves not
 established at 0.05.
