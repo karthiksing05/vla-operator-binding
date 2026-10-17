@@ -1,0 +1,51 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G8 (task leaves)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "acb1a0acabfd0d6bda670b2695b848f267ff7981",
+  "short": "acb1a0ac"
+ },
+ "keys": {},
+ "metrics": {
+  "exploratory_before": "on E3's and E5's recorded test episodes (sets b) the rule gave 1,013 against 935 of 1,320 (+0.059 [0.019, 0.104]) with leaves on 24 of 66 tasks; the rule was chosen after that pass",
+  "hypotheses": {
+   "H1": "the hierarchy with leaves is non-inferior to the per-task LoRA with acceptance over the 66 tasks (task-level bootstrap 95% lower bound of the difference above -0.05)",
+   "H1b": "superiority: the same lower bound above 0 (tested only if H1 passes)",
+   "descriptive": "leaves kept; the library without leaves vs LoRA+acc; leaves vs zero-shot and vs the library"
+  },
+  "written_before": "any episode on start-state set d"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__g8_leaves__s13__acb1a0ac",
+ "schema": 1,
+ "script": "experiments/prereg/g8_leaves.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-17T03:56:18+00:00",
+ "stream": null,
+ "tag": "g8_leaves"
+}
