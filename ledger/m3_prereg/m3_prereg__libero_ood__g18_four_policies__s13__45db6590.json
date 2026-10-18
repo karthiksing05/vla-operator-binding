@@ -1,0 +1,54 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G18 (the OOD system on SmolVLA and X-VLA)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "45db659098c1b7d95e49ea0a4fca59fc55b2885b",
+  "short": "45db6590"
+ },
+ "keys": {},
+ "metrics": {
+  "backbones": [
+   "smolvla",
+   "xvla"
+  ],
+  "hypotheses": {
+   "H1": "per policy, the system's chosen arms > the policy alone on set e (exact sign test, alpha 0.05)",
+   "H2": "per policy, the system's chosen arms are non-inferior to Li's hand-chosen pairs (TLI where ported, else switched at the grasp) on set e (task-level bootstrap 95% lower bound above -0.05)",
+   "descriptive": "operator counts; the four-policy table with G15's pi0 and pi0.5"
+  },
+  "written_before": "any G18 episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__g18_four_policies__s13__45db6590",
+ "schema": 1,
+ "script": "experiments/prereg/g18_four_policies.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-18T15:16:07+00:00",
+ "stream": null,
+ "tag": "g18_four_policies"
+}
