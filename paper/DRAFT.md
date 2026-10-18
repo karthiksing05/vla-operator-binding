@@ -110,6 +110,18 @@ concept, each demonstration from the task's own scene.
 goal unit then acts until the release. The learner thus composes held concepts the way composable diffusion composes the
 scores of single prompts, and grows the library only where the policy's likelihood says it must.
 
+**Operators for held concepts.** A held concept points at a source training instruction, and two operators read the policy
+through it. The grasp switch conditions the policy on the object's source instruction until the grasp and on the goal's
+source instruction after it. Text-latent interpolation (Li et al.) keeps the test instruction and shifts the residual stream
+of the policy's conditioning encoder, at the instruction's tokens, from the object source's latent toward the goal source's.
+Practice chooses each concept's source and, per task, the operator.
+
+**What the framework needs from a policy.** Nothing in the system depends on one architecture. It needs three accesses to a
+frozen flow-matching policy: its velocity field under a given instruction (a pointer, and the grasp switch), a low-rank
+change to that field (a prototype), and the residual stream of the encoder that reads the instruction, with the position of
+the instruction's tokens in it (text-latent interpolation). These are the extraction of prototypes. One interface supplies
+them for PaliGemma (pi0, pi0.5), SmolVLM (SmolVLA) and Florence-2 (X-VLA); the rest of the system is shared code.
+
 **Practice and the stream.** Ten practice episodes keep the composition only if it beats the policy. As a stream, an arrival
 requests its one demonstration only when neither the policy nor the composition reaches 8 of 10; the demonstration refits the
 instance, type and goal concepts it belongs to.
