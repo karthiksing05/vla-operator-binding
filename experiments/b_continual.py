@@ -66,11 +66,23 @@ def main():
     params = add_node(banks, key, a.rank)
     t0 = time.time()
     curves = []
+    import torch
+    ckpt = os.path.join(R, f"bcl_{a.mode}{a.tag}.ckpt.pt")                 # seq / er: resumable task by task (each task's
+    done = 0                                                                 # optimizer is fresh, so the weights suffice)
+    if a.mode != "joint" and os.path.exists(ckpt):
+        c = torch.load(ckpt, map_location="cpu")
+        with torch.no_grad():
+            for p_, w in zip(params, c["params"]):
+                p_.copy_(w.to(p_.device))
+        done, curves = int(c["done"]), c.get("curves", [])
+        print(f"[bcl] resumed {ckpt}: {done} tasks done", flush=True)
     if a.mode == "joint":
         curves.append(adapt.train(bk, state, key, params, bank, full, steps=a.joint_steps, lr=a.lr, batch=a.batch,
                                   log=lambda x: print(x, flush=True)))
     else:
         for i, t in enumerate(tasks):
+            if i < done:
+                continue
             cur = np.where(owner == t)[0]
             if a.mode == "seq":                                             # the current demo alone: its prefixes cached
                 tb = adapt.PrefixBank(bk, [obs[j] for j in cur])
@@ -85,6 +97,7 @@ def main():
                 curves.append(adapt.train(bk, state, key, params, bank, full, steps=a.steps, lr=a.lr, batch=a.batch, seed=i,
                                           groups=groups, log=lambda x: print(x, flush=True)))
             print(f"[bcl] {a.mode}: task {t} ({i + 1}/{len(tasks)}) done at {time.time() - t0:.0f}s", flush=True)
+            torch.save(dict(params=[p_.detach().cpu() for p_ in params], done=i + 1, curves=curves), ckpt)
     path = os.path.join(R, f"bcl_{a.mode}{a.tag}.pt")
     nb = adapt.save(banks, key, path, meta=dict(mode=a.mode, tasks=tasks, rank=a.rank, scope="expert"))
     print(f"[bcl] saved {path} ({nb / 1e6:.1f} MB) in {time.time() - t0:.0f}s", flush=True)
