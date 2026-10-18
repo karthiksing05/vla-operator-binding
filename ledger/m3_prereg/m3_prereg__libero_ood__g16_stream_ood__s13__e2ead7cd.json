@@ -1,0 +1,58 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G16 (iteration 13: continual practice on the OOD stream)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "e2ead7cd1dc683a5f5a543db4531fdf7b98642bd",
+  "short": "e2ead7cd"
+ },
+ "keys": {},
+ "metrics": {
+  "backbones": [
+   "pi0_libero",
+   "pi05_libero"
+  ],
+  "hypotheses": {
+   "H1": "per policy and order, the stream's served arms are non-inferior to G15's per-task practice on set e (task-level bootstrap 95% lower bound above -0.05)",
+   "H2": "per policy and order, the stream's served arms > the policy alone on set e (exact sign test, alpha 0.05)",
+   "descriptive": "practice episodes against G15's (stage episodes plus operator choice); concepts reused; against Li's TLI"
+  },
+  "orders": [
+   "plan",
+   "reversed"
+  ],
+  "written_before": "any G16 episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__g16_stream_ood__s13__e2ead7cd",
+ "schema": 1,
+ "script": "experiments/prereg/g16_stream_ood.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-18T08:02:12+00:00",
+ "stream": null,
+ "tag": "g16_stream_ood"
+}
