@@ -1,0 +1,55 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G13 (iteration 10: TLI with practice-chosen sources)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "ddb2cc93266b5e8830a84a892efd24cfaf6f7988",
+  "short": "ddb2cc93"
+ },
+ "keys": {},
+ "metrics": {
+  "backbones": [
+   "pi0_libero",
+   "pi05_libero"
+  ],
+  "hypotheses": {
+   "H1": "per policy, TLI with the practice-chosen pair (lambda 24) is non-inferior to TLI with Li's hand-chosen pairs and lambda on set d (task-level bootstrap 95% lower bound above -0.05)",
+   "H2": "per policy, TLI with the practice-chosen pair > the same pair switched at the grasp on set d (exact sign test, alpha 0.05)",
+   "descriptive": "each arm against the policy alone on set d; TLI with Li's pairs on pi0.5 on set c against G10's 269; by suite"
+  },
+  "states": "fresh_ood_d (BASE 700000, 20 per task)",
+  "written_before": "any G13 episode, set d and the pi0.5 latents"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__g13_tli_sources__s13__ddb2cc93",
+ "schema": 1,
+ "script": "experiments/prereg/g13_tli_sources.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-18T04:39:14+00:00",
+ "stream": null,
+ "tag": "g13_tli_sources"
+}
