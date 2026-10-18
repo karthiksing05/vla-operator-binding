@@ -111,6 +111,10 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"TLI chosen {m['sel_vs_li']['x']} vs Li's TLI {m['sel_vs_li']['y']}; grasp switch {m['sel_vs_psel']['y']} ({_ci(m['psel_vs_li']['diff'])} vs Li's TLI): fails"),
     ("G13 TLI with practice-chosen pairs (pi05)", "g13_tli_sources", "read_pi05", True, "c-limits",
      lambda m: f"TLI chosen {m['sel_vs_li']['x']} vs Li's TLI {m['sel_vs_li']['y']}; grasp switch {m['sel_vs_psel']['y']} ({_ci(m['psel_vs_li']['diff'])} vs Li's TLI): fails"),
+    ("G14 practice chooses pairs under TLI (pi0)", "g14_tli_practice", "read_pi0", True, "c-limits",
+     lambda m: f"{m['sel_vs_tli_li']['x']} vs Li's TLI {m['sel_vs_tli_li']['y']} ({_ci(m['sel_vs_tli_li']['diff'])}); NI not established"),
+    ("G14 practice chooses pairs under TLI (pi05)", "g14_tli_practice", "read_pi05", True, "c-limits",
+     lambda m: f"{m['sel_vs_tli_li']['x']} vs Li's TLI {m['sel_vs_tli_li']['y']} ({_ci(m['sel_vs_tli_li']['diff'])}); NI not established"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -583,6 +587,13 @@ def limits_of_method():
                 f"practice-chosen grasp switch; pi0.5 {g13b['sel_vs_li']['y']} and {g13b['sel_vs_psel']['y']}. TLI fed the pairs "
                 f"chosen for the grasp switch falls behind both ({g13a['sel_vs_li']['x']} and {g13b['sel_vs_li']['x']}): pairs "
                 f"chosen under one operator do not carry over to the other. Practice now chooses the pairs under TLI (G14).</p>")
+    g14a, g14b = row("g14_tli_practice", "read_pi0"), row("g14_tli_practice", "read_pi05")
+    if g14a and g14b:
+        out += (f"<p><b>Practice chooses the pairs under TLI.</b> With TLI as the operator during practice (m3_prereg tag "
+                f"g14_tli_practice), pi0 succeeds {g14a['sel_vs_tli_li']['x']} of 400 times against {g14a['sel_vs_tli_li']['y']} "
+                f"for Li's hand-chosen pairs ({_ci(g14a['sel_vs_tli_li']['diff'])}) and pi0.5 {g14b['sel_vs_tli_li']['x']} "
+                f"against {g14b['sel_vs_tli_li']['y']} ({_ci(g14b['sel_vs_tli_li']['diff'])}): most of the gap closes without "
+                f"hand labels; non-inferiority is not established.</p>")
     i6 = row("i6_novelty", "read")
     if i6:
         out += (f"<p><b>Which kind of unit a concept gets.</b> The frozen policy's own flow-matching loss on a concept's frames "
