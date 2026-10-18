@@ -107,6 +107,10 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"{m['sel_vs_li_grasp']['x']} vs Li's hand-chosen {m['sel_vs_li_grasp']['y']} of {m['sel_vs_li_grasp']['n']} ({_ci(m['sel_vs_li_grasp']['diff'])})"),
     ("G12 Li's text latent interpolation (pi0)", "g12_tli", "read_pi0", True, "c-limits",
      lambda m: f"TLI {m['tli_vs_zs']['x']} vs policy {m['tli_vs_zs']['y']}; practice-chosen pointer {m['sel_vs_tli']['x']} vs TLI ({_ci(m['sel_vs_tli']['diff'])}): trails"),
+    ("G13 TLI with practice-chosen pairs (pi0)", "g13_tli_sources", "read_pi0", True, "c-limits",
+     lambda m: f"TLI chosen {m['sel_vs_li']['x']} vs Li's TLI {m['sel_vs_li']['y']}; grasp switch {m['sel_vs_psel']['y']} ({_ci(m['psel_vs_li']['diff'])} vs Li's TLI): fails"),
+    ("G13 TLI with practice-chosen pairs (pi05)", "g13_tli_sources", "read_pi05", True, "c-limits",
+     lambda m: f"TLI chosen {m['sel_vs_li']['x']} vs Li's TLI {m['sel_vs_li']['y']}; grasp switch {m['sel_vs_psel']['y']} ({_ci(m['psel_vs_li']['diff'])} vs Li's TLI): fails"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -572,6 +576,13 @@ def limits_of_method():
                 f"{g12['tli_vs_zs']['n']} times against {g12['tli_vs_zs']['y']} for the policy alone, and the practice-chosen "
                 f"pairs switched at the grasp trail it ({g12['sel_vs_tli']['x']}; difference {_ci(g12['sel_vs_tli']['diff'])}). "
                 f"TLI uses hand-chosen pairs; the next iteration gives it practice-chosen ones.</p>")
+    g13a, g13b = row("g13_tli_sources", "read_pi0"), row("g13_tli_sources", "read_pi05")
+    if g13a and g13b:
+        out += (f"<p><b>Which operator wins depends on the policy.</b> On new start states (set d; m3_prereg tag g13_tli_sources) "
+                f"pi0 succeeds {g13a['sel_vs_li']['y']} of 400 times with Li's TLI and {g13a['sel_vs_psel']['y']} with the "
+                f"practice-chosen grasp switch; pi0.5 {g13b['sel_vs_li']['y']} and {g13b['sel_vs_psel']['y']}. TLI fed the pairs "
+                f"chosen for the grasp switch falls behind both ({g13a['sel_vs_li']['x']} and {g13b['sel_vs_li']['x']}): pairs "
+                f"chosen under one operator do not carry over to the other. Practice now chooses the pairs under TLI (G14).</p>")
     i6 = row("i6_novelty", "read")
     if i6:
         out += (f"<p><b>Which kind of unit a concept gets.</b> The frozen policy's own flow-matching loss on a concept's frames "

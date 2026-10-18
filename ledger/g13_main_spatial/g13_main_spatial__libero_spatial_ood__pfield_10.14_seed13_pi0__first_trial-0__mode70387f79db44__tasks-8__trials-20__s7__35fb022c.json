@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g13_main_spatial_libero_spatial_ood_8_pfield_10.14_seed13_pi0.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_spatial_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:8?suite=libero_spatial_ood&paths=none&apaths=none&goal=1&pa=put_the_bowl_on_the_plate&pg=put_the_wine_bottle_on_top_of_the_cabinet SUITE=libero_spatial_ood TASKS=8 TRIALS=20 (job 4129032)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_d",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g13_main_spatial_libero_spatial_ood_8_pfield_10.14_seed13_pi0.json",
+   "port": 9037,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_spatial_ood",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "8",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4129032",
+  "mode": "prims:8?suite=libero_spatial_ood&paths=none&apaths=none&goal=1&pa=put_the_bowl_on_the_plate&pg=put_the_wine_bottle_on_top_of_the_cabinet"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "starrysky.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4129032",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g13_main_spatial",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "35fb022c42834edad63a963ab37b8bd17efcb5cf",
+  "short": "35fb022c"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:8?suite=libero_spatial_ood&paths=none&apaths=none&goal=1&pa=put_the_bowl_on_the_plate&pg=put_the_wine_bottle_on_top_of_the_cabinet",
+  "tasks": "8",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 337.0266926288605,
+  "success_rate": 0.65,
+  "tasks": {
+   "8": {
+    "errors": 0,
+    "language": "put the bowl at table center on the cabinet",
+    "mean_steps": 178.5,
+    "n": 20,
+    "success_rate": 0.65
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g13_main_spatial__libero_spatial_ood__pfield_10.14_seed13_pi0__first_trial-0__mode70387f79db44__tasks-8__trials-20__s7__35fb022c",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-18T05:17:06+00:00",
+ "stream": null,
+ "tag": "pfield_10.14_seed13_pi0"
+}

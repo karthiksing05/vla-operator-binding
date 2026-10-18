@@ -175,6 +175,16 @@ in their setup), and it beats the practice-chosen pairs switched at the grasp (2
 difference is -0.083 with a 95% interval from -0.237 to 0.060). Non-inferiority to TLI fails. TLI still uses Li's hand-chosen
 pairs and a hand-set interpolation length per task; iteration 10 tests TLI with the practice-chosen pairs.
 
+### Iteration 10: TLI with practice-chosen pairs
+Weakness: TLI needs hand-chosen pairs. Change: TLI takes the pairs practice chose in iteration 9 and one interpolation length
+(24) for every task. Result, on new start states (set d): TLI with the chosen pairs falls behind on both policies. On pi0 it
+succeeds 251 of 400 times against 326 for Li's TLI and 287 for the same pairs switched at the grasp (policy alone 38); on
+pi0.5, 178 against 259 and 264 (policy alone 155). Pairs that practice chose for the grasp switch do not carry over to
+interpolation. The two policies differ in which operator wins: on pi0 Li's TLI leads the grasp switch with practice-chosen
+pairs (difference -0.098, 95% interval -0.263 to 0.055), and on pi0.5 the grasp switch is level with it on set d
+(difference 0.013, 95% interval -0.170 to 0.182) and ahead on set c (269 against 240; sign p 0.011). Iteration 11 lets practice
+choose the pairs under TLI.
+
 ### Iteration 6: the likelihood decides the kind of unit
 Weakness: two kinds of unit need a rule to choose between them. Change: the frozen policy's flow-matching loss on a concept's
 frames. It separates the 34 concepts of its own training tasks from the 40 LIBERO-90 concepts it never saw without overlap (AUC

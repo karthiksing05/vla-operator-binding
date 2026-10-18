@@ -65,6 +65,7 @@ def read(backbone, record):
                                    (arms(k, v, backbone) for k, v in pl["tasks"].items())),
                sel_vs_li=C({k: {"x": z["tli_sel"], "y": z["tli_li"]} for k, z in x.items()}),
                sel_vs_psel=C({k: {"x": z["tli_sel"], "y": z["psel"]} for k, z in x.items()}),
+               psel_vs_li=C({k: {"x": z["psel"], "y": z["tli_li"]} for k, z in x.items()}),
                **{f"{a}_vs_zs": C({k: {"x": z[a], "y": z["zs"]} for k, z in x.items()}) for a in ("tli_li", "tli_sel", "psel")},
                by_suite={s: {a: int(sum(sum(z[a].values()) for k, z in x.items() if pl["tasks"][k]["suite"] == s)) for a in
                              ("zs", "tli_li", "tli_sel", "psel")} for s in ("libero_goal_ood", "libero_spatial_ood")},
@@ -82,7 +83,7 @@ def read(backbone, record):
                 xc[k] = z
         res["set_c"] = dict(tasks=len(xc), sel_vs_tli=C({k: {"x": z["sel"], "y": z["tli"]} for k, z in xc.items()}),
                             tli_vs_zs=C({k: {"x": z["tli"], "y": z["zs"]} for k, z in xc.items()}))
-    for n_ in ("sel_vs_li", "sel_vs_psel", "tli_li_vs_zs", "tli_sel_vs_zs", "psel_vs_zs"):
+    for n_ in ("sel_vs_li", "sel_vs_psel", "psel_vs_li", "tli_li_vs_zs", "tli_sel_vs_zs", "psel_vs_zs"):
         h = res[n_]
         print(f"[g13 {short}] {n_:14} {h['x']} vs {h['y']} of {h['n']}, discordant {h['discordant']}, sign p {h['sign_p']:.3g}, "
               f"diff {h['diff']['diff']:+.3f} [{h['diff']['lo']:+.3f}, {h['diff']['hi']:+.3f}]", flush=True)

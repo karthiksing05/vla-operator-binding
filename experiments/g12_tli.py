@@ -56,6 +56,8 @@ def identify(backbone):
             need |= {int(i) for a in json.load(open(f10))["chosen"].values() for i in a.split("@")[1].split(".")}
     import g4_ood as G4                                                 # G14: every candidate source
     need |= set(G4.source_pool())
+    pl = json.load(open(os.path.join(R, "g4_plan.json")))
+    need |= {t for v in pl["tasks"].values() for t in G4.ours_sources(v, pl)}
     for t in sorted(need):
         f = TL.path(backbone, t, ROOT)
         if os.path.exists(f):

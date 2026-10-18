@@ -227,7 +227,9 @@ def arm_spec(tid, arm, fold, demo=0):
         bind = "&bind=1" if "bind" in fl else ""
         return (f"prims:{tid}?suite={SUITE_OF.get('suite', 'libero_90')}&paths={pth(g_)}&apaths={pth(o_)}&goal=1{bind}", "0", False)
     if arm.startswith("tli@"):                                          # plan G12: Li's text latent interpolation, tli@<t1>.<t2>.<lambda>
-        return (f"tli:{arm.split('@', 1)[1]}", "0", False)
+        t1_, t2_, _ = arm.split("@", 1)[1].split(".")
+        lat = lambda t_: os.path.join(R, "tli", f"{SUITE_OF.get('backbone') or 'pi05_libero'}_{t_}.npy")   # noqa: E731
+        return (f"tli:{arm.split('@', 1)[1]}", "0", False) if os.path.exists(lat(t1_)) and os.path.exists(lat(t2_)) else None
     if arm.startswith("pfield@"):                                       # plan G4b: pfield@<a>.<g>[.<object proto>.<goal proto>] -- the
         from lifelong_ood.policy import data as D                        # policy's own field under training task a's instruction before
         parts = arm.split("@", 1)[1].split(".")                          # its grasp and task g's from the grasp to the release ("x" =
@@ -374,6 +376,7 @@ def main():
     ap.add_argument("--dry", action="store_true")
     a = ap.parse_args()
     SUITE_OF["suite"] = a.suite
+    SUITE_OF["backbone"] = a.backbone
     os.chdir(ROOT)
     os.makedirs(os.path.join(R, ".packs"), exist_ok=True)
     running = {os.path.basename(x) for x in a.running.split(",") if x}
