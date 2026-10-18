@@ -185,6 +185,13 @@ pairs (difference -0.098, 95% interval -0.263 to 0.055), and on pi0.5 the grasp 
 (difference 0.013, 95% interval -0.170 to 0.182) and ahead on set c (269 against 240; sign p 0.011). Iteration 11 lets practice
 choose the pairs under TLI.
 
+### Iteration 11: practice chooses the pairs under TLI
+Change: the practice of iteration 9 runs with TLI as the operator. Result, on set d: on pi0 the chosen pairs succeed 307 of
+400 times against 326 for Li's TLI (difference -0.048, 95% interval -0.117 to 0.013) and 251 for TLI with the pairs of
+iteration 10; on pi0.5, 249 against 259 (difference -0.025, 95% interval -0.142 to 0.092) and 178. Practice recovers most of
+the gap to hand-chosen pairs without hand labels, and picks Li's exact pair on 11 of 20 tasks for pi0 and 7 of 20 for pi0.5.
+Non-inferiority to Li's TLI is not established on either policy.
+
 ### Iteration 6: the likelihood decides the kind of unit
 Weakness: two kinds of unit need a rule to choose between them. Change: the frozen policy's flow-matching loss on a concept's
 frames. It separates the 34 concepts of its own training tasks from the 40 LIBERO-90 concepts it never saw without overlap (AUC

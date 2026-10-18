@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g14_s2_spatial_libero_spatial_ood_2_tli_14.30.24_seed13_pi0.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_spatial_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=tli:14.30.24 SUITE=libero_spatial_ood TASKS=2 TRIALS=5 (job 4130358)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_a",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g14_s2_spatial_libero_spatial_ood_2_tli_14.30.24_seed13_pi0.json",
+   "port": 9536,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_spatial_ood",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "2",
+   "trials": 5,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4130358",
+  "mode": "tli:14.30.24"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "samantha.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4130358",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g14_s2_spatial",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "aab7f212cffa5c54848605836da9161246916d30",
+  "short": "aab7f212"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "tli:14.30.24",
+  "tasks": "2",
+  "trials": 5
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 5,
+  "secs": 109.86350607872009,
+  "success_rate": 1.0,
+  "tasks": {
+   "2": {
+    "errors": 0,
+    "language": "put the milk on the plate",
+    "mean_steps": 142.4,
+    "n": 5,
+    "success_rate": 1.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g14_s2_spatial__libero_spatial_ood__tli_14.30.24_seed13_pi0__first_trial-0__mode-tli-14.30.24__tasks-2__trials-5__s7__aab7f212",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-18T06:48:26+00:00",
+ "stream": null,
+ "tag": "tli_14.30.24_seed13_pi0"
+}

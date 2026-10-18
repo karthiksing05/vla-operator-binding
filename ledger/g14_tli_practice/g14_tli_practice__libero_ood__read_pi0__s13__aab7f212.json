@@ -1,0 +1,295 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g14_tli_practice.py --read --record --backbone pi0_libero",
+ "config": {
+  "backbone": "pi0_libero"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g14_tli_practice",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "aab7f212cffa5c54848605836da9161246916d30",
+  "short": "aab7f212"
+ },
+ "keys": {},
+ "metrics": {
+  "backbone": "pi0_libero",
+  "chosen": {
+   "goal:0": "tli@13.17.24",
+   "goal:1": "tli@14.17.24",
+   "goal:2": "tli@13.10.24",
+   "goal:3": "tli@13.14.24",
+   "goal:4": "tli@14.17.24",
+   "goal:5": "tli@14.10.24",
+   "goal:6": "tli@14.33.24",
+   "goal:7": "tli@13.34.24",
+   "goal:8": "tli@13.17.24",
+   "goal:9": "tli@13.18.24",
+   "spatial:0": "tli@13.30.24",
+   "spatial:1": "tli@13.30.24",
+   "spatial:2": "tli@14.30.24",
+   "spatial:3": "tli@14.30.24",
+   "spatial:4": "tli@35.17.24",
+   "spatial:5": "tli@35.18.24",
+   "spatial:6": "tli@36.18.24",
+   "spatial:7": "tli@36.10.24",
+   "spatial:8": "tli@38.14.24",
+   "spatial:9": "tli@38.17.24"
+  },
+  "missing": [],
+  "per_task": {
+   "goal:0": {
+    "psel": 0,
+    "sel": 17,
+    "tli_li": 17,
+    "tli_sel": 0,
+    "zs": 4
+   },
+   "goal:1": {
+    "psel": 15,
+    "sel": 19,
+    "tli_li": 19,
+    "tli_sel": 19,
+    "zs": 0
+   },
+   "goal:2": {
+    "psel": 14,
+    "sel": 16,
+    "tli_li": 16,
+    "tli_sel": 16,
+    "zs": 0
+   },
+   "goal:3": {
+    "psel": 19,
+    "sel": 20,
+    "tli_li": 20,
+    "tli_sel": 20,
+    "zs": 0
+   },
+   "goal:4": {
+    "psel": 18,
+    "sel": 18,
+    "tli_li": 18,
+    "tli_sel": 18,
+    "zs": 6
+   },
+   "goal:5": {
+    "psel": 15,
+    "sel": 15,
+    "tli_li": 15,
+    "tli_sel": 6,
+    "zs": 0
+   },
+   "goal:6": {
+    "psel": 2,
+    "sel": 4,
+    "tli_li": 7,
+    "tli_sel": 1,
+    "zs": 0
+   },
+   "goal:7": {
+    "psel": 20,
+    "sel": 18,
+    "tli_li": 19,
+    "tli_sel": 19,
+    "zs": 4
+   },
+   "goal:8": {
+    "psel": 19,
+    "sel": 18,
+    "tli_li": 18,
+    "tli_sel": 18,
+    "zs": 0
+   },
+   "goal:9": {
+    "psel": 20,
+    "sel": 20,
+    "tli_li": 20,
+    "tli_sel": 19,
+    "zs": 0
+   },
+   "spatial:0": {
+    "psel": 20,
+    "sel": 14,
+    "tli_li": 20,
+    "tli_sel": 14,
+    "zs": 11
+   },
+   "spatial:1": {
+    "psel": 19,
+    "sel": 18,
+    "tli_li": 17,
+    "tli_sel": 18,
+    "zs": 12
+   },
+   "spatial:2": {
+    "psel": 20,
+    "sel": 18,
+    "tli_li": 18,
+    "tli_sel": 15,
+    "zs": 1
+   },
+   "spatial:3": {
+    "psel": 20,
+    "sel": 15,
+    "tli_li": 19,
+    "tli_sel": 15,
+    "zs": 0
+   },
+   "spatial:4": {
+    "psel": 19,
+    "sel": 17,
+    "tli_li": 17,
+    "tli_sel": 17,
+    "zs": 0
+   },
+   "spatial:5": {
+    "psel": 0,
+    "sel": 7,
+    "tli_li": 16,
+    "tli_sel": 1,
+    "zs": 0
+   },
+   "spatial:6": {
+    "psel": 1,
+    "sel": 18,
+    "tli_li": 18,
+    "tli_sel": 0,
+    "zs": 0
+   },
+   "spatial:7": {
+    "psel": 13,
+    "sel": 0,
+    "tli_li": 0,
+    "tli_sel": 0,
+    "zs": 0
+   },
+   "spatial:8": {
+    "psel": 13,
+    "sel": 15,
+    "tli_li": 12,
+    "tli_sel": 15,
+    "zs": 0
+   },
+   "spatial:9": {
+    "psel": 20,
+    "sel": 20,
+    "tli_li": 20,
+    "tli_sel": 20,
+    "zs": 0
+   }
+  },
+  "practice_episodes_per_task": 160,
+  "same_as_li": 11,
+  "sel_vs_psel": {
+   "diff": {
+    "diff": 0.05,
+    "hi": 0.205,
+    "hi90": 0.18,
+    "lo": -0.095,
+    "lo90": -0.0725,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    67,
+    47
+   ],
+   "n": 400,
+   "sign_p": 0.07469253007976608,
+   "tasks": 20,
+   "x": 307,
+   "y": 287
+  },
+  "sel_vs_tli_g10": {
+   "diff": {
+    "diff": 0.14,
+    "hi": 0.275,
+    "hi90": 0.25,
+    "lo": 0.03,
+    "lo90": 0.045,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    65,
+    9
+   ],
+   "n": 400,
+   "sign_p": 1.3509940352772296e-11,
+   "tasks": 20,
+   "x": 307,
+   "y": 251
+  },
+  "sel_vs_tli_li": {
+   "diff": {
+    "diff": -0.0475,
+    "hi": 0.0125,
+    "hi90": 0.0025,
+    "lo": -0.1175,
+    "lo90": -0.105,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    16,
+    35
+   ],
+   "n": 400,
+   "noninferior": false,
+   "sign_p": 0.010973562899720513,
+   "tasks": 20,
+   "x": 307,
+   "y": 326
+  },
+  "sel_vs_zs": {
+   "diff": {
+    "diff": 0.6725,
+    "hi": 0.8025,
+    "hi90": 0.7851249999999982,
+    "lo": 0.53,
+    "lo90": 0.5525,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    274,
+    5
+   ],
+   "n": 400,
+   "sign_p": 2.8496363845397666e-74,
+   "tasks": 20,
+   "x": 307,
+   "y": 38
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g14_tli_practice__libero_ood__read_pi0__s13__aab7f212",
+ "schema": 1,
+ "script": "experiments/g14_tli_practice.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-18T07:11:39+00:00",
+ "stream": null,
+ "tag": "read_pi0"
+}

@@ -1,0 +1,55 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G15 (iteration 12: practice chooses the operator)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "aab7f212cffa5c54848605836da9161246916d30",
+  "short": "aab7f212"
+ },
+ "keys": {},
+ "metrics": {
+  "backbones": [
+   "pi0_libero",
+   "pi05_libero"
+  ],
+  "hypotheses": {
+   "H1": "per policy, the practice-chosen operator is non-inferior to Li's TLI with hand-chosen pairs on set e (task-level bootstrap 95% lower bound above -0.05)",
+   "H2": "per policy, the practice-chosen operator > the policy alone on set e (exact sign test, alpha 0.05)",
+   "descriptive": "against each single operator; operator counts; per suite"
+  },
+  "states": "fresh_ood_e (BASE 800000, 20 per task)",
+  "written_before": "any G15 episode and set e"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__g15_operator__s13__aab7f212",
+ "schema": 1,
+ "script": "experiments/prereg/g15_operator.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-18T07:12:50+00:00",
+ "stream": null,
+ "tag": "g15_operator"
+}
