@@ -123,9 +123,43 @@ class PolicyBackbone:
         att = make_att_2d_masks(prefix_pad_masks, prefix_att_masks)
         pos = torch.cumsum(prefix_pad_masks, dim=1) - 1
         m.paligemma_with_expert.paligemma.language_model.config._attn_implementation = "eager"
-        _, kv = m.paligemma_with_expert.forward(attention_mask=m._prepare_attention_masks_4d(att), position_ids=pos,
-                                                past_key_values=None, inputs_embeds=[prefix_embs, None], use_cache=True)
+        self._span = self.text_span(observation)
+        assert prefix_embs.shape[1] == self._span[0] + lang_tokens.shape[1], "text_span: the language slot is not where expected"
+        try:
+            _, kv = m.paligemma_with_expert.forward(attention_mask=m._prepare_attention_masks_4d(att), position_ids=pos,
+                                                    past_key_values=None, inputs_embeds=[prefix_embs, None], use_cache=True)
+        finally:
+            self._span = None
         return Prefix(state=state, pad_masks=prefix_pad_masks, kv=kv, n=int(state.shape[0]))
+
+    # ── the conditioning encoder's residual stream (TLI, lifelong_ood/policy/tli.py) ─────────────────────────
+    # One interface on every backbone (pi0 / pi0.5 here; SmolVLA and X-VLA override):
+    #   text_span(observation) -> (offset, n_valid): the instruction's first token position in the encoder's sequence and the
+    #       number of instruction tokens per row (LongTensor [B]); right-padded, so the valid tokens are offset .. offset+n_valid-1
+    #   cond_hook(fn) -> handles (each .remove()): fn(layer_index, hidden, span) -> new hidden or None runs before every layer of
+    #       the conditioning encoder (the pass that reads the instruction); span is text_span of the batch inside prefix(), or
+    #       None when the encoder runs outside prefix()
+    _span = None
+
+    def text_span(self, observation):
+        """PaliGemma's prefix = 3 images x 256 SigLIP tokens, then the tokenized prompt (right-padded to max_token_len)."""
+        n = observation.tokenized_prompt_mask.sum(1).long()
+        return 256 * len(observation.images), n
+
+    def cond_layers(self):
+        return self.model.paligemma_with_expert.paligemma.language_model.layers
+
+    def cond_hook(self, fn):
+        """Forward pre-hooks on the encoder's layer modules (the prefix pass is the only pass that runs them alone)."""
+        def pre(i):
+            def f(mod, args, kwargs):
+                h = args[0] if args else kwargs["hidden_states"]
+                out = fn(i, h, self._span)
+                if out is None:
+                    return None
+                return ((out,) + tuple(args[1:]), kwargs) if args else (args, {**kwargs, "hidden_states": out})
+            return f
+        return [ly.register_forward_pre_hook(pre(i), with_kwargs=True) for i, ly in enumerate(self.cond_layers())]
 
     # ── the field ───────────────────────────────────────────────────────────
     def _expand(self, prefix, n):

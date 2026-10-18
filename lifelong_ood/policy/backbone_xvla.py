@@ -201,10 +201,32 @@ class XVLABackbone(PolicyBackbone):
         """The Florence-2 encoding (language + agent view, the other views' tokens) once per observation; the denoiser reads it
         at every (x_t, t).  kv = dict(vlm, aux, domain)."""
         o = observation
-        enc = self.model.forward_vlm(o.input_ids, o.image_input.to(self.dtype), o.image_mask)
+        self._span = span = self.text_span(o)
+        try:
+            enc = self.model.forward_vlm(o.input_ids, o.image_input.to(self.dtype), o.image_mask)
+        finally:
+            self._span = None
+        assert enc["vlm_features"].shape[1] == span[0] + o.input_ids.shape[1], "text_span: the language slot is not where expected"
         n = int(o.state.shape[0])
         kv = dict(vlm=enc["vlm_features"], aux=enc["aux_visual_inputs"], domain=o.domain_id)
         return Prefix(state=o.state, pad_masks=torch.ones((n, 1), dtype=torch.bool, device=o.state.device), kv=kv, n=n)
+
+    # ── the conditioning encoder's residual stream (backbone.PolicyBackbone.text_span / cond_hook) ─────────────
+    # forward_vlm: the Florence-2 (BART-large) encoder reads [agent-view DaViT tokens, BART tokens of the instruction] with an
+    # all-ones attention mask (the pads ARE attended); the other views bypass it.  cond_hook is the base class's (forward
+    # pre-hooks on the encoder's layer modules, which only forward_vlm runs).
+    _img_tok = None
+
+    @torch.no_grad()
+    def text_span(self, observation):
+        if self._img_tok is None:
+            self._img_tok = int(self.model.vlm._encode_image(observation.image_input[:1, 0].to(self.dtype)).shape[1])
+        pad = getattr(self.model.vlm.config, "pad_token_id", None)
+        pad = 1 if pad is None else int(pad)                       # BART's <pad>
+        return self._img_tok, (observation.input_ids != pad).sum(1).long()
+
+    def cond_layers(self):
+        return self.model.vlm.language_model.model.encoder.layers
 
     def _expand(self, prefix, n):
         if prefix.n == n:

@@ -108,9 +108,56 @@ class SmolVLABackbone(PolicyBackbone):
         embs, pad, att = m.embed_prefix(o.images, o.img_masks, o.lang_tokens, o.lang_masks, state=o.state)
         att2d = make_att_2d_masks(pad, att)
         pos = torch.cumsum(pad, dim=1) - 1
-        _, kv = m.vlm_with_expert.forward(attention_mask=att2d, position_ids=pos, past_key_values=None, inputs_embeds=[embs, None],
-                                          use_cache=self.cfg.use_cache, fill_kv_cache=True)
+        self._span = self.text_span(o)
+        assert embs.shape[1] == self._span[0] + o.lang_tokens.shape[1] + 1, "text_span: the language slot is not where expected"
+        try:
+            _, kv = m.vlm_with_expert.forward(attention_mask=att2d, position_ids=pos, past_key_values=None, inputs_embeds=[embs, None],
+                                              use_cache=self.cfg.use_cache, fill_kv_cache=True)
+        finally:
+            self._span = None
         return Prefix(state=o.state, pad_masks=pad, kv=kv, n=int(o.state.shape[0]))
+
+    # ── the conditioning encoder's residual stream (backbone.PolicyBackbone.text_span / cond_hook) ─────────────
+    _img_tok = None
+
+    @torch.no_grad()
+    def text_span(self, observation):
+        """embed_prefix's sequence = per image ([start token] + SigLIP tokens after pixel shuffle + [end token]), the language tokens
+        (right-padded to tokenizer_max_length), one state token."""
+        m = self.model
+        if self._img_tok is None:
+            self._img_tok = int(m.vlm_with_expert.embed_image(observation.images[0][:1]).shape[1])
+        sp = (m.global_image_start_token.numel() + m.image_end_token.numel()) if m.add_image_special_tokens else 0
+        return len(observation.images) * (self._img_tok + sp), observation.lang_masks.sum(1).long()
+
+    def cond_layers(self):
+        return list(self.model.vlm_with_expert.get_vlm_model().text_model.layers)
+
+    def cond_hook(self, fn):
+        """SmolVLMWithExpertModel.forward computes each layer inline (it reads the layer's weights, never calls the module), so the
+        hook wraps forward_attn_layer, which every layer of the prefix pass (fill_kv_cache, the VLM stream present) runs first; the
+        new hidden replaces the stream's list entry, which the same layer's residual adds read too."""
+        vwe = self.model.vlm_with_expert
+        if "forward_attn_layer" not in vars(vwe):
+            fns = self._cond_fns = []
+            orig = vwe.forward_attn_layer
+
+            def wrapped(model_layers, inputs_embeds, layer_idx, *a, **k):
+                if fns and inputs_embeds[0] is not None and k.get("fill_kv_cache", True):
+                    for f in list(fns):
+                        out = f(int(layer_idx), inputs_embeds[0], self._span)
+                        if out is not None:
+                            inputs_embeds[0] = out
+                return orig(model_layers, inputs_embeds, layer_idx, *a, **k)
+            vwe.forward_attn_layer = wrapped
+        fns = self._cond_fns
+        fns.append(fn)
+
+        class _Handle:
+            def remove(self_):
+                if fn in fns:
+                    fns.remove(fn)
+        return [_Handle()]
 
     def _expand(self, prefix, n):
         if prefix.n == n:

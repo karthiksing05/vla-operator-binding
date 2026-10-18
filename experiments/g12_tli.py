@@ -4,7 +4,9 @@ identified on openpi's PyTorch pi0 by Li's procedure (lifelong_ood/policy/tli.py
 task_hidden_states_mapping (examples/libero/main.py at 587a6cb, below).  Tested on start states set c (20 per task, noise seed
 13), paired with G4d's policy alone and pi0^S, and with G10's practice-chosen pair.
 
-    $PY experiments/g12_tli.py --identify [--backbone pi0_libero]     # GPU job: the 9 base tasks' latents -> results/robot/tli/
+    $PY experiments/g12_tli.py --identify [--backbone pi0_libero|pi05_libero|smolvla|xvla] [--tasks 13,14] [--out DIR]
+        # GPU job (openpi venv for pi0 / pi0.5, the SmolVLA venv for smolvla / xvla): the needed tasks' latents -> results/robot/tli/
+        sbatch --export=ALL,ENV=smolvla,SCRIPT="experiments/g12_tli.py --identify --backbone xvla" slurm/jobs/robot_gpu.sbatch
     $PY experiments/g12_tli.py --launch | --read [--record]
 """
 import json
@@ -41,14 +43,44 @@ def arm(v):
     return f"tli@{KEY[a]}.{KEY[b]}.{lam}"
 
 
-def identify(backbone):
+def make_backbone(backbone):
+    """pi0_libero / pi05_libero (openpi venv), smolvla / xvla (the SmolVLA venv), as serve_guided builds them."""
+    if backbone.startswith("smolvla"):
+        from lifelong_ood.policy.backbone_smolvla import SmolVLABackbone
+        return SmolVLABackbone(device="cuda")
+    if backbone.startswith("xvla"):
+        from lifelong_ood.policy.backbone_xvla import XVLABackbone
+        return XVLABackbone(device="cuda")
+    from lifelong_ood.policy.backbone import PolicyBackbone
+    return PolicyBackbone(backbone, device="cuda")
+
+
+def identify(backbone, tasks=None, out=None):
+    """The latents of every needed task (or `tasks`) -> results/robot/tli/<backbone>_<task>.npy (or <out>/<backbone>_<task>.npy)."""
     import numpy as np
     from lifelong_ood.policy import data as D
     from lifelong_ood.policy import tli as TL
-    from lifelong_ood.policy.backbone import PolicyBackbone
-    bk = PolicyBackbone(backbone, device="cuda")
+    bk = make_backbone(backbone)
+    print(f"[g12] {bk.describe()}, {len(bk.cond_layers())} conditioning layers", flush=True)
     d = D.Demos()
     os.makedirs(os.path.join(R, "tli"), exist_ok=True)
+    if tasks is not None:
+        need = set(tasks)
+    else:
+        need = needed()
+    for t in sorted(need):
+        f = TL.path(backbone, t, ROOT) if out is None else os.path.join(out, f"{backbone}_{t}.npy")
+        if os.path.exists(f):
+            continue
+        os.makedirs(os.path.dirname(f), exist_ok=True)
+        lat, n = TL.identify(bk, d, t)
+        np.save(f, lat)
+        print(f"[g12] task {t} '{d.tasks[t]}': {n} frames, latent {lat.shape}, norms by layer "
+              f"{[round(float(x), 1) for x in np.linalg.norm(lat, axis=-1).mean(-1)[::4]]}", flush=True)
+
+
+def needed():
+    """The union: Li's base tasks (KEY), G10's practice-chosen sources (G13), every candidate source and our plan's sources (G14)."""
     need = set(KEY.values())                                            # and G10's practice-chosen sources (G13)
     for b in ("pi0", "pi05"):
         f10 = os.path.join(R, f"g10_read_{b}.json")
@@ -58,14 +90,7 @@ def identify(backbone):
     need |= set(G4.source_pool())
     pl = json.load(open(os.path.join(R, "g4_plan.json")))
     need |= {t for v in pl["tasks"].values() for t in G4.ours_sources(v, pl)}
-    for t in sorted(need):
-        f = TL.path(backbone, t, ROOT)
-        if os.path.exists(f):
-            continue
-        lat, n = TL.identify(bk, d, t)
-        np.save(f, lat)
-        print(f"[g12] task {t} '{d.tasks[t]}': {n} frames, latent {lat.shape}, norms by layer "
-              f"{[round(float(x), 1) for x in np.linalg.norm(lat, axis=-1).mean(-1)[::4]]}", flush=True)
+    return need
 
 
 def launch(backbone):
@@ -122,7 +147,8 @@ def read(backbone, record):
 if __name__ == "__main__":
     bb = sys.argv[sys.argv.index("--backbone") + 1] if "--backbone" in sys.argv else "pi0_libero"
     if "--identify" in sys.argv:
-        identify(bb)
+        tk = [int(x) for x in sys.argv[sys.argv.index("--tasks") + 1].split(",")] if "--tasks" in sys.argv else None
+        identify(bb, tk, sys.argv[sys.argv.index("--out") + 1] if "--out" in sys.argv else None)
     if "--launch" in sys.argv:
         launch(bb)
     if "--read" in sys.argv:
