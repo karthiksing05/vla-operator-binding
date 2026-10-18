@@ -121,6 +121,8 @@ given the same acceptance test.
 ## 5 Iterations of the system
 
 Each iteration names the weakness the previous version showed, the one change, and the pre-registered result.
+Figure (figures/robot/iterations.png) summarises the ladder: on LIBERO-90 the system against the per-task adapter at
+iterations 1-3 and 8, and on Li's suites the policy alone, word-matched, hand-chosen and practice-chosen sources.
 
 ### Iteration 1: goal units after the grasp
 Weakness: the frozen policy fails most new tasks. Change: one goal prototype per goal concept, acting from the grasp. Result:

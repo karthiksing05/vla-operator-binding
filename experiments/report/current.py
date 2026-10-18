@@ -150,7 +150,20 @@ def overview():
                 f"two orders and damages no earlier arrival.")
     if e5:
         out += f" A pre-registered replication on new tasks: {_v_e5(e5)}."
-    return out + ("</p>" if e3 else "")
+    out += ("</p>" if e3 else "")
+    g8, g10 = row("g8_leaves", "read"), row("g4_ood", "read_g10_pi05")
+    if g8 and g10:
+        out += (f"<p>The system is built in iterations, each answering a weakness the previous version showed. With task leaves at the "
+                f"bottom of the hierarchy it beats the per-task adapter ({g8['H1']['x']} against {g8['H1']['y']} of {g8['H1']['n']}); "
+                f"on a published compositional OOD benchmark with no demonstrations, composing the policy's own concepts with "
+                f"practice-chosen sources reaches {g10['sel_vs_li_grasp']['x']} of {g10['sel_vs_li_grasp']['n']} against "
+                f"{g10['sel_vs_li_grasp']['y']} for a prior method's hand-chosen sources.</p>")
+        out += fig('<img src="media/iterations.png" alt="success per iteration against the per-task adapter on LIBERO-90, and on Li\'s OOD suites" style="width:100%">',
+                   "<b>The iterations.</b> Left: LIBERO-90, the system kept by practice against the per-task LoRA with the same "
+                   "acceptance test, at iterations 1-3 (30 tasks) and 8 (66 tasks, new start states). Right: Li's compositional OOD "
+                   "suites on pi0.5, all on the same start states: the policy alone, its own fields with word-matched, hand-chosen "
+                   "(Li) and practice-chosen sources.", wide=True)
+    return out
 
 
 def method():
