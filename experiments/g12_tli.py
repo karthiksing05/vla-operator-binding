@@ -54,6 +54,8 @@ def identify(backbone):
         f10 = os.path.join(R, f"g10_read_{b}.json")
         if os.path.exists(f10):
             need |= {int(i) for a in json.load(open(f10))["chosen"].values() for i in a.split("@")[1].split(".")}
+    import g4_ood as G4                                                 # G14: every candidate source
+    need |= set(G4.source_pool())
     for t in sorted(need):
         f = TL.path(backbone, t, ROOT)
         if os.path.exists(f):

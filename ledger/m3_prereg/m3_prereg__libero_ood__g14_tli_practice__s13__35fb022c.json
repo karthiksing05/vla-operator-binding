@@ -1,0 +1,54 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G14 (iteration 11: practice under TLI)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "35fb022c42834edad63a963ab37b8bd17efcb5cf",
+  "short": "35fb022c"
+ },
+ "keys": {},
+ "metrics": {
+  "backbones": [
+   "pi0_libero",
+   "pi05_libero"
+  ],
+  "hypotheses": {
+   "H1": "per policy, TLI with the pair practice chose under TLI is non-inferior to TLI with Li's hand-chosen pairs and lambda on set d (task-level bootstrap 95% lower bound above -0.05)",
+   "H2": "per policy, it beats TLI with G10's pair (G13 tli_sel) on set d (exact sign test, alpha 0.05)",
+   "descriptive": "against the grasp switch with G10's pair and the policy alone; how often practice picks Li's pair; practice cost"
+  },
+  "written_before": "any G14 episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__g14_tli_practice__s13__35fb022c",
+ "schema": 1,
+ "script": "experiments/prereg/g14_tli_practice.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-18T05:24:05+00:00",
+ "stream": null,
+ "tag": "g14_tli_practice"
+}

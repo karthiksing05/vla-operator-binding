@@ -1,0 +1,409 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g13_tli_sources.py --read --record --backbone pi0_libero",
+ "config": {
+  "backbone": "pi0_libero"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g13_tli_sources",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "35fb022c42834edad63a963ab37b8bd17efcb5cf",
+  "short": "35fb022c"
+ },
+ "keys": {},
+ "metrics": {
+  "arms": {
+   "goal:0": {
+    "psel": "pfield@11.10",
+    "tli_li": "tli@13.17.24",
+    "tli_sel": "tli@11.10.24",
+    "zs": "zs"
+   },
+   "goal:1": {
+    "psel": "pfield@14.17",
+    "tli_li": "tli@14.17.24",
+    "tli_sel": "tli@14.17.24",
+    "zs": "zs"
+   },
+   "goal:2": {
+    "psel": "pfield@13.10",
+    "tli_li": "tli@13.10.24",
+    "tli_sel": "tli@13.10.24",
+    "zs": "zs"
+   },
+   "goal:3": {
+    "psel": "pfield@13.18",
+    "tli_li": "tli@13.18.24",
+    "tli_sel": "tli@13.18.24",
+    "zs": "zs"
+   },
+   "goal:4": {
+    "psel": "pfield@14.17",
+    "tli_li": "tli@14.17.24",
+    "tli_sel": "tli@14.17.24",
+    "zs": "zs"
+   },
+   "goal:5": {
+    "psel": "pfield@14.32",
+    "tli_li": "tli@14.10.24",
+    "tli_sel": "tli@14.32.24",
+    "zs": "zs"
+   },
+   "goal:6": {
+    "psel": "pfield@14.13",
+    "tli_li": "tli@14.13.12",
+    "tli_sel": "tli@14.13.24",
+    "zs": "zs"
+   },
+   "goal:7": {
+    "psel": "pfield@13.10",
+    "tli_li": "tli@13.10.24",
+    "tli_sel": "tli@13.10.24",
+    "zs": "zs"
+   },
+   "goal:8": {
+    "psel": "pfield@13.17",
+    "tli_li": "tli@13.17.24",
+    "tli_sel": "tli@13.17.24",
+    "zs": "zs"
+   },
+   "goal:9": {
+    "psel": "pfield@13.14",
+    "tli_li": "tli@13.18.24",
+    "tli_sel": "tli@13.14.24",
+    "zs": "zs"
+   },
+   "spatial:0": {
+    "psel": "pfield@13.30",
+    "tli_li": "tli@13.35.24",
+    "tli_sel": "tli@13.30.24",
+    "zs": "zs"
+   },
+   "spatial:1": {
+    "psel": "pfield@13.30",
+    "tli_li": "tli@13.35.24",
+    "tli_sel": "tli@13.30.24",
+    "zs": "zs"
+   },
+   "spatial:2": {
+    "psel": "pfield@14.10",
+    "tli_li": "tli@14.32.24",
+    "tli_sel": "tli@14.10.24",
+    "zs": "zs"
+   },
+   "spatial:3": {
+    "psel": "pfield@14.30",
+    "tli_li": "tli@14.32.24",
+    "tli_sel": "tli@14.30.24",
+    "zs": "zs"
+   },
+   "spatial:4": {
+    "psel": "pfield@35.17",
+    "tli_li": "tli@35.17.24",
+    "tli_sel": "tli@35.17.24",
+    "zs": "zs"
+   },
+   "spatial:5": {
+    "psel": "pfield@35.14",
+    "tli_li": "tli@35.18.14",
+    "tli_sel": "tli@35.14.24",
+    "zs": "zs"
+   },
+   "spatial:6": {
+    "psel": "pfield@36.14",
+    "tli_li": "tli@36.18.24",
+    "tli_sel": "tli@36.14.24",
+    "zs": "zs"
+   },
+   "spatial:7": {
+    "psel": "pfield@36.17",
+    "tli_li": "tli@36.17.30",
+    "tli_sel": "tli@36.17.24",
+    "zs": "zs"
+   },
+   "spatial:8": {
+    "psel": "pfield@10.14",
+    "tli_li": "tli@38.18.24",
+    "tli_sel": "tli@10.14.24",
+    "zs": "zs"
+   },
+   "spatial:9": {
+    "psel": "pfield@38.17",
+    "tli_li": "tli@38.17.24",
+    "tli_sel": "tli@38.17.24",
+    "zs": "zs"
+   }
+  },
+  "backbone": "pi0_libero",
+  "by_suite": {
+   "libero_goal_ood": {
+    "psel": 142,
+    "tli_li": 169,
+    "tli_sel": 136,
+    "zs": 14
+   },
+   "libero_spatial_ood": {
+    "psel": 145,
+    "tli_li": 157,
+    "tli_sel": 115,
+    "zs": 24
+   }
+  },
+  "missing": [],
+  "per_task": {
+   "goal:0": {
+    "psel": 0,
+    "tli_li": 17,
+    "tli_sel": 0,
+    "zs": 4
+   },
+   "goal:1": {
+    "psel": 15,
+    "tli_li": 19,
+    "tli_sel": 19,
+    "zs": 0
+   },
+   "goal:2": {
+    "psel": 14,
+    "tli_li": 16,
+    "tli_sel": 16,
+    "zs": 0
+   },
+   "goal:3": {
+    "psel": 19,
+    "tli_li": 20,
+    "tli_sel": 20,
+    "zs": 0
+   },
+   "goal:4": {
+    "psel": 18,
+    "tli_li": 18,
+    "tli_sel": 18,
+    "zs": 6
+   },
+   "goal:5": {
+    "psel": 15,
+    "tli_li": 15,
+    "tli_sel": 6,
+    "zs": 0
+   },
+   "goal:6": {
+    "psel": 2,
+    "tli_li": 7,
+    "tli_sel": 1,
+    "zs": 0
+   },
+   "goal:7": {
+    "psel": 20,
+    "tli_li": 19,
+    "tli_sel": 19,
+    "zs": 4
+   },
+   "goal:8": {
+    "psel": 19,
+    "tli_li": 18,
+    "tli_sel": 18,
+    "zs": 0
+   },
+   "goal:9": {
+    "psel": 20,
+    "tli_li": 20,
+    "tli_sel": 19,
+    "zs": 0
+   },
+   "spatial:0": {
+    "psel": 20,
+    "tli_li": 20,
+    "tli_sel": 14,
+    "zs": 11
+   },
+   "spatial:1": {
+    "psel": 19,
+    "tli_li": 17,
+    "tli_sel": 18,
+    "zs": 12
+   },
+   "spatial:2": {
+    "psel": 20,
+    "tli_li": 18,
+    "tli_sel": 15,
+    "zs": 1
+   },
+   "spatial:3": {
+    "psel": 20,
+    "tli_li": 19,
+    "tli_sel": 15,
+    "zs": 0
+   },
+   "spatial:4": {
+    "psel": 19,
+    "tli_li": 17,
+    "tli_sel": 17,
+    "zs": 0
+   },
+   "spatial:5": {
+    "psel": 0,
+    "tli_li": 16,
+    "tli_sel": 1,
+    "zs": 0
+   },
+   "spatial:6": {
+    "psel": 1,
+    "tli_li": 18,
+    "tli_sel": 0,
+    "zs": 0
+   },
+   "spatial:7": {
+    "psel": 13,
+    "tli_li": 0,
+    "tli_sel": 0,
+    "zs": 0
+   },
+   "spatial:8": {
+    "psel": 13,
+    "tli_li": 12,
+    "tli_sel": 15,
+    "zs": 0
+   },
+   "spatial:9": {
+    "psel": 20,
+    "tli_li": 20,
+    "tli_sel": 20,
+    "zs": 0
+   }
+  },
+  "psel_vs_zs": {
+   "diff": {
+    "diff": 0.6225,
+    "hi": 0.7825,
+    "hi90": 0.7575,
+    "lo": 0.455,
+    "lo90": 0.48,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    253,
+    4
+   ],
+   "n": 400,
+   "sign_p": 1.5578393583546065e-69,
+   "tasks": 20,
+   "x": 287,
+   "y": 38
+  },
+  "same_pair_as_li": 10,
+  "sel_vs_li": {
+   "diff": {
+    "diff": -0.1875,
+    "hi": -0.06,
+    "hi90": -0.0775,
+    "lo": -0.335,
+    "lo90": -0.31,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    13,
+    88
+   ],
+   "n": 400,
+   "noninferior": false,
+   "sign_p": 7.52058652903178e-15,
+   "tasks": 20,
+   "x": 251,
+   "y": 326
+  },
+  "sel_vs_psel": {
+   "diff": {
+    "diff": -0.09,
+    "hi": -0.0025,
+    "hi90": -0.015,
+    "lo": -0.18756249999999994,
+    "lo90": -0.1725,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    22,
+    58
+   ],
+   "n": 400,
+   "sign_p": 7.010573979919961e-05,
+   "tasks": 20,
+   "x": 251,
+   "y": 287
+  },
+  "tasks": 20,
+  "tli_li_vs_zs": {
+   "diff": {
+    "diff": 0.72,
+    "hi": 0.8375,
+    "hi90": 0.82,
+    "lo": 0.5875,
+    "lo90": 0.6125,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    294,
+    6
+   ],
+   "n": 400,
+   "sign_p": 9.648734603640909e-79,
+   "tasks": 20,
+   "x": 326,
+   "y": 38
+  },
+  "tli_sel_vs_zs": {
+   "diff": {
+    "diff": 0.5325,
+    "hi": 0.705,
+    "hi90": 0.6775,
+    "lo": 0.355,
+    "lo90": 0.385,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    221,
+    8
+   ],
+   "n": 400,
+   "sign_p": 3.9856138362329316e-55,
+   "tasks": 20,
+   "x": 251,
+   "y": 38
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g13_tli_sources__libero_ood__read_pi0__s13__35fb022c",
+ "schema": 1,
+ "script": "experiments/g13_tli_sources.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-18T05:23:44+00:00",
+ "stream": null,
+ "tag": "read_pi0"
+}
