@@ -115,6 +115,10 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"{m['sel_vs_tli_li']['x']} vs Li's TLI {m['sel_vs_tli_li']['y']} ({_ci(m['sel_vs_tli_li']['diff'])}); NI not established"),
     ("G14 practice chooses pairs under TLI (pi05)", "g14_tli_practice", "read_pi05", True, "c-limits",
      lambda m: f"{m['sel_vs_tli_li']['x']} vs Li's TLI {m['sel_vs_tli_li']['y']} ({_ci(m['sel_vs_tli_li']['diff'])}); NI not established"),
+    ("G15 practice chooses the operator (pi0)", "g15_operator", "read_pi0", True, "c-limits",
+     lambda m: f"{m['chosen_vs_tli_li']['x']} vs Li's TLI {m['chosen_vs_tli_li']['y']} ({_ci(m['chosen_vs_tli_li']['diff'])}): " + ("better" if m['chosen_vs_tli_li']['diff']['lo'] > 0 else "non-inferior")),
+    ("G15 practice chooses the operator (pi05)", "g15_operator", "read_pi05", True, "c-limits",
+     lambda m: f"{m['chosen_vs_tli_li']['x']} vs Li's TLI {m['chosen_vs_tli_li']['y']} ({_ci(m['chosen_vs_tli_li']['diff'])}): " + ("better" if m['chosen_vs_tli_li']['diff']['lo'] > 0 else "non-inferior")),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -161,18 +165,18 @@ def overview():
     if e5:
         out += f" A pre-registered replication on new tasks: {_v_e5(e5)}."
     out += ("</p>" if e3 else "")
-    g8, g10 = row("g8_leaves", "read"), row("g4_ood", "read_g10_pi05")
-    if g8 and g10:
+    g8, g15a, g15b = row("g8_leaves", "read"), row("g15_operator", "read_pi0"), row("g15_operator", "read_pi05")
+    if g8 and g15a and g15b:
         out += (f"<p>The system is built in iterations, each answering a weakness the previous version showed. With task leaves at the "
                 f"bottom of the hierarchy it beats the per-task adapter ({g8['H1']['x']} against {g8['H1']['y']} of {g8['H1']['n']}); "
-                f"on a published compositional OOD benchmark with no demonstrations, composing the policy's own concepts with "
-                f"practice-chosen sources reaches {g10['sel_vs_li_grasp']['x']} of {g10['sel_vs_li_grasp']['n']} against "
-                f"{g10['sel_vs_li_grasp']['y']} for a prior method's hand-chosen sources.</p>")
+                f"on a published compositional OOD benchmark with no demonstrations, practice choosing each held concept's sources and "
+                f"operator reaches {g15a['chosen_vs_tli_li']['x']} and {g15b['chosen_vs_tli_li']['x']} of 400 on pi0 and pi0.5 against "
+                f"{g15a['chosen_vs_tli_li']['y']} and {g15b['chosen_vs_tli_li']['y']} for the prior method with hand-chosen pairs.</p>")
         out += fig('<img src="media/iterations.png" alt="success per iteration against the per-task adapter on LIBERO-90, and on Li\'s OOD suites" style="width:100%">',
                    "<b>The iterations.</b> Left: LIBERO-90, the system kept by practice against the per-task LoRA with the same "
                    "acceptance test, at iterations 1-3 (30 tasks) and 8 (66 tasks, new start states). Right: Li's compositional OOD "
-                   "suites on pi0.5, all on the same start states: the policy alone, its own fields with word-matched, hand-chosen "
-                   "(Li) and practice-chosen sources.", wide=True)
+                   "suites on new start states (set e), pi0 and pi0.5: the policy alone, Li's TLI with hand-chosen pairs, the grasp "
+                   "switch and TLI with practice-chosen pairs (iterations 9 and 11), and practice choosing the operator (iteration 12).", wide=True)
     return out
 
 
@@ -594,6 +598,15 @@ def limits_of_method():
                 f"for Li's hand-chosen pairs ({_ci(g14a['sel_vs_tli_li']['diff'])}) and pi0.5 {g14b['sel_vs_tli_li']['x']} "
                 f"against {g14b['sel_vs_tli_li']['y']} ({_ci(g14b['sel_vs_tli_li']['diff'])}): most of the gap closes without "
                 f"hand labels; non-inferiority is not established.</p>")
+    g15a, g15b = row("g15_operator", "read_pi0"), row("g15_operator", "read_pi05")
+    if g15a and g15b:
+        out += (f"<p><b>Practice chooses the operator: no hand labels, and level with or ahead of the prior method.</b> Per task, "
+                f"10 practice episodes choose between the grasp switch and TLI, each with its practice-chosen pair (m3_prereg tag "
+                f"g15_operator). On new start states (set e) pi0 succeeds {g15a['chosen_vs_tli_li']['x']} of 400 times against "
+                f"{g15a['chosen_vs_tli_li']['y']} for Li's TLI with hand-chosen pairs ({_ci(g15a['chosen_vs_tli_li']['diff'])}; "
+                f"non-inferior) and pi0.5 {g15b['chosen_vs_tli_li']['x']} against {g15b['chosen_vs_tli_li']['y']} "
+                f"({_ci(g15b['chosen_vs_tli_li']['diff'])}; better). The policies alone reach {g15a['chosen_vs_zs']['y']} and "
+                f"{g15b['chosen_vs_zs']['y']}.</p>")
     i6 = row("i6_novelty", "read")
     if i6:
         out += (f"<p><b>Which kind of unit a concept gets.</b> The frozen policy's own flow-matching loss on a concept's frames "

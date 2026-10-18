@@ -19,8 +19,10 @@ them, it beats the per-task adapter: 994 against 932 of 1,320 on new start state
 0.091), with 675.9 MB against 902.8 MB. Learned as a stream that requests a demonstration only when practice fails, it needs 17
 and 16 demonstrations over 30 arrivals and damages no earlier task. On a published compositional OOD benchmark with no
 demonstration of any test task, composing the policy's own fields lifts 147 to 174 of 400 on pi0.5, 35 to 98 on pi0 and 8 to 25
-on SmolVLA; when practice chooses each held concept's source instruction, pi0.5 reaches 269 and passes the 222 of a prior method's
-hand-chosen pairs. The policy's own likelihood tells held from new concepts without overlap (AUC 1.0), a detector of the kind Wang
+on SmolVLA. When practice also chooses each held concept's source instructions and, per task, the operator (switching at the
+grasp or a prior method's text-latent interpolation), the system uses no hand label and on new start states reaches 336 of 400
+on pi0 and 312 on pi0.5, against 316 and 245 for that prior method with its hand-chosen pairs (non-inferior on pi0, better on
+pi0.5). The policy's own likelihood tells held from new concepts without overlap (AUC 1.0), a detector of the kind Wang
 et al. leave to future work. The system beats retrieval (STRAP, 480 against 296 of 580) and noise-space reinforcement learning on the
 frozen policy (DSRL, 499 against 314 of 600).
 
@@ -191,6 +193,15 @@ Change: the practice of iteration 9 runs with TLI as the operator. Result, on se
 iteration 10; on pi0.5, 249 against 259 (difference -0.025, 95% interval -0.142 to 0.092) and 178. Practice recovers most of
 the gap to hand-chosen pairs without hand labels, and picks Li's exact pair on 11 of 20 tasks for pi0 and 7 of 20 for pi0.5.
 Non-inferiority to Li's TLI is not established on either policy.
+
+### Iteration 12: practice chooses the operator
+Weakness: the better operator depends on the policy and the task. Change: per task, 10 practice episodes choose between the
+grasp switch and TLI, each with its practice-chosen pair; ties go to the switch. Result, on new start states (set e): on pi0
+the system succeeds 336 of 400 times against 316 for Li's TLI with hand-chosen pairs (discordant pairs 41 to 21; task-level
+difference 0.050, 95% interval -0.028 to 0.142), which establishes non-inferiority; on pi0.5, 312 against 245 (difference
+0.168, 95% interval 0.058 to 0.290), which is better. The policies alone reach 35 and 143. Practice picks TLI on 8 tasks for
+pi0 and 5 for pi0.5. No step uses a hand label: the concepts come from the instruction, the sources and the operator from
+practice.
 
 ### Iteration 6: the likelihood decides the kind of unit
 Weakness: two kinds of unit need a rule to choose between them. Change: the frozen policy's flow-matching loss on a concept's
