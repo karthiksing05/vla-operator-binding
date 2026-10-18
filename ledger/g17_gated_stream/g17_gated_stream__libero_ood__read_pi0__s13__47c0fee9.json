@@ -1,0 +1,189 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g16_stream_ood.py --read --record --tag g17 --fresh fresh_ood_f",
+ "config": {
+  "backbone": "pi0_libero"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g17_gated_stream",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "47c0fee913ed0954fa04563a7b6a5ba262b55a0a",
+  "short": "47c0fee9"
+ },
+ "keys": {},
+ "metrics": {
+  "backbone": "pi0_libero",
+  "plan": {
+   "missing": [],
+   "practice": 4250,
+   "practice_g15": 6800,
+   "repractised": 3,
+   "reused": 40,
+   "same_as_g15": 15,
+   "stream_vs_g15": {
+    "diff": {
+     "diff": -0.0025,
+     "hi": 0.0175,
+     "hi90": 0.0125,
+     "lo": -0.0225,
+     "lo90": -0.02,
+     "n_pairs": 400,
+     "n_tasks": 20
+    },
+    "discordant": [
+     3,
+     4
+    ],
+    "n": 400,
+    "noninferior": true,
+    "sign_p": 1.0,
+    "tasks": 20,
+    "x": 333,
+    "y": 334
+   },
+   "stream_vs_tli_li": {
+    "diff": {
+     "diff": 0.0175,
+     "hi": 0.14,
+     "hi90": 0.12,
+     "lo": -0.1025,
+     "lo90": -0.0825,
+     "n_pairs": 400,
+     "n_tasks": 20
+    },
+    "discordant": [
+     41,
+     34
+    ],
+    "n": 400,
+    "sign_p": 0.48868297090314333,
+    "tasks": 20,
+    "x": 333,
+    "y": 326
+   },
+   "stream_vs_zs": {
+    "diff": {
+     "diff": 0.73,
+     "hi": 0.84,
+     "hi90": 0.825,
+     "lo": 0.605,
+     "lo90": 0.6275,
+     "n_pairs": 400,
+     "n_tasks": 20
+    },
+    "discordant": [
+     293,
+     1
+    ],
+    "n": 400,
+    "sign_p": 1.8536736924964215e-86,
+    "tasks": 20,
+    "x": 333,
+    "y": 41
+   },
+   "tasks": 20,
+   "tli_served": 11
+  },
+  "reversed": {
+   "missing": [],
+   "practice": 5130,
+   "practice_g15": 6800,
+   "repractised": 7,
+   "reused": 40,
+   "same_as_g15": 17,
+   "stream_vs_g15": {
+    "diff": {
+     "diff": -0.005,
+     "hi": 0.0125,
+     "hi90": 0.01,
+     "lo": -0.025,
+     "lo90": -0.02,
+     "n_pairs": 400,
+     "n_tasks": 20
+    },
+    "discordant": [
+     3,
+     5
+    ],
+    "n": 400,
+    "noninferior": true,
+    "sign_p": 0.7265625,
+    "tasks": 20,
+    "x": 332,
+    "y": 334
+   },
+   "stream_vs_tli_li": {
+    "diff": {
+     "diff": 0.015,
+     "hi": 0.1375,
+     "hi90": 0.115,
+     "lo": -0.10506249999999993,
+     "lo90": -0.085,
+     "n_pairs": 400,
+     "n_tasks": 20
+    },
+    "discordant": [
+     39,
+     33
+    ],
+    "n": 400,
+    "sign_p": 0.5559977177609708,
+    "tasks": 20,
+    "x": 332,
+    "y": 326
+   },
+   "stream_vs_zs": {
+    "diff": {
+     "diff": 0.7275,
+     "hi": 0.8375,
+     "hi90": 0.8225,
+     "lo": 0.6025,
+     "lo90": 0.625,
+     "n_pairs": 400,
+     "n_tasks": 20
+    },
+    "discordant": [
+     292,
+     1
+    ],
+    "n": 400,
+    "sign_p": 3.694780105721681e-86,
+    "tasks": 20,
+    "x": 332,
+    "y": 41
+   },
+   "tasks": 20,
+   "tli_served": 8
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g17_gated_stream__libero_ood__read_pi0__s13__47c0fee9",
+ "schema": 1,
+ "script": "experiments/g16_stream_ood.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-18T15:08:13+00:00",
+ "stream": null,
+ "tag": "read_pi0"
+}

@@ -213,6 +213,14 @@ orders; non-inferiority holds only for pi0 in the first order (difference -0.015
 chosen for a concept in one task's context does not always serve the same concept with another partner, and the loss
 depends on which task came first.
 
+### Iteration 14: practice gates reuse
+Change: the practice gate the system uses everywhere: an arrival whose reused pairs reach fewer than 8 of 10 practice
+episodes re-practises its reused concepts. Result, on new start states (set f): against per-task practice (334 on pi0, 308
+on pi0.5) the gated streams reach 333 and 332 on pi0 and 292 and 309 on pi0.5, with 4,250 to 5,460 practice episodes in
+place of 6,800. Non-inferiority holds in three of four streams and fails for pi0.5 in the first order (95% lower bound
+-0.13). Practice that reuses what earlier tasks taught it, checked by practice, keeps the success of practising each task
+from scratch with fewer practice episodes in every stream.
+
 ### Iteration 6: the likelihood decides the kind of unit
 Weakness: two kinds of unit need a rule to choose between them. Change: the frozen policy's flow-matching loss on a concept's
 frames. It separates the 34 concepts of its own training tasks from the 40 LIBERO-90 concepts it never saw without overlap (AUC

@@ -125,6 +125,10 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"practice {m['plan']['practice']} vs {m['plan']['practice_g15']}; stream {m['plan']['stream_vs_g15']['x']} / {m['reversed']['stream_vs_g15']['x']} vs per-task {m['plan']['stream_vs_g15']['y']}"),
     ("G16 continual practice on the OOD stream (pi05)", "g16_stream_ood", "read_pi05", True, "c-stream",
      lambda m: f"practice {m['plan']['practice']} vs {m['plan']['practice_g15']}; stream {m['plan']['stream_vs_g15']['x']} / {m['reversed']['stream_vs_g15']['x']} vs per-task {m['plan']['stream_vs_g15']['y']}"),
+    ("G17 practice-gated reuse on the OOD stream (pi0)", "g17_gated_stream", "read_pi0", True, "c-stream",
+     lambda m: f"stream {m['plan']['stream_vs_g15']['x']} / {m['reversed']['stream_vs_g15']['x']} vs per-task {m['plan']['stream_vs_g15']['y']}; practice {m['plan']['practice']} / {m['reversed']['practice']} vs {m['plan']['practice_g15']}"),
+    ("G17 practice-gated reuse on the OOD stream (pi05)", "g17_gated_stream", "read_pi05", True, "c-stream",
+     lambda m: f"stream {m['plan']['stream_vs_g15']['x']} / {m['reversed']['stream_vs_g15']['x']} vs per-task {m['plan']['stream_vs_g15']['y']}; practice {m['plan']['practice']} / {m['reversed']['practice']} vs {m['plan']['practice_g15']}"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -627,6 +631,14 @@ def limits_of_method():
                 f"{g16a['reversed']['stream_vs_g15']['x']}, pi0.5 {g16b['plan']['stream_vs_g15']['x']} and "
                 f"{g16b['reversed']['stream_vs_g15']['x']}, against {g16a['plan']['stream_vs_g15']['y']} and "
                 f"{g16b['plan']['stream_vs_g15']['y']} with per-task practice.</p>")
+    g17a, g17b = row("g17_gated_stream", "read_pi0"), row("g17_gated_stream", "read_pi05")
+    if g17a and g17b:
+        out += (f"<p><b>Practice gates reuse.</b> With the system's 8-of-10 practice gate on reused sources (m3_prereg tag "
+                f"g17_gated_stream), the streams reach {g17a['plan']['stream_vs_g15']['x']} and {g17a['reversed']['stream_vs_g15']['x']} "
+                f"on pi0 and {g17b['plan']['stream_vs_g15']['x']} and {g17b['reversed']['stream_vs_g15']['x']} on pi0.5 against "
+                f"{g17a['plan']['stream_vs_g15']['y']} and {g17b['plan']['stream_vs_g15']['y']} with per-task practice, using "
+                f"{g17a['plan']['practice']} to {g17b['plan']['practice']} practice episodes in place of {g17a['plan']['practice_g15']}: "
+                f"non-inferior in three of four streams.</p>")
     i6 = row("i6_novelty", "read")
     if i6:
         out += (f"<p><b>Which kind of unit a concept gets.</b> The frozen policy's own flow-matching loss on a concept's frames "
