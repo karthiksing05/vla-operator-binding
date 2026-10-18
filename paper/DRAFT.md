@@ -17,7 +17,8 @@ tasks, 931 against 935 of 1,320 (difference -0.003, 95% interval -0.063 to 0.058
 29 rank-16 adapters (102.9 MB against 545.4 MB; against rank-4 adapters, level at 480 against 480 of 580 with 102.9 MB against 135.7 MB). With task leaves at the bottom of the hierarchy, kept only where practice prefers
 them, it beats the per-task adapter: 994 against 932 of 1,320 on new start states (difference 0.047, 95% interval 0.008 to
 0.091), with 675.9 MB against 902.8 MB. Learned as a stream that requests a demonstration only when practice fails, it needs 17
-and 16 demonstrations over 30 arrivals and damages no earlier task. On a published compositional OOD benchmark with no
+and 16 demonstrations over 30 arrivals and damages no earlier task; one adapter trained through the same
+stream by sequential fine-tuning or experience replay reaches 52 or 335 of 600 against 465. On a published compositional OOD benchmark with no
 demonstration of any test task, composing the policy's own fields lifts 147 to 174 of 400 on pi0.5, 35 to 98 on pi0 and 8 to 25
 on SmolVLA. When practice also chooses each held concept's source instructions and, per task, the operator (switching at the
 grasp or a prior method's text-latent interpolation), the system uses no hand label and on new start states reaches 336 of 400
@@ -203,6 +204,15 @@ difference 0.050, 95% interval -0.028 to 0.142), which establishes non-inferiori
 pi0 and 5 for pi0.5. No step uses a hand label: the concepts come from the instruction, the sources and the operator from
 practice.
 
+### Iteration 13: practice as a stream
+Weakness: iteration 12 practises every task's sources from scratch, even when a concept recurs. Change: Li's 20 tasks arrive
+as a stream; a held concept's chosen source is stored and reused by later arrivals, so only unseen concepts are practised.
+Result: practice falls from 6,800 to 3,600 episodes, and success falls with it in three of four streams. Against per-task
+practice (336 on pi0, 312 on pi0.5 on set e) the streams reach 330 and 288 on pi0 and 254 and 297 on pi0.5 in the two
+orders; non-inferiority holds only for pi0 in the first order (difference -0.015, 95% interval -0.043 to 0.000). A source
+chosen for a concept in one task's context does not always serve the same concept with another partner, and the loss
+depends on which task came first.
+
 ### Iteration 6: the likelihood decides the kind of unit
 Weakness: two kinds of unit need a rule to choose between them. Change: the frozen policy's flow-matching loss on a concept's
 frames. It separates the 34 concepts of its own training tasks from the 40 LIBERO-90 concepts it never saw without overlap (AUC
@@ -255,6 +265,14 @@ adapter is the strongest arm we ran: 503 of 580 with acceptance against 480 for 
 help: 493 against 499 of 600 for the library alone, and 474 against 503 of 580 for DSRL on the per-task adapter. STRAP,
 retrieving from the library's own data and more, succeeds 192 of 580 alone and 296 with acceptance, against 480 (difference
 0.317, 95% interval 0.200 to 0.440).
+
+### Against standard continual learning
+One rank-16 adapter trained through the same arrival order, one demonstration per task, serves every task at the end, as
+these methods do (pre-registered G11). Sequential fine-tuning succeeds 52 of 600 times and experience replay 335 against 465
+for the stream learner (sign tests p 5e-96 and 6e-17; task-level differences 0.688, 95% interval 0.520 to 0.832, and 0.217,
+95% interval 0.077 to 0.353). Sequential fine-tuning falls below the frozen policy (273) and fails every one of the first 10
+arrivals (0 successes against 28 on the last 10): the forgetting the library avoids by construction. Experience replay keeps
+most of the early arrivals (138 on the first 10, 87 on the last 10) but stores every demonstration it replays.
 
 ### Ablations
 The switch at the grasp: with both prototypes on for the whole episode the library succeeds 281 of 600 times, level with the

@@ -119,6 +119,12 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"{m['chosen_vs_tli_li']['x']} vs Li's TLI {m['chosen_vs_tli_li']['y']} ({_ci(m['chosen_vs_tli_li']['diff'])}): " + ("better" if m['chosen_vs_tli_li']['diff']['lo'] > 0 else "non-inferior")),
     ("G15 practice chooses the operator (pi05)", "g15_operator", "read_pi05", True, "c-limits",
      lambda m: f"{m['chosen_vs_tli_li']['x']} vs Li's TLI {m['chosen_vs_tli_li']['y']} ({_ci(m['chosen_vs_tli_li']['diff'])}): " + ("better" if m['chosen_vs_tli_li']['diff']['lo'] > 0 else "non-inferior")),
+    ("G11 sequential fine-tuning and experience replay", "g11_cl_baselines", "read", True, "c-stream",
+     lambda m: f"W1 {m['w1_vs_seq']['x']} vs seq. FT {m['w1_vs_seq']['y']} and ER {m['w1_vs_er']['y']} of {m['w1_vs_seq']['n']}: both pass"),
+    ("G16 continual practice on the OOD stream (pi0)", "g16_stream_ood", "read_pi0", True, "c-stream",
+     lambda m: f"practice {m['plan']['practice']} vs {m['plan']['practice_g15']}; stream {m['plan']['stream_vs_g15']['x']} / {m['reversed']['stream_vs_g15']['x']} vs per-task {m['plan']['stream_vs_g15']['y']}"),
+    ("G16 continual practice on the OOD stream (pi05)", "g16_stream_ood", "read_pi05", True, "c-stream",
+     lambda m: f"practice {m['plan']['practice']} vs {m['plan']['practice_g15']}; stream {m['plan']['stream_vs_g15']['x']} / {m['reversed']['stream_vs_g15']['x']} vs per-task {m['plan']['stream_vs_g15']['y']}"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -607,6 +613,20 @@ def limits_of_method():
                 f"non-inferior) and pi0.5 {g15b['chosen_vs_tli_li']['x']} against {g15b['chosen_vs_tli_li']['y']} "
                 f"({_ci(g15b['chosen_vs_tli_li']['diff'])}; better). The policies alone reach {g15a['chosen_vs_zs']['y']} and "
                 f"{g15b['chosen_vs_zs']['y']}.</p>")
+    g11 = row("g11_cl_baselines", "read")
+    if g11:
+        out += (f"<p><b>Against standard continual learning.</b> One adapter trained through the same stream serves every task at "
+                f"the end (m3_prereg tag g11_cl_baselines): sequential fine-tuning succeeds {g11['w1_vs_seq']['y']} of 600 times "
+                f"(0 on the first 10 arrivals: catastrophic forgetting) and experience replay {g11['w1_vs_er']['y']}, against "
+                f"{g11['w1_vs_seq']['x']} for the stream learner.</p>")
+    g16a, g16b = row("g16_stream_ood", "read_pi0"), row("g16_stream_ood", "read_pi05")
+    if g16a and g16b:
+        out += (f"<p><b>Practice as a stream.</b> Storing each held concept's chosen source and reusing it on later OOD arrivals "
+                f"(m3_prereg tag g16_stream_ood) halves practice ({g16a['plan']['practice']} against {g16a['plan']['practice_g15']} "
+                f"episodes) but costs success in three of four streams: pi0 {g16a['plan']['stream_vs_g15']['x']} and "
+                f"{g16a['reversed']['stream_vs_g15']['x']}, pi0.5 {g16b['plan']['stream_vs_g15']['x']} and "
+                f"{g16b['reversed']['stream_vs_g15']['x']}, against {g16a['plan']['stream_vs_g15']['y']} and "
+                f"{g16b['plan']['stream_vs_g15']['y']} with per-task practice.</p>")
     i6 = row("i6_novelty", "read")
     if i6:
         out += (f"<p><b>Which kind of unit a concept gets.</b> The frozen policy's own flow-matching loss on a concept's frames "
