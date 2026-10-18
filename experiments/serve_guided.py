@@ -315,6 +315,13 @@ def main():
         hooks = PR.PrimHooks(bk, steps, paths, inner=inner, goal_only=kv.get("goal") == "1", approach_paths=apaths, phase_prompts=pp,
                              switch_query=int(kv["sw"]) if "sw" in kv else None)
         logging.info(f"prims: task {body}, steps {steps}, primitives {paths}, approach {apaths}, bind {inner is not None}, phase prompts {pp}")
+    elif a.mode.startswith("tli:"):
+        # tli:<task 1>.<task 2>.<lambda> -- plan G12: Li et al.'s text latent interpolation (lifelong_ood/policy/tli.py)
+        import numpy as np
+        from lifelong_ood.policy import tli as TL
+        t1, t2, lam = a.mode[len("tli:"):].split(".")
+        hooks = TL.TLIHooks(bk, np.load(TL.path(cfg, t1, ROOT)), np.load(TL.path(cfg, t2, ROOT)), int(lam))
+        logging.info(f"tli: tasks {t1} -> {t2}, lambda {lam}")
     elif a.mode.startswith("lora:"):
         # lora:<expert.pt> -- the few-shot baseline: a flat adapter on the action expert, always on
         from lifelong_ood.policy import adapt

@@ -226,6 +226,8 @@ def arm_spec(tid, arm, fold, demo=0):
             return None
         bind = "&bind=1" if "bind" in fl else ""
         return (f"prims:{tid}?suite={SUITE_OF.get('suite', 'libero_90')}&paths={pth(g_)}&apaths={pth(o_)}&goal=1{bind}", "0", False)
+    if arm.startswith("tli@"):                                          # plan G12: Li's text latent interpolation, tli@<t1>.<t2>.<lambda>
+        return (f"tli:{arm.split('@', 1)[1]}", "0", False)
     if arm.startswith("pfield@"):                                       # plan G4b: pfield@<a>.<g>[.<object proto>.<goal proto>] -- the
         from lifelong_ood.policy import data as D                        # policy's own field under training task a's instruction before
         parts = arm.split("@", 1)[1].split(".")                          # its grasp and task g's from the grasp to the release ("x" =
