@@ -49,7 +49,12 @@ def identify(backbone):
     bk = PolicyBackbone(backbone, device="cuda")
     d = D.Demos()
     os.makedirs(os.path.join(R, "tli"), exist_ok=True)
-    for t in sorted(set(KEY.values())):
+    need = set(KEY.values())                                            # and G10's practice-chosen sources (G13)
+    for b in ("pi0", "pi05"):
+        f10 = os.path.join(R, f"g10_read_{b}.json")
+        if os.path.exists(f10):
+            need |= {int(i) for a in json.load(open(f10))["chosen"].values() for i in a.split("@")[1].split(".")}
+    for t in sorted(need):
         f = TL.path(backbone, t, ROOT)
         if os.path.exists(f):
             continue

@@ -169,6 +169,11 @@ source, 5 episodes per candidate), with no hand labels and no privileged state. 
 pairs succeed 269 of 400 times against 222 for Li's hand-chosen pairs at the grasp (task-level difference 0.117, 95% interval
 0.022 to 0.240), 160 for our word rule and 147 for the policy alone; on pi0 292 against 305 for Li's pairs (difference -0.033,
 95% interval -0.138 to 0.030; level with Li's fixed-step pi0^S at 292), against 74 for the word rule and 35 for the policy.
+Li's text-latent interpolation (TLI) is the stronger operator on pi0. We port it to the PyTorch pi0 and identify its latents
+by Li's own procedure; on the same start states it succeeds 325 of 400 times against 35 for the policy alone (Li publish 0.83
+in their setup), and it beats the practice-chosen pairs switched at the grasp (292; discordant pairs 76 to 43; the task-level
+difference is -0.083 with a 95% interval from -0.237 to 0.060). Non-inferiority to TLI fails. TLI still uses Li's hand-chosen
+pairs and a hand-set interpolation length per task; iteration 10 tests TLI with the practice-chosen pairs.
 
 ### Iteration 6: the likelihood decides the kind of unit
 Weakness: two kinds of unit need a rule to choose between them. Change: the frozen policy's flow-matching loss on a concept's
@@ -252,7 +257,6 @@ The IPEC port of LIBERO-90 merges tasks that share an instruction: 16 tasks were
 the per-task baselines. Fixed by matching each scene's block of episodes to the task's rendered first frames.
 
 ## 9 Limitations
-Flow-matching policies only (pi0.5, pi0, SmolVLA, X-VLA); Li's text-latent interpolation, reported above prompt switching on
-pi0 in their setup, and routed adapter libraries (CLARE) are not rerun here; choosing a held concept's source by practice costs 160 practice episodes per task; single-step pick-and-place; LIBERO-90 and Li's
+Flow-matching policies only (pi0.5, pi0, SmolVLA, X-VLA); routed adapter libraries (CLARE) are not rerun here; choosing a held concept's source by practice costs 160 practice episodes per task; single-step pick-and-place; LIBERO-90 and Li's
 OOD suites only; practice needs a simulator; a new object needs its one demonstration; non-inferiority to per-task adapters without task leaves not
 established at 0.05.

@@ -105,6 +105,8 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"{m['sel_vs_li_grasp']['x']} vs Li's hand-chosen {m['sel_vs_li_grasp']['y']} of {m['sel_vs_li_grasp']['n']} ({_ci(m['sel_vs_li_grasp']['diff'])}): better"),
     ("G10 practice chooses the sources (pi0)", "g4_ood", "read_g10_pi0", True, "c-limits",
      lambda m: f"{m['sel_vs_li_grasp']['x']} vs Li's hand-chosen {m['sel_vs_li_grasp']['y']} of {m['sel_vs_li_grasp']['n']} ({_ci(m['sel_vs_li_grasp']['diff'])})"),
+    ("G12 Li's text latent interpolation (pi0)", "g12_tli", "read_pi0", True, "c-limits",
+     lambda m: f"TLI {m['tli_vs_zs']['x']} vs policy {m['tli_vs_zs']['y']}; practice-chosen pointer {m['sel_vs_tli']['x']} vs TLI ({_ci(m['sel_vs_tli']['diff'])}): trails"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -563,6 +565,13 @@ def limits_of_method():
                 f"{g10a['sel_vs_li_grasp']['n']} times against {g10a['sel_vs_li_grasp']['y']} for Li's hand-chosen pairs (difference "
                 f"{_ci(g10a['sel_vs_li_grasp']['diff'])}); on pi0 {g10b['sel_vs_li_grasp']['x']} against {g10b['sel_vs_li_grasp']['y']} "
                 f"(difference {_ci(g10b['sel_vs_li_grasp']['diff'])}), level with Li's fixed-step operator.</p>")
+    g12 = row("g12_tli", "read_pi0")
+    if g12:
+        out += (f"<p><b>Li's text latent interpolation is the stronger operator on pi0.</b> Ported to the PyTorch pi0 with its "
+                f"latents identified by Li's procedure (m3_prereg tag g12_tli), TLI succeeds {g12['tli_vs_zs']['x']} of "
+                f"{g12['tli_vs_zs']['n']} times against {g12['tli_vs_zs']['y']} for the policy alone, and the practice-chosen "
+                f"pairs switched at the grasp trail it ({g12['sel_vs_tli']['x']}; difference {_ci(g12['sel_vs_tli']['diff'])}). "
+                f"TLI uses hand-chosen pairs; the next iteration gives it practice-chosen ones.</p>")
     i6 = row("i6_novelty", "read")
     if i6:
         out += (f"<p><b>Which kind of unit a concept gets.</b> The frozen policy's own flow-matching loss on a concept's frames "
