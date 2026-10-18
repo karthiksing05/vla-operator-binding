@@ -1,0 +1,60 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G17 (iteration 14: practice-gated reuse)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky2.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "03d877544fbbe457c98ab89929fa15a11ab63954",
+  "short": "03d87754"
+ },
+ "keys": {},
+ "metrics": {
+  "backbones": [
+   "pi0_libero",
+   "pi05_libero"
+  ],
+  "gate": 8,
+  "hypotheses": {
+   "H1": "per policy and order, the gated stream's served arms are non-inferior to G15's per-task arms on set f (task-level bootstrap 95% lower bound above -0.05)",
+   "H2": "per policy and order, the gated stream's served arms > the policy alone on set f (exact sign test)",
+   "descriptive": "practice episodes against per-task practice (6,800) and the ungated stream (3,600); re-practised arrivals; against Li's TLI on set f"
+  },
+  "orders": [
+   "plan",
+   "reversed"
+  ],
+  "states": "fresh_ood_f (BASE 900000, 20 per task)",
+  "written_before": "any G17 episode and set f"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__g17_gated_stream__s13__03d87754",
+ "schema": 1,
+ "script": "experiments/prereg/g17_gated_stream.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-18T11:13:16+00:00",
+ "stream": null,
+ "tag": "g17_gated_stream"
+}
