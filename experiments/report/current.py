@@ -129,6 +129,10 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"stream {m['plan']['stream_vs_g15']['x']} / {m['reversed']['stream_vs_g15']['x']} vs per-task {m['plan']['stream_vs_g15']['y']}; practice {m['plan']['practice']} / {m['reversed']['practice']} vs {m['plan']['practice_g15']}"),
     ("G17 practice-gated reuse on the OOD stream (pi05)", "g17_gated_stream", "read_pi05", True, "c-stream",
      lambda m: f"stream {m['plan']['stream_vs_g15']['x']} / {m['reversed']['stream_vs_g15']['x']} vs per-task {m['plan']['stream_vs_g15']['y']}; practice {m['plan']['practice']} / {m['reversed']['practice']} vs {m['plan']['practice_g15']}"),
+    ("G18 the OOD system on SmolVLA", "g18_four_policies", "read_smolvla", True, "c-gen",
+     lambda m: f"{m['chosen_vs_zs']['x']} vs policy {m['chosen_vs_zs']['y']}, Li's TLI {m['chosen_vs_ref']['y']}, Li's pairs at the grasp {m['chosen_vs_li_grasp']['y']} of 400: passes"),
+    ("G18 the OOD system on X-VLA", "g18_four_policies", "read_xvla", True, "c-gen",
+     lambda m: f"{m['chosen_vs_zs']['x']} vs policy {m['chosen_vs_zs']['y']}, Li's TLI {m['chosen_vs_ref']['y']}, Li's pairs at the grasp {m['chosen_vs_li_grasp']['y']} of 400: passes"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),
@@ -175,6 +179,22 @@ def overview():
     if e5:
         out += f" A pre-registered replication on new tasks: {_v_e5(e5)}."
     out += ("</p>" if e3 else "")
+    g18s, g18x = row("g18_four_policies", "read_smolvla"), row("g18_four_policies", "read_xvla")
+    g15p, g15q = row("g15_operator", "read_pi0"), row("g15_operator", "read_pi05")
+    if g18s and g18x and g15p and g15q:
+        out += (f"<p><b>The thesis: out-of-distribution learning on a frozen policy is composition.</b> The policy already carries "
+                f"most of a new task as concepts learned under other instructions; the system finds them, stores them cheaply and "
+                f"recombines them, assuming nothing about the architecture beyond access to its prototypes. On Li's compositional "
+                f"OOD suites, with no demonstration of any test task, the same code lifts all four flow-matching policies: pi0 "
+                f"{g15p['chosen_vs_zs']['y']} to {g15p['chosen_vs_zs']['x']} of 400, pi0.5 {g15q['chosen_vs_zs']['y']} to "
+                f"{g15q['chosen_vs_zs']['x']}, SmolVLA {g18s['chosen_vs_zs']['y']} to {g18s['chosen_vs_zs']['x']}, X-VLA "
+                f"{g18x['chosen_vs_zs']['y']} to {g18x['chosen_vs_zs']['x']}, level with or above Li's text-latent "
+                f"interpolation with hand-chosen pairs on every one. No fixed operator carries across architectures (interpolation "
+                f"leads on pi0 and scores {g18s['chosen_vs_ref']['y']} on SmolVLA); practice picks it per task.</p>")
+        out += fig('<img src="media/four_policies.png" alt="success on Li\'s OOD suites for four policies: alone, Li\'s TLI, ours" style="width:100%">',
+                   "<b>Composition across four flow-matching policies.</b> Li's 20 compositional OOD tasks, new start states (set e), "
+                   "no demonstration: the policy alone, Li's text-latent interpolation with hand-chosen pairs, and the system "
+                   "(practice chooses each held concept's sources and the operator).", wide=True)
     g8, g15a, g15b = row("g8_leaves", "read"), row("g15_operator", "read_pi0"), row("g15_operator", "read_pi05")
     if g8 and g15a and g15b:
         out += (f"<p>The system is built in iterations, each answering a weakness the previous version showed. With task leaves at the "

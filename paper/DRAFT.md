@@ -1,35 +1,35 @@
-# Iterating a Compositional System: New Tasks for a Frozen Flow-Matching Policy from One Example or None
+# Out-of-Distribution Learning Is Composition: One System, Iterated, on Four Frozen Flow-Matching Policies
 
 *Working draft. Every number is read from `ledger/` and audited by `experiments/audit_numbers.py`; sections marked PENDING wait
 on pre-registered reads that are running. Citations were checked against their arXiv pages on 2026-10-15.*
 
 ## Abstract
 
-A flow-matching vision-language-action policy fine-tuned on a set of tasks fails most new tasks in the same rooms, although it
-can reach, grasp, carry and place. We build one compositional system around such a frozen policy and iterate it, each iteration
-answering a failure the previous one measured. The system reads a task's concepts from its instruction (which object, which
-instance, where it goes) and switches between them at the policy's own grasp; each concept is either a low-rank change to the
-policy's velocity field, fitted on every demonstration of it, or, when the policy already holds the concept, the policy's own
-field under the instruction that taught it; the policy's likelihood decides which, and practice keeps only what beats the
-policy. On pi0.5 and LIBERO-90, on start states no design decision saw, the kept library succeeds 499 of 600 times against 273
-for the policy alone, and level with a separate one-demonstration adapter per task given the same acceptance test: over 66
-tasks, 931 against 935 of 1,320 (difference -0.003, 95% interval -0.063 to 0.058), with 22 prototypes for 30 tasks in place of
-29 rank-16 adapters (102.9 MB against 545.4 MB; against rank-4 adapters, level at 480 against 480 of 580 with 102.9 MB against 135.7 MB). With task leaves at the bottom of the hierarchy, kept only where practice prefers
-them, it beats the per-task adapter: 994 against 932 of 1,320 on new start states (difference 0.047, 95% interval 0.008 to
-0.091), with 675.9 MB against 902.8 MB. Learned as a stream that requests a demonstration only when practice fails, it needs 17
-and 16 demonstrations over 30 arrivals and damages no earlier task; one adapter trained through the same
-stream by sequential fine-tuning or experience replay reaches 52 or 335 of 600 against 465. On a published compositional OOD benchmark with no
-demonstration of any test task, composing the policy's own fields lifts 147 to 174 of 400 on pi0.5, 35 to 98 on pi0 and 8 to 25
-on SmolVLA. When practice also chooses each held concept's source instructions and, per task, the operator (switching at the
-grasp or a prior method's text-latent interpolation), the system uses no hand label and on new start states reaches 336 of 400
-on pi0 and 312 on pi0.5, against 316 and 245 for that prior method with its hand-chosen pairs (non-inferior on pi0, better on
-pi0.5). The policy's own likelihood tells held from new concepts without overlap (AUC 1.0), a detector of the kind Wang
-et al. leave to future work. The system beats retrieval (STRAP, 480 against 296 of 580) and noise-space reinforcement learning on the
-frozen policy (DSRL, 499 against 314 of 600).
+A frozen flow-matching vision-language-action policy fails most new tasks in rooms it knows, although it can reach, grasp,
+carry and place. We argue that learning such tasks out of distribution is a problem of composition: a new task is a new
+arrangement of concepts the policy already holds or can learn from one example, and the work lies in finding those concepts,
+storing them cheaply and recombining them. We test the claim with one compositional system, iterated one pre-registered change
+at a time, that assumes nothing about the policy's architecture beyond access to its prototypes: its velocity field under an
+instruction, a low-rank change to that field, and the latents of the encoder that reads the instruction. The system reads a
+task's concepts (object, instance, goal) from its instruction. A concept the policy holds is a zero-byte pointer to its own
+field under a training instruction; a new one is a low-rank prototype fitted on every demonstration of it; the policy's
+likelihood decides which (AUC 1.0, a detector Wang et al. leave to future work), and practice chooses sources, operators and
+what to keep. On a published compositional OOD benchmark with no demonstration of any test task, the same code lifts all four
+policies we test, on new start states: pi0 from 35 to 336 of 400 and pi0.5 from 143 to 312; SmolVLA from 5 to 96 and X-VLA
+from 80 to 256. On every one it is level with or above a prior method's text-latent interpolation with hand-chosen task pairs
+(316 and 245 on pi0 and pi0.5; 0 and 142 on SmolVLA and X-VLA). No fixed operator carries across architectures: that interpolation is the stronger operator on pi0 and fails on
+SmolVLA, and practice picks the operator per task. On LIBERO-90 with one demonstration per new concept, task leaves kept by
+practice beat a separate adapter per task (994 against 932 of 1,320; difference 0.047, 95% interval 0.008 to 0.091) with
+675.9 MB against 902.8 MB. Learned as a stream, the library requests a demonstration only when practice fails and damages no
+earlier task; one adapter trained through the same stream by sequential fine-tuning or experience replay reaches 52 or 335 of
+600 against 465.
 
 ## 1 Introduction
 
-- Scope: flow-matching VLAs, whose action expert integrates a learned velocity field (pi0, pi0.5, SmolVLA). Every unit of the
+- Thesis: out-of-distribution learning on a frozen policy is a composition problem. The policy already carries most of a new
+  task as concepts it learned under other instructions; what it lacks is the arrangement. We show it on four architectures with
+  one system whose only architectural assumption is access to the policy's prototypes (Section 3).
+- Scope: flow-matching VLAs, whose action expert integrates a learned velocity field (pi0, pi0.5, SmolVLA, X-VLA). Every unit of the
   system is a change to that field for one phase of a step, which makes composition a matter of choosing, per phase, which
   field the policy integrates. Our companion ICLR-2027 submission finds the same split for image diffusion: composing the scores
   of single-object prompts places objects that one prompt naming them all does not.
@@ -49,8 +49,9 @@ frozen policy (DSRL, 499 against 314 of 600).
      exist (PRISM), but we know of no prior work that factors a VLA's adapters into object and goal concepts;
   2. for concepts the policy already holds, a zero-byte unit: the policy's own field under a training instruction, switched at
      the grasp. This extends Li's prompt switching (hand-paired base tasks, a fixed switching step, pi0): practice chooses the
-     sources with no hand labels (better than Li's pairs on pi0.5, level with pi0^S on pi0), the grasp trigger needs no per-task
-     tuning, and the operator runs inside a learner that also stores new concepts, on four policies;
+     sources and, per task, the operator (grasp switch or Li's text-latent interpolation, ported to every policy's conditioning
+     encoder) with no hand labels, level with or above Li's hand-chosen pairs on all four policies; no single operator wins on
+     every architecture, so the choice by practice is what makes the system architecture-agnostic;
   3. the frozen policy's own flow-matching loss on a concept's phase frames as the decision to point or to fit, with no added
      parameters (earlier continual learners decide expansion with separate models, e.g. CLARE's feature similarity), and the
      finding that likelihood detects novelty but does not select among new concepts; a continual learner that asks for a
@@ -271,6 +272,14 @@ library succeeds 324 of 600 times against 85 for pi0 alone; against pi0's per-ta
 (difference -0.038, 95% interval -0.166 to 0.081): non-inferiority is not established on either. X-VLA alone already succeeds
 534 of 600 times on these tasks; the kept library 542 (not significant), and 526 against 544 of 580 for X-VLA's per-task LoRA
 with acceptance: a strong zero-shot policy leaves the library little to add.
+
+**The OOD system on all four policies.** The finished OOD system (iteration 12), unchanged, on SmolVLA and X-VLA
+(pre-registered G18; Figure: four_policies.png). SmolVLA succeeds 96 of 400 times against 5 alone and 0 for Li's text-latent
+interpolation with Li's pairs; Li's pairs switched at the grasp reach 93 (task-level difference 0.007, 95% interval -0.025 to
+0.048), and practice never chooses interpolation there. X-VLA succeeds 256 of 400 times against 80 alone, 142 for Li's
+interpolation (difference 0.285, 95% interval 0.130 to 0.450) and 210 for Li's pairs at the grasp (difference 0.115, 95%
+interval 0.010 to 0.250); practice chooses interpolation on 4 tasks. With pi0 (336 against 316) and pi0.5 (312 against 245),
+the system matches or beats the prior method on every policy, with an operator chosen per task.
 
 ### Against adapter composition
 On 52 of the held-out tasks, summing the per-task adapters of an object donor and a goal donor collapses (71 of 1,040);
