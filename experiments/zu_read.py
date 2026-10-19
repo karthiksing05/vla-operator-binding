@@ -1,5 +1,5 @@
 """U1 read (exploratory, offline, CPU): unsupervised boundaries and identities from the frozen pi0.5's 40 conditional fields
-(docs/UNSUPERVISED.md).  Reads results/robot/u1/*.npz (experiments/u1_score.py).
+(docs/UNSUPERVISED.md).  Reads results/robot/u1/*.npz (experiments/zu_score.py).
 
 BOUNDARIES.  C[f, l] = the flow loss at frame f under training instruction l (the demo's own instruction is never a label; for
 LIBERO-10 demos, which ARE training demos, their own instruction is removed from the 40).  Two segmenters (segment.py):
@@ -15,7 +15,7 @@ SIGNATURE: the mean over the segment of log C[f, :], centred -- the policy's own
 its held fields explains it (architecture-agnostic: it needs only the flow loss, which every policy here has).  Number of units
 by the best silhouette (average linkage, correlation distance).  The empty-prompt prefix latent is a second feature (a check).
 
-    $PY experiments/u1_read.py [--record]
+    $PY experiments/zu_read.py [--record]
 """
 import glob
 import json
@@ -291,7 +291,7 @@ def main(record):
         slim["non_template"] = {k: {kk: vv for kk, vv in v.items() if kk != "text"} for k, v in res["non_template"].items()}
         print(ledger.record("u1_segment", bench="libero_90", tag="read", seed=0, metrics=slim,
                             bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config=dict(tol=TOL, lams=LAMS),
-                            script="experiments/u1_read.py", command=" ".join(sys.argv)))
+                            script="experiments/zu_read.py", command=" ".join(sys.argv)))
 
 
 def figures(demos, res, segrows, new, lam):

@@ -1,4 +1,4 @@
-"""Plan G, read G9: a RANK-MATCHED per-task adapter (novelty audit, docs/NOVELTY.md section 3.3 item 2).  E3's storage comparison
+"""Plan G, read G9: a RANK-MATCHED per-task adapter (novelty audit, docs/history/NOVELTY.md section 3.3 item 2).  E3's storage comparison
 set rank-4 shared prototypes against rank-16 per-task LoRAs (TAIL-style), so part of the 1/5 is rank.  Here each of E3's 29 tasks
 with a demonstration gets a rank-4 one-demo LoRA (r3_fewshot.py --rank 4, its own scene's demonstration), given the same
 acceptance test (stored states 0-9, seed 13), tested on E3's fresh set b at seed 13, paired with E3's library.

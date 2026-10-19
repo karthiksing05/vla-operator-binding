@@ -1,0 +1,79 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "zu_kcut.py --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "zu_read",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {},
+ "metrics": {
+  "act": {
+   "grasp": 0.5833333333333334,
+   "grasp_median_err": 9.0,
+   "n": 72,
+   "release": 0.1111111111111111,
+   "release_median_err": 39.0
+  },
+  "lat": {
+   "grasp": 0.25,
+   "grasp_median_err": 15.0,
+   "n": 72,
+   "release": 0.1111111111111111,
+   "release_median_err": 20.0
+  },
+  "random": {
+   "grasp": 0.2997222222222222,
+   "grasp_median_err": 19.0,
+   "n": 3600,
+   "release": 0.24833333333333332,
+   "release_median_err": 30.0
+  },
+  "sig": {
+   "grasp": 0.2361111111111111,
+   "grasp_median_err": 19.5,
+   "n": 72,
+   "release": 0.09722222222222222,
+   "release_median_err": 39.0
+  },
+  "sig6": {
+   "grasp": 0.25,
+   "grasp_median_err": 19.0,
+   "n": 72,
+   "release": 0.08333333333333333,
+   "release_median_err": 38.0
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "zu_read__libero__kcut__s0__c1f2be46",
+ "schema": 1,
+ "script": "experiments/zu_kcut.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T22:50:41+00:00",
+ "stream": null,
+ "tag": "kcut"
+}

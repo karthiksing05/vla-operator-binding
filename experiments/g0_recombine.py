@@ -1,4 +1,4 @@
-"""Plan G, reads G0 + G1 (docs/PLAN_GENERALIZE.md; ledger m3_prereg tag g0_recombine): does COMPOSITION generalise?
+"""Plan G, reads G0 + G1 (docs/history/PLAN_GENERALIZE.md; ledger m3_prereg tag g0_recombine): does COMPOSITION generalise?
 
 The 67 single-step pick-and-place LIBERO-90 tasks (the stream's 30 and E5's 37) are split into 5 folds.  For each fold, every
 concept its tasks need is refit WITHOUT any demonstration of the fold's tasks; a held-out task is eligible when its object (its

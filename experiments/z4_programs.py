@@ -57,6 +57,11 @@ def read():
         print(t, p, r)
     print("totals", tot)
     json.dump(dict(rows=rows, totals=tot, programs=programs()), open(os.path.join(R, "z4_pilot.json"), "w"), indent=1)
+    if "--record" in sys.argv:
+        from lifelong_ood import ledger
+        print(ledger.record("z4_programs", bench="libero_90", tag="pilot", seed=SEED, metrics=dict(rows=rows, totals=tot, programs=programs()),
+                            bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config={},
+                            script="experiments/z4_programs.py", command=" ".join(sys.argv)))
 
 
 if __name__ == "__main__":

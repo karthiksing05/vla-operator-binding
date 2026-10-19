@@ -2,7 +2,7 @@
 writes ledger f1_levers rows (tag concept_<name> / leaf_<task>); --read (CPU) summarises them (ledger f1_levers tag read).
 
 Design set: E5's 26 new prototypes (object types, instance children, goals; experiments/e5_read.py), so that the recipe is chosen
-on units the confirmatory test (experiments/prereg/f1_fast_fit.py: E3's library) does not refit.  For each concept:
+on units the confirmatory test (experiments/prereg/zf_fast_fit.py: E3's library) does not refit.  For each concept:
   * training frames: its fit's own (demonstration 0 of every task of the concept, cut as c0_fit cut them; frame count checked);
   * held-out frames: demonstration 1 of every task of the concept, cut the same way (no unit has seen it; h1_donate.py uses the
     same held-out episodes), at most 256 evenly spaced, 256 fixed (frame, time, noise) draws (adapt.fixed_draws);
@@ -20,9 +20,9 @@ on units the confirmatory test (experiments/prereg/f1_fast_fit.py: E3's library)
 Leaf mode (--leaf <task>, lever e): the per-task one-demonstration LoRA (r3_fewshot.py: every frame of demonstration 0) at rank 4
 and rank 16, held-out = demonstration 1 of the task (every frame, at most 256), the same schedule.
 
-    sbatch ... SCRIPT="experiments/f1_levers.py --concept XG0" slurm/jobs/robot_gpu.sbatch
-    $PY experiments/f1_levers.py --launch          # one job per design concept and per leaf task
-    $PY experiments/f1_levers.py --read [--record]
+    sbatch ... SCRIPT="experiments/zf_levers.py --concept XG0" slurm/jobs/robot_gpu.sbatch
+    $PY experiments/zf_levers.py --launch          # one job per design concept and per leaf task
+    $PY experiments/zf_levers.py --read [--record]
 """
 import argparse
 import glob
@@ -34,7 +34,7 @@ import time
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import f1_common as F                                               # noqa: E402
+import zf_common as F                                               # noqa: E402
 
 EVAL_EVERY, STEPS = 25, 1000
 LEAF_TASKS = None                                                   # set in leaf_tasks()
@@ -135,7 +135,7 @@ def run_concept(a):
     res["total_secs"] = time.time() - t_start
     print(ledger.record("f1_levers", bench="libero_90", tag=f"concept_{a.concept}", seed=0, metrics=res,
                         bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config=vars(a),
-                        script="experiments/f1_levers.py", command=" ".join(sys.argv)), flush=True)
+                        script="experiments/zf_levers.py", command=" ".join(sys.argv)), flush=True)
 
 
 def run_leaf(a):
@@ -189,7 +189,7 @@ def run_leaf(a):
               f"{tr / a.steps:.3f} s/step", flush=True)
     print(ledger.record("f1_levers", bench="libero_90", tag=f"leaf_{a.leaf}", seed=0, metrics=res,
                         bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config=vars(a),
-                        script="experiments/f1_levers.py", command=" ".join(sys.argv)), flush=True)
+                        script="experiments/zf_levers.py", command=" ".join(sys.argv)), flush=True)
 
 
 GRID = (25, 50, 75, 100, 150, 200, 250, 300, 400, 500, 600, 750, 1000)
@@ -281,15 +281,15 @@ def read(record):
     if record and not missing:
         print(ledger.record("f1_levers", bench="libero_90", tag="read", seed=0, metrics=out,
                             bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config={},
-                            script="experiments/f1_levers.py", command=" ".join(sys.argv)), flush=True)
+                            script="experiments/zf_levers.py", command=" ".join(sys.argv)), flush=True)
     return out
 
 
 def launch():
     for n in F.E5_NAMES:
-        print(n, F.sbatch(f"experiments/f1_levers.py --concept {n}" + (" --tmp" if TMP else "")), flush=True)
+        print(n, F.sbatch(f"experiments/zf_levers.py --concept {n}" + (" --tmp" if TMP else "")), flush=True)
     for t in leaf_tasks():
-        print("leaf", t, F.sbatch(f"experiments/f1_levers.py --leaf {t}" + (" --tmp" if TMP else "")), flush=True)
+        print("leaf", t, F.sbatch(f"experiments/zf_levers.py --leaf {t}" + (" --tmp" if TMP else "")), flush=True)
 
 
 if __name__ == "__main__":

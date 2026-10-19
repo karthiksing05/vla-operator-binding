@@ -1,4 +1,4 @@
-"""Plan G, read G12: Li et al.'s Text Latent Interpolation (TLI) on our harness (novelty audit, docs/NOVELTY.md section 3.3 item
+"""Plan G, read G12: Li et al.'s Text Latent Interpolation (TLI) on our harness (novelty audit, docs/history/NOVELTY.md section 3.3 item
 1: Li report pi0 0.09 -> 0.83 on their 20 compositional OOD tasks, above their own prompt switch).  The text latents are
 identified on openpi's PyTorch pi0 by Li's procedure (lifelong_ood/policy/tli.py); the base-task pairs and lambda are Li's
 task_hidden_states_mapping (examples/libero/main.py at 587a6cb, below).  Tested on start states set c (20 per task, noise seed

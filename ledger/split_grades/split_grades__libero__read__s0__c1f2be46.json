@@ -1,0 +1,327 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/split_grades.py --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "split_grades",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {},
+ "metrics": {
+  "counts": {
+   "G0": 15,
+   "G1": 9,
+   "G2": 20,
+   "G3": 18,
+   "G4": 48
+  },
+  "grades": {
+   "0": "G4",
+   "1": "G4",
+   "10": "G3",
+   "11": "G4",
+   "12": "G3",
+   "13": "G3",
+   "14": "G3",
+   "15": "G3",
+   "16": "G3",
+   "17": "G3",
+   "18": "G4",
+   "19": "G0",
+   "2": "G3",
+   "20": "G1",
+   "21": "G4",
+   "22": "G1",
+   "23": "G4",
+   "24": "G0",
+   "25": "G4",
+   "26": "G2",
+   "27": "G2",
+   "28": "G4",
+   "29": "G4",
+   "3": "G4",
+   "30": "G3",
+   "31": "G4",
+   "32": "G4",
+   "33": "G1",
+   "34": "G4",
+   "35": "G4",
+   "36": "G4",
+   "37": "G4",
+   "38": "G0",
+   "39": "G4",
+   "4": "G4",
+   "40": "G4",
+   "41": "G4",
+   "42": "G4",
+   "43": "G4",
+   "44": "G3",
+   "45": "G4",
+   "46": "G0",
+   "47": "G0",
+   "48": "G2",
+   "49": "G2",
+   "5": "G4",
+   "50": "G0",
+   "51": "G0",
+   "52": "G2",
+   "53": "G2",
+   "54": "G0",
+   "55": "G4",
+   "56": "G4",
+   "57": "G4",
+   "58": "G4",
+   "59": "G4",
+   "6": "G4",
+   "60": "G4",
+   "61": "G4",
+   "62": "G4",
+   "63": "G4",
+   "64": "G4",
+   "65": "G4",
+   "66": "G4",
+   "67": "G0",
+   "68": "G0",
+   "69": "G4",
+   "7": "G4",
+   "70": "G0",
+   "71": "G4",
+   "72": "G0",
+   "73": "G0",
+   "74": "G0",
+   "75": "G0",
+   "76": "G4",
+   "77": "G3",
+   "78": "G3",
+   "79": "G3",
+   "8": "G4",
+   "80": "G3",
+   "81": "G3",
+   "82": "G3",
+   "83": "G3",
+   "84": "G4",
+   "85": "G4",
+   "86": "G4",
+   "87": "G4",
+   "88": "G4",
+   "89": "G4",
+   "9": "G3",
+   "goal:0": "G2",
+   "goal:1": "G2",
+   "goal:2": "G2",
+   "goal:3": "G2",
+   "goal:4": "G1",
+   "goal:5": "G1",
+   "goal:6": "G1",
+   "goal:7": "G1",
+   "goal:8": "G1",
+   "goal:9": "G1",
+   "spatial:0": "G2",
+   "spatial:1": "G2",
+   "spatial:2": "G2",
+   "spatial:3": "G2",
+   "spatial:4": "G2",
+   "spatial:5": "G2",
+   "spatial:6": "G2",
+   "spatial:7": "G2",
+   "spatial:8": "G2",
+   "spatial:9": "G2"
+  },
+  "parser": "8d8d83f8cd14",
+  "table": {
+   "G8 LIBERO-90 set d (pi0.5)": {
+    "G0": {
+     "leaves": 235,
+     "library": 232,
+     "lora_acc": 217,
+     "tasks": 14,
+     "zs": 193
+    },
+    "G2": {
+     "leaves": 79,
+     "library": 56,
+     "lora_acc": 77,
+     "tasks": 6,
+     "zs": 0
+    },
+    "G3": {
+     "leaves": 225,
+     "library": 215,
+     "lora_acc": 205,
+     "tasks": 15,
+     "zs": 90
+    },
+    "G4": {
+     "leaves": 455,
+     "library": 403,
+     "lora_acc": 433,
+     "tasks": 31,
+     "zs": 117
+    }
+   },
+   "Li OOD G15 (pi0)": {
+    "G1": {
+     "chosen": 101,
+     "psel": 95,
+     "tasks": 6,
+     "tli_li": 100,
+     "tsel": 98,
+     "zs": 11
+    },
+    "G2": {
+     "chosen": 235,
+     "psel": 194,
+     "tasks": 14,
+     "tli_li": 216,
+     "tsel": 199,
+     "zs": 24
+    }
+   },
+   "Li OOD G15 (pi0.5)": {
+    "G1": {
+     "chosen": 116,
+     "psel": 100,
+     "tasks": 6,
+     "tli_li": 116,
+     "tsel": 106,
+     "zs": 59
+    },
+    "G2": {
+     "chosen": 196,
+     "psel": 182,
+     "tasks": 14,
+     "tli_li": 129,
+     "tsel": 143,
+     "zs": 84
+    }
+   },
+   "Li OOD G18 (SmolVLA)": {
+    "G1": {
+     "chosen": 26,
+     "li_grasp": 29,
+     "psel": 26,
+     "tasks": 6,
+     "tli_li": 0,
+     "tsel": 1,
+     "zs": 4
+    },
+    "G2": {
+     "chosen": 70,
+     "li_grasp": 64,
+     "psel": 70,
+     "tasks": 14,
+     "tli_li": 0,
+     "tsel": 3,
+     "zs": 1
+    }
+   },
+   "Li OOD G18 (X-VLA)": {
+    "G1": {
+     "chosen": 97,
+     "li_grasp": 95,
+     "psel": 97,
+     "tasks": 6,
+     "tli_li": 17,
+     "tsel": 69,
+     "zs": 43
+    },
+    "G2": {
+     "chosen": 159,
+     "li_grasp": 115,
+     "psel": 113,
+     "tasks": 14,
+     "tli_li": 125,
+     "tsel": 126,
+     "zs": 37
+    }
+   },
+   "Li OOD Z1b (FLOWER, zero fit)": {
+    "G1": {
+     "chosen": 48,
+     "li_grasp": 51,
+     "tasks": 6,
+     "zs": 37
+    }
+   },
+   "Z3 pointers, zero fit (pi0.5)": {
+    "G0": {
+     "library": 161,
+     "lora": 151,
+     "pointers": 166,
+     "tasks": 10,
+     "zs": 173
+    },
+    "G2": {
+     "library": 56,
+     "lora": 70,
+     "pointers": 0,
+     "tasks": 5,
+     "zs": 0
+    },
+    "G3": {
+     "library": 154,
+     "lora": 136,
+     "pointers": 67,
+     "tasks": 8,
+     "zs": 68
+    },
+    "G4": {
+     "library": 35,
+     "lora": 40,
+     "pointers": 0,
+     "tasks": 2,
+     "zs": 4
+    }
+   },
+   "Z4 programs, zero fit, pilot (pi0.5)": {
+    "G1": {
+     "prog": 13,
+     "tasks": 3,
+     "zs": 29
+    },
+    "G3": {
+     "prog": 11,
+     "tasks": 3,
+     "zs": 1
+    },
+    "G4": {
+     "prog": 19,
+     "tasks": 17,
+     "zs": 7
+    }
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "split_grades__libero__read__s0__c1f2be46",
+ "schema": 1,
+ "script": "experiments/split_grades.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T22:39:02+00:00",
+ "stream": null,
+ "tag": "read"
+}

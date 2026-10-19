@@ -1,5 +1,5 @@
 """Plan Z, track I (docs/PLAN_Z.md, docs/DONATION.md): a SOFT blend of held fields fitted to one demonstration, and what each
-expert DONATES to it.  Offline, CPU; reads results/robot/i1/*.npz (experiments/i1_velocities.py).
+expert DONATES to it.  Offline, CPU; reads results/robot/i1/*.npz (experiments/zi_velocities.py).
 
 THE BLEND.  Per contact segment s (approach / carry / after the release; program.segments) and per action dim d (x y z, rotation
 x y z, gripper), a convex mix of the experts' velocity fields:  v_mix = sum_e beta[e, s, d] v_e,  beta on the simplex.  Fitted by
@@ -17,7 +17,7 @@ empty prompt alone (the unconditioned policy).  Exact Shapley values (every subs
 (> 0 synergy, < 0 redundancy).  Each expert's RELATION to the task: its instruction shares the task's object concept, its goal
 concept, both, or neither (lifelong_ood.policy.primitives' keys); donations are aggregated by relation x segment x dim group.
 
-    $PY experiments/i1_blend.py [--record]
+    $PY experiments/zi_blend.py [--record]
 """
 import glob
 import itertools
@@ -197,12 +197,12 @@ def main(record):
             print(f"  {key:18} donation share by relation: " + ", ".join(f"{k} {v['share']:.2f} (n {v['n']})" for k, v in sorted(d.items())))
         for key, d in a["interaction"].items():
             print(f"  {key:18} object x goal interaction: mean {d['mean']:+.5f}, synergy in {d['synergy']:.2f} of {d['n']}")
-    json.dump(dict(rows=rows, summary=agg), open(os.path.join(R, "i1_blend.json"), "w"), indent=1, default=str)
+    json.dump(dict(rows=rows, summary=agg), open(os.path.join(R, "zi_blend.json"), "w"), indent=1, default=str)
     if record:
         from lifelong_ood import ledger
-        print(ledger.record("i1_blend", bench="libero", tag="read", seed=0, metrics=agg,
+        print(ledger.record("zi_blend", bench="libero", tag="read", seed=0, metrics=agg,
                             bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config={},
-                            script="experiments/i1_blend.py", command=" ".join(sys.argv)))
+                            script="experiments/zi_blend.py", command=" ".join(sys.argv)))
 
 
 if __name__ == "__main__":

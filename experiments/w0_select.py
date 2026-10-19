@@ -1,4 +1,4 @@
-"""Probe W0 (EXPLORATORY, offline; docs/PLAN_WANG.md): Wang et al.'s SELECTION by one query, on the factored library.
+"""Probe W0 (EXPLORATORY, offline; docs/history/PLAN_WANG.md): Wang et al.'s SELECTION by one query, on the factored library.
 
 Wang et al. (arXiv 2605.07078) compose a frozen diffusion model's prototypes for an unseen combination by selecting the prototypes
 that best cover ONE query; their stated limitation is no mechanism to detect, consolidate and reuse genuinely new primitives.  The

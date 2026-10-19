@@ -1,4 +1,4 @@
-"""H1 (C): does composed success FACTOR into the component competences?  (exploratory, from recorded episodes; docs/PLAN_H.md
+"""H1 (C): does composed success FACTOR into the component competences?  (exploratory, from recorded episodes; docs/history/PLAN_H.md
 section H1.3)
 
 Question.  A composed step runs one unit until the policy's own grasp and another after it.  If the grasp is the only interface

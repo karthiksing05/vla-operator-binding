@@ -112,6 +112,13 @@ def main():
             b = by[g]
             print(f"  {g} {NAMES[g]:9} tasks {b['tasks']:3}  " + "  ".join(f"{a} {v}" for a, v in b.items() if a != "tasks"))
     json.dump(dict(grades=grades, table=table), open(os.path.join(R, "split_grades.json"), "w"), indent=1, default=str)
+    if "--record" in sys.argv:
+        from lifelong_ood import ledger
+        counts = {g: sum(v["grade"] == g for v in grades.values()) for g in NAMES}
+        print(ledger.record("split_grades", bench="libero", tag="read", seed=0, metrics=dict(counts=counts, table=table,
+                            grades={k: v["grade"] for k, v in grades.items()}, parser=F.parser_hash()),
+                            bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config={},
+                            script="experiments/split_grades.py", command=" ".join(sys.argv)))
 
 
 if __name__ == "__main__":

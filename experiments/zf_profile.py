@@ -12,7 +12,7 @@ the fit's ledger row).  Timed, with CUDA synchronised at each boundary:
 The prefix does not depend on the adapter (it lives in the action expert), so the two fits see the same values: the first
 --lazy-steps losses of both, at the same seed, are compared.  The c0_fit job does no evaluation (acceptance runs elsewhere).
 
-    sbatch ... SCRIPT="experiments/f1_profile.py --name Gscplate" slurm/jobs/robot_gpu.sbatch
+    sbatch ... SCRIPT="experiments/zf_profile.py --name Gscplate" slurm/jobs/robot_gpu.sbatch
     --tmp: run against the not-yet-installed edits (experiments/_c0_fit_f1_tmp.py, lifelong_ood/policy/_adapt_f1_tmp.py): their
            import and function test
 """
@@ -26,7 +26,7 @@ import sys                                                          # noqa: E402
 import numpy as np                                                  # noqa: E402
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import f1_common as F                                               # noqa: E402
+import zf_common as F                                               # noqa: E402
 
 
 def main():
@@ -122,7 +122,7 @@ def main():
     if not a.no_record:
         print(ledger.record("f1_profile", bench="libero_90", tag=a.name + ("_tmp" if a.tmp else ""), seed=0, metrics=m,
                             bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config=vars(a),
-                            script="experiments/f1_profile.py", command=" ".join(sys.argv)), flush=True)
+                            script="experiments/zf_profile.py", command=" ".join(sys.argv)), flush=True)
     print("[f1p] done", flush=True)
 
 

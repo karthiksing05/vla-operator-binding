@@ -1,0 +1,55 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of the fast-fit confirmatory test",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {},
+ "metrics": {
+  "hypotheses": {
+   "H1": "E3's 22 prototypes refit with the recipe; their composition on E3's 29 tasks with a per-task LoRA, set b, 20 per task, noise seed 13, paired with E3's library episodes: task-level bootstrap 95% lower bound of (fast - E3) above -0.05",
+   "H2": "G8's leaves rule with RANK-4 leaves (E3: G9's rank-4 LoRAs; E5: new rank-4 leaves) against G8's rank-16 rule on the 66 tasks, set d, paired: lower bound above -0.05",
+   "descriptive": "fit minutes per unit (job wall); acceptance-kept arms; the 30th task"
+  },
+  "recipe": {
+   "cache": true,
+   "init": "scratch",
+   "steps": 200
+  },
+  "written_before": "any f1_main / f1_accept / f1_leaf episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__f1_fast_fit__s13__c1f2be46",
+ "schema": 1,
+ "script": "experiments/prereg/zf_fast_fit.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-19T22:31:04+00:00",
+ "stream": null,
+ "tag": "f1_fast_fit"
+}

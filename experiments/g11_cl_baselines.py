@@ -1,4 +1,4 @@
-"""Plan G, read G11: standard continual-learning baselines on the W1 stream (novelty audit, docs/NOVELTY.md section 3.3 item 4).
+"""Plan G, read G11: standard continual-learning baselines on the W1 stream (novelty audit, docs/history/NOVELTY.md section 3.3 item 4).
 One rank-16 LoRA on pi0.5's action expert trained through W1's arrival order a, one demonstration per task (each task's own
 scene): sequential fine-tuning (each task on its own demonstration, in turn) and experience replay (each batch half the current
 task's demonstration, half all earlier ones); experiments/b_continual.py, 500 steps per task.  The final adapter serves EVERY

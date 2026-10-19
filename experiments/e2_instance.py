@@ -1,4 +1,4 @@
-"""Plan E2, screen (EXPLORATORY; docs/PLAN_FACTORED.md): INSTANCE children of an object concept.  E1 left 45 of its 58 missing
+"""Plan E2, screen (EXPLORATORY; docs/history/PLAN_FACTORED.md): INSTANCE children of an object concept.  E1 left 45 of its 58 missing
 successes on four tasks that name an instance of the black bowl ("the middle black bowl", "the black bowl at the back"): the
 type prototype, pooled over 14 demonstrations of black bowls, does not pick the named one.  Cobweb's hierarchy: a type concept has
 children, and an instance is served by the most specific concept that matches it.  A step whose object phrase names an instance

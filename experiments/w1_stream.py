@@ -1,4 +1,4 @@
-"""Plan W, read W1 (docs/PLAN_WANG.md): E4's stream with the REQUEST RULE the thesis states -- a demonstration is requested only
+"""Plan W, read W1 (docs/history/PLAN_WANG.md): E4's stream with the REQUEST RULE the thesis states -- a demonstration is requested only
 when what the learner already holds fails its own practice.  What it holds is the policy AND the library's composition: the
 arrival keeps the better of the two (ties: the policy) without a demonstration when that one succeeds in at least THETA of its 10
 practice episodes; otherwise it requests its one demonstration, which updates every concept on its path (instance child, type

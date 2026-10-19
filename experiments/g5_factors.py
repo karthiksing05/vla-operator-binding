@@ -1,4 +1,4 @@
-"""Plan G, read G5a (docs/PLAN_GENERALIZE.md; ledger m3_prereg tag g5_factors): FACTOR-LEVEL selection.  G0 showed recombined
+"""Plan G, read G5a (docs/history/PLAN_GENERALIZE.md; ledger m3_prereg tag g5_factors): FACTOR-LEVEL selection.  G0 showed recombined
 concepts supply a missing skill and interfere with a present one.  Here practice chooses per factor: on G0's held-out tasks, with
 G0's fold concepts (no demonstration of the task anywhere), the object concept alone (fac@<object>.x: the policy carries) and the
 goal concept alone (fac@x.<goal>: the policy approaches), at G0's states and seed.  Compared: acceptance over {policy, object,

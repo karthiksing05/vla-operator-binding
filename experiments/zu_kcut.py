@@ -10,7 +10,7 @@ import sys
 import numpy as np
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import u1_read as U                                                        # noqa: E402
+import zu_read as U                                                        # noqa: E402
 from lifelong_ood.policy import segment as S                               # noqa: E402
 import glob                                                                # noqa: E402
 
@@ -50,8 +50,9 @@ def main():
         if d["kind"] != "pick-place" or not d["grasp"] or not d["release"]:
             continue
         z = np.load(files[d["name"]], allow_pickle=True)
-        full = ((7 * z["err"].mean(-1) + 25 * z["pad"]) / 32).mean(2)[:, :40]
-        arm = z["err"][..., :6].mean((2, 3))[:, :40]
+        lab = d["labels"]                                                 # own instruction excluded for training demos
+        full = ((7 * z["err"].mean(-1) + 25 * z["pad"]) / 32).mean(2)[:, lab]
+        arm = z["err"][..., :6].mean((2, 3))[:, lab]
         fr = z["frames"]
         sigs = dict(sig=np.log(full) - np.log(full).mean(1, keepdims=True),
                     sig6=np.log(arm) - np.log(arm).mean(1, keepdims=True),
@@ -65,10 +66,20 @@ def main():
         for _ in range(50):
             m = S.match(sorted(rng.integers(1, T, 2).tolist()), tr, U.TOL)
             res.setdefault("random", []).append((m["err"][0], m["err"][1]))
+    out = {}
     for n, v in res.items():
         v = np.array(v)
+        out[n] = dict(n=int(len(v)), grasp=float(np.mean(v[:, 0] <= 10)), release=float(np.mean(v[:, 1] <= 10)),
+                      grasp_median_err=float(np.median(v[:, 0])), release_median_err=float(np.median(v[:, 1])))
         print(f"{n:7} n={len(v):4}  grasp within 10: {np.mean(v[:, 0] <= 10):.2f} (median err {np.median(v[:, 0]):5.1f})   "
               f"release within 10: {np.mean(v[:, 1] <= 10):.2f} (median err {np.median(v[:, 1]):5.1f})")
+
+
+    if "--record" in sys.argv:
+        from lifelong_ood import ledger
+        print(ledger.record("zu_read", bench="libero", tag="kcut", seed=0, metrics=out,
+                            bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config={},
+                            script="experiments/zu_kcut.py", command=" ".join(sys.argv)))
 
 
 if __name__ == "__main__":

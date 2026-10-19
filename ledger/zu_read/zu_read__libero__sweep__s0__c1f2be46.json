@@ -1,0 +1,220 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "zu_sweep.py --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "zu_read",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {},
+ "metrics": {
+  "label/0.5": {
+   "cuts": 9.958333333333334,
+   "demos": 72,
+   "grasp": 0.7777777777777778,
+   "grasp_random": 0.7743055555555556,
+   "release": 0.8611111111111112,
+   "release_random": 0.7041666666666667
+  },
+  "label/1": {
+   "cuts": 6.430555555555555,
+   "demos": 72,
+   "grasp": 0.6666666666666666,
+   "grasp_random": 0.6402777777777777,
+   "release": 0.7916666666666666,
+   "release_random": 0.55625
+  },
+  "label/128": {
+   "cuts": 0.013888888888888888,
+   "demos": 72,
+   "grasp": 0.0,
+   "grasp_random": 0.002777777777777778,
+   "release": 0.0,
+   "release_random": 0.0006944444444444445
+  },
+  "label/16": {
+   "cuts": 0.2916666666666667,
+   "demos": 72,
+   "grasp": 0.06944444444444445,
+   "grasp_random": 0.05277777777777778,
+   "release": 0.0,
+   "release_random": 0.022916666666666665
+  },
+  "label/2": {
+   "cuts": 3.9166666666666665,
+   "demos": 72,
+   "grasp": 0.5694444444444444,
+   "grasp_random": 0.4625,
+   "release": 0.4583333333333333,
+   "release_random": 0.4097222222222222
+  },
+  "label/256": {
+   "cuts": 0.0,
+   "demos": 72,
+   "grasp": 0.0,
+   "grasp_random": 0.0,
+   "release": 0.0,
+   "release_random": 0.0
+  },
+  "label/32": {
+   "cuts": 0.09722222222222222,
+   "demos": 72,
+   "grasp": 0.027777777777777776,
+   "grasp_random": 0.017361111111111112,
+   "release": 0.0,
+   "release_random": 0.009027777777777777
+  },
+  "label/4": {
+   "cuts": 2.0694444444444446,
+   "demos": 72,
+   "grasp": 0.3611111111111111,
+   "grasp_random": 0.28402777777777777,
+   "release": 0.1388888888888889,
+   "release_random": 0.2375
+  },
+  "label/512": {
+   "cuts": 0.0,
+   "demos": 72,
+   "grasp": 0.0,
+   "grasp_random": 0.0,
+   "release": 0.0,
+   "release_random": 0.0
+  },
+  "label/64": {
+   "cuts": 0.041666666666666664,
+   "demos": 72,
+   "grasp": 0.0,
+   "grasp_random": 0.00625,
+   "release": 0.0,
+   "release_random": 0.002777777777777778
+  },
+  "label/8": {
+   "cuts": 0.8888888888888888,
+   "demos": 72,
+   "grasp": 0.20833333333333334,
+   "grasp_random": 0.11805555555555555,
+   "release": 0.041666666666666664,
+   "release_random": 0.10416666666666667
+  },
+  "level/0.5": {
+   "cuts": 28.583333333333332,
+   "demos": 72,
+   "grasp": 1.0,
+   "grasp_random": 0.9909722222222223,
+   "release": 1.0,
+   "release_random": 0.9604166666666667
+  },
+  "level/1": {
+   "cuts": 27.083333333333332,
+   "demos": 72,
+   "grasp": 1.0,
+   "grasp_random": 0.98125,
+   "release": 1.0,
+   "release_random": 0.9645833333333333
+  },
+  "level/128": {
+   "cuts": 2.138888888888889,
+   "demos": 72,
+   "grasp": 0.3194444444444444,
+   "grasp_random": 0.26319444444444445,
+   "release": 0.2638888888888889,
+   "release_random": 0.23472222222222222
+  },
+  "level/16": {
+   "cuts": 12.11111111111111,
+   "demos": 72,
+   "grasp": 0.9861111111111112,
+   "grasp_random": 0.8291666666666667,
+   "release": 0.8472222222222222,
+   "release_random": 0.7638888888888888
+  },
+  "level/2": {
+   "cuts": 24.444444444444443,
+   "demos": 72,
+   "grasp": 1.0,
+   "grasp_random": 0.98125,
+   "release": 0.9861111111111112,
+   "release_random": 0.9513888888888888
+  },
+  "level/256": {
+   "cuts": 0.8194444444444444,
+   "demos": 72,
+   "grasp": 0.05555555555555555,
+   "grasp_random": 0.10972222222222222,
+   "release": 0.1388888888888889,
+   "release_random": 0.10694444444444444
+  },
+  "level/32": {
+   "cuts": 7.888888888888889,
+   "demos": 72,
+   "grasp": 0.8472222222222222,
+   "grasp_random": 0.6597222222222222,
+   "release": 0.7638888888888888,
+   "release_random": 0.6048611111111111
+  },
+  "level/4": {
+   "cuts": 20.65277777777778,
+   "demos": 72,
+   "grasp": 0.9861111111111112,
+   "grasp_random": 0.9402777777777778,
+   "release": 0.9444444444444444,
+   "release_random": 0.9055555555555556
+  },
+  "level/512": {
+   "cuts": 0.1527777777777778,
+   "demos": 72,
+   "grasp": 0.013888888888888888,
+   "grasp_random": 0.019444444444444445,
+   "release": 0.0,
+   "release_random": 0.015277777777777777
+  },
+  "level/64": {
+   "cuts": 4.888888888888889,
+   "demos": 72,
+   "grasp": 0.6944444444444444,
+   "grasp_random": 0.48055555555555557,
+   "release": 0.5972222222222222,
+   "release_random": 0.49027777777777776
+  },
+  "level/8": {
+   "cuts": 16.77777777777778,
+   "demos": 72,
+   "grasp": 0.9861111111111112,
+   "grasp_random": 0.9152777777777777,
+   "release": 0.9166666666666666,
+   "release_random": 0.8506944444444444
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "zu_read__libero__sweep__s0__c1f2be46",
+ "schema": 1,
+ "script": "experiments/zu_sweep.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T22:43:45+00:00",
+ "stream": null,
+ "tag": "sweep"
+}

@@ -1,4 +1,4 @@
-"""H1 (B): what the two operators for held concepts do to the policy (exploratory, offline; docs/PLAN_H.md section H1.2).
+"""H1 (B): what the two operators for held concepts do to the policy (exploratory, offline; docs/history/PLAN_H.md section H1.2).
 
 Question.  Text-latent interpolation (TLI; lifelong_ood/policy/tli.py) adds (T1 - T2) to the conditioning encoder's residual
 stream at the instruction's first 9 tokens of every layer >= 1 at the start of an episode (alpha = 0), so the test instruction is

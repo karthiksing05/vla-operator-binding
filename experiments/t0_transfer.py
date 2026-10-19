@@ -1,4 +1,4 @@
-"""Screen T0 (EXPLORATORY; docs/PLAN_WANG.md): transfer to a NEW object WITHOUT a demonstration, by Cobweb categorisation.
+"""Screen T0 (EXPLORATORY; docs/history/PLAN_WANG.md): transfer to a NEW object WITHOUT a demonstration, by Cobweb categorisation.
 
 The streams save demonstrations mostly on tasks the policy already performs (ledger w1_stream: 24 of 27 demonstration-free keeps).
 A new object has no concept yet.  Cobweb sorts a new instance under the concept whose features it best matches; here the instance's

@@ -1,4 +1,4 @@
-"""Plan E, read E4 (ledger m3_prereg tag e4_stream; docs/PLAN_FACTORED.md): the hierarchical factored library LEARNED AS A STREAM.
+"""Plan E, read E4 (ledger m3_prereg tag e4_stream; docs/history/PLAN_FACTORED.md): the hierarchical factored library LEARNED AS A STREAM.
 
 The library holds three kinds of concepts, each a rank-4 primitive consolidated over every demonstration it has seen: OBJECT
 (type) concepts O:<verb|object> on approach frames, INSTANCE children I:<verb|object|qualifier> on approach frames, GOAL concepts

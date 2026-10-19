@@ -2,7 +2,7 @@
 
 A demonstration is cut at its own contact events (the gripper closing for a sustained run, then opening: segment.gripper_truth),
 and each segment is labelled by the frozen policy's likelihood: the training instruction with the lowest mean flow loss on the
-segment's frames (experiments/u1_score.py).  The program is the list of those instructions.  Online, the policy's own commanded
+segment's frames (experiments/zu_score.py).  The program is the list of those instructions.  Online, the policy's own commanded
 gripper advances the program at the same events: closed for 3 queries -> next segment; open after a closed run -> next segment.
 A pick-and-place demo gives three segments (approach, carry, after the release); the grasp switch of plan G is the special case
 whose segments are named by the grammar.  Nothing is fitted; a program is a few task indices.

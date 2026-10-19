@@ -10,7 +10,7 @@ Saves results/robot/u1/<set>_<task>_d<demo>.npz:
     lat [F, 2, 256]    the empty-prompt prefix's last-layer values, mean over the two camera images' tokens / over all tokens
     frames, actions, state, task, text, episode
 
-    sbatch ... SCRIPT="experiments/u1_score.py --set l90 --tasks 0-22"     (--set l10: pi0.5's LIBERO-10 demos)
+    sbatch ... SCRIPT="experiments/zu_score.py --set l90 --tasks 0-22"     (--set l10: pi0.5's LIBERO-10 demos)
 """
 import argparse
 import os

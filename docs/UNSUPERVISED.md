@@ -1,6 +1,6 @@
 # Unsupervised segmentation and identities (plan Z, track U)
 
-Exploratory, offline. Data: `experiments/u1_score.py`, which records pi0.5's flow loss at every 2nd frame of one demo per task,
+Exploratory, offline. Data: `experiments/zu_score.py`, which records pi0.5's flow loss at every 2nd frame of one demo per task,
 under each of its 40 training instructions (4 shared noise draws per frame).
 - LIBERO-90: tasks 0–89.
 - LIBERO-10: tasks 0–9.
@@ -12,22 +12,22 @@ Truth is the demo's sustained grasp and release, and it is used for scoring only
 
 At matched cut counts, the policy's likelihood places cuts no better than random.
 
-| segmenter (pick-and-place, about 2 cuts per demo) | grasp within 10 frames | release within 10 frames |
+| segmenter (72 pick-and-place demos; about 2 cuts per demo) | grasp within 10 frames | release within 10 frames |
 |---|---|---|
-| label switch (Viterbi over the best field, λ 4; 70 LIBERO-90 / 10 demos) | 0.36 | 0.12 |
-| random cuts, same count | 0.27 | 0.22 |
-| exact 2-cut partition of the 40-d loss signature (56 demos) | 0.21 | 0.07 |
-| exact 2-cut partition of the prefix latent | 0.25 | 0.09 |
-| exact 2-cut partition of the demo's arm actions (dims 0–5, a non-policy baseline) | 0.55 | 0.11 |
-| random 2 cuts | 0.29 | 0.23 |
+| label switch (Viterbi over the best field, λ 4; 2.07 cuts per demo) | 0.36 | 0.14 |
+| random cuts, same count | 0.28 | 0.24 |
+| exact 2-cut partition of the loss signature over the held-out instructions | 0.24 | 0.10 |
+| exact 2-cut partition of the prefix latent | 0.25 | 0.11 |
+| exact 2-cut partition of the demo's arm actions (dims 0–5, a non-policy baseline) | 0.58 | 0.11 |
+| random 2 cuts | 0.30 | 0.25 |
 
-`experiments/u1_sweep.py`, `experiments/u1_kcut.py`. The plan's kill gate was grasp recall ≥ 0.6. The label-switch segmenter
+`experiments/zu_sweep.py`, `experiments/zu_kcut.py`; ledger `zu_read` tags `sweep` and `kcut`. The plan's kill gate was grasp recall ≥ 0.6. The label-switch segmenter
 fails it, and so do the other likelihood-based segmenters.
 
 **Targeted check.** On the 20 LIBERO-90 demos whose object and goal are both held, take the loss under the best object source
 minus the loss under the best goal source. Its mean rises across the grasp in 0.65 of the demos (chance 0.5). A single best cut
 lands within 10 frames of the grasp in 0.05 of them. In the 4 testable demos from familiar scenes (LIBERO-Goal), the same contrast
-rises across the grasp in all 4, and by large margins: after the grasp the goal source's log-loss is lower by 0.9 to 2.2.
+rises across the grasp in all 4: after the grasp the goal source's log-loss is lower by 0.89 to 2.19, and a single cut lands within 10 frames of the grasp in 2 of the 4 (`experiments/zu_identity.py`, ledger `zu_read` tag `identity`).
 
 ## 2. Likelihood does name the segments
 

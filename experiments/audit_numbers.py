@@ -543,6 +543,21 @@ def _row(exp, tag):
     return L.load(exp, tag=tag)[-1]["metrics"]
 
 
+def zrow(exp, tag, *path, scale=1.0):
+    """Plan Z reads: one field of the newest row, by path."""
+    def f():
+        x = _row(exp, tag)
+        for k in path:
+            x = x[k]
+        return (scale * float(x), 0.0, 1)
+    return f
+
+
+def zsplit(name, grades, arm):
+    """split_grades: successes of one arm summed over grades (experiments/split_grades.py)."""
+    return lambda: (float(sum(_row("split_grades", "read")["table"][name][g][arm] for g in grades)), 0.0, 1)
+
+
 def q2(tag, key, field, scale=1.0):
     """b2_q2 reads (experiments/b2_q2_read.py): rows keyed '<task>:<arm>' (arm names contain dots, so no dotted paths)."""
     return lambda: (scale * float(_row("b2_q2", tag)["rows"][key][field]), 0.0, 1)
@@ -2008,6 +2023,58 @@ BIND = [   # the Bind plan's reads (no demonstration; ledger m3_prereg tags b_bi
     ("g22 pi05: pro diff", lambda: (float(_row("g22_libero_pro", "read_pi05")["H1b_chosen_vs_zs_pro"]["diff"]["diff"]), 0.0, 1), "0.193"),
     ("g22 pi05: pro lo", lambda: (float(_row("g22_libero_pro", "read_pi05")["H1b_chosen_vs_zs_pro"]["diff"]["lo"]), 0.0, 1), "0.099"),
     ("g22 pi05: pro hi", lambda: (float(_row("g22_libero_pro", "read_pi05")["H1b_chosen_vs_zs_pro"]["diff"]["hi"]), 0.0, 1), "0.296"),
+    # plan Z (docs/PLAN_Z.md): FLOWER with no fine-tuning, the word splice, unsupervised identities and boundaries, LIBERO-90
+    # pointers, pointer programs, the graded split (experiments/split_grades.py)
+    ("z1: ours", zrow('z1_flower', 'read', 'ours_vs_zs', 'x'), "30"),
+    ("z1: zs", zrow('z1_flower', 'read', 'ours_vs_zs', 'y'), "33"),
+    ("z1: n", zrow('z1_flower', 'read', 'ours_vs_zs', 'n'), "120"),
+    ("z1: li", zrow('z1_flower', 'read', 'ours_vs_li', 'y'), "52"),
+    ("z1b: chosen", zrow('z1_flower', 'read_b', 'chosen_vs_zs', 'x'), "48"),
+    ("z1b: zs", zrow('z1_flower', 'read_b', 'chosen_vs_zs', 'y'), "37"),
+    ("z1b: sign p", zrow('z1_flower', 'read_b', 'chosen_vs_zs', 'sign_p'), "0.071"),
+    ("z1b: li", zrow('z1_flower', 'read_b', 'chosen_vs_li', 'y'), "51"),
+    ("z2: delta", zrow('z2_pilot', 'read_pi05_libero', 'totals', 'delta'), "80"),
+    ("z2: zs", zrow('z2_pilot', 'read_pi05_libero', 'totals', 'zs'), "67"),
+    ("z2: replace", zrow('z2_pilot', 'read_pi05_libero', 'totals', 'replace'), "57"),
+    ("z2: phase", zrow('z2_pilot', 'read_pi05_libero', 'totals', 'phase'), "77"),
+    ("zu: familiar approach top-1", zrow('zu_read', 'identity', 'identity', 'familiar/approach', 'top1'), "0.43"),
+    ("zu: familiar approach chance", zrow('zu_read', 'identity', 'identity', 'familiar/approach', 'chance'), "0.04"),
+    ("zu: familiar carry top-1", zrow('zu_read', 'identity', 'identity', 'familiar/carry', 'top1'), "0.60"),
+    ("zu: familiar carry chance", zrow('zu_read', 'identity', 'identity', 'familiar/carry', 'chance'), "0.22"),
+    ("zu: l90 approach top-1", zrow('zu_read', 'identity', 'identity', 'l90/approach', 'top1'), "0.18"),
+    ("zu: l90 approach chance", zrow('zu_read', 'identity', 'identity', 'l90/approach', 'chance'), "0.03"),
+    ("zu: l90 carry top-1", zrow('zu_read', 'identity', 'identity', 'l90/carry', 'top1'), "0.31"),
+    ("zu: l90 carry chance", zrow('zu_read', 'identity', 'identity', 'l90/carry', 'chance'), "0.17"),
+    ("zu: kcut sig grasp", zrow('zu_read', 'kcut', 'sig', 'grasp'), "0.24"),
+    ("zu: kcut lat grasp", zrow('zu_read', 'kcut', 'lat', 'grasp'), "0.25"),
+    ("zu: kcut random grasp", zrow('zu_read', 'kcut', 'random', 'grasp'), "0.30"),
+    ("zu: kcut act grasp", zrow('zu_read', 'kcut', 'act', 'grasp'), "0.58"),
+    ("zu: sweep label grasp", zrow('zu_read', 'sweep', 'label/4', 'grasp'), "0.36"),
+    ("zu: sweep random grasp", zrow('zu_read', 'sweep', 'label/4', 'grasp_random'), "0.28"),
+    ("zu: sweep label release", zrow('zu_read', 'sweep', 'label/4', 'release'), "0.14"),
+    ("zu: sweep random release", zrow('zu_read', 'sweep', 'label/4', 'release_random'), "0.24"),
+    ("z3: pointers", zrow('z3_l90_pointers', 'read', 'pointers_vs_zs', 'x'), "233"),
+    ("z3: zs", zrow('z3_l90_pointers', 'read', 'pointers_vs_zs', 'y'), "245"),
+    ("z3: n", zrow('z3_l90_pointers', 'read', 'pointers_vs_zs', 'n'), "500"),
+    ("z3: sign p", zrow('z3_l90_pointers', 'read', 'pointers_vs_zs', 'sign_p'), "0.15"),
+    ("z3: library", zrow('z3_l90_pointers', 'read', 'pointers_vs_library', 'y'), "406"),
+    ("z3: lora", zrow('z3_l90_pointers', 'read', 'pointers_vs_lora', 'y'), "397"),
+    ("z4: prog", zrow('z4_programs', 'pilot', 'totals', 'prog'), "43"),
+    ("z4: zs", zrow('z4_programs', 'pilot', 'totals', 'zs'), "37"),
+    ("split: pi05 chosen G1+G2", zsplit('Li OOD G15 (pi0.5)', ('G1', 'G2'), 'chosen'), "312"),
+    ("split: pi05 zs G1+G2", zsplit('Li OOD G15 (pi0.5)', ('G1', 'G2'), 'zs'), "143"),
+    ("split: pi0 chosen G1+G2", zsplit('Li OOD G15 (pi0)', ('G1', 'G2'), 'chosen'), "336"),
+    ("split: pi0 zs G1+G2", zsplit('Li OOD G15 (pi0)', ('G1', 'G2'), 'zs'), "35"),
+    ("split: smolvla chosen", zsplit('Li OOD G18 (SmolVLA)', ('G1', 'G2'), 'chosen'), "96"),
+    ("split: xvla chosen", zsplit('Li OOD G18 (X-VLA)', ('G1', 'G2'), 'chosen'), "256"),
+    ("split: xvla zs", zsplit('Li OOD G18 (X-VLA)', ('G1', 'G2'), 'zs'), "80"),
+    ("split: z3 G3 pointers", zsplit('Z3 pointers, zero fit (pi0.5)', ('G3',), 'pointers'), "67"),
+    ("split: z3 G3 zs", zsplit('Z3 pointers, zero fit (pi0.5)', ('G3',), 'zs'), "68"),
+    ("split: z3 G3 library", zsplit('Z3 pointers, zero fit (pi0.5)', ('G3',), 'library'), "154"),
+    ("split: g8 G3 leaves", zsplit('G8 LIBERO-90 set d (pi0.5)', ('G3',), 'leaves'), "225"),
+    ("split: g8 G3 zs", zsplit('G8 LIBERO-90 set d (pi0.5)', ('G3',), 'zs'), "90"),
+    ("split: g8 G4 leaves", zsplit('G8 LIBERO-90 set d (pi0.5)', ('G4',), 'leaves'), "455"),
+    ("split: g8 G4 zs", zsplit('G8 LIBERO-90 set d (pi0.5)', ('G4',), 'zs'), "117"),
     ("g22 pi05: goal zs", lambda: (float(_row("g22_libero_pro", "read_pi05")["per_suite"]["goal"]["pro_zs"]), 0.0, 1), "0.20"),
     ("g22 pi05: goal old", lambda: (float(_row("g22_libero_pro", "read_pi05")["per_suite"]["goal"]["pro_origprompt"]), 0.0, 1), "0.09"),
     ("g22 pi05: goal sys", lambda: (float(_row("g22_libero_pro", "read_pi05")["per_suite"]["goal"]["pro_system"]), 0.0, 1), "0.31"),

@@ -1,68 +1,71 @@
 # lifelong-ood-learner
 
-**Compositional continual learning for a frozen robot policy.** A new task arrives with its instruction, its scene and at most ONE
-demonstration ([docs/THE_TASK.md](docs/THE_TASK.md)). The frozen policy (pi0.5 on LIBERO-90) takes it on by composing small,
-shared prototypes it has learned from earlier tasks; the demonstration is requested only when what the learner already holds fails
-its own practice, and it updates every concept it belongs to. After Wang et al. (prototypes of a frozen generative model, selected
-and composed per out-of-distribution task) with the mechanism they lack: new primitives detected by practice, consolidated into
-concepts, reused by later tasks.
+**Out-of-distribution learning is composition.** A frozen flow-matching robot policy meets tasks it was never trained on and
+takes them on by composing what it already holds, creating new units only where nothing it holds explains the task.
 
-## The method ([docs/METHOD.md](docs/METHOD.md))
+Robot manipulation is the testbed. A LIBERO task is a composition of parts (an object and its location, a goal relation and its
+location, a scene). The policy's 40 training tasks expose the parts, and every test task is graded by which parts and relations
+it leaves unseen ([docs/SPLIT.md](docs/SPLIT.md)). The question, after Fodor's systematicity and the task-to-task transfer
+documented in cognitive psychology: how does prior knowledge donate expertise to a task it was never learned for, and what must be
+created when it cannot?
 
-- **Factor every step at the policy's own grasp.** Before the grasp an OBJECT prototype acts (how to reach and grasp this object;
-  an INSTANCE child when the instruction names one, "the middle black bowl"); from the grasp to the release a GOAL prototype acts
-  (where to carry it). Each is a rank-4 LoRA on the action expert, consolidated over every demonstration of its concept.
-- **Keep only what practice validates.** Ten practice episodes decide between the policy and the composition; the policy is kept
-  wherever the composition does not beat it.
-- **Learn as a stream.** An arrival composes from the current library; it asks for its one demonstration only when neither the
-  policy nor the composition reaches 8 of 10 in practice; the demonstration refits every concept on its path.
+## Two schemes, one framework
 
-## Where it stands (every number from `ledger/`, audited)
+The framework is architecture-agnostic: all it needs from a policy is a way to extract units. It runs on five frozen
+flow-matching policies (pi0.5, pi0, SmolVLA, X-VLA, GR00T N1.5; FLOWER on its one suite).
 
-| claim | evidence |
-|---|---|
-| composition beats the policy on tasks it fails | kept library 499 of 600 against 273 zero-shot, on start states no design decision saw (`ledger/e3_hier`) |
-| close to a separate adapter per task, at a fifth of the storage of rank-16 adapters and three quarters of rank-4 ones | 480 against 494 of 580 for the per-task LoRA with the same acceptance test (difference -0.024, 95% interval -0.074 to 0.024); 22 prototypes, 102.9 MB, against 29 rank-16 adapters, 545.4 MB (against rank-4 adapters level, 480 against 480 of 580 and 102.9 MB against 135.7 MB; `ledger/g9_rank4lora`). Non-inferiority at the margin of 0.05 is NOT established |
-| learned as a stream, nothing damaged | the request rule of the thesis: 17 and 16 demonstrations in two orders (21 and 20 under the earlier rule); no damage to earlier arrivals in either order (`ledger/w1_stream`) |
-| replication on 37 new tasks | 451 of 740 against 151 zero-shot; 451 against 441 for the per-task LoRA with acceptance; pooled over 66 tasks 931 against 935 of 1,320 (difference -0.003, 95% interval -0.063 to 0.058): level, non-inferiority at 0.05 just missed (`ledger/e5_replicate`) |
-| recombination of concepts learned only from OTHER tasks (5-fold held out, 53 tasks) | alone, level with the policy (365 against 354 of 1,060: the pre-registered test fails); with practice choosing, 484 against 354; on the tasks the policy fails, 145 against 25 (exploratory); factorisation beats a monolithic adapter on the same data, 365 against 190 (`ledger/g0_recombine`); summing donor adapters collapses (71), averaging them stays at the policy's level (328) (`ledger/g2_baselines`) |
-| other flow-matching policies (SmolVLA, pi0) | the same library refit: SmolVLA 203 of 600 against 20 alone, 189 against 274 of 580 for its per-task LoRA with acceptance; pi0 324 against 85 alone, 308 against 330 for its per-task LoRA (`ledger/g3_crossmodel`). Scope: flow-matching and diffusion policies only (docs/PLAN_GENERALIZE.md) |
-| against DSRL and STRAP | the library 499 of 600 against 314 for DSRL steering the frozen policy from 100 practice episodes (`ledger/g7_dsrl`); 480 against 296 of 580 for STRAP with acceptance (`ledger/g6_strap`); DSRL steering each task's one-demo adapter leads, 503 against 480 (difference -0.040, 95% interval -0.098 to 0.012) |
-| a published compositional OOD benchmark (Li's LIBERO-Goal-OOD and -Spatial-OOD, 20 tasks, no demonstration) | prototypes of concepts the policy already holds learn nothing (154 against 157 of 400); composing the policy's OWN fields under each concept's training instruction, switched at the grasp, with practice choosing: 174 against 147 of 400 (difference 0.068, 95% interval 0.007 to 0.145; `ledger/g4_ood` tag read_field); on pi0 98 against 35 and on SmolVLA 25 against 8 |
-| beats a per-task adapter, with task leaves | the hierarchy with a one-demonstration leaf kept only where practice prefers it: 994 against 932 of 1,320 for the per-task LoRA with acceptance on new start states (difference 0.047, 95% interval 0.008 to 0.091; superior), 675.9 MB against 902.8 MB (`ledger/g8_leaves`) |
-| practice chooses the held concepts' sources (Li's OOD suites) | no hand labels: pi0.5 269 of 400 against 222 for Li's hand-chosen pairs (difference 0.117, 95% interval 0.022 to 0.240) and 147 for the policy alone; pi0 292 against 305 for Li's pairs (level with Li's fixed-step operator, 292) (`ledger/g4_ood` tags read_g10_*) |
-| one learner over both kinds of task | a joint stream of 50 arrivals (Li's 20 OOD tasks and W1's 30 LIBERO-90 tasks): 17 and 16 demonstrations, served 641 and 672 of 1,000 against 420 for the policy alone (`ledger/u1_joint`) |
-| limits | a new object needs its one demonstration (object prototypes do not transfer between objects, `ledger/t0_transfer`); selecting prototypes by a demonstration's likelihood, as Wang et al. do, is at chance here (`ledger/w0_select`) |
+| | units come from | held units | new units |
+|---|---|---|---|
+| **supervised** ([docs/METHOD.md](docs/METHOD.md)) | the instruction: object, instance, goal, switched at the policy's own grasp | pointers to the policy's field under a training instruction (zero bytes) | rank-4 prototypes and task leaves, fitted on the one demonstration |
+| **unsupervised** ([docs/UNSUPERVISED.md](docs/UNSUPERVISED.md)) | the demonstration: cut at its contact events, each segment named by the policy's own likelihood | pointer programs advanced at the policy's gripper events | fitted units, one per unexplained segment |
 
-## How to view everything
+In both schemes:
+- practice chooses sources and operators;
+- the policy's likelihood decides held vs new;
+- every unit gets a donation analysis: what it contributes, to which axis, in which phase, and by which relation to the task
+  ([docs/INTERPRETATION.md](docs/INTERPRETATION.md); `experiments/zi_blend.py`).
+
+## What the grade predicts (docs/SPLIT.md)
+
+| unseen | composing held units, nothing fitted | creating units |
+|---|---|---|
+| a relation or a binding, familiar scene (G1, G2: Li et al.'s 20 recombinations) | pi0.5 312 vs 143 of 400 for the policy alone; pi0 336 vs 35; SmolVLA 96 vs 5; X-VLA 256 vs 80 | not needed |
+| the scene (G3) | 8 LIBERO-90 tasks: 67 vs 68 for the policy alone | the same 8: library 154; all 15 G3 tasks: leaves 225 vs 90 |
+| a part (G4) | 2 tasks: 0 vs 4 | 31 tasks: leaves 455 vs 117 |
+
+## Where to look
 
 | what | where |
 |---|---|
-| the readable account, every figure and number | the results page, https://claude.ai/artifact/9TTYizddrmLnsA6GxuLeQk (built by `experiments/paper_page.py`) |
-| every read ever run, in order, with its ledger tags | [docs/RESULTS.md](docs/RESULTS.md) |
-| the documents, current and retired | [docs/README.md](docs/README.md) |
-| what is running now, and which reads are recorded | `python experiments/status.py` |
+| the paper page, every figure and number | https://claude.ai/artifact/9TTYizddrmLnsA6GxuLeQk (built by `experiments/paper_page.py`) |
+| the paper draft | [paper/DRAFT.md](paper/DRAFT.md) |
+| every read, in order, with its ledger tags | [docs/RESULTS.md](docs/RESULTS.md) |
+| the documents | [docs/README.md](docs/README.md); the active plan [docs/PLAN_Z.md](docs/PLAN_Z.md) |
+| the scripts, by plan | [experiments/README.md](experiments/README.md) |
+| what is running now | `python experiments/status.py` |
 | the raw rows | `ledger/<experiment>/`; pre-registrations in `ledger/m3_prereg/` (written by `experiments/prereg/*.py` before any episode) |
 
 ## Reproduce
 
     PY=$HOME/flash/miniconda3/envs/chunks/bin/python
-    $PY experiments/e3_read.py --plan --fit && $PY experiments/e3_read.py --accept --test && $PY experiments/e3_read.py --read
-    setsid nohup $PY experiments/w1_stream.py --run > results/robot/w1_driver.log 2>&1 &     # a stream: resumable, survives logout
-    $PY experiments/status.py                                                               # progress of every running read
-    $PY experiments/audit_numbers.py && $PY experiments/audit_coverage.py                   # every quoted number against the ledger
-    $PY experiments/paper_page.py                                                           # rebuild the results page
+    $PY experiments/split_grades.py                                    # the graded split, every result stratified
+    $PY experiments/g18_four_policies.py --read                        # the OOD system on each policy (G15 for pi0.5 / pi0)
+    $PY experiments/g8_leaves.py --read                                # LIBERO-90: library, leaves, LoRA
+    $PY experiments/audit_numbers.py && $PY experiments/audit_coverage.py   # every quoted number against the ledger
+    $PY experiments/paper_page.py                                      # rebuild the results page
 
-Rollouts run on SLURM (`slurm/jobs/robot_gpu.sbatch`, `experiments/launch_pack.py`); generated outputs (videos, packs, logs,
-weights) live in `results/robot/` and are not tracked.
+Rollouts run on SLURM (`slurm/jobs/robot_gpu.sbatch`, `experiments/launch_pack.py`). Unit fits use `experiments/c0_fit.py
+--cache` (the frozen prefix cached once; [docs/FIT_TIME.md](docs/FIT_TIME.md)). Generated outputs (videos, packs, logs, weights)
+live in `results/robot/` and are not tracked.
 
 ## Layout
 
-    lifelong_ood/policy/      the frozen policy (backbone.py), adapters (adapt.py), primitives and their keys (primitives.py),
-                              demonstrations per task and scene (data.py), attention binding, serving hooks
+    lifelong_ood/policy/      the backbones (backbone*.py: pi0 / pi0.5, SmolVLA, X-VLA, GR00T, FLOWER), adapters (adapt.py),
+                              concepts and their keys (primitives.py), segmentation (segment.py), pointer programs (program.py),
+                              operators (tli.py, held_ops.py, bind.py), serving hooks, demonstrations (data.py), factors.py
     lifelong_ood/ledger.py    the tracked results ledger;  lifelong_ood/stats.py: paired sign tests, two-level bootstrap
-    experiments/              one script per read (e*_read.py, *_stream.py, w0/t0 probes), prereg/, audits, launch_pack.py
-    experiments/report/       the results page: base.py (helpers, page), charts.py, current.py, history.py, style.css
-    docs/                     METHOD, THE_TASK, RESULTS, plans of the current program; docs/history/ the retired plans
+    experiments/              one script per read, grouped by plan prefix (experiments/README.md); prereg/, audits, report/
+    docs/                     current documents (docs/README.md); docs/history/ the superseded plans
+    paper/                    the draft and its audited numbers
     ledger/                   one small JSON per run, tracked
-    archive/                  the earlier repositories and programs, with their claim maps
+    archive/                  earlier programs and unused scripts;  vendor/wheels/  offline wheels for the figure toolchain

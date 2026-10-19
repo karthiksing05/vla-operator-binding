@@ -1,4 +1,4 @@
-"""H1 (A): what a prototype DONATES to the frozen pi0.5 (exploratory, offline; docs/PLAN_H.md section H1.1).
+"""H1 (A): what a prototype DONATES to the frozen pi0.5 (exploratory, offline; docs/history/PLAN_H.md section H1.1).
 
 Question.  Each prototype of the LIBERO-90 library (a rank-4 LoRA on the action expert, results/robot/prim_<name>_0.pt; the
 object, instance and goal prototypes that e3_plan.json and e5_plan.json name) changes the policy's velocity field during one

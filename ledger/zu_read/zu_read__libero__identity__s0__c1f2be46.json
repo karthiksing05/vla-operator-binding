@@ -1,0 +1,96 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/zu_identity.py --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "zu_read",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {},
+ "metrics": {
+  "flip": {
+   "familiar": {
+    "cut_near": 0.5,
+    "n": 4,
+    "post_max": 2.191765785217285,
+    "post_min": 0.8852589130401611,
+    "rise": 1.0,
+    "rise_max": 3.9846670627593994,
+    "rise_min": 0.17121434211730957
+   },
+   "l90": {
+    "cut_near": 0.05,
+    "n": 20,
+    "post_max": 0.613335132598877,
+    "post_min": -0.18740299344062805,
+    "rise": 0.65,
+    "rise_max": 1.8716329336166382,
+    "rise_min": -0.8131847381591797
+   }
+  },
+  "identity": {
+   "familiar/approach": {
+    "chance": 0.036630036630036625,
+    "median_rank": 2.0,
+    "n": 7,
+    "top1": 0.42857142857142855
+   },
+   "familiar/carry": {
+    "chance": 0.21538461538461534,
+    "median_rank": 0.0,
+    "n": 15,
+    "top1": 0.6
+   },
+   "l10/carry": {
+    "chance": 0.2435897435897436,
+    "median_rank": 0.0,
+    "n": 4,
+    "top1": 0.75
+   },
+   "l90/approach": {
+    "chance": 0.030681818181818175,
+    "median_rank": 8.5,
+    "n": 44,
+    "top1": 0.18181818181818182
+   },
+   "l90/carry": {
+    "chance": 0.16571428571428568,
+    "median_rank": 2.0,
+    "n": 35,
+    "top1": 0.3142857142857143
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "zu_read__libero__identity__s0__c1f2be46",
+ "schema": 1,
+ "script": "experiments/zu_identity.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T22:38:27+00:00",
+ "stream": null,
+ "tag": "identity"
+}

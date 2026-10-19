@@ -1,4 +1,4 @@
-"""Plan G, read G3 (docs/PLAN_GENERALIZE.md; ledger m3_prereg tag g3_crossmodel): the hierarchical factored library on ANOTHER
+"""Plan G, read G3 (docs/history/PLAN_GENERALIZE.md; ledger m3_prereg tag g3_crossmodel): the hierarchical factored library on ANOTHER
 policy.  E3's library (the same concepts, the same demonstrations of each concept) refit on SmolVLA (LeRobot's smolvla_libero,
 trained on the same 40 LIBERO tasks as pi0.5), against SmolVLA's own per-task LoRA, on the stream's 30 tasks, E3's stored practice
 states and fresh start states (set b) at E3's noise seed -- so each episode pairs with pi0.5's on the same start state.

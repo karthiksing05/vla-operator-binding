@@ -1,0 +1,251 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/z4_programs.py --read --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "z4_programs",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {},
+ "metrics": {
+  "programs": {
+   "0": [
+    7
+   ],
+   "1": [
+    20,
+    8,
+    1
+   ],
+   "11": [
+    12
+   ],
+   "16": [
+    31,
+    16,
+    17
+   ],
+   "17": [
+    2,
+    6,
+    8,
+    11,
+    13
+   ],
+   "20": [
+    14,
+    2,
+    1
+   ],
+   "21": [
+    33,
+    20,
+    19,
+    30,
+    15
+   ],
+   "22": [
+    11
+   ],
+   "23": [
+    5
+   ],
+   "28": [
+    12
+   ],
+   "3": [
+    27,
+    18,
+    19
+   ],
+   "33": [
+    37,
+    9,
+    4
+   ],
+   "35": [
+    4
+   ],
+   "39": [
+    12,
+    9
+   ],
+   "4": [
+    27,
+    9,
+    8
+   ],
+   "44": [
+    1,
+    0
+   ],
+   "45": [
+    6,
+    4,
+    19,
+    2,
+    2
+   ],
+   "5": [
+    13,
+    8,
+    19
+   ],
+   "6": [
+    19
+   ],
+   "63": [
+    5,
+    6,
+    13,
+    38,
+    2
+   ],
+   "64": [
+    2,
+    0,
+    13,
+    39,
+    36
+   ],
+   "7": [
+    12
+   ],
+   "8": [
+    19,
+    19,
+    16
+   ]
+  },
+  "rows": {
+   "0": {
+    "prog": 0,
+    "zs": 1
+   },
+   "1": {
+    "prog": 0,
+    "zs": 0
+   },
+   "11": {
+    "prog": 7,
+    "zs": 0
+   },
+   "16": {
+    "prog": 2,
+    "zs": 0
+   },
+   "17": {
+    "prog": 0,
+    "zs": 0
+   },
+   "20": {
+    "prog": 10,
+    "zs": 10
+   },
+   "21": {
+    "prog": 0,
+    "zs": 0
+   },
+   "22": {
+    "prog": 0,
+    "zs": 10
+   },
+   "23": {
+    "prog": 0,
+    "zs": 0
+   },
+   "28": {
+    "prog": 1,
+    "zs": 2
+   },
+   "3": {
+    "prog": 0,
+    "zs": 0
+   },
+   "33": {
+    "prog": 3,
+    "zs": 9
+   },
+   "35": {
+    "prog": 1,
+    "zs": 0
+   },
+   "39": {
+    "prog": 0,
+    "zs": 0
+   },
+   "4": {
+    "prog": 0,
+    "zs": 0
+   },
+   "44": {
+    "prog": 9,
+    "zs": 1
+   },
+   "45": {
+    "prog": 0,
+    "zs": 0
+   },
+   "5": {
+    "prog": 0,
+    "zs": 0
+   },
+   "6": {
+    "prog": 0,
+    "zs": 0
+   },
+   "63": {
+    "prog": 4,
+    "zs": 0
+   },
+   "64": {
+    "prog": 0,
+    "zs": 4
+   },
+   "7": {
+    "prog": 6,
+    "zs": 0
+   },
+   "8": {
+    "prog": 0,
+    "zs": 0
+   }
+  },
+  "totals": {
+   "prog": 43,
+   "zs": 37
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "z4_programs__libero_90__pilot__s13__c1f2be46",
+ "schema": 1,
+ "script": "experiments/z4_programs.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-19T22:40:51+00:00",
+ "stream": null,
+ "tag": "pilot"
+}

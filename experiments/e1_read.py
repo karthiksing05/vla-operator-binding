@@ -1,4 +1,4 @@
-"""Plan E's main read (ledger m3_prereg tag e1_factored; docs/PLAN_FACTORED.md): the FACTORED LIBRARY against the per-task LoRA.
+"""Plan E's main read (ledger m3_prereg tag e1_factored; docs/history/PLAN_FACTORED.md): the FACTORED LIBRARY against the per-task LoRA.
 
 Every task is the composition of two consolidated prototypes, both fitted on each task's OWN scene's demonstration
 (data.episodes_of_task; ledger l90_scenes): its OBJECT primitive (rank-4 LoRA on the approach frames of every LIBERO-90

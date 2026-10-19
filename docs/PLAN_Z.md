@@ -60,7 +60,7 @@ the share of OOD tasks learned with zero gradient steps, and its success relativ
 
 | step | what | gate / kill |
 |---|---|---|
-| U1 | Cost matrix: the frozen pi0.5's flow loss at every 2nd frame of a demo under each of its 40 training instructions (`experiments/u1_score.py`, kept). Demos: LIBERO-90 (one each), LIBERO-10 (two-step, own instruction column excluded), and the 20 OOD tasks' demos | — |
+| U1 | Cost matrix: the frozen pi0.5's flow loss at every 2nd frame of a demo under each of its 40 training instructions (`experiments/zu_score.py`, kept). Demos: LIBERO-90 (one each), LIBERO-10 (two-step, own instruction column excluded), and the 20 OOD tasks' demos | — |
 | U1r | Segment with `segment.label_viterbi` (switch cost λ, one λ for all demos via `normalise`). Score boundaries against the gripper's sustained grasps and releases (scoring only) | Kill the label-switch segmenter if grasp recall at ±10 frames < 0.6 on pick-and-place. Fallback: `level_partition` on the best-field loss, or change points of the empty-prompt latent |
 | U2 | Units. Each segment is labelled held (its best field's loss within the I6 calibrated threshold → a pointer, 0 bytes) or new. Cluster new segments across tasks (span latent + action statistics) | Report units per task vs the supervised library (48 prototypes for 66 tasks) and the reuse rate. The out-of-template tasks (drawers, knobs, pushes, two-step) are the point |
 | U3 | Online, pre-registered: switch held pointers at the DISCOVERED boundaries instead of the grasp, on the 20 OOD tasks (fresh set g). Then on out-of-template LIBERO-90 / LIBERO-10 tasks the grammar cannot express | U3a: non-inferior (−0.05) to the grasp switch. U3b: beats zs and the policy under the task's own instruction |
@@ -86,8 +86,8 @@ weights; `poe.py`'s form), fitted to the demo by flow loss on stored velocities.
 
 | step | what |
 |---|---|
-| I1 | Expert velocities on the demos: `experiments/i1_velocities.py`. Familiar scenes l40 (own instruction held out as a ceiling); LIBERO-90 Z3 tasks |
-| I2 | `experiments/i1_blend.py`. Held-out loss: blend vs hard switch vs uniform superposition vs each expert. Per expert: weights per segment × dim; exact Shapley donation per segment × {position, rotation, gripper}; donation share by the expert's relation to the task (shares object / goal / both / neither); object × goal Shapley interaction (synergy vs redundancy) |
+| I1 | Expert velocities on the demos: `experiments/zi_velocities.py`. Familiar scenes l40 (own instruction held out as a ceiling); LIBERO-90 Z3 tasks |
+| I2 | `experiments/zi_blend.py`. Held-out loss: blend vs hard switch vs uniform superposition vs each expert. Per expert: weights per segment × dim; exact Shapley donation per segment × {position, rotation, gripper}; donation share by the expert's relation to the task (shares object / goal / both / neither); object × goal Shapley interaction (synergy vs redundancy) |
 | I3 | Donation in behaviour: the fitted blend served online (vs hard switch, zs). Per expert, the ablated blend's change in success and in the end effector's path toward the object / the place (h1_donate's measures) |
 | I4 | The same donation decomposition for the splice (per layer, per word) and for fitted prototypes (h1_donate), so every operator gets one donation table |
 

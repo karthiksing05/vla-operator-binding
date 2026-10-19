@@ -1,5 +1,5 @@
 """Plan Z, track I (docs/PLAN_Z.md): the experts' velocity fields on a demonstration, for the soft blend and its donation analysis
-(experiments/i1_blend.py).  Offline, GPU.
+(experiments/zi_blend.py).  Offline, GPU.
 
 Per demo (results/robot/u1/<set>_<task>_d0.npz gives its U1 scores): the EXPERTS are the frozen pi0.5 under
     the top --topk training instructions by mean flow loss over each contact segment (lifelong_ood/policy/program.py's cuts; the
@@ -10,7 +10,7 @@ real action dims and the target u = eps - a.  Saves results/robot/i1/<set>_<task
     v [F, E, K, H, 7], u [F, K, H, 7], t [F, K], experts (prompt texts), expert_ids (training index, -1 own, -2 empty),
     frames, segments, actions, state(ee pose), text
 
-    sbatch ... SCRIPT="experiments/i1_velocities.py --set l40 --tasks 10-19"
+    sbatch ... SCRIPT="experiments/zi_velocities.py --set l40 --tasks 10-19"
 """
 import argparse
 import os
@@ -45,7 +45,7 @@ def experts_of(z, topk, own_excluded):
 
 
 def main():
-    import u1_score as U
+    import zu_score as U
     ap = argparse.ArgumentParser()
     ap.add_argument("--set", default="l40", choices=["l90", "l40"])
     ap.add_argument("--tasks", required=True)

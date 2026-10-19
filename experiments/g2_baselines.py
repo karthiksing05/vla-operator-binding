@@ -1,4 +1,4 @@
-"""Plan G, read G2 (docs/PLAN_GENERALIZE.md; ledger m3_prereg tag g2_baselines): composition baselines from the literature on G0's
+"""Plan G, read G2 (docs/history/PLAN_GENERALIZE.md; ledger m3_prereg tag g2_baselines): composition baselines from the literature on G0's
 held-out tasks.  For each eligible task of G0, an OBJECT donor (a task outside its fold with the same object concept, preferring a
 different goal) and a GOAL donor (outside the fold, same goal, preferring a different object), both with a per-task LoRA on their own
 scene's demonstration.  Arms: lorasum (task arithmetic: both LoRAs on at full weight) and loraavg (both at weight 1/2), always on --

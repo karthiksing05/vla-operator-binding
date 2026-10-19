@@ -1,4 +1,4 @@
-"""Plan W, read W2 (docs/PLAN_WANG.md): W1's stream with RE-VALIDATION -- nothing damaged.  E4 showed the failure: an arrival
+"""Plan W, read W2 (docs/history/PLAN_WANG.md): W1's stream with RE-VALIDATION -- nothing damaged.  E4 showed the failure: an arrival
 kept on a composition whose concepts later arrivals refit can fall from 13 of 20 to 0 (ledger e4_stream, order b).  Here, after
 every refit, each earlier arrival served by the library whose composition CHANGED re-runs its practice (stored states 0-9, 10
 episodes, noise seed 13) with the new composition, and must pass the rule it was kept under (beat the policy; and, without a

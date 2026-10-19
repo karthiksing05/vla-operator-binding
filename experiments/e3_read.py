@@ -1,4 +1,4 @@
-"""Plan E's confirmatory read (ledger m3_prereg tag e3_hier; docs/PLAN_FACTORED.md): the HIERARCHICAL factored library against the
+"""Plan E's confirmatory read (ledger m3_prereg tag e3_hier; docs/history/PLAN_FACTORED.md): the HIERARCHICAL factored library against the
 per-task LoRA, on a SECOND set of fresh start states that no design decision has seen (results/robot/fresh_states_b, LIBERO's
 placement sampler at seeds 200000-200019).
 

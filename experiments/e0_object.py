@@ -1,4 +1,4 @@
-"""Plan E, screen E0 (EXPLORATORY; docs/PLAN_FACTORED.md): the OBJECT primitive.  D1 left the whole gap to the per-task LoRA on
+"""Plan E, screen E0 (EXPLORATORY; docs/history/PLAN_FACTORED.md): the OBJECT primitive.  D1 left the whole gap to the per-task LoRA on
 the approach (the policy grasps the wrong object: the milk for the orange juice, the alphabet soup for the ketchup).  The object
 primitive is the approach's counterpart of the goal primitive: a rank-4 LoRA fitted only on demonstrations' frames BEFORE their
 first grasp, keyed by the step's object (verb|object, the instance qualifier left out; primitives.object_key), consolidated over

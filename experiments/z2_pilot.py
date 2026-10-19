@@ -88,6 +88,11 @@ def read():
         print(k, v["language"], s[k], rows[k])
     print("totals", tot)
     json.dump(dict(rows=rows, totals=tot, sources=s), open(os.path.join(R, f"z2_pilot_{BB}.json"), "w"), indent=1)
+    if "--record" in sys.argv:
+        from lifelong_ood import ledger
+        print(ledger.record("z2_pilot", bench="libero_ood", tag=f"read_{BB}", seed=13, metrics=dict(rows=rows, totals=tot, sources=s),
+                            bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config=dict(backbone=BB),
+                            script="experiments/z2_pilot.py", command=" ".join(sys.argv)))
 
 
 if __name__ == "__main__":

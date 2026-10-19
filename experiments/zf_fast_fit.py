@@ -1,7 +1,7 @@
-"""Plan F1, step 3: the confirmatory test of the fast fit recipe (pre-registered: experiments/prereg/f1_fast_fit.py, ledger m3_prereg
+"""Plan F1, step 3: the confirmatory test of the fast fit recipe (pre-registered: experiments/prereg/zf_fast_fit.py, ledger m3_prereg
 tag f1_fast_fit).  docs/FIT_TIME.md.
 
-H1 (library): E3's 22 prototypes refit with the fast recipe (RECIPE; chosen by experiments/f1_levers.py on E5's units only) as
+H1 (library): E3's 22 prototypes refit with the fast recipe (RECIPE; chosen by experiments/zf_levers.py on E5's units only) as
 prim_<name>F1_0.pt, ledger rows f1_fit.  The fast library's composition (arm fac@<object>F1.<goal>F1) on E3's 29 tasks with a
 per-task LoRA, fresh start states set b (results/robot/fresh_states_b), 20 per task, noise seed 13, paired by state with E3's own
 library's composition episodes (e3_main, arm fac@<object>.<goal>).  Non-inferiority: task-level bootstrap 95% lower bound of
@@ -11,13 +11,13 @@ f1_accept) and the kept arm against E3's kept arm; the 30th task (no LoRA); fit 
 
 H2 (leaves, rank 4): G8's rule (keep the best of the policy, the composition and the leaf on the stored acceptance states; ties to
 the policy, then the composition) with RANK-4 leaves: E3's tasks reuse G9's rank-4 LoRAs (r3_lora_<t>_r4.pt) and acceptance
-(g9_accept, seed 13); E5's 37 tasks get rank-4 leaves (experiments/f1_leaf_fit.py: r3_fewshot.py --rank 4, r3_lora_<t>_f1r4.pt)
+(g9_accept, seed 13); E5's 37 tasks get rank-4 leaves (experiments/zf_leaf_fit.py: r3_fewshot.py --rank 4, r3_lora_<t>_f1r4.pt)
 and acceptance on E5's acceptance states and seed (f1_leaf_accept, seed 14, as e5_accept).  Test on G8's set d (fresh_states_d, 20
 per task, seed 13) only where the rank-4 rule keeps the leaf (f1_leaf_main); elsewhere the kept arm's G8 episodes (g8_main) are the
 test.  Against G8's rule with rank-16 leaves (g8_main), paired by state on the 66 tasks: non-inferiority at -0.05.
 
-    $PY experiments/f1_fast_fit.py --run >> results/robot/f1/f1_fast_fit.log 2>&1 &   # detached: fits, waits, launches, reads
-    $PY experiments/f1_fast_fit.py --read [--record]
+    $PY experiments/zf_fast_fit.py --run >> results/robot/f1/f1_fast_fit.log 2>&1 &   # detached: fits, waits, launches, reads
+    $PY experiments/zf_fast_fit.py --read [--record]
 """
 import json
 import os
@@ -26,11 +26,11 @@ import sys
 import time
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-import f1_common as F                                               # noqa: E402
+import zf_common as F                                               # noqa: E402
 
 ROOT, R = F.ROOT, F.R
 SEED, SUFFIX = 13, "F1"
-RECIPE = None                       # filled from the lever read before the registration: dict(steps=, init=, flags=)
+RECIPE = dict(steps=200, init="scratch")   # from the lever read (ledger f1_levers tag read): scratch at 200 steps, held-out loss -47% mean, -32% worst against the 1,000-step fit
 LEAF_ARM_E3, LEAF_ARM_E5 = "lorat@_r4", "lorat@_f1r4"
 LOG = os.path.join(F.F1, "f1_fast_fit.log")
 
@@ -79,7 +79,7 @@ def leaf_fit():
     jobs = {}
     for t in sorted(F.E5PLAN, key=int):
         if not os.path.exists(os.path.join(R, f"r3_lora_{t}_f1r4.pt")):
-            jobs[t] = F.sbatch(f"experiments/f1_leaf_fit.py --task {t}")
+            jobs[t] = F.sbatch(f"experiments/zf_leaf_fit.py --task {t}")
             say("leaf fit", t, jobs[t])
     return jobs
 
@@ -251,7 +251,7 @@ def read(record):
         from lifelong_ood import ledger
         say(ledger.record("f1_fast_fit", bench="libero_90", tag="read", seed=SEED, metrics=res,
                           bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config=dict(recipe=RECIPE),
-                          script="experiments/f1_fast_fit.py", command=" ".join(sys.argv)))
+                          script="experiments/zf_fast_fit.py", command=" ".join(sys.argv)))
     return res
 
 

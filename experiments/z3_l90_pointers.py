@@ -2,7 +2,7 @@
 and goal concepts are both held as words in pi0.5's 40 training instructions, the policy's own fields under two training
 instructions, switched at the grasp (pfield@<object source>.<goal source>); nothing is fitted.  The demonstration is used only as
 a query: each source is the candidate instruction (holding the concept) with the lowest mean flow loss on the demo
-(experiments/u1_score.py's scores).  Test on set d, 20 per task, noise seed 13 -- the start states on which G8 tested the policy,
+(experiments/zu_score.py's scores).  Test on set d, 20 per task, noise seed 13 -- the start states on which G8 tested the policy,
 the fitted library and the per-task LoRA (ledger g8_main).
 
     $PY experiments/z3_l90_pointers.py --launch | --read [--record]
