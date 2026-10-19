@@ -16,7 +16,8 @@ secs = list(current.SECTIONS)
 i = next(k for k, x in enumerate(secs) if x[0] == "c-overview") + 1
 secs[i:i] = [("c-iclr", "", "How this differs from Wang et al. (ICLR 2027)", consolidated.iclr_diff, False),
              ("c-design", "", "Experimental design", consolidated.design, False),
-             ("c-results", "", "Results: every method on every benchmark", consolidated.results, False)]
+             ("c-results", "", "Results: every method on every benchmark", consolidated.results, False),
+             ("c-scaling", "", "How space and time scale with the number of tasks", consolidated.scaling, False)]
 part1 = [(sid, num, title, (current.DESIGN[sid]() if sid in current.DESIGN else "") + fn(), collapsed) for sid, num, title, fn, collapsed in secs]
 header = ('<header class="title"><p class="kicker">lifelong-ood-learner · working paper</p>'
           "<h1>Out-of-distribution learning is composition: one system, iterated, on five frozen flow-matching policies</h1>"

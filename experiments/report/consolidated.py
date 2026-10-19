@@ -163,3 +163,25 @@ def results():
                     "Ablation on pi0.5 (G20): each component removed, paired with the full system on the same start states (LIBERO-90 "
                     "set d; Li's suites set e).", score_cols=(1, 2, 3))
     return out
+
+
+def scaling():
+    c, sp, tm = row("h3_scaling", "concepts"), row("h3_scaling", "space"), row("h3_scaling", "time")
+    if not (c and sp and tm):
+        return ""
+    from .base import fig
+    xs, xt = sp["cross_space"], tm["cross_time"]
+    out = (f"<p>A per-task method stores one unit per task; the library stores one per concept, and tasks recombine concepts. On "
+           f"LIBERO-90 the number of distinct concepts grows as N<sup>{c['beta']:.2f}</sup> (mean of random task orders over 66 tasks), "
+           f"above the ideal N<sup>0.5</sup> of a full object-by-goal grid: the tasks cover a small part of that grid and each needs "
+           f"two or three units. Storage: the library is smaller than a rank-16 adapter per task from the first task and draws level "
+           f"with rank-4 adapters at about {xs['library_vs_lora4_acc']['extrapolated']:.0f} tasks (extrapolated just past the 66 "
+           f"measured); with rank-16 task leaves it stays above rank-4 adapters. On Li's suites a held concept costs nothing, and the "
+           f"latents are capped by the training set. Time: a prototype costs about ten per-task adapters to fit, so the library is "
+           f"cheaper than rank-16 adapters only past about {xt['library_vs_lora16']['extrapolated'] / 1000:.0f},000 tasks under the "
+           f"fitted growth. Composition saves space as concepts recur; it does not yet save fitting time (docs/SCALING.md).</p>")
+    out += fig('<img src="media/h3_space.png" alt="cumulative storage against number of tasks for every method" style="width:100%">',
+               "<b>How storage grows with the number of tasks.</b> Cumulative bytes on log-log axes, every method on pi0.5; solid "
+               "measured, dashed extrapolated (the library by its fitted concept growth, per-task methods by their kept fractions).",
+               wide=True)
+    return out

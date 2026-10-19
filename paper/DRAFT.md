@@ -398,6 +398,16 @@ measurable latency (291 ms). On Li's suites a held concept costs at most 0.3 MB 
 system spends 340 practice episodes per task where Li's methods spend none, and the gated stream of iteration 14 lowers that.
 Composition buys success and storage, and pays in fitting time and simulator practice.
 
+**How space and time scale** (docs/SCALING.md; Figure: h3_space.png). A per-task method stores one unit per task; the
+library stores one per concept. On LIBERO-90 the number of distinct concepts grows as N^0.68 over 66 tasks, well above the
+ideal N^0.5 of a full object-by-goal grid: the tasks cover a small part of that grid, and each needs two or three units. The
+library without leaves is smaller than a rank-16 adapter per task from the first task, and draws level with rank-4 adapters
+at about 67 tasks (an extrapolation just past the 66 measured); with rank-16 task leaves it stays above rank-4 adapters. On
+Li's suites a held concept costs nothing and the latents are capped by the training set. In fitting time the library loses:
+a prototype is fitted once per concept but costs about ten per-task adapters, so the library becomes cheaper than rank-16
+adapters only past about 20 thousand tasks under the fitted growth. Storage favours composition as concepts recur; fitting time does
+not, unless prototypes fit faster.
+
 ## 9 What does not work
 - Selecting prototypes by a held-out demonstration's likelihood (as Wang et al. do): the right object concept on top for 12 of
   29 queries.
