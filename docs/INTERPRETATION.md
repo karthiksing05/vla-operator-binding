@@ -194,7 +194,56 @@ task.
 
 Figures: `figures/robot/h1_tli_layers.png` and `figures/robot/h1_switch.png`.
 
-## 4 What was not done
+## 4 What a soft blend of held fields donates (zi_blend; pi0.5, 45 demonstrations)
+
+`experiments/zi_velocities.py` and `experiments/zi_blend.py`; ledger `zi_blend` tag `read`.
+
+**Design.**
+- **Demos:** each demonstration is cut at its contact events (approach / carry / after the release).
+- **Experts:** the frozen policy's field under the training instructions its segment likelihood ranks top-2 per segment, plus
+  the empty prompt, plus (LIBERO-90) the task's new instruction.
+- **Blend:** a convex mix per segment and per action dim (Wang-style per-dim PoE weights), fitted by flow matching on the even
+  frames and scored on the odd ones. Nothing in the network is fitted.
+- **Donations:** exact Shapley values over the experts (every subset refitted), against the empty prompt.
+- **Familiar scenes:** 20 training demos with the task's own instruction held out (a ceiling, never an expert).
+- **New scenes:** 25 LIBERO-90 demos (Z3's tasks).
+
+| held-out flow loss (approach, position) | blend | best single expert | uniform mix | empty prompt | own / new instruction |
+|---|---|---|---|---|---|
+| familiar scenes (own = the held-out answer) | 0.0375 | 0.0412 | 0.0765 | 0.1115 | 0.0168 |
+| LIBERO-90 (new = the task's instruction) | 0.1607 | 0.1854 | 0.2346 | 0.2852 | 0.2627 |
+
+**Composition is graded for motion and categorical for decisions.**
+- The blend beats the best single expert on position in 0.78 (familiar approach) and 0.84 (LIBERO-90 approach) of the demos,
+  and on rotation in 0.50–0.79.
+- On the gripper it never does (0.00 familiar, 0.04 LIBERO-90): a discrete command is taken from one expert, not mixed.
+
+**Superposition is the wrong default.** The uniform mix is worse than both the blend and the best single expert on every
+segment. Weights that depend on phase and dimension are what make held fields compose.
+
+**Held fields carry most of a task, even where the new sentence carries none.**
+- In familiar scenes, the blend recovers most of the gap between the empty prompt and the task's own instruction (0.1115 → 0.0375,
+  with 0.0168 for the instruction itself).
+- In LIBERO-90's scenes, the task's new instruction barely improves on the empty prompt (0.2627 against 0.2852), while the
+  blend of other tasks' fields reaches 0.1607.
+
+**Donation is not organised by the instruction's concepts.** By relation to the task, LIBERO-90, approach / position, the
+Shapley donation shares are:
+- experts sharing its object: 0.22;
+- sharing its goal: 0.18;
+- sharing nothing: 0.13;
+- the new instruction itself: 0.15.
+
+The policy's prior knowledge donates through behavioural similarity, not through the linguistic identity of a concept. This is
+the case for the unsupervised scheme: the units that help are found by what they explain, not by what they are called.
+
+**Object and goal experts overlap.** Their Shapley interaction is mostly negative (carry / position −0.156, synergy in 0 of 5
+demos): the two carry redundant information about the motion, not complementary parts (small n).
+
+Caveat: the experts are the top-2 per segment by likelihood, so the relation counts are uneven (familiar scenes: 2 object-sharing
+experts against 27 goal-sharing). The online counterpart (the blend served, each expert ablated) is next.
+
+## 5 What was not done
 - Swann et al.'s reusable-versus-memorised score (arXiv 2603.19183) was not computed: the procedure is unverified here. The
   scale sweep and the held-out-demonstration loss stand in for it, and they show memorised fine detail (the loss rises at
   t = 0.1 and is lowest below weight 1).
