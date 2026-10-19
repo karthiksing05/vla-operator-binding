@@ -1,0 +1,65 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of read G21 (plan H3: GPC velocity composition and activation injection as operators for held concepts)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c3ad6e221f4e828c8f604bff05e864c33dd0c76b",
+  "short": "c3ad6e22"
+ },
+ "keys": {},
+ "metrics": {
+  "backbones": [
+   "pi05_libero",
+   "pi0_libero"
+  ],
+  "hypotheses": {
+   "H1_gpc": "per policy, GPC with the practice-chosen pair and practice-chosen w is non-inferior to G15's practice-chosen operator on set e (task-level bootstrap 95% lower bound of the difference above -0.05)",
+   "H1_inject": "per policy, activation injection with the practice-chosen pair is non-inferior to G15's practice-chosen operator on set e (same test)",
+   "H2_gpc": "per policy, GPC with the practice-chosen pair > the policy alone on set e (exact sign test, alpha 0.05)",
+   "H2_inject": "per policy, activation injection with the practice-chosen pair > the policy alone on set e (same test)",
+   "check": "GPC with w = 1 before the grasp and 0 from it equals the grasp switch: 10 episodes per task on set a, per-episode agreement with G10's acceptance episodes of the same pair (equal up to the batched VLM pass)",
+   "descriptive": "each operator against the grasp switch and TLI with the same pairs (chosen pair: G15's psel and TLI lambda 24 with G10's pair; Li's pair: the grasp switch pfield@li and Li's TLI); Li's-pair arms against the policy alone; chosen w per task; per task"
+  },
+  "inject_form": "increment per layer (held_ops.InjectHooks.inc); replacement variant inject@a.g.rep is a check only, not tested",
+  "smoke": "4 episodes per mode on pi0.5 libero_goal_ood task 1 (pair 14.17), set a (files g21_smoke_*): gpc w 0.5 0/4, gpc phase 4/4 (G10's grasp switch on the same states 4/4), inject 2/4 (accumulating form 0/4, moved to results/robot/g21_smoke_v1), inject replacement 0/4 (no object moved: the noise-leak argument); policy alone 2/4",
+  "states": "practice fresh_ood_a (5 per w, 10 for the phase check); test fresh_ood_e (BASE 800000, 20 per task)",
+  "w_grid": [
+   0.3,
+   0.5,
+   0.7
+  ],
+  "written_before": "any non-smoke G21 episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__g21_operators__s13__c3ad6e22",
+ "schema": 1,
+ "script": "experiments/prereg/g21_operators.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-19T13:33:35+00:00",
+ "stream": null,
+ "tag": "g21_operators"
+}

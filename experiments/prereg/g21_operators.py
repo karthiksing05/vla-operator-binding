@@ -8,8 +8,9 @@ thing that varies (lifelong_ood/policy/held_ops.py):
           each on start states set a (most successes; ties to 0.5, then the lower w).
   inject  Grant et al. (arXiv 2603.19233): action-expert activations of the source training tasks, mirrored on TLI: the mean
           residual at every expert layer input per denoising step and token over frames 0-119 of the source's first 20
-          demonstrations; the difference (M_a - M_g) added at every layer >= 1 before the grasp, (M_g - M_a) from the grasp to the
-          release.  Deviation: additive (TLI's form) in place of their replacement write-back, because a frame-mean replacement
+          demonstrations; the residual at every layer >= 1 moved by (M_a - M_g) before the grasp and (M_g - M_a) from the grasp to
+          the release (each layer adds only its increment over the previous layer's difference, so the shift does not accumulate
+          along the residual stream; the accumulating form moved no object in its smoke and was fixed before this record).  Deviation: additive (TLI's form) in place of their replacement write-back, because a frame-mean replacement
           erases the noisy chunk from the expert and passes the test noise into the action.
 Pairs: G10's practice-chosen pair (sel) and Li et al.'s pair (li).  Test on set e (BASE 800000, 20 per task, noise seed 13),
 paired with G15's set-e files.  Per policy (pi0.5, pi0)."""
@@ -32,7 +33,10 @@ print(ledger.record(
                                 "the policy alone; chosen w per task; per task",
                  "check": "GPC with w = 1 before the grasp and 0 from it equals the grasp switch: 10 episodes per task on set a, "
                           "per-episode agreement with G10's acceptance episodes of the same pair (equal up to the batched VLM pass)"},
-             "smoke": "4 episodes per mode on pi0.5 libero_goal_ood task 1, set a (ledger-free files g21_smoke_*)",
+             "smoke": "4 episodes per mode on pi0.5 libero_goal_ood task 1 (pair 14.17), set a (files g21_smoke_*): gpc w 0.5 0/4, "
+                      "gpc phase 4/4 (G10's grasp switch on the same states 4/4), inject 2/4 (accumulating form 0/4, moved to "
+                      "results/robot/g21_smoke_v1), inject replacement 0/4 (no object moved: the noise-leak argument); policy alone 2/4",
+             "inject_form": "increment per layer (held_ops.InjectHooks.inc); replacement variant inject@a.g.rep is a check only, not tested",
              "written_before": "any non-smoke G21 episode"},
     bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config={},
     script="experiments/prereg/g21_operators.py",

@@ -14,7 +14,7 @@ with the chosen pair, the practice-chosen operator); the grasp switch with Li's 
 G15 has no file for them.
 
     $PY experiments/g21_operators.py --identify --backbone pi05_libero [--tasks 14,17]   # GPU (openpi venv): expert latents
-    $PY experiments/g21_operators.py --run --backbone pi05_libero      # identify job, practice, choice, test; waits on files
+    $PY experiments/g21_operators.py --run --backbone pi05_libero [--no-identify]   # identify job, practice, choice, test; waits
     $PY experiments/g21_operators.py --read --backbone pi05_libero [--record]
 """
 import json
@@ -127,7 +127,7 @@ def run(backbone):
     import g4_ood as G
     pl = json.load(open(PLAN))
     short = backbone.split("_")[0]
-    if not latents_ready(backbone):
+    if not latents_ready(backbone) and "--no-identify" not in sys.argv:     # --no-identify: the identify job is already queued
         print(f"[g21 {short}] identify -> job {sb_identify(backbone)}", flush=True)
     for k, v in pl["tasks"].items():
         sh = k.split(":")[0]

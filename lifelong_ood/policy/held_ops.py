@@ -15,9 +15,14 @@ written:
   identify  the mean residual at the INPUT of every expert layer (= the previous layer's output), per denoising step k (10) and
             per suffix token (pi0.5: the H action tokens; pi0: the state token and H action tokens), over frames 0-119 of the
             source task's first 20 training demonstrations, with the policy sampling its own chunk under the demo's instruction.
-  inject    before every expert layer l >= 1 (layer 0's input, the noisy chunk's embedding, untouched, as TLI leaves the text
-            embedding) the test residual gains  s (M_a - M_g)[k, l],  s = +1 before the grasp and -1 from the grasp to the
-            release: TLI's (1 - 2 alpha)(T1 - T2) with alpha stepped at the grasp, written into the action expert.
+  inject    the test residual at the input of every expert layer l >= 1 (layer 0's input, the noisy chunk's embedding, untouched,
+            as TLI leaves the text embedding) is moved by  s (M_a - M_g)[k, l],  s = +1 before the grasp and -1 from the grasp to
+            the release: TLI's (1 - 2 alpha)(T1 - T2) with alpha stepped at the grasp, written into the action expert.  The
+            residual stream carries every addition forward, so layer l adds only the increment (M_a - M_g)[k, l] - (M_a - M_g)[k, l-1]
+            and the residual at layer l stands s (M_a - M_g)[k, l] from the policy's own (to first order), as a per-layer
+            replacement relative to the other source would.  (Adding the full difference at every layer, TLI's literal form,
+            accumulates: on pi0.5 the summed shift at the last layer was 0.9-2.1x the residual's norm, and the policy moved no
+            object in 4 smoke episodes, against 2 of 4 successes alone; fixed 2026-10-19, before pre-registration.)
 Deviation from Grant et al.: an additive difference of source means instead of replacement by one recorded episode.  Replacing the
 expert residual by a mean over frames erases the noisy chunk x_t from the expert (its output no longer depends on x_t), so the Euler
 integral returns x_noise + mean(a - eps): the test noise passes into the action.  Their replay avoids this only because the same
@@ -134,7 +139,7 @@ def identify(bk, demos, task, batch=24, seed=0):
 
 
 class InjectHooks:
-    """Serve hooks: the source-mean difference added at every expert layer input l >= 1 (or, rep, the source mean written
+    """Serve hooks: the residual at every expert layer input l >= 1 moved by the source-mean difference (or, rep, the source mean written
     there), from the object source before the grasp and the goal source from it; k = the denoising step of the query."""
 
     def __init__(self, bk, m_a, m_g, rep=False):
@@ -145,6 +150,8 @@ class InjectHooks:
         dev = bk.device
         self.ma, self.mg = torch.as_tensor(m_a, device=dev), torch.as_tensor(m_g, device=dev)
         self.d = self.ma - self.mg
+        self.inc = self.d.clone()                                       # the per-layer increment: the shift does not accumulate
+        self.inc[:, 2:] = self.d[:, 2:] - self.d[:, 1:-1]
         self.g = _Grasp(bk)
         self.k, self.nq, self._warned = -1, 0, False
         self._h = [ly.register_forward_pre_hook(self._pre(i), with_kwargs=True) for i, ly in enumerate(self.layers)]
@@ -166,7 +173,7 @@ class InjectHooks:
                 out = src[k, i].to(h.dtype)[None].expand_as(h).clone()
             else:
                 s = -1.0 if self.g.carrying else 1.0
-                out = h + (s * self.d[k, i]).to(h.dtype)[None]
+                out = h + (s * self.inc[k, i]).to(h.dtype)[None]
             if i == 1 and k == 0 and self.nq <= 2:
                 logging.info(f"inject: query {self.nq}, {'rep' if self.rep else 'add'}, carrying {self.g.carrying}, "
                              f"|shift| {float(self.d[k, i].norm()):.1f}, |h| {float(h[0].float().norm()):.1f}")
