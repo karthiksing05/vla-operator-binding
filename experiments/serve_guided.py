@@ -488,6 +488,25 @@ def main():
         text = D.Demos().tasks[int(a.mode.split(":", 1)[1])]
         hooks = PromptHooks(text)
         logging.info(f"prompt replaced by '{text}'")
+    elif a.mode.startswith("gpc:"):
+        # gpc:<a>.<g>.<w%>|ph -- plan H3 / read G21: Cao et al.'s General Policy Composition, the convex mix w v(.|instruction a) +
+        # (1 - w) v(.|instruction g) of the policy's own fields at every Euler step (w in percent); "ph": w = 1 before the grasp,
+        # 0 from it (the grasp switch through the composition path, a check) (lifelong_ood/policy/held_ops.py)
+        from lifelong_ood.policy import data as D
+        from lifelong_ood.policy import held_ops as HO
+        ta, tg, wq = a.mode[len("gpc:"):].split(".")
+        tx = D.Demos().tasks
+        hooks = HO.GPCHooks(bk, tx[int(ta)], tx[int(tg)], w=(0.5 if wq == "ph" else int(wq) / 100.0), phase=(wq == "ph"))
+        logging.info(f"gpc: '{tx[int(ta)]}' + '{tx[int(tg)]}', w {wq}")
+    elif a.mode.startswith("inject:"):
+        # inject:<a>.<g>[.rep] -- plan H3 / read G21: Grant et al.'s activation injection into the action expert, mirrored on TLI:
+        # the source-mean difference at every expert layer input, object source before the grasp, goal source from it
+        # (lifelong_ood/policy/held_ops.py; ".rep": replacement by the source mean, a check)
+        import numpy as np
+        from lifelong_ood.policy import held_ops as HO
+        ta, tg, *rest = a.mode[len("inject:"):].split(".")
+        hooks = HO.InjectHooks(bk, np.load(HO.path(cfg, ta, ROOT)), np.load(HO.path(cfg, tg, ROOT)), rep=("rep" in rest))
+        logging.info(f"inject: tasks {ta} -> {tg}, {'replace' if 'rep' in rest else 'add'}")
     elif a.mode != "ours":
         raise SystemExit(f"unknown mode {a.mode}")
     policy = GuidedPolicy(bk, hooks=hooks, num_steps=a.num_steps, seed=a.seed)

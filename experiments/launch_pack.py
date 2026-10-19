@@ -230,6 +230,14 @@ def arm_spec(tid, arm, fold, demo=0):
         t1_, t2_, _ = arm.split("@", 1)[1].split(".")
         lat = lambda t_: os.path.join(R, "tli", f"{SUITE_OF.get('backbone') or 'pi05_libero'}_{t_}.npy")   # noqa: E731
         return (f"tli:{arm.split('@', 1)[1]}", "0", False) if os.path.exists(lat(t1_)) and os.path.exists(lat(t2_)) else None
+    if arm.startswith("gpc@"):                                          # plan H3 / G21: GPC velocity mix, gpc@<a>.<g>.<w in %>|ph
+        a_, g_, w_ = arm.split("@", 1)[1].split(".")
+        assert w_ == "ph" or 0 <= int(w_) <= 100, arm
+        return (f"gpc:{int(a_)}.{int(g_)}.{w_}", "0", False)
+    if arm.startswith("inject@"):                                       # plan H3 / G21: activation injection, inject@<a>.<g>[.rep]
+        a_, g_, *r_ = arm.split("@", 1)[1].split(".")
+        lat = lambda t_: os.path.join(R, "inject", f"{SUITE_OF.get('backbone') or 'pi05_libero'}_{t_}.npy")   # noqa: E731
+        return (f"inject:{arm.split('@', 1)[1]}", "0", False) if os.path.exists(lat(a_)) and os.path.exists(lat(g_)) else None
     if arm.startswith("pfield@"):                                       # plan G4b: pfield@<a>.<g>[.<object proto>.<goal proto>] -- the
         from lifelong_ood.policy import data as D                        # policy's own field under training task a's instruction before
         parts = arm.split("@", 1)[1].split(".")                          # its grasp and task g's from the grasp to the release ("x" =
