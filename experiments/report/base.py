@@ -46,6 +46,13 @@ def video(name):
             f'</video>')
 
 
+def design_box(question, data, arms, states, test):
+    """A section's experimental design, as a compact labelled box."""
+    rows = "".join(f"<dt>{k}</dt><dd>{v}</dd>" for k, v in (("Question", question), ("Data", data), ("Arms", arms),
+                                                          ("Start states", states), ("Test", test)))
+    return f'<aside class="design"><p class="pl">Experimental design</p><dl>{rows}</dl></aside>'
+
+
 def pending(title, text):
     return f'<aside class="pending"><p class="pl">Running</p><p class="pt">{esc(title)}</p><p>{text}</p></aside>'
 

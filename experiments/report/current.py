@@ -1,7 +1,7 @@
 """Part I of the results page: the current program -- a factored, hierarchical prototype library for a frozen policy (plans D,
 E, W; docs/METHOD.md).  Each function returns one section's HTML from ledger rows; a read not yet recorded renders as Running."""
 from . import diagrams
-from .base import L, esc, fig, pending, row, table, video
+from .base import design_box, L, esc, fig, pending, row, table, video
 
 
 def _ci(d):
@@ -729,3 +729,12 @@ SECTIONS = [("c-overview", "", "In brief", overview, False), ("c-reads", "", "Th
             ("c-stream", "6", "The library learned as a stream", streams, False),
             ("c-limits", "7", "What does not work", limits_of_method, False), ("c-limitations", "8", "Limitations", limitations, False),
             ("c-verify", "", "Verification", verification, False)]
+
+
+DESIGN = {
+    "c-factored": lambda: design_box("Does splitting a task into an object phase (before the grasp) and a goal phase (after it) let one-demonstration units serve new tasks?", "LIBERO-90 single-step tasks the policy never saw; one demonstration per task; object and goal prototypes (rank-4 LoRA) fitted on every demonstration of their concept.", "the policy alone; the factored composition; the per-task LoRA; each with and without the acceptance test (10 practice episodes).", "stored practice states for acceptance; fresh start states for the test (20 per task).", "pre-registered; paired exact sign test; task-level bootstrap; non-inferiority at -0.05."),
+    "c-hier": lambda: design_box("Does an instance child (the named bowl among several) under its object type fix the wrong-object failures?", "the tasks whose instruction names an instance of a shared type; instance prototypes fitted on that instance's demonstrations only.", "the type prototype; the instance child; the per-task LoRA; with acceptance.", "fresh start states (set b).", "pre-registered; paired sign test; bootstrap."),
+    "c-repl": lambda: design_box("Does the library hold on tasks no design decision saw?", "new LIBERO-90 tasks with concepts drawn from the library and new ones fitted.", "the policy alone; the library kept by practice; the per-task LoRA with acceptance.", "fresh start states.", "pre-registered replication; paired sign test; bootstrap."),
+    "c-gen": lambda: design_box("Does composition generalise: to concepts learned only from other tasks, to other policies, and against other methods?", "LIBERO-90 single-step tasks in 5 folds (each fold's concepts refit without its own demonstrations); the same library refit on SmolVLA, pi0 and X-VLA; Li et al.'s OOD suites.", "recombined concepts; monolithic adapter; summed and averaged donor LoRAs; DSRL; STRAP; task leaves; per-factor practice; ungated units.", "fresh start states per read (sets b and d).", "pre-registered per read; paired sign test; bootstrap; Holm where hypotheses share a family."),
+    "c-stream": lambda: design_box("Can the library be learned as a stream that asks for a demonstration only when practice fails, without damaging earlier tasks?", "30 LIBERO-90 arrivals in two orders; a demonstration refits every concept on its path.", "the stream learner; sequential fine-tuning and experience replay of one adapter through the same order; the policy alone.", "fresh start states (set b) after the stream ends.", "pre-registered; demonstrations requested; success on the first and last arrivals (forgetting); paired sign test."),
+}
