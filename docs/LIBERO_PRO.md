@@ -75,3 +75,11 @@ over that suite's own training instructions (10 and 5), because G10's pool holds
 
 These use the old instruction (above); G22's `origprompt` arm reproduces that protocol on the same init states, and the policy
 alone under the new instruction is the baseline the system is tested against.
+
+## Verified: the task split's instruction (2026-10-19)
+Checked in the clone (eafdb80): `libero/libero/benchmark/__init__.py` lines 145-149 build every task's `language` with
+`grab_language_from_filename(task + ".bddl")`, and the task-perturbed files keep the original names while their `(:language ...)`
+holds the new instruction (e.g. `libero_goal_task/open_the_middle_drawer_of_the_cabinet.bddl` reads "open the bottom drawer of the
+cabinet"). Evaluation scripts that pass `task.language` to the policy (openpi's `examples/libero/main.py` among them) therefore
+give the old instruction under the new success test. Our client sends the file's `(:language)`; the `origprompt` arm reproduces
+the published protocol.
