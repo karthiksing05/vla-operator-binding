@@ -1,7 +1,7 @@
 # Plan W: Wang et al.'s selection on the factored library, Cobweb's operators for what it lacks (2026-10-04)
 
 The user's goal: compositional OOD continual learning for an embodied agent, leveraging Wang et al. ("Test-time compositional
-generalization in diffusion models via prototype discovery", arXiv 2605.07078). Wang et al. DISCOVER a frozen model's prototypes,
+generalization in diffusion models via concept discovery", arXiv 2605.07078). Wang et al. DISCOVER a frozen model's prototypes,
 SELECT the few that best cover ONE out-of-distribution query, and COMPOSE them; their stated limitation is no mechanism to detect,
 consolidate and reuse genuinely new primitives.
 
