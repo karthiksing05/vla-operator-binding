@@ -29,7 +29,7 @@ OUT = os.path.join(ROOT, "results", "robot", "u1")
 
 def tasks_arg(s):
     out = []
-    for p in s.split(","):
+    for p in s.replace("+", ",").split(","):
         if "-" in p:
             a, b = p.split("-")
             out += list(range(int(a), int(b) + 1))

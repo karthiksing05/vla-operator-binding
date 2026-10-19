@@ -3,7 +3,28 @@
 Plan of 2026-10-19 (user direction). It supersedes the fit-time agent (F1) and restarts the unsupervised-segmentation agent (U1)
 as tracks of one plan.
 
-## The claim
+## Revision (user, 2026-10-19 night): the paper is a theory of composition with two schemes
+
+Fine-tuning is allowed where it is needed. The priority is the broader theory of composition, shown through two learning schemes
+on the same frozen policies and the same graded split (docs/SPLIT.md):
+
+- **Supervised scheme** (what exists): concepts read from the instruction (object, instance, goal); held concepts are
+  pointers, new ones are fitted prototypes and leaves; practice chooses sources and operators.
+- **Unsupervised scheme** (track U): units cut at the demonstration's own contact events and named by the policy's likelihood;
+  held units are pointers, unexplained units are fitted (with the fast fit of F1); a library of discovered units, with no
+  instruction grammar.
+
+Each scheme is reported per grade (G1 relation, G2 binding, G3 scene, G4 part). The grade predicts reuse vs create. Every unit
+of both schemes gets a donation table (track I).
+
+The user's other ideas stay:
+- binding at the VL→A interface as the prototype (track B);
+- language compositionality (the splice);
+- a highly reusable library with cheap fits (F1);
+- the framing: prior knowledge donating expertise in unorthodox ways; Fodor's systematicity and task-to-task transfer in
+  cognitive psychology; robotics as the testbed.
+
+## The claim (first version; see the revision above)
 
 Learning a new task from one demonstration needs no fine-tuning when the new task is a composition of what the policy holds.
 The demonstration is a query, never a training set:
@@ -57,6 +78,18 @@ instruction where it was learned.
 | B2 | Online pilot (practice set a, 10 episodes, 20 OOD tasks): splice alone (one prompt, no switch), splice + grasp switch, vs pfield and zs | Go if splice ≥ zs + 0.1 on the pilot. Splice + switch ≥ switch is the composition-of-composition test |
 | B3 | **Create** a binding for a new unit: optimise only the novel word's binding (the KV of its tokens at the interface; the prompt cache once per frame, gradients only through the action expert, per `token_fold.py`), on that unit's frames only (from U). Target fit ≤ 2 min vs 38.9 | Pre-registered NI (−0.05) vs the LoRA prototype on the E-tasks with a new object; fit time and bytes |
 | B4 | **Fold:** register a created binding as that word's binding (vocabulary-level). Reuse it in later instructions by language ("put the ⟨w⟩ on the stove"), with no refit | Transfer test the token era failed (q11: 0/80): the same word in another goal / another scene |
+
+## Track I: what each unit donates (user direction, 2026-10-19)
+
+A soft blending operator over the held fields: a convex mix per contact segment and per action dim (Wang-style per-dim PoE
+weights; `poe.py`'s form), fitted to the demo by flow loss on stored velocities. Nothing in the network is fitted.
+
+| step | what |
+|---|---|
+| I1 | Expert velocities on the demos: `experiments/i1_velocities.py`. Familiar scenes l40 (own instruction held out as a ceiling); LIBERO-90 Z3 tasks |
+| I2 | `experiments/i1_blend.py`. Held-out loss: blend vs hard switch vs uniform superposition vs each expert. Per expert: weights per segment × dim; exact Shapley donation per segment × {position, rotation, gripper}; donation share by the expert's relation to the task (shares object / goal / both / neither); object × goal Shapley interaction (synergy vs redundancy) |
+| I3 | Donation in behaviour: the fitted blend served online (vs hard switch, zs). Per expert, the ablated blend's change in success and in the end effector's path toward the object / the place (h1_donate's measures) |
+| I4 | The same donation decomposition for the splice (per layer, per word) and for fitted prototypes (h1_donate), so every operator gets one donation table |
 
 ## Track Z: the zero-fine-tune ledger (what composition alone achieves)
 
