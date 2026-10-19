@@ -309,6 +309,15 @@ for the stream learner (sign tests p 5e-96 and 6e-17; task-level differences 0.6
 arrivals (0 successes against 28 on the last 10): the forgetting the library avoids by construction. Experience replay keeps
 most of the early arrivals (138 on the first 10, 87 on the last 10) but stores every demonstration it replays.
 
+### Against other operators for held concepts
+Two published demo-free operators, run on the same practice-chosen source pairs as ours so that only the operator varies
+(pre-registered G21; set e). Mixing the policy's two velocity fields convexly at every step, after General Policy
+Composition (Cao et al., ICLR 2026) with the weight chosen by practice, succeeds 61 of 400 times on pi0.5 and 45 on pi0,
+against 282 and 289 for the grasp switch and 143 and 35 for the policies alone. Injecting the action expert's activations
+recorded under the source tasks (after Grant et al., 2026) succeeds 151 and 9. Both fail non-inferiority to the system by
+wide margins. The same mixing with its weight switched at the grasp (one field before, the other after) succeeds 136 and 148
+against 138 and 143 for the grasp switch: the operator works once the fields take turns.
+
 ### Ablations
 One table per side on pi0.5, every row paired with the full system on the same new start states (pre-registered G20).
 LIBERO-90 (66 tasks, set d): the full system succeeds 994 of 1,320 times. Removing task leaves gives 906 (difference 0.067, 95%
@@ -350,6 +359,11 @@ on start states practice never saw with Pearson r 0.92 (pi0.5), 0.94 (pi0), 0.91
 together beat the product: on pi0.5's library the hand-off at the grasp adds 0.117 to success after a named grasp, so the
 product is a lower bound. Composition of held concepts is therefore predictable from its parts, and practice that estimates
 the parts estimates the whole.
+
+**Concepts compose in time, not in superposition.** Every operator that runs two concepts at once fails: both prototypes on
+for the whole episode (489 against 897 of 1,320 when switched), the policy's two fields mixed at every step (61 against 282 of
+400 on pi0.5). The same pieces switched at the grasp succeed. The grasp is the interface between a task's concepts, and
+composition is the choice of which concept acts on each side of it.
 
 **A prototype corrects where the hand goes, not how it turns.** On a held-out demonstration of each concept, an object
 prototype lowers the position error of the policy's chunk from 1.205 to 0.897 and raises the alignment of the motion with the
