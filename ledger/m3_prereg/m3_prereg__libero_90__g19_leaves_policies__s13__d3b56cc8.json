@@ -1,0 +1,55 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G19 (task leaves on pi0, SmolVLA, X-VLA)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "d3b56cc8c94c60adc5c77175f1d7b79723fad8a6",
+  "short": "d3b56cc8"
+ },
+ "keys": {},
+ "metrics": {
+  "backbones": [
+   "pi0_libero",
+   "smolvla",
+   "xvla"
+  ],
+  "hypotheses": {
+   "H1": "per policy, task leaves are non-inferior to the per-task LoRA with acceptance on set d (task-level bootstrap 95% lower bound above -0.05)",
+   "H2": "per policy, task leaves > the policy alone on set d (exact sign test, alpha 0.05)",
+   "descriptive": "leaves kept, bytes (hierarchy against per-task adapters), library against LoRA with acceptance"
+  },
+  "written_before": "any G19 episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__g19_leaves_policies__s13__d3b56cc8",
+ "schema": 1,
+ "script": "experiments/prereg/g19_leaves_policies.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-19T03:34:38+00:00",
+ "stream": null,
+ "tag": "g19_leaves_policies"
+}
