@@ -1,0 +1,4885 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "h2_cost.py --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "h2_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5d8b7438fe5375cc302a96bc9a0710d7b741f651",
+  "short": "5d8b7438"
+ },
+ "keys": {},
+ "metrics": {
+  "fits": {
+   "cl": {
+    "er": {
+     "row": "ledger/b_continual/b_continual__libero_90__er_g11__s0__870e4216.json",
+     "train_s": 5628.8460421562195,
+     "wall_s": 5715.0
+    },
+    "seq": {
+     "row": "ledger/b_continual/b_continual__libero_90__seq_g11__s0__0918d8e3.json",
+     "train_s": 2118.458069562912,
+     "wall_s": 2205.0
+    }
+   },
+   "dsrl": {
+    "dsrlf": {
+     "episodes": 3000,
+     "runs": 30,
+     "wall_s": 141109.7528526783
+    },
+    "dsrls": {
+     "episodes": 2900,
+     "runs": 29,
+     "wall_s": 141248.55974698067
+    },
+    "dsrlz": {
+     "episodes": 3000,
+     "runs": 30,
+     "wall_s": 199575.87047219276
+    }
+   },
+   "loras": {
+    "10": {
+     "bytes": 18710528,
+     "demo_episode": 1809,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sc__task-10__s0__9a9e73f0.json",
+     "task": 10,
+     "train_s": 127.98899149894714,
+     "wall_s": 217.0
+    },
+    "12": {
+     "bytes": 18710528,
+     "demo_episode": 2840,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-12__s0__f5efcd58.json",
+     "task": 12,
+     "train_s": 127.46270632743835,
+     "wall_s": 209.0
+    },
+    "13": {
+     "bytes": 18710528,
+     "demo_episode": 1649,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-13__s0__f5efcd58.json",
+     "task": 13,
+     "train_s": 127.6952633857727,
+     "wall_s": 214.0
+    },
+    "14": {
+     "bytes": 18710528,
+     "demo_episode": 224,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-14__s0__f5efcd58.json",
+     "task": 14,
+     "train_s": 138.34740567207336,
+     "wall_s": 221.0
+    },
+    "15": {
+     "bytes": 18710528,
+     "demo_episode": 638,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-15__s0__f5efcd58.json",
+     "task": 15,
+     "train_s": 123.97068452835083,
+     "wall_s": 207.0
+    },
+    "18": {
+     "bytes": 18710528,
+     "demo_episode": 3319,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-18__s0__ece015f3.json",
+     "task": 18,
+     "train_s": 122.71087431907654,
+     "wall_s": 195.0
+    },
+    "19": {
+     "bytes": 18710528,
+     "demo_episode": 3646,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-19__s0__afd693c8.json",
+     "task": 19,
+     "train_s": 122.6382668018341,
+     "wall_s": null
+    },
+    "2": {
+     "bytes": 18710528,
+     "demo_episode": 357,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-2__s0__f5efcd58.json",
+     "task": 2,
+     "train_s": 123.53976655006409,
+     "wall_s": 192.0
+    },
+    "24": {
+     "bytes": 18710528,
+     "demo_episode": 2246,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-24__s0__ece015f3.json",
+     "task": 24,
+     "train_s": 132.73423671722412,
+     "wall_s": 221.0
+    },
+    "25": {
+     "bytes": 18710528,
+     "demo_episode": 176,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-25__s0__f5efcd58.json",
+     "task": 25,
+     "train_s": 123.3988606929779,
+     "wall_s": 206.0
+    },
+    "26": {
+     "bytes": 18710528,
+     "demo_episode": 1323,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-26__s0__ece015f3.json",
+     "task": 26,
+     "train_s": 123.72372198104858,
+     "wall_s": 199.0
+    },
+    "27": {
+     "bytes": 18710528,
+     "demo_episode": 318,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-27__s0__ece015f3.json",
+     "task": 27,
+     "train_s": 129.81772828102112,
+     "wall_s": 227.0
+    },
+    "29": {
+     "bytes": 18710528,
+     "demo_episode": 873,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sc__task-29__s0__ece015f3.json",
+     "task": 29,
+     "train_s": 124.92032814025879,
+     "wall_s": 204.0
+    },
+    "30": {
+     "bytes": 18710528,
+     "demo_episode": 3601,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sc__task-30__s0__9a9e73f0.json",
+     "task": 30,
+     "train_s": 127.97871375083923,
+     "wall_s": 217.0
+    },
+    "31": {
+     "bytes": 18710528,
+     "demo_episode": 2561,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sc__task-31__s0__9a9e73f0.json",
+     "task": 31,
+     "train_s": 128.1413049697876,
+     "wall_s": 216.0
+    },
+    "32": {
+     "bytes": 18710528,
+     "demo_episode": 1510,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-32__s0__e5ed1433.json",
+     "task": 32,
+     "train_s": 136.09556078910828,
+     "wall_s": null
+    },
+    "34": {
+     "bytes": 18710528,
+     "demo_episode": 2074,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-34__s0__4f432e2b.json",
+     "task": 34,
+     "train_s": 124.11664867401123,
+     "wall_s": null
+    },
+    "36": {
+     "bytes": 18710528,
+     "demo_episode": 455,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-36__s0__483e2d69.json",
+     "task": 36,
+     "train_s": 136.17145347595215,
+     "wall_s": null
+    },
+    "37": {
+     "bytes": 18710528,
+     "demo_episode": 3226,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-37__s0__ef654684.json",
+     "task": 37,
+     "train_s": 131.7788689136505,
+     "wall_s": null
+    },
+    "38": {
+     "bytes": 18710528,
+     "demo_episode": 596,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-38__s0__f5efcd58.json",
+     "task": 38,
+     "train_s": 124.47614550590515,
+     "wall_s": 195.0
+    },
+    "40": {
+     "bytes": 18710528,
+     "demo_episode": 1400,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-40__s0__ef654684.json",
+     "task": 40,
+     "train_s": 133.2647626399994,
+     "wall_s": null
+    },
+    "41": {
+     "bytes": 18710528,
+     "demo_episode": 2886,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-41__s0__e5ed1433.json",
+     "task": 41,
+     "train_s": 123.28615927696228,
+     "wall_s": null
+    },
+    "42": {
+     "bytes": 18710528,
+     "demo_episode": 730,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-42__s0__0f8a3a87.json",
+     "task": 42,
+     "train_s": 131.42679357528687,
+     "wall_s": null
+    },
+    "43": {
+     "bytes": 18710528,
+     "demo_episode": 273,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-43__s0__e5ed1433.json",
+     "task": 43,
+     "train_s": 137.02217531204224,
+     "wall_s": null
+    },
+    "46": {
+     "bytes": 18710528,
+     "demo_episode": 35,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-46__s0__f5efcd58.json",
+     "task": 46,
+     "train_s": 128.7764482498169,
+     "wall_s": 215.0
+    },
+    "47": {
+     "bytes": 18710528,
+     "demo_episode": 2291,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-47__s0__f5efcd58.json",
+     "task": 47,
+     "train_s": 128.0657835006714,
+     "wall_s": 214.0
+    },
+    "48": {
+     "bytes": 18710528,
+     "demo_episode": 3092,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-48__s0__e5ed1433.json",
+     "task": 48,
+     "train_s": 130.69925713539124,
+     "wall_s": null
+    },
+    "49": {
+     "bytes": 18710528,
+     "demo_episode": 3366,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sc__task-49__s0__9a9e73f0.json",
+     "task": 49,
+     "train_s": 128.03045892715454,
+     "wall_s": 222.0
+    },
+    "50": {
+     "bytes": 18710528,
+     "demo_episode": 1436,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sc__task-50__s0__9a9e73f0.json",
+     "task": 50,
+     "train_s": 127.98843383789062,
+     "wall_s": 215.0
+    },
+    "52": {
+     "bytes": 18710528,
+     "demo_episode": 2475,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-52__s0__ef654684.json",
+     "task": 52,
+     "train_s": 133.49246549606323,
+     "wall_s": null
+    },
+    "53": {
+     "bytes": 18710528,
+     "demo_episode": 1284,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-53__s0__ef654684.json",
+     "task": 53,
+     "train_s": 128.6295804977417,
+     "wall_s": null
+    },
+    "54": {
+     "bytes": 18710528,
+     "demo_episode": 127,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-54__s0__f5efcd58.json",
+     "task": 54,
+     "train_s": 124.36251664161682,
+     "wall_s": 187.0
+    },
+    "55": {
+     "bytes": 18710528,
+     "demo_episode": 2431,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-55__s0__f5efcd58.json",
+     "task": 55,
+     "train_s": 127.69674491882324,
+     "wall_s": 212.0
+    },
+    "56": {
+     "bytes": 18710528,
+     "demo_episode": 3013,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-56__s0__f5efcd58.json",
+     "task": 56,
+     "train_s": 123.53706169128418,
+     "wall_s": 194.0
+    },
+    "57": {
+     "bytes": 18710528,
+     "demo_episode": 78,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-57__s0__f5efcd58.json",
+     "task": 57,
+     "train_s": 128.65104341506958,
+     "wall_s": 214.0
+    },
+    "58": {
+     "bytes": 18710528,
+     "demo_episode": 2701,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-58__s0__e5ed1433.json",
+     "task": 58,
+     "train_s": 123.75194358825684,
+     "wall_s": null
+    },
+    "59": {
+     "bytes": 18710528,
+     "demo_episode": 2338,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-59__s0__f5efcd58.json",
+     "task": 59,
+     "train_s": 127.20675444602966,
+     "wall_s": 219.0
+    },
+    "60": {
+     "bytes": 18710528,
+     "demo_episode": 3411,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-60__s0__ece015f3.json",
+     "task": 60,
+     "train_s": 122.68335938453674,
+     "wall_s": 190.0
+    },
+    "61": {
+     "bytes": 18710528,
+     "demo_episode": 1600,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-61__s0__f5efcd58.json",
+     "task": 61,
+     "train_s": 123.71056866645813,
+     "wall_s": 197.0
+    },
+    "62": {
+     "bytes": 18710528,
+     "demo_episode": 2922,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-62__s0__ef654684.json",
+     "task": 62,
+     "train_s": 129.38272261619568,
+     "wall_s": null
+    },
+    "65": {
+     "bytes": 18710528,
+     "demo_episode": 923,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-65__s0__ece015f3.json",
+     "task": 65,
+     "train_s": 124.83553218841553,
+     "wall_s": 192.0
+    },
+    "66": {
+     "bytes": 18710528,
+     "demo_episode": 2968,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-66__s0__ece015f3.json",
+     "task": 66,
+     "train_s": 130.66501235961914,
+     "wall_s": 219.0
+    },
+    "67": {
+     "bytes": 18710528,
+     "demo_episode": 2656,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-67__s0__afd693c8.json",
+     "task": 67,
+     "train_s": 131.31715083122253,
+     "wall_s": null
+    },
+    "68": {
+     "bytes": 18710528,
+     "demo_episode": 407,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-68__s0__ece015f3.json",
+     "task": 68,
+     "train_s": 123.92024111747742,
+     "wall_s": 194.0
+    },
+    "69": {
+     "bytes": 18710528,
+     "demo_episode": 1190,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-69__s0__ece015f3.json",
+     "task": 69,
+     "train_s": 129.24634313583374,
+     "wall_s": 212.0
+    },
+    "70": {
+     "bytes": 18710528,
+     "demo_episode": 1140,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-70__s0__ece015f3.json",
+     "task": 70,
+     "train_s": 124.71262407302856,
+     "wall_s": 194.0
+    },
+    "71": {
+     "bytes": 18710528,
+     "demo_episode": 686,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-71__s0__f5efcd58.json",
+     "task": 71,
+     "train_s": 123.21653723716736,
+     "wall_s": 192.0
+    },
+    "72": {
+     "bytes": 18710528,
+     "demo_episode": 2153,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-72__s0__f5efcd58.json",
+     "task": 72,
+     "train_s": 124.38581442832947,
+     "wall_s": 191.0
+    },
+    "73": {
+     "bytes": 18710528,
+     "demo_episode": 1691,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sc__task-73__s0__ece015f3.json",
+     "task": 73,
+     "train_s": 122.65246319770813,
+     "wall_s": 193.0
+    },
+    "74": {
+     "bytes": 18710528,
+     "demo_episode": 2031,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sc__task-74__s0__ece015f3.json",
+     "task": 74,
+     "train_s": 124.91792607307434,
+     "wall_s": 202.0
+    },
+    "75": {
+     "bytes": 18710528,
+     "demo_episode": 497,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sc__task-75__s0__ece015f3.json",
+     "task": 75,
+     "train_s": 129.49683833122253,
+     "wall_s": 215.0
+    },
+    "76": {
+     "bytes": 18710528,
+     "demo_episode": 1003,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-76__s0__ece015f3.json",
+     "task": 76,
+     "train_s": 131.1948540210724,
+     "wall_s": 231.0
+    },
+    "77": {
+     "bytes": 18710528,
+     "demo_episode": 1858,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-77__s0__ece015f3.json",
+     "task": 77,
+     "train_s": 133.17938899993896,
+     "wall_s": 236.0
+    },
+    "78": {
+     "bytes": 18710528,
+     "demo_episode": 3063,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sc__task-78__s0__ece015f3.json",
+     "task": 78,
+     "train_s": 129.7105677127838,
+     "wall_s": 216.0
+    },
+    "79": {
+     "bytes": 18710528,
+     "demo_episode": 1725,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-79__s0__ece015f3.json",
+     "task": 79,
+     "train_s": 135.4477345943451,
+     "wall_s": 231.0
+    },
+    "80": {
+     "bytes": 18710528,
+     "demo_episode": 0,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-80__s0__ece015f3.json",
+     "task": 80,
+     "train_s": 123.37438201904297,
+     "wall_s": 200.0
+    },
+    "81": {
+     "bytes": 18710528,
+     "demo_episode": 568,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-81__s0__ece015f3.json",
+     "task": 81,
+     "train_s": 130.15816521644592,
+     "wall_s": 215.0
+    },
+    "82": {
+     "bytes": 18710528,
+     "demo_episode": 3272,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sc__task-82__s0__ece015f3.json",
+     "task": 82,
+     "train_s": 125.16687512397766,
+     "wall_s": 201.0
+    },
+    "83": {
+     "bytes": 18710528,
+     "demo_episode": 1478,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sc__task-83__s0__ece015f3.json",
+     "task": 83,
+     "train_s": 128.1919810771942,
+     "wall_s": 210.0
+    },
+    "84": {
+     "bytes": 18710528,
+     "demo_episode": 2610,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-84__s0__ece015f3.json",
+     "task": 84,
+     "train_s": 129.3660740852356,
+     "wall_s": 226.0
+    },
+    "85": {
+     "bytes": 18710528,
+     "demo_episode": 2385,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-85__s0__ece015f3.json",
+     "task": 85,
+     "train_s": 133.61251544952393,
+     "wall_s": 222.0
+    },
+    "86": {
+     "bytes": 18710528,
+     "demo_episode": 1048,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-86__s0__ece015f3.json",
+     "task": 86,
+     "train_s": 132.18546199798584,
+     "wall_s": 235.0
+    },
+    "87": {
+     "bytes": 18710528,
+     "demo_episode": 2796,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-87__s0__ece015f3.json",
+     "task": 87,
+     "train_s": 122.7944324016571,
+     "wall_s": 193.0
+    },
+    "88": {
+     "bytes": 18710528,
+     "demo_episode": 3554,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-88__s0__ece015f3.json",
+     "task": 88,
+     "train_s": 124.6752564907074,
+     "wall_s": 200.0
+    },
+    "89": {
+     "bytes": 18710528,
+     "demo_episode": 1984,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-89__s0__ece015f3.json",
+     "task": 89,
+     "train_s": 128.2382218837738,
+     "wall_s": 213.0
+    },
+    "9": {
+     "bytes": 18710528,
+     "demo_episode": 3460,
+     "gpu": "NVIDIA A40",
+     "params": 9355264,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-9__s0__f5efcd58.json",
+     "task": 9,
+     "train_s": 129.5074269771576,
+     "wall_s": 216.0
+    }
+   },
+   "loras/pi0_libero": {
+    "10": {
+     "bytes": 13860864,
+     "demo_episode": 1809,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-10__s0__bad3a3bc.json",
+     "task": 10,
+     "train_s": 207.7954342365265,
+     "wall_s": 299.0
+    },
+    "12": {
+     "bytes": 13860864,
+     "demo_episode": 2840,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-12__s0__bad3a3bc.json",
+     "task": 12,
+     "train_s": 207.31787109375,
+     "wall_s": 284.0
+    },
+    "13": {
+     "bytes": 13860864,
+     "demo_episode": 1649,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-13__s0__bad3a3bc.json",
+     "task": 13,
+     "train_s": 207.4223554134369,
+     "wall_s": 285.0
+    },
+    "14": {
+     "bytes": 13860864,
+     "demo_episode": 224,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-14__s0__bad3a3bc.json",
+     "task": 14,
+     "train_s": 207.48896026611328,
+     "wall_s": 284.0
+    },
+    "15": {
+     "bytes": 13860864,
+     "demo_episode": 638,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-15__s0__bad3a3bc.json",
+     "task": 15,
+     "train_s": 208.52759504318237,
+     "wall_s": 299.0
+    },
+    "25": {
+     "bytes": 13860864,
+     "demo_episode": 176,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-25__s0__bad3a3bc.json",
+     "task": 25,
+     "train_s": 208.0549795627594,
+     "wall_s": 300.0
+    },
+    "30": {
+     "bytes": 13860864,
+     "demo_episode": 3601,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-30__s0__bad3a3bc.json",
+     "task": 30,
+     "train_s": 207.61930584907532,
+     "wall_s": 297.0
+    },
+    "31": {
+     "bytes": 13860864,
+     "demo_episode": 2561,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-31__s0__bad3a3bc.json",
+     "task": 31,
+     "train_s": 209.54057574272156,
+     "wall_s": 299.0
+    },
+    "36": {
+     "bytes": 13860864,
+     "demo_episode": 455,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-36__s0__bad3a3bc.json",
+     "task": 36,
+     "train_s": 206.8250608444214,
+     "wall_s": 289.0
+    },
+    "41": {
+     "bytes": 13860864,
+     "demo_episode": 2886,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-41__s0__bad3a3bc.json",
+     "task": 41,
+     "train_s": 208.5480625629425,
+     "wall_s": 290.0
+    },
+    "43": {
+     "bytes": 13860864,
+     "demo_episode": 273,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-43__s0__bad3a3bc.json",
+     "task": 43,
+     "train_s": 208.37504863739014,
+     "wall_s": 300.0
+    },
+    "46": {
+     "bytes": 13860864,
+     "demo_episode": 35,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-46__s0__bad3a3bc.json",
+     "task": 46,
+     "train_s": 209.06138253211975,
+     "wall_s": 289.0
+    },
+    "47": {
+     "bytes": 13860864,
+     "demo_episode": 2291,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-47__s0__bad3a3bc.json",
+     "task": 47,
+     "train_s": 208.54743599891663,
+     "wall_s": 299.0
+    },
+    "48": {
+     "bytes": 13860864,
+     "demo_episode": 3092,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-48__s0__bad3a3bc.json",
+     "task": 48,
+     "train_s": 209.7169704437256,
+     "wall_s": 277.0
+    },
+    "49": {
+     "bytes": 13860864,
+     "demo_episode": 3366,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-49__s0__bad3a3bc.json",
+     "task": 49,
+     "train_s": 209.26362252235413,
+     "wall_s": 282.0
+    },
+    "50": {
+     "bytes": 13860864,
+     "demo_episode": 1436,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-50__s0__bad3a3bc.json",
+     "task": 50,
+     "train_s": 208.69952511787415,
+     "wall_s": 279.0
+    },
+    "52": {
+     "bytes": 13860864,
+     "demo_episode": 2475,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-52__s0__bad3a3bc.json",
+     "task": 52,
+     "train_s": 208.0892140865326,
+     "wall_s": 296.0
+    },
+    "53": {
+     "bytes": 13860864,
+     "demo_episode": 1284,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-53__s0__bad3a3bc.json",
+     "task": 53,
+     "train_s": 208.81110262870789,
+     "wall_s": 280.0
+    },
+    "54": {
+     "bytes": 13860864,
+     "demo_episode": 127,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-54__s0__bad3a3bc.json",
+     "task": 54,
+     "train_s": 207.8958785533905,
+     "wall_s": 297.0
+    },
+    "55": {
+     "bytes": 13860864,
+     "demo_episode": 2431,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-55__s0__c2da6908.json",
+     "task": 55,
+     "train_s": 209.25040245056152,
+     "wall_s": 289.0
+    },
+    "56": {
+     "bytes": 13860864,
+     "demo_episode": 3013,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-56__s0__c2da6908.json",
+     "task": 56,
+     "train_s": 208.59076595306396,
+     "wall_s": 289.0
+    },
+    "57": {
+     "bytes": 13860864,
+     "demo_episode": 78,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-57__s0__bad3a3bc.json",
+     "task": 57,
+     "train_s": 208.4964804649353,
+     "wall_s": 280.0
+    },
+    "58": {
+     "bytes": 13860864,
+     "demo_episode": 2701,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-58__s0__c2da6908.json",
+     "task": 58,
+     "train_s": 209.38521671295166,
+     "wall_s": 290.0
+    },
+    "59": {
+     "bytes": 13860864,
+     "demo_episode": 2338,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-59__s0__c2da6908.json",
+     "task": 59,
+     "train_s": 209.31359338760376,
+     "wall_s": 294.0
+    },
+    "61": {
+     "bytes": 13860864,
+     "demo_episode": 1600,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-61__s0__c2da6908.json",
+     "task": 61,
+     "train_s": 208.93160462379456,
+     "wall_s": 291.0
+    },
+    "62": {
+     "bytes": 13860864,
+     "demo_episode": 2922,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-62__s0__c2da6908.json",
+     "task": 62,
+     "train_s": 207.88331866264343,
+     "wall_s": 295.0
+    },
+    "71": {
+     "bytes": 13860864,
+     "demo_episode": 686,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-71__s0__bad3a3bc.json",
+     "task": 71,
+     "train_s": 207.37754774093628,
+     "wall_s": 284.0
+    },
+    "72": {
+     "bytes": 13860864,
+     "demo_episode": 2153,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-72__s0__bad3a3bc.json",
+     "task": 72,
+     "train_s": 208.3600718975067,
+     "wall_s": 287.0
+    },
+    "9": {
+     "bytes": 13860864,
+     "demo_episode": 3460,
+     "gpu": "NVIDIA A40",
+     "params": 6930432,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-9__s0__bad3a3bc.json",
+     "task": 9,
+     "train_s": 209.13889527320862,
+     "wall_s": 287.0
+    }
+   },
+   "loras/smolvla": {
+    "10": {
+     "bytes": 6832128,
+     "demo_episode": 1809,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-10__s0__6f94ea3d.json",
+     "task": 10,
+     "train_s": 463.77262234687805,
+     "wall_s": 491.0
+    },
+    "12": {
+     "bytes": 6832128,
+     "demo_episode": 2840,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-12__s0__6f94ea3d.json",
+     "task": 12,
+     "train_s": 437.5033459663391,
+     "wall_s": 461.0
+    },
+    "13": {
+     "bytes": 6832128,
+     "demo_episode": 1649,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-13__s0__6f94ea3d.json",
+     "task": 13,
+     "train_s": 437.33440494537354,
+     "wall_s": 461.0
+    },
+    "14": {
+     "bytes": 6832128,
+     "demo_episode": 224,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-14__s0__6f94ea3d.json",
+     "task": 14,
+     "train_s": 435.48906111717224,
+     "wall_s": 459.0
+    },
+    "15": {
+     "bytes": 6832128,
+     "demo_episode": 638,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-15__s0__6f94ea3d.json",
+     "task": 15,
+     "train_s": 447.11619997024536,
+     "wall_s": 464.0
+    },
+    "25": {
+     "bytes": 6832128,
+     "demo_episode": 176,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-25__s0__6f94ea3d.json",
+     "task": 25,
+     "train_s": 465.10064601898193,
+     "wall_s": 491.0
+    },
+    "30": {
+     "bytes": 6832128,
+     "demo_episode": 3601,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-30__s0__6f94ea3d.json",
+     "task": 30,
+     "train_s": 470.4021122455597,
+     "wall_s": 494.0
+    },
+    "31": {
+     "bytes": 6832128,
+     "demo_episode": 2561,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-31__s0__6f94ea3d.json",
+     "task": 31,
+     "train_s": 448.8943705558777,
+     "wall_s": 472.0
+    },
+    "36": {
+     "bytes": 6832128,
+     "demo_episode": 455,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-36__s0__6f94ea3d.json",
+     "task": 36,
+     "train_s": 434.6368250846863,
+     "wall_s": 459.0
+    },
+    "41": {
+     "bytes": 6832128,
+     "demo_episode": 2886,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-41__s0__6f94ea3d.json",
+     "task": 41,
+     "train_s": 438.8445601463318,
+     "wall_s": 461.0
+    },
+    "43": {
+     "bytes": 6832128,
+     "demo_episode": 273,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-43__s0__6f94ea3d.json",
+     "task": 43,
+     "train_s": 464.3865225315094,
+     "wall_s": 491.0
+    },
+    "46": {
+     "bytes": 6832128,
+     "demo_episode": 35,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-46__s0__6f94ea3d.json",
+     "task": 46,
+     "train_s": 468.1203706264496,
+     "wall_s": 495.0
+    },
+    "47": {
+     "bytes": 6832128,
+     "demo_episode": 2291,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-47__s0__6f94ea3d.json",
+     "task": 47,
+     "train_s": 450.5465033054352,
+     "wall_s": 466.0
+    },
+    "48": {
+     "bytes": 6832128,
+     "demo_episode": 3092,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-48__s0__6f94ea3d.json",
+     "task": 48,
+     "train_s": 467.65097856521606,
+     "wall_s": 494.0
+    },
+    "49": {
+     "bytes": 6832128,
+     "demo_episode": 3366,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-49__s0__6f94ea3d.json",
+     "task": 49,
+     "train_s": 465.0136721134186,
+     "wall_s": 492.0
+    },
+    "50": {
+     "bytes": 6832128,
+     "demo_episode": 1436,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-50__s0__6f94ea3d.json",
+     "task": 50,
+     "train_s": 466.26525807380676,
+     "wall_s": 493.0
+    },
+    "52": {
+     "bytes": 6832128,
+     "demo_episode": 2475,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-52__s0__6f94ea3d.json",
+     "task": 52,
+     "train_s": 470.2066841125488,
+     "wall_s": 494.0
+    },
+    "53": {
+     "bytes": 6832128,
+     "demo_episode": 1284,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-53__s0__6f94ea3d.json",
+     "task": 53,
+     "train_s": 466.89995098114014,
+     "wall_s": 491.0
+    },
+    "54": {
+     "bytes": 6832128,
+     "demo_episode": 127,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-54__s0__6f94ea3d.json",
+     "task": 54,
+     "train_s": 462.3883457183838,
+     "wall_s": 488.0
+    },
+    "55": {
+     "bytes": 6832128,
+     "demo_episode": 2431,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-55__s0__6f94ea3d.json",
+     "task": 55,
+     "train_s": 462.8592586517334,
+     "wall_s": 491.0
+    },
+    "56": {
+     "bytes": 6832128,
+     "demo_episode": 3013,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-56__s0__6f94ea3d.json",
+     "task": 56,
+     "train_s": 465.85722613334656,
+     "wall_s": 495.0
+    },
+    "57": {
+     "bytes": 6832128,
+     "demo_episode": 78,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-57__s0__6f94ea3d.json",
+     "task": 57,
+     "train_s": 466.4030888080597,
+     "wall_s": 493.0
+    },
+    "58": {
+     "bytes": 6832128,
+     "demo_episode": 2701,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-58__s0__6f94ea3d.json",
+     "task": 58,
+     "train_s": 460.9284019470215,
+     "wall_s": 491.0
+    },
+    "59": {
+     "bytes": 6832128,
+     "demo_episode": 2338,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-59__s0__6f94ea3d.json",
+     "task": 59,
+     "train_s": 465.2891788482666,
+     "wall_s": 492.0
+    },
+    "61": {
+     "bytes": 6832128,
+     "demo_episode": 1600,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-61__s0__6f94ea3d.json",
+     "task": 61,
+     "train_s": 462.07315278053284,
+     "wall_s": 491.0
+    },
+    "62": {
+     "bytes": 6832128,
+     "demo_episode": 2922,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-62__s0__6f94ea3d.json",
+     "task": 62,
+     "train_s": 465.1683430671692,
+     "wall_s": 492.0
+    },
+    "71": {
+     "bytes": 6832128,
+     "demo_episode": 686,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-71__s0__6f94ea3d.json",
+     "task": 71,
+     "train_s": 431.6164929866791,
+     "wall_s": 453.0
+    },
+    "72": {
+     "bytes": 6832128,
+     "demo_episode": 2153,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-72__s0__6f94ea3d.json",
+     "task": 72,
+     "train_s": 439.62527680397034,
+     "wall_s": 463.0
+    },
+    "9": {
+     "bytes": 6832128,
+     "demo_episode": 3460,
+     "gpu": "NVIDIA A40",
+     "params": 3416064,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-9__s0__6f94ea3d.json",
+     "task": 9,
+     "train_s": 439.37030839920044,
+     "wall_s": 461.0
+    }
+   },
+   "loras/xvla": {
+    "10": {
+     "bytes": 12713984,
+     "demo_episode": 1809,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-10__s0__da054510.json",
+     "task": 10,
+     "train_s": 1964.9898784160614,
+     "wall_s": 1992.0
+    },
+    "12": {
+     "bytes": 12713984,
+     "demo_episode": 2840,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-12__s0__da054510.json",
+     "task": 12,
+     "train_s": 1958.0441796779633,
+     "wall_s": 1994.0
+    },
+    "13": {
+     "bytes": 12713984,
+     "demo_episode": 1649,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-13__s0__da054510.json",
+     "task": 13,
+     "train_s": 1956.0774228572845,
+     "wall_s": 1987.0
+    },
+    "14": {
+     "bytes": 12713984,
+     "demo_episode": 224,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-14__s0__da054510.json",
+     "task": 14,
+     "train_s": 1927.7899231910706,
+     "wall_s": 1966.0
+    },
+    "15": {
+     "bytes": 12713984,
+     "demo_episode": 638,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-15__s0__da054510.json",
+     "task": 15,
+     "train_s": 1945.2039866447449,
+     "wall_s": 2039.0
+    },
+    "25": {
+     "bytes": 12713984,
+     "demo_episode": 176,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-25__s0__da054510.json",
+     "task": 25,
+     "train_s": 1910.0912520885468,
+     "wall_s": 2005.0
+    },
+    "30": {
+     "bytes": 12713984,
+     "demo_episode": 3601,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-30__s0__327cc7c0.json",
+     "task": 30,
+     "train_s": 1930.6375586986542,
+     "wall_s": 1956.0
+    },
+    "31": {
+     "bytes": 12713984,
+     "demo_episode": 2561,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-31__s0__da054510.json",
+     "task": 31,
+     "train_s": 1967.2394263744354,
+     "wall_s": 1996.0
+    },
+    "36": {
+     "bytes": 12713984,
+     "demo_episode": 455,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-36__s0__da054510.json",
+     "task": 36,
+     "train_s": 1954.584018945694,
+     "wall_s": 1979.0
+    },
+    "41": {
+     "bytes": 12713984,
+     "demo_episode": 2886,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-41__s0__da054510.json",
+     "task": 41,
+     "train_s": 1893.712734222412,
+     "wall_s": 1919.0
+    },
+    "43": {
+     "bytes": 12713984,
+     "demo_episode": 273,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-43__s0__da054510.json",
+     "task": 43,
+     "train_s": 1939.7071833610535,
+     "wall_s": 1967.0
+    },
+    "46": {
+     "bytes": 12713984,
+     "demo_episode": 35,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-46__s0__327cc7c0.json",
+     "task": 46,
+     "train_s": 1925.5322713851929,
+     "wall_s": 1955.0
+    },
+    "47": {
+     "bytes": 12713984,
+     "demo_episode": 2291,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-47__s0__327cc7c0.json",
+     "task": 47,
+     "train_s": 1949.4922556877136,
+     "wall_s": 1972.0
+    },
+    "48": {
+     "bytes": 12713984,
+     "demo_episode": 3092,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-48__s0__327cc7c0.json",
+     "task": 48,
+     "train_s": 1939.6944835186005,
+     "wall_s": 1966.0
+    },
+    "49": {
+     "bytes": 12713984,
+     "demo_episode": 3366,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-49__s0__327cc7c0.json",
+     "task": 49,
+     "train_s": 1902.2404732704163,
+     "wall_s": 1925.0
+    },
+    "50": {
+     "bytes": 12713984,
+     "demo_episode": 1436,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-50__s0__327cc7c0.json",
+     "task": 50,
+     "train_s": 1985.6438839435577,
+     "wall_s": 2006.0
+    },
+    "52": {
+     "bytes": 12713984,
+     "demo_episode": 2475,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-52__s0__327cc7c0.json",
+     "task": 52,
+     "train_s": 1936.5949234962463,
+     "wall_s": 1969.0
+    },
+    "53": {
+     "bytes": 12713984,
+     "demo_episode": 1284,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-53__s0__327cc7c0.json",
+     "task": 53,
+     "train_s": 1938.9987807273865,
+     "wall_s": 1965.0
+    },
+    "54": {
+     "bytes": 12713984,
+     "demo_episode": 127,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-54__s0__327cc7c0.json",
+     "task": 54,
+     "train_s": 1961.0620603561401,
+     "wall_s": 1997.0
+    },
+    "55": {
+     "bytes": 12713984,
+     "demo_episode": 2431,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-55__s0__327cc7c0.json",
+     "task": 55,
+     "train_s": 1936.5926277637482,
+     "wall_s": 1966.0
+    },
+    "56": {
+     "bytes": 12713984,
+     "demo_episode": 3013,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-56__s0__327cc7c0.json",
+     "task": 56,
+     "train_s": 1975.8943147659302,
+     "wall_s": 2006.0
+    },
+    "57": {
+     "bytes": 12713984,
+     "demo_episode": 78,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-57__s0__327cc7c0.json",
+     "task": 57,
+     "train_s": 1928.1197335720062,
+     "wall_s": 1954.0
+    },
+    "58": {
+     "bytes": 12713984,
+     "demo_episode": 2701,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-58__s0__327cc7c0.json",
+     "task": 58,
+     "train_s": 1917.3654489517212,
+     "wall_s": 1942.0
+    },
+    "59": {
+     "bytes": 12713984,
+     "demo_episode": 2338,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-59__s0__327cc7c0.json",
+     "task": 59,
+     "train_s": 1929.2157588005066,
+     "wall_s": 1955.0
+    },
+    "61": {
+     "bytes": 12713984,
+     "demo_episode": 1600,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-61__s0__327cc7c0.json",
+     "task": 61,
+     "train_s": 1936.3396925926208,
+     "wall_s": 1963.0
+    },
+    "62": {
+     "bytes": 12713984,
+     "demo_episode": 2922,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-62__s0__327cc7c0.json",
+     "task": 62,
+     "train_s": 1966.2971348762512,
+     "wall_s": 1992.0
+    },
+    "71": {
+     "bytes": 12713984,
+     "demo_episode": 686,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-71__s0__da054510.json",
+     "task": 71,
+     "train_s": 1952.30606007576,
+     "wall_s": 1982.0
+    },
+    "72": {
+     "bytes": 12713984,
+     "demo_episode": 2153,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-72__s0__da054510.json",
+     "task": 72,
+     "train_s": 1934.0650570392609,
+     "wall_s": 2023.0
+    },
+    "9": {
+     "bytes": 12713984,
+     "demo_episode": 3460,
+     "gpu": "NVIDIA A40",
+     "params": 6356992,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-9__s0__da054510.json",
+     "task": 9,
+     "train_s": 1919.0580897331238,
+     "wall_s": 1946.0
+    }
+   },
+   "loras_r4": {
+    "10": {
+     "bytes": 4677632,
+     "demo_episode": 1809,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-10__s0__7478b2b4.json",
+     "task": 10,
+     "train_s": 122.92205047607422,
+     "wall_s": 202.0
+    },
+    "12": {
+     "bytes": 4677632,
+     "demo_episode": 2840,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-12__s0__7478b2b4.json",
+     "task": 12,
+     "train_s": 126.24563694000244,
+     "wall_s": 213.0
+    },
+    "13": {
+     "bytes": 4677632,
+     "demo_episode": 1649,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-13__s0__7478b2b4.json",
+     "task": 13,
+     "train_s": 124.87185192108154,
+     "wall_s": 191.0
+    },
+    "14": {
+     "bytes": 4677632,
+     "demo_episode": 224,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-14__s0__7478b2b4.json",
+     "task": 14,
+     "train_s": 136.7780420780182,
+     "wall_s": 220.0
+    },
+    "15": {
+     "bytes": 4677632,
+     "demo_episode": 638,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-15__s0__4e439436.json",
+     "task": 15,
+     "train_s": 131.48682022094727,
+     "wall_s": 219.0
+    },
+    "25": {
+     "bytes": 4677632,
+     "demo_episode": 176,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-25__s0__4e439436.json",
+     "task": 25,
+     "train_s": 132.86833691596985,
+     "wall_s": 218.0
+    },
+    "30": {
+     "bytes": 4677632,
+     "demo_episode": 3601,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-30__s0__7478b2b4.json",
+     "task": 30,
+     "train_s": 131.22900533676147,
+     "wall_s": 222.0
+    },
+    "31": {
+     "bytes": 4677632,
+     "demo_episode": 2561,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-31__s0__4e439436.json",
+     "task": 31,
+     "train_s": 128.4621479511261,
+     "wall_s": 220.0
+    },
+    "36": {
+     "bytes": 4677632,
+     "demo_episode": 455,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-36__s0__7478b2b4.json",
+     "task": 36,
+     "train_s": 123.02075457572937,
+     "wall_s": 211.0
+    },
+    "41": {
+     "bytes": 4677632,
+     "demo_episode": 2886,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-41__s0__7478b2b4.json",
+     "task": 41,
+     "train_s": 129.9396321773529,
+     "wall_s": 220.0
+    },
+    "43": {
+     "bytes": 4677632,
+     "demo_episode": 273,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-43__s0__7478b2b4.json",
+     "task": 43,
+     "train_s": 133.95514845848083,
+     "wall_s": 219.0
+    },
+    "46": {
+     "bytes": 4677632,
+     "demo_episode": 35,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-46__s0__7478b2b4.json",
+     "task": 46,
+     "train_s": 138.28198623657227,
+     "wall_s": 224.0
+    },
+    "47": {
+     "bytes": 4677632,
+     "demo_episode": 2291,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-47__s0__7478b2b4.json",
+     "task": 47,
+     "train_s": 122.86417007446289,
+     "wall_s": 202.0
+    },
+    "48": {
+     "bytes": 4677632,
+     "demo_episode": 3092,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-48__s0__7478b2b4.json",
+     "task": 48,
+     "train_s": 121.96704959869385,
+     "wall_s": 195.0
+    },
+    "49": {
+     "bytes": 4677632,
+     "demo_episode": 3366,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-49__s0__7478b2b4.json",
+     "task": 49,
+     "train_s": 136.9374315738678,
+     "wall_s": 225.0
+    },
+    "50": {
+     "bytes": 4677632,
+     "demo_episode": 1436,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-50__s0__7478b2b4.json",
+     "task": 50,
+     "train_s": 128.10387134552002,
+     "wall_s": 219.0
+    },
+    "52": {
+     "bytes": 4677632,
+     "demo_episode": 2475,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-52__s0__7478b2b4.json",
+     "task": 52,
+     "train_s": 135.3667221069336,
+     "wall_s": 224.0
+    },
+    "53": {
+     "bytes": 4677632,
+     "demo_episode": 1284,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-53__s0__7478b2b4.json",
+     "task": 53,
+     "train_s": 129.64866518974304,
+     "wall_s": 216.0
+    },
+    "54": {
+     "bytes": 4677632,
+     "demo_episode": 127,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-54__s0__7478b2b4.json",
+     "task": 54,
+     "train_s": 138.13841485977173,
+     "wall_s": 225.0
+    },
+    "55": {
+     "bytes": 4677632,
+     "demo_episode": 2431,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-55__s0__7478b2b4.json",
+     "task": 55,
+     "train_s": 128.16439652442932,
+     "wall_s": 215.0
+    },
+    "56": {
+     "bytes": 4677632,
+     "demo_episode": 3013,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-56__s0__7478b2b4.json",
+     "task": 56,
+     "train_s": 127.71837592124939,
+     "wall_s": 210.0
+    },
+    "57": {
+     "bytes": 4677632,
+     "demo_episode": 78,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-57__s0__7478b2b4.json",
+     "task": 57,
+     "train_s": 135.10161232948303,
+     "wall_s": 220.0
+    },
+    "58": {
+     "bytes": 4677632,
+     "demo_episode": 2701,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-58__s0__7478b2b4.json",
+     "task": 58,
+     "train_s": 122.25949597358704,
+     "wall_s": 193.0
+    },
+    "59": {
+     "bytes": 4677632,
+     "demo_episode": 2338,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-59__s0__7478b2b4.json",
+     "task": 59,
+     "train_s": 132.19509077072144,
+     "wall_s": 221.0
+    },
+    "61": {
+     "bytes": 4677632,
+     "demo_episode": 1600,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-61__s0__7478b2b4.json",
+     "task": 61,
+     "train_s": 128.6248278617859,
+     "wall_s": 216.0
+    },
+    "62": {
+     "bytes": 4677632,
+     "demo_episode": 2922,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-62__s0__7478b2b4.json",
+     "task": 62,
+     "train_s": 137.73931860923767,
+     "wall_s": 225.0
+    },
+    "71": {
+     "bytes": 4677632,
+     "demo_episode": 686,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-71__s0__7478b2b4.json",
+     "task": 71,
+     "train_s": 122.07568335533142,
+     "wall_s": 191.0
+    },
+    "72": {
+     "bytes": 4677632,
+     "demo_episode": 2153,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-72__s0__7478b2b4.json",
+     "task": 72,
+     "train_s": 140.84626817703247,
+     "wall_s": 230.0
+    },
+    "9": {
+     "bytes": 4677632,
+     "demo_episode": 3460,
+     "gpu": "NVIDIA A40",
+     "params": 2338816,
+     "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-9__s0__7478b2b4.json",
+     "task": 9,
+     "train_s": 129.96661376953125,
+     "wall_s": 214.0
+    }
+   },
+   "protos": {
+    "Ghtray": {
+     "bytes": 4677632,
+     "demos": 10,
+     "frames": 714,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+     ],
+     "log": "slurm/4012202.out",
+     "name": "Ghtray",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Ghtray__s0__3d6b9220.json",
+     "train_s": 2251.0,
+     "wall_s": 2329.0
+    },
+    "Gscbasket": {
+     "bytes": 4677632,
+     "demos": 8,
+     "frames": 682,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54
+     ],
+     "log": "slurm/4011688.out",
+     "name": "Gscbasket",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Gscbasket__s0__6a258233.json",
+     "train_s": 2255.0,
+     "wall_s": 2335.0
+    },
+    "Gsccab": {
+     "bytes": 4677632,
+     "demos": 6,
+     "frames": 568,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      10,
+      15,
+      25,
+      31,
+      41,
+      43
+     ],
+     "log": "slurm/4011681.out",
+     "name": "Gsccab",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Gsccab__s0__6a258233.json",
+     "train_s": 2247.0,
+     "wall_s": 2332.0
+    },
+    "Gscplate": {
+     "bytes": 4677632,
+     "demos": 8,
+     "frames": 667,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      9,
+      12,
+      13,
+      14,
+      30,
+      36,
+      71,
+      72
+     ],
+     "log": "slurm/4011684.out",
+     "name": "Gscplate",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Gscplate__s0__6a258233.json",
+     "train_s": 2284.0,
+     "wall_s": 2366.0
+    },
+    "Osc0": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 146,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      46,
+      50,
+      55
+     ],
+     "log": "slurm/4011694.out",
+     "name": "Osc0",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc0__s0__6a258233.json",
+     "train_s": 2246.0,
+     "wall_s": 2326.0
+    },
+    "Osc1": {
+     "bytes": 4677632,
+     "demos": 13,
+     "frames": 654,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      1,
+      2,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      24,
+      25,
+      29,
+      30,
+      31,
+      60
+     ],
+     "log": "slurm/4011680.out",
+     "name": "Osc1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc1__s0__6a258233.json",
+     "train_s": 2263.0,
+     "wall_s": 2353.0
+    },
+    "Osc10": {
+     "bytes": 4677632,
+     "demos": 4,
+     "frames": 203,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      65,
+      66,
+      71,
+      84
+     ],
+     "log": "slurm/4011685.out",
+     "name": "Osc10",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc10__s0__6a258233.json",
+     "train_s": 2276.0,
+     "wall_s": 2356.0
+    },
+    "Osc11": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 39,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      62
+     ],
+     "log": "slurm/4011698.out",
+     "name": "Osc11",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc11__s0__6a258233.json",
+     "train_s": 2257.0,
+     "wall_s": 2336.0
+    },
+    "Osc12": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 186,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      49,
+      54,
+      59
+     ],
+     "log": "slurm/4011689.out",
+     "name": "Osc12",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc12__s0__6a258233.json",
+     "train_s": 2258.0,
+     "wall_s": 2339.0
+    },
+    "Osc13": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 188,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      36,
+      37,
+      43
+     ],
+     "log": "slurm/4011682.out",
+     "name": "Osc13",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc13__s0__6a258233.json",
+     "train_s": 2266.0,
+     "wall_s": 2348.0
+    },
+    "Osc14": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 118,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      67,
+      72,
+      85
+     ],
+     "log": "slurm/4011686.out",
+     "name": "Osc14",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc14__s0__6a258233.json",
+     "train_s": 2247.0,
+     "wall_s": 2327.0
+    },
+    "Osc2": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 142,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      3,
+      4,
+      51,
+      56
+     ],
+     "log": "slurm/4011695.out",
+     "name": "Osc2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc2__s0__6a258233.json",
+     "train_s": 2252.0,
+     "wall_s": 2341.0
+    },
+    "Osc3": {
+     "bytes": 4677632,
+     "demos": 4,
+     "frames": 187,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      5,
+      61,
+      69,
+      70
+     ],
+     "log": "slurm/4011699.out",
+     "name": "Osc3",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc3__s0__6a258233.json",
+     "train_s": 2249.0,
+     "wall_s": 2328.0
+    },
+    "Osc4": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 66,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      57
+     ],
+     "log": "slurm/4011696.out",
+     "name": "Osc4",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc4__s0__6a258233.json",
+     "train_s": 2241.0,
+     "wall_s": 2321.0
+    },
+    "Osc5": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 63,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      47
+     ],
+     "log": "slurm/4011687.out",
+     "name": "Osc5",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc5__s0__6a258233.json",
+     "train_s": 2257.0,
+     "wall_s": 2338.0
+    },
+    "Osc6": {
+     "bytes": 4677632,
+     "demos": 6,
+     "frames": 567,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      18,
+      21,
+      40,
+      41,
+      42,
+      45
+     ],
+     "log": "slurm/4011683.out",
+     "name": "Osc6",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc6__s0__6a258233.json",
+     "train_s": 2251.0,
+     "wall_s": 2328.0
+    },
+    "Osc7": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 230,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      32,
+      48,
+      58
+     ],
+     "log": "slurm/4011693.out",
+     "name": "Osc7",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc7__s0__6a258233.json",
+     "train_s": 2209.0,
+     "wall_s": 2282.0
+    },
+    "Osc8": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 35,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      52
+     ],
+     "log": "slurm/4011690.out",
+     "name": "Osc8",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc8__s0__6a258233.json",
+     "train_s": 2256.0,
+     "wall_s": 2332.0
+    },
+    "Osc9": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 59,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      53
+     ],
+     "log": "slurm/4011692.out",
+     "name": "Osc9",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc9__s0__6a258233.json",
+     "train_s": 2259.0,
+     "wall_s": 2339.0
+    },
+    "Sch0": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 36,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      12
+     ],
+     "log": "slurm/4012033.out",
+     "name": "Sch0",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Sch0__s0__85a40faa.json",
+     "train_s": 2261.0,
+     "wall_s": 2337.0
+    },
+    "Sch1": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 71,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      13
+     ],
+     "log": "slurm/4012031.out",
+     "name": "Sch1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Sch1__s0__85a40faa.json",
+     "train_s": 2293.0,
+     "wall_s": 2380.0
+    },
+    "Sch2": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 81,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      14,
+      15
+     ],
+     "log": "slurm/4012029.out",
+     "name": "Sch2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_Sch2__s0__85a40faa.json",
+     "train_s": 2238.0,
+     "wall_s": 2313.0
+    },
+    "XG0": {
+     "bytes": 4677632,
+     "demos": 6,
+     "frames": 436,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      2,
+      3,
+      4,
+      5,
+      8,
+      29,
+      32
+     ],
+     "log": "slurm/4083524.out",
+     "name": "XG0",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG0__s0__ece015f3.json",
+     "train_s": 2332.0,
+     "wall_s": 2391.0
+    },
+    "XG1": {
+     "bytes": 4677632,
+     "demos": 5,
+     "frames": 380,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      18,
+      19,
+      21,
+      38,
+      45
+     ],
+     "log": "slurm/4083525.out",
+     "name": "XG1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG1__s0__ece015f3.json",
+     "train_s": 2251.0,
+     "wall_s": 2316.0
+    },
+    "XG10": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 247,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      40,
+      86,
+      88
+     ],
+     "log": "slurm/4083534.out",
+     "name": "XG10",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG10__s0__ece015f3.json",
+     "train_s": 2337.0,
+     "wall_s": 2393.0
+    },
+    "XG11": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 135,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      42,
+      89
+     ],
+     "log": "slurm/4083535.out",
+     "name": "XG11",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG11__s0__ece015f3.json",
+     "train_s": 2269.0,
+     "wall_s": 2344.0
+    },
+    "XG13": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 150,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      65,
+      67
+     ],
+     "log": "slurm/4083537.out",
+     "name": "XG13",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG13__s0__ece015f3.json",
+     "train_s": 2271.0,
+     "wall_s": 2359.0
+    },
+    "XG14": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 185,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      66,
+      68
+     ],
+     "log": "slurm/4083538.out",
+     "name": "XG14",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG14__s0__ece015f3.json",
+     "train_s": 2248.0,
+     "wall_s": 2331.0
+    },
+    "XG15": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 60,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      69
+     ],
+     "log": "slurm/4083539.out",
+     "name": "XG15",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG15__s0__ece015f3.json",
+     "train_s": 2256.0,
+     "wall_s": 2332.0
+    },
+    "XG17": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 266,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      73,
+      78,
+      81
+     ],
+     "log": "slurm/4083541.out",
+     "name": "XG17",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG17__s0__ece015f3.json",
+     "train_s": 2279.0,
+     "wall_s": 2369.0
+    },
+    "XG18": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 314,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      74,
+      79,
+      82
+     ],
+     "log": "slurm/4083542.out",
+     "name": "XG18",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG18__s0__45b7f1e3.json",
+     "train_s": 2269.0,
+     "wall_s": 2345.0
+    },
+    "XG19": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 281,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      75,
+      80,
+      83
+     ],
+     "log": "slurm/4083543.out",
+     "name": "XG19",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG19__s0__ece015f3.json",
+     "train_s": 2268.0,
+     "wall_s": 2343.0
+    },
+    "XG20": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 210,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      76,
+      84,
+      85
+     ],
+     "log": "slurm/4083544.out",
+     "name": "XG20",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG20__s0__ece015f3.json",
+     "train_s": 2246.0,
+     "wall_s": 2307.0
+    },
+    "XG21": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 163,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      77
+     ],
+     "log": "slurm/4083545.out",
+     "name": "XG21",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG21__s0__45b7f1e3.json",
+     "train_s": 2280.0,
+     "wall_s": 2360.0
+    },
+    "XG23": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 93,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      87
+     ],
+     "log": "slurm/4083547.out",
+     "name": "XG23",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG23__s0__45b7f1e3.json",
+     "train_s": 2238.0,
+     "wall_s": 2326.0
+    },
+    "XG3": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 221,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      24,
+      26
+     ],
+     "log": "slurm/4083527.out",
+     "name": "XG3",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG3__s0__ece015f3.json",
+     "train_s": 2242.0,
+     "wall_s": 2329.0
+    },
+    "XG5": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 172,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      27
+     ],
+     "log": "slurm/4083529.out",
+     "name": "XG5",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG5__s0__ece015f3.json",
+     "train_s": 2229.0,
+     "wall_s": 2291.0
+    },
+    "XG7": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 87,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      34
+     ],
+     "log": "slurm/4083531.out",
+     "name": "XG7",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG7__s0__45b7f1e3.json",
+     "train_s": 2276.0,
+     "wall_s": 2352.0
+    },
+    "XG8": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 112,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      37,
+      70
+     ],
+     "log": "slurm/4083532.out",
+     "name": "XG8",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XG8__s0__ece015f3.json",
+     "train_s": 2254.0,
+     "wall_s": 2331.0
+    },
+    "XI12": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 36,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      60
+     ],
+     "log": "slurm/4083536.out",
+     "name": "XI12",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XI12__s0__ece015f3.json",
+     "train_s": 2258.0,
+     "wall_s": 2333.0
+    },
+    "XI22": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 51,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      86
+     ],
+     "log": "slurm/4083546.out",
+     "name": "XI22",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XI22__s0__45b7f1e3.json",
+     "train_s": 2279.0,
+     "wall_s": 2357.0
+    },
+    "XI24": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 53,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      87
+     ],
+     "log": "slurm/4083548.out",
+     "name": "XI24",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XI24__s0__45b7f1e3.json",
+     "train_s": 2266.0,
+     "wall_s": 2352.0
+    },
+    "XI25": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 76,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      88,
+      89
+     ],
+     "log": "slurm/4083549.out",
+     "name": "XI25",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XI25__s0__45b7f1e3.json",
+     "train_s": 2210.0,
+     "wall_s": 2273.0
+    },
+    "XI9": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 104,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      38
+     ],
+     "log": "slurm/4083533.out",
+     "name": "XI9",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XI9__s0__ece015f3.json",
+     "train_s": 2223.0,
+     "wall_s": 2300.0
+    },
+    "XO16": {
+     "bytes": 4677632,
+     "demos": 14,
+     "frames": 677,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      73,
+      74,
+      75,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      86,
+      87,
+      88,
+      89
+     ],
+     "log": "slurm/4083540.out",
+     "name": "XO16",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XO16__s0__ece015f3.json",
+     "train_s": 2243.0,
+     "wall_s": 2310.0
+    },
+    "XO2": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 181,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      19,
+      38
+     ],
+     "log": "slurm/4083526.out",
+     "name": "XO2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XO2__s0__ece015f3.json",
+     "train_s": 2242.0,
+     "wall_s": 2308.0
+    },
+    "XO4": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 179,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      26,
+      27
+     ],
+     "log": "slurm/4083528.out",
+     "name": "XO4",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XO4__s0__ece015f3.json",
+     "train_s": 2254.0,
+     "wall_s": 2338.0
+    },
+    "XO6": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 170,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      34,
+      68,
+      76
+     ],
+     "log": "slurm/4083530.out",
+     "name": "XO6",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_XO6__s0__ece015f3.json",
+     "train_s": 2250.0,
+     "wall_s": 2339.0
+    }
+   },
+   "protos/pi0_libero": {
+    "PGhtray": {
+     "bytes": 3465216,
+     "demos": 10,
+     "frames": 714,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+     ],
+     "log": "slurm/4094608.out",
+     "name": "PGhtray",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_PGhtray__s0__c2da6908.json",
+     "train_s": 1986.0,
+     "wall_s": 2074.0
+    },
+    "PGscbasket": {
+     "bytes": 3465216,
+     "demos": 8,
+     "frames": 682,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54
+     ],
+     "log": "slurm/4094600.out",
+     "name": "PGscbasket",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_PGscbasket__s0__c2da6908.json",
+     "train_s": 1952.0,
+     "wall_s": 2021.0
+    },
+    "PGsccab": {
+     "bytes": 3465216,
+     "demos": 6,
+     "frames": 568,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      10,
+      15,
+      25,
+      31,
+      41,
+      43
+     ],
+     "log": "slurm/4094590.out",
+     "name": "PGsccab",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_PGsccab__s0__c2da6908.json",
+     "train_s": 1979.0,
+     "wall_s": 2050.0
+    },
+    "PGscplate": {
+     "bytes": 3465216,
+     "demos": 8,
+     "frames": 667,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      9,
+      12,
+      13,
+      14,
+      30,
+      36,
+      71,
+      72
+     ],
+     "log": "slurm/4094594.out",
+     "name": "PGscplate",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_PGscplate__s0__c2da6908.json",
+     "train_s": 1967.0,
+     "wall_s": 2050.0
+    },
+    "POsc0": {
+     "bytes": 3465216,
+     "demos": 3,
+     "frames": 146,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      46,
+      50,
+      55
+     ],
+     "log": "slurm/4094605.out",
+     "name": "POsc0",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc0__s0__c2da6908.json",
+     "train_s": 2000.0,
+     "wall_s": 2082.0
+    },
+    "POsc1": {
+     "bytes": 3465216,
+     "demos": 13,
+     "frames": 654,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      1,
+      2,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      24,
+      25,
+      29,
+      30,
+      31,
+      60
+     ],
+     "log": "slurm/4094589.out",
+     "name": "POsc1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc1__s0__c2da6908.json",
+     "train_s": 1976.0,
+     "wall_s": 2043.0
+    },
+    "POsc10": {
+     "bytes": 3465216,
+     "demos": 4,
+     "frames": 203,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      65,
+      66,
+      71,
+      84
+     ],
+     "log": "slurm/4094595.out",
+     "name": "POsc10",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc10__s0__c2da6908.json",
+     "train_s": 1959.0,
+     "wall_s": 2041.0
+    },
+    "POsc11": {
+     "bytes": 3465216,
+     "demos": 1,
+     "frames": 39,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      62
+     ],
+     "log": "slurm/4094609.out",
+     "name": "POsc11",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc11__s0__c2da6908.json",
+     "train_s": 1981.0,
+     "wall_s": 2059.0
+    },
+    "POsc12": {
+     "bytes": 3465216,
+     "demos": 3,
+     "frames": 186,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      49,
+      54,
+      59
+     ],
+     "log": "slurm/4094601.out",
+     "name": "POsc12",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc12__s0__c2da6908.json",
+     "train_s": 1946.0,
+     "wall_s": 2015.0
+    },
+    "POsc13": {
+     "bytes": 3465216,
+     "demos": 3,
+     "frames": 188,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      36,
+      37,
+      43
+     ],
+     "log": "slurm/4094592.out",
+     "name": "POsc13",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc13__s0__c2da6908.json",
+     "train_s": 1998.0,
+     "wall_s": 2081.0
+    },
+    "POsc14": {
+     "bytes": 3465216,
+     "demos": 3,
+     "frames": 118,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      67,
+      72,
+      85
+     ],
+     "log": "slurm/4094598.out",
+     "name": "POsc14",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc14__s0__c2da6908.json",
+     "train_s": 1964.0,
+     "wall_s": 2046.0
+    },
+    "POsc2": {
+     "bytes": 3465216,
+     "demos": 3,
+     "frames": 142,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      3,
+      4,
+      51,
+      56
+     ],
+     "log": "slurm/4094606.out",
+     "name": "POsc2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc2__s0__c2da6908.json",
+     "train_s": 1979.0,
+     "wall_s": 2064.0
+    },
+    "POsc3": {
+     "bytes": 3465216,
+     "demos": 4,
+     "frames": 187,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      5,
+      61,
+      69,
+      70
+     ],
+     "log": "slurm/4094610.out",
+     "name": "POsc3",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc3__s0__c2da6908.json",
+     "train_s": 1973.0,
+     "wall_s": 2059.0
+    },
+    "POsc4": {
+     "bytes": 3465216,
+     "demos": 1,
+     "frames": 66,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      57
+     ],
+     "log": "slurm/4094607.out",
+     "name": "POsc4",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc4__s0__c2da6908.json",
+     "train_s": 1980.0,
+     "wall_s": 2065.0
+    },
+    "POsc5": {
+     "bytes": 3465216,
+     "demos": 1,
+     "frames": 63,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      47
+     ],
+     "log": "slurm/4094599.out",
+     "name": "POsc5",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc5__s0__c2da6908.json",
+     "train_s": 2007.0,
+     "wall_s": 2089.0
+    },
+    "POsc6": {
+     "bytes": 3465216,
+     "demos": 6,
+     "frames": 567,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      18,
+      21,
+      40,
+      41,
+      42,
+      45
+     ],
+     "log": "slurm/4094593.out",
+     "name": "POsc6",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc6__s0__c2da6908.json",
+     "train_s": 2002.0,
+     "wall_s": 2087.0
+    },
+    "POsc7": {
+     "bytes": 3465216,
+     "demos": 3,
+     "frames": 230,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      32,
+      48,
+      58
+     ],
+     "log": "slurm/4094604.out",
+     "name": "POsc7",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc7__s0__c2da6908.json",
+     "train_s": 1994.0,
+     "wall_s": 2078.0
+    },
+    "POsc8": {
+     "bytes": 3465216,
+     "demos": 1,
+     "frames": 35,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      52
+     ],
+     "log": "slurm/4094602.out",
+     "name": "POsc8",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc8__s0__c2da6908.json",
+     "train_s": 1997.0,
+     "wall_s": 2080.0
+    },
+    "POsc9": {
+     "bytes": 3465216,
+     "demos": 1,
+     "frames": 59,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      53
+     ],
+     "log": "slurm/4094603.out",
+     "name": "POsc9",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc9__s0__c2da6908.json",
+     "train_s": 1999.0,
+     "wall_s": 2083.0
+    },
+    "PSch0": {
+     "bytes": 3465216,
+     "demos": 1,
+     "frames": 36,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      12
+     ],
+     "log": "slurm/4094597.out",
+     "name": "PSch0",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_PSch0__s0__c2da6908.json",
+     "train_s": 1971.0,
+     "wall_s": 2053.0
+    },
+    "PSch1": {
+     "bytes": 3465216,
+     "demos": 1,
+     "frames": 71,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      13
+     ],
+     "log": "slurm/4094596.out",
+     "name": "PSch1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_PSch1__s0__c2da6908.json",
+     "train_s": 1983.0,
+     "wall_s": 2065.0
+    },
+    "PSch2": {
+     "bytes": 3465216,
+     "demos": 2,
+     "frames": 81,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      14,
+      15
+     ],
+     "log": "slurm/4094591.out",
+     "name": "PSch2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_PSch2__s0__c2da6908.json",
+     "train_s": 1995.0,
+     "wall_s": 2073.0
+    }
+   },
+   "protos/smolvla": {
+    "VGhtray": {
+     "bytes": 1708032,
+     "demos": 10,
+     "frames": 714,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+     ],
+     "log": "slurm/4088098.out",
+     "name": "VGhtray",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VGhtray__s0__49a33537.json",
+     "train_s": 467.0,
+     "wall_s": 493.0
+    },
+    "VGscbasket": {
+     "bytes": 1708032,
+     "demos": 8,
+     "frames": 682,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54
+     ],
+     "log": "slurm/4088090.out",
+     "name": "VGscbasket",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VGscbasket__s0__49a33537.json",
+     "train_s": 477.0,
+     "wall_s": 504.0
+    },
+    "VGsccab": {
+     "bytes": 1708032,
+     "demos": 6,
+     "frames": 568,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      10,
+      15,
+      25,
+      31,
+      41,
+      43
+     ],
+     "log": "slurm/4088080.out",
+     "name": "VGsccab",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VGsccab__s0__49a33537.json",
+     "train_s": 477.0,
+     "wall_s": 504.0
+    },
+    "VGscplate": {
+     "bytes": 1708032,
+     "demos": 8,
+     "frames": 667,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      9,
+      12,
+      13,
+      14,
+      30,
+      36,
+      71,
+      72
+     ],
+     "log": "slurm/4088084.out",
+     "name": "VGscplate",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VGscplate__s0__49a33537.json",
+     "train_s": 464.0,
+     "wall_s": 490.0
+    },
+    "VOsc0": {
+     "bytes": 1708032,
+     "demos": 3,
+     "frames": 146,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      46,
+      50,
+      55
+     ],
+     "log": "slurm/4088095.out",
+     "name": "VOsc0",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc0__s0__49a33537.json",
+     "train_s": 470.0,
+     "wall_s": 487.0
+    },
+    "VOsc1": {
+     "bytes": 1708032,
+     "demos": 13,
+     "frames": 654,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      1,
+      2,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      24,
+      25,
+      29,
+      30,
+      31,
+      60
+     ],
+     "log": "slurm/4088079.out",
+     "name": "VOsc1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc1__s0__49a33537.json",
+     "train_s": 500.0,
+     "wall_s": 525.0
+    },
+    "VOsc10": {
+     "bytes": 1708032,
+     "demos": 4,
+     "frames": 203,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      65,
+      66,
+      71,
+      84
+     ],
+     "log": "slurm/4088085.out",
+     "name": "VOsc10",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc10__s0__49a33537.json",
+     "train_s": 470.0,
+     "wall_s": 497.0
+    },
+    "VOsc11": {
+     "bytes": 1708032,
+     "demos": 1,
+     "frames": 39,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      62
+     ],
+     "log": "slurm/4088099.out",
+     "name": "VOsc11",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc11__s0__49a33537.json",
+     "train_s": 479.0,
+     "wall_s": 497.0
+    },
+    "VOsc12": {
+     "bytes": 1708032,
+     "demos": 3,
+     "frames": 186,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      49,
+      54,
+      59
+     ],
+     "log": "slurm/4088091.out",
+     "name": "VOsc12",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc12__s0__49a33537.json",
+     "train_s": 472.0,
+     "wall_s": 490.0
+    },
+    "VOsc13": {
+     "bytes": 1708032,
+     "demos": 3,
+     "frames": 188,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      36,
+      37,
+      43
+     ],
+     "log": "slurm/4088082.out",
+     "name": "VOsc13",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc13__s0__49a33537.json",
+     "train_s": 472.0,
+     "wall_s": 497.0
+    },
+    "VOsc14": {
+     "bytes": 1708032,
+     "demos": 3,
+     "frames": 118,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      67,
+      72,
+      85
+     ],
+     "log": "slurm/4088088.out",
+     "name": "VOsc14",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc14__s0__49a33537.json",
+     "train_s": 476.0,
+     "wall_s": 495.0
+    },
+    "VOsc2": {
+     "bytes": 1708032,
+     "demos": 3,
+     "frames": 142,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      3,
+      4,
+      51,
+      56
+     ],
+     "log": "slurm/4088096.out",
+     "name": "VOsc2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc2__s0__49a33537.json",
+     "train_s": 477.0,
+     "wall_s": 495.0
+    },
+    "VOsc3": {
+     "bytes": 1708032,
+     "demos": 4,
+     "frames": 187,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      5,
+      61,
+      69,
+      70
+     ],
+     "log": "slurm/4088100.out",
+     "name": "VOsc3",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc3__s0__49a33537.json",
+     "train_s": 468.0,
+     "wall_s": 486.0
+    },
+    "VOsc4": {
+     "bytes": 1708032,
+     "demos": 1,
+     "frames": 66,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      57
+     ],
+     "log": "slurm/4088097.out",
+     "name": "VOsc4",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc4__s0__49a33537.json",
+     "train_s": 468.0,
+     "wall_s": 485.0
+    },
+    "VOsc5": {
+     "bytes": 1708032,
+     "demos": 1,
+     "frames": 63,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      47
+     ],
+     "log": "slurm/4088089.out",
+     "name": "VOsc5",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc5__s0__49a33537.json",
+     "train_s": 479.0,
+     "wall_s": 498.0
+    },
+    "VOsc6": {
+     "bytes": 1708032,
+     "demos": 6,
+     "frames": 567,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      18,
+      21,
+      40,
+      41,
+      42,
+      45
+     ],
+     "log": "slurm/4088083.out",
+     "name": "VOsc6",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc6__s0__49a33537.json",
+     "train_s": 482.0,
+     "wall_s": 501.0
+    },
+    "VOsc7": {
+     "bytes": 1708032,
+     "demos": 3,
+     "frames": 230,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      32,
+      48,
+      58
+     ],
+     "log": "slurm/4088094.out",
+     "name": "VOsc7",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc7__s0__49a33537.json",
+     "train_s": 467.0,
+     "wall_s": 491.0
+    },
+    "VOsc8": {
+     "bytes": 1708032,
+     "demos": 1,
+     "frames": 35,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      52
+     ],
+     "log": "slurm/4088092.out",
+     "name": "VOsc8",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc8__s0__49a33537.json",
+     "train_s": 440.0,
+     "wall_s": 456.0
+    },
+    "VOsc9": {
+     "bytes": 1708032,
+     "demos": 1,
+     "frames": 59,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      53
+     ],
+     "log": "slurm/4088093.out",
+     "name": "VOsc9",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc9__s0__49a33537.json",
+     "train_s": 465.0,
+     "wall_s": 491.0
+    },
+    "VSch0": {
+     "bytes": 1708032,
+     "demos": 1,
+     "frames": 36,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      12
+     ],
+     "log": "slurm/4088087.out",
+     "name": "VSch0",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VSch0__s0__49a33537.json",
+     "train_s": 485.0,
+     "wall_s": 512.0
+    },
+    "VSch1": {
+     "bytes": 1708032,
+     "demos": 1,
+     "frames": 71,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      13
+     ],
+     "log": "slurm/4088086.out",
+     "name": "VSch1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VSch1__s0__49a33537.json",
+     "train_s": 470.0,
+     "wall_s": 495.0
+    },
+    "VSch2": {
+     "bytes": 1708032,
+     "demos": 2,
+     "frames": 81,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      14,
+      15
+     ],
+     "log": "slurm/4088081.out",
+     "name": "VSch2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_VSch2__s0__49a33537.json",
+     "train_s": 477.0,
+     "wall_s": 496.0
+    }
+   },
+   "protos/xvla": {
+    "YGhtray": {
+     "bytes": 3178496,
+     "demos": 10,
+     "frames": 714,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64
+     ],
+     "log": "slurm/4117499.out",
+     "name": "YGhtray",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YGhtray__s0__da054510.json",
+     "train_s": 1939.0,
+     "wall_s": 1969.0
+    },
+    "YGscbasket": {
+     "bytes": 3178496,
+     "demos": 8,
+     "frames": 682,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      46,
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54
+     ],
+     "log": "slurm/4117491.out",
+     "name": "YGscbasket",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YGscbasket__s0__da054510.json",
+     "train_s": 1934.0,
+     "wall_s": 1967.0
+    },
+    "YGsccab": {
+     "bytes": 3178496,
+     "demos": 6,
+     "frames": 568,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      10,
+      15,
+      25,
+      31,
+      41,
+      43
+     ],
+     "log": "slurm/4117481.out",
+     "name": "YGsccab",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YGsccab__s0__da054510.json",
+     "train_s": 1942.0,
+     "wall_s": 1969.0
+    },
+    "YGscplate": {
+     "bytes": 3178496,
+     "demos": 8,
+     "frames": 667,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      9,
+      12,
+      13,
+      14,
+      30,
+      36,
+      71,
+      72
+     ],
+     "log": "slurm/4117485.out",
+     "name": "YGscplate",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YGscplate__s0__da054510.json",
+     "train_s": 1921.0,
+     "wall_s": 1956.0
+    },
+    "YOsc0": {
+     "bytes": 3178496,
+     "demos": 3,
+     "frames": 146,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      46,
+      50,
+      55
+     ],
+     "log": "slurm/4117496.out",
+     "name": "YOsc0",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc0__s0__da054510.json",
+     "train_s": 1928.0,
+     "wall_s": 1962.0
+    },
+    "YOsc1": {
+     "bytes": 3178496,
+     "demos": 13,
+     "frames": 654,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      1,
+      2,
+      9,
+      10,
+      12,
+      13,
+      14,
+      15,
+      24,
+      25,
+      29,
+      30,
+      31,
+      60
+     ],
+     "log": "slurm/4117480.out",
+     "name": "YOsc1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc1__s0__da054510.json",
+     "train_s": 1953.0,
+     "wall_s": 1980.0
+    },
+    "YOsc10": {
+     "bytes": 3178496,
+     "demos": 4,
+     "frames": 203,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      65,
+      66,
+      71,
+      84
+     ],
+     "log": "slurm/4117486.out",
+     "name": "YOsc10",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc10__s0__da054510.json",
+     "train_s": 1927.0,
+     "wall_s": 1960.0
+    },
+    "YOsc11": {
+     "bytes": 3178496,
+     "demos": 1,
+     "frames": 39,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      62
+     ],
+     "log": "slurm/4117500.out",
+     "name": "YOsc11",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc11__s0__da054510.json",
+     "train_s": 1981.0,
+     "wall_s": 2002.0
+    },
+    "YOsc12": {
+     "bytes": 3178496,
+     "demos": 3,
+     "frames": 186,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      49,
+      54,
+      59
+     ],
+     "log": "slurm/4117492.out",
+     "name": "YOsc12",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc12__s0__da054510.json",
+     "train_s": 1916.0,
+     "wall_s": 1944.0
+    },
+    "YOsc13": {
+     "bytes": 3178496,
+     "demos": 3,
+     "frames": 188,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      36,
+      37,
+      43
+     ],
+     "log": "slurm/4117483.out",
+     "name": "YOsc13",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc13__s0__da054510.json",
+     "train_s": 1944.0,
+     "wall_s": 1971.0
+    },
+    "YOsc14": {
+     "bytes": 3178496,
+     "demos": 3,
+     "frames": 118,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      67,
+      72,
+      85
+     ],
+     "log": "slurm/4117489.out",
+     "name": "YOsc14",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc14__s0__da054510.json",
+     "train_s": 1929.0,
+     "wall_s": 1957.0
+    },
+    "YOsc2": {
+     "bytes": 3178496,
+     "demos": 3,
+     "frames": 142,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      3,
+      4,
+      51,
+      56
+     ],
+     "log": "slurm/4117497.out",
+     "name": "YOsc2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc2__s0__da054510.json",
+     "train_s": 1943.0,
+     "wall_s": 1977.0
+    },
+    "YOsc3": {
+     "bytes": 3178496,
+     "demos": 4,
+     "frames": 187,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      5,
+      61,
+      69,
+      70
+     ],
+     "log": "slurm/4117501.out",
+     "name": "YOsc3",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc3__s0__da054510.json",
+     "train_s": 1969.0,
+     "wall_s": 1997.0
+    },
+    "YOsc4": {
+     "bytes": 3178496,
+     "demos": 1,
+     "frames": 66,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      57
+     ],
+     "log": "slurm/4117498.out",
+     "name": "YOsc4",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc4__s0__da054510.json",
+     "train_s": 1940.0,
+     "wall_s": 1976.0
+    },
+    "YOsc5": {
+     "bytes": 3178496,
+     "demos": 1,
+     "frames": 63,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      47
+     ],
+     "log": "slurm/4117490.out",
+     "name": "YOsc5",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc5__s0__da054510.json",
+     "train_s": 1929.0,
+     "wall_s": 1964.0
+    },
+    "YOsc6": {
+     "bytes": 3178496,
+     "demos": 6,
+     "frames": 567,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      18,
+      21,
+      40,
+      41,
+      42,
+      45
+     ],
+     "log": "slurm/4117484.out",
+     "name": "YOsc6",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc6__s0__da054510.json",
+     "train_s": 1929.0,
+     "wall_s": 1957.0
+    },
+    "YOsc7": {
+     "bytes": 3178496,
+     "demos": 3,
+     "frames": 230,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      32,
+      48,
+      58
+     ],
+     "log": "slurm/4117495.out",
+     "name": "YOsc7",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc7__s0__da054510.json",
+     "train_s": 1952.0,
+     "wall_s": 1985.0
+    },
+    "YOsc8": {
+     "bytes": 3178496,
+     "demos": 1,
+     "frames": 35,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      52
+     ],
+     "log": "slurm/4117493.out",
+     "name": "YOsc8",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc8__s0__da054510.json",
+     "train_s": 1969.0,
+     "wall_s": 2001.0
+    },
+    "YOsc9": {
+     "bytes": 3178496,
+     "demos": 1,
+     "frames": 59,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      53
+     ],
+     "log": "slurm/4117494.out",
+     "name": "YOsc9",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc9__s0__da054510.json",
+     "train_s": 1950.0,
+     "wall_s": 1982.0
+    },
+    "YSch0": {
+     "bytes": 3178496,
+     "demos": 1,
+     "frames": 36,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      12
+     ],
+     "log": "slurm/4117488.out",
+     "name": "YSch0",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YSch0__s0__da054510.json",
+     "train_s": 1946.0,
+     "wall_s": 1973.0
+    },
+    "YSch1": {
+     "bytes": 3178496,
+     "demos": 1,
+     "frames": 71,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      13
+     ],
+     "log": "slurm/4117487.out",
+     "name": "YSch1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YSch1__s0__da054510.json",
+     "train_s": 1960.0,
+     "wall_s": 1999.0
+    },
+    "YSch2": {
+     "bytes": 3178496,
+     "demos": 2,
+     "frames": 81,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      14,
+      15
+     ],
+     "log": "slurm/4117482.out",
+     "name": "YSch2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_YSch2__s0__da054510.json",
+     "train_s": 1921.0,
+     "wall_s": 1955.0
+    }
+   },
+   "strap": {
+    "10": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-10__s0__a677d14b.json",
+     "train_s": 470.5498399734497,
+     "wall_s": 808.0
+    },
+    "12": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-12__s0__a677d14b.json",
+     "train_s": 476.7684986591339,
+     "wall_s": 830.0
+    },
+    "13": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-13__s0__a677d14b.json",
+     "train_s": 528.1521377563477,
+     "wall_s": 858.0
+    },
+    "14": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-14__s0__a677d14b.json",
+     "train_s": 460.01064109802246,
+     "wall_s": 799.0
+    },
+    "15": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-15__s0__a677d14b.json",
+     "train_s": 542.7080118656158,
+     "wall_s": 877.0
+    },
+    "25": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-25__s0__a677d14b.json",
+     "train_s": 481.33357763290405,
+     "wall_s": 835.0
+    },
+    "30": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-30__s0__a677d14b.json",
+     "train_s": 465.83295154571533,
+     "wall_s": 808.0
+    },
+    "31": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-31__s0__a677d14b.json",
+     "train_s": 531.3513734340668,
+     "wall_s": 865.0
+    },
+    "36": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-36__s0__a677d14b.json",
+     "train_s": 479.73219871520996,
+     "wall_s": 821.0
+    },
+    "41": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-41__s0__a677d14b.json",
+     "train_s": 453.6420633792877,
+     "wall_s": 794.0
+    },
+    "43": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-43__s0__a677d14b.json",
+     "train_s": 472.5026457309723,
+     "wall_s": 817.0
+    },
+    "46": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-46__s0__a677d14b.json",
+     "train_s": 469.67406463623047,
+     "wall_s": 801.0
+    },
+    "47": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-47__s0__a677d14b.json",
+     "train_s": 481.2995557785034,
+     "wall_s": 827.0
+    },
+    "48": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-48__s0__a677d14b.json",
+     "train_s": 451.812157869339,
+     "wall_s": 796.0
+    },
+    "49": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-49__s0__a677d14b.json",
+     "train_s": 432.4995403289795,
+     "wall_s": 746.0
+    },
+    "50": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-50__s0__a677d14b.json",
+     "train_s": 387.5575258731842,
+     "wall_s": 699.0
+    },
+    "52": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-52__s0__a677d14b.json",
+     "train_s": 498.9897186756134,
+     "wall_s": 841.0
+    },
+    "53": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-53__s0__a677d14b.json",
+     "train_s": 455.0706329345703,
+     "wall_s": 795.0
+    },
+    "54": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-54__s0__a677d14b.json",
+     "train_s": 491.36732029914856,
+     "wall_s": 830.0
+    },
+    "55": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-55__s0__a677d14b.json",
+     "train_s": 401.22167348861694,
+     "wall_s": 731.0
+    },
+    "56": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-56__s0__a677d14b.json",
+     "train_s": 518.2620508670807,
+     "wall_s": 856.0
+    },
+    "57": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-57__s0__a677d14b.json",
+     "train_s": 596.3973259925842,
+     "wall_s": 917.0
+    },
+    "58": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-58__s0__a677d14b.json",
+     "train_s": 601.155445098877,
+     "wall_s": 953.0
+    },
+    "59": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-59__s0__a677d14b.json",
+     "train_s": 543.9492037296295,
+     "wall_s": 876.0
+    },
+    "61": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-61__s0__a677d14b.json",
+     "train_s": 393.6897156238556,
+     "wall_s": 713.0
+    },
+    "62": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-62__s0__a677d14b.json",
+     "train_s": 440.8350143432617,
+     "wall_s": 770.0
+    },
+    "71": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-71__s0__a677d14b.json",
+     "train_s": 575.4179975986481,
+     "wall_s": 938.0
+    },
+    "72": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-72__s0__a677d14b.json",
+     "train_s": 394.4865872859955,
+     "wall_s": 718.0
+    },
+    "9": {
+     "row": "ledger/g6_strap/g6_strap__libero_90__fit__task-9__s0__a677d14b.json",
+     "train_s": 556.4071896076202,
+     "wall_s": 908.0
+    }
+   },
+   "tli": {
+    "pi05_libero": {
+     "jobs": [
+      "slurm/4128986.out",
+      "slurm/4128486.out",
+      "slurm/4129439.out",
+      "slurm/4129791.out"
+     ],
+     "latents": 24,
+     "wall_s": 3825.0,
+     "wall_s_per_latent": 159.375
+    },
+    "pi0_libero": {
+     "jobs": [
+      "slurm/4127691.out",
+      "slurm/4128489.out",
+      "slurm/4129438.out",
+      "slurm/4129790.out"
+     ],
+     "latents": 24,
+     "wall_s": 3366.0,
+     "wall_s_per_latent": 140.25
+    },
+    "smolvla": {
+     "jobs": [
+      "slurm/4133058.out"
+     ],
+     "latents": 24,
+     "wall_s": 753.0,
+     "wall_s_per_latent": 31.375
+    },
+    "xvla": {
+     "jobs": [
+      "slurm/4133147.out"
+     ],
+     "latents": 24,
+     "wall_s": 1798.0,
+     "wall_s_per_latent": 74.91666666666667
+    }
+   },
+   "w1": {
+    "E4aG1v1": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 196,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      60,
+      63,
+      64
+     ],
+     "log": "slurm/4012954.out",
+     "name": "E4aG1v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_E4aG1v1__s0__c9812e93.json",
+     "train_s": 2328.0,
+     "wall_s": 2404.0
+    },
+    "E4aO10v1": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 129,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      5,
+      69,
+      70
+     ],
+     "log": "slurm/4012957.out",
+     "name": "E4aO10v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_E4aO10v1__s0__c9812e93.json",
+     "train_s": 2245.0,
+     "wall_s": 2321.0
+    },
+    "E4aO13v1": {
+     "bytes": 4677632,
+     "demos": 5,
+     "frames": 479,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      18,
+      21,
+      40,
+      42,
+      45
+     ],
+     "log": "slurm/4012958.out",
+     "name": "E4aO13v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_E4aO13v1__s0__c9812e93.json",
+     "train_s": 2272.0,
+     "wall_s": 2351.0
+    },
+    "E4aO14v1": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 92,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      32
+     ],
+     "log": "slurm/4012959.out",
+     "name": "E4aO14v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_E4aO14v1__s0__c9812e93.json",
+     "train_s": 2286.0,
+     "wall_s": 2361.0
+    },
+    "E4aO17v1": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 162,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      65,
+      66,
+      84
+     ],
+     "log": "slurm/4012960.out",
+     "name": "E4aO17v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_E4aO17v1__s0__c9812e93.json",
+     "train_s": 2240.0,
+     "wall_s": 2316.0
+    },
+    "E4aO20v1": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 50,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      37
+     ],
+     "log": "slurm/4012961.out",
+     "name": "E4aO20v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_E4aO20v1__s0__c9812e93.json",
+     "train_s": 2261.0,
+     "wall_s": 2333.0
+    },
+    "E4aO21v1": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 61,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      67,
+      85
+     ],
+     "log": "slurm/4012962.out",
+     "name": "E4aO21v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_E4aO21v1__s0__c9812e93.json",
+     "train_s": 2212.0,
+     "wall_s": 2276.0
+    },
+    "E4aO8v1": {
+     "bytes": 4677632,
+     "demos": 4,
+     "frames": 194,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      1,
+      2,
+      24,
+      29,
+      60
+     ],
+     "log": "slurm/4012955.out",
+     "name": "E4aO8v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_E4aO8v1__s0__c9812e93.json",
+     "train_s": 2248.0,
+     "wall_s": 2337.0
+    },
+    "E4aO9v1": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 104,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      3,
+      4
+     ],
+     "log": "slurm/4012956.out",
+     "name": "E4aO9v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_E4aO9v1__s0__c9812e93.json",
+     "train_s": 2276.0,
+     "wall_s": 2354.0
+    },
+    "W1aG0v1": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 85,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      49
+     ],
+     "log": "slurm/4016916.out",
+     "name": "W1aG0v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG0v1__s0__d17bf8d5.json",
+     "train_s": 2270.0,
+     "wall_s": 2355.0
+    },
+    "W1aG0v2": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 154,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      49,
+      52
+     ],
+     "log": "slurm/4018022.out",
+     "name": "W1aG0v2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG0v2__s0__d17bf8d5.json",
+     "train_s": 2262.0,
+     "wall_s": 2339.0
+    },
+    "W1aG0v3": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 243,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      49,
+      52,
+      53
+     ],
+     "log": "slurm/4018892.out",
+     "name": "W1aG0v3",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG0v3__s0__d17bf8d5.json",
+     "train_s": 2250.0,
+     "wall_s": 2328.0
+    },
+    "W1aG0v4": {
+     "bytes": 4677632,
+     "demos": 4,
+     "frames": 339,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      48,
+      49,
+      52,
+      53
+     ],
+     "log": "slurm/4021992.out",
+     "name": "W1aG0v4",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG0v4__s0__5a7339ab.json",
+     "train_s": 2247.0,
+     "wall_s": 2322.0
+    },
+    "W1aG1v2": {
+     "bytes": 4677632,
+     "demos": 4,
+     "frames": 252,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      59,
+      60,
+      63,
+      64
+     ],
+     "log": "slurm/4016669.out",
+     "name": "W1aG1v2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG1v2__s0__c4fb6df8.json",
+     "train_s": 2239.0,
+     "wall_s": 2308.0
+    },
+    "W1aG1v3": {
+     "bytes": 4677632,
+     "demos": 5,
+     "frames": 334,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      58,
+      59,
+      60,
+      63,
+      64
+     ],
+     "log": "slurm/4018221.out",
+     "name": "W1aG1v3",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG1v3__s0__d17bf8d5.json",
+     "train_s": 2265.0,
+     "wall_s": 2358.0
+    },
+    "W1aG1v4": {
+     "bytes": 4677632,
+     "demos": 6,
+     "frames": 409,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      58,
+      59,
+      60,
+      62,
+      63,
+      64
+     ],
+     "log": "slurm/4020778.out",
+     "name": "W1aG1v4",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG1v4__s0__5a7339ab.json",
+     "train_s": 2255.0,
+     "wall_s": 2334.0
+    },
+    "W1aG2v1": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 93,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      43
+     ],
+     "log": "slurm/4016259.out",
+     "name": "W1aG2v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG2v1__s0__c4fb6df8.json",
+     "train_s": 2259.0,
+     "wall_s": 2345.0
+    },
+    "W1aG2v2": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 178,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      31,
+      43
+     ],
+     "log": "slurm/4016505.out",
+     "name": "W1aG2v2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG2v2__s0__c4fb6df8.json",
+     "train_s": 2270.0,
+     "wall_s": 2348.0
+    },
+    "W1aG2v3": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 285,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      31,
+      41,
+      43
+     ],
+     "log": "slurm/4017168.out",
+     "name": "W1aG2v3",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG2v3__s0__d17bf8d5.json",
+     "train_s": 2247.0,
+     "wall_s": 2334.0
+    },
+    "W1aG2v4": {
+     "bytes": 4677632,
+     "demos": 4,
+     "frames": 379,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      15,
+      31,
+      41,
+      43
+     ],
+     "log": "slurm/4017857.out",
+     "name": "W1aG2v4",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG2v4__s0__d17bf8d5.json",
+     "train_s": 2233.0,
+     "wall_s": 2310.0
+    },
+    "W1aG2v5": {
+     "bytes": 4677632,
+     "demos": 5,
+     "frames": 464,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      15,
+      25,
+      31,
+      41,
+      43
+     ],
+     "log": "slurm/4018766.out",
+     "name": "W1aG2v5",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG2v5__s0__d17bf8d5.json",
+     "train_s": 2238.0,
+     "wall_s": 2327.0
+    },
+    "W1aG3v1": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 75,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      71
+     ],
+     "log": "slurm/4016372.out",
+     "name": "W1aG3v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG3v1__s0__c4fb6df8.json",
+     "train_s": 2284.0,
+     "wall_s": 2358.0
+    },
+    "W1aG3v2": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 206,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      36,
+      71
+     ],
+     "log": "slurm/4017427.out",
+     "name": "W1aG3v2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG3v2__s0__d17bf8d5.json",
+     "train_s": 2244.0,
+     "wall_s": 2310.0
+    },
+    "W1aG3v3": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 278,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      12,
+      36,
+      71
+     ],
+     "log": "slurm/4018531.out",
+     "name": "W1aG3v3",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG3v3__s0__d17bf8d5.json",
+     "train_s": 2275.0,
+     "wall_s": 2353.0
+    },
+    "W1aG3v4": {
+     "bytes": 4677632,
+     "demos": 4,
+     "frames": 348,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      12,
+      14,
+      36,
+      71
+     ],
+     "log": "slurm/4019359.out",
+     "name": "W1aG3v4",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aG3v4__s0__5a7339ab.json",
+     "train_s": 2262.0,
+     "wall_s": 2339.0
+    },
+    "W1aI4v1": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 36,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      12
+     ],
+     "log": "slurm/4018529.out",
+     "name": "W1aI4v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aI4v1__s0__d17bf8d5.json",
+     "train_s": 2209.0,
+     "wall_s": 2271.0
+    },
+    "W1aI6v1": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 43,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      15
+     ],
+     "log": "slurm/4017855.out",
+     "name": "W1aI6v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aI6v1__s0__d17bf8d5.json",
+     "train_s": 2250.0,
+     "wall_s": 2324.0
+    },
+    "W1aI6v2": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 81,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      14,
+      15
+     ],
+     "log": "slurm/4019357.out",
+     "name": "W1aI6v2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aI6v2__s0__5a7339ab.json",
+     "train_s": 2253.0,
+     "wall_s": 2310.0
+    },
+    "W1aO13v2": {
+     "bytes": 4677632,
+     "demos": 6,
+     "frames": 567,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      18,
+      21,
+      40,
+      41,
+      42,
+      45
+     ],
+     "log": "slurm/4017167.out",
+     "name": "W1aO13v2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO13v2__s0__d17bf8d5.json",
+     "train_s": 2271.0,
+     "wall_s": 2352.0
+    },
+    "W1aO14v2": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 153,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      32,
+      58
+     ],
+     "log": "slurm/4018220.out",
+     "name": "W1aO14v2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO14v2__s0__d17bf8d5.json",
+     "train_s": 2231.0,
+     "wall_s": 2298.0
+    },
+    "W1aO14v3": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 230,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      32,
+      48,
+      58
+     ],
+     "log": "slurm/4021991.out",
+     "name": "W1aO14v3",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO14v3__s0__5a7339ab.json",
+     "train_s": 2264.0,
+     "wall_s": 2350.0
+    },
+    "W1aO15v1": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 35,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      52
+     ],
+     "log": "slurm/4018021.out",
+     "name": "W1aO15v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO15v1__s0__d17bf8d5.json",
+     "train_s": 2284.0,
+     "wall_s": 2363.0
+    },
+    "W1aO16v1": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 59,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      53
+     ],
+     "log": "slurm/4018891.out",
+     "name": "W1aO16v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO16v1__s0__d17bf8d5.json",
+     "train_s": 2214.0,
+     "wall_s": 2279.0
+    },
+    "W1aO17v2": {
+     "bytes": 4677632,
+     "demos": 4,
+     "frames": 203,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      65,
+      66,
+      71,
+      84
+     ],
+     "log": "slurm/4016371.out",
+     "name": "W1aO17v2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO17v2__s0__c4fb6df8.json",
+     "train_s": 2268.0,
+     "wall_s": 2344.0
+    },
+    "W1aO18v1": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 39,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      62
+     ],
+     "log": "slurm/4020777.out",
+     "name": "W1aO18v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO18v1__s0__5a7339ab.json",
+     "train_s": 4175.0,
+     "wall_s": 4237.0
+    },
+    "W1aO19v1": {
+     "bytes": 4677632,
+     "demos": 1,
+     "frames": 72,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      59
+     ],
+     "log": "slurm/4016668.out",
+     "name": "W1aO19v1",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO19v1__s0__c4fb6df8.json",
+     "train_s": 2242.0,
+     "wall_s": 2327.0
+    },
+    "W1aO19v2": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 147,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      49,
+      59
+     ],
+     "log": "slurm/4016915.out",
+     "name": "W1aO19v2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO19v2__s0__d17bf8d5.json",
+     "train_s": 2247.0,
+     "wall_s": 2324.0
+    },
+    "W1aO20v2": {
+     "bytes": 4677632,
+     "demos": 2,
+     "frames": 101,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      37,
+      43
+     ],
+     "log": "slurm/4016258.out",
+     "name": "W1aO20v2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO20v2__s0__c4fb6df8.json",
+     "train_s": 2211.0,
+     "wall_s": 2286.0
+    },
+    "W1aO20v3": {
+     "bytes": 4677632,
+     "demos": 3,
+     "frames": 188,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      36,
+      37,
+      43
+     ],
+     "log": "slurm/4017426.out",
+     "name": "W1aO20v3",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO20v3__s0__d17bf8d5.json",
+     "train_s": 3814.0,
+     "wall_s": 3898.0
+    },
+    "W1aO8v2": {
+     "bytes": 4677632,
+     "demos": 5,
+     "frames": 255,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      1,
+      2,
+      24,
+      29,
+      31,
+      60
+     ],
+     "log": "slurm/4016504.out",
+     "name": "W1aO8v2",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO8v2__s0__c4fb6df8.json",
+     "train_s": 2284.0,
+     "wall_s": 2362.0
+    },
+    "W1aO8v3": {
+     "bytes": 4677632,
+     "demos": 6,
+     "frames": 298,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      1,
+      2,
+      15,
+      24,
+      29,
+      31,
+      60
+     ],
+     "log": "slurm/4017856.out",
+     "name": "W1aO8v3",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO8v3__s0__d17bf8d5.json",
+     "train_s": 2243.0,
+     "wall_s": 2319.0
+    },
+    "W1aO8v4": {
+     "bytes": 4677632,
+     "demos": 7,
+     "frames": 334,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      1,
+      2,
+      12,
+      15,
+      24,
+      29,
+      31,
+      60
+     ],
+     "log": "slurm/4018530.out",
+     "name": "W1aO8v4",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO8v4__s0__d17bf8d5.json",
+     "train_s": 2252.0,
+     "wall_s": 2329.0
+    },
+    "W1aO8v5": {
+     "bytes": 4677632,
+     "demos": 8,
+     "frames": 396,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      1,
+      2,
+      12,
+      15,
+      24,
+      25,
+      29,
+      31,
+      60
+     ],
+     "log": "slurm/4018765.out",
+     "name": "W1aO8v5",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO8v5__s0__d17bf8d5.json",
+     "train_s": 2221.0,
+     "wall_s": 2286.0
+    },
+    "W1aO8v6": {
+     "bytes": 4677632,
+     "demos": 9,
+     "frames": 434,
+     "gpu": "NVIDIA A40",
+     "joint": [
+      1,
+      2,
+      12,
+      14,
+      15,
+      24,
+      25,
+      29,
+      31,
+      60
+     ],
+     "log": "slurm/4019358.out",
+     "name": "W1aO8v6",
+     "row": "ledger/c0_fit/c0_fit__libero_90__joint_W1aO8v6__s0__5a7339ab.json",
+     "train_s": 2260.0,
+     "wall_s": 2339.0
+    }
+   }
+  },
+  "summary": {
+   "cl": {
+    "er": {
+     "row": "ledger/b_continual/b_continual__libero_90__er_g11__s0__870e4216.json",
+     "train_s": 5628.8460421562195,
+     "wall_s": 5715.0
+    },
+    "seq": {
+     "row": "ledger/b_continual/b_continual__libero_90__seq_g11__s0__0918d8e3.json",
+     "train_s": 2118.458069562912,
+     "wall_s": 2205.0
+    }
+   },
+   "dsrl": {
+    "dsrlf": {
+     "episodes": 3000,
+     "runs": 30,
+     "wall_s": 141109.7528526783
+    },
+    "dsrls": {
+     "episodes": 2900,
+     "runs": 29,
+     "wall_s": 141248.55974698067
+    },
+    "dsrlz": {
+     "episodes": 3000,
+     "runs": 30,
+     "wall_s": 199575.87047219276
+    }
+   },
+   "loras": {
+    "found": 66,
+    "job_n": 51,
+    "job_s_mean": 270.69896193771626,
+    "train_n": 66,
+    "train_s_mean": 127.96276342146325,
+    "units": 66
+   },
+   "loras/pi0_libero": {
+    "found": 29,
+    "job_n": 29,
+    "job_s_mean": 290.0344827586207,
+    "train_n": 29,
+    "train_s_mean": 208.42511304493607,
+    "units": 29
+   },
+   "loras/smolvla": {
+    "found": 29,
+    "job_n": 29,
+    "job_s_mean": 480.6551724137931,
+    "train_n": 29,
+    "train_s_mean": 455.85390216728734,
+    "units": 29
+   },
+   "loras/xvla": {
+    "found": 29,
+    "job_n": 29,
+    "job_s_mean": 1975.3103448275863,
+    "train_n": 29,
+    "train_s_mean": 1940.7789867253139,
+    "units": 29
+   },
+   "loras_r4": {
+    "found": 29,
+    "job_n": 29,
+    "job_s_mean": 214.48275862068965,
+    "train_n": 29,
+    "train_s_mean": 130.26825590791373,
+    "units": 29
+   },
+   "protos": {
+    "found": 48,
+    "job_n": 48,
+    "job_s_mean": 2335.7291666666665,
+    "train_n": 48,
+    "train_s_mean": 2258.0416666666665,
+    "units": 48
+   },
+   "protos/pi0_libero": {
+    "found": 22,
+    "job_n": 22,
+    "job_s_mean": 2061.7272727272725,
+    "train_n": 22,
+    "train_s_mean": 1981.2727272727273,
+    "units": 22
+   },
+   "protos/smolvla": {
+    "found": 22,
+    "job_n": 22,
+    "job_s_mean": 494.77272727272725,
+    "train_n": 22,
+    "train_s_mean": 472.8181818181818,
+    "units": 22
+   },
+   "protos/xvla": {
+    "found": 22,
+    "job_n": 22,
+    "job_s_mean": 1972.8636363636363,
+    "train_n": 22,
+    "train_s_mean": 1941.909090909091,
+    "units": 22
+   },
+   "strap": {
+    "found": 29,
+    "job_n": 29,
+    "job_s_mean": 821.6206896551724,
+    "train_n": 29,
+    "train_s_mean": 484.57505723525736,
+    "units": 29
+   },
+   "tli": {
+    "pi05_libero": {
+     "jobs": [
+      "slurm/4128986.out",
+      "slurm/4128486.out",
+      "slurm/4129439.out",
+      "slurm/4129791.out"
+     ],
+     "latents": 24,
+     "wall_s": 3825.0,
+     "wall_s_per_latent": 159.375
+    },
+    "pi0_libero": {
+     "jobs": [
+      "slurm/4127691.out",
+      "slurm/4128489.out",
+      "slurm/4129438.out",
+      "slurm/4129790.out"
+     ],
+     "latents": 24,
+     "wall_s": 3366.0,
+     "wall_s_per_latent": 140.25
+    },
+    "smolvla": {
+     "jobs": [
+      "slurm/4133058.out"
+     ],
+     "latents": 24,
+     "wall_s": 753.0,
+     "wall_s_per_latent": 31.375
+    },
+    "xvla": {
+     "jobs": [
+      "slurm/4133147.out"
+     ],
+     "latents": 24,
+     "wall_s": 1798.0,
+     "wall_s_per_latent": 74.91666666666667
+    }
+   },
+   "w1": {
+    "found": 44,
+    "job_n": 44,
+    "job_s_mean": 2409.5227272727275,
+    "train_n": 44,
+    "train_s_mean": 2333.2045454545455,
+    "units": 44
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "h2_fit__libero__units__s0__5d8b7438",
+ "schema": 1,
+ "script": "experiments/h2_cost.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T13:23:19+00:00",
+ "stream": null,
+ "tag": "units"
+}

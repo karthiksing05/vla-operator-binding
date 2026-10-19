@@ -122,7 +122,7 @@ Notes: Hierarchy with task leaves (ours, G19): 22 prototypes + 13 leaves. Hierar
 
 ## Ablation of the system on pi0.5 (G20; success only, `ledger/g20_ablation/g20_ablation__libero__read__s13__c31ebde8.json`; `ledger/h2_cost` tag `ablation`)
 
-| side | group | arm removed / replaced | system | ablated | of | task-level difference [95% interval] |
+| side | group | arm removed / replaced | full (x) | ablated (y) | of | task-level difference [95% interval] |
 |---|---|---|---|---|---|---|
 | LIBERO-90 set d | composition | goal_only | 897 | 539 | 1320 | +0.271 [+0.186, +0.359] |
 | LIBERO-90 set d | composition | obj_only | 897 | 555 | 1320 | +0.259 [+0.180, +0.339] |

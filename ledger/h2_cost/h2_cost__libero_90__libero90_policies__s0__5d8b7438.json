@@ -1,0 +1,438 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "h2_cost.py --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "h2_cost",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5d8b7438fe5375cc302a96bc9a0710d7b741f651",
+  "short": "5d8b7438"
+ },
+ "keys": {},
+ "metrics": {
+  "rows": [
+   {
+    "backbone": "pi0_libero",
+    "bytes_cum": 256425984,
+    "bytes_task": 8842275.310344828,
+    "demos_task": 1.8620689655172413,
+    "family": "ours",
+    "fit_job_min_cum": 896.15,
+    "fit_job_min_task": 30.901724137931033,
+    "k": 390,
+    "latency": {
+     "arms": {
+      "lora16": 13,
+      "policy": 1,
+      "prototype": 15
+     },
+     "hz": 2.787883860591376,
+     "ms": 358.69499950685764,
+     "peak_gb": 7.20679424
+    },
+    "method": "Hierarchy with task leaves (ours, G19)",
+    "n": 580,
+    "note": "22 prototypes + 13 leaves",
+    "policy": "pi0",
+    "practice_task": 30.0,
+    "rate": 0.6724137931034483,
+    "set": "d29",
+    "sources": [
+     "ledger/g19_leaves_policies/g19_leaves_policies__libero_90__read_pi0__s13__c31ebde8.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_latency/pi0_libero"
+    ],
+    "tasks": 29
+   },
+   {
+    "backbone": "pi0_libero",
+    "bytes_cum": 76234752,
+    "bytes_task": 2628784.5517241377,
+    "demos_task": 1.8620689655172413,
+    "family": "ours",
+    "fit_job_min_cum": 755.9666666666667,
+    "fit_job_min_task": 26.067816091954025,
+    "k": 317,
+    "latency": {
+     "arms": {
+      "policy": 1,
+      "prototype": 1
+     },
+     "hz": 3.3039404571932085,
+     "ms": 302.6688927831128,
+     "peak_gb": 7.179072512
+    },
+    "method": "Library without leaves (ours, G19)",
+    "n": 580,
+    "note": "",
+    "policy": "pi0",
+    "practice_task": 20.0,
+    "rate": 0.5465517241379311,
+    "set": "d29",
+    "sources": [
+     "ledger/g19_leaves_policies/g19_leaves_policies__libero_90__read_pi0__s13__c31ebde8.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_latency/pi0_libero"
+    ],
+    "tasks": 29
+   },
+   {
+    "backbone": "pi0_libero",
+    "bytes_cum": 401965056,
+    "bytes_task": 13860864.0,
+    "demos_task": 1.0,
+    "family": "adapter",
+    "fit_job_min_cum": 140.18333333333334,
+    "fit_job_min_task": 4.833908045977012,
+    "k": 338,
+    "latency": {
+     "arms": {
+      "lora16": 1
+     },
+     "hz": 2.753663877945055,
+     "ms": 363.15252853091806,
+     "peak_gb": 7.20679424
+    },
+    "method": "Per-task LoRA r16 + acceptance (G19)",
+    "n": 580,
+    "note": "bytes: every adapter (the read does not record how many acceptance kept)",
+    "policy": "pi0",
+    "practice_task": 20.0,
+    "rate": 0.5827586206896552,
+    "set": "d29",
+    "sources": [
+     "ledger/g19_leaves_policies/g19_leaves_policies__libero_90__read_pi0__s13__c31ebde8.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_latency/pi0_libero"
+    ],
+    "tasks": 29
+   },
+   {
+    "backbone": "pi0_libero",
+    "bytes_cum": 0,
+    "bytes_task": 0.0,
+    "demos_task": 0.0,
+    "family": "policy",
+    "fit_job_min_cum": 0.0,
+    "fit_job_min_task": 0.0,
+    "k": 68,
+    "latency": {
+     "arms": {
+      "policy": 1
+     },
+     "hz": 4.118986130679158,
+     "ms": 242.77819062117487,
+     "peak_gb": 7.162107904
+    },
+    "method": "Policy alone (pi0)",
+    "n": 580,
+    "note": "",
+    "policy": "pi0",
+    "practice_task": 0.0,
+    "rate": 0.11724137931034483,
+    "set": "d29",
+    "sources": [
+     "ledger/g19_leaves_policies/g19_leaves_policies__libero_90__read_pi0__s13__c31ebde8.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_latency/pi0_libero"
+    ],
+    "tasks": 29
+   },
+   {
+    "backbone": "smolvla",
+    "bytes_cum": 167387136,
+    "bytes_task": 5771970.206896552,
+    "demos_task": 1.8620689655172413,
+    "family": "ours",
+    "fit_job_min_cum": 413.73333333333335,
+    "fit_job_min_task": 14.266666666666667,
+    "k": 284,
+    "latency": {
+     "arms": {
+      "lora16": 19,
+      "prototype": 10
+     },
+     "hz": 2.647295520255296,
+     "ms": 377.7440003764912,
+     "peak_gb": 0.987892736
+    },
+    "method": "Hierarchy with task leaves (ours, G19)",
+    "n": 580,
+    "note": "22 prototypes + 19 leaves",
+    "policy": "SmolVLA",
+    "practice_task": 30.0,
+    "rate": 0.4896551724137931,
+    "set": "d29",
+    "sources": [
+     "ledger/g19_leaves_policies/g19_leaves_policies__libero_90__read_smolvla__s13__c31ebde8.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_latency/smolvla"
+    ],
+    "tasks": 29
+   },
+   {
+    "backbone": "smolvla",
+    "bytes_cum": 37576704,
+    "bytes_task": 1295748.4137931035,
+    "demos_task": 1.8620689655172413,
+    "family": "ours",
+    "fit_job_min_cum": 181.41666666666666,
+    "fit_job_min_task": 6.255747126436781,
+    "k": 185,
+    "latency": {
+     "arms": {
+      "policy": 1,
+      "prototype": 1
+     },
+     "hz": 3.144362586555334,
+     "ms": 318.02948052994907,
+     "peak_gb": 0.97422848
+    },
+    "method": "Library without leaves (ours, G19)",
+    "n": 580,
+    "note": "",
+    "policy": "SmolVLA",
+    "practice_task": 20.0,
+    "rate": 0.31896551724137934,
+    "set": "d29",
+    "sources": [
+     "ledger/g19_leaves_policies/g19_leaves_policies__libero_90__read_smolvla__s13__c31ebde8.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_latency/smolvla"
+    ],
+    "tasks": 29
+   },
+   {
+    "backbone": "smolvla",
+    "bytes_cum": 198131712,
+    "bytes_task": 6832128.0,
+    "demos_task": 1.0,
+    "family": "adapter",
+    "fit_job_min_cum": 232.31666666666666,
+    "fit_job_min_task": 8.010919540229885,
+    "k": 275,
+    "latency": {
+     "arms": {
+      "lora16": 1
+     },
+     "hz": 2.642608637198173,
+     "ms": 378.41396032832563,
+     "peak_gb": 0.987892736
+    },
+    "method": "Per-task LoRA r16 + acceptance (G19)",
+    "n": 580,
+    "note": "bytes: every adapter (the read does not record how many acceptance kept)",
+    "policy": "SmolVLA",
+    "practice_task": 20.0,
+    "rate": 0.47413793103448276,
+    "set": "d29",
+    "sources": [
+     "ledger/g19_leaves_policies/g19_leaves_policies__libero_90__read_smolvla__s13__c31ebde8.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_latency/smolvla"
+    ],
+    "tasks": 29
+   },
+   {
+    "backbone": "smolvla",
+    "bytes_cum": 0,
+    "bytes_task": 0.0,
+    "demos_task": 0.0,
+    "family": "policy",
+    "fit_job_min_cum": 0.0,
+    "fit_job_min_task": 0.0,
+    "k": 30,
+    "latency": {
+     "arms": {
+      "policy": 1
+     },
+     "hz": 3.85225990639793,
+     "ms": 259.58788459189236,
+     "peak_gb": 0.967099904
+    },
+    "method": "Policy alone (SmolVLA)",
+    "n": 580,
+    "note": "",
+    "policy": "SmolVLA",
+    "practice_task": 0.0,
+    "rate": 0.05172413793103448,
+    "set": "d29",
+    "sources": [
+     "ledger/g19_leaves_policies/g19_leaves_policies__libero_90__read_smolvla__s13__c31ebde8.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_latency/smolvla"
+    ],
+    "tasks": 29
+   },
+   {
+    "backbone": "xvla",
+    "bytes_cum": 133496832,
+    "bytes_task": 4603339.0344827585,
+    "demos_task": 1.8620689655172413,
+    "family": "ours",
+    "fit_job_min_cum": 1678.1166666666666,
+    "fit_job_min_task": 57.866091954022984,
+    "k": 551,
+    "latency": {
+     "arms": {
+      "lora16": 5,
+      "policy": 14,
+      "prototype": 10
+     },
+     "hz": 4.3658671905969335,
+     "ms": 229.04956938538314,
+     "peak_gb": 3.728344576
+    },
+    "method": "Hierarchy with task leaves (ours, G19)",
+    "n": 580,
+    "note": "22 prototypes + 5 leaves",
+    "policy": "X-VLA",
+    "practice_task": 30.0,
+    "rate": 0.95,
+    "set": "d29",
+    "sources": [
+     "ledger/g19_leaves_policies/g19_leaves_policies__libero_90__read_xvla__s13__c31ebde8.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_latency/xvla"
+    ],
+    "tasks": 29
+   },
+   {
+    "backbone": "xvla",
+    "bytes_cum": 69926912,
+    "bytes_task": 2411272.827586207,
+    "demos_task": 1.8620689655172413,
+    "family": "ours",
+    "fit_job_min_cum": 723.3833333333333,
+    "fit_job_min_task": 24.94425287356322,
+    "k": 535,
+    "latency": {
+     "arms": {
+      "policy": 1,
+      "prototype": 1
+     },
+     "hz": 4.350915966145557,
+     "ms": 229.83666147105396,
+     "peak_gb": 3.702916608
+    },
+    "method": "Library without leaves (ours, G19)",
+    "n": 580,
+    "note": "",
+    "policy": "X-VLA",
+    "practice_task": 20.0,
+    "rate": 0.9224137931034483,
+    "set": "d29",
+    "sources": [
+     "ledger/g19_leaves_policies/g19_leaves_policies__libero_90__read_xvla__s13__c31ebde8.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_latency/xvla"
+    ],
+    "tasks": 29
+   },
+   {
+    "backbone": "xvla",
+    "bytes_cum": 368705536,
+    "bytes_task": 12713984.0,
+    "demos_task": 1.0,
+    "family": "adapter",
+    "fit_job_min_cum": 954.7333333333333,
+    "fit_job_min_task": 32.92183908045977,
+    "k": 547,
+    "latency": {
+     "arms": {
+      "lora16": 1
+     },
+     "hz": 4.1237479805375665,
+     "ms": 242.4978453386575,
+     "peak_gb": 3.728344576
+    },
+    "method": "Per-task LoRA r16 + acceptance (G19)",
+    "n": 580,
+    "note": "bytes: every adapter (the read does not record how many acceptance kept)",
+    "policy": "X-VLA",
+    "practice_task": 20.0,
+    "rate": 0.9431034482758621,
+    "set": "d29",
+    "sources": [
+     "ledger/g19_leaves_policies/g19_leaves_policies__libero_90__read_xvla__s13__c31ebde8.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_latency/xvla"
+    ],
+    "tasks": 29
+   },
+   {
+    "backbone": "xvla",
+    "bytes_cum": 0,
+    "bytes_task": 0.0,
+    "demos_task": 0.0,
+    "family": "policy",
+    "fit_job_min_cum": 0.0,
+    "fit_job_min_task": 0.0,
+    "k": 526,
+    "latency": {
+     "arms": {
+      "policy": 1
+     },
+     "hz": 4.800681373793591,
+     "ms": 208.30376401543617,
+     "peak_gb": 3.689317888
+    },
+    "method": "Policy alone (X-VLA)",
+    "n": 580,
+    "note": "",
+    "policy": "X-VLA",
+    "practice_task": 0.0,
+    "rate": 0.906896551724138,
+    "set": "d29",
+    "sources": [
+     "ledger/g19_leaves_policies/g19_leaves_policies__libero_90__read_xvla__s13__c31ebde8.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_latency/xvla"
+    ],
+    "tasks": 29
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "h2_cost__libero_90__libero90_policies__s0__5d8b7438",
+ "schema": 1,
+ "script": "experiments/h2_cost.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T13:23:23+00:00",
+ "stream": null,
+ "tag": "libero90_policies"
+}

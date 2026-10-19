@@ -1,0 +1,115 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "h2_cost.py --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "h2_practice",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5d8b7438fe5375cc302a96bc9a0710d7b741f651",
+  "short": "5d8b7438"
+ },
+ "keys": {},
+ "metrics": {
+  "libero90": {
+   "dsrlf_acc": 300,
+   "dsrlf_train": 3000,
+   "dsrls_acc": 290,
+   "dsrls_train": 2900,
+   "dsrlz_acc": 300,
+   "dsrlz_train": 3000,
+   "e3_fac": 290,
+   "e3_fac30": 300,
+   "e3_lora": 290,
+   "e3_zs": 290,
+   "e3_zs30": 300,
+   "g8_fac": 660,
+   "g8_lora": 660,
+   "g8_tasks": 66,
+   "g8_zs": 660,
+   "g9_r4": 290,
+   "strap": 290,
+   "w1": 770,
+   "w1_arrivals": 30
+  },
+  "ood": {
+   "pi05_libero": {
+    "episode_wall_s": 38.53053833603859,
+    "g10_acc": 200,
+    "g10_s1": 1600,
+    "g10_s2": 1600,
+    "g14_s1": 1600,
+    "g14_s2": 1600,
+    "g15_acc": 200,
+    "switch": 3400,
+    "system": 6800,
+    "tli": 3400
+   },
+   "pi0_libero": {
+    "episode_wall_s": 33.3791162788868,
+    "g10_acc": 200,
+    "g10_s1": 1600,
+    "g10_s2": 1600,
+    "g14_s1": 1600,
+    "g14_s2": 1600,
+    "g15_acc": 200,
+    "switch": 3400,
+    "system": 6800,
+    "tli": 3400
+   },
+   "smolvla": {
+    "episode_wall_s": 31.695962516814472,
+    "g10_acc": 200,
+    "g10_s1": 1600,
+    "g10_s2": 1600,
+    "g14_s1": 1600,
+    "g14_s2": 1600,
+    "g15_acc": 200,
+    "switch": 3400,
+    "system": 6800,
+    "tli": 3400
+   },
+   "xvla": {
+    "episode_wall_s": 47.59126301974059,
+    "g10_acc": 200,
+    "g10_s1": 1600,
+    "g10_s2": 1600,
+    "g14_s1": 1600,
+    "g14_s2": 1600,
+    "g15_acc": 200,
+    "switch": 3400,
+    "system": 6800,
+    "tli": 3400
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "h2_practice__libero__counts__s0__5d8b7438",
+ "schema": 1,
+ "script": "experiments/h2_cost.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T13:23:21+00:00",
+ "stream": null,
+ "tag": "counts"
+}

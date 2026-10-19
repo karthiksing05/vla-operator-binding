@@ -1,0 +1,911 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "h2_cost.py --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "h2_cost",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5d8b7438fe5375cc302a96bc9a0710d7b741f651",
+  "short": "5d8b7438"
+ },
+ "keys": {},
+ "metrics": {
+  "rows": [
+   {
+    "backbone": "pi05_libero",
+    "bytes_cum": 3981312,
+    "bytes_task": 199065.6,
+    "demos_task": 0.0,
+    "family": "ours",
+    "fit_job_min_cum": 42.5,
+    "fit_job_min_task": 2.125,
+    "k": 312,
+    "latency": {
+     "arms": {
+      "switch_carry": 15,
+      "tli": 5
+     },
+     "hz": 3.4381830322580798,
+     "ms": 290.8512986707501,
+     "peak_gb": 7.652360192
+    },
+    "method": "Practice-chosen operator (ours, G15/G18)",
+    "n": 400,
+    "note": "TLI chosen on 5 tasks: 6 source latents kept; practice identifies the 16-source pool",
+    "policy": "pi0.5",
+    "practice_task": 340.0,
+    "rate": 0.78,
+    "set": "e",
+    "sources": [
+     "ledger/g15_operator/g15_operator__libero_ood__read_pi05__s13__dd240480.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/pi05_libero"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "pi05_libero",
+    "bytes_cum": 0,
+    "bytes_task": 0,
+    "demos_task": 0.0,
+    "family": "ours",
+    "fit_job_min_cum": 0,
+    "fit_job_min_task": 0,
+    "k": 282,
+    "latency": {
+     "arms": {
+      "switch_carry": 1
+     },
+     "hz": 3.439220695498806,
+     "ms": 290.76354457531124,
+     "peak_gb": 7.644987392
+    },
+    "method": "Grasp switch, practice-chosen pair (G10)",
+    "n": 400,
+    "note": "pointers to two training instructions: no parameters",
+    "policy": "pi0.5",
+    "practice_task": 170.0,
+    "rate": 0.705,
+    "set": "e",
+    "sources": [
+     "ledger/g15_operator/g15_operator__libero_ood__read_pi05__s13__dd240480.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/pi05_libero"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "pi05_libero",
+    "bytes_cum": 5971968,
+    "bytes_task": 298598.4,
+    "demos_task": 0.0,
+    "family": "tli",
+    "fit_job_min_cum": 42.5,
+    "fit_job_min_task": 2.125,
+    "k": 249,
+    "latency": {
+     "arms": {
+      "tli": 1
+     },
+     "hz": 3.4350737960767237,
+     "ms": 291.1145609570667,
+     "peak_gb": 7.652360192
+    },
+    "method": "TLI, practice-chosen pair (G14)",
+    "n": 400,
+    "note": "9 source latents kept",
+    "policy": "pi0.5",
+    "practice_task": 170.0,
+    "rate": 0.6225,
+    "set": "e",
+    "sources": [
+     "ledger/g15_operator/g15_operator__libero_ood__read_pi05__s13__dd240480.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/pi05_libero"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "pi05_libero",
+    "bytes_cum": 5971968,
+    "bytes_task": 298598.4,
+    "demos_task": 0.0,
+    "family": "tli",
+    "fit_job_min_cum": 23.90625,
+    "fit_job_min_task": 1.1953125,
+    "k": 245,
+    "latency": {
+     "arms": {
+      "tli": 1
+     },
+     "hz": 3.4350737960767237,
+     "ms": 291.1145609570667,
+     "peak_gb": 7.652360192
+    },
+    "method": "Li's TLI, Li's hand pairs",
+    "n": 400,
+    "note": "9 source latents; hand-chosen pairs and lambda",
+    "policy": "pi0.5",
+    "practice_task": 0.0,
+    "rate": 0.6125,
+    "set": "e",
+    "sources": [
+     "ledger/g15_operator/g15_operator__libero_ood__read_pi05__s13__dd240480.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/pi05_libero"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "pi05_libero",
+    "bytes_cum": 0,
+    "bytes_task": 0,
+    "demos_task": 0.0,
+    "family": "policy",
+    "fit_job_min_cum": 0,
+    "fit_job_min_task": 0,
+    "k": 143,
+    "latency": {
+     "arms": {
+      "policy": 1
+     },
+     "hz": 3.4213926465091338,
+     "ms": 292.2786430316046,
+     "peak_gb": 7.644987392
+    },
+    "method": "Policy alone (pi0.5)",
+    "n": 400,
+    "note": "",
+    "policy": "pi0.5",
+    "practice_task": 0.0,
+    "rate": 0.3575,
+    "set": "e",
+    "sources": [
+     "ledger/g15_operator/g15_operator__libero_ood__read_pi05__s13__dd240480.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/pi05_libero"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "pi05_libero",
+    "bytes_cum": 3981312,
+    "bytes_task": 199065.6,
+    "demos_task": 0.0,
+    "family": "ours",
+    "fit_job_min_cum": 42.5,
+    "fit_job_min_task": 2.125,
+    "k": 254,
+    "latency": {
+     "arms": {
+      "switch_carry": 16,
+      "tli": 4
+     },
+     "hz": 3.438390514810691,
+     "ms": 290.83374785166234,
+     "peak_gb": 7.652360192
+    },
+    "method": "Stream with reuse (ours, G16, plan order)",
+    "n": 400,
+    "note": "TLI served on 4; bytes bounded by G15's kept latents",
+    "policy": "pi0.5",
+    "practice_task": 180.0,
+    "rate": 0.635,
+    "set": "e",
+    "sources": [
+     "ledger/g16_stream_ood/g16_stream_ood__libero_ood__read_pi05__s13__870e4216.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/pi05_libero"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "pi05_libero",
+    "bytes_cum": 3981312,
+    "bytes_task": 199065.6,
+    "demos_task": 0.0,
+    "family": "ours",
+    "fit_job_min_cum": 42.5,
+    "fit_job_min_task": 2.125,
+    "k": 297,
+    "latency": {
+     "arms": {
+      "switch_carry": 16,
+      "tli": 4
+     },
+     "hz": 3.438390514810691,
+     "ms": 290.83374785166234,
+     "peak_gb": 7.652360192
+    },
+    "method": "Stream with reuse (ours, G16, reversed order)",
+    "n": 400,
+    "note": "TLI served on 4; bytes bounded by G15's kept latents",
+    "policy": "pi0.5",
+    "practice_task": 180.0,
+    "rate": 0.7425,
+    "set": "e",
+    "sources": [
+     "ledger/g16_stream_ood/g16_stream_ood__libero_ood__read_pi05__s13__870e4216.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/pi05_libero"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "pi0_libero",
+    "bytes_cum": 5971968,
+    "bytes_task": 298598.4,
+    "demos_task": 0.0,
+    "family": "ours",
+    "fit_job_min_cum": 37.4,
+    "fit_job_min_task": 1.8699999999999999,
+    "k": 336,
+    "latency": {
+     "arms": {
+      "switch_carry": 12,
+      "tli": 8
+     },
+     "hz": 4.128922829661183,
+     "ms": 242.19391866959631,
+     "peak_gb": 7.16971008
+    },
+    "method": "Practice-chosen operator (ours, G15/G18)",
+    "n": 400,
+    "note": "TLI chosen on 8 tasks: 9 source latents kept; practice identifies the 16-source pool",
+    "policy": "pi0",
+    "practice_task": 340.0,
+    "rate": 0.84,
+    "set": "e",
+    "sources": [
+     "ledger/g15_operator/g15_operator__libero_ood__read_pi0__s13__dd240480.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/pi0_libero"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "pi0_libero",
+    "bytes_cum": 0,
+    "bytes_task": 0,
+    "demos_task": 0.0,
+    "family": "ours",
+    "fit_job_min_cum": 0,
+    "fit_job_min_task": 0,
+    "k": 289,
+    "latency": {
+     "arms": {
+      "switch_carry": 1
+     },
+     "hz": 4.130650411251986,
+     "ms": 242.0926247537136,
+     "peak_gb": 7.162107904
+    },
+    "method": "Grasp switch, practice-chosen pair (G10)",
+    "n": 400,
+    "note": "pointers to two training instructions: no parameters",
+    "policy": "pi0",
+    "practice_task": 170.0,
+    "rate": 0.7225,
+    "set": "e",
+    "sources": [
+     "ledger/g15_operator/g15_operator__libero_ood__read_pi0__s13__dd240480.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/pi0_libero"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "pi0_libero",
+    "bytes_cum": 7299072,
+    "bytes_task": 364953.6,
+    "demos_task": 0.0,
+    "family": "tli",
+    "fit_job_min_cum": 37.4,
+    "fit_job_min_task": 1.8699999999999999,
+    "k": 297,
+    "latency": {
+     "arms": {
+      "tli": 1
+     },
+     "hz": 4.126334165081261,
+     "ms": 242.34585954342037,
+     "peak_gb": 7.16971008
+    },
+    "method": "TLI, practice-chosen pair (G14)",
+    "n": 400,
+    "note": "11 source latents kept",
+    "policy": "pi0",
+    "practice_task": 170.0,
+    "rate": 0.7425,
+    "set": "e",
+    "sources": [
+     "ledger/g15_operator/g15_operator__libero_ood__read_pi0__s13__dd240480.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/pi0_libero"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "pi0_libero",
+    "bytes_cum": 5971968,
+    "bytes_task": 298598.4,
+    "demos_task": 0.0,
+    "family": "tli",
+    "fit_job_min_cum": 21.0375,
+    "fit_job_min_task": 1.0518750000000001,
+    "k": 316,
+    "latency": {
+     "arms": {
+      "tli": 1
+     },
+     "hz": 4.126334165081261,
+     "ms": 242.34585954342037,
+     "peak_gb": 7.16971008
+    },
+    "method": "Li's TLI, Li's hand pairs",
+    "n": 400,
+    "note": "9 source latents; hand-chosen pairs and lambda",
+    "policy": "pi0",
+    "practice_task": 0.0,
+    "rate": 0.79,
+    "set": "e",
+    "sources": [
+     "ledger/g15_operator/g15_operator__libero_ood__read_pi0__s13__dd240480.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/pi0_libero"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "pi0_libero",
+    "bytes_cum": 0,
+    "bytes_task": 0,
+    "demos_task": 0.0,
+    "family": "policy",
+    "fit_job_min_cum": 0,
+    "fit_job_min_task": 0,
+    "k": 35,
+    "latency": {
+     "arms": {
+      "policy": 1
+     },
+     "hz": 4.118986130679158,
+     "ms": 242.77819062117487,
+     "peak_gb": 7.162107904
+    },
+    "method": "Policy alone (pi0)",
+    "n": 400,
+    "note": "",
+    "policy": "pi0",
+    "practice_task": 0.0,
+    "rate": 0.0875,
+    "set": "e",
+    "sources": [
+     "ledger/g15_operator/g15_operator__libero_ood__read_pi0__s13__dd240480.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/pi0_libero"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "pi0_libero",
+    "bytes_cum": 5971968,
+    "bytes_task": 298598.4,
+    "demos_task": 0.0,
+    "family": "ours",
+    "fit_job_min_cum": 37.4,
+    "fit_job_min_task": 1.8699999999999999,
+    "k": 330,
+    "latency": {
+     "arms": {
+      "switch_carry": 9,
+      "tli": 11
+     },
+     "hz": 4.128275359063151,
+     "ms": 242.23190388805233,
+     "peak_gb": 7.16971008
+    },
+    "method": "Stream with reuse (ours, G16, plan order)",
+    "n": 400,
+    "note": "TLI served on 11; bytes bounded by G15's kept latents",
+    "policy": "pi0",
+    "practice_task": 180.0,
+    "rate": 0.825,
+    "set": "e",
+    "sources": [
+     "ledger/g16_stream_ood/g16_stream_ood__libero_ood__read_pi0__s13__870e4216.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/pi0_libero"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "pi0_libero",
+    "bytes_cum": 5971968,
+    "bytes_task": 298598.4,
+    "demos_task": 0.0,
+    "family": "ours",
+    "fit_job_min_cum": 37.4,
+    "fit_job_min_task": 1.8699999999999999,
+    "k": 288,
+    "latency": {
+     "arms": {
+      "switch_carry": 15,
+      "tli": 5
+     },
+     "hz": 4.129570503387106,
+     "ms": 242.1559334511403,
+     "peak_gb": 7.16971008
+    },
+    "method": "Stream with reuse (ours, G16, reversed order)",
+    "n": 400,
+    "note": "TLI served on 5; bytes bounded by G15's kept latents",
+    "policy": "pi0",
+    "practice_task": 180.0,
+    "rate": 0.72,
+    "set": "e",
+    "sources": [
+     "ledger/g16_stream_ood/g16_stream_ood__libero_ood__read_pi0__s13__870e4216.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/pi0_libero"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "smolvla",
+    "bytes_cum": 0,
+    "bytes_task": 0.0,
+    "demos_task": 0.0,
+    "family": "ours",
+    "fit_job_min_cum": 8.366666666666667,
+    "fit_job_min_task": 0.41833333333333333,
+    "k": 96,
+    "latency": {
+     "arms": {
+      "switch_carry": 20
+     },
+     "hz": 3.8970240125442768,
+     "ms": 256.6060657519847,
+     "peak_gb": 0.96624128
+    },
+    "method": "Practice-chosen operator (ours, G15/G18)",
+    "n": 400,
+    "note": "TLI chosen on 0 tasks: 0 source latents kept; practice identifies the 16-source pool",
+    "policy": "SmolVLA",
+    "practice_task": 340.0,
+    "rate": 0.24,
+    "set": "e",
+    "sources": [
+     "ledger/g18_four_policies/g18_four_policies__libero_ood__read_smolvla__s13__402808ff.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/smolvla"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "smolvla",
+    "bytes_cum": 0,
+    "bytes_task": 0,
+    "demos_task": 0.0,
+    "family": "ours",
+    "fit_job_min_cum": 0,
+    "fit_job_min_task": 0,
+    "k": 96,
+    "latency": {
+     "arms": {
+      "switch_carry": 1
+     },
+     "hz": 3.8970240125442768,
+     "ms": 256.6060657519847,
+     "peak_gb": 0.96624128
+    },
+    "method": "Grasp switch, practice-chosen pair (G10)",
+    "n": 400,
+    "note": "pointers to two training instructions: no parameters",
+    "policy": "SmolVLA",
+    "practice_task": 170.0,
+    "rate": 0.24,
+    "set": "e",
+    "sources": [
+     "ledger/g18_four_policies/g18_four_policies__libero_ood__read_smolvla__s13__402808ff.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/smolvla"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "smolvla",
+    "bytes_cum": 3041280,
+    "bytes_task": 152064.0,
+    "demos_task": 0.0,
+    "family": "tli",
+    "fit_job_min_cum": 8.366666666666667,
+    "fit_job_min_task": 0.41833333333333333,
+    "k": 4,
+    "latency": {
+     "arms": {
+      "tli": 1
+     },
+     "hz": 3.8582600045175917,
+     "ms": 259.1841915342957,
+     "peak_gb": 0.9673472
+    },
+    "method": "TLI, practice-chosen pair (G14)",
+    "n": 400,
+    "note": "11 source latents kept",
+    "policy": "SmolVLA",
+    "practice_task": 170.0,
+    "rate": 0.01,
+    "set": "e",
+    "sources": [
+     "ledger/g18_four_policies/g18_four_policies__libero_ood__read_smolvla__s13__402808ff.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/smolvla"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "smolvla",
+    "bytes_cum": 2488320,
+    "bytes_task": 124416.0,
+    "demos_task": 0.0,
+    "family": "tli",
+    "fit_job_min_cum": 4.70625,
+    "fit_job_min_task": 0.23531249999999998,
+    "k": 0,
+    "latency": {
+     "arms": {
+      "tli": 1
+     },
+     "hz": 3.8582600045175917,
+     "ms": 259.1841915342957,
+     "peak_gb": 0.9673472
+    },
+    "method": "Li's TLI, Li's hand pairs",
+    "n": 400,
+    "note": "9 source latents; hand-chosen pairs and lambda",
+    "policy": "SmolVLA",
+    "practice_task": 0.0,
+    "rate": 0.0,
+    "set": "e",
+    "sources": [
+     "ledger/g18_four_policies/g18_four_policies__libero_ood__read_smolvla__s13__402808ff.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/smolvla"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "smolvla",
+    "bytes_cum": 0,
+    "bytes_task": 0,
+    "demos_task": 0.0,
+    "family": "tli",
+    "fit_job_min_cum": 0,
+    "fit_job_min_task": 0,
+    "k": 93,
+    "latency": {
+     "arms": {
+      "switch_carry": 1
+     },
+     "hz": 3.8970240125442768,
+     "ms": 256.6060657519847,
+     "peak_gb": 0.96624128
+    },
+    "method": "Li's hand pairs at the grasp",
+    "n": 400,
+    "note": "hand-chosen pointers",
+    "policy": "SmolVLA",
+    "practice_task": 0.0,
+    "rate": 0.2325,
+    "set": "e",
+    "sources": [
+     "ledger/g18_four_policies/g18_four_policies__libero_ood__read_smolvla__s13__402808ff.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/smolvla"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "smolvla",
+    "bytes_cum": 0,
+    "bytes_task": 0,
+    "demos_task": 0.0,
+    "family": "policy",
+    "fit_job_min_cum": 0,
+    "fit_job_min_task": 0,
+    "k": 5,
+    "latency": {
+     "arms": {
+      "policy": 1
+     },
+     "hz": 3.85225990639793,
+     "ms": 259.58788459189236,
+     "peak_gb": 0.967099904
+    },
+    "method": "Policy alone (SmolVLA)",
+    "n": 400,
+    "note": "",
+    "policy": "SmolVLA",
+    "practice_task": 0.0,
+    "rate": 0.0125,
+    "set": "e",
+    "sources": [
+     "ledger/g18_four_policies/g18_four_policies__libero_ood__read_smolvla__s13__402808ff.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/smolvla"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "xvla",
+    "bytes_cum": 1327104,
+    "bytes_task": 66355.2,
+    "demos_task": 0.0,
+    "family": "ours",
+    "fit_job_min_cum": 19.977777777777778,
+    "fit_job_min_task": 0.9988888888888889,
+    "k": 256,
+    "latency": {
+     "arms": {
+      "switch_carry": 16,
+      "tli": 4
+     },
+     "hz": 4.780177934041645,
+     "ms": 209.19723361730576,
+     "peak_gb": 3.690202624
+    },
+    "method": "Practice-chosen operator (ours, G15/G18)",
+    "n": 400,
+    "note": "TLI chosen on 4 tasks: 6 source latents kept; practice identifies the 16-source pool",
+    "policy": "X-VLA",
+    "practice_task": 340.0,
+    "rate": 0.64,
+    "set": "e",
+    "sources": [
+     "ledger/g18_four_policies/g18_four_policies__libero_ood__read_xvla__s13__402808ff.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/xvla"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "xvla",
+    "bytes_cum": 0,
+    "bytes_task": 0,
+    "demos_task": 0.0,
+    "family": "ours",
+    "fit_job_min_cum": 0,
+    "fit_job_min_task": 0,
+    "k": 210,
+    "latency": {
+     "arms": {
+      "switch_carry": 1
+     },
+     "hz": 4.789061439944469,
+     "ms": 208.80918161943555,
+     "peak_gb": 3.689317888
+    },
+    "method": "Grasp switch, practice-chosen pair (G10)",
+    "n": 400,
+    "note": "pointers to two training instructions: no parameters",
+    "policy": "X-VLA",
+    "practice_task": 170.0,
+    "rate": 0.525,
+    "set": "e",
+    "sources": [
+     "ledger/g18_four_policies/g18_four_policies__libero_ood__read_xvla__s13__402808ff.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/xvla"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "xvla",
+    "bytes_cum": 2433024,
+    "bytes_task": 121651.2,
+    "demos_task": 0.0,
+    "family": "tli",
+    "fit_job_min_cum": 19.977777777777778,
+    "fit_job_min_task": 0.9988888888888889,
+    "k": 195,
+    "latency": {
+     "arms": {
+      "tli": 1
+     },
+     "hz": 4.744971053618715,
+     "ms": 210.74944160878658,
+     "peak_gb": 3.690202624
+    },
+    "method": "TLI, practice-chosen pair (G14)",
+    "n": 400,
+    "note": "11 source latents kept",
+    "policy": "X-VLA",
+    "practice_task": 170.0,
+    "rate": 0.4875,
+    "set": "e",
+    "sources": [
+     "ledger/g18_four_policies/g18_four_policies__libero_ood__read_xvla__s13__402808ff.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/xvla"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "xvla",
+    "bytes_cum": 1990656,
+    "bytes_task": 99532.8,
+    "demos_task": 0.0,
+    "family": "tli",
+    "fit_job_min_cum": 11.2375,
+    "fit_job_min_task": 0.561875,
+    "k": 142,
+    "latency": {
+     "arms": {
+      "tli": 1
+     },
+     "hz": 4.744971053618715,
+     "ms": 210.74944160878658,
+     "peak_gb": 3.690202624
+    },
+    "method": "Li's TLI, Li's hand pairs",
+    "n": 400,
+    "note": "9 source latents; hand-chosen pairs and lambda",
+    "policy": "X-VLA",
+    "practice_task": 0.0,
+    "rate": 0.355,
+    "set": "e",
+    "sources": [
+     "ledger/g18_four_policies/g18_four_policies__libero_ood__read_xvla__s13__402808ff.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/xvla"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "xvla",
+    "bytes_cum": 0,
+    "bytes_task": 0,
+    "demos_task": 0.0,
+    "family": "tli",
+    "fit_job_min_cum": 0,
+    "fit_job_min_task": 0,
+    "k": 210,
+    "latency": {
+     "arms": {
+      "switch_carry": 1
+     },
+     "hz": 4.789061439944469,
+     "ms": 208.80918161943555,
+     "peak_gb": 3.689317888
+    },
+    "method": "Li's hand pairs at the grasp",
+    "n": 400,
+    "note": "hand-chosen pointers",
+    "policy": "X-VLA",
+    "practice_task": 0.0,
+    "rate": 0.525,
+    "set": "e",
+    "sources": [
+     "ledger/g18_four_policies/g18_four_policies__libero_ood__read_xvla__s13__402808ff.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/xvla"
+    ],
+    "tasks": 20
+   },
+   {
+    "backbone": "xvla",
+    "bytes_cum": 0,
+    "bytes_task": 0,
+    "demos_task": 0.0,
+    "family": "policy",
+    "fit_job_min_cum": 0,
+    "fit_job_min_task": 0,
+    "k": 80,
+    "latency": {
+     "arms": {
+      "policy": 1
+     },
+     "hz": 4.800681373793591,
+     "ms": 208.30376401543617,
+     "peak_gb": 3.689317888
+    },
+    "method": "Policy alone (X-VLA)",
+    "n": 400,
+    "note": "",
+    "policy": "X-VLA",
+    "practice_task": 0.0,
+    "rate": 0.2,
+    "set": "e",
+    "sources": [
+     "ledger/g18_four_policies/g18_four_policies__libero_ood__read_xvla__s13__402808ff.json",
+     "h2_space/units",
+     "h2_fit/units",
+     "h2_practice/counts",
+     "h2_latency/xvla"
+    ],
+    "tasks": 20
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "h2_cost__libero_ood__ood__s0__5d8b7438",
+ "schema": 1,
+ "script": "experiments/h2_cost.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T13:23:22+00:00",
+ "stream": null,
+ "tag": "ood"
+}

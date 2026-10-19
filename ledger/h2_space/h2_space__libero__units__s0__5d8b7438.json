@@ -1,0 +1,347 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "h2_cost.py --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "h2_space",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5d8b7438fe5375cc302a96bc9a0710d7b741f651",
+  "short": "5d8b7438"
+ },
+ "keys": {},
+ "metrics": {
+  "er_bytes": {
+   "10": 1103082,
+   "12": 742672,
+   "13": 961746,
+   "14": 907621,
+   "15": 1145295,
+   "25": 1138113,
+   "30": 906400,
+   "31": 1031395,
+   "36": 1113436,
+   "41": 1139561,
+   "43": 823453,
+   "46": 874116,
+   "47": 963442,
+   "48": 961506,
+   "49": 899333,
+   "50": 903661,
+   "52": 704062,
+   "53": 1000960,
+   "54": 722801,
+   "55": 635351,
+   "56": 611286,
+   "57": 814999,
+   "58": 804380,
+   "59": 726884,
+   "61": 963210,
+   "62": 731643,
+   "71": 613357,
+   "72": 768556,
+   "9": 897982
+  },
+  "units": {
+   "cl_adapter/er": {
+    "bf16_bytes": 18710528,
+    "by_dtype": {
+     "HalfStorage": 18710528
+    },
+    "file_bytes": 18808599,
+    "params": 9355264,
+    "path": "results/robot/bcl_er_g11.pt",
+    "stored_bytes": 18710528
+   },
+   "cl_adapter/seq": {
+    "bf16_bytes": 18710528,
+    "by_dtype": {
+     "HalfStorage": 18710528
+    },
+    "file_bytes": 18808931,
+    "params": 9355264,
+    "path": "results/robot/bcl_seq_g11.pt",
+    "stored_bytes": 18710528
+   },
+   "dsrl_actor/dsrl": {
+    "bf16_bytes": 991488,
+    "by_dtype": {
+     "FloatStorage": 1982976
+    },
+    "file_bytes": 1988309,
+    "files": 21,
+    "params": 495744,
+    "params_set": [
+     495744
+    ],
+    "path": "results/robot/dsrl_1_actor.pt",
+    "stored_bytes": 1982976
+   },
+   "dsrl_actor/dsrlf": {
+    "bf16_bytes": 669724,
+    "by_dtype": {
+     "FloatStorage": 1339448
+    },
+    "file_bytes": 1344757,
+    "files": 30,
+    "params": 334862,
+    "params_set": [
+     334862
+    ],
+    "path": "results/robot/dsrlf_10_actor.pt",
+    "stored_bytes": 1339448
+   },
+   "dsrl_actor/dsrlo": {
+    "bf16_bytes": 669724,
+    "by_dtype": {
+     "FloatStorage": 1339448
+    },
+    "file_bytes": 1344741,
+    "files": 21,
+    "params": 334862,
+    "params_set": [
+     334862
+    ],
+    "path": "results/robot/dsrlo_1_actor.pt",
+    "stored_bytes": 1339448
+   },
+   "dsrl_actor/dsrls": {
+    "bf16_bytes": 669724,
+    "by_dtype": {
+     "FloatStorage": 1339448
+    },
+    "file_bytes": 1344757,
+    "files": 29,
+    "params": 334862,
+    "params_set": [
+     334862
+    ],
+    "path": "results/robot/dsrls_10_actor.pt",
+    "stored_bytes": 1339448
+   },
+   "dsrl_actor/dsrlz": {
+    "bf16_bytes": 669724,
+    "by_dtype": {
+     "FloatStorage": 1339448
+    },
+    "file_bytes": 1344757,
+    "files": 30,
+    "params": 334862,
+    "params_set": [
+     334862
+    ],
+    "path": "results/robot/dsrlz_10_actor.pt",
+    "stored_bytes": 1339448
+   },
+   "lora_r16/pi05_libero": {
+    "bf16_bytes": 18710528,
+    "by_dtype": {
+     "HalfStorage": 18710528
+    },
+    "file_bytes": 18808599,
+    "ledger_bytes": 18710528,
+    "params": 9355264,
+    "path": "results/robot/r3_lora_10.pt",
+    "row": "ledger/r3_fewshot/r3_fewshot__libero_90__base__task-10__s0__f5efcd58.json",
+    "stored_bytes": 18710528
+   },
+   "lora_r16/pi0_libero": {
+    "bf16_bytes": 13860864,
+    "by_dtype": {
+     "HalfStorage": 13860864
+    },
+    "file_bytes": 13937363,
+    "ledger_bytes": 13860864,
+    "params": 6930432,
+    "path": "results/robot/r3_lora_10_p0.pt",
+    "row": "ledger/r3_fewshot/r3_fewshot__libero_90___p0__task-10__s0__bad3a3bc.json",
+    "stored_bytes": 13860864
+   },
+   "lora_r16/smolvla": {
+    "bf16_bytes": 6832128,
+    "by_dtype": {
+     "HalfStorage": 6832128
+    },
+    "file_bytes": 6899427,
+    "ledger_bytes": 6832128,
+    "params": 3416064,
+    "path": "results/robot/r3_lora_10_sv.pt",
+    "row": "ledger/r3_fewshot/r3_fewshot__libero_90___sv__task-10__s0__6f94ea3d.json",
+    "stored_bytes": 6832128
+   },
+   "lora_r16/xvla": {
+    "bf16_bytes": 12713984,
+    "by_dtype": {
+     "HalfStorage": 12713984
+    },
+    "file_bytes": 12772403,
+    "ledger_bytes": 12713984,
+    "params": 6356992,
+    "path": "results/robot/r3_lora_10_xv.pt",
+    "row": "ledger/r3_fewshot/r3_fewshot__libero_90___xv__task-10__s0__da054510.json",
+    "stored_bytes": 12713984
+   },
+   "lora_r4/pi05_libero": {
+    "bf16_bytes": 4677632,
+    "by_dtype": {
+     "HalfStorage": 4677632
+    },
+    "file_bytes": 4776635,
+    "ledger_bytes": 4677632,
+    "params": 2338816,
+    "path": "results/robot/r3_lora_10_r4.pt",
+    "row": "ledger/r3_fewshot/r3_fewshot__libero_90___r4__task-10__s0__7478b2b4.json",
+    "stored_bytes": 4677632
+   },
+   "prototype_r4/pi05_libero": {
+    "bf16_bytes": 4677632,
+    "by_dtype": {
+     "HalfStorage": 4677632
+    },
+    "file_bytes": 4777187,
+    "ledger_bytes": 4677632,
+    "params": 2338816,
+    "path": "results/robot/prim_Osc1_0.pt",
+    "row": "ledger/c0_fit/c0_fit__libero_90__joint_Osc1__s0__6a258233.json",
+    "stored_bytes": 4677632
+   },
+   "prototype_r4/pi0_libero": {
+    "bf16_bytes": 3465216,
+    "by_dtype": {
+     "HalfStorage": 3465216
+    },
+    "file_bytes": 3542609,
+    "ledger_bytes": 3465216,
+    "params": 1732608,
+    "path": "results/robot/prim_POsc1_0.pt",
+    "row": "ledger/c0_fit/c0_fit__libero_90__joint_POsc1__s0__c2da6908.json",
+    "stored_bytes": 3465216
+   },
+   "prototype_r4/smolvla": {
+    "bf16_bytes": 1708032,
+    "by_dtype": {
+     "HalfStorage": 1708032
+    },
+    "file_bytes": 1776381,
+    "ledger_bytes": 1708032,
+    "params": 854016,
+    "path": "results/robot/prim_VOsc1_0.pt",
+    "row": "ledger/c0_fit/c0_fit__libero_90__joint_VOsc1__s0__49a33537.json",
+    "stored_bytes": 1708032
+   },
+   "prototype_r4/xvla": {
+    "bf16_bytes": 3178496,
+    "by_dtype": {
+     "HalfStorage": 3178496
+    },
+    "file_bytes": 3237865,
+    "ledger_bytes": 3178496,
+    "params": 1589248,
+    "path": "results/robot/prim_YOsc1_0.pt",
+    "row": "ledger/c0_fit/c0_fit__libero_90__joint_YOsc1__s0__da054510.json",
+    "stored_bytes": 3178496
+   },
+   "strap_lora": {
+    "bf16_bytes": 18710528,
+    "by_dtype": {
+     "HalfStorage": 18710528
+    },
+    "file_bytes": 18810195,
+    "params": 9355264,
+    "path": "results/robot/strap90_10_lora.pt",
+    "stored_bytes": 18710528
+   },
+   "strap_prior": {
+    "d40_episodes": 1693,
+    "d40_parquet_bytes": 34938730091,
+    "indexes": {
+     "strap90_emb.npz": 20323406,
+     "strap90_frames.npz": 661769627,
+     "strap_emb.npz": 427364428
+    },
+    "total": 36048187552
+   },
+   "tli_latent/pi05_libero": {
+    "bf16_bytes": 663552,
+    "dtype": "float32",
+    "file_bytes": 1327232,
+    "files": 24,
+    "params": 331776,
+    "path": "results/robot/tli/pi05_libero_13.npy",
+    "shape": [
+     18,
+     9,
+     2048
+    ]
+   },
+   "tli_latent/pi0_libero": {
+    "bf16_bytes": 663552,
+    "dtype": "float32",
+    "file_bytes": 1327232,
+    "files": 24,
+    "params": 331776,
+    "path": "results/robot/tli/pi0_libero_13.npy",
+    "shape": [
+     18,
+     9,
+     2048
+    ]
+   },
+   "tli_latent/smolvla": {
+    "bf16_bytes": 276480,
+    "dtype": "float32",
+    "file_bytes": 553088,
+    "files": 24,
+    "params": 138240,
+    "path": "results/robot/tli/smolvla_13.npy",
+    "shape": [
+     16,
+     9,
+     960
+    ]
+   },
+   "tli_latent/xvla": {
+    "bf16_bytes": 221184,
+    "dtype": "float32",
+    "file_bytes": 442496,
+    "files": 24,
+    "params": 110592,
+    "path": "results/robot/tli/xvla_13.npy",
+    "shape": [
+     12,
+     9,
+     1024
+    ]
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "h2_space__libero__units__s0__5d8b7438",
+ "schema": 1,
+ "script": "experiments/h2_cost.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T13:23:18+00:00",
+ "stream": null,
+ "tag": "units"
+}
