@@ -635,6 +635,64 @@ def table(B):
     return rows, orows
 
 
+def table_policies(B):
+    """G19: the LIBERO-90 hierarchy with task leaves on pi0, SmolVLA and X-VLA (E3's 29 tasks with a demonstration, set d), against
+    each policy's per-task LoRA with acceptance and the policy alone; acceptance on stored states 0-9 (ledger g3_accept)."""
+    U, F, lat = B["U"], B["fits"], B["latency"]
+    out = []
+    for bb in BACKBONES[1:]:
+        sh = bb.split("_")[0]
+        g = one("g19_leaves_policies", tag=f"read_{sh}")
+        m = g["metrics"]
+        pl = json.load(open(os.path.join(R, "g3_plan.json" if sh == "smolvla" else f"g3_plan_{sh}.json")))["tasks"]
+        tasks = sorted(int(t) for t, v in pl.items() if v["lora"])
+        protos = sorted({v["object_proto"] for t, v in pl.items() if v["lora"]} | {v["goal_proto"] for t, v in pl.items() if v["lora"]})
+        P, L = U[f"prototype_r4/{bb}"]["bf16_bytes"], U[f"lora_r16/{bb}"]["bf16_bytes"]
+        pf = [F[f"protos/{bb}"].get(n) for n in protos]
+        lf = [F[f"loras/{bb}"].get(t) for t in tasks]
+        pw, lw = s_(pf, "wall_s")[0], s_(lf, "wall_s")[0]
+        st = set(tasks)
+        sx = rf".*_{sh}$"
+        zs = episodes("g3_accept", st, r"zs_.*" + sx[2:])[0]
+        fac = episodes("g3_accept", st, r"fac_.*" + sx[2:])[0]
+        lo = episodes("g3_accept", st, r"lorat_.*" + sx[2:])[0]
+        demos = len(st | {t for f in pf if f for t in f["joint"]})
+        n, T, k = m["H1"]["n"], m["tasks"], m["kept"]
+        src = [rel(g["_path"]), "h2_space/units", "h2_fit/units", f"h2_latency/{bb}"]
+        base = dict(backbone=bb, policy=NICE[bb], set="d29", n=n, tasks=T, sources=src, note="")
+
+        def add(method, kk, cum, fitw, prac, dm, mix, fam, note=""):
+            L_ = lat_of(lat, bb, mix)
+            out.append(dict(base, method=method, k=int(kk), rate=kk / n, bytes_cum=int(cum), bytes_task=cum / T,
+                            fit_job_min_task=fitw / 60 / T, fit_job_min_cum=fitw / 60, practice_task=prac / T, demos_task=dm / T,
+                            latency=L_, family=fam, note=note))
+        add("Hierarchy with task leaves (ours, G19)", m["H1"]["x"], len(protos) * P + k["lora"] * L, pw + lw, zs + fac + lo, demos,
+            {"policy": k["zs"], "prototype": k["hfac"], "lora16": k["lora"]}, "ours",
+            f"{len(protos)} prototypes + {k['lora']} leaves")
+        add("Library without leaves (ours, G19)", m["library_vs_lora_acc"]["x"], len(protos) * P, pw, zs + fac, demos,
+            {"policy": 1, "prototype": 1}, "ours")
+        add("Per-task LoRA r16 + acceptance (G19)", m["H1"]["y"], T * L, lw, zs + lo, T, {"lora16": 1}, "adapter",
+            "bytes: every adapter (the read does not record how many acceptance kept)")
+        add(f"Policy alone ({NICE[bb]})", m["H2"]["y"], 0, 0, 0, 0, {"policy": 1}, "policy")
+    return out
+
+
+def ablation():
+    """G20 (accuracy only): the system against each part removed, pi0.5; LIBERO-90 set d and Li's tasks set e."""
+    g = one("g20_ablation", tag="read")
+    m = g["metrics"]
+    out = []
+    for side in ("libero_90", "ood"):
+        for grp, d in m[side].items():
+            if not isinstance(d, dict):
+                continue
+            for k, v in d.items():
+                if isinstance(v, dict) and "x" in v:
+                    out.append(dict(side=side, group=grp, arm=k, x=v["x"], y=v["y"], n=v["n"], tasks=v.get("tasks"),
+                                    diff=v.get("diff", {}).get("diff"), lo=v.get("diff", {}).get("lo"), hi=v.get("diff", {}).get("hi")))
+    return out, rel(g["_path"])
+
+
 # ── outputs ──────────────────────────────────────────────────────────────────────────────────────────────────────────────
 def mb(b):
     return "0" if not b else (f"{b / 1e9:.2f} GB" if b >= 1e9 else f"{b / 1e6:.1f} MB" if b >= 1e5 else f"{b / 1e3:.1f} KB")
@@ -652,7 +710,7 @@ def mem_s(L):
     return "pending" if L is None else f"{L['peak_gb']:.1f}"
 
 
-SET_NAME = {"d": "set d, 66 tasks", "b": "set b, 29 tasks", "b30": "set b, 30 tasks", "e": "set e, 20 tasks"}
+SET_NAME = {"d29": "set d, 29 tasks", "d": "set d, 66 tasks", "b": "set b, 29 tasks", "b30": "set b, 30 tasks", "e": "set e, 20 tasks"}
 
 
 def md_table(rows, ood=False):
@@ -676,56 +734,112 @@ FAM = {"ours": "ours", "adapter": "per-task adapter", "tli": "Li's TLI / hand pa
        "cl": "continual learning", "policy": "policy alone"}
 
 
-def figure(rows, path, title, mark_key, marks):
+SHORT = {"Hierarchy with task leaves (ours, G8)": "ours: concepts + leaves", "Library without leaves (ours, G8)": "ours: concepts only",
+         "Per-task LoRA r16 + acceptance (G8)": "LoRA r16 + acc", "Library (ours, E3)": "ours: concepts (E3)",
+         "Per-task LoRA r16 + acceptance (E3)": "LoRA r16 + acc", "Per-task LoRA r4 + acceptance (G9)": "LoRA r4 + acc",
+         "STRAP": "STRAP", "STRAP + acceptance (G6)": "STRAP + acc", "DSRL on the policy (G7, dsrlz) + acceptance": "DSRL on policy",
+         "DSRL on the per-task LoRA (G7, dsrls) + acceptance": "DSRL on LoRA", "DSRL on the library (G7b, dsrlf) + acceptance":
+         "DSRL on concepts", "W1 learner (ours, stream)": "ours: W1 stream", "Sequential fine-tuning (G11)": "sequential FT",
+         "Experience replay (G11)": "experience replay", "Practice-chosen operator (ours, G15/G18)": "ours: chosen operator",
+         "Grasp switch, practice-chosen pair (G10)": "ours: grasp switch", "TLI, practice-chosen pair (G14)": "TLI, chosen pair",
+         "Li's TLI, Li's hand pairs": "Li's TLI", "Li's hand pairs at the grasp": "Li's pairs, grasp",
+         "Stream with reuse (ours, G16, plan order)": "ours: stream (plan)", "Stream with reuse (ours, G16, reversed order)":
+         "ours: stream (rev.)", "Hierarchy with task leaves (ours, G19)": "ours: concepts + leaves",
+         "Library without leaves (ours, G19)": "ours: concepts only", "Per-task LoRA r16 + acceptance (G19)": "LoRA r16 + acc"}
+
+
+def _place(ax, fig, pts):
+    """Direct labels without collisions: try offsets around each point, keep the first whose box hits no earlier box."""
+    r = fig.canvas.get_renderer()
+    boxes = []
+    for x, y, txt in sorted(pts, key=lambda p: -p[1]):
+        for dx, dy, ha in ((6, 3, "left"), (6, -9, "left"), (-6, 3, "right"), (-6, -9, "right"), (6, 11, "left"), (-6, 11, "right"),
+                           (6, -17, "left"), (-6, -17, "right")):
+            t = ax.annotate(txt, (x, y), textcoords="offset points", xytext=(dx, dy), fontsize=6.5, color="#52514e", ha=ha)
+            bb = t.get_window_extent(renderer=r).expanded(1.02, 1.1)
+            if not any(bb.overlaps(o) for o in boxes):
+                boxes.append(bb)
+                break
+            t.remove()
+        else:
+            t = ax.annotate(txt, (x, y), textcoords="offset points", xytext=(6, 3), fontsize=6.5, color="#52514e")
+            boxes.append(t.get_window_extent(renderer=r))
+
+
+def figure(rows, path, title, group_key, groups):
+    """Two rows of panels (success against bytes per task; against practice episodes + demonstrations per task), one column per
+    group (a task set or a policy): methods are compared only on the same tasks.  Zero cost is drawn at the axis floor."""
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     from matplotlib.lines import Line2D
-    plt.rcParams.update({"font.size": 9, "axes.edgecolor": "#52514e", "axes.labelcolor": "#0b0b0b", "xtick.color": "#52514e",
+    plt.rcParams.update({"font.size": 8, "axes.edgecolor": "#52514e", "axes.labelcolor": "#0b0b0b", "xtick.color": "#52514e",
                          "ytick.color": "#52514e"})
-    fig, axs = plt.subplots(1, 2, figsize=(12, 4.8), facecolor="#fcfcfb")
-    for ax, (xk, xl) in zip(axs, (("bytes_cum", "stored bytes per task (bf16 parameters + stored data), log"),
-                                  ("cost_ep", "practice episodes + demonstrations per task, log"))):
-        ax.set_facecolor("#fcfcfb")
-        for r in rows:
-            x = r["bytes_task"] if xk == "bytes_cum" else r["practice_task"] + r["demos_task"]
-            x = max(x, 1e3 if xk == "bytes_cum" else 0.5)              # zero cost drawn at the axis floor
-            ax.scatter([x], [100 * r["rate"]], s=60, marker=marks[r[mark_key]], color=COL[r["family"]], edgecolor="#fcfcfb",
-                       linewidth=1.5, zorder=3)
-            if r["family"] in ("ours",) or r.get("label"):
-                ax.annotate(r.get("label") or r["method"].split(" (")[0], (x, 100 * r["rate"]), textcoords="offset points",
-                            xytext=(5, 4), fontsize=7, color="#52514e")
-        ax.set_xscale("log")
-        ax.set_xlabel(xl)
-        ax.set_ylabel("success (%)")
-        ax.grid(True, color="#e6e5e0", linewidth=0.6, zorder=0)
-        for s in ("top", "right"):
-            ax.spines[s].set_visible(False)
+    nc = len(groups)
+    fig, axs = plt.subplots(2, nc, figsize=(4.4 * nc, 7.4), facecolor="#fcfcfb", squeeze=False)
+    floor = {0: 1e4, 1: 0.5}
+    todo = []
+    for j, g in enumerate(groups):
+        sub = [r for r in rows if r[group_key] == g]
+        for i, (xl) in enumerate(("stored bytes per task (bf16 + stored data)", "practice episodes + demonstrations per task")):
+            ax = axs[i][j]
+            ax.set_facecolor("#fcfcfb")
+            pts = []
+            for r in sub:
+                x = r["bytes_task"] if i == 0 else r["practice_task"] + r["demos_task"]
+                x = max(x, floor[i])
+                y = 100 * r["rate"]
+                ax.scatter([x], [y], s=46, marker="o", color=COL[r["family"]], edgecolor="#fcfcfb", linewidth=1.5,
+                           zorder=4 if r["family"] == "ours" else 3)
+                pts.append((x, y, SHORT.get(r["method"], r["method"].split(" (")[0])))
+            ax.set_xscale("log")
+            lo, hi = ax.get_xlim()
+            ax.set_xlim(floor[i] / 2, hi * 6)
+            todo.append((ax, pts))
+            ax.set_xlabel(xl + ", log; 0 at the left edge" if j == 0 else xl)
+            ax.set_ylim(-3, 103)
+            if j == 0:
+                ax.set_ylabel("success (%)")
+            if i == 0:
+                ax.set_title(g, fontsize=9, color="#0b0b0b")
+            ax.grid(True, color="#e6e5e0", linewidth=0.6, zorder=0)
+            for s_ in ("top", "right"):
+                ax.spines[s_].set_visible(False)
     hs = [Line2D([], [], marker="o", linestyle="", color=COL[f], label=FAM[f]) for f in COL if any(r["family"] == f for r in rows)]
-    hs += [Line2D([], [], marker=m, linestyle="", color="#52514e", label=k) for k, m in marks.items()
-           if any(r[mark_key] == k for r in rows)]
-    fig.legend(handles=hs, loc="lower center", ncol=min(len(hs), 7), frameon=False, fontsize=8)
+    fig.legend(handles=hs, loc="lower center", ncol=len(hs), frameon=False, fontsize=8)
     fig.suptitle(title, fontsize=10, color="#0b0b0b")
-    fig.tight_layout(rect=(0, 0.1, 1, 0.95))
+    fig.tight_layout(rect=(0, 0.04, 1, 0.96))
+    fig.canvas.draw()
+    for ax, pts in todo:
+        _place(ax, fig, pts)
     fig.savefig(path, dpi=150, facecolor="#fcfcfb")
     plt.close(fig)
 
 
-def main(record):
-    B = build()
-    rows, orows = table(B)
+def figures(rows, orows, prows):
     os.makedirs(FIG, exist_ok=True)
     for r in rows:
         r["setname"] = SET_NAME[r["set"]]
     figure(rows, os.path.join(FIG, "h2_pareto_libero90.png"),
            "LIBERO-90 tasks never seen (pi0.5): success against storage and against practice + demonstrations", "setname",
-           {SET_NAME["d"]: "o", SET_NAME["b"]: "s", SET_NAME["b30"]: "^"})
+           [SET_NAME["d"], SET_NAME["b"], SET_NAME["b30"]])
     for r in orows:
         r["policy"] = NICE[r["backbone"]]
     figure(orows, os.path.join(FIG, "h2_pareto_ood.png"),
-           "Li's compositional OOD tasks (set e), four flow policies: success against storage and against practice", "policy",
-           {"pi0.5": "o", "pi0": "s", "SmolVLA": "^", "X-VLA": "D"})
-    res = dict(libero90=rows, ood=orows, units=B["U"], practice=B["practice"], ood_practice=B["ood_practice"],
+           "Li's compositional OOD tasks (set e, no demonstrations), four flow policies: success against storage and against practice",
+           "policy", ["pi0.5", "pi0", "SmolVLA", "X-VLA"])
+    figure(prows, os.path.join(FIG, "h2_pareto_libero90_policies.png"),
+           "LIBERO-90 tasks never seen on three more flow policies (G19, set d, 29 tasks): success against storage and against "
+           "practice + demonstrations", "policy", ["pi0", "SmolVLA", "X-VLA"])
+
+
+def main(record):
+    B = build()
+    rows, orows = table(B)
+    prows = table_policies(B)
+    abl, abl_src = ablation()
+    figures(rows, orows, prows)
+    res = dict(libero90=rows, ood=orows, libero90_policies=prows, ablation=abl, units=B["U"], practice=B["practice"], ood_practice=B["ood_practice"],
                tli_identify=B["fits"]["tli"], er_bytes=B["er_bytes"], er_missing=B["er_missing"],
                latency={bb: v["arms"] for bb, v in B["latency"].items()})
     fit_summary = {}
@@ -745,7 +859,7 @@ def main(record):
         print(f"[h2] {r.get('policy', ''):7} {r['method'][:48]:48} {r['k']:4}/{r['n']:4} bytes/task {mb(r['bytes_task']):>9} "
               f"fit/task {fmin(r.get('fit_job_min_task')):>6} min practice {r['practice_task']:6.1f} demos {r['demos_task']:.2f} "
               f"lat {lat_s(r['latency'])}", flush=True)
-    write_doc(B, rows, orows, fit_summary)
+    write_doc(B, rows, orows, fit_summary, prows, abl, abl_src)
     if record:
         Z = dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0)
         kw = dict(seed=0, script="experiments/h2_cost.py", command=" ".join(sys.argv), bytes=Z)
@@ -755,9 +869,11 @@ def main(record):
                             config={}, **kw))
         print(ledger.record("h2_cost", bench="libero_90", tag="libero90", metrics=dict(rows=rows), config={}, **kw))
         print(ledger.record("h2_cost", bench="libero_ood", tag="ood", metrics=dict(rows=orows), config={}, **kw))
+        print(ledger.record("h2_cost", bench="libero_90", tag="libero90_policies", metrics=dict(rows=prows), config={}, **kw))
+        print(ledger.record("h2_cost", bench="libero", tag="ablation", metrics=dict(rows=abl, source=abl_src), config={}, **kw))
 
 
-def write_doc(B, rows, orows, fs):
+def write_doc(B, rows, orows, fs, prows, abl, abl_src):
     U = B["U"]
     lat = B["latency"]
     unit_rows = []
@@ -853,6 +969,22 @@ switch, TLI) cost nothing measurable: the prefix is re-encoded every query anywa
 
 Notes: {' '.join(f"{r['method']}: {r['note']}." for r in rows if r['note'])}
 
+## LIBERO-90 on three more flow policies (G19; `ledger/h2_cost` tag `libero90_policies`)
+
+{md_table(prows, ood=True)}
+
+Notes: {' '.join(sorted({r['method'] + ': ' + r['note'] + '.' for r in prows if r['note']}))}
+
+## Ablation of the system on pi0.5 (G20; success only, `{abl_src}`; `ledger/h2_cost` tag `ablation`)
+
+| side | group | arm removed / replaced | full (x) | ablated (y) | of | task-level difference [95% interval] |
+|---|---|---|---|---|---|---|
+{chr(10).join(f"| {'LIBERO-90 set d' if a['side'] == 'libero_90' else 'OOD set e'} | {a['group']} | {a['arm']} | {a['x']} | {a['y']} | {a['n']} | "
+              + (f"{a['diff']:+.3f} [{a['lo']:+.3f}, {a['hi']:+.3f}]" if a['diff'] is not None else "") + " |" for a in abl)}
+
+The costs of an ablated arm are the full system's minus the removed part (no leaves: the library row above; no practice: no
+acceptance episodes, every unit kept; the OOD single operators: the switch and TLI rows below).
+
 ## Li's compositional OOD tasks (no demonstrations), four flow policies
 
 {md_table(orows, ood=True)}
@@ -864,4 +996,8 @@ Notes: {' '.join(sorted({r['note'] for r in orows if r['note']}))}.
 
 
 if __name__ == "__main__":
-    main("--record" in sys.argv)
+    if "--figures" in sys.argv:                     # redraw from results/robot/h2_cost.json
+        z = json.load(open(os.path.join(R, "h2_cost.json")))
+        figures(z["libero90"], z["ood"], z["libero90_policies"])
+    else:
+        main("--record" in sys.argv)
