@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/z2_pilot_goal_libero_goal_ood_5_zs_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_goal_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=ours SUITE=libero_goal_ood TASKS=5 TRIALS=10 (job 4154816)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_a",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/z2_pilot_goal_libero_goal_ood_5_zs_seed13.json",
+   "port": 9828,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_goal_ood",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "5",
+   "trials": 10,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4154816",
+  "mode": "ours"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "optimistprime.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4154816",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "z2_pilot_goal",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "757111ce598b5781b30549334a708544ed3d559b",
+  "short": "757111ce"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "ours",
+  "tasks": "5",
+  "trials": 10
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 10,
+  "secs": 289.54567766189575,
+  "success_rate": 0.3,
+  "tasks": {
+   "5": {
+    "errors": 0,
+    "language": "put the wine bottle on the plate",
+    "mean_steps": 243.3,
+    "n": 10,
+    "success_rate": 0.3
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "z2_pilot_goal__libero_goal_ood__zs_seed13__first_trial-0__mode-ours__tasks-5__trials-10__s7__757111ce",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T20:47:47+00:00",
+ "stream": null,
+ "tag": "zs_seed13"
+}

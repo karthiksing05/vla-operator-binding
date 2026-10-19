@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/z4_pilot_21_prog_33.20.19.30.15_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prog:33.20.19.30.15 SUITE=libero_90 TASKS=21 TRIALS=10 (job 4155695)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/z4_pilot_21_prog_33.20.19.30.15_seed13.json",
+   "port": 9856,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "21",
+   "trials": 10,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4155695",
+  "mode": "prog:33.20.19.30.15"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "deebot.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4155695",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "z4_pilot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "757111ce598b5781b30549334a708544ed3d559b",
+  "short": "757111ce"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prog:33.20.19.30.15",
+  "tasks": "21",
+  "trials": 10
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 10,
+  "secs": 403.865807056427,
+  "success_rate": 0.0,
+  "tasks": {
+   "21": {
+    "errors": 0,
+    "language": "turn on the stove and put the frying pan on it",
+    "mean_steps": 400.0,
+    "n": 10,
+    "success_rate": 0.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "z4_pilot__libero_90__prog_33.20.19.30.15_seed13__first_trial-0__mode-prog-33.20.19.30.15__tasks-21__trials-10__s7__757111ce",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T21:47:05+00:00",
+ "stream": null,
+ "tag": "prog_33.20.19.30.15_seed13"
+}

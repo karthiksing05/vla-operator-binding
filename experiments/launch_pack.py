@@ -238,6 +238,13 @@ def arm_spec(tid, arm, fold, demo=0):
         a_, g_, *r_ = arm.split("@", 1)[1].split(".")
         lat = lambda t_: os.path.join(R, "inject", f"{SUITE_OF.get('backbone') or 'pi05_libero'}_{t_}.npy")   # noqa: E731
         return (f"inject:{arm.split('@', 1)[1]}", "0", False) if os.path.exists(lat(a_)) and os.path.exists(lat(g_)) else None
+    if arm.startswith("prog@"):                                         # plan Z / U: a pointer program, prog@<t0>.<t1>...: training
+        ts_ = [int(x) for x in arm.split("@", 1)[1].split(".")]          # instructions advanced at the policy's own gripper events
+        return (f"prog:{'.'.join(map(str, ts_))}", "0", False)
+    if arm.startswith("splice@"):                                       # plan Z / B: word-level binding splice, splice@<a>.<g>.<delta|replace>[.<o|g|og|ph>]
+        a_, g_, m_, *w_ = arm.split("@", 1)[1].split(".")
+        assert m_ in ("delta", "replace"), arm
+        return (f"splice:{int(a_)}.{int(g_)}.{m_}.{w_[0] if w_ else 'og'}", "0", False)
     if arm.startswith("pfield@"):                                       # plan G4b: pfield@<a>.<g>[.<object proto>.<goal proto>] -- the
         from lifelong_ood.policy import data as D                        # policy's own field under training task a's instruction before
         parts = arm.split("@", 1)[1].split(".")                          # its grasp and task g's from the grasp to the release ("x" =

@@ -1,0 +1,49 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan Z's read Z3 (LIBERO-90 zero-fine-tune row)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "757111ce598b5781b30549334a708544ed3d559b",
+  "short": "757111ce"
+ },
+ "keys": {},
+ "metrics": {
+  "hypotheses": {
+   "H1": "pointers (zero fitting) > pi0.5 alone on set d (exact sign test, alpha 0.05)",
+   "descriptive": "pointers vs the fitted library (G8 hfac) and vs the per-task LoRA (G8): the share of the fitted methods' successes reached with no fitting; per task"
+  },
+  "written_before": "any Z3 episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__z3_l90_pointers__s13__757111ce",
+ "schema": 1,
+ "script": "experiments/prereg/z3_l90_pointers.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-19T21:15:14+00:00",
+ "stream": null,
+ "tag": "z3_l90_pointers"
+}

@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/z3_main_77_pfield_9.9_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:77?suite=libero_90&paths=none&apaths=none&goal=1&pa=pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy&pg=pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy SUITE=libero_90 TASKS=77 TRIALS=20 (job 4155289)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_states_d",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/z3_main_77_pfield_9.9_seed13.json",
+   "port": 9507,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "77",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4155289",
+  "mode": "prims:77?suite=libero_90&paths=none&apaths=none&goal=1&pa=pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy&pg=pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "megazord.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4155289",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "z3_main",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "757111ce598b5781b30549334a708544ed3d559b",
+  "short": "757111ce"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:77?suite=libero_90&paths=none&apaths=none&goal=1&pa=pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy&pg=pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy",
+  "tasks": "77",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 612.9457132816315,
+  "success_rate": 0.2,
+  "tasks": {
+   "77": {
+    "errors": 0,
+    "language": "pick up the book and place it in the back compartment of the caddy",
+    "mean_steps": 346.45,
+    "n": 20,
+    "success_rate": 0.2
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "z3_main__libero_90__pfield_9.9_seed13__first_trial-0__mode9fad6ae83d4e__tasks-77__trials-20__s7__757111ce",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T21:30:06+00:00",
+ "stream": null,
+ "tag": "pfield_9.9_seed13"
+}

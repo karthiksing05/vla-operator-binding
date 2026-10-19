@@ -1,0 +1,122 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/z1_flower.py --read --record",
+ "config": {
+  "backbone": "flower"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "z1_flower",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "757111ce598b5781b30549334a708544ed3d559b",
+  "short": "757111ce"
+ },
+ "keys": {},
+ "metrics": {
+  "backbone": "flower",
+  "missing": [],
+  "ours_vs_li": {
+   "diff": {
+    "diff": -0.18333333333333332,
+    "hi": -0.016666666666666666,
+    "hi90": -0.03333333333333333,
+    "lo": -0.38333333333333336,
+    "lo90": -0.35,
+    "n_pairs": 120,
+    "n_tasks": 6
+   },
+   "discordant": [
+    0,
+    22
+   ],
+   "n": 120,
+   "noninferior": false,
+   "sign_p": 4.76837158203125e-07,
+   "tasks": 6,
+   "x": 30,
+   "y": 52
+  },
+  "ours_vs_zs": {
+   "diff": {
+    "diff": -0.025,
+    "hi": 0.025,
+    "hi90": 0.016666666666666666,
+    "lo": -0.10833333333333334,
+    "lo90": -0.09166666666666666,
+    "n_pairs": 120,
+    "n_tasks": 6
+   },
+   "discordant": [
+    4,
+    7
+   ],
+   "n": 120,
+   "sign_p": 0.548828125,
+   "tasks": 6,
+   "x": 30,
+   "y": 33
+  },
+  "per_task": {
+   "goal:4": {
+    "li_grasp": 12,
+    "ours": 0,
+    "zs": 0
+   },
+   "goal:5": {
+    "li_grasp": 2,
+    "ours": 0,
+    "zs": 0
+   },
+   "goal:6": {
+    "li_grasp": 1,
+    "ours": 0,
+    "zs": 0
+   },
+   "goal:7": {
+    "li_grasp": 19,
+    "ours": 19,
+    "zs": 19
+   },
+   "goal:8": {
+    "li_grasp": 11,
+    "ours": 11,
+    "zs": 14
+   },
+   "goal:9": {
+    "li_grasp": 7,
+    "ours": 0,
+    "zs": 0
+   }
+  },
+  "tasks": 6
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "z1_flower__libero_ood__read__s13__757111ce",
+ "schema": 1,
+ "script": "experiments/z1_flower.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-19T20:17:49+00:00",
+ "stream": null,
+ "tag": "read"
+}

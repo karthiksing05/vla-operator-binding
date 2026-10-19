@@ -510,6 +510,23 @@ def main():
         tx = D.Demos().tasks
         hooks = HO.GPCHooks(bk, tx[int(ta)], tx[int(tg)], w=(0.5 if wq == "ph" else int(wq) / 100.0), phase=(wq == "ph"))
         logging.info(f"gpc: '{tx[int(ta)]}' + '{tx[int(tg)]}', w {wq}")
+    elif a.mode.startswith("prog:"):
+        # prog:<t0>.<t1>... -- plan Z / track U: a pointer program, training instruction t_i in segment i, the segment advanced at
+        # the policy's own sustained grasp and release (lifelong_ood/policy/program.py)
+        from lifelong_ood.policy import data as D
+        from lifelong_ood.policy import program as PG
+        tx = D.Demos().tasks
+        hooks = PG.ProgHooks([tx[int(i)] for i in a.mode[len("prog:"):].split(".")])
+        logging.info(f"prog: {hooks.prompts}")
+    elif a.mode.startswith("splice:"):
+        # splice:<a>.<g>.<delta|replace>.<o|g|og> -- plan Z / track B: the new instruction, its object phrase's binding as under
+        # training task a, its goal phrase's as under training task g, at every encoder layer >= 1 (lifelong_ood/policy/bind.py)
+        from lifelong_ood.policy import bind as BD
+        from lifelong_ood.policy import data as D
+        ta, tg, mo, wo = a.mode[len("splice:"):].split(".")
+        dm = D.Demos()
+        hooks = BD.SpliceHooks(bk, cfg, dm, dm.tasks, ta, tg, mode=mo, words=wo)
+        logging.info(f"splice: object from {ta}, goal from {tg}, {mo}, words {wo}")
     elif a.mode.startswith("inject:"):
         # inject:<a>.<g>[.rep] -- plan H3 / read G21: Grant et al.'s activation injection into the action expert, mirrored on TLI:
         # the source-mean difference at every expert layer input, object source before the grasp, goal source from it

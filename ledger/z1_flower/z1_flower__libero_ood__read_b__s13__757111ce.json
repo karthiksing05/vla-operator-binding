@@ -1,0 +1,148 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/z1_flower.py --read-b --record",
+ "config": {
+  "backbone": "flower"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "z1_flower",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "757111ce598b5781b30549334a708544ed3d559b",
+  "short": "757111ce"
+ },
+ "keys": {},
+ "metrics": {
+  "backbone": "flower",
+  "chosen_vs_li": {
+   "diff": {
+    "diff": -0.025,
+    "hi": 0.0,
+    "hi90": 0.0,
+    "lo": -0.09166666666666666,
+    "lo90": -0.075,
+    "n_pairs": 120,
+    "n_tasks": 6
+   },
+   "discordant": [
+    0,
+    3
+   ],
+   "n": 120,
+   "noninferior": false,
+   "sign_p": 0.25,
+   "tasks": 6,
+   "x": 48,
+   "y": 51
+  },
+  "chosen_vs_zs": {
+   "diff": {
+    "diff": 0.09166666666666666,
+    "hi": 0.2833333333333333,
+    "hi90": 0.25,
+    "lo": -0.05,
+    "lo90": -0.03333333333333333,
+    "n_pairs": 120,
+    "n_tasks": 6
+   },
+   "discordant": [
+    21,
+    10
+   ],
+   "n": 120,
+   "sign_p": 0.07075554598122835,
+   "tasks": 6,
+   "x": 48,
+   "y": 37
+  },
+  "missing": [],
+  "per_task": {
+   "goal:4": {
+    "chosen": 10,
+    "li_grasp": 10,
+    "zs": 0
+   },
+   "goal:5": {
+    "chosen": 0,
+    "li_grasp": 3,
+    "zs": 0
+   },
+   "goal:6": {
+    "chosen": 0,
+    "li_grasp": 0,
+    "zs": 1
+   },
+   "goal:7": {
+    "chosen": 19,
+    "li_grasp": 19,
+    "zs": 19
+   },
+   "goal:8": {
+    "chosen": 14,
+    "li_grasp": 14,
+    "zs": 12
+   },
+   "goal:9": {
+    "chosen": 5,
+    "li_grasp": 5,
+    "zs": 5
+   }
+  },
+  "sources": {
+   "goal:4": [
+    14,
+    17
+   ],
+   "goal:5": [
+    11,
+    10
+   ],
+   "goal:6": [
+    11,
+    13
+   ],
+   "goal:7": [
+    13,
+    10
+   ],
+   "goal:8": [
+    13,
+    17
+   ],
+   "goal:9": [
+    13,
+    18
+   ]
+  },
+  "tasks": 6
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "z1_flower__libero_ood__read_b__s13__757111ce",
+ "schema": 1,
+ "script": "experiments/z1_flower.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-19T21:10:38+00:00",
+ "stream": null,
+ "tag": "read_b"
+}
