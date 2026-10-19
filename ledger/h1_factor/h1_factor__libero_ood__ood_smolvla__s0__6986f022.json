@@ -1,0 +1,155 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/h1_factor.py --record",
+ "config": {
+  "shrink": 2.0
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "h1_factor",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "6986f022aa599a35474ddcf3de5de383d0364aab",
+  "short": "6986f022"
+ },
+ "keys": {},
+ "metrics": {
+  "grasp_same_object_across_goal_sources": [
+   1765,
+   1775
+  ],
+  "grasp_transfer": {
+   "bias": -0.054166666666666675,
+   "cells": 48,
+   "mae": 0.08749999999999998,
+   "pearson": 0.9617380028513351
+  },
+  "loo_practice": {
+   "cells": 385,
+   "episodes": 2125,
+   "intercept": -0.0002266634317125149,
+   "mae": 0.031728808644963184,
+   "misfit_cells": 1,
+   "misfit_over": 1,
+   "misfit_under": 0,
+   "observed": 172,
+   "pearson": 0.9094514008033258,
+   "predicted": 155.6476204599628,
+   "slope": 1.0926372279962977,
+   "spearman": 0.6160441718636319
+  },
+  "out_of_sample": {
+   "by_set": {
+    "c": {
+     "cells": 20,
+     "episodes": 400,
+     "intercept": -0.004553545216942595,
+     "mae": 0.03664449507910765,
+     "misfit_cells": 1,
+     "misfit_over": 0,
+     "misfit_under": 1,
+     "observed": 25,
+     "pearson": 0.9202231544243076,
+     "predicted": 29.994494590051996,
+     "slope": 0.8942113695648889,
+     "spearman": 0.6210515417834361
+    },
+    "e": {
+     "cells": 28,
+     "episodes": 560,
+     "intercept": 0.018048880612500928,
+     "mae": 0.07148375013530743,
+     "misfit_cells": 7,
+     "misfit_over": 5,
+     "misfit_under": 2,
+     "observed": 112,
+     "pearson": 0.8995027495672158,
+     "predicted": 117.84595080887196,
+     "slope": 0.8646256079027584,
+     "spearman": 0.7945560262604398
+    }
+   },
+   "cells": 48,
+   "episodes": 960,
+   "intercept": 0.006656894498334676,
+   "mae": 0.05696739386189085,
+   "misfit_cells": 8,
+   "misfit_over": 5,
+   "misfit_under": 3,
+   "observed": 137,
+   "pearson": 0.9126033957669801,
+   "predicted": 147.84044539892392,
+   "slope": 0.8834482399533501,
+   "spearman": 0.74384148681421
+  },
+  "place_transfer": {
+   "bias": -0.006878812797520563,
+   "cells": 39,
+   "mae": 0.0875063558356598,
+   "pearson": 0.8916771237281689
+  },
+  "practice_cells": 680,
+  "practice_pooled": {
+   "named": 1886,
+   "other": 1714,
+   "p_succ_named": 0.12937433722163308,
+   "p_succ_other": 0.004084014002333722
+  },
+  "residual_by_task": {
+   "libero_goal_ood:0": -0.018213779736766418,
+   "libero_goal_ood:1": -0.031516744715011105,
+   "libero_goal_ood:2": 0.06742117370557246,
+   "libero_goal_ood:3": 0.03185910259458324,
+   "libero_goal_ood:4": 0.06654520501510243,
+   "libero_goal_ood:5": 0.01653951744089602,
+   "libero_goal_ood:6": -0.012349349855296751,
+   "libero_goal_ood:7": -0.12135937101628841,
+   "libero_goal_ood:8": 0.09553967448937248,
+   "libero_goal_ood:9": -0.11313471421383423,
+   "libero_spatial_ood:0": 0.008864358963739058,
+   "libero_spatial_ood:1": -0.198039258785771,
+   "libero_spatial_ood:2": -0.0038366031325842063,
+   "libero_spatial_ood:3": 0.0016407938240105724,
+   "libero_spatial_ood:4": -0.00031311012713117556,
+   "libero_spatial_ood:5": -0.019864257254443064,
+   "libero_spatial_ood:6": -0.0709256957806643,
+   "libero_spatial_ood:7": -0.0905136797454931,
+   "libero_spatial_ood:8": 0.09787501966030514,
+   "libero_spatial_ood:9": -0.031704373665055796
+  },
+  "stage1_homogeneity": {
+   "G": 47.51857367622138,
+   "df": 93,
+   "p": 0.999976260945243
+  },
+  "test_cells": 48
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "h1_factor__libero_ood__ood_smolvla__s0__6986f022",
+ "schema": 1,
+ "script": "experiments/h1_factor.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T13:27:58+00:00",
+ "stream": null,
+ "tag": "ood_smolvla"
+}

@@ -36,14 +36,14 @@ From set a alone, the product g(a) x p(g) + (1 - g(a)) x w(g) predicts every gra
 
 | policy | test cells | Pearson r | slope | observed / predicted successes |
 |---|---|---|---|---|
-| pi0.5 | 129 | 0.93 | 1.01 | 1,566 / 1,415 |
+| pi0.5 | 149 | 0.92 | 1.01 | 1,726 / 1,588 |
 | pi0 | 120 | 0.94 | 1.04 | 1,574 / 1,390 |
 | SmolVLA | 48 | 0.91 | 0.88 | 137 / 148 |
 | X-VLA | 53 | 0.97 | 1.02 | 445 / 424 |
 
-The grasp competence transfers almost exactly between start-state sets: mean absolute error 0.025 on pi0.5 and 0.026 on pi0,
+The grasp competence transfers almost exactly between start-state sets: mean absolute error 0.028 on pi0.5 and 0.026 on pi0,
 with bias at most 0.01 except on SmolVLA (-0.054) (`grasp_transfer`). The remaining miss is in the place competence. On pi0
-and pi0.5, P(success | named grasp) on the test sets exceeds the practice estimate by 0.087 and 0.059 (`place_transfer`, bias).
+and pi0.5, P(success | named grasp) on the test sets exceeds the practice estimate by 0.087 and 0.047 (`place_transfer`, bias).
 Almost all of the misfit cells (24 of 25 on pi0, 24 of 29 on pi0.5) are therefore under-predictions. Within practice, leaving
 one cell out, the product fits with r 0.89 to 0.94 (`loo_practice`). A goal source's place competence does not depend on which
 object source brought the object: the pooled G-test of homogeneity across object sources gives p = 0.58 (pi0), 0.11 (pi0.5),
