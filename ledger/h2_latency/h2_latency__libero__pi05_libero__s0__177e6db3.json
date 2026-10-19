@@ -1,0 +1,204 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/h2_latency.py --backbone pi05_libero --record",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 1,
+  "lora_task": 10,
+  "num_steps": 10,
+  "prompt": "put the cream cheese in the basket",
+  "prototypes": [
+   "Osc1",
+   "Gsccab"
+  ],
+  "queries": 100,
+  "switch": [
+   11,
+   10
+  ],
+  "tli": [
+   13,
+   17,
+   24
+  ],
+  "warmup": 10
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "major.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4140008",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "h2_latency",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "177e6db3d60c84225fc2a301417ac2d44e1b6a9a",
+  "short": "177e6db3"
+ },
+ "keys": {},
+ "metrics": {
+  "arms": {
+   "dsrl": {
+    "chunk": 10,
+    "hz": 3.409977050666841,
+    "ms_mean": 293.25710558798164,
+    "ms_median": 293.03212999366224,
+    "ms_p90": 294.26769595593214,
+    "ms_sd": 1.4119421205646652,
+    "note": "dsrlz_10_actor.pt (frozen policy, authors' configuration)",
+    "peak_alloc_gb": 7.708320768,
+    "peak_reserved_gb": 7.855931392,
+    "queries": 100,
+    "warmup": 10
+   },
+   "lora16": {
+    "chunk": 10,
+    "hz": 2.320196046966328,
+    "ms_mean": 430.9980621282011,
+    "ms_median": 430.82600296474993,
+    "ms_p90": 431.84187822043896,
+    "ms_sd": 1.0341946556279538,
+    "note": "r3_lora_10.pt",
+    "peak_alloc_gb": 7.764452352,
+    "peak_reserved_gb": 7.90626304,
+    "queries": 100,
+    "warmup": 10
+   },
+   "lora4": {
+    "chunk": 10,
+    "hz": 2.3096216618829666,
+    "ms_mean": 432.97134613152593,
+    "ms_median": 432.93748842552304,
+    "ms_p90": 433.7781608570367,
+    "ms_sd": 0.7294119155509804,
+    "note": "r3_lora_10_r4.pt",
+    "peak_alloc_gb": 7.73638656,
+    "peak_reserved_gb": 7.90626304,
+    "queries": 100,
+    "warmup": 10
+   },
+   "policy": {
+    "chunk": 10,
+    "hz": 3.4213926465091338,
+    "ms_mean": 292.2786430316046,
+    "ms_median": 291.63991287350655,
+    "ms_p90": 294.9208037927747,
+    "ms_sd": 2.3845276361255747,
+    "note": "",
+    "peak_alloc_gb": 7.644987392,
+    "peak_reserved_gb": 7.767851008,
+    "queries": 100,
+    "warmup": 10
+   },
+   "policy_wrapped": {
+    "chunk": 10,
+    "hz": 3.4064905446612324,
+    "ms_mean": 293.55725104454905,
+    "ms_median": 293.5069939121604,
+    "ms_p90": 294.1316929180175,
+    "ms_sd": 0.4412605306998042,
+    "note": "LoRA banks injected, all off",
+    "peak_alloc_gb": 7.73638656,
+    "peak_reserved_gb": 7.90626304,
+    "queries": 100,
+    "warmup": 10
+   },
+   "prototype": {
+    "chunk": 10,
+    "hz": 2.2907573146808122,
+    "ms_mean": 436.5368577418849,
+    "ms_median": 436.45863770507276,
+    "ms_p90": 437.61242805048823,
+    "ms_sd": 2.9891270145095032,
+    "note": "object Osc1 before the grasp (goal Gsccab after)",
+    "peak_alloc_gb": 7.727031296,
+    "peak_reserved_gb": 7.870611456,
+    "queries": 100,
+    "warmup": 10
+   },
+   "prototype_goal": {
+    "chunk": 10,
+    "hz": 2.288871698515704,
+    "ms_mean": 436.89648513216525,
+    "ms_median": 436.6842000745237,
+    "ms_p90": 437.79591768980026,
+    "ms_sd": 3.9792399010535657,
+    "note": "goal Gsccab on",
+    "peak_alloc_gb": 7.727031296,
+    "peak_reserved_gb": 7.870611456,
+    "queries": 100,
+    "warmup": 10
+   },
+   "switch": {
+    "chunk": 10,
+    "hz": 3.4415110402949924,
+    "ms_mean": 290.5700398143381,
+    "ms_median": 290.2027824893594,
+    "ms_p90": 291.5496051311493,
+    "ms_sd": 1.1249142964997982,
+    "note": "approach prompt: 'put the wine bottle on the rack'",
+    "peak_alloc_gb": 7.644987392,
+    "peak_reserved_gb": 7.767851008,
+    "queries": 100,
+    "warmup": 10
+   },
+   "switch_carry": {
+    "chunk": 10,
+    "hz": 3.439220695498806,
+    "ms_mean": 290.76354457531124,
+    "ms_median": 290.6942062545568,
+    "ms_p90": 291.610743990168,
+    "ms_sd": 0.66844658082419,
+    "note": "carry prompt: 'put the bowl on the plate'",
+    "peak_alloc_gb": 7.644987392,
+    "peak_reserved_gb": 7.767851008,
+    "queries": 100,
+    "warmup": 10
+   },
+   "tli": {
+    "chunk": 10,
+    "hz": 3.4350737960767237,
+    "ms_mean": 291.1145609570667,
+    "ms_median": 290.95155373215675,
+    "ms_p90": 291.92662900313735,
+    "ms_sd": 0.8028907916474395,
+    "note": "tli 13->17 lambda 24",
+    "peak_alloc_gb": 7.652360192,
+    "peak_reserved_gb": 7.767851008,
+    "queries": 100,
+    "warmup": 10
+   }
+  },
+  "backbone": "pi05_libero",
+  "base_alloc_gb": 7.48500992,
+  "chunk": 10,
+  "gpu": "NVIDIA A40",
+  "n_params": 3616757520,
+  "num_steps": 10,
+  "secs": 446.1013102531433
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "h2_latency__libero__pi05_libero__s0__177e6db3",
+ "schema": 1,
+ "script": "experiments/h2_latency.py",
+ "seconds": 446.1013102531433,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T04:15:40+00:00",
+ "stream": null,
+ "tag": "pi05_libero"
+}

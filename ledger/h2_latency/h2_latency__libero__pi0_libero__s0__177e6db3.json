@@ -1,0 +1,178 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/h2_latency.py --backbone pi0_libero --record",
+ "config": {
+  "backbone": "pi0_libero",
+  "batch": 1,
+  "lora_task": 10,
+  "num_steps": 10,
+  "prompt": "put the cream cheese in the basket",
+  "prototypes": [
+   "POsc1",
+   "PGsccab"
+  ],
+  "queries": 100,
+  "switch": [
+   11,
+   10
+  ],
+  "tli": [
+   13,
+   17,
+   24
+  ],
+  "warmup": 10
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "major.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4140009",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "h2_latency",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "177e6db3d60c84225fc2a301417ac2d44e1b6a9a",
+  "short": "177e6db3"
+ },
+ "keys": {},
+ "metrics": {
+  "arms": {
+   "lora16": {
+    "chunk": 50,
+    "hz": 2.753663877945055,
+    "ms_mean": 363.15252853091806,
+    "ms_median": 363.37185464799404,
+    "ms_p90": 364.40407214686275,
+    "ms_sd": 1.2789215276217472,
+    "note": "r3_lora_10_p0.pt",
+    "peak_alloc_gb": 7.20679424,
+    "peak_reserved_gb": 7.314866176,
+    "queries": 100,
+    "warmup": 10
+   },
+   "policy": {
+    "chunk": 50,
+    "hz": 4.118986130679158,
+    "ms_mean": 242.77819062117487,
+    "ms_median": 242.31675639748573,
+    "ms_p90": 242.82176168635488,
+    "ms_sd": 1.9955618572007219,
+    "note": "",
+    "peak_alloc_gb": 7.162107904,
+    "peak_reserved_gb": 7.275020288,
+    "queries": 100,
+    "warmup": 10
+   },
+   "policy_wrapped": {
+    "chunk": 50,
+    "hz": 4.054177329280957,
+    "ms_mean": 246.65916628204286,
+    "ms_median": 246.55712791718543,
+    "ms_p90": 247.34369297511876,
+    "ms_sd": 0.46725292137544683,
+    "note": "LoRA banks injected, all off",
+    "peak_alloc_gb": 7.20679424,
+    "peak_reserved_gb": 7.314866176,
+    "queries": 100,
+    "warmup": 10
+   },
+   "prototype": {
+    "chunk": 50,
+    "hz": 2.7581672473777976,
+    "ms_mean": 362.5595949450508,
+    "ms_median": 362.5177394133061,
+    "ms_p90": 363.36726546287537,
+    "ms_sd": 0.9129575819127445,
+    "note": "object POsc1 before the grasp (goal PGsccab after)",
+    "peak_alloc_gb": 7.179072512,
+    "peak_reserved_gb": 7.289700352,
+    "queries": 100,
+    "warmup": 10
+   },
+   "prototype_goal": {
+    "chunk": 50,
+    "hz": 2.75431397370136,
+    "ms_mean": 363.06681429501623,
+    "ms_median": 363.0466579925269,
+    "ms_p90": 363.94409774802625,
+    "ms_sd": 0.7799831242666585,
+    "note": "goal PGsccab on",
+    "peak_alloc_gb": 7.179072512,
+    "peak_reserved_gb": 7.289700352,
+    "queries": 100,
+    "warmup": 10
+   },
+   "switch": {
+    "chunk": 50,
+    "hz": 4.122339415439771,
+    "ms_mean": 242.58070460055023,
+    "ms_median": 242.50304466113448,
+    "ms_p90": 243.3066442143172,
+    "ms_sd": 0.9958248986933763,
+    "note": "approach prompt: 'put the wine bottle on the rack'",
+    "peak_alloc_gb": 7.162107904,
+    "peak_reserved_gb": 7.275020288,
+    "queries": 100,
+    "warmup": 10
+   },
+   "switch_carry": {
+    "chunk": 50,
+    "hz": 4.130650411251986,
+    "ms_mean": 242.0926247537136,
+    "ms_median": 242.06041009165347,
+    "ms_p90": 242.70252618007362,
+    "ms_sd": 0.7321359124191629,
+    "note": "carry prompt: 'put the bowl on the plate'",
+    "peak_alloc_gb": 7.162107904,
+    "peak_reserved_gb": 7.275020288,
+    "queries": 100,
+    "warmup": 10
+   },
+   "tli": {
+    "chunk": 50,
+    "hz": 4.126334165081261,
+    "ms_mean": 242.34585954342037,
+    "ms_median": 242.39445105195045,
+    "ms_p90": 243.0406307335943,
+    "ms_sd": 0.7564697963258739,
+    "note": "tli 13->17 lambda 24",
+    "peak_alloc_gb": 7.16971008,
+    "peak_reserved_gb": 7.275020288,
+    "queries": 100,
+    "warmup": 10
+   }
+  },
+  "backbone": "pi0_libero",
+  "base_alloc_gb": 7.023468544,
+  "chunk": 50,
+  "gpu": "NVIDIA A40",
+  "n_params": 3501372176,
+  "num_steps": 10,
+  "secs": 312.44596099853516
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "h2_latency__libero__pi0_libero__s0__177e6db3",
+ "schema": 1,
+ "script": "experiments/h2_latency.py",
+ "seconds": 312.44596099853516,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T04:13:27+00:00",
+ "stream": null,
+ "tag": "pi0_libero"
+}

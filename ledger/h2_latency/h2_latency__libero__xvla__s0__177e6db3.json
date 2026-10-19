@@ -1,0 +1,178 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/h2_latency.py --backbone xvla --record",
+ "config": {
+  "backbone": "xvla",
+  "batch": 1,
+  "lora_task": 10,
+  "num_steps": 10,
+  "prompt": "put the cream cheese in the basket",
+  "prototypes": [
+   "YOsc1",
+   "YGsccab"
+  ],
+  "queries": 100,
+  "switch": [
+   11,
+   10
+  ],
+  "tli": [
+   13,
+   17,
+   24
+  ],
+  "warmup": 10
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "protocol.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4140011",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "h2_latency",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "177e6db3d60c84225fc2a301417ac2d44e1b6a9a",
+  "short": "177e6db3"
+ },
+ "keys": {},
+ "metrics": {
+  "arms": {
+   "lora16": {
+    "chunk": 30,
+    "hz": 4.1237479805375665,
+    "ms_mean": 242.4978453386575,
+    "ms_median": 242.45268618687987,
+    "ms_p90": 243.41637585312128,
+    "ms_sd": 0.8880703823697281,
+    "note": "r3_lora_10_xv.pt",
+    "peak_alloc_gb": 3.728344576,
+    "peak_reserved_gb": 3.839885312,
+    "queries": 100,
+    "warmup": 10
+   },
+   "policy": {
+    "chunk": 30,
+    "hz": 4.800681373793591,
+    "ms_mean": 208.30376401543617,
+    "ms_median": 207.91283762082458,
+    "ms_p90": 208.96949023008347,
+    "ms_sd": 1.8264243871233254,
+    "note": "",
+    "peak_alloc_gb": 3.689317888,
+    "peak_reserved_gb": 3.800039424,
+    "queries": 100,
+    "warmup": 10
+   },
+   "policy_wrapped": {
+    "chunk": 30,
+    "hz": 4.748355075719871,
+    "ms_mean": 210.59924627654254,
+    "ms_median": 210.5943476781249,
+    "ms_p90": 211.04498067870736,
+    "ms_sd": 0.5026767221227862,
+    "note": "LoRA banks injected, all off",
+    "peak_alloc_gb": 3.728344576,
+    "peak_reserved_gb": 3.839885312,
+    "queries": 100,
+    "warmup": 10
+   },
+   "prototype": {
+    "chunk": 30,
+    "hz": 3.9782064473913286,
+    "ms_mean": 251.36955892667174,
+    "ms_median": 251.46717857569456,
+    "ms_p90": 251.9174687564373,
+    "ms_sd": 0.4784843367056397,
+    "note": "object YOsc1 before the grasp (goal YGsccab after)",
+    "peak_alloc_gb": 3.702916608,
+    "peak_reserved_gb": 3.814719488,
+    "queries": 100,
+    "warmup": 10
+   },
+   "prototype_goal": {
+    "chunk": 30,
+    "hz": 3.967174535336889,
+    "ms_mean": 252.0685669593513,
+    "ms_median": 252.00092745944858,
+    "ms_p90": 252.6373109780252,
+    "ms_sd": 0.4955059162867072,
+    "note": "goal YGsccab on",
+    "peak_alloc_gb": 3.702916608,
+    "peak_reserved_gb": 3.814719488,
+    "queries": 100,
+    "warmup": 10
+   },
+   "switch": {
+    "chunk": 30,
+    "hz": 4.786342359470541,
+    "ms_mean": 208.92780434340239,
+    "ms_median": 208.8830773718655,
+    "ms_p90": 209.5015644095838,
+    "ms_sd": 0.6156762803725407,
+    "note": "approach prompt: 'put the wine bottle on the rack'",
+    "peak_alloc_gb": 3.689317888,
+    "peak_reserved_gb": 3.800039424,
+    "queries": 100,
+    "warmup": 10
+   },
+   "switch_carry": {
+    "chunk": 30,
+    "hz": 4.789061439944469,
+    "ms_mean": 208.80918161943555,
+    "ms_median": 208.79624877125025,
+    "ms_p90": 209.3082836829126,
+    "ms_sd": 0.392509129374283,
+    "note": "carry prompt: 'put the bowl on the plate'",
+    "peak_alloc_gb": 3.689317888,
+    "peak_reserved_gb": 3.800039424,
+    "queries": 100,
+    "warmup": 10
+   },
+   "tli": {
+    "chunk": 30,
+    "hz": 4.744971053618715,
+    "ms_mean": 210.74944160878658,
+    "ms_median": 210.67742444574833,
+    "ms_p90": 211.4382036961615,
+    "ms_sd": 0.5380713470912579,
+    "note": "tli 13->17 lambda 24",
+    "peak_alloc_gb": 3.690202624,
+    "peak_reserved_gb": 3.802136576,
+    "queries": 100,
+    "warmup": 10
+   }
+  },
+  "backbone": "xvla",
+  "base_alloc_gb": 3.518954496,
+  "chunk": 30,
+  "gpu": "NVIDIA A40",
+  "n_params": 879482456,
+  "num_steps": 10,
+  "secs": 220.31221961975098
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "h2_latency__libero__xvla__s0__177e6db3",
+ "schema": 1,
+ "script": "experiments/h2_latency.py",
+ "seconds": 220.31221961975098,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T04:13:02+00:00",
+ "stream": null,
+ "tag": "xvla"
+}
