@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g22_pro_libero_goal_task_2_pfield_14.13_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_goal_task",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:2?suite=libero_goal_task&paths=none&apaths=none&goal=1&pa=put_the_wine_bottle_on_top_of_the_cabinet&pg=put_the_cream_cheese_in_the_bowl SUITE=libero_goal_task TASKS=2 TRIALS=50 (job 4149423)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g22_pro_libero_goal_task_2_pfield_14.13_seed13.json",
+   "port": 9309,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_goal_task",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "2",
+   "trials": 50,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4149423",
+  "mode": "prims:2?suite=libero_goal_task&paths=none&apaths=none&goal=1&pa=put_the_wine_bottle_on_top_of_the_cabinet&pg=put_the_cream_cheese_in_the_bowl"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "nestor.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4149423",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g22_pro",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "29c1dde79215a96846d5b8aceb260bfda7eb5bef",
+  "short": "29c1dde7"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:2?suite=libero_goal_task&paths=none&apaths=none&goal=1&pa=put_the_wine_bottle_on_top_of_the_cabinet&pg=put_the_cream_cheese_in_the_bowl",
+  "tasks": "2",
+  "trials": 50
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 50,
+  "secs": 988.4457294940948,
+  "success_rate": 0.58,
+  "tasks": {
+   "2": {
+    "errors": 0,
+    "language": "put the wine bottle in the bowl",
+    "mean_steps": 188.08,
+    "n": 50,
+    "success_rate": 0.58
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g22_pro__libero_goal_task__pfield_14.13_seed13__first_trial-0__modee8dd60198798__tasks-2__trials-50__s7__29c1dde7",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T16:30:17+00:00",
+ "stream": null,
+ "tag": "pfield_14.13_seed13"
+}

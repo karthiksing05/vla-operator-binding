@@ -1,0 +1,122 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 62 --key put|the_salad_dressing --name Osc11F1 --rank 4 --approach --cache --steps 200 --record-as f1_fit",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "cache": true,
+  "cache_gpu_max": 1200,
+  "cache_store": "auto",
+  "demo": 0,
+  "eval_every": 50,
+  "eval_frames": 256,
+  "goal": false,
+  "heldout": -1,
+  "init": "",
+  "init_best": "",
+  "joint": "62",
+  "key": "put|the salad dressing",
+  "lr": 0.0001,
+  "name": "Osc11F1",
+  "ndemo": 1,
+  "rank": 4,
+  "record_as": "f1_fit",
+  "scope": "expert",
+  "score": false,
+  "source": "l90",
+  "steps": 200,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "dave.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4156358",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "f1_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.0862172544002533,
+    0.010862092487514019,
+    0.005169298034161329
+   ],
+   "step": [
+    1,
+    100,
+    200
+   ]
+  },
+  "f1": {
+   "cache": true,
+   "frozen_heldout": null,
+   "heldout_frames": null,
+   "init_choice": null,
+   "secs": {
+    "cache": 2.4877538681030273,
+    "save": 0.0449671745300293,
+    "start_to_frames": 73.80750846862793,
+    "total": 102.38151049613953,
+    "train": 25.630425930023193
+   }
+  },
+  "frames": 39,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the salad dressing and put it in the tray",
+    "frames": [
+     0,
+     39
+    ],
+    "task": 62
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the salad dressing"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "f1_fit__libero_90__joint_Osc11F1__s0__c1f2be46",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T22:33:31+00:00",
+ "stream": null,
+ "tag": "joint_Osc11F1"
+}

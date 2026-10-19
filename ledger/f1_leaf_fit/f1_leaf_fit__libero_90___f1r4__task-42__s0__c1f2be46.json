@@ -1,0 +1,111 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_42_f1r4.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "/coc/flash10/ksingara3/lifelong-ood-learner/experiments/r3_fewshot.py --task 42 --rank 4 --tag _f1r4",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 4,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_f1r4",
+  "task": 42
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "xaea-12.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4156385",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "f1_leaf_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {
+  "task": 42
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.08591713011264801,
+    0.022888747975230217,
+    0.016682107001543045,
+    0.008415745571255684,
+    0.00893116183578968,
+    0.006091272458434105,
+    0.0023917104117572308,
+    0.0036212061531841755,
+    0.0026114562060683966,
+    0.00930462684482336,
+    0.0054699028842151165
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 730,
+  "final_loss": 0.0054699028842151165,
+  "first_loss": 0.08591713011264801,
+  "job_secs_to_record": 218.89537978172302,
+  "n_banks": 163,
+  "n_frames": 172,
+  "n_params": 2338816,
+  "task": 42,
+  "text": "put the frying pan under the cabinet shelf",
+  "train_secs": 132.47660160064697
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "f1_leaf_fit__libero_90___f1r4__task-42__s0__c1f2be46",
+ "schema": 1,
+ "script": "experiments/zf_leaf_fit.py -> experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T22:38:25+00:00",
+ "stream": null,
+ "tag": "_f1r4"
+}

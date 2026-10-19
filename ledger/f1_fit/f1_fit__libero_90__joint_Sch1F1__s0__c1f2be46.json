@@ -1,0 +1,122 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 13 --key put|the_black_bowl --name Sch1F1 --rank 4 --approach --cache --steps 200 --record-as f1_fit",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "cache": true,
+  "cache_gpu_max": 1200,
+  "cache_store": "auto",
+  "demo": 0,
+  "eval_every": 50,
+  "eval_frames": 256,
+  "goal": false,
+  "heldout": -1,
+  "init": "",
+  "init_best": "",
+  "joint": "13",
+  "key": "put|the black bowl",
+  "lr": 0.0001,
+  "name": "Sch1F1",
+  "ndemo": 1,
+  "rank": 4,
+  "record_as": "f1_fit",
+  "scope": "expert",
+  "score": false,
+  "source": "l90",
+  "steps": 200,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "nestor.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4156371",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "f1_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.05942695215344429,
+    0.01407056488096714,
+    0.006384002510458231
+   ],
+   "step": [
+    1,
+    100,
+    200
+   ]
+  },
+  "f1": {
+   "cache": true,
+   "frozen_heldout": null,
+   "heldout_frames": null,
+   "init_choice": null,
+   "secs": {
+    "cache": 4.535008192062378,
+    "save": 0.041758060455322266,
+    "start_to_frames": 73.25534677505493,
+    "total": 105.1745994091034,
+    "train": 26.924193143844604
+   }
+  },
+  "frames": 71,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the black bowl at the front on the plate",
+    "frames": [
+     0,
+     71
+    ],
+    "task": 13
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the black bowl"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "f1_fit__libero_90__joint_Sch1F1__s0__c1f2be46",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T22:34:31+00:00",
+ "stream": null,
+ "tag": "joint_Sch1F1"
+}

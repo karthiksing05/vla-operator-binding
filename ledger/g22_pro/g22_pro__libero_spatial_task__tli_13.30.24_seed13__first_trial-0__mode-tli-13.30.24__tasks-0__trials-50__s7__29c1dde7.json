@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g22_pro_libero_spatial_task_0_tli_13.30.24_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_spatial_task",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=tli:13.30.24 SUITE=libero_spatial_task TASKS=0 TRIALS=50 (job 4149428)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g22_pro_libero_spatial_task_0_tli_13.30.24_seed13.json",
+   "port": 9324,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_spatial_task",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "0",
+   "trials": 50,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4149428",
+  "mode": "tli:13.30.24"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cyborg.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4149428",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g22_pro",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "29c1dde79215a96846d5b8aceb260bfda7eb5bef",
+  "short": "29c1dde7"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "tli:13.30.24",
+  "tasks": "0",
+  "trials": 50
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 50,
+  "secs": 1044.951875925064,
+  "success_rate": 0.2,
+  "tasks": {
+   "0": {
+    "errors": 0,
+    "language": "pick the akita black bowl not between the plate and the ramekin and place it on the plate",
+    "mean_steps": 204.72,
+    "n": 50,
+    "success_rate": 0.2
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g22_pro__libero_spatial_task__tli_13.30.24_seed13__first_trial-0__mode-tli-13.30.24__tasks-0__trials-50__s7__29c1dde7",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T16:32:10+00:00",
+ "stream": null,
+ "tag": "tli_13.30.24_seed13"
+}

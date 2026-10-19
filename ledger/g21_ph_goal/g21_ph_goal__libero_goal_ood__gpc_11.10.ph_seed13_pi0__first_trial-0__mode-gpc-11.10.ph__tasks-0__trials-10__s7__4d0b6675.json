@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g21_ph_goal_libero_goal_ood_0_gpc_11.10.ph_seed13_pi0.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_goal_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=gpc:11.10.ph SUITE=libero_goal_ood TASKS=0 TRIALS=10 (job 4146078)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_a",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g21_ph_goal_libero_goal_ood_0_gpc_11.10.ph_seed13_pi0.json",
+   "port": 9714,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_goal_ood",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "0",
+   "trials": 10,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4146078",
+  "mode": "gpc:11.10.ph"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "randotron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4146078",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g21_ph_goal",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "4d0b66750156c459ec7e9f29efca568788c279b9",
+  "short": "4d0b6675"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "gpc:11.10.ph",
+  "tasks": "0",
+  "trials": 10
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 10,
+  "secs": 301.4024133682251,
+  "success_rate": 0.0,
+  "tasks": {
+   "0": {
+    "errors": 0,
+    "language": "put the cream cheese in the basket",
+    "mean_steps": 300.0,
+    "n": 10,
+    "success_rate": 0.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g21_ph_goal__libero_goal_ood__gpc_11.10.ph_seed13_pi0__first_trial-0__mode-gpc-11.10.ph__tasks-0__trials-10__s7__4d0b6675",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T13:41:07+00:00",
+ "stream": null,
+ "tag": "gpc_11.10.ph_seed13_pi0"
+}

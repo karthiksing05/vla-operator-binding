@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g19_main_62_fac_YOsc11.YGhtray_seed13_xvla.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:62?suite=libero_90&paths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_YGhtray_0.pt&apaths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_YOsc11_0.pt&goal=1 SUITE=libero_90 TASKS=62 TRIALS=20 (job 4139973)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_states_d",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g19_main_62_fac_YOsc11.YGhtray_seed13_xvla.json",
+   "port": 9670,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "62",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4139973",
+  "mode": "prims:62?suite=libero_90&paths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_YGhtray_0.pt&apaths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_YOsc11_0.pt&goal=1"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "deebot.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4139973",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g19_main",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c31ebde8b9b0e4e5a21e7f935fcf6a8ed0c09048",
+  "short": "c31ebde8"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:62?suite=libero_90&paths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_YGhtray_0.pt&apaths=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/prim_YOsc11_0.pt&goal=1",
+  "tasks": "62",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 300.34475803375244,
+  "success_rate": 0.95,
+  "tasks": {
+   "62": {
+    "errors": 0,
+    "language": "pick up the salad dressing and put it in the tray",
+    "mean_steps": 119.75,
+    "n": 20,
+    "success_rate": 0.95
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g19_main__libero_90__fac_YOsc11.YGhtray_seed13_xvla__first_trial-0__modea853cae17c1e__tasks-62__trials-20__s7__c31ebde8",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T06:58:49+00:00",
+ "stream": null,
+ "tag": "fac_YOsc11.YGhtray_seed13_xvla"
+}

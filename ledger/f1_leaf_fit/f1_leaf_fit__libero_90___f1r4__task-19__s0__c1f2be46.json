@@ -1,0 +1,111 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_19_f1r4.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "/coc/flash10/ksingara3/lifelong-ood-learner/experiments/r3_fewshot.py --task 19 --rank 4 --tag _f1r4",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 4,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_f1r4",
+  "task": 19
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "nestor.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4156375",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "f1_leaf_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {
+  "task": 19
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.07303205132484436,
+    0.014561424031853676,
+    0.008522815071046352,
+    0.004832965787500143,
+    0.007134348154067993,
+    0.003763216780498624,
+    0.003618897870182991,
+    0.002229072852060199,
+    0.002029431750997901,
+    0.007333256304264069,
+    0.0036845027934759855
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 3646,
+  "final_loss": 0.0036845027934759855,
+  "first_loss": 0.07303205132484436,
+  "job_secs_to_record": 212.3464493751526,
+  "n_banks": 163,
+  "n_frames": 135,
+  "n_params": 2338816,
+  "task": 19,
+  "text": "put the moka pot on the stove",
+  "train_secs": 129.19569993019104
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "f1_leaf_fit__libero_90___f1r4__task-19__s0__c1f2be46",
+ "schema": 1,
+ "script": "experiments/zf_leaf_fit.py -> experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T22:37:17+00:00",
+ "stream": null,
+ "tag": "_f1r4"
+}

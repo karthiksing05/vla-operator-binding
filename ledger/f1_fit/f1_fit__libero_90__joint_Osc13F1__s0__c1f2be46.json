@@ -1,0 +1,138 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 36+37+43 --key put|the_white_bowl --name Osc13F1 --rank 4 --approach --cache --steps 200 --record-as f1_fit",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "cache": true,
+  "cache_gpu_max": 1200,
+  "cache_store": "auto",
+  "demo": 0,
+  "eval_every": 50,
+  "eval_frames": 256,
+  "goal": false,
+  "heldout": -1,
+  "init": "",
+  "init_best": "",
+  "joint": "36+37+43",
+  "key": "put|the white bowl",
+  "lr": 0.0001,
+  "name": "Osc13F1",
+  "ndemo": 1,
+  "rank": 4,
+  "record_as": "f1_fit",
+  "scope": "expert",
+  "score": false,
+  "source": "l90",
+  "steps": 200,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "dave.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4156360",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "f1_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.06658675521612167,
+    0.01967984065413475,
+    0.010651017539203167
+   ],
+   "step": [
+    1,
+    100,
+    200
+   ]
+  },
+  "f1": {
+   "cache": true,
+   "frozen_heldout": null,
+   "heldout_frames": null,
+   "init_choice": null,
+   "secs": {
+    "cache": 10.819631814956665,
+    "save": 0.043558359146118164,
+    "start_to_frames": 73.01363635063171,
+    "total": 111.12461137771606,
+    "train": 25.709857940673828
+   }
+  },
+  "frames": 188,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "put the white bowl on the plate",
+    "frames": [
+     0,
+     87
+    ],
+    "task": 36
+   },
+   {
+    "clause": "put the white bowl to the right of the plate",
+    "frames": [
+     0,
+     50
+    ],
+    "task": 37
+   },
+   {
+    "clause": "put the white bowl on top of the cabinet",
+    "frames": [
+     0,
+     51
+    ],
+    "task": 43
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the white bowl"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "f1_fit__libero_90__joint_Osc13F1__s0__c1f2be46",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T22:33:39+00:00",
+ "stream": null,
+ "tag": "joint_Osc13F1"
+}

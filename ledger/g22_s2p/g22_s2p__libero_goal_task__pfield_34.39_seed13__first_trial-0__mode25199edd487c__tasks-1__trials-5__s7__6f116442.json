@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g22_s2p_libero_goal_task_1_pfield_34.39_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_goal_task",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:1?suite=libero_goal_task&paths=none&apaths=none&goal=1&pa=pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate&pg=pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate SUITE=libero_goal_task TASKS=1 TRIALS=5 (job 4147511)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_pro_a",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g22_s2p_libero_goal_task_1_pfield_34.39_seed13.json",
+   "port": 9666,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_goal_task",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "1",
+   "trials": 5,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4147511",
+  "mode": "prims:1?suite=libero_goal_task&paths=none&apaths=none&goal=1&pa=pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate&pg=pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cyborg.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4147511",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g22_s2p",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "6f11644269eac31d6bb8a0e1faeb41d3411ac433",
+  "short": "6f116442"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:1?suite=libero_goal_task&paths=none&apaths=none&goal=1&pa=pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate&pg=pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate",
+  "tasks": "1",
+  "trials": 5
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 5,
+  "secs": 198.92633938789368,
+  "success_rate": 0.0,
+  "tasks": {
+   "1": {
+    "errors": 0,
+    "language": "put the plate on the stove",
+    "mean_steps": 300.0,
+    "n": 5,
+    "success_rate": 0.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g22_s2p__libero_goal_task__pfield_34.39_seed13__first_trial-0__mode25199edd487c__tasks-1__trials-5__s7__6f116442",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T15:16:15+00:00",
+ "stream": null,
+ "tag": "pfield_34.39_seed13"
+}

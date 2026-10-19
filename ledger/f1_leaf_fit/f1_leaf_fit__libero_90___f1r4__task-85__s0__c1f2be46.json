@@ -1,0 +1,111 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_85_f1r4.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "/coc/flash10/ksingara3/lifelong-ood-learner/experiments/r3_fewshot.py --task 85 --rank 4 --tag _f1r4",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 4,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_f1r4",
+  "task": 85
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "kitt.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4156405",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "f1_leaf_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {
+  "task": 85
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.12930598855018616,
+    0.039931170642375946,
+    0.020830649882555008,
+    0.00884124543517828,
+    0.01214577630162239,
+    0.007370223756879568,
+    0.007664983160793781,
+    0.005320070777088404,
+    0.004134571645408869,
+    0.010954978875815868,
+    0.007629059255123138
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 2385,
+  "final_loss": 0.007629059255123138,
+  "first_loss": 0.12930598855018616,
+  "job_secs_to_record": 216.47323846817017,
+  "n_banks": 163,
+  "n_frames": 101,
+  "n_params": 2338816,
+  "task": 85,
+  "text": "pick up the white mug and place it to the right of the caddy",
+  "train_secs": 133.71288347244263
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "f1_leaf_fit__libero_90___f1r4__task-85__s0__c1f2be46",
+ "schema": 1,
+ "script": "experiments/zf_leaf_fit.py -> experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T22:41:22+00:00",
+ "stream": null,
+ "tag": "_f1r4"
+}

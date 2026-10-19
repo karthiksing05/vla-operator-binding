@@ -1,0 +1,122 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "experiments/c0_fit.py --task 0 --joint 53 --key put|the_orange_juice --name Osc9F1 --rank 4 --approach --cache --steps 200 --record-as f1_fit",
+ "config": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "bind": false,
+  "cache": true,
+  "cache_gpu_max": 1200,
+  "cache_store": "auto",
+  "demo": 0,
+  "eval_every": 50,
+  "eval_frames": 256,
+  "goal": false,
+  "heldout": -1,
+  "init": "",
+  "init_best": "",
+  "joint": "53",
+  "key": "put|the orange juice",
+  "lr": 0.0001,
+  "name": "Osc9F1",
+  "ndemo": 1,
+  "rank": 4,
+  "record_as": "f1_fit",
+  "scope": "expert",
+  "score": false,
+  "source": "l90",
+  "steps": 200,
+  "tag": "",
+  "task": 0
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "baymax.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4156369",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "f1_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {},
+ "metrics": {
+  "approach": true,
+  "backbone": "pi05_libero",
+  "bind": false,
+  "bytes": 4677632,
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.03235536813735962,
+    0.006256866734474897,
+    0.0021843858994543552
+   ],
+   "step": [
+    1,
+    100,
+    200
+   ]
+  },
+  "f1": {
+   "cache": true,
+   "frozen_heldout": null,
+   "heldout_frames": null,
+   "init_choice": null,
+   "secs": {
+    "cache": 2.8650424480438232,
+    "save": 0.046515464782714844,
+    "start_to_frames": 87.31701850891113,
+    "total": 121.81925225257874,
+    "train": 30.119444131851196
+   }
+  },
+  "frames": 59,
+  "goal": false,
+  "init": "",
+  "joint": [
+   {
+    "clause": "pick up the orange juice and put it in the basket",
+    "frames": [
+     0,
+     59
+    ],
+    "task": 53
+   }
+  ],
+  "rank": 4,
+  "scope": "expert",
+  "step_key": "put|the orange juice"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "f1_fit__libero_90__joint_Osc9F1__s0__c1f2be46",
+ "schema": 1,
+ "script": "experiments/c0_fit.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T22:34:51+00:00",
+ "stream": null,
+ "tag": "joint_Osc9F1"
+}

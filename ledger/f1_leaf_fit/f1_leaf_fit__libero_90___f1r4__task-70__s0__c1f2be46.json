@@ -1,0 +1,111 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_70_f1r4.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "/coc/flash10/ksingara3/lifelong-ood-learner/experiments/r3_fewshot.py --task 70 --rank 4 --tag _f1r4",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 4,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_f1r4",
+  "task": 70
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "kitt.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4156392",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "f1_leaf_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {
+  "task": 70
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.0685461089015007,
+    0.028352046385407448,
+    0.010210837237536907,
+    0.004915071185678244,
+    0.008803806267678738,
+    0.0026443793904036283,
+    0.0026757922023534775,
+    0.0016058124601840973,
+    0.002472852123901248,
+    0.006258051376789808,
+    0.003588635241612792
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 1140,
+  "final_loss": 0.003588635241612792,
+  "first_loss": 0.0685461089015007,
+  "job_secs_to_record": 206.59484910964966,
+  "n_banks": 163,
+  "n_frames": 77,
+  "n_params": 2338816,
+  "task": 70,
+  "text": "put the chocolate pudding to the right of the plate",
+  "train_secs": 128.50753736495972
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "f1_leaf_fit__libero_90___f1r4__task-70__s0__c1f2be46",
+ "schema": 1,
+ "script": "experiments/zf_leaf_fit.py -> experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T22:38:11+00:00",
+ "stream": null,
+ "tag": "_f1r4"
+}

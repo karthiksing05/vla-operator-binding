@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g10_s1_goal_libero_goal_ood_5_pfield_36.10_seed13_groot.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_goal_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:5?suite=libero_goal_ood&paths=none&apaths=none&goal=1&pa=pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate&pg=put_the_bowl_on_the_plate SUITE=libero_goal_ood TASKS=5 TRIALS=5 (job 4149314)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_a",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g10_s1_goal_libero_goal_ood_5_pfield_36.10_seed13_groot.json",
+   "port": 9852,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_goal_ood",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "5",
+   "trials": 5,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4149314",
+  "mode": "prims:5?suite=libero_goal_ood&paths=none&apaths=none&goal=1&pa=pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate&pg=put_the_bowl_on_the_plate"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "ig-88.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4149314",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g10_s1_goal",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "29c1dde79215a96846d5b8aceb260bfda7eb5bef",
+  "short": "29c1dde7"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:5?suite=libero_goal_ood&paths=none&apaths=none&goal=1&pa=pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate&pg=put_the_bowl_on_the_plate",
+  "tasks": "5",
+  "trials": 5
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 5,
+  "secs": 120.84254312515259,
+  "success_rate": 0.0,
+  "tasks": {
+   "5": {
+    "errors": 0,
+    "language": "put the wine bottle on the plate",
+    "mean_steps": 300.0,
+    "n": 5,
+    "success_rate": 0.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g10_s1_goal__libero_goal_ood__pfield_36.10_seed13_groot__first_trial-0__modef871c6e21245__tasks-5__trials-5__s7__29c1dde7",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T16:08:08+00:00",
+ "stream": null,
+ "tag": "pfield_36.10_seed13_groot"
+}

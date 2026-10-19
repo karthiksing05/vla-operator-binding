@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g22_acct_libero_10_task_5_tli_4.6.24_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_10_task",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=tli:4.6.24 SUITE=libero_10_task TASKS=5 TRIALS=10 (job 4149435)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_pro_a",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g22_acct_libero_10_task_5_tli_4.6.24_seed13.json",
+   "port": 9345,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_10_task",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "5",
+   "trials": 10,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4149435",
+  "mode": "tli:4.6.24"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "qt-1.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4149435",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g22_acct",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "29c1dde79215a96846d5b8aceb260bfda7eb5bef",
+  "short": "29c1dde7"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "tli:4.6.24",
+  "tasks": "5",
+  "trials": 10
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 10,
+  "secs": 440.6330418586731,
+  "success_rate": 0.1,
+  "tasks": {
+   "5": {
+    "errors": 0,
+    "language": "pick up the cup and place it in the back compartment of the caddy",
+    "mean_steps": 504.1,
+    "n": 10,
+    "success_rate": 0.1
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g22_acct__libero_10_task__tli_4.6.24_seed13__first_trial-0__mode-tli-4.6.24__tasks-5__trials-10__s7__29c1dde7",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T16:23:11+00:00",
+ "stream": null,
+ "tag": "tli_4.6.24_seed13"
+}

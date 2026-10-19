@@ -1,0 +1,111 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_26_f1r4.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "/coc/flash10/ksingara3/lifelong-ood-learner/experiments/r3_fewshot.py --task 26 --rank 4 --tag _f1r4",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 4,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_f1r4",
+  "task": 26
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "sonny.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4156377",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "f1_leaf_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {
+  "task": 26
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.12225965410470963,
+    0.03030894510447979,
+    0.021780366078019142,
+    0.015167099423706532,
+    0.015275174751877785,
+    0.00773902703076601,
+    0.007686343975365162,
+    0.004517368506640196,
+    0.00643521174788475,
+    0.010389113798737526,
+    0.008450085297226906
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 1323,
+  "final_loss": 0.008450085297226906,
+  "first_loss": 0.12225965410470963,
+  "job_secs_to_record": 225.3463306427002,
+  "n_banks": 163,
+  "n_frames": 169,
+  "n_params": 2338816,
+  "task": 26,
+  "text": "put the wine bottle in the bottom drawer of the cabinet",
+  "train_secs": 136.94547772407532
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "f1_leaf_fit__libero_90___f1r4__task-26__s0__c1f2be46",
+ "schema": 1,
+ "script": "experiments/zf_leaf_fit.py -> experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T22:37:31+00:00",
+ "stream": null,
+ "tag": "_f1r4"
+}

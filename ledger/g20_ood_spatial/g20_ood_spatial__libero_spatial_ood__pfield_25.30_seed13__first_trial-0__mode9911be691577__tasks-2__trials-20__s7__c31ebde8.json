@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g20_ood_spatial_libero_spatial_ood_2_pfield_25.30_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_spatial_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:2?suite=libero_spatial_ood&paths=none&apaths=none&goal=1&pa=pick_up_the_milk_and_place_it_in_the_basket&pg=pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate SUITE=libero_spatial_ood TASKS=2 TRIALS=20 (job 4140238)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_e",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g20_ood_spatial_libero_spatial_ood_2_pfield_25.30_seed13.json",
+   "port": 9594,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_spatial_ood",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "2",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4140238",
+  "mode": "prims:2?suite=libero_spatial_ood&paths=none&apaths=none&goal=1&pa=pick_up_the_milk_and_place_it_in_the_basket&pg=pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "starrysky.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4140238",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g20_ood_spatial",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c31ebde8b9b0e4e5a21e7f935fcf6a8ed0c09048",
+  "short": "c31ebde8"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:2?suite=libero_spatial_ood&paths=none&apaths=none&goal=1&pa=pick_up_the_milk_and_place_it_in_the_basket&pg=pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate",
+  "tasks": "2",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 632.3358027935028,
+  "success_rate": 0.2,
+  "tasks": {
+   "2": {
+    "errors": 0,
+    "language": "put the milk on the plate",
+    "mean_steps": 257.35,
+    "n": 20,
+    "success_rate": 0.2
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g20_ood_spatial__libero_spatial_ood__pfield_25.30_seed13__first_trial-0__mode9911be691577__tasks-2__trials-20__s7__c31ebde8",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T07:52:49+00:00",
+ "stream": null,
+ "tag": "pfield_25.30_seed13"
+}

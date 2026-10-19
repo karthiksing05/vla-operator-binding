@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g22_s2p_libero_spatial_task_8_pfield_37.31_seed13_pi0.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_spatial_task",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:8?suite=libero_spatial_task&paths=none&apaths=none&goal=1&pa=pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate&pg=pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate SUITE=libero_spatial_task TASKS=8 TRIALS=5 (job 4151304)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_pro_a",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g22_s2p_libero_spatial_task_8_pfield_37.31_seed13_pi0.json",
+   "port": 9417,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_spatial_task",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "8",
+   "trials": 5,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4151304",
+  "mode": "prims:8?suite=libero_spatial_task&paths=none&apaths=none&goal=1&pa=pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate&pg=pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "gundam.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4151304",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g22_s2p",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "b7e940f6e9efa4f74b3e0a5b7feb7134b5fe6984",
+  "short": "b7e940f6"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:8?suite=libero_spatial_task&paths=none&apaths=none&goal=1&pa=pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate&pg=pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate",
+  "tasks": "8",
+  "trials": 5
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 5,
+  "secs": 104.11748695373535,
+  "success_rate": 0.0,
+  "tasks": {
+   "8": {
+    "errors": 0,
+    "language": "pick the akita black bowl next to the ramekin and place it on the plate",
+    "mean_steps": 220.0,
+    "n": 5,
+    "success_rate": 0.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g22_s2p__libero_spatial_task__pfield_37.31_seed13_pi0__first_trial-0__modee2e31da2b088__tasks-8__trials-5__s7__b7e940f6",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T18:47:20+00:00",
+ "stream": null,
+ "tag": "pfield_37.31_seed13_pi0"
+}

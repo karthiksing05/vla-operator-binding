@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g22_pro_libero_object_task_8_origprompt_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_object_task",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=promptx:pick_up_the_chocolate_pudding_and_place_it_in_the_basket SUITE=libero_object_task TASKS=8 TRIALS=50 (job 4147258)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g22_pro_libero_object_task_8_origprompt_seed13.json",
+   "port": 9775,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_object_task",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "8",
+   "trials": 50,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4147258",
+  "mode": "promptx:pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "deebot.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4147258",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g22_pro",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5547b104dc5b311a3db010724f236ccbc3aca3c4",
+  "short": "5547b104"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "promptx:pick_up_the_chocolate_pudding_and_place_it_in_the_basket",
+  "tasks": "8",
+  "trials": 50
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 50,
+  "secs": 1441.5795319080353,
+  "success_rate": 0.0,
+  "tasks": {
+   "8": {
+    "errors": 0,
+    "language": "pick the salad dressing and place it in the basket",
+    "mean_steps": 280.0,
+    "n": 50,
+    "success_rate": 0.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g22_pro__libero_object_task__origprompt_seed13__first_trial-0__mode2a560a82b838__tasks-8__trials-50__s7__5547b104",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T15:27:42+00:00",
+ "stream": null,
+ "tag": "origprompt_seed13"
+}

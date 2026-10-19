@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g21_smoke_libero_goal_ood_1_inject_14.17_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_goal_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=inject:14.17 SUITE=libero_goal_ood TASKS=1 TRIALS=4 (job 4146052)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_a",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g21_smoke_libero_goal_ood_1_inject_14.17_seed13.json",
+   "port": 9636,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_goal_ood",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "1",
+   "trials": 4,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4146052",
+  "mode": "inject:14.17"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "kitt.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4146052",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g21_smoke",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c3ad6e221f4e828c8f604bff05e864c33dd0c76b",
+  "short": "c3ad6e22"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "inject:14.17",
+  "tasks": "1",
+  "trials": 4
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 4,
+  "secs": 94.95145344734192,
+  "success_rate": 0.5,
+  "tasks": {
+   "1": {
+    "errors": 0,
+    "language": "put the orange juice on the stove",
+    "mean_steps": 205.0,
+    "n": 4,
+    "success_rate": 0.5
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g21_smoke__libero_goal_ood__inject_14.17_seed13__first_trial-0__mode-inject-14.17__tasks-1__trials-4__s7__c3ad6e22",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T13:32:50+00:00",
+ "stream": null,
+ "tag": "inject_14.17_seed13"
+}

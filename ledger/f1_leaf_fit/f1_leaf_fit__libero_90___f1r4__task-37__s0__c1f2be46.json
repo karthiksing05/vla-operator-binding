@@ -1,0 +1,111 @@
+{
+ "artifacts": [
+  "results/robot/r3_lora_37_f1r4.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 4677632,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 4677632,
+  "tree": 0
+ },
+ "command": "/coc/flash10/ksingara3/lifelong-ood-learner/experiments/r3_fewshot.py --task 37 --rank 4 --tag _f1r4",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": false,
+  "lr": 0.0001,
+  "rank": 4,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_f1r4",
+  "task": 37
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "heistotron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4156382",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "f1_leaf_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c1f2be4674d4e3bf8bfa757443eaaa31d2c71190",
+  "short": "c1f2be46"
+ },
+ "keys": {
+  "task": 37
+ },
+ "metrics": {
+  "curve": {
+   "anchor": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "loss": [
+    0.1631755232810974,
+    0.047274596989154816,
+    0.018613679334521294,
+    0.010949380695819855,
+    0.012243073433637619,
+    0.004626938607543707,
+    0.002807554556056857,
+    0.00300431065261364,
+    0.005561749450862408,
+    0.008027064613997936,
+    0.004672107752412558
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 3226,
+  "final_loss": 0.004672107752412558,
+  "first_loss": 0.1631755232810974,
+  "job_secs_to_record": 215.2311098575592,
+  "n_banks": 163,
+  "n_frames": 120,
+  "n_params": 2338816,
+  "task": 37,
+  "text": "put the white bowl to the right of the plate",
+  "train_secs": 130.19411754608154
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "f1_leaf_fit__libero_90___f1r4__task-37__s0__c1f2be46",
+ "schema": 1,
+ "script": "experiments/zf_leaf_fit.py -> experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T22:38:22+00:00",
+ "stream": null,
+ "tag": "_f1r4"
+}

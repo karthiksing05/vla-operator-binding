@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g17_base_spatial_libero_spatial_ood_1_pfield_13.30_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_spatial_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:1?suite=libero_spatial_ood&paths=none&apaths=none&goal=1&pa=put_the_cream_cheese_in_the_bowl&pg=pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate SUITE=libero_spatial_ood TASKS=1 TRIALS=20 (job 4132126)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_f",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g17_base_spatial_libero_spatial_ood_1_pfield_13.30_seed13.json",
+   "port": 9618,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_spatial_ood",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "1",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4132126",
+  "mode": "prims:1?suite=libero_spatial_ood&paths=none&apaths=none&goal=1&pa=put_the_cream_cheese_in_the_bowl&pg=pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "voltron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4132126",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g17_base_spatial",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "47c0fee913ed0954fa04563a7b6a5ba262b55a0a",
+  "short": "47c0fee9"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:1?suite=libero_spatial_ood&paths=none&apaths=none&goal=1&pa=put_the_cream_cheese_in_the_bowl&pg=pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate",
+  "tasks": "1",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 260.82731223106384,
+  "success_rate": 1.0,
+  "tasks": {
+   "1": {
+    "errors": 0,
+    "language": "put the chocolate pudding on the plate",
+    "mean_steps": 107.7,
+    "n": 20,
+    "success_rate": 1.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g17_base_spatial__libero_spatial_ood__pfield_13.30_seed13__first_trial-0__mode5c3a8f4a1fd5__tasks-1__trials-20__s7__47c0fee9",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-18T11:22:35+00:00",
+ "stream": null,
+ "tag": "pfield_13.30_seed13"
+}

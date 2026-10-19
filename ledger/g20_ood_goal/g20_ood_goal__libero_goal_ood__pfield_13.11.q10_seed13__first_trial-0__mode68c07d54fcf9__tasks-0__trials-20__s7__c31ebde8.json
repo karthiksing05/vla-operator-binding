@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g20_ood_goal_libero_goal_ood_0_pfield_13.11.q10_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_goal_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=prims:0?suite=libero_goal_ood&paths=none&apaths=none&goal=1&pa=put_the_cream_cheese_in_the_bowl&pg=put_the_wine_bottle_on_the_rack&sw=10 SUITE=libero_goal_ood TASKS=0 TRIALS=20 (job 4140226)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_e",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g20_ood_goal_libero_goal_ood_0_pfield_13.11.q10_seed13.json",
+   "port": 9559,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_goal_ood",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "0",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4140226",
+  "mode": "prims:0?suite=libero_goal_ood&paths=none&apaths=none&goal=1&pa=put_the_cream_cheese_in_the_bowl&pg=put_the_wine_bottle_on_the_rack&sw=10"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "trublu.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4140226",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g20_ood_goal",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c31ebde8b9b0e4e5a21e7f935fcf6a8ed0c09048",
+  "short": "c31ebde8"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "prims:0?suite=libero_goal_ood&paths=none&apaths=none&goal=1&pa=put_the_cream_cheese_in_the_bowl&pg=put_the_wine_bottle_on_the_rack&sw=10",
+  "tasks": "0",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 413.004075050354,
+  "success_rate": 0.85,
+  "tasks": {
+   "0": {
+    "errors": 0,
+    "language": "put the cream cheese in the basket",
+    "mean_steps": 152.65,
+    "n": 20,
+    "success_rate": 0.85
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g20_ood_goal__libero_goal_ood__pfield_13.11.q10_seed13__first_trial-0__mode68c07d54fcf9__tasks-0__trials-20__s7__c31ebde8",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T07:44:16+00:00",
+ "stream": null,
+ "tag": "pfield_13.11.q10_seed13"
+}
