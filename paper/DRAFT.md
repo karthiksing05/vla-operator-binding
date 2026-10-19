@@ -337,7 +337,43 @@ the type prototype takes the named bowl in 6 of 15.
 Object prototypes are nearly orthogonal to one another (mean cosine 0.058) and to goal prototypes (0.037); both act in the same
 layers, differing in direction; refit without one demonstration a prototype keeps a cosine of 0.64 with the full one.
 
-## 7 What does not work
+## 7 What composition is
+(docs/INTERPRETATION.md; Figures: h1_factor_ood.png, h1_donate.png, h1_tli_layers.png, h1_switch.png.)
+
+**Composed success is a product of two competences.** The grasp is the only interface between a composed task's two phases.
+The approach unit fixes which object the hand takes: arms that share an object source and differ in goal source take the same
+first object in 1,803 of 1,805 trial groups on pi0.5. A wrong first grasp ends the task. Composed success is then
+g x p, the chance that the approach unit grasps the named object times the chance that the carry unit places it. On 53
+held-out LIBERO-90 tasks whose units were learned apart, the product predicts 366 successes against 365 observed. On Li's
+suites, estimated from five practice episodes per source pair on one start-state set, the product predicts the grasp switch
+on start states practice never saw with Pearson r 0.92 (pi0.5), 0.94 (pi0), 0.91 (SmolVLA) and 0.97 (X-VLA). Units learned
+together beat the product: on pi0.5's library the hand-off at the grasp adds 0.117 to success after a named grasp, so the
+product is a lower bound. Composition of held concepts is therefore predictable from its parts, and practice that estimates
+the parts estimates the whole.
+
+**A prototype corrects where the hand goes, not how it turns.** On a held-out demonstration of each concept, an object
+prototype lowers the position error of the policy's chunk from 1.205 to 0.897 and raises the alignment of the motion with the
+target from 0.66 to 0.76; a goal prototype lowers position error from 2.00 to 1.24 and release-timing error from 4.3 to 3.3
+steps, and raises alignment from 0.22 to 0.53. Orientation barely moves. Units carry places and moments, and the policy
+supplies the rest of the motion.
+
+**Why an operator works on one architecture and fails on another.** Text-latent interpolation adds a shift to the residual of
+the encoder that reads the instruction. On pi0 and pi0.5 the shift is about a quarter of that residual (0.28 and 0.23); on
+X-VLA and SmolVLA it is as large as the residual (1.01 and 1.14) and replaces the instruction's representation, which matches
+interpolation's failure on SmolVLA (0 of 400). The grasp switch reads the policy's field under the instruction that taught
+each phase and reproduces that phase's trained motion on all four architectures. Practice choosing the operator per task
+is what makes the system architecture-agnostic.
+
+## 8 What composition costs
+(docs/COST.md; Figures: h2_pareto_libero90.png, h2_pareto_ood.png.) On pi0.5 and LIBERO-90 the system with task leaves stores
+10.2 MB per task against 13.6 MB for per-task adapters and succeeds 994 against 932 of 1,320 times. It pays in fitting time:
+fitting costs 31.8 A40-minutes per task on average, against 3.5 for a per-task adapter. A unit
+served as an unmerged LoRA raises the latency of an action chunk from 292 to 437 ms; the grasp switch and interpolation add no
+measurable latency (291 ms). On Li's suites a held concept costs at most 0.3 MB per task and the grasp switch nothing; the
+system spends 340 practice episodes per task where Li's methods spend none, and the gated stream of iteration 14 lowers that.
+Composition buys success and storage, and pays in fitting time and simulator practice.
+
+## 9 What does not work
 - Selecting prototypes by a held-out demonstration's likelihood (as Wang et al. do): the right object concept on top for 12 of
   29 queries.
 - A new object without a demonstration: borrowed prototypes help on 2 of the 17 tasks the policy fails.
@@ -345,11 +381,11 @@ layers, differing in direction; refit without one demonstration a prototype keep
 - Prototypes of concepts the policy already holds (Iteration 5's weakness) and noise-space refinement on top of the
   composition (DSRL on the library).
 
-## 8 A data defect
+## 10 A data defect
 The IPEC port of LIBERO-90 merges tasks that share an instruction: 16 tasks were given another scene's demonstration, including
 the per-task baselines. Fixed by matching each scene's block of episodes to the task's rendered first frames.
 
-## 9 Limitations
+## 11 Limitations
 Flow-matching policies only (pi0.5, pi0, SmolVLA, X-VLA); routed adapter libraries (CLARE) are not rerun here; choosing a held concept's source by practice costs 160 practice episodes per task; single-step pick-and-place; LIBERO-90 and Li's
 OOD suites only; practice needs a simulator; a new object needs its one demonstration; non-inferiority to per-task adapters without task leaves not
 established at 0.05.

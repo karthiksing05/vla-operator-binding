@@ -659,6 +659,26 @@ def limits_of_method():
                 f"{g17a['plan']['stream_vs_g15']['y']} and {g17b['plan']['stream_vs_g15']['y']} with per-task practice, using "
                 f"{g17a['plan']['practice']} to {g17b['plan']['practice']} practice episodes in place of {g17a['plan']['practice_g15']}: "
                 f"non-inferior in three of four streams.</p>")
+    hf = {b: row("h1_factor", f"ood_{b}") for b in ("pi05", "pi0", "smolvla", "xvla")}
+    g5f, tl = row("h1_factor", "l90_g5"), row("h1_tli", "read")
+    if all(hf.values()) and g5f and tl:
+        out += (f"<p><b>What composition is: a product of two competences.</b> The grasp is the only interface between a composed "
+                f"task's phases: composed success is P(the approach unit grasps the named object) x P(the carry unit places it). On 53 "
+                f"held-out LIBERO-90 tasks the product predicts {g5f['in_sample_zero_w']['predicted']:.0f} successes against "
+                f"{g5f['in_sample_zero_w']['observed']} observed; on Li's suites, estimated from five practice episodes per pair, it "
+                f"predicts new start states with r " + ", ".join(f"{hf[b]['out_of_sample']['pearson']:.2f}" for b in hf) + " on pi0.5, "
+                f"pi0, SmolVLA and X-VLA. Units correct where the hand goes and when it releases, not how it turns. Text-latent "
+                f"interpolation nudges the instruction's representation on pi0 and pi0.5 (shift/residual "
+                f"{tl['pi0']['agg']['ratio']:.2f}, {tl['pi05']['agg']['ratio']:.2f}) and replaces it on X-VLA and SmolVLA "
+                f"({tl['xvla']['agg']['ratio']:.2f}, {tl['smolvla']['agg']['ratio']:.2f}), where it fails; the grasp switch "
+                f"reproduces each phase's trained motion on all four (docs/INTERPRETATION.md).</p>")
+        out += fig('<img src="media/h1_factor_ood.png" alt="composed success predicted from component competences" style="width:100%">',
+                   "<b>Composition is predictable from its parts.</b> Li's OOD suites: observed success of the grasp switch against "
+                   "the product of the sources' competences estimated from practice on set a; coloured points are start-state sets "
+                   "practice never saw.", wide=True)
+        out += fig('<img src="media/h2_pareto_libero90.png" alt="success against storage and against episodes" style="width:100%">',
+                   "<b>What composition costs.</b> LIBERO-90 on pi0.5: success against stored bytes per task and against practice "
+                   "episodes plus demonstrations per task, every method (docs/COST.md).", wide=True)
     i6 = row("i6_novelty", "read")
     if i6:
         out += (f"<p><b>Which kind of unit a concept gets.</b> The frozen policy's own flow-matching loss on a concept's frames "
