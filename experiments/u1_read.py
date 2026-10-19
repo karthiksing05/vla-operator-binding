@@ -283,7 +283,7 @@ def main(record):
         print(f"[u1] {ph}: units vs concepts NMI {a['unit_vs_concept']['nmi']:.2f} ARI {a['unit_vs_concept']['ari']:.2f} "
               f"(n={a['unit_vs_concept']['n']}, {a['n_units']} units, {a['n_concepts']} concepts, purity {a['purity']:.2f}); "
               f"labels vs concepts NMI {a['label_vs_concept']['nmi']:.2f}", flush=True)
-    json.dump(res, open(os.path.join(R, "u1_read.json"), "w", encoding="utf-8"), indent=1, default=str)
+    json.dump(res, open(os.path.join(R, "z_u1_read.json"), "w", encoding="utf-8"), indent=1, default=str)
     figures(demos, res, segrows, new, lam)
     if record:
         from lifelong_ood import ledger

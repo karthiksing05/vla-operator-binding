@@ -126,11 +126,16 @@ def _flow_batch(n, H, A, gen, device):
 
 
 def train(bk, state, key, params, bank, chunks_full, steps=1000, lr=1e-4, batch=32, seed=0, anchor=None,
-          anchor_weight=1.0, log_every=100, log=print, weight_decay=0.0, groups=None, gate_of=None):
+          anchor_weight=1.0, log_every=100, log=print, weight_decay=0.0, groups=None, gate_of=None, eval_fn=None, eval_every=0,
+          profile=None):
     """Flow-matching fine-tune of the expert `key` on (bank rows, chunks_full [N, H, A] padded, normalised).
     anchor = (anchor_bank, anchor_chunks_full): the r ~ 0 half, target = the base velocity (expert off).
     groups = [(row indices, rows per batch), ...]: every batch draws that many rows from each group (default: uniform over the
     bank).  gate_of(row indices) -> a gate the batch's velocity runs under (e.g. attention binding per row; attn_bias.biased).
+    eval_fn() -> float, called every eval_every steps (plan F1: held-out flow loss; it must draw no random numbers of its own:
+    heldout_loss with fixed_draws), recorded in hist["eval_step"] / hist["eval"].  profile: a dict that accumulates the
+    synchronised seconds of the batch's prefixes (take: a VLM forward for a lazy bank, a gather for a cached one), the forward
+    and backward pass, and the optimiser step, plus their counts (plan F1's fit-time profile).  Both default off: unchanged.
     -> dict of loss curves."""
     torch.manual_seed(seed)
     gen = torch.Generator(device="cpu").manual_seed(seed)
@@ -139,13 +144,18 @@ def train(bk, state, key, params, bank, chunks_full, steps=1000, lr=1e-4, batch=
     A = torch.as_tensor(np.asarray(chunks_full, np.float32), device=bk.device)
     on = keys_on(state, {key})
     hist = dict(step=[], loss=[], anchor=[])
+    if eval_fn is not None:
+        hist["eval_step"], hist["eval"] = [], []
     t0 = time.time()
+    tick = _ticker(profile)
     for s in range(1, steps + 1):
         if groups is None:
             idx = rng.integers(0, bank.n, size=min(batch, bank.n))
         else:
             idx = np.concatenate([np.asarray(g)[rng.integers(0, len(g), size=k)] for g, k in groups])
+        tick(None)
         pre = bank.take(idx)
+        tick("take")
         a = A[idx]
         t, eps = _flow_batch(len(idx), bk.H, bk.A, gen, bk.device)
         xt = t[:, None, None] * eps + (1 - t[:, None, None]) * a
@@ -169,12 +179,69 @@ def train(bk, state, key, params, bank, chunks_full, steps=1000, lr=1e-4, batch=
         tot = loss + anchor_weight * la
         opt.zero_grad(set_to_none=True)
         tot.backward()
+        tick("fwd_bwd")
         torch.nn.utils.clip_grad_norm_(params, 1.0)
         opt.step()
+        tick("opt")
         if s % log_every == 0 or s == 1:
             hist["step"].append(s); hist["loss"].append(float(loss)); hist["anchor"].append(float(la))
             log(f"[adapt] {key} step {s}/{steps}: flow {float(loss):.4f} anchor {float(la):.5f} ({time.time() - t0:.0f}s)")
+        if eval_fn is not None and eval_every and s % eval_every == 0:
+            hist["eval_step"].append(s); hist["eval"].append(float(eval_fn()))
+            tick(None)
     return hist
+
+
+def _ticker(profile):
+    """-> tick(name): adds the synchronised seconds since the previous tick to profile[name] (name None: only restarts the clock).
+    A no-op when profile is None."""
+    if profile is None:
+        return lambda name: None
+    last = [time.time()]
+
+    def tick(name):
+        if torch.cuda.is_available():
+            torch.cuda.synchronize()
+        now = time.time()
+        if name is not None:
+            profile[name] = profile.get(name, 0.0) + now - last[0]
+            profile[name + "_n"] = profile.get(name + "_n", 0) + 1
+        last[0] = now
+    return tick
+
+
+def fixed_draws(n_rows, H, A, n=256, batch=32, seed=1234):
+    """Plan F1: n fixed (row, time, noise) draws for a held-out flow loss, in batches -> [(idx, t, eps)] on the CPU.  Times follow
+    openpi's Beta(1.5, 1) * 0.999 + 0.001 by its inverse CDF (u^(2/3)), from their own generator, so a held-out evaluation draws no
+    number from the training run's generators."""
+    g = torch.Generator(device="cpu").manual_seed(seed)
+    rng = np.random.default_rng(seed)
+    out = []
+    for i in range(0, n, batch):
+        k = min(batch, n - i)
+        idx = rng.integers(0, n_rows, size=k)
+        t = torch.rand((k,), generator=g) ** (2.0 / 3.0) * 0.999 + 0.001
+        eps = torch.randn((k, H, A), generator=g)
+        out.append((idx, t, eps))
+    return out
+
+
+def heldout_loss(bk, state, keys, bank, chunks_full, draws):
+    """Plan F1: the mean flow-matching loss over fixed draws (fixed_draws) with exactly `keys` switched on (an empty set: the
+    frozen policy).  No gradient; draws no random numbers."""
+    A = torch.as_tensor(np.asarray(chunks_full, np.float32), device=bk.device)
+    on = keys_on(state, keys)
+    tot, n = 0.0, 0
+    with torch.no_grad(), on():
+        for idx, t, eps in draws:
+            t, eps = t.to(bk.device), eps.to(bk.device)
+            x = A[idx]
+            xt = t[:, None, None] * eps + (1 - t[:, None, None]) * x
+            u = (eps - x).reshape(len(idx), -1)
+            v = bk.v_full(xt, t, bank.take(idx))
+            tot += float(flow_loss(bk, v, u, xt, t)) * len(idx)
+            n += len(idx)
+    return tot / max(n, 1)
 
 
 def save(banks, key, path, meta=None):

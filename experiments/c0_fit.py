@@ -53,6 +53,20 @@ def main():
                                                                  "pi0_libero, smolvla); its own action normalisation and chunk length")
     ap.add_argument("--bind", action="store_true", help="--joint: fit under attention binding (each task's own demo prototype, "
                                                         "top-4 patches, mass 0.7, before the demo's first grasp), as at test")
+    # plan F1 (docs/FIT_TIME.md): fit-time levers; every default leaves the fit exactly as before
+    ap.add_argument("--cache", action="store_true", help="--joint: cache each frame's frozen VLM prefix ONCE (adapt.PrefixBank) "
+                                                         "instead of recomputing it every step (LazyPrefixBank); the same values")
+    ap.add_argument("--cache-store", default="auto", help="--cache: where the cached prefixes live: cuda, cpu, or auto (cuda up to "
+                                                          "--cache-gpu-max frames, else cpu)")
+    ap.add_argument("--cache-gpu-max", type=int, default=1200)
+    ap.add_argument("--init-best", default="", help="--joint: candidate prototypes n1+n2+... (prim_<n>_0.pt); start from the one "
+                                                     "with the lowest flow loss on THIS concept's training frames, or from scratch "
+                                                     "when none beats the frozen policy (sets --init)")
+    ap.add_argument("--heldout", type=int, default=-1, help="--joint: k >= 0 scores the held-out flow loss on demonstration k of "
+                                                             "every task of the concept (same phase cut) every --eval-every steps")
+    ap.add_argument("--eval-every", type=int, default=50)
+    ap.add_argument("--eval-frames", type=int, default=256, help="--heldout: at most this many evenly spaced held-out frames")
+    ap.add_argument("--record-as", default="c0_fit", help="the ledger experiment of the fit's row (plan F1 writes f1_fit)")
     a = ap.parse_args()
     if a.joint:
         a.key = a.key.replace("_", " ")                                   # the job wrapper splits arguments on spaces
@@ -216,7 +230,9 @@ def joint(a):
         used.append(dict(task=t, clause=steps[s], frames=[int(lo), int(hi)]))
         print(f"[c0j] task {t} step {s} '{steps[s]}': frames {lo}-{hi}", flush=True)
     full = np.concatenate(rows, 0)
-    bank = adapt.LazyPrefixBank(bk, obs)                                    # ~26 MB per cached prefix: computed per batch
+    t_frames = time.time()
+    bank = cached_bank(bk, obs, a) if a.cache else adapt.LazyPrefixBank(bk, obs)   # ~18 MB per cached prefix: computed per batch
+    t_cache = time.time()
     if a.score:                                                             # plan I6: the FROZEN policy's flow loss on the concept's
         return score(a, bk, bank, full, used)                               # phase frames (Wang's missing detector of new primitives)
     gate_of = None
@@ -246,6 +262,14 @@ def joint(a):
     state, banks = adapt.inject(bk, scope=a.scope)
     key = f"prim_{a.name}_0"
     params = add_node(banks, key, a.rank)
+    choice = None
+    if a.init_best and not a.init:                                          # plan F1: warm start from the best-fitting existing unit
+        choice = init_best(a, bk, state, bank, full)
+        a.init = choice["chosen_path"] or ""
+    eval_fn, ev = None, {}
+    if a.heldout >= 0:                                                      # plan F1: held-out flow loss along the fit
+        ev = heldout_setup(a, bk, norm, state)
+        eval_fn = lambda: adapt.heldout_loss(bk, state, {key}, ev["bank"], ev["full"], ev["draws"])   # noqa: E731
     if a.init:                                                              # the parent's prototype, copied into the child's slot
         import torch
         z = torch.load(a.init if os.path.isabs(a.init) else os.path.join(R, a.init), map_location="cpu")
@@ -254,9 +278,14 @@ def joint(a):
             by_name[n_].A[key].weight.data.copy_(w["A"].to(by_name[n_].A[key].weight.dtype))
             by_name[n_].B[key].weight.data.copy_(w["B"].to(by_name[n_].B[key].weight.dtype))
         print(f"[c0j] initialised from {a.init}", flush=True)
+    ev0 = eval_fn() if eval_fn is not None else None
     t0 = time.time()
     hist = adapt.train(bk, state, key, params, bank, full, steps=a.steps, lr=a.lr, batch=a.batch, log=lambda x: print(x, flush=True),
-                       gate_of=gate_of)
+                       gate_of=gate_of, eval_fn=eval_fn, eval_every=a.eval_every if eval_fn is not None else 0)
+    t_train = time.time()
+    if eval_fn is not None:
+        hist["eval_step"].insert(0, 0)
+        hist["eval"].insert(0, ev0)
     path = os.path.join(R, f"prim_{a.name}_0.pt")
     meta = dict(joint=used, step_key=a.key, rank=a.rank, scope=a.scope, frames=int(len(obs)), bind=bool(a.bind), goal=bool(a.goal),
                 backbone=a.backbone,
@@ -264,9 +293,111 @@ def joint(a):
     nb = adapt.save(banks, key, path, meta=meta)
     print(f"[c0j] {a.name}: key {a.key}, {len(used)} demos, {len(obs)} frames, {nb / 1e6:.1f} MB, flow {hist['loss'][0]:.4f} -> "
           f"{hist['loss'][-1]:.4f} in {time.time() - t0:.0f}s", flush=True)
-    print(ledger.record("c0_fit", bench="libero_90", tag=f"joint_{a.name}", seed=0, metrics=dict(meta, bytes=nb, curve=hist),
+    f1 = {}
+    if a.cache or a.init_best or a.heldout >= 0 or a.record_as != "c0_fit":   # plan F1: where the job's time went
+        f1 = dict(f1=dict(secs=dict(start_to_frames=t_frames - T_START, cache=t_cache - t_frames, train=t_train - t0,
+                                    save=time.time() - t_train, total=time.time() - T_START),
+                          frozen_heldout=ev.get("frozen"), heldout_frames=ev.get("frames"), init_choice=choice, cache=bool(a.cache)))
+    print(ledger.record(a.record_as, bench="libero_90", tag=f"joint_{a.name}", seed=0, metrics=dict(meta, bytes=nb, curve=hist, **f1),
                         bytes=dict(experts=nb, tree=0, codes=0, samples=0, teacher_copies=0, total=nb), config=vars(a),
                         script="experiments/c0_fit.py", command=" ".join(sys.argv)))
+
+
+# ── plan F1 (docs/FIT_TIME.md): fit-time levers, used only under their flags ─────────────────────────────────────────────
+T_START = time.time()
+
+
+def cached_bank(bk, obs, a):
+    """The frozen VLM prefix of every frame computed once (adapt.PrefixBank, blocks of 32): the values LazyPrefixBank recomputes
+    at every step (the prefix does not depend on the adapter, which lives in the action expert only)."""
+    store = a.cache_store if a.cache_store != "auto" else ("cpu" if len(obs) > a.cache_gpu_max else None)
+    return adapt.PrefixBank(bk, obs, store=None if store == "cuda" else store)
+
+
+def concept_frames(a, bk, norm, demo, ndemo=1, timer=None):
+    """The concept's phase frames exactly as joint() cuts them (same key match, segment, transport / approach cut, chunk rows,
+    prompts), from demonstrations demo .. demo + ndemo - 1 of every task of --joint.  -> (obs, full rows, used).
+    timer: a dict that accumulates seconds of episode loading (video decode) and observation building."""
+    spec = importlib.util.spec_from_file_location("r3p", os.path.join(ROOT, "experiments", "r3_prepare.py"))
+    r3p = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(r3p)
+    if a.source == "d40":
+        d90 = D.Demos()
+        texts = d90.tasks
+        demos_of = lambda t: d90.episodes(t)[demo:demo + ndemo]            # noqa: E731
+    else:
+        texts, _ = r3p.libero90_texts()
+        d90 = D.Demos90()
+        demos_of = lambda t: d90.episodes_of_task(t)[demo:demo + ndemo]    # noqa: E731
+    timer = timer if timer is not None else {}
+    obs, rows, used = [], [], []
+    pairs = [(t, e) for t in [int(x) for x in a.joint.split("+")] for e in demos_of(t)]
+    for t, e_ in pairs:
+        steps = P.steps_of(texts[t])
+        match = P.goal_key if a.goal else P.object_key if a.approach else P.step_key
+        s = next((i for i, c in enumerate(steps) if match(c) == a.key), None)
+        t0 = time.time()
+        ep = d90.load(e_)
+        timer["load"] = timer.get("load", 0.0) + time.time() - t0
+        segs = P.segment(ep["actions"], len(steps))
+        if s is None or segs is None:
+            continue
+        lo, hi = segs[s]
+        if a.goal:
+            tr = P.transport(ep["actions"], lo, hi)
+            if tr is None:
+                continue
+            lo, hi = tr
+        if a.approach:
+            ap_ = P.approach(ep["actions"], lo, hi)
+            if ap_ is None:
+                continue
+            lo, hi = ap_
+        idx, _ = D.chunk_indices(len(ep["actions"]), bk.H)
+        rows.append(D.pad_rows(chunk_rows(ep, idx[lo:hi], range(lo, hi), norm), bk.H, bk.a, bk.A))
+        t0 = time.time()
+        for i in range(lo, hi):
+            o = d90.observation(ep, i)
+            o["prompt"] = steps[s]
+            obs.append(o)
+        timer["observation"] = timer.get("observation", 0.0) + time.time() - t0
+        used.append(dict(task=t, episode=int(e_), clause=steps[s], frames=[int(lo), int(hi)]))
+    return obs, (np.concatenate(rows, 0) if rows else None), used
+
+
+def heldout_setup(a, bk, norm, state):
+    """Held-out frames (demonstration --heldout of every task of the concept; at most --eval-frames, evenly spaced), their cached
+    prefixes, fixed draws and the frozen policy's loss on them."""
+    obs, full, used = concept_frames(a, bk, norm, a.heldout, 1)
+    if not obs:
+        raise SystemExit(f"[c0j] no held-out frames at demonstration {a.heldout}")
+    keep = np.unique(np.linspace(0, len(obs) - 1, min(a.eval_frames, len(obs))).round().astype(int))
+    obs, full = [obs[i] for i in keep], full[keep]
+    bank = adapt.PrefixBank(bk, obs)
+    draws = adapt.fixed_draws(bank.n, bk.H, bk.A)
+    frozen = adapt.heldout_loss(bk, state, set(), bank, full, draws)
+    print(f"[c0j] held-out: {len(obs)} frames of demonstration {a.heldout} ({len(used)} demos); frozen-policy flow loss {frozen:.4f}",
+          flush=True)
+    return dict(bank=bank, full=full, draws=draws, frozen=frozen, frames=len(obs), used=used)
+
+
+def init_best(a, bk, state, bank, full):
+    """Warm start by fit: each candidate prototype's flow loss on this concept's TRAINING frames (fixed draws); the lowest wins if
+    it beats the frozen policy (else scratch).  Candidates are loaded under their own keys and dropped afterwards."""
+    from lifelong_ood.experts.lora import drop_node
+    draws = adapt.fixed_draws(bank.n, bk.H, bk.A, seed=4321)
+    losses = {"(policy)": adapt.heldout_loss(bk, state, set(), bank, full, draws)}
+    for n_ in [x for x in a.init_best.split("+") if x]:
+        p_ = os.path.join(R, f"prim_{n_}_0.pt")
+        if not os.path.exists(p_):
+            print(f"[c0j] init candidate {n_}: no file; skipped", flush=True)
+            continue
+        _, k_, banks_ = adapt.load(bk, p_, state=state)
+        losses[n_] = adapt.heldout_loss(bk, state, {k_}, bank, full, draws)
+        drop_node(banks_, k_)
+    best = min(losses, key=losses.get)
+    print(f"[c0j] init by fit: {best} ({losses[best]:.4f}; policy {losses['(policy)']:.4f}; {len(losses) - 1} candidates)", flush=True)
+    return dict(losses=losses, chosen=best, chosen_path="" if best == "(policy)" else f"prim_{best}_0.pt")
 
 
 if __name__ == "__main__":
