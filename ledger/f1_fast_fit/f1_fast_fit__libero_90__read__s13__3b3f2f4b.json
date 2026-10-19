@@ -1,0 +1,287 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/zf_fast_fit.py --run",
+ "config": {
+  "recipe": {
+   "init": "scratch",
+   "steps": 200
+  }
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "f1_fast_fit",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "3b3f2f4bfc9fc15d6234756c7a0a58748acb5e73",
+  "short": "3b3f2f4b"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": {
+   "diff": {
+    "diff": -0.15862068965517243,
+    "hi": -0.07241379310344828,
+    "hi90": -0.08448275862068966,
+    "lo": -0.25517241379310346,
+    "lo90": -0.23620689655172414,
+    "n_pairs": 580,
+    "n_tasks": 29
+   },
+   "discordant": [
+    29,
+    121
+   ],
+   "n": 580,
+   "noninferior": false,
+   "sign_p": 1.461721181369396e-14,
+   "tasks": 29,
+   "x": 388,
+   "y": 480
+  },
+  "H2": {
+   "diff": {
+    "diff": -0.010606060606060607,
+    "hi": 0.015909090909090907,
+    "hi90": 0.012121212121212121,
+    "lo": -0.038636363636363635,
+    "lo90": -0.03409090909090909,
+    "n_pairs": 1320,
+    "n_tasks": 66
+   },
+   "discordant": [
+    52,
+    66
+   ],
+   "n": 1320,
+   "noninferior": true,
+   "sign_p": 0.23126568219748736,
+   "tasks": 66,
+   "x": 980,
+   "y": 994
+  },
+  "H2_missing": [],
+  "all30": {
+   "diff": {
+    "diff": -0.15,
+    "hi": -0.06666666666666667,
+    "hi90": -0.07666666666666666,
+    "lo": -0.245,
+    "lo90": -0.23,
+    "n_pairs": 600,
+    "n_tasks": 30
+   },
+   "discordant": [
+    33,
+    123
+   ],
+   "n": 600,
+   "sign_p": 2.1033030286992986e-13,
+   "tasks": 30,
+   "x": 405,
+   "y": 495
+  },
+  "fit": {
+   "Ghtray": {
+    "frames": 714,
+    "init": "",
+    "job_min": 2.522349993387858,
+    "train_min": 0.4365502675374349
+   },
+   "Gscbasket": {
+    "frames": 682,
+    "init": "",
+    "job_min": 2.4546064217885335,
+    "train_min": 0.4610346476236979
+   },
+   "Gsccab": {
+    "frames": 568,
+    "init": "",
+    "job_min": 2.3902246753374734,
+    "train_min": 0.45835261742273964
+   },
+   "Gscplate": {
+    "frames": 667,
+    "init": "",
+    "job_min": 2.4835604747136433,
+    "train_min": 0.45538216829299927
+   },
+   "Osc0": {
+    "frames": 146,
+    "init": "",
+    "job_min": 1.8325877070426941,
+    "train_min": 0.440572981039683
+   },
+   "Osc1": {
+    "frames": 654,
+    "init": "",
+    "job_min": 2.46463227669398,
+    "train_min": 0.4503100633621216
+   },
+   "Osc10": {
+    "frames": 203,
+    "init": "",
+    "job_min": 2.046758536497752,
+    "train_min": 0.4993168592453003
+   },
+   "Osc11": {
+    "frames": 39,
+    "init": "",
+    "job_min": 1.706358508268992,
+    "train_min": 0.42717376550038655
+   },
+   "Osc12": {
+    "frames": 186,
+    "init": "",
+    "job_min": 1.8536996404329935,
+    "train_min": 0.4287484606107076
+   },
+   "Osc13": {
+    "frames": 188,
+    "init": "",
+    "job_min": 1.8520768562952676,
+    "train_min": 0.4284976323445638
+   },
+   "Osc14": {
+    "frames": 118,
+    "init": "",
+    "job_min": 1.8087360461552937,
+    "train_min": 0.45278199513753253
+   },
+   "Osc2": {
+    "frames": 142,
+    "init": "",
+    "job_min": 1.7964221040407817,
+    "train_min": 0.43602813482284547
+   },
+   "Osc3": {
+    "frames": 187,
+    "init": "",
+    "job_min": 1.9006800214449564,
+    "train_min": 0.42678964535395303
+   },
+   "Osc4": {
+    "frames": 66,
+    "init": "",
+    "job_min": 1.849037261803945,
+    "train_min": 0.4482395569483439
+   },
+   "Osc5": {
+    "frames": 63,
+    "init": "",
+    "job_min": 1.668372376759847,
+    "train_min": 0.4417199691136678
+   },
+   "Osc6": {
+    "frames": 567,
+    "init": "",
+    "job_min": 2.3000884731610616,
+    "train_min": 0.4404597481091817
+   },
+   "Osc7": {
+    "frames": 230,
+    "init": "",
+    "job_min": 1.8145476222038268,
+    "train_min": 0.4082777221997579
+   },
+   "Osc8": {
+    "frames": 35,
+    "init": "",
+    "job_min": 1.9863690257072448,
+    "train_min": 0.48221576611200967
+   },
+   "Osc9": {
+    "frames": 59,
+    "init": "",
+    "job_min": 2.030320870876312,
+    "train_min": 0.5019907355308533
+   },
+   "Sch0": {
+    "frames": 36,
+    "init": "",
+    "job_min": 1.6617616097132364,
+    "train_min": 0.45650575558344525
+   },
+   "Sch1": {
+    "frames": 71,
+    "init": "",
+    "job_min": 1.7529099901517233,
+    "train_min": 0.44873655239741006
+   },
+   "Sch2": {
+    "frames": 81,
+    "init": "",
+    "job_min": 1.7350324392318726,
+    "train_min": 0.4338870366414388
+   }
+  },
+  "fit_job_min_mean": 1.9959605878049678,
+  "fit_train_min_mean": 0.4483441854968216,
+  "kept_fast": {
+   "hfac": 17,
+   "zs": 13
+  },
+  "kept_r16_rule": {
+   "hfac": 29,
+   "lora": 24,
+   "zs": 13
+  },
+  "kept_r4_rule": {
+   "hfac": 29,
+   "lora": 24,
+   "zs": 13
+  },
+  "kept_vs_e3_kept": {
+   "diff": {
+    "diff": -0.15862068965517243,
+    "hi": -0.07237068965517304,
+    "hi90": -0.08448275862068966,
+    "lo": -0.25689655172413794,
+    "lo90": -0.2396551724137931,
+    "n_pairs": 580,
+    "n_tasks": 29
+   },
+   "discordant": [
+    25,
+    117
+   ],
+   "n": 580,
+   "sign_p": 1.9856569224439697e-15,
+   "tasks": 29,
+   "x": 388,
+   "y": 480
+  },
+  "missing": [],
+  "recipe": {
+   "init": "scratch",
+   "steps": 200
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "f1_fast_fit__libero_90__read__s13__3b3f2f4b",
+ "schema": 1,
+ "script": "experiments/zf_fast_fit.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-19T23:44:01+00:00",
+ "stream": null,
+ "tag": "read"
+}

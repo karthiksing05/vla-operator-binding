@@ -40,10 +40,19 @@ over a scratch fit stopped at 200 steps. In the warm start, the loss-chosen near
 (rank 4: 0.071 against 0.037 on task 24). Yet they succeed far more often in rollouts. The recipe is therefore confirmed by
 rollouts.
 
-## The fast fit and its test
+## The fast fit and its test (pre-registered; ledger `f1_fast_fit` tag `read`)
 
-The recipe is a cached prefix, from scratch, 200 steps: about 28 s of steps, plus the 43 s caching pass and the 79 s model load,
-for about 2.5 min of wall time per unit against 39.4. The pre-registered test (`zf_fast_fit.py`; running) checks two things:
-- **H1:** E3's library refit with the recipe is non-inferior (−0.05) to E3's library on set b.
-- **H2:** G8's leaves rule with rank-4 leaves is non-inferior to the rank-16 rule on set d. Rank-4 leaves move the storage
-  crossover against per-task LoRA r4 from never to about 590 tasks (docs/SCALING.md).
+The recipe tested was a cached prefix, from scratch, 200 steps: 2.0 min of job time per unit against 39.4.
+
+| hypothesis | result |
+|---|---|
+| H1: E3's library refit with the recipe, non-inferior to E3's library (29 tasks, set b, 20 each) | **FAILS**: 388 against 480 of 580, difference −0.159 (95% interval −0.255 to −0.072) |
+| H2: G8's leaves rule with rank-4 leaves, non-inferior to the rank-16 rule (66 tasks, set d) | **passes**: 980 against 994 of 1,320, difference −0.011 (−0.039 to +0.016) |
+
+**Held-out flow loss is the wrong criterion for how long to fit.** The 800 steps it called overfitting are what make a unit
+succeed. A unit must commit to the demonstration's mode, while a held-out likelihood rewards a field that hedges. This is the
+same lesson as the categorical gripper in the soft blend (docs/INTERPRETATION.md section 4): decisions must be sharp.
+
+**What is free.** Caching the frozen prefix reproduces the 1,000-step fit (equal losses) at 4.6 min instead of 39.4, an 8.6×
+saving with nothing traded. Rank-4 leaves are non-inferior to rank-16 ones at a quarter of the bytes, which moves the storage
+crossover against per-task rank-4 LoRAs from never to about 590 tasks (docs/SCALING.md).

@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/z5_ablate_24_blend_l90_24.x3_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=blend:l90_24.x3 SUITE=libero_90 TASKS=24 TRIALS=10 (job 4157187)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_states_d",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/z5_ablate_24_blend_l90_24.x3_seed13.json",
+   "port": 9111,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "24",
+   "trials": 10,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4157187",
+  "mode": "blend:l90_24.x3"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "megazord.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4157187",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "z5_ablate",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "2414763f746425588e57aa5ef5b65e32766a0a06",
+  "short": "2414763f"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "blend:l90_24.x3",
+  "tasks": "24",
+  "trials": 10
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 10,
+  "secs": 291.32966804504395,
+  "success_rate": 1.0,
+  "tasks": {
+   "24": {
+    "errors": 0,
+    "language": "put the black bowl in the bottom drawer of the cabinet",
+    "mean_steps": 133.6,
+    "n": 10,
+    "success_rate": 1.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "z5_ablate__libero_90__blend_l90_24.x3_seed13__first_trial-0__mode-blend-l90_24.x3__tasks-24__trials-10__s7__2414763f",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-19T23:53:22+00:00",
+ "stream": null,
+ "tag": "blend_l90_24.x3_seed13"
+}
