@@ -1,0 +1,320 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g19_leaves_policies.py --read --record",
+ "config": {
+  "backbone": "xvla"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g19_leaves_policies",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c31ebde8b9b0e4e5a21e7f935fcf6a8ed0c09048",
+  "short": "c31ebde8"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": {
+   "diff": {
+    "diff": 0.006896551724137931,
+    "hi": 0.034482758620689655,
+    "hi90": 0.03103448275862069,
+    "lo": -0.013793103448275862,
+    "lo90": -0.01206896551724138,
+    "n_pairs": 580,
+    "n_tasks": 29
+   },
+   "discordant": [
+    10,
+    6
+   ],
+   "n": 580,
+   "noninferior": true,
+   "sign_p": 0.454498291015625,
+   "tasks": 29,
+   "x": 551,
+   "y": 547
+  },
+  "H2": {
+   "diff": {
+    "diff": 0.04310344827586207,
+    "hi": 0.08620689655172414,
+    "hi90": 0.07758620689655173,
+    "lo": 0.008620689655172414,
+    "lo90": 0.013793103448275862,
+    "n_pairs": 580,
+    "n_tasks": 29
+   },
+   "discordant": [
+    34,
+    9
+   ],
+   "n": 580,
+   "sign_p": 0.00017015517460094998,
+   "tasks": 29,
+   "x": 551,
+   "y": 526
+  },
+  "backbone": "xvla",
+  "kept": {
+   "hfac": 10,
+   "lora": 5,
+   "zs": 14
+  },
+  "library_vs_lora_acc": {
+   "diff": {
+    "diff": -0.020689655172413793,
+    "hi": 0.017241379310344827,
+    "hi90": 0.010344827586206896,
+    "lo": -0.05862068965517241,
+    "lo90": -0.05344827586206897,
+    "n_pairs": 580,
+    "n_tasks": 29
+   },
+   "discordant": [
+    11,
+    23
+   ],
+   "n": 580,
+   "sign_p": 0.05761267291381955,
+   "tasks": 29,
+   "x": 535,
+   "y": 547
+  },
+  "missing": [],
+  "per_task": {
+   "10": {
+    "kept": "zs",
+    "leaves": 19,
+    "library": 19,
+    "lora_acc": 19,
+    "zs": 19
+   },
+   "12": {
+    "kept": "zs",
+    "leaves": 19,
+    "library": 19,
+    "lora_acc": 19,
+    "zs": 19
+   },
+   "13": {
+    "kept": "zs",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "14": {
+    "kept": "zs",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "15": {
+    "kept": "lora",
+    "leaves": 20,
+    "library": 18,
+    "lora_acc": 20,
+    "zs": 18
+   },
+   "25": {
+    "kept": "hfac",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "30": {
+    "kept": "zs",
+    "leaves": 17,
+    "library": 17,
+    "lora_acc": 17,
+    "zs": 17
+   },
+   "31": {
+    "kept": "zs",
+    "leaves": 19,
+    "library": 19,
+    "lora_acc": 19,
+    "zs": 19
+   },
+   "36": {
+    "kept": "zs",
+    "leaves": 18,
+    "library": 18,
+    "lora_acc": 18,
+    "zs": 18
+   },
+   "41": {
+    "kept": "zs",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "43": {
+    "kept": "hfac",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "46": {
+    "kept": "hfac",
+    "leaves": 18,
+    "library": 18,
+    "lora_acc": 18,
+    "zs": 18
+   },
+   "47": {
+    "kept": "lora",
+    "leaves": 20,
+    "library": 15,
+    "lora_acc": 20,
+    "zs": 15
+   },
+   "48": {
+    "kept": "zs",
+    "leaves": 17,
+    "library": 17,
+    "lora_acc": 17,
+    "zs": 17
+   },
+   "49": {
+    "kept": "hfac",
+    "leaves": 17,
+    "library": 17,
+    "lora_acc": 11,
+    "zs": 11
+   },
+   "50": {
+    "kept": "lora",
+    "leaves": 19,
+    "library": 16,
+    "lora_acc": 19,
+    "zs": 16
+   },
+   "52": {
+    "kept": "zs",
+    "leaves": 18,
+    "library": 18,
+    "lora_acc": 18,
+    "zs": 18
+   },
+   "53": {
+    "kept": "hfac",
+    "leaves": 18,
+    "library": 18,
+    "lora_acc": 18,
+    "zs": 18
+   },
+   "54": {
+    "kept": "zs",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "55": {
+    "kept": "zs",
+    "leaves": 19,
+    "library": 19,
+    "lora_acc": 19,
+    "zs": 19
+   },
+   "56": {
+    "kept": "zs",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "57": {
+    "kept": "lora",
+    "leaves": 20,
+    "library": 15,
+    "lora_acc": 20,
+    "zs": 15
+   },
+   "58": {
+    "kept": "hfac",
+    "leaves": 17,
+    "library": 17,
+    "lora_acc": 16,
+    "zs": 17
+   },
+   "59": {
+    "kept": "zs",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "61": {
+    "kept": "hfac",
+    "leaves": 17,
+    "library": 17,
+    "lora_acc": 19,
+    "zs": 15
+   },
+   "62": {
+    "kept": "lora",
+    "leaves": 20,
+    "library": 19,
+    "lora_acc": 20,
+    "zs": 19
+   },
+   "71": {
+    "kept": "hfac",
+    "leaves": 19,
+    "library": 19,
+    "lora_acc": 20,
+    "zs": 20
+   },
+   "72": {
+    "kept": "hfac",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 18
+   },
+   "9": {
+    "kept": "hfac",
+    "leaves": 20,
+    "library": 20,
+    "lora_acc": 20,
+    "zs": 20
+   }
+  },
+  "tasks": 29
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g19_leaves_policies__libero_90__read_xvla__s13__c31ebde8",
+ "schema": 1,
+ "script": "experiments/g19_leaves_policies.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-19T13:12:47+00:00",
+ "stream": null,
+ "tag": "read_xvla"
+}

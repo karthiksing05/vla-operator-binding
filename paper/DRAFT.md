@@ -281,6 +281,12 @@ interpolation (difference 0.285, 95% interval 0.130 to 0.450) and 210 for Li's p
 interval 0.010 to 0.250); practice chooses interpolation on 4 tasks. With pi0 (336 against 316) and pi0.5 (312 against 245),
 the system matches or beats the prior method on every policy, with an operator chosen per task.
 
+**Task leaves on all four policies.** The rule of iteration 8, unchanged, on the refit libraries of pi0, SmolVLA and X-VLA
+(pre-registered G19; 29 tasks, set d): against each policy's per-task LoRA with acceptance, pi0 succeeds 390 against 338 of 580
+(difference 0.090, 95% interval 0.038 to 0.153), SmolVLA 284 against 275 (95% interval -0.022 to 0.059) and X-VLA 551 against
+547 (95% interval -0.014 to 0.034): better on pi0 and non-inferior on the other two. With pi0.5 (994 against 932 of 1,320),
+the one-demonstration side holds on all four architectures.
+
 ### Against adapter composition
 On 52 of the held-out tasks, summing the per-task adapters of an object donor and a goal donor collapses (71 of 1,040);
 averaging them stays at the policy's level (328 against 336); the recombined concepts reach 345; with practice they reach 466
@@ -304,6 +310,18 @@ arrivals (0 successes against 28 on the last 10): the forgetting the library avo
 most of the early arrivals (138 on the first 10, 87 on the last 10) but stores every demonstration it replays.
 
 ### Ablations
+One table per side on pi0.5, every row paired with the full system on the same new start states (pre-registered G20).
+LIBERO-90 (66 tasks, set d): the full system succeeds 994 of 1,320 times. Removing task leaves gives 906 (difference 0.067, 95%
+interval 0.033 to 0.105); removing practice, so the composition is always served, gives 897 (0.073, 95% interval 0.033 to
+0.119); replacing composition with per-task adapters gives 932 (0.047, 95% interval 0.008 to 0.091); the policy alone gives 400.
+Inside the composition (897 of 1,320 always on), each unit carries part of the task: the object unit alone reaches 555 and the
+goal unit alone 539; both units on for the whole episode reach 489; the switch at the grasp matters as much as either unit;
+and on the instance tasks the type prototype in place of the instance child reaches 21 of 80 against 77. Li's OOD suites (set
+e): the full system succeeds 312 of 400 times. Word-matched sources in place of practice-chosen ones give 160 (difference 0.380,
+95% interval 0.223 to 0.545), the largest single loss; Li's fixed step in place of the grasp gives 259 (0.133, 95% interval
+0.050 to 0.233); one operator in place of the choice gives 282 (grasp switch) and 249 (TLI); the object source alone gives 204
+and the goal source alone 231. Every component contributes, and the sources contribute most.
+
 The switch at the grasp: with both prototypes on for the whole episode the library succeeds 281 of 600 times, level with the
 policy (273); switched at the policy's own grasp it succeeds 495. The phase gating carries the gain. Capacity: refit at rank 8 or
 rank 16 instead of 4, the library is unchanged (498 and 504 against 499 of 600) and stays short of non-inferiority to the
