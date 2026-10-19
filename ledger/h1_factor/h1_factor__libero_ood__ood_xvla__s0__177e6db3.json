@@ -1,0 +1,158 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/h1_factor.py --record",
+ "config": {
+  "shrink": 2.0
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "h1_factor",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "177e6db3d60c84225fc2a301417ac2d44e1b6a9a",
+  "short": "177e6db3"
+ },
+ "keys": {},
+ "metrics": {
+  "grasp_same_object_across_goal_sources": [
+   1781,
+   1785
+  ],
+  "grasp_transfer": {
+   "bias": -0.010377358490566051,
+   "cells": 53,
+   "mae": 0.05188679245283018,
+   "pearson": 0.9434297683953986
+  },
+  "loo_practice": {
+   "cells": 384,
+   "episodes": 2120,
+   "intercept": -0.0021146147959851674,
+   "mae": 0.03821247520627352,
+   "misfit_cells": 5,
+   "misfit_over": 2,
+   "misfit_under": 3,
+   "observed": 318,
+   "pearson": 0.9380576045122728,
+   "predicted": 301.6355205665891,
+   "slope": 1.0509357980856737,
+   "spearman": 0.655905031481933
+  },
+  "out_of_sample": {
+   "by_set": {
+    "c": {
+     "cells": 20,
+     "episodes": 400,
+     "intercept": -0.017219003904699937,
+     "mae": 0.06363962434606732,
+     "misfit_cells": 3,
+     "misfit_over": 1,
+     "misfit_under": 2,
+     "observed": 122,
+     "pearson": 0.9598640327877692,
+     "predicted": 125.50232206878457,
+     "slope": 1.0269738395058543,
+     "spearman": 0.921443985818259
+    },
+    "e": {
+     "cells": 33,
+     "episodes": 660,
+     "intercept": 0.03548117364095332,
+     "mae": 0.06806737720410003,
+     "misfit_cells": 4,
+     "misfit_over": 2,
+     "misfit_under": 2,
+     "observed": 323,
+     "pearson": 0.9768192395841641,
+     "predicted": 298.44134198231274,
+     "slope": 1.003823476355785,
+     "spearman": 0.938023549022933
+    }
+   },
+   "cells": 53,
+   "episodes": 1060,
+   "intercept": 0.011610990426518586,
+   "mae": 0.06639652706899336,
+   "misfit_cells": 7,
+   "misfit_over": 3,
+   "misfit_under": 4,
+   "observed": 445,
+   "pearson": 0.9707782884723994,
+   "predicted": 423.94366405109736,
+   "slope": 1.020636435542385,
+   "spearman": 0.9357865766230504
+  },
+  "place_transfer": {
+   "bias": 0.01778591902299874,
+   "cells": 51,
+   "mae": 0.07565128289017838,
+   "pearson": 0.9607790646018749
+  },
+  "practice_cells": 680,
+  "practice_pooled": {
+   "named": 2333,
+   "other": 1267,
+   "p_succ_named": 0.26660951564509217,
+   "p_succ_other": 0.006314127861089187
+  },
+  "residual_by_task": {
+   "libero_goal_ood:0": 0.041744673962297765,
+   "libero_goal_ood:1": -0.08700396416954127,
+   "libero_goal_ood:2": 0.06531360554301018,
+   "libero_goal_ood:3": 0.1072804246880839,
+   "libero_goal_ood:4": -0.11248319160089523,
+   "libero_goal_ood:5": -0.06445334527581574,
+   "libero_goal_ood:6": 0.07874669593987005,
+   "libero_goal_ood:7": 0.034735269257423984,
+   "libero_goal_ood:8": 0.058333400098545374,
+   "libero_goal_ood:9": 0.16938513813233258,
+   "libero_spatial_ood:0": -0.010157983328640338,
+   "libero_spatial_ood:1": 0.014153747431433716,
+   "libero_spatial_ood:2": -0.012714962249172542,
+   "libero_spatial_ood:3": 0.11083253947969605,
+   "libero_spatial_ood:4": -0.0004978208275670396,
+   "libero_spatial_ood:5": -0.00040174809553292185,
+   "libero_spatial_ood:6": -0.0003503627361225346,
+   "libero_spatial_ood:7": -0.0004569456893471782,
+   "libero_spatial_ood:8": 0.016205778216084023,
+   "libero_spatial_ood:9": -0.0005970392200400665
+  },
+  "stage1_homogeneity": {
+   "G": 48.948069477919105,
+   "df": 110,
+   "p": 0.9999999221179097
+  },
+  "test_cells": 53
+ },
+ "notes": null,
+ "retired": {
+  "reason": "superseded by the H1 rerun of 2026-10-19 (G20 arms added; per-dimension error panel)",
+  "when": "2026-10-19T13:24:24+00:00"
+ },
+ "run_id": "h1_factor__libero_ood__ood_xvla__s0__177e6db3",
+ "schema": 1,
+ "script": "experiments/h1_factor.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T04:11:20+00:00",
+ "stream": null,
+ "tag": "ood_xvla"
+}

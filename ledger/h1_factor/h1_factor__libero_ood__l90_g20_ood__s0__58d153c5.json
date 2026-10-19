@@ -1,0 +1,401 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/h1_factor.py --record",
+ "config": {
+  "shrink": 2.0
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "h1_factor",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "58d153c5ca116cf97cfe4812e1a3e3f8680f8d49",
+  "short": "58d153c5"
+ },
+ "keys": {},
+ "metrics": {
+  "arms": {
+   "both": {
+    "episodes": 400,
+    "named_first": 375,
+    "p_named": 0.9375,
+    "p_succ_named": 0.7493333333333333,
+    "p_succ_other": 0.04,
+    "success_given_named": 281,
+    "success_given_other": 1,
+    "successes": 282
+   },
+   "goal": {
+    "episodes": 400,
+    "named_first": 336,
+    "p_named": 0.84,
+    "p_succ_named": 0.6785714285714286,
+    "p_succ_other": 0.046875,
+    "success_given_named": 228,
+    "success_given_other": 3,
+    "successes": 231
+   },
+   "obj": {
+    "episodes": 400,
+    "named_first": 372,
+    "p_named": 0.93,
+    "p_succ_named": 0.5483870967741935,
+    "p_succ_other": 0.0,
+    "success_given_named": 204,
+    "success_given_other": 0,
+    "successes": 204
+   },
+   "zs": {
+    "episodes": 400,
+    "named_first": 338,
+    "p_named": 0.845,
+    "p_succ_named": 0.41420118343195267,
+    "p_succ_other": 0.04838709677419355,
+    "success_given_named": 140,
+    "success_given_other": 3,
+    "successes": 143
+   }
+  },
+  "baseline_max_component": {
+   "cells": 20,
+   "episodes": 400,
+   "intercept": 0.029258691859227914,
+   "mae": 0.0625,
+   "misfit_cells": 5,
+   "misfit_over": 2,
+   "misfit_under": 3,
+   "observed": 282,
+   "pearson": 0.9709682867653325,
+   "predicted": 271.0,
+   "slope": 0.9974041448572282,
+   "spearman": 0.8720798234464213
+  },
+  "decomposition": {
+   "obs_named": 281,
+   "obs_other": 1,
+   "pred_named": 254.47979797979798,
+   "pred_other": 0.25803571428571426
+  },
+  "estimable_tasks": 19,
+  "goal_arm_without_named_grasp": 0,
+  "grasp_both_vs_obj": {
+   "both": 375,
+   "n": 400,
+   "obj": 372
+  },
+  "in_sample": {
+   "cells": 20,
+   "episodes": 400,
+   "intercept": 0.007425922903381843,
+   "mae": 0.1045274782261389,
+   "misfit_cells": 2,
+   "misfit_over": 2,
+   "misfit_under": 0,
+   "observed": 282,
+   "pearson": 0.9476653085327766,
+   "predicted": 254.7378336940837,
+   "slope": 1.0953599894931028,
+   "spearman": 0.8774715257597806
+  },
+  "in_sample_clean": {
+   "cells": 20,
+   "episodes": 400,
+   "intercept": 0.007425922903381843,
+   "mae": 0.1045274782261389,
+   "misfit_cells": 2,
+   "misfit_over": 2,
+   "misfit_under": 0,
+   "observed": 282,
+   "pearson": 0.9476653085327766,
+   "predicted": 254.7378336940837,
+   "slope": 1.0953599894931028,
+   "spearman": 0.8774715257597806
+  },
+  "in_sample_clean_zero_w": {
+   "cells": 20,
+   "episodes": 400,
+   "intercept": 0.009117425483954333,
+   "mae": 0.1044761389404246,
+   "misfit_cells": 2,
+   "misfit_over": 2,
+   "misfit_under": 0,
+   "observed": 282,
+   "pearson": 0.9477320512207714,
+   "predicted": 254.479797979798,
+   "slope": 1.093811893974057,
+   "spearman": 0.8774715257597806
+  },
+  "in_sample_estimable_zero_w": {
+   "cells": 19,
+   "episodes": 380,
+   "intercept": 0.01174840995984805,
+   "mae": 0.10997488309518381,
+   "misfit_cells": 2,
+   "misfit_over": 2,
+   "misfit_under": 0,
+   "observed": 282,
+   "pearson": 0.936783765350874,
+   "predicted": 254.479797979798,
+   "slope": 1.0905997506226017,
+   "spearman": 0.8594802568679216
+  },
+  "in_sample_zero_w": {
+   "cells": 20,
+   "episodes": 400,
+   "intercept": 0.009117425483954333,
+   "mae": 0.1044761389404246,
+   "misfit_cells": 2,
+   "misfit_over": 2,
+   "misfit_under": 0,
+   "observed": 282,
+   "pearson": 0.9477320512207714,
+   "predicted": 254.479797979798,
+   "slope": 1.093811893974057,
+   "spearman": 0.8774715257597806
+  },
+  "interface_both_vs_goal": {
+   "diff": 0.07076190476190469,
+   "hi": 0.13989934986532918,
+   "lo": 0.01250267725283298,
+   "tasks": 20
+  },
+  "interface_obj_vs_zs": {
+   "diff": 0.13172043010752682,
+   "hi": 0.25254264549364214,
+   "lo": 0.026559102076342614,
+   "tasks": 19
+  },
+  "per_task": {
+   "libero_goal_ood:0": {
+    "g": 1.0,
+    "n": 20,
+    "obs": 0.95,
+    "p": 0.827,
+    "p_both_named": 0.95,
+    "pred": 0.827,
+    "pred0": 0.827,
+    "w": 0.031
+   },
+   "libero_goal_ood:1": {
+    "g": 1.0,
+    "n": 20,
+    "obs": 0.95,
+    "p": 0.824,
+    "p_both_named": 0.95,
+    "pred": 0.824,
+    "pred0": 0.824,
+    "w": 0.01
+   },
+   "libero_goal_ood:2": {
+    "g": 0.8,
+    "n": 20,
+    "obs": 0.55,
+    "p": 0.484,
+    "p_both_named": 0.5882352941176471,
+    "pred": 0.389,
+    "pred0": 0.387,
+    "w": 0.006
+   },
+   "libero_goal_ood:3": {
+    "g": 0.0,
+    "n": 20,
+    "obs": 0.0,
+    "p": 0.452,
+    "p_both_named": 0.0,
+    "pred": 0.004,
+    "pred0": 0.0,
+    "w": 0.004
+   },
+   "libero_goal_ood:4": {
+    "g": 1.0,
+    "n": 20,
+    "obs": 1.0,
+    "p": 0.925,
+    "p_both_named": 1.0,
+    "pred": 0.925,
+    "pred0": 0.925,
+    "w": 0.047
+   },
+   "libero_goal_ood:5": {
+    "g": 1.0,
+    "n": 20,
+    "obs": 0.95,
+    "p": 0.744,
+    "p_both_named": 0.95,
+    "pred": 0.744,
+    "pred0": 0.744,
+    "w": 0.047
+   },
+   "libero_goal_ood:6": {
+    "g": 1.0,
+    "n": 20,
+    "obs": 0.95,
+    "p": 0.471,
+    "p_both_named": 0.95,
+    "pred": 0.471,
+    "pred0": 0.471,
+    "w": 0.047
+   },
+   "libero_goal_ood:7": {
+    "g": 1.0,
+    "n": 20,
+    "obs": 0.9,
+    "p": 0.918,
+    "p_both_named": 0.9,
+    "pred": 0.918,
+    "pred0": 0.918,
+    "w": 0.523
+   },
+   "libero_goal_ood:8": {
+    "g": 1.0,
+    "n": 20,
+    "obs": 0.25,
+    "p": 0.398,
+    "p_both_named": 0.25,
+    "pred": 0.398,
+    "pred0": 0.398,
+    "w": 0.365
+   },
+   "libero_goal_ood:9": {
+    "g": 1.0,
+    "n": 20,
+    "obs": 0.95,
+    "p": 0.768,
+    "p_both_named": 0.95,
+    "pred": 0.768,
+    "pred0": 0.768,
+    "w": 0.023
+   },
+   "libero_spatial_ood:0": {
+    "g": 0.9,
+    "n": 20,
+    "obs": 0.95,
+    "p": 0.971,
+    "p_both_named": 1.0,
+    "pred": 0.878,
+    "pred0": 0.874,
+    "w": 0.047
+   },
+   "libero_spatial_ood:1": {
+    "g": 1.0,
+    "n": 20,
+    "obs": 1.0,
+    "p": 0.971,
+    "p_both_named": 1.0,
+    "pred": 0.971,
+    "pred0": 0.971,
+    "w": 0.047
+   },
+   "libero_spatial_ood:2": {
+    "g": 1.0,
+    "n": 20,
+    "obs": 1.0,
+    "p": 0.908,
+    "p_both_named": 1.0,
+    "pred": 0.908,
+    "pred0": 0.908,
+    "w": 0.006
+   },
+   "libero_spatial_ood:3": {
+    "g": 1.0,
+    "n": 20,
+    "obs": 1.0,
+    "p": 0.971,
+    "p_both_named": 1.0,
+    "pred": 0.971,
+    "pred0": 0.971,
+    "w": 0.047
+   },
+   "libero_spatial_ood:4": {
+    "g": 1.0,
+    "n": 20,
+    "obs": 0.0,
+    "p": 0.062,
+    "p_both_named": 0.0,
+    "pred": 0.062,
+    "pred0": 0.062,
+    "w": 0.047
+   },
+   "libero_spatial_ood:5": {
+    "g": 1.0,
+    "n": 20,
+    "obs": 0.8,
+    "p": 0.698,
+    "p_both_named": 0.8,
+    "pred": 0.698,
+    "pred0": 0.698,
+    "w": 0.047
+   },
+   "libero_spatial_ood:6": {
+    "g": 0.95,
+    "n": 20,
+    "obs": 0.0,
+    "p": 0.071,
+    "p_both_named": 0.0,
+    "pred": 0.069,
+    "pred0": 0.068,
+    "w": 0.019
+   },
+   "libero_spatial_ood:7": {
+    "g": 0.95,
+    "n": 20,
+    "obs": 0.0,
+    "p": 0.065,
+    "p_both_named": 0.0,
+    "pred": 0.063,
+    "pred0": 0.061,
+    "w": 0.031
+   },
+   "libero_spatial_ood:8": {
+    "g": 1.0,
+    "n": 20,
+    "obs": 0.9,
+    "p": 0.88,
+    "p_both_named": 0.9,
+    "pred": 0.88,
+    "pred0": 0.88,
+    "w": 0.047
+   },
+   "libero_spatial_ood:9": {
+    "g": 1.0,
+    "n": 20,
+    "obs": 1.0,
+    "p": 0.971,
+    "p_both_named": 1.0,
+    "pred": 0.971,
+    "pred0": 0.971,
+    "w": 0.047
+   }
+  },
+  "tasks": 20,
+  "tracker_confused_tasks": []
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "h1_factor__libero_ood__l90_g20_ood__s0__58d153c5",
+ "schema": 1,
+ "script": "experiments/h1_factor.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T13:23:57+00:00",
+ "stream": null,
+ "tag": "l90_g20_ood"
+}

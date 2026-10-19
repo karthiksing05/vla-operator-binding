@@ -1,0 +1,107 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/h1_factor.py --record",
+ "config": {
+  "shrink": 2.0
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "h1_factor",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "58d153c5ca116cf97cfe4812e1a3e3f8680f8d49",
+  "short": "58d153c5"
+ },
+ "keys": {},
+ "metrics": {
+  "l90_g5": {
+   "abs_residual_vs_goal_loss": -0.16543335182782848,
+   "abs_residual_vs_object_loss": 0.05578039360317713,
+   "goal_loss_vs_composed_success": {
+    "p": 0.22093374032706278,
+    "rho": -0.17097163588773517
+   },
+   "goal_loss_vs_g_object_unit": {
+    "p": 0.2280774466391973,
+    "rho": -0.16839425871258376
+   },
+   "goal_loss_vs_p_goal_unit": {
+    "p": 0.3419913640036259,
+    "rho": -0.13311730854949924
+   },
+   "goal_loss_vs_residual": {
+    "p": 0.9983898364430883,
+    "rho": 0.00028397093251466394
+   },
+   "object_loss_vs_composed_success": {
+    "p": 0.03998698598643756,
+    "rho": -0.28307345190289995
+   },
+   "object_loss_vs_g_object_unit": {
+    "p": 0.0002177529969545179,
+    "rho": -0.4869429145458143
+   },
+   "object_loss_vs_p_goal_unit": {
+    "p": 0.46352981026907425,
+    "rho": -0.10287724520511825
+   },
+   "object_loss_vs_residual": {
+    "p": 0.26099711639439865,
+    "rho": -0.1571843984207003
+   },
+   "tasks": 53
+  },
+  "ood_pi0": {
+   "goal_loss_vs_residual": -0.017471413945365305,
+   "object_loss_vs_residual": -0.42646184615391686,
+   "tasks": 20,
+   "tasks_with_both_losses": 13
+  },
+  "ood_pi05": {
+   "goal_loss_vs_residual": -0.36107588820421627,
+   "object_loss_vs_residual": 0.13747783198382846,
+   "tasks": 20,
+   "tasks_with_both_losses": 13
+  },
+  "ood_smolvla": {
+   "goal_loss_vs_residual": -0.23586408826243163,
+   "object_loss_vs_residual": -0.0589190708502122,
+   "tasks": 20,
+   "tasks_with_both_losses": 13
+  },
+  "ood_xvla": {
+   "goal_loss_vs_residual": 0.47464007884909076,
+   "object_loss_vs_residual": 0.07014175101215737,
+   "tasks": 20,
+   "tasks_with_both_losses": 13
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "h1_factor__libero__likelihood__s0__58d153c5",
+ "schema": 1,
+ "script": "experiments/h1_factor.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T13:23:59+00:00",
+ "stream": null,
+ "tag": "likelihood"
+}

@@ -1,0 +1,186 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/h1_factor.py --record",
+ "config": {
+  "shrink": 2.0
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "h1_factor",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "177e6db3d60c84225fc2a301417ac2d44e1b6a9a",
+  "short": "177e6db3"
+ },
+ "keys": {},
+ "metrics": {
+  "grasp_same_object_across_goal_sources": [
+   1803,
+   1805
+  ],
+  "grasp_transfer": {
+   "bias": 0.0003875968992247945,
+   "cells": 129,
+   "mae": 0.0251937984496124,
+   "pearson": 0.9714210555782749
+  },
+  "loo_practice": {
+   "cells": 462,
+   "episodes": 2570,
+   "intercept": 0.0006248698179046053,
+   "mae": 0.06678564758918092,
+   "misfit_cells": 21,
+   "misfit_over": 14,
+   "misfit_under": 7,
+   "observed": 529,
+   "pearson": 0.8868575972593084,
+   "predicted": 519.469121398997,
+   "slope": 1.0086185185740861,
+   "spearman": 0.7300071122515527
+  },
+  "out_of_sample": {
+   "by_set": {
+    "c": {
+     "cells": 60,
+     "episodes": 1200,
+     "intercept": 0.03700035287282133,
+     "mae": 0.10391885240205673,
+     "misfit_cells": 13,
+     "misfit_over": 10,
+     "misfit_under": 3,
+     "observed": 651,
+     "pearson": 0.9230829666917449,
+     "predicted": 611.7997575839511,
+     "slope": 0.9915001910888743,
+     "spearman": 0.8681070313070627
+    },
+    "d": {
+     "cells": 20,
+     "episodes": 400,
+     "intercept": 0.06031724879952005,
+     "mae": 0.10866748304317078,
+     "misfit_cells": 6,
+     "misfit_over": 4,
+     "misfit_under": 2,
+     "observed": 264,
+     "pearson": 0.9248227564327142,
+     "predicted": 239.07046156131537,
+     "slope": 1.0033573320335551,
+     "spearman": 0.7774264192945932
+    },
+    "e": {
+     "cells": 28,
+     "episodes": 560,
+     "intercept": 0.07485224879532881,
+     "mae": 0.10113884033511798,
+     "misfit_cells": 6,
+     "misfit_over": 6,
+     "misfit_under": 0,
+     "observed": 353,
+     "pearson": 0.9491056142373036,
+     "predicted": 302.0299193600547,
+     "slope": 1.0299732600457014,
+     "spearman": 0.8853481949124945
+    },
+    "f": {
+     "cells": 21,
+     "episodes": 420,
+     "intercept": 0.06907584849957882,
+     "mae": 0.10078609144435102,
+     "misfit_cells": 4,
+     "misfit_over": 4,
+     "misfit_under": 0,
+     "observed": 298,
+     "pearson": 0.9426502807922559,
+     "predicted": 261.60394067911125,
+     "slope": 1.028226650301584,
+     "spearman": 0.8336753983903997
+    }
+   },
+   "cells": 129,
+   "episodes": 2580,
+   "intercept": 0.05195824203135846,
+   "mae": 0.10354167639303483,
+   "misfit_cells": 29,
+   "misfit_over": 24,
+   "misfit_under": 5,
+   "observed": 1566,
+   "pearson": 0.931808523326622,
+   "predicted": 1414.5040791844324,
+   "slope": 1.0123319943939084,
+   "spearman": 0.8577650057537587
+  },
+  "place_transfer": {
+   "bias": 0.05931832255636638,
+   "cells": 123,
+   "mae": 0.10819048201753886,
+   "pearson": 0.919620205477345
+  },
+  "practice_cells": 724,
+  "practice_pooled": {
+   "named": 2641,
+   "other": 1239,
+   "p_succ_named": 0.3195759182127982,
+   "p_succ_other": 0.0129136400322841
+  },
+  "residual_by_task": {
+   "libero_goal_ood:0": 0.032416793751298884,
+   "libero_goal_ood:1": 0.09275998242390175,
+   "libero_goal_ood:2": -0.11216770878737502,
+   "libero_goal_ood:3": -0.0008790677648469504,
+   "libero_goal_ood:4": 0.02038440814913653,
+   "libero_goal_ood:5": 0.23081548489222345,
+   "libero_goal_ood:6": 0.32323918422362397,
+   "libero_goal_ood:7": 0.08949057740374274,
+   "libero_goal_ood:8": 0.20962666364694765,
+   "libero_goal_ood:9": 0.06338975337894252,
+   "libero_spatial_ood:0": -0.04911474286500576,
+   "libero_spatial_ood:1": -0.01725522766389324,
+   "libero_spatial_ood:2": 0.0778259214843298,
+   "libero_spatial_ood:3": 0.013970163253894238,
+   "libero_spatial_ood:4": -0.0003519512563323954,
+   "libero_spatial_ood:5": 0.09834968306967548,
+   "libero_spatial_ood:6": -0.00021547246502478005,
+   "libero_spatial_ood:7": 0.02461655248426514,
+   "libero_spatial_ood:8": 0.062460113411417606,
+   "libero_spatial_ood:9": 0.039341230250863855
+  },
+  "stage1_homogeneity": {
+   "G": 133.45991676400882,
+   "df": 115,
+   "p": 0.11487746441359709
+  },
+  "test_cells": 129
+ },
+ "notes": null,
+ "retired": {
+  "reason": "superseded by the H1 rerun of 2026-10-19 (G20 arms added; per-dimension error panel)",
+  "when": "2026-10-19T13:24:24+00:00"
+ },
+ "run_id": "h1_factor__libero_ood__ood_pi05__s0__177e6db3",
+ "schema": 1,
+ "script": "experiments/h1_factor.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T04:11:17+00:00",
+ "stream": null,
+ "tag": "ood_pi05"
+}

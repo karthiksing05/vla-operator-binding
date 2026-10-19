@@ -1,0 +1,289 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/h1_factor.py --record",
+ "config": {
+  "shrink": 2.0
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "h1_factor",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "177e6db3d60c84225fc2a301417ac2d44e1b6a9a",
+  "short": "177e6db3"
+ },
+ "keys": {},
+ "metrics": {
+  "arms": {
+   "both": {
+    "episodes": 50,
+    "named_first": 49,
+    "p_named": 0.98,
+    "p_succ_named": 0.8163265306122449,
+    "p_succ_other": 0.0,
+    "success_given_named": 40,
+    "success_given_other": 0,
+    "successes": 40
+   },
+   "goal": {
+    "episodes": 50,
+    "named_first": 12,
+    "p_named": 0.24,
+    "p_succ_named": 1.0,
+    "p_succ_other": 0.0,
+    "success_given_named": 12,
+    "success_given_other": 0,
+    "successes": 12
+   },
+   "obj": {
+    "episodes": 50,
+    "named_first": 49,
+    "p_named": 0.98,
+    "p_succ_named": 0.5306122448979592,
+    "p_succ_other": 0.0,
+    "success_given_named": 26,
+    "success_given_other": 0,
+    "successes": 26
+   },
+   "zs": {
+    "episodes": 50,
+    "named_first": 11,
+    "p_named": 0.22,
+    "p_succ_named": 0.5454545454545454,
+    "p_succ_other": 0.02564102564102564,
+    "success_given_named": 6,
+    "success_given_other": 1,
+    "successes": 7
+   }
+  },
+  "baseline_max_component": {
+   "cells": 10,
+   "episodes": 50,
+   "intercept": 0.5288135593220338,
+   "mae": 0.2,
+   "misfit_cells": 2,
+   "misfit_over": 1,
+   "misfit_under": 1,
+   "observed": 40,
+   "pearson": 0.6509445549041192,
+   "predicted": 32.0,
+   "slope": 0.4237288135593222,
+   "spearman": 0.6272087408492496
+  },
+  "decomposition": {
+   "obs_named": 40,
+   "obs_other": 0,
+   "pred_named": 49.0,
+   "pred_other": 0.0
+  },
+  "goal_arm_without_named_grasp": 6,
+  "grasp_both_vs_obj": {
+   "both": 49,
+   "n": 50,
+   "obj": 49
+  },
+  "in_sample": {
+   "cells": 10,
+   "episodes": 50,
+   "intercept": 1.8888888888888893,
+   "mae": 0.22000000000000003,
+   "misfit_cells": 6,
+   "misfit_over": 0,
+   "misfit_under": 6,
+   "observed": 40,
+   "pearson": -0.3333333333333333,
+   "predicted": 49.0,
+   "slope": -1.1111111111111114,
+   "spearman": -0.3651483716701107
+  },
+  "in_sample_clean": {
+   "cells": 10,
+   "episodes": 50,
+   "intercept": 1.8888888888888893,
+   "mae": 0.22000000000000003,
+   "misfit_cells": 6,
+   "misfit_over": 0,
+   "misfit_under": 6,
+   "observed": 40,
+   "pearson": -0.3333333333333333,
+   "predicted": 49.0,
+   "slope": -1.1111111111111114,
+   "spearman": -0.3651483716701107
+  },
+  "in_sample_clean_zero_w": {
+   "cells": 10,
+   "episodes": 50,
+   "intercept": 1.8888888888888893,
+   "mae": 0.22000000000000003,
+   "misfit_cells": 6,
+   "misfit_over": 0,
+   "misfit_under": 6,
+   "observed": 40,
+   "pearson": -0.3333333333333333,
+   "predicted": 49.0,
+   "slope": -1.1111111111111114,
+   "spearman": -0.3651483716701107
+  },
+  "in_sample_zero_w": {
+   "cells": 10,
+   "episodes": 50,
+   "intercept": 1.8888888888888893,
+   "mae": 0.22000000000000003,
+   "misfit_cells": 6,
+   "misfit_over": 0,
+   "misfit_under": 6,
+   "observed": 40,
+   "pearson": -0.3333333333333333,
+   "predicted": 49.0,
+   "slope": -1.1111111111111114,
+   "spearman": -0.3651483716701107
+  },
+  "interface_both_vs_goal": {
+   "diff": -0.09999999999999998,
+   "hi": 0.0,
+   "lo": -0.19999999999999996,
+   "tasks": 4
+  },
+  "interface_obj_vs_zs": {
+   "diff": -0.12440191387559807,
+   "hi": 0.20454545454545459,
+   "lo": -0.6666666666666667,
+   "tasks": 4
+  },
+  "per_task": {
+   "12": {
+    "g": 1.0,
+    "n": 5,
+    "obs": 1.0,
+    "p": 1.0,
+    "p_both_named": 1.0,
+    "pred": 1.0,
+    "pred0": 1.0,
+    "w": 0.0
+   },
+   "13": {
+    "g": 1.0,
+    "n": 5,
+    "obs": 1.0,
+    "p": 1.0,
+    "p_both_named": 1.0,
+    "pred": 1.0,
+    "pred0": 1.0,
+    "w": 0.0
+   },
+   "14": {
+    "g": 1.0,
+    "n": 5,
+    "obs": 0.8,
+    "p": 1.0,
+    "p_both_named": 0.8,
+    "pred": 1.0,
+    "pred0": 1.0,
+    "w": 0.0
+   },
+   "25": {
+    "g": 1.0,
+    "n": 5,
+    "obs": 0.8,
+    "p": 1.0,
+    "p_both_named": 0.8,
+    "pred": 1.0,
+    "pred0": 1.0,
+    "w": 0.0
+   },
+   "43": {
+    "g": 0.8,
+    "n": 5,
+    "obs": 1.0,
+    "p": 1.0,
+    "p_both_named": 1.0,
+    "pred": 0.8,
+    "pred0": 0.8,
+    "w": 0.0
+   },
+   "48": {
+    "g": 1.0,
+    "n": 5,
+    "obs": 0.4,
+    "p": 1.0,
+    "p_both_named": 0.5,
+    "pred": 1.0,
+    "pred0": 1.0,
+    "w": 0.0
+   },
+   "52": {
+    "g": 1.0,
+    "n": 5,
+    "obs": 0.8,
+    "p": 1.0,
+    "p_both_named": 0.8,
+    "pred": 1.0,
+    "pred0": 1.0,
+    "w": 0.0
+   },
+   "53": {
+    "g": 1.0,
+    "n": 5,
+    "obs": 1.0,
+    "p": 1.0,
+    "p_both_named": 1.0,
+    "pred": 1.0,
+    "pred0": 1.0,
+    "w": 0.0
+   },
+   "58": {
+    "g": 1.0,
+    "n": 5,
+    "obs": 0.6,
+    "p": 1.0,
+    "p_both_named": 0.6,
+    "pred": 1.0,
+    "pred0": 1.0,
+    "w": 0.0
+   },
+   "71": {
+    "g": 1.0,
+    "n": 5,
+    "obs": 0.6,
+    "p": 1.0,
+    "p_both_named": 0.6,
+    "pred": 1.0,
+    "pred0": 1.0,
+    "w": 0.0
+   }
+  },
+  "tasks": 10,
+  "tracker_confused_tasks": []
+ },
+ "notes": null,
+ "retired": {
+  "reason": "superseded by the H1 rerun of 2026-10-19 (G20 arms added; per-dimension error panel)",
+  "when": "2026-10-19T13:24:24+00:00"
+ },
+ "run_id": "h1_factor__libero_90__l90_i7__s0__177e6db3",
+ "schema": 1,
+ "script": "experiments/h1_factor.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-19T04:11:16+00:00",
+ "stream": null,
+ "tag": "l90_i7"
+}
