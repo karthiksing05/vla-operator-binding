@@ -428,7 +428,7 @@ def main():
                         **({"SEG": "1"} if "src=oracle" in (s[0] or "") else {}), **({"BIND": a.bind} if a.bind else {}),
                         **({"FRESH": os.path.join(R, a.fresh_dir)} if a.fresh else {}),
                         **(s[3] if len(s) > 3 else {}),
-                        **({"BACKBONE_CONFIG": a.backbone, "BACKBONE_CKPT": "aractingi/lerobot-groot-ft-libero",     # plan H4: GR00T N1.5
+                        **({"BACKBONE_CONFIG": a.backbone, "BACKBONE_CKPT": "ar0s/groot_libero",                     # plan H4: GR00T N1.5
                             "SERVER_PY": "/coc/flash10/ksingara3/robot/groot/.venv/bin/python"} if a.backbone.startswith("groot") else
                            {"BACKBONE_CONFIG": a.backbone,                                                  # plan H4: FLOWER, flower_<suite>
                             "BACKBONE_CKPT": f"mbreuss/flower_libero_{a.backbone.split('_', 1)[1] if '_' in a.backbone else 'goal'}",

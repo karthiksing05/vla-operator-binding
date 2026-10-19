@@ -1,12 +1,15 @@
 """GrootBackbone: NVIDIA GR00T N1.5 (LeRobot 0.4.4's `groot` policy) as the same score field over action chunks as PolicyBackbone.
 
-The checkpoint.  aractingi/lerobot-groot-ft-libero: GR00T-N1.5-3B (nvidia/GR00T-N1.5-3B) fine-tuned by LeRobot on HuggingFaceVLA/libero
-(1,693 episodes, 40 tasks: the same four standard suites, 8-D state, 7-D OSC delta actions and 180-degree flipped 256 images as
-physical-intelligence/libero, which pi0 / pi0.5 / SmolVLA saw), 50k steps, batch 32, projector + DiT tuned, LLM and vision frozen
-(train_config.json).  So it matches our protocol as SmolVLA does; the client's observations need no conversion beyond names.
-LeRobot's GR00T N1.5 page reports, for its 30k-step LIBERO fine-tune, Spatial 82 / Object 99 / Long 82 % (the checkpoint is not
-named there).  LeRobot >= 0.5.2 supports only N1.7, whose public LIBERO checkpoints (nvidia/gr00t17-lerobot-libero_*) are one per
-suite (10 tasks each), so they do not match the 40-task protocol.
+The checkpoint.  ar0s/groot_libero: GR00T-N1.5-3B (nvidia/GR00T-N1.5-3B) fine-tuned with LeRobot on HuggingFaceVLA/libero (1,693
+episodes, 40 tasks; frame for frame the same data as physical-intelligence/libero, which pi0 / pi0.5 / SmolVLA saw: same 180-degree
+flipped 256 images, 8-D state, 7-D OSC delta actions -- checked on episode 0), 100k steps, batch 8, image augmentation, projector +
+DiT tuned, LLM and vision frozen (train_config.json).  So it matches our protocol as SmolVLA does, and the client's observations need
+no conversion beyond names.  Its config carries a newer LeRobot's `use_peft` field, which 0.4.4's GrootConfig rejects, so
+`_compatible_dir` serves the checkpoint from a sibling directory (symlinks + the config without unknown keys).
+aractingi/lerobot-groot-ft-libero (same data, 50k steps, batch 32, no augmentation) loads and decodes identically but solves only
+38% of LIBERO-Object / Spatial tasks 0-2 (0% when 16 actions run open loop): not used.  LeRobot's GR00T N1.5 page reports, for its
+30k-step LIBERO fine-tune, Spatial 82 / Object 99 / Long 82 % (the checkpoint is not named).  LeRobot >= 0.5.2 supports only N1.7,
+whose public LIBERO checkpoints (nvidia/gr00t17-lerobot-libero_*) are one per suite (10 tasks each), outside the 40-task protocol.
 
 Conditioning: Eagle-2.5 (SigLIP-2 + Qwen3-1.7B truncated to select_layer = 12 layers) over [both views' image tokens, the chat-
 templated instruction "['<instruction>']"], then the action head's vlln + 4-layer self-attention (process_backbone_output) and its
@@ -39,7 +42,8 @@ import torch
 
 from .backbone import PolicyBackbone, Prefix, _tt
 
-CKPT = "aractingi/lerobot-groot-ft-libero"
+CKPT = "ar0s/groot_libero"
+EXT = "/coc/flash10/ksingara3/robot/ext"
 BUCKETS = 1000
 
 
@@ -59,6 +63,33 @@ def _sdpa_for_flash():
         yield
     finally:
         mu.PreTrainedModel._check_and_adjust_attn_implementation = orig
+
+
+def _compatible_dir(path):
+    """A checkpoint whose config.json has fields this LeRobot's GrootConfig does not know -> a sibling directory under robot/ext with
+    symlinks to its files and the config without those fields (created once); otherwise `path` itself."""
+    import dataclasses
+    import hashlib
+    import json
+    from lerobot.policies.groot.configuration_groot import GrootConfig
+    cfg = json.load(open(os.path.join(path, "config.json")))
+    known = {f.name for f in dataclasses.fields(GrootConfig)} | {"type"}
+    extra = sorted(k for k in cfg if k not in known)
+    if not extra:
+        return path
+    out = os.path.join(EXT, "groot_compat_" + hashlib.sha1(os.path.realpath(path).encode()).hexdigest()[:10])
+    os.makedirs(out, exist_ok=True)
+    for f in os.listdir(path):
+        if f != "config.json" and not os.path.lexists(os.path.join(out, f)):
+            try:
+                os.symlink(os.path.realpath(os.path.join(path, f)), os.path.join(out, f))
+            except FileExistsError:                       # a concurrent server made it first
+                pass
+    tmp = os.path.join(out, f".config.{os.getpid()}.json")
+    with open(tmp, "w", encoding="utf-8") as fh:
+        json.dump({k: v for k, v in cfg.items() if k not in extra}, fh, indent=2)
+    os.replace(tmp, os.path.join(out, "config.json"))
+    return out
 
 
 class GrootActionCodec:
@@ -99,7 +130,7 @@ class GrootBackbone(PolicyBackbone):
         from lerobot.policies.groot.modeling_groot import GrootPolicy
         t0 = time.time()
         path = checkpoint or CKPT
-        self.checkpoint_dir = path if os.path.isdir(path) else snapshot_download(path)
+        self.checkpoint_dir = _compatible_dir(path if os.path.isdir(path) else snapshot_download(path))
         with _sdpa_for_flash():
             # strict=False: safetensors' load_model drops one name of each tied pair (the Qwen3 embed_tokens / lm_head), so the
             # checkpoint's embed_tokens counts as "unexpected"; _verify_weights then copies such tensors and checks every one
