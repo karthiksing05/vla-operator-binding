@@ -25,6 +25,10 @@ import numpy as np
 if any(x.endswith("_ood") for x in sys.argv):    # plan G4: Li's compositional OOD suites (arXiv 2505.03500) run in THEIR modified
     sys.path.insert(0, "/coc/flash10/ksingara3/ext_dl/pi0tl/pi0-text-latent/third_party/modified_libero")   # LIBERO (its looser
     os.environ["LIBERO_CONFIG_PATH"] = "/coc/flash10/ksingara3/robot/libero_ood_config"                     # On, its flat stove)
+PRO_SUITES = ("libero_goal_task", "libero_spatial_task", "libero_object_task", "libero_10_task")
+if any(x in PRO_SUITES for x in sys.argv):       # plan H4 / G22: LIBERO-PRO's task split (arXiv 2510.03827) in ITS LIBERO package
+    sys.path.insert(0, "/coc/flash10/ksingara3/robot/ext/LIBERO-PRO")                                       # (its suites, BDDLs and
+    os.environ["LIBERO_CONFIG_PATH"] = "/coc/flash10/ksingara3/robot/libero_pro_config"                     # init states)
 from libero.libero import benchmark, get_libero_path
 from libero.libero.envs import OffScreenRenderEnv
 from openpi_client import image_tools
@@ -252,7 +256,16 @@ def movable_positions(env, obs):
                  else np.array(env.env.sim.data.body_xpos[env.env.obj_body_id[n]]))
     return names, np.asarray(P)
 MAX_STEPS = {"libero_spatial": 220, "libero_object": 280, "libero_goal": 300, "libero_10": 520, "libero_90": 400,
-             "libero_spatial_ood": 300, "libero_goal_ood": 300}                 # Li's evaluation (examples/libero/main.py)
+             "libero_spatial_ood": 300, "libero_goal_ood": 300,                 # Li's evaluation (examples/libero/main.py)
+             "libero_goal_task": 300, "libero_spatial_task": 220, "libero_object_task": 280, "libero_10_task": 520}   # LIBERO-PRO's
+
+
+def pro_language(bddl):
+    """LIBERO-PRO's task split keeps the original file names (LIBERO's Task.language is the OLD instruction): the new instruction is
+    the BDDL's (:language ...), lower-cased like every LIBERO prompt (lifelong_ood/policy/factors.py pro_language: the same text)."""
+    import re
+    m = re.search(r"\(:language\s*(.*?)\)", open(bddl).read(), flags=re.S)
+    return " ".join(m.group(1).split()).lower()
 
 
 def quat2axisangle(quat):
@@ -330,6 +343,7 @@ def main():
         init_states = (np.load(os.path.join(a.fresh, f"{a.suite}_{tid}.npy")) if a.fresh
                        else suite.get_task_init_states(tid))
         bddl = pathlib.Path(get_libero_path("bddl_files")) / task.problem_folder / task.bddl_file
+        lang = pro_language(bddl) if a.suite in PRO_SUITES else str(task.language)
         env = OffScreenRenderEnv(bddl_file_name=str(bddl), camera_heights=256, camera_widths=256,
                                      **({"camera_segmentations": "element"} if (a.seg or a.swap) else {}))
         env.seed(a.seed)
@@ -422,7 +436,7 @@ def main():
                     if not plan:
                         el = {"observation/image": img_q, "observation/wrist_image": wimg_q,
                               "observation/state": st8,
-                              "prompt": str(task.language)}
+                              "prompt": lang}
                         if not a.no_meta:
                             el.update({"meta/episode_start": calls == 0, "meta/task_id": tid, "meta/episode": k, "meta/t": t - a.wait})
                             if calls == 0 and eps:                  # the previous episode's outcome (online learners: lifelong_ood/policy/dsrl.py)
@@ -496,10 +510,10 @@ def main():
             if frames:
                 import imageio
                 imageio.mimwrite(str(vid_dir / f"task{tid}_trial{k}_{'success' if done else 'failure'}.mp4"), frames, fps=10)
-            logging.info(f"[client] task {tid} '{task.language}' trial {k}{'' if br is None else ' branch ' + br['id']}: success={done} "
+            logging.info(f"[client] task {tid} '{lang}' trial {k}{'' if br is None else ' branch ' + br['id']}: success={done} "
                          f"steps={t - a.wait} ({time.time() - t0:.0f}s)")
         sr = float(np.mean([e["success"] for e in eps]))
-        res["tasks"][str(tid)] = dict(language=task.language, success_rate=sr, episodes=eps)
+        res["tasks"][str(tid)] = dict(language=lang, success_rate=sr, episodes=eps)
         logging.info(f"[client] task {tid} success rate {sr:.2f} over {len(eps)}")
         with open(a.out, "w") as f:
             json.dump(res, f, indent=1)

@@ -297,6 +297,8 @@ def main():
         body, q = (a.mode[len("prims:"):].split("?", 1) + [""])[:2]
         kv = dict(x.split("=", 1) for x in q.split("&") if x)
         tasks = F.load() + (F.load(F.OOD_SUITES) if kv.get("suite", "").endswith("_ood") else [])
+        if kv.get("suite", "") in getattr(F, "PRO_SUITES", ()):          # plan H4 / G22: LIBERO-PRO's task split
+            tasks = tasks + F.load(F.PRO_SUITES)
         task = next(t for t in tasks if t.suite == kv.get("suite", "libero_90") and t.index == int(body))
         paths = [None if p_ == "none" else p_ for p_ in kv["paths"].split("+")]
         steps = PR.steps_of(task.language)

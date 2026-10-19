@@ -296,6 +296,10 @@ def arm_spec(tid, arm, fold, demo=0):
         return (f"role:{tid}?suite={SUITE_OF.get('suite', 'libero_90')}&cams={cams}{ctrl}", "0", False)
     if arm == "zs":                                                      # the frozen policy, same protocol (bind tracking)
         return ("ours", "0", False)
+    if arm == "origprompt":                                              # plan H4 / G22: the policy under the task file's ORIGINAL
+        from lifelong_ood.policy import factors as F                     # instruction (LIBERO-PRO's task split keeps the old file
+        nm = F.task_map()[SUITE_OF.get("suite", "libero_90")][tid]       # names; its published protocol, arXiv 2510.03827)
+        return ("promptx:" + F.prompt_of(nm).replace(" ", "_"), "0", False)
     if arm.startswith("nopolicy_rjpred@"):                               # the same program executed with NO policy (the guide's target)
         return (f"phasebind:{tid}?fold=0&rules=2&reader={arm.split('@', 1)[1]}&carry=pred&var=0.001&nopolicy=1", "0", False)
     if arm.startswith("phasebind2_rjpred@"):                             # the same with reader variant <v> (p6_reader_<v>_<t>.npz), e.g. pca512_rj

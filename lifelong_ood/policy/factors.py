@@ -25,6 +25,8 @@ LIBERO = "/coc/flash10/ksingara3/robot/openpi/third_party/libero/libero/libero"
 LIBERO_OOD = "/coc/flash10/ksingara3/ext_dl/pi0tl/pi0-text-latent/third_party/modified_libero/libero/libero"   # Li's suites
 TRAIN_SUITES = ("libero_spatial", "libero_object", "libero_goal", "libero_10")
 OOD_SUITES = ("libero_goal_ood", "libero_spatial_ood")          # plan G4 (arXiv 2505.03500): only in Li's modified LIBERO
+LIBERO_PRO = "/coc/flash10/ksingara3/robot/ext/LIBERO-PRO/libero/libero"   # plan H4 / G22: LIBERO-PRO (arXiv 2510.03827)
+PRO_SUITES = ("libero_goal_task", "libero_spatial_task", "libero_object_task", "libero_10_task")   # its task split
 QUALIFIERS = ("left", "right", "front", "back", "middle")
 DIRS = ("left", "right", "front", "back")
 FAMILY = {"KITCHEN": "kitchen", "LIVING_ROOM": "living_room", "STUDY": "study"}
@@ -34,7 +36,8 @@ def task_map():
     """suite -> task names in LIBERO's benchmark order (the order of every task id in ledger/)."""
     tm = runpy.run_path(os.path.join(LIBERO, "benchmark", "libero_suite_task_map.py"))["libero_task_map"]
     ood = runpy.run_path(os.path.join(LIBERO_OOD, "benchmark", "libero_suite_task_map.py"))["libero_task_map"]
-    return dict(tm, **{k: ood[k] for k in OOD_SUITES})
+    pro = runpy.run_path(os.path.join(LIBERO_PRO, "benchmark", "libero_suite_task_map.py"))["libero_task_map"]
+    return dict(tm, **{k: ood[k] for k in OOD_SUITES}, **{k: pro[k] for k in PRO_SUITES})
 
 
 def _section(text, head):
@@ -121,10 +124,18 @@ def prompt_of(name):
     return " ".join(name.split("_"))
 
 
+def pro_language(text):
+    """LIBERO-PRO's task split keeps the ORIGINAL task's file name (so LIBERO's file-name language is the old instruction); the
+    new instruction is the BDDL's (:language ...), lower-cased as every LIBERO prompt is (G22; the client sends the same text)."""
+    m = re.search(r"\(:language\s*(.*?)\)", text, flags=re.S)
+    return " ".join(m.group(1).split()).lower()
+
+
 def parse(suite, index, name):
-    path = os.path.join(LIBERO_OOD if suite in OOD_SUITES else LIBERO, "bddl_files", suite, name + ".bddl")
+    path = os.path.join(LIBERO_OOD if suite in OOD_SUITES else LIBERO_PRO if suite in PRO_SUITES else LIBERO, "bddl_files", suite,
+                        name + ".bddl")
     text = open(path).read()
-    lang = prompt_of(name)
+    lang = pro_language(text) if suite in PRO_SUITES else prompt_of(name)
     objects = _typed(_section(text, "objects"))
     fixtures = _typed(_section(text, "fixtures"))
     interest = _section(text, "obj_of_interest").split()

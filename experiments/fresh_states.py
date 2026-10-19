@@ -15,6 +15,9 @@ SUITE = os.environ.get("SUITE", "libero_90")
 if SUITE.endswith("_ood"):                                      # plan G4: Li's OOD suites, in their modified LIBERO (libero_client.py)
     sys.path.insert(0, "/coc/flash10/ksingara3/ext_dl/pi0tl/pi0-text-latent/third_party/modified_libero")
     os.environ["LIBERO_CONFIG_PATH"] = "/coc/flash10/ksingara3/robot/libero_ood_config"
+if SUITE in ("libero_goal_task", "libero_spatial_task", "libero_object_task", "libero_10_task"):   # plan H4 / G22: LIBERO-PRO's task
+    sys.path.insert(0, "/coc/flash10/ksingara3/robot/ext/LIBERO-PRO")                                 # split, in its LIBERO package
+    os.environ["LIBERO_CONFIG_PATH"] = "/coc/flash10/ksingara3/robot/libero_pro_config"               # (libero_client.py)
 from libero.libero import benchmark, get_libero_path
 from libero.libero.envs import OffScreenRenderEnv
 
