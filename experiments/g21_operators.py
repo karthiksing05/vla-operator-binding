@@ -14,7 +14,7 @@ with the chosen pair, the practice-chosen operator); the grasp switch with Li's 
 G15 has no file for them.
 
     $PY experiments/g21_operators.py --identify --backbone pi05_libero [--tasks 14,17]   # GPU (openpi venv): expert latents
-    $PY experiments/g21_operators.py --run --backbone pi05_libero [--no-identify]   # identify job, practice, choice, test; waits
+    $PY experiments/g21_operators.py --run --backbone pi05_libero [--no-identify] [--resume]   # identify, practice, choice, test; waits
     $PY experiments/g21_operators.py --read --backbone pi05_libero [--record]
 """
 import json
@@ -31,7 +31,20 @@ SEED, LAM = 13, 24
 WS = (30, 50, 70)
 PLAN = os.path.join(R, "g4_plan.json")
 EXCLUDE = "hal,tars,t1000,vicki,johnny5,c3po,olivaw"
-os.environ.setdefault("SBATCH_EXCLUDE", EXCLUDE)                       # every pack launch_pack submits from here avoids these nodes
+
+
+def _launch(exp, k, v, arms, trials, fresh, backbone):
+    """g4_ood._launch, then the packs it submitted are kept off the excluded nodes (launch_pack passes no --exclude)."""
+    import re
+    import g4_ood as G
+    out = subprocess.run([G.PY, "experiments/launch_pack.py", "--tasks", str(v["index"]), "--arms", ",".join(arms), "--experiment",
+                          exp, "--first", "0", "--trials", str(trials), "--seed", str(SEED), "--bind", "track", "--partition", "overcap",
+                          "--per", "4", "--suite", v["suite"], "--fresh", "--fresh-dir", fresh]
+                         + (["--backbone", backbone] if backbone != "pi05_libero" else []),
+                         capture_output=True, text=True, cwd=ROOT).stdout.strip()
+    for j in re.findall(r"-> job (\d+)", out):
+        subprocess.run(["scontrol", "update", f"JobId={j}", f"ExcNodeList={EXCLUDE}"], capture_output=True)
+    return out[-60:]
 
 
 def pairs(k, v, backbone):
@@ -130,10 +143,12 @@ def run(backbone):
     if not latents_ready(backbone) and "--no-identify" not in sys.argv:     # --no-identify: the identify job is already queued
         print(f"[g21 {short}] identify -> job {sb_identify(backbone)}", flush=True)
     for k, v in pl["tasks"].items():
+        if "--resume" in sys.argv:                                     # --resume: practice and the phase check already queued
+            break
         sh = k.split(":")[0]
         a, g = pairs(k, v, backbone)["sel"]
-        print(k, "practice", G._launch(f"g21_s1_{sh}", k, v, practice_arms(k, v, backbone), 5, "fresh_ood_a", backbone), flush=True)
-        print(k, "phase check", G._launch(f"g21_ph_{sh}", k, v, [f"gpc@{a}.{g}.ph"], 10, "fresh_ood_a", backbone), flush=True)
+        print(k, "practice", _launch(f"g21_s1_{sh}", k, v, practice_arms(k, v, backbone), 5, "fresh_ood_a", backbone), flush=True)
+        print(k, "phase check", _launch(f"g21_ph_{sh}", k, v, [f"gpc@{a}.{g}.ph"], 10, "fresh_ood_a", backbone), flush=True)
     _wait(lambda: all(None not in c.values() for c in choose_w(backbone).values()), "practice")
     ws = choose_w(backbone)
     print(f"[g21 {short}] chosen w {json.dumps(ws)}", flush=True)
@@ -142,7 +157,7 @@ def run(backbone):
         sh = k.split(":")[0]
         todo = [arm for arm in dict.fromkeys(test_arms(k, v, backbone, ws[k]).values())
                 if G._ld(f"g15_main_{sh}", v, arm, backbone) is None]
-        print(k, todo, G._launch(f"g21_main_{sh}", k, v, todo, 20, "fresh_ood_e", backbone), flush=True)
+        print(k, todo, _launch(f"g21_main_{sh}", k, v, todo, 20, "fresh_ood_e", backbone), flush=True)
     print(f"[g21 {short}] G21_TEST_LAUNCHED {time.strftime('%F %T')}", flush=True)
 
     def done():
