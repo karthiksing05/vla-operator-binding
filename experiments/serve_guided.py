@@ -70,6 +70,16 @@ def main():
     elif cfg.startswith("xvla"):                                       # LeRobot's X-VLA (same venv: lifelong_ood/policy/backbone_xvla.py)
         from lifelong_ood.policy.backbone_xvla import XVLABackbone
         bk = XVLABackbone(ck, device="cuda")
+    elif cfg.startswith("groot"):                                      # NVIDIA GR00T N1.5 (its own venv: lifelong_ood/policy/backbone_groot.py)
+        from lifelong_ood.policy.backbone_groot import GrootBackbone
+        bk = GrootBackbone(ck, device="cuda")
+        if "--num-steps" not in sys.argv:                              # its own sampler: 4 Euler steps
+            a.num_steps = bk.num_steps
+    elif cfg.startswith("flower"):                                     # FLOWER (its own venv: lifelong_ood/policy/backbone_flower.py)
+        from lifelong_ood.policy.backbone_flower import FlowerBackbone
+        bk = FlowerBackbone(ck, device="cuda")
+        if "--num-steps" not in sys.argv:                              # its own sampler: 4 Euler steps
+            a.num_steps = bk.num_steps
     else:
         bk = PolicyBackbone(cfg, checkpoint_dir=ck, device="cuda")
     logging.info(bk.describe())
