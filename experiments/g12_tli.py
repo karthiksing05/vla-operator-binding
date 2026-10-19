@@ -51,6 +51,9 @@ def make_backbone(backbone):
     if backbone.startswith("xvla"):
         from lifelong_ood.policy.backbone_xvla import XVLABackbone
         return XVLABackbone(device="cuda")
+    if backbone.startswith("groot"):                                   # plan H4: GR00T N1.5 (its own venv)
+        from lifelong_ood.policy.backbone_groot import GrootBackbone
+        return GrootBackbone(device="cuda")
     from lifelong_ood.policy.backbone import PolicyBackbone
     return PolicyBackbone(backbone, device="cuda")
 

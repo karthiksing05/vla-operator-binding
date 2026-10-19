@@ -33,6 +33,7 @@ ROBOT=/coc/flash10/ksingara3/robot/openpi
 case "${ENV:-openpi}" in
   openpi) PY=$ROBOT/.venv/bin/python ;;
   smolvla) PY=/coc/flash10/ksingara3/robot/smolvla/.venv/bin/python ;;
+  groot) PY=/coc/flash10/ksingara3/robot/groot/.venv/bin/python ;;
   libero) PY=$ROBOT/examples/libero/.venv/bin/python; export PYTHONPATH=$PYTHONPATH:$ROBOT/third_party/libero ;;
   *) echo "unknown ENV=$ENV"; exit 2 ;;
 esac

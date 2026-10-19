@@ -91,7 +91,7 @@ def read(record):
     import g4_ood as G
     pl = json.load(open(PLAN))
     C = E1.compare
-    for backbone in ("smolvla", "xvla"):
+    for backbone in ("smolvla", "xvla", "groot_libero"):
         f = os.path.join(R, f"g18_state_{backbone}.json")
         if not os.path.exists(f):
             continue

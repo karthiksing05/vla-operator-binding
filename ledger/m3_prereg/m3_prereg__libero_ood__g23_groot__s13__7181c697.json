@@ -1,0 +1,53 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G23 (the OOD system on GR00T N1.5)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "7181c697ed1434744c53eddc578bcac1f7c5b133",
+  "short": "7181c697"
+ },
+ "keys": {},
+ "metrics": {
+  "backbones": [
+   "groot_libero"
+  ],
+  "hypotheses": {
+   "H1": "the system's chosen arms > GR00T alone on set e (exact sign test, alpha 0.05)",
+   "H2": "the system's chosen arms are non-inferior to Li's hand-chosen pairs (TLI, or switched at the grasp if TLI fails its smoke) on set e (task-level bootstrap 95% lower bound above -0.05)",
+   "descriptive": "operator counts; the five-policy table"
+  },
+  "written_before": "any G23 episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__g23_groot__s13__7181c697",
+ "schema": 1,
+ "script": "experiments/prereg/g23_groot.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-19T15:51:43+00:00",
+ "stream": null,
+ "tag": "g23_groot"
+}

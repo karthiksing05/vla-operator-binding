@@ -1,0 +1,73 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_pro",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan H4's read G22 (the OOD system on LIBERO-PRO's task split)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "748ad87d8ae8b529e63e67d59f39d620d87f421d",
+  "short": "748ad87d"
+ },
+ "keys": {},
+ "metrics": {
+  "backbones": [
+   "pi05_libero",
+   "pi0_libero"
+  ],
+  "eligible": 27,
+  "hypotheses": {
+   "H1": "per policy, the system's chosen arm > the policy alone on fresh set t over the 27 eligible tasks (exact sign test on discordant pairs, alpha 0.05)",
+   "H1b": "the same on LIBERO-PRO's 50 init states per eligible task (exact sign test, alpha 0.05)",
+   "descriptive": "per split (Goal, Spatial, Object, LIBERO-10): the system and the policy alone on both start-state sets; the policy under the old instruction against LIBERO-PRO's published Task number; operator counts; the 13 ineligible tasks' policy-alone rates; the switch and TLI arms each against the policy"
+  },
+  "parser": "8d8d83f8cd14",
+  "policy_alone_only": 13,
+  "splits_not_run": {
+   "environment (_env)": "environment shift; not shipped",
+   "object (_object)": "visual shift",
+   "position (_swap)": "layout shift of a held task, not compositional",
+   "semantic (_lan)": "lexical shift",
+   "seven robustness cases": "visual or physical shift"
+  },
+  "splits_run": [
+   "task"
+  ],
+  "suites": [
+   "libero_goal_task",
+   "libero_spatial_task",
+   "libero_object_task",
+   "libero_10_task"
+  ],
+  "written_before": "any non-smoke G22 episode (smoke: 4 episodes per split, experiment g22_smoke, not counted)"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_pro__g22_libero_pro__s13__748ad87d",
+ "schema": 1,
+ "script": "experiments/prereg/g22_libero_pro.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-19T14:17:43+00:00",
+ "stream": null,
+ "tag": "g22_libero_pro"
+}
