@@ -136,16 +136,28 @@ def l90_sets():
         o, g = e3[t]["object_proto"], e3[t]["goal_proto"]
         a = {"zs": "zs", "both": f"fac@{o}.{g}", "obj": f"fac@{o}.x", "goal": f"fac@x.{g}"}
         out["i7"][t] = dict(main={k: os.path.join(R, f"i7_anat_{t}_{x.replace('@', '_')}_seed13.json") for k, x in a.items()})
-    try:
+    try:                                    # G20 on set d: object-only / goal-only arms, paired with G8's policy and library arms
         import g20_ablation as G20
         import g8_leaves as G8
-        for t in G8.tasks():
+        for t, (_m, a8, _e) in G8.tasks().items():
             a = G20.l90_arms(t)
-            o, g = a["obj_only"].split("@")[1].split(".")[0], a["goal_only"].split(".")[1]
-            arms = {"zs": "zs", "both": f"fac@{o}.{g}", "obj": a["obj_only"], "goal": a["goal_only"]}
-            out["g20"][t] = dict(main={k: os.path.join(R, f"g20_main_{t}_{x.replace('@', '_')}_seed13.json") for k, x in arms.items()})
+            f = lambda e, x: os.path.join(R, f"{e}_{t}_{x.replace('@', '_')}_seed13.json")   # noqa: E731
+            out["g20"][t] = dict(main=dict(zs=f("g8_main", "zs"), both=f("g8_main", a8["hfac"]), obj=f("g20_main", a["obj_only"]),
+                                           goal=f("g20_main", a["goal_only"])))
     except Exception as ex:                                                                         # noqa: BLE001
         print(f"[h1f] G20 arms unavailable: {ex}", flush=True)
+    out["g20_ood"] = {}                     # G20 on Li's suites, set e (pi0.5): the chosen pair's sources alone, paired with G15
+    try:
+        chosen = json.load(open(os.path.join(R, "g10_read_pi05.json")))["chosen"]
+        pl = json.load(open(os.path.join(R, "g4_plan.json")))["tasks"]
+        for k, v in pl.items():
+            a, g = chosen[k].split("@")[1].split(".")
+            sh = k.split(":")[0]
+            f = lambda e, x: os.path.join(R, f"{e}_{sh}_{v['suite']}_{v['index']}_{x.replace('@', '_')}_seed13.json")   # noqa: E731
+            out["g20_ood"][f"{v['suite']}:{v['index']}"] = dict(main=dict(
+                zs=f("g15_main", "zs"), both=f("g15_main", chosen[k]), obj=f("g20_ood", f"pfield@{a}.x"), goal=f("g20_ood", f"pfield@x.{g}")))
+    except Exception as ex:                                                                         # noqa: BLE001
+        print(f"[h1f] G20 OOD arms unavailable: {ex}", flush=True)
     return out
 
 
@@ -155,7 +167,7 @@ def l90_read(named):
     for ds, tasks in sets.items():
         C = {}
         for t, sp in tasks.items():
-            nm = named.get(("libero_90", int(t)))
+            nm = named.get((t.split(":")[0], int(t.split(":")[1])) if ":" in t else ("libero_90", int(t)))
             if nm is None:
                 continue
             row = {}
@@ -422,7 +434,7 @@ def figures(l90, tab, ood, figdata, pts):
     import matplotlib.pyplot as plt
     os.makedirs(FIG, exist_ok=True)
     fig, ax = plt.subplots(1, 3, figsize=(15, 4.6))
-    for ds, col in (("g5", "#1d5e86"), ("i7", "#a35d2b"), ("g20", "#2f7d4f")):
+    for ds, col in (("g5", "#1d5e86"), ("i7", "#a35d2b"), ("g20", "#2f7d4f"), ("g20_ood", "#8b5cf6")):
         r = l90.get(ds, {})
         if not r.get("per_task"):
             continue
@@ -515,7 +527,7 @@ def main(record):
         cfg = dict(shrink=SHRINK)
         for ds, r in l90.items():
             if r.get("tasks"):
-                print(ledger.record("h1_factor", bench="libero_90", tag=f"l90_{ds}", seed=0, metrics=r, bytes=z0, config=cfg,
+                print(ledger.record("h1_factor", bench="libero_ood" if ds.endswith("ood") else "libero_90", tag=f"l90_{ds}", seed=0, metrics=r, bytes=z0, config=cfg,
                                     script="experiments/h1_factor.py", command=" ".join(sys.argv)))
         for bk, r in ood.items():
             print(ledger.record("h1_factor", bench="libero_ood", tag=f"ood_{bk}", seed=0, metrics=r, bytes=z0, config=cfg,

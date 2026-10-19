@@ -128,7 +128,13 @@ def run(backbone):
         finally:
             cur.update(cfg=None, d=None, hn=None)
         n = len(fr)
-        preK = bk.repeat(pre, K)
+        if isinstance(pre.kv, dict):                                          # SmolVLA keeps its cache as {layer: {name: tensor}}
+            from lifelong_ood.policy.backbone import Prefix
+            rep = lambda t: t.repeat_interleave(K, dim=0)                     # noqa: E731
+            preK = Prefix(state=rep(pre.state), pad_masks=rep(pre.pad_masks),
+                          kv={i: {k: rep(t) for k, t in layer.items()} for i, layer in pre.kv.items()}, n=pre.n * K)
+        else:
+            preK = bk.repeat(pre, K)
         noise = torch.randn((n * K, bk.dim_full), generator=torch.Generator(device="cpu").manual_seed(0))
         rows = bk.sample(n * K, preK, noise=noise)
         return np.asarray(rows, np.float32).reshape(n, K, -1)

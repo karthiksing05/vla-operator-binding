@@ -502,11 +502,13 @@ def read(record):
         if k not in agg:
             continue
         o = agg[k]["own"]
-        ax[2].bar(np.arange(3) + (j - 1) * w, [o["share_pos"], o["share_rot"], o["share_grip"]], w, color=COL[k], label=k)
+        ax[2].bar(np.arange(3) + (j - 1) * w, [1 - o[f"err_{d}_on"] / o[f"err_{d}_off"] for d in ("pos", "rot", "grip")], w,
+                  color=COL[k], label=k)
+    ax[2].axhline(0, color="#9ca3af", lw=1)
     ax[2].set_xticks(range(3))
-    ax[2].set_xticklabels(["position (WHERE)", "orientation (HOW)", "gripper (HOW / WHEN)"], fontsize=8)
-    ax[2].set_ylabel("share of the chunk change (normalised units)")
-    ax[2].set_title("what the change acts on (own phase)", fontsize=10)
+    ax[2].set_xticklabels(["position (WHERE)", "orientation (HOW)", "gripper (WHEN)"], fontsize=8)
+    ax[2].set_ylabel("error to the held-out demo's chunk removed\n(1 - err with / err without the prototype)")
+    ax[2].set_title("what the prototype corrects (own phase)", fontsize=10)
     ax[2].legend(fontsize=7, frameon=False)
     for a in ax:
         a.spines[["top", "right"]].set_visible(False)
@@ -547,10 +549,10 @@ def read(record):
         fig, ax = plt.subplots(1, 3, figsize=(14, 3.8))
         for n, s in sweep.items():
             sc = [r["scale"] for r in s["rows"]]
-            ax[0].plot(sc, [r["dnorm"] for r in s["rows"]], "o-", label=f"{n} ({s['kind']}: {s['key']})", color=COL[s["kind"]],
+            ax[0].plot(sc, [r["dnorm"] for r in s["rows"]], marker="o", label=f"{n} ({s['kind']}: {s['key']})", color=COL[s["kind"]],
                        alpha=0.6 if n in ("Sch2", "XG1") else 1.0, ls="--" if n in ("Sch2", "XG1") else "-")
-            ax[1].plot(sc, [r["loss"] for r in s["rows"]], "o-", color=COL[s["kind"]], ls="--" if n in ("Sch2", "XG1") else "-")
-            ax[2].plot(sc, [r["cos_disp_target"] for r in s["rows"]], "o-", color=COL[s["kind"]],
+            ax[1].plot(sc, [r["loss"] for r in s["rows"]], marker="o", color=COL[s["kind"]], ls="--" if n in ("Sch2", "XG1") else "-")
+            ax[2].plot(sc, [r["cos_disp_target"] for r in s["rows"]], marker="o", color=COL[s["kind"]],
                        ls="--" if n in ("Sch2", "XG1") else "-")
         for a, yl in zip(ax, ("|chunk change| from weight 0 (normalised)", "flow loss on own-phase frames",
                               "cos(executed displacement, target - ee)")):
@@ -559,7 +561,7 @@ def read(record):
             a.axvline(1, color="#9ca3af", lw=1, ls=":")
             a.spines[["top", "right"]].set_visible(False)
         ax[0].legend(fontsize=6, frameon=False)
-        fig.suptitle("scale sweep: the action change grows with the weight; the loss is lowest near the fitted weight", fontsize=9)
+        fig.suptitle("scale sweep on held-out demo frames: the action change grows with the weight; the flow loss is lowest at weight 0.5-0.75", fontsize=9)
         fig.tight_layout()
         fig.savefig(os.path.join(FIG, "h1_scale.png"), dpi=150)
         plt.close(fig)
