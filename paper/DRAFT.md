@@ -309,6 +309,17 @@ for the stream learner (sign tests p 5e-96 and 6e-17; task-level differences 0.6
 arrivals (0 successes against 28 on the last 10): the forgetting the library avoids by construction. Experience replay keeps
 most of the early arrivals (138 on the first 10, 87 on the last 10) but stores every demonstration it replays.
 
+### A second benchmark: LIBERO-PRO
+LIBERO-PRO (Zhou et al., [arXiv](https://arxiv.org/abs/2510.03827)) perturbs LIBERO's own suites; its task split gives a training scene a new
+instruction and success test, a held object paired with a held goal (pre-registered G22; docs/LIBERO_PRO.md). Its
+benchmark reads each task's instruction from the file name, which the task split leaves unchanged, so the published protocol
+hands the policy the old instruction. With the old instruction pi0.5 reproduces the published collapse (0.09, 0.00, 0.00 and
+0.06 on Goal, Spatial, Object and LIBERO-10, against published 0.0 to 0.01); given the new instruction it succeeds 0.20, 0.52,
+0.10 and 0.16. On the 27 of 40 tasks of the system's form (one object, one goal, one grasp) the system, unchanged, succeeds 627
+of 1,350 times on LIBERO-PRO's own start states against 366 for the policy (difference 0.193, 95% interval 0.099 to 0.296)
+and 243 of 540 against 159 on new start states (difference 0.156, 95% interval 0.059 to 0.261); by suite 0.31, 0.80, 0.22 and
+0.17.
+
 ### Against other operators for held concepts
 Two published demo-free operators, run on the same practice-chosen source pairs as ours so that only the operator varies
 (pre-registered G21; set e). Mixing the policy's two velocity fields convexly at every step, after General Policy

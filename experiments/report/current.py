@@ -137,6 +137,8 @@ READS = [  # (label, experiment, tag, pre-registered, section, verdict)
      lambda m: f"GPC mixing {m['H1_gpc_sel_vs_chosen']['x']}, injection {m['H1_inj_sel_vs_chosen']['x']} vs system {m['H1_gpc_sel_vs_chosen']['y']} and policy {m['H2_gpc_sel_vs_zs']['y']}; mixing switched at the grasp {m['phase_check']['gpc_ph']} vs switch {m['phase_check']['switch']}"),
     ("G21 other operators (pi0)", "g21_operators", "read_pi0", True, "c-limits",
      lambda m: f"GPC mixing {m['H1_gpc_sel_vs_chosen']['x']}, injection {m['H1_inj_sel_vs_chosen']['x']} vs system {m['H1_gpc_sel_vs_chosen']['y']} and policy {m['H2_gpc_sel_vs_zs']['y']}; mixing switched at the grasp {m['phase_check']['gpc_ph']} vs switch {m['phase_check']['switch']}"),
+    ("G22 LIBERO-PRO task split (pi0.5)", "g22_libero_pro", "read_pi05", True, "c-gen",
+     lambda m: f"{m['H1b_chosen_vs_zs_pro']['x']} vs policy {m['H1b_chosen_vs_zs_pro']['y']} of {m['H1b_chosen_vs_zs_pro']['n']} ({_ci(m['H1b_chosen_vs_zs_pro']['diff'])}); the published protocol gives the old instruction"),
     ("E4 stream, first rule", "e4_stream", "read", True, "c-stream", _v_stream),
     ("W1 stream, the thesis's rule", "w1_stream", "read", True, "c-stream", _v_stream),
     ("W2 stream with re-checks", "w2_stream", "read", True, "c-stream", _v_stream),

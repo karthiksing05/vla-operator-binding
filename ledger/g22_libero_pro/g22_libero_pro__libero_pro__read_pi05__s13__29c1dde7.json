@@ -1,0 +1,1166 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_pro",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g22_libero_pro.py --read --record",
+ "config": {
+  "backbone": "pi05_libero"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g22_libero_pro",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "29c1dde79215a96846d5b8aceb260bfda7eb5bef",
+  "short": "29c1dde7"
+ },
+ "keys": {},
+ "metrics": {
+  "H1_chosen_vs_zs_fresh": {
+   "diff": {
+    "diff": 0.15555555555555556,
+    "hi": 0.2611574074074067,
+    "hi90": 0.24259259259259258,
+    "lo": 0.05925925925925926,
+    "lo90": 0.07407407407407407,
+    "n_pairs": 540,
+    "n_tasks": 27
+   },
+   "discordant": [
+    102,
+    18
+   ],
+   "n": 540,
+   "passes": true,
+   "sign_p": 1.9758911914423336e-15,
+   "tasks": 27,
+   "x": 243,
+   "y": 159
+  },
+  "H1b_chosen_vs_zs_pro": {
+   "diff": {
+    "diff": 0.19333333333333333,
+    "hi": 0.29555555555555557,
+    "hi90": 0.2777777777777778,
+    "lo": 0.09851851851851852,
+    "lo90": 0.11185185185185186,
+    "n_pairs": 1350,
+    "n_tasks": 27
+   },
+   "discordant": [
+    285,
+    24
+   ],
+   "n": 1350,
+   "passes": true,
+   "sign_p": 7.741451525387913e-58,
+   "tasks": 27,
+   "x": 627,
+   "y": 366
+  },
+  "backbone": "pi05_libero",
+  "choice": {
+   "goal:1": {
+    "op": "tsel",
+    "psel": 0,
+    "psel_arm": "pfield@34.17",
+    "tsel": 2,
+    "tsel_arm": "tli@18.17.24"
+   },
+   "goal:2": {
+    "op": "psel",
+    "psel": 7,
+    "psel_arm": "pfield@14.13",
+    "tsel": 2,
+    "tsel_arm": "tli@13.13.24"
+   },
+   "goal:4": {
+    "op": "tsel",
+    "psel": 0,
+    "psel_arm": "pfield@34.14",
+    "tsel": 3,
+    "tsel_arm": "tli@34.33.24"
+   },
+   "goal:6": {
+    "op": "psel",
+    "psel": 7,
+    "psel_arm": "pfield@14.13",
+    "tsel": 2,
+    "tsel_arm": "tli@13.13.24"
+   },
+   "goal:8": {
+    "op": "tsel",
+    "psel": 8,
+    "psel_arm": "pfield@14.10",
+    "tsel": 9,
+    "tsel_arm": "tli@14.39.24"
+   },
+   "goal:9": {
+    "op": "psel",
+    "psel": 0,
+    "psel_arm": "pfield@13.11",
+    "tsel": 0,
+    "tsel_arm": "tli@13.11.24"
+   },
+   "object:0": {
+    "op": "tsel",
+    "psel": 0,
+    "psel_arm": "pfield@22.20",
+    "tsel": 6,
+    "tsel_arm": "tli@22.27.24"
+   },
+   "object:1": {
+    "op": "psel",
+    "psel": 10,
+    "psel_arm": "pfield@24.20",
+    "tsel": 10,
+    "tsel_arm": "tli@24.20.24"
+   },
+   "object:2": {
+    "op": "psel",
+    "psel": 0,
+    "psel_arm": "pfield@28.20",
+    "tsel": 0,
+    "tsel_arm": "tli@28.20.24"
+   },
+   "object:3": {
+    "op": "psel",
+    "psel": 0,
+    "psel_arm": "pfield@21.20",
+    "tsel": 0,
+    "tsel_arm": "tli@21.20.24"
+   },
+   "object:4": {
+    "op": "psel",
+    "psel": 0,
+    "psel_arm": "pfield@25.20",
+    "tsel": 0,
+    "tsel_arm": "tli@25.20.24"
+   },
+   "object:5": {
+    "op": "psel",
+    "psel": 0,
+    "psel_arm": "pfield@23.20",
+    "tsel": 0,
+    "tsel_arm": "tli@23.20.24"
+   },
+   "object:6": {
+    "op": "psel",
+    "psel": 0,
+    "psel_arm": "pfield@20.20",
+    "tsel": 0,
+    "tsel_arm": "tli@20.20.24"
+   },
+   "object:7": {
+    "op": "psel",
+    "psel": 6,
+    "psel_arm": "pfield@20.20",
+    "tsel": 0,
+    "tsel_arm": "tli@27.20.24"
+   },
+   "object:8": {
+    "op": "psel",
+    "psel": 0,
+    "psel_arm": "pfield@26.20",
+    "tsel": 0,
+    "tsel_arm": "tli@26.20.24"
+   },
+   "object:9": {
+    "op": "psel",
+    "psel": 0,
+    "psel_arm": "pfield@29.20",
+    "tsel": 0,
+    "tsel_arm": "tli@29.20.24"
+   },
+   "spatial:0": {
+    "op": "tsel",
+    "psel": 0,
+    "psel_arm": "pfield@34.30",
+    "tsel": 2,
+    "tsel_arm": "tli@13.30.24"
+   },
+   "spatial:1": {
+    "op": "psel",
+    "psel": 10,
+    "psel_arm": "pfield@30.30",
+    "tsel": 10,
+    "tsel_arm": "tli@18.10.24"
+   },
+   "spatial:2": {
+    "op": "tsel",
+    "psel": 1,
+    "psel_arm": "pfield@36.17",
+    "tsel": 5,
+    "tsel_arm": "tli@13.30.24"
+   },
+   "spatial:3": {
+    "op": "tsel",
+    "psel": 9,
+    "psel_arm": "pfield@39.30",
+    "tsel": 10,
+    "tsel_arm": "tli@39.30.24"
+   },
+   "spatial:4": {
+    "op": "tsel",
+    "psel": 0,
+    "psel_arm": "pfield@39.30",
+    "tsel": 7,
+    "tsel_arm": "tli@18.30.24"
+   },
+   "spatial:5": {
+    "op": "psel",
+    "psel": 10,
+    "psel_arm": "pfield@35.30",
+    "tsel": 10,
+    "tsel_arm": "tli@35.30.24"
+   },
+   "spatial:6": {
+    "op": "psel",
+    "psel": 10,
+    "psel_arm": "pfield@33.30",
+    "tsel": 10,
+    "tsel_arm": "tli@33.30.24"
+   },
+   "spatial:7": {
+    "op": "psel",
+    "psel": 10,
+    "psel_arm": "pfield@39.30",
+    "tsel": 10,
+    "tsel_arm": "tli@39.30.24"
+   },
+   "spatial:8": {
+    "op": "tsel",
+    "psel": 5,
+    "psel_arm": "pfield@37.30",
+    "tsel": 8,
+    "tsel_arm": "tli@17.30.24"
+   },
+   "spatial:9": {
+    "op": "psel",
+    "psel": 10,
+    "psel_arm": "pfield@33.30",
+    "tsel": 9,
+    "tsel_arm": "tli@33.30.24"
+   },
+   "ten:5": {
+    "op": "psel",
+    "psel": 4,
+    "psel_arm": "pfield@4.9",
+    "tsel": 1,
+    "tsel_arm": "tli@4.6.24"
+   }
+  },
+  "eligible": [
+   "goal:1",
+   "goal:2",
+   "goal:4",
+   "goal:6",
+   "goal:8",
+   "goal:9",
+   "object:0",
+   "object:1",
+   "object:2",
+   "object:3",
+   "object:4",
+   "object:5",
+   "object:6",
+   "object:7",
+   "object:8",
+   "object:9",
+   "spatial:0",
+   "spatial:1",
+   "spatial:2",
+   "spatial:3",
+   "spatial:4",
+   "spatial:5",
+   "spatial:6",
+   "spatial:7",
+   "spatial:8",
+   "spatial:9",
+   "ten:5"
+  ],
+  "missing": [],
+  "n_tsel": 9,
+  "not_eligible": [
+   "goal:0",
+   "goal:3",
+   "goal:5",
+   "goal:7",
+   "ten:0",
+   "ten:1",
+   "ten:2",
+   "ten:3",
+   "ten:4",
+   "ten:6",
+   "ten:7",
+   "ten:8",
+   "ten:9"
+  ],
+  "per_suite": {
+   "goal": {
+    "eligible": 6,
+    "fresh_system": 0.315,
+    "fresh_zs": 0.245,
+    "pro_origprompt": 0.086,
+    "pro_system": 0.31,
+    "pro_zs": 0.196,
+    "published_task": 0.0,
+    "tasks": 10
+   },
+   "object": {
+    "eligible": 10,
+    "fresh_system": 0.22,
+    "fresh_zs": 0.12,
+    "pro_origprompt": 0.0,
+    "pro_system": 0.222,
+    "pro_zs": 0.102,
+    "published_task": 0.01,
+    "tasks": 10
+   },
+   "spatial": {
+    "eligible": 10,
+    "fresh_system": 0.775,
+    "fresh_zs": 0.525,
+    "pro_origprompt": 0.004,
+    "pro_system": 0.802,
+    "pro_zs": 0.52,
+    "published_task": 0.01,
+    "tasks": 10
+   },
+   "ten": {
+    "eligible": 1,
+    "fresh_system": 0.17,
+    "fresh_zs": 0.17,
+    "pro_origprompt": 0.062,
+    "pro_system": 0.17,
+    "pro_zs": 0.164,
+    "published_task": 0.01,
+    "tasks": 10
+   }
+  },
+  "per_task": {
+   "goal:0": {
+    "fresh": {
+     "zs": 0
+    },
+    "pro": {
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "goal:1": {
+    "fresh": {
+     "chosen": 1,
+     "psel": 0,
+     "tsel": 1,
+     "zs": 6
+    },
+    "pro": {
+     "chosen": 3,
+     "origprompt": 0,
+     "zs": 10
+    }
+   },
+   "goal:2": {
+    "fresh": {
+     "chosen": 14,
+     "psel": 14,
+     "tsel": 5,
+     "zs": 5
+    },
+    "pro": {
+     "chosen": 29,
+     "origprompt": 0,
+     "zs": 12
+    }
+   },
+   "goal:3": {
+    "fresh": {
+     "zs": 0
+    },
+    "pro": {
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "goal:4": {
+    "fresh": {
+     "chosen": 1,
+     "psel": 0,
+     "tsel": 1,
+     "zs": 4
+    },
+    "pro": {
+     "chosen": 8,
+     "origprompt": 0,
+     "zs": 4
+    }
+   },
+   "goal:5": {
+    "fresh": {
+     "zs": 1
+    },
+    "pro": {
+     "origprompt": 0,
+     "zs": 1
+    }
+   },
+   "goal:6": {
+    "fresh": {
+     "chosen": 14,
+     "psel": 14,
+     "tsel": 5,
+     "zs": 5
+    },
+    "pro": {
+     "chosen": 29,
+     "origprompt": 0,
+     "zs": 8
+    }
+   },
+   "goal:7": {
+    "fresh": {
+     "zs": 18
+    },
+    "pro": {
+     "origprompt": 43,
+     "zs": 42
+    }
+   },
+   "goal:8": {
+    "fresh": {
+     "chosen": 14,
+     "psel": 10,
+     "tsel": 14,
+     "zs": 10
+    },
+    "pro": {
+     "chosen": 43,
+     "origprompt": 0,
+     "zs": 21
+    }
+   },
+   "goal:9": {
+    "fresh": {
+     "chosen": 0,
+     "psel": 0,
+     "tsel": 0,
+     "zs": 0
+    },
+    "pro": {
+     "chosen": 0,
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "object:0": {
+    "fresh": {
+     "chosen": 12,
+     "psel": 1,
+     "tsel": 12,
+     "zs": 1
+    },
+    "pro": {
+     "chosen": 33,
+     "origprompt": 0,
+     "zs": 2
+    }
+   },
+   "object:1": {
+    "fresh": {
+     "chosen": 20,
+     "psel": 20,
+     "tsel": 20,
+     "zs": 20
+    },
+    "pro": {
+     "chosen": 49,
+     "origprompt": 0,
+     "zs": 47
+    }
+   },
+   "object:2": {
+    "fresh": {
+     "chosen": 0,
+     "psel": 0,
+     "tsel": 0,
+     "zs": 0
+    },
+    "pro": {
+     "chosen": 0,
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "object:3": {
+    "fresh": {
+     "chosen": 0,
+     "psel": 0,
+     "tsel": 0,
+     "zs": 0
+    },
+    "pro": {
+     "chosen": 0,
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "object:4": {
+    "fresh": {
+     "chosen": 0,
+     "psel": 0,
+     "tsel": 0,
+     "zs": 0
+    },
+    "pro": {
+     "chosen": 0,
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "object:5": {
+    "fresh": {
+     "chosen": 0,
+     "psel": 0,
+     "tsel": 0,
+     "zs": 0
+    },
+    "pro": {
+     "chosen": 0,
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "object:6": {
+    "fresh": {
+     "chosen": 0,
+     "psel": 0,
+     "tsel": 0,
+     "zs": 0
+    },
+    "pro": {
+     "chosen": 0,
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "object:7": {
+    "fresh": {
+     "chosen": 12,
+     "psel": 12,
+     "tsel": 0,
+     "zs": 3
+    },
+    "pro": {
+     "chosen": 29,
+     "origprompt": 0,
+     "zs": 2
+    }
+   },
+   "object:8": {
+    "fresh": {
+     "chosen": 0,
+     "psel": 0,
+     "tsel": 0,
+     "zs": 0
+    },
+    "pro": {
+     "chosen": 0,
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "object:9": {
+    "fresh": {
+     "chosen": 0,
+     "psel": 0,
+     "tsel": 0,
+     "zs": 0
+    },
+    "pro": {
+     "chosen": 0,
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "spatial:0": {
+    "fresh": {
+     "chosen": 2,
+     "psel": 0,
+     "tsel": 2,
+     "zs": 0
+    },
+    "pro": {
+     "chosen": 10,
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "spatial:1": {
+    "fresh": {
+     "chosen": 20,
+     "psel": 20,
+     "tsel": 20,
+     "zs": 19
+    },
+    "pro": {
+     "chosen": 50,
+     "origprompt": 0,
+     "zs": 46
+    }
+   },
+   "spatial:2": {
+    "fresh": {
+     "chosen": 3,
+     "psel": 0,
+     "tsel": 3,
+     "zs": 0
+    },
+    "pro": {
+     "chosen": 17,
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "spatial:3": {
+    "fresh": {
+     "chosen": 20,
+     "psel": 17,
+     "tsel": 20,
+     "zs": 6
+    },
+    "pro": {
+     "chosen": 50,
+     "origprompt": 0,
+     "zs": 9
+    }
+   },
+   "spatial:4": {
+    "fresh": {
+     "chosen": 12,
+     "psel": 0,
+     "tsel": 12,
+     "zs": 0
+    },
+    "pro": {
+     "chosen": 34,
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "spatial:5": {
+    "fresh": {
+     "chosen": 20,
+     "psel": 20,
+     "tsel": 20,
+     "zs": 19
+    },
+    "pro": {
+     "chosen": 50,
+     "origprompt": 0,
+     "zs": 49
+    }
+   },
+   "spatial:6": {
+    "fresh": {
+     "chosen": 20,
+     "psel": 20,
+     "tsel": 20,
+     "zs": 19
+    },
+    "pro": {
+     "chosen": 49,
+     "origprompt": 0,
+     "zs": 47
+    }
+   },
+   "spatial:7": {
+    "fresh": {
+     "chosen": 20,
+     "psel": 20,
+     "tsel": 20,
+     "zs": 18
+    },
+    "pro": {
+     "chosen": 50,
+     "origprompt": 0,
+     "zs": 47
+    }
+   },
+   "spatial:8": {
+    "fresh": {
+     "chosen": 18,
+     "psel": 4,
+     "tsel": 18,
+     "zs": 4
+    },
+    "pro": {
+     "chosen": 41,
+     "origprompt": 2,
+     "zs": 13
+    }
+   },
+   "spatial:9": {
+    "fresh": {
+     "chosen": 20,
+     "psel": 20,
+     "tsel": 20,
+     "zs": 20
+    },
+    "pro": {
+     "chosen": 50,
+     "origprompt": 0,
+     "zs": 49
+    }
+   },
+   "ten:0": {
+    "fresh": {
+     "zs": 11
+    },
+    "pro": {
+     "origprompt": 0,
+     "zs": 31
+    }
+   },
+   "ten:1": {
+    "fresh": {
+     "zs": 9
+    },
+    "pro": {
+     "origprompt": 0,
+     "zs": 13
+    }
+   },
+   "ten:2": {
+    "fresh": {
+     "zs": 0
+    },
+    "pro": {
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "ten:3": {
+    "fresh": {
+     "zs": 0
+    },
+    "pro": {
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "ten:4": {
+    "fresh": {
+     "zs": 0
+    },
+    "pro": {
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "ten:5": {
+    "fresh": {
+     "chosen": 0,
+     "psel": 0,
+     "tsel": 0,
+     "zs": 0
+    },
+    "pro": {
+     "chosen": 3,
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "ten:6": {
+    "fresh": {
+     "zs": 0
+    },
+    "pro": {
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "ten:7": {
+    "fresh": {
+     "zs": 0
+    },
+    "pro": {
+     "origprompt": 0,
+     "zs": 0
+    }
+   },
+   "ten:8": {
+    "fresh": {
+     "zs": 14
+    },
+    "pro": {
+     "origprompt": 31,
+     "zs": 38
+    }
+   },
+   "ten:9": {
+    "fresh": {
+     "zs": 0
+    },
+    "pro": {
+     "origprompt": 0,
+     "zs": 0
+    }
+   }
+  },
+  "split_goal": {
+   "fresh": {
+    "diff": {
+     "diff": 0.11666666666666667,
+     "hi": 0.36666666666666664,
+     "hi90": 0.31666666666666665,
+     "lo": -0.11666666666666667,
+     "lo90": -0.08333333333333333,
+     "n_pairs": 120,
+     "n_tasks": 6
+    },
+    "discordant": [
+     30,
+     16
+    ],
+    "n": 120,
+    "sign_p": 0.054076031858869555,
+    "tasks": 6,
+    "x": 44,
+    "y": 30
+   },
+   "pro": {
+    "diff": {
+     "diff": 0.19,
+     "hi": 0.37666666666666665,
+     "hi90": 0.3466666666666667,
+     "lo": 0.006666666666666667,
+     "lo90": 0.03333333333333333,
+     "n_pairs": 300,
+     "n_tasks": 6
+    },
+    "discordant": [
+     78,
+     21
+    ],
+    "n": 300,
+    "sign_p": 6.882318238301829e-09,
+    "tasks": 6,
+    "x": 112,
+    "y": 55
+   },
+   "psel_fresh": {
+    "diff": {
+     "diff": 0.06666666666666667,
+     "hi": 0.325,
+     "hi90": 0.2833333333333333,
+     "lo": -0.16666666666666666,
+     "lo90": -0.13333333333333333,
+     "n_pairs": 120,
+     "n_tasks": 6
+    },
+    "discordant": [
+     25,
+     17
+    ],
+    "n": 120,
+    "sign_p": 0.27995623852893914,
+    "tasks": 6,
+    "x": 38,
+    "y": 30
+   },
+   "tsel_fresh": {
+    "diff": {
+     "diff": -0.03333333333333333,
+     "hi": 0.1,
+     "hi90": 0.075,
+     "lo": -0.16666666666666666,
+     "lo90": -0.14166666666666666,
+     "n_pairs": 120,
+     "n_tasks": 6
+    },
+    "discordant": [
+     10,
+     14
+    ],
+    "n": 120,
+    "sign_p": 0.5412561893463135,
+    "tasks": 6,
+    "x": 26,
+    "y": 30
+   }
+  },
+  "split_object": {
+   "fresh": {
+    "diff": {
+     "diff": 0.1,
+     "hi": 0.245,
+     "hi90": 0.22,
+     "lo": 0.0,
+     "lo90": 0.0,
+     "n_pairs": 200,
+     "n_tasks": 10
+    },
+    "discordant": [
+     22,
+     2
+    ],
+    "n": 200,
+    "sign_p": 3.5881996154785156e-05,
+    "tasks": 10,
+    "x": 44,
+    "y": 24
+   },
+   "pro": {
+    "diff": {
+     "diff": 0.12,
+     "hi": 0.286,
+     "hi90": 0.25,
+     "lo": 0.0,
+     "lo90": 0.002,
+     "n_pairs": 500,
+     "n_tasks": 10
+    },
+    "discordant": [
+     62,
+     2
+    ],
+    "n": 500,
+    "sign_p": 2.2562247209423347e-16,
+    "tasks": 10,
+    "x": 111,
+    "y": 51
+   },
+   "psel_fresh": {
+    "diff": {
+     "diff": 0.045,
+     "hi": 0.155,
+     "hi90": 0.135,
+     "lo": 0.0,
+     "lo90": 0.0,
+     "n_pairs": 200,
+     "n_tasks": 10
+    },
+    "discordant": [
+     11,
+     2
+    ],
+    "n": 200,
+    "sign_p": 0.0224609375,
+    "tasks": 10,
+    "x": 33,
+    "y": 24
+   },
+   "tsel_fresh": {
+    "diff": {
+     "diff": 0.04,
+     "hi": 0.175,
+     "hi90": 0.145,
+     "lo": -0.045,
+     "lo90": -0.035,
+     "n_pairs": 200,
+     "n_tasks": 10
+    },
+    "discordant": [
+     11,
+     3
+    ],
+    "n": 200,
+    "sign_p": 0.057373046875,
+    "tasks": 10,
+    "x": 32,
+    "y": 24
+   }
+  },
+  "split_spatial": {
+   "fresh": {
+    "diff": {
+     "diff": 0.25,
+     "hi": 0.44,
+     "hi90": 0.405,
+     "lo": 0.085,
+     "lo90": 0.11,
+     "n_pairs": 200,
+     "n_tasks": 10
+    },
+    "discordant": [
+     50,
+     0
+    ],
+    "n": 200,
+    "sign_p": 1.7763568394002505e-15,
+    "tasks": 10,
+    "x": 155,
+    "y": 105
+   },
+   "pro": {
+    "diff": {
+     "diff": 0.282,
+     "hi": 0.472,
+     "hi90": 0.44,
+     "lo": 0.114,
+     "lo90": 0.136,
+     "n_pairs": 500,
+     "n_tasks": 10
+    },
+    "discordant": [
+     142,
+     1
+    ],
+    "n": 500,
+    "sign_p": 2.582873329443503e-41,
+    "tasks": 10,
+    "x": 401,
+    "y": 260
+   },
+   "psel_fresh": {
+    "diff": {
+     "diff": 0.08,
+     "hi": 0.2,
+     "hi90": 0.175,
+     "lo": 0.005,
+     "lo90": 0.01,
+     "n_pairs": 200,
+     "n_tasks": 10
+    },
+    "discordant": [
+     16,
+     0
+    ],
+    "n": 200,
+    "sign_p": 3.0517578125e-05,
+    "tasks": 10,
+    "x": 121,
+    "y": 105
+   },
+   "tsel_fresh": {
+    "diff": {
+     "diff": 0.25,
+     "hi": 0.44,
+     "hi90": 0.405,
+     "lo": 0.085,
+     "lo90": 0.11,
+     "n_pairs": 200,
+     "n_tasks": 10
+    },
+    "discordant": [
+     50,
+     0
+    ],
+    "n": 200,
+    "sign_p": 1.7763568394002505e-15,
+    "tasks": 10,
+    "x": 155,
+    "y": 105
+   }
+  },
+  "split_ten": {
+   "fresh": {
+    "diff": {
+     "diff": 0.0,
+     "hi": 0.0,
+     "hi90": 0.0,
+     "lo": 0.0,
+     "lo90": 0.0,
+     "n_pairs": 20,
+     "n_tasks": 1
+    },
+    "discordant": [
+     0,
+     0
+    ],
+    "n": 20,
+    "sign_p": 1.0,
+    "tasks": 1,
+    "x": 0,
+    "y": 0
+   },
+   "pro": {
+    "diff": {
+     "diff": 0.06,
+     "hi": 0.14,
+     "hi90": 0.12,
+     "lo": 0.0,
+     "lo90": 0.02,
+     "n_pairs": 50,
+     "n_tasks": 1
+    },
+    "discordant": [
+     3,
+     0
+    ],
+    "n": 50,
+    "sign_p": 0.25,
+    "tasks": 1,
+    "x": 3,
+    "y": 0
+   },
+   "psel_fresh": {
+    "diff": {
+     "diff": 0.0,
+     "hi": 0.0,
+     "hi90": 0.0,
+     "lo": 0.0,
+     "lo90": 0.0,
+     "n_pairs": 20,
+     "n_tasks": 1
+    },
+    "discordant": [
+     0,
+     0
+    ],
+    "n": 20,
+    "sign_p": 1.0,
+    "tasks": 1,
+    "x": 0,
+    "y": 0
+   },
+   "tsel_fresh": {
+    "diff": {
+     "diff": 0.0,
+     "hi": 0.0,
+     "hi90": 0.0,
+     "lo": 0.0,
+     "lo90": 0.0,
+     "n_pairs": 20,
+     "n_tasks": 1
+    },
+    "discordant": [
+     0,
+     0
+    ],
+    "n": 20,
+    "sign_p": 1.0,
+    "tasks": 1,
+    "x": 0,
+    "y": 0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g22_libero_pro__libero_pro__read_pi05__s13__29c1dde7",
+ "schema": 1,
+ "script": "experiments/g22_libero_pro.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-19T17:22:26+00:00",
+ "stream": null,
+ "tag": "read_pi05"
+}
