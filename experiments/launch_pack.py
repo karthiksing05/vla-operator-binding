@@ -238,6 +238,9 @@ def arm_spec(tid, arm, fold, demo=0):
         a_, g_, *r_ = arm.split("@", 1)[1].split(".")
         lat = lambda t_: os.path.join(R, "inject", f"{SUITE_OF.get('backbone') or 'pi05_libero'}_{t_}.npy")   # noqa: E731
         return (f"inject:{arm.split('@', 1)[1]}", "0", False) if os.path.exists(lat(a_)) and os.path.exists(lat(g_)) else None
+    if arm.startswith("blend@"):                                        # plan Z / I3: the fitted soft blend, blend@<set>_<task>[.x<eid>]
+        body = arm.split("@", 1)[1]                                      # (eid m1 / m2 = -1 / -2: the new instruction / the empty prompt)
+        return (f"blend:{body}", "0", False)
     if arm.startswith("prog@"):                                         # plan Z / U: a pointer program, prog@<t0>.<t1>...: training
         ts_ = [int(x) for x in arm.split("@", 1)[1].split(".")]          # instructions advanced at the policy's own gripper events
         return (f"prog:{'.'.join(map(str, ts_))}", "0", False)

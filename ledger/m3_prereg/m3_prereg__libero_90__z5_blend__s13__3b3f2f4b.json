@@ -1,0 +1,50 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan Z's read Z5 (the soft blend served)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "3b3f2f4bfc9fc15d6234756c7a0a58748acb5e73",
+  "short": "3b3f2f4b"
+ },
+ "keys": {},
+ "metrics": {
+  "hypotheses": {
+   "H1": "the served soft blend (nothing fitted in the network) > pi0.5 alone on Z3's 25 tasks, set d, 20 per task (exact sign test, alpha 0.05)",
+   "H2": "the blend > Z3's hard pointers on the same episodes (exact sign test)",
+   "descriptive": "against G8's fitted library; behavioural donation of the top-3 offline experts per task (ablation on states 0-9) against their offline Shapley donation (Spearman)"
+  },
+  "written_before": "any Z5 episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__z5_blend__s13__3b3f2f4b",
+ "schema": 1,
+ "script": "experiments/prereg/z5_blend.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-19T23:44:44+00:00",
+ "stream": null,
+ "tag": "z5_blend"
+}

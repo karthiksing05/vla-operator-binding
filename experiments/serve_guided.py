@@ -510,6 +510,13 @@ def main():
         tx = D.Demos().tasks
         hooks = HO.GPCHooks(bk, tx[int(ta)], tx[int(tg)], w=(0.5 if wq == "ph" else int(wq) / 100.0), phase=(wq == "ph"))
         logging.info(f"gpc: '{tx[int(ta)]}' + '{tx[int(tg)]}', w {wq}")
+    elif a.mode.startswith("blend:"):
+        # blend:<set>_<task>[.x<eid>] -- plan Z / track I3: the soft blend experiments/zi_blend.py fitted to the task's demo, per
+        # segment and dim group, the gripper from the segment's best expert; .x<eid> ablates one expert (lifelong_ood/policy/blend.py)
+        from lifelong_ood.policy import blend as BL
+        name, *rest = a.mode[len("blend:"):].split(".")
+        abl = rest[0][1:].replace("m", "-") if rest else None
+        hooks = BL.BlendHooks(bk, BL.load(name, ROOT), ablate=abl)
     elif a.mode.startswith("prog:"):
         # prog:<t0>.<t1>... -- plan Z / track U: a pointer program, training instruction t_i in segment i, the segment advanced at
         # the policy's own sustained grasp and release (lifelong_ood/policy/program.py)
