@@ -1,0 +1,53 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan G's read G20 (ablation on pi0.5)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "97db9bdf33fdcaf6dae817a69889b8a74a291207",
+  "short": "97db9bdf"
+ },
+ "keys": {},
+ "metrics": {
+  "backbone": "pi05_libero",
+  "hypotheses": {
+   "descriptive": "each component's contribution as the paired difference between the full system (or the full composition) and the system without it"
+  },
+  "states": {
+   "libero_90": "fresh_states_d",
+   "ood": "fresh_ood_e"
+  },
+  "written_before": "any G20 episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero__g20_ablation__s13__97db9bdf",
+ "schema": 1,
+ "script": "experiments/prereg/g20_ablation.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-19T03:38:55+00:00",
+ "stream": null,
+ "tag": "g20_ablation"
+}
