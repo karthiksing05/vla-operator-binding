@@ -1,0 +1,131 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "bridge_v2",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/x2_bridge_grades.py /coc/flash10/ksingara3/robot/data/bridge_meta/IPEC-COMMUNITY_bridge_orig_lerobot_tasks.jsonl --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.13.5",
+  "slurm_job": null,
+  "torch": "2.13.0+cpu"
+ },
+ "experiment": "x2_bridge_grades",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "b5a853522c914b544373af46e2dae9e0bc21356f",
+  "short": "b5a85352"
+ },
+ "keys": {},
+ "metrics": {
+  "instructions": 19974,
+  "pairs": {
+   "7up can -> towel": {
+    "grade": "G4 part",
+    "object": 0,
+    "target": 6341,
+    "together": 0
+   },
+   "apple -> plate": {
+    "grade": "seen",
+    "object": 28,
+    "target": 161,
+    "together": 3
+   },
+   "apple -> towel": {
+    "grade": "seen",
+    "object": 28,
+    "target": 6341,
+    "together": 4
+   },
+   "carrot -> basket": {
+    "grade": "G1 relation",
+    "object": 148,
+    "target": 338,
+    "together": 0
+   },
+   "carrot -> towel": {
+    "grade": "seen",
+    "object": 148,
+    "target": 6341,
+    "together": 35
+   },
+   "carrot -> yellow block": {
+    "grade": "G1 relation",
+    "object": 148,
+    "target": 262,
+    "together": 0
+   },
+   "coke can -> plate": {
+    "grade": "G4 part",
+    "object": 0,
+    "target": 161,
+    "together": 0
+   },
+   "coke can -> towel": {
+    "grade": "G4 part",
+    "object": 0,
+    "target": 6341,
+    "together": 0
+   },
+   "eggplant -> plate": {
+    "grade": "seen",
+    "object": 95,
+    "target": 161,
+    "together": 3
+   },
+   "green block -> plate": {
+    "grade": "G1 relation",
+    "object": 193,
+    "target": 161,
+    "together": 0
+   },
+   "pepsi can -> towel": {
+    "grade": "G4 part",
+    "object": 0,
+    "target": 6341,
+    "together": 0
+   },
+   "redbull can -> plate": {
+    "grade": "G4 part",
+    "object": 0,
+    "target": 161,
+    "together": 0
+   },
+   "sponge -> plate": {
+    "grade": "seen",
+    "object": 13,
+    "target": 161,
+    "together": 2
+   },
+   "spoon -> plate": {
+    "grade": "seen",
+    "object": 1693,
+    "target": 161,
+    "together": 12
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "x2_bridge_grades__bridge_v2__read__s0__b5a85352",
+ "schema": 1,
+ "script": "experiments/x2_bridge_grades.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-20T21:14:55+00:00",
+ "stream": null,
+ "tag": "read"
+}

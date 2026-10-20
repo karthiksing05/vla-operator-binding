@@ -214,13 +214,112 @@ and 22/24 (carrot in basket; the 11.5 cm carrot sometimes rolls off the 13 x 8 c
 
 The WidowX checkpoints were trained on all of Bridge V2, so a pair is graded against its 19,974 distinct instructions
 (IPEC-COMMUNITY/bridge_orig_lerobot meta/tasks.jsonl; language only). A pair named together anywhere counts as seen. That is an
-over-count ("take carrot off plate" counts too), so "never named together" is the reliable signal for an unseen relation.
+over-count ("take carrot off plate" counts too), so "never named together" is the reliable signal for an unseen relation. Names are
+matched on word boundaries; an earlier version matched "coke" inside "chocolate" and "colander" and "apple" inside "pineapple" (fixed 2026-10-20).
 
 | grade | pairs |
 |---|---|
-| seen (named together) | carrot → cloth (35 instructions), spoon → plate (12), eggplant → plate (3), coke can → towel (27), coke can → plate (1), apple → towel (6), apple → plate (3), sponge → plate (2) |
+| seen (named together) | carrot → cloth (35 instructions), spoon → plate (12), eggplant → plate (3), apple → plate (3), apple → towel (4), sponge → plate (2) |
 | G1 relation (both parts named, never together) | green block → plate, carrot → yellow block, carrot → basket |
-| G4 part (object never named in Bridge) | Pepsi can → towel, Red Bull can → plate, 7up can → towel (Google-robot assets placed on the Bridge table) |
+| G4 part (object never named in Bridge) | Pepsi can → towel, Red Bull can → plate, 7up can → towel, coke can → plate / towel (Google-robot assets on the Bridge table; a generic "can" is named, so these are unseen brands of a seen category, and no instruction puts a can on a towel or plate) |
 
 Three of the six recombined pairs built first are therefore seen relations. The Bridge split uses the three G1 pairs and the
 G4 cans.
+
+## The pi0 side of the Bridge study (2026-10-20): graded tasks, backbone, driver, zero-shot baselines
+
+### The six graded tasks (`experiments/x2_simpler_graded.py`)
+Registered by subclassing the stock put-on envs (no downloaded file changes). Each keeps the stock success checker and the stock
+24 layouts (4 grid corners x ordered pairs x 2 yaws; the sink task keeps the eggplant's 8 positions x 3 yaws). Budgets are stock:
+60 steps, or 120 in the sink scene. Use the allenzren fork (stock scenes). The cans are the Google-robot `opened_*` models, pulled
+in through `model_db_override` from `info_pick_custom_v0.json`. They use density 50, as in the stock coke-can tasks; the unopened
+models (density 1000, about 0.4 kg) are above the WidowX payload. Each can stands upright (Google's `upright` quat), with the
+stock yaw applied on top.
+
+| env id | grade | pair | instruction | placement check: success at reset / after placing |
+|---|---|---|---|---|
+| X2G1GreenBlockOnPlate-v0 | G1 | green block -> plate | put the green block on the plate | 0/24, 24/24 |
+| X2G1CarrotOnYellowBlock-v0 | G1 | carrot -> yellow block | put carrot on the yellow block | 0/24, 24/24 |
+| X2G1CarrotInBasket-v0 | G1 | carrot -> basket (sink) | put carrot into yellow basket | 0/24, 23/24 |
+| X2G4PepsiOnTowel-v0 | G4 | Pepsi can -> towel | put the pepsi can on the towel | 0/24, 24/24 |
+| X2G4RedBullOnPlate-v0 | G4 | Red Bull can -> plate | put the red bull can on the plate | 0/24, 21/24 |
+| X2G4SevenUpOnTowel-v0 | G4 | 7up can -> towel | put the 7up can on the towel | 0/24, 24/24 |
+
+Each can settles upright: the minimum cosine between its axis and z is 0.9998, and its centre sits at z = 0.934, i.e. standing
+on the table at 0.87. Frames are in `results/x2_simpler/graded/validate/`. The placement misses come from tall cans tipping when
+dropped onto the plate, and from the carrot rolling off the basket plane. `opened_redbull_can`'s metadata bbox is 17.2 cm tall,
+while the rendered can is about 13 cm. This only loosens its z test.
+
+### OPZBackbone (`lifelong_ood/policy/backbone_opz.py`) and its parity check (`experiments/x2_opz_check.py`)
+The check covers 16 SimplerEnv frames: 4 stock tasks x 2 layouts x {reset, after 8 policy steps}. Results:
+- Our `observations` reproduce `BridgeSimplerAdapter.preprocess` exactly: token ids, mask, pixels and proprio all identical.
+- On the same noise, our PolicyBackbone-Euler `sample` matches `PiZeroInference.forward`. The maximum difference is 1.8e-7 in
+  normalised units and 1.8e-8 in SimplerEnv action units (float32). The reversed time convention therefore maps exactly:
+  v(x, t) = -u(x, 1 - t).
+- `text_span` decodes to `<bos>instruction\n`.
+- `cond_hook` fires once per Gemma layer, 18 per prefix. The prefix pass is unrolled, because the joint model never calls its
+  layer modules and torch hooks would not fire.
+- An identity hook changes the chunk by 0.
+- Flow loss at the sampled chunk averages 0.118, against 0.521 with the chunk's dims shuffled.
+- One query (prefix + 10 steps, eager fp32) takes 0.34 s.
+
+Results are in `results/x2_simpler/opz/opz_check_bridge_beta.json`.
+
+### Rollout driver (`experiments/x2_simpler_rollout.py`)
+It follows the stock protocol:
+- Query on the 3rd-view image and proprio, execute all 4 actions, and stop only at the time limit. Success is the env flag at the
+  last step.
+- Flow noise is seeded per (seed, episode, query).
+- `--prompt_after` turns on the grasp switch (prompt A until the chunk's gripper command is "close" for 3 consecutive queries,
+  then prompt B). This is `program.ProgHooks`' rule.
+
+Smoke test: 4 episodes of green block -> plate with A = "stack the green block on the yellow block" and B = "put carrot on plate".
+The switch fired at query 5 to 7 in every episode, and all 4 succeeded (a smoke test only, not a read). One 60-step episode
+takes 8 to 9 s.
+
+### pi0 alone (bridge_beta, fp32), 24 layouts x 10 seeds = 240 episodes per task (ledger `x2_simpler_zs`, tag pi0, key task)
+
+| task | success | grasped (ever) | moved the correct object | wall |
+|---|---|---|---|---|
+| G1 green block -> plate | 78.3 +- 2.7 | 86.7 | 93.3 | 38 min |
+| G1 carrot -> yellow block | 27.1 +- 2.9 | 79.6 | 83.3 | 38 min |
+| G1 carrot -> basket (sink) | 68.3 +- 3.0 | 81.2 | 93.8 | 75 min |
+| G4 Pepsi can -> towel | 0.8 +- 0.6 | 25.4 | 97.5 | 43 min |
+| G4 Red Bull can -> plate | 1.2 +- 0.7 | 26.2 | 97.5 | 41 min |
+| G4 7up can -> towel | 0.0 | 34.6 | 97.9 | 44 min |
+| stock carrot on plate (published 55.8) | 56.7 +- 3.2 | 73.8 | 82.5 | 43 min |
+| stock spoon on towel (84.6) | 81.7 +- 2.5 | 92.1 | 91.7 | 44 min |
+| stock stack cube (47.9) | 47.5 +- 3.2 | 87.9 | 91.2 | 40 min |
+| stock eggplant in basket (85.4) | 83.8 +- 2.4 | 96.7 | 98.3 | 69 min |
+
+The driver reproduces the authors' own evaluation on the 4 stock tasks, with every cell within 1.2 SE. The G1 tasks are far from
+floor: pi0 already solves green block -> plate and carrot -> basket most of the time zero-shot, so they leave little headroom.
+The G4 cans are at floor, and the failure is physical as well as semantic. The policy reaches the can and knocks it over
+("moved the correct object" 97 to 98%). The light, standing can then tips and often rolls off the table (video
+`results/x2_simpler/zs/zs_X2G4PepsiOnTowel-v0_ep0_s0_0.mp4`). A real grasp ("grasped") happens in only 25 to 35% of episodes.
+A composition arm on these tasks would be fighting the can's physics as well as the missing word. Possible fixes, each a change
+to pre-register: a heavier can (about 0.1 to 0.2 kg), a can laid on its side (Google's `laid_vertically` / `lr_switch`
+orientations), or a scripted-grasp feasibility check first.
+
+**Grading caveat found while choosing sources.** In `x2_bridge_grades.py` the `coke|cola` regex matches "colander" and
+"chocolate". "coke can -> towel (27)" and "coke can -> plate (1)" are therefore false positives: no Bridge instruction names a
+coke, cola, pepsi, red bull, 7up, sprite or soda. A generic "can" is named often, though, including 107 can + cloth/towel
+co-mentions ("move the can beside the red towel"). So the G4 cans are unseen brands of a seen category, a seen can-towel
+relation (moves near, never "put on"), and no can-on-plate instruction (only "place the tall can in the middle of the left
+heating plate"). The `apple` pattern also matches "pineapple".
+
+### Grasp-switch sources per graded pair (prompt A until the grasp, prompt B after)
+
+| pair | A (object source) | B (goal source) |
+|---|---|---|
+| green block -> plate | "stack the green block on the yellow block" (stock) | "put carrot on plate" (stock) |
+| carrot -> yellow block | "put carrot on plate" (stock) | "stack the green block on the yellow block" (stock) |
+| carrot -> basket (sink) | "put carrot on plate" (stock; table scene) | "put eggplant into yellow basket" (stock; sink scene) |
+| Pepsi can -> towel | a Bridge can instruction, e.g. "put can in pot" (no stock task grasps a can) | "put the spoon on the towel" (stock) |
+| Red Bull can -> plate | "put can in pot" (Bridge) | "put carrot on plate" (stock) |
+| 7up can -> towel | "put can in pot" (Bridge) | "put the spoon on the towel" (stock) |
+
+Bridge alternatives for B: "put eggplant on towel" and "put knife on towel" (towel); "put spoon on plate" and "put banana on
+plate" (plate; "put carrot on plate" is itself a Bridge instruction). For green block -> plate, Bridge's own "put the green block
+on the table" is another A. Every source above should get its own zero-shot run (the stock four are in the table above) before
+the composition read.

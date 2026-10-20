@@ -1,0 +1,78 @@
+{
+ "artifacts": {
+  "result": "results/x2_simpler/zs/zs_X2G1CarrotInBasket-v0.json"
+ },
+ "backbone": "open-pi-zero/bridge_beta",
+ "backfilled": false,
+ "bench": "simpler_widowx",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/x2_simpler_rollout.py --task X2G1CarrotInBasket-v0 --episodes 0-23 --seeds 0:1:2:3:4:5:6:7:8:9 --video 2 --out results/x2_simpler/zs/zs_X2G1CarrotInBasket-v0.json",
+ "config": {
+  "act_steps": 4,
+  "backbone": "lifelong_ood/policy/backbone_opz.py OPZBackbone",
+  "checkpoint": "allenzren/open-pi-zero bridge_beta",
+  "dtype": "float32",
+  "grade": "G1",
+  "instruction": "put carrot into yellow basket",
+  "layouts": 24,
+  "max_steps": 120,
+  "pair": "carrot -> basket",
+  "seeds": 10,
+  "simpler_fork": "allenzren/SimplerEnv (stock scenes)"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.13.5",
+  "slurm_job": null,
+  "torch": "2.13.0+cpu"
+ },
+ "experiment": "x2_simpler_zs",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "b5a853522c914b544373af46e2dae9e0bc21356f",
+  "short": "b5a85352"
+ },
+ "keys": {
+  "task": "X2G1CarrotInBasket-v0"
+ },
+ "metrics": {
+  "grasped": 81.25,
+  "moved_correct_obj": 93.75,
+  "n": 240,
+  "published_stock": null,
+  "se": 3.002699402821352,
+  "success": 68.33333333333333,
+  "success_per_seed": [
+   75.0,
+   66.66666666666667,
+   62.5,
+   54.166666666666664,
+   66.66666666666667,
+   70.83333333333333,
+   75.0,
+   62.5,
+   70.83333333333333,
+   79.16666666666667
+  ]
+ },
+ "notes": "docs/SIMPLER.md (pi0 zero-shot on the graded tasks)",
+ "retired": null,
+ "run_id": "x2_simpler_zs__simpler_widowx__pi0__task-X2G1CarrotInBasket-v0__s0__b5a85352",
+ "schema": 1,
+ "script": "experiments/x2_simpler_rollout.py",
+ "seconds": 4524.4,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-20T21:13:18+00:00",
+ "stream": null,
+ "tag": "pi0"
+}

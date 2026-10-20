@@ -11,8 +11,8 @@ import sys
 
 SYN = {"carrot": r"carrot", "spoon": r"spoon", "eggplant": r"eggplant|aubergine", "green block": r"green (?:block|cube)",
        "yellow block": r"yellow (?:block|cube)", "towel": r"towel|cloth|rag", "plate": r"plate|dish", "basket": r"basket",
-       "coke can": r"coke|cola", "apple": r"apple", "sponge": r"sponge", "orange": r"\borange\b(?! (?:cloth|towel|block|cube|bowl|plate))",
-       "pepsi can": r"pepsi", "redbull can": r"red ?bull", "7up can": r"7 ?up|sprite"}
+       "coke can": r"\bcoke\b|\bcola\b", "apple": r"\bapples?\b", "sponge": r"\bsponges?\b", "orange": r"\borange\b(?! (?:cloth|towel|block|cube|bowl|plate))",
+       "pepsi can": r"\bpepsi\b", "redbull can": r"\bred ?bull\b", "7up can": r"\b7 ?up\b|\bsprite\b"}
 PAIRS = [("carrot", "towel"), ("spoon", "plate"), ("eggplant", "plate"), ("green block", "plate"), ("carrot", "yellow block"),
          ("carrot", "basket"), ("coke can", "plate"), ("coke can", "towel"), ("apple", "plate"), ("apple", "towel"), ("sponge", "plate"),
          ("pepsi can", "towel"), ("redbull can", "plate"), ("7up can", "towel")]
