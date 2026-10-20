@@ -29,7 +29,7 @@ In both schemes:
 
 | unseen | composing held units, nothing fitted | creating units |
 |---|---|---|
-| a relation or a binding, familiar scene (G1, G2: Li et al.'s 20 recombinations) | pi0.5 312 vs 143 of 400 for the policy alone; pi0 336 vs 35; SmolVLA 96 vs 5; X-VLA 256 vs 80 | not needed |
+| a relation or a binding, familiar scene (G1, G2: Li et al.'s 20 recombinations) | pi0.5 312 vs 143 of 400 for the policy alone; pi0 336 vs 35; SmolVLA 96 vs 5; X-VLA 256 vs 80; GR00T N1.5 157 vs 113 | not needed |
 | the scene (G3) | 8 LIBERO-90 tasks: 67 vs 68 for the policy alone | the same 8: library 154; all 15 G3 tasks: leaves 225 vs 90 |
 | a part (G4) | 2 tasks: 0 vs 4 | 31 tasks: leaves 455 vs 117 |
 

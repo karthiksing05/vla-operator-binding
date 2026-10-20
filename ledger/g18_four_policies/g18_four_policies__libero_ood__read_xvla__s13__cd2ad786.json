@@ -1,0 +1,297 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g18_four_policies.py --read --record",
+ "config": {
+  "backbone": "xvla"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g18_four_policies",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "cd2ad7860e32c66fab26142b045ccac9ca79f912",
+  "short": "cd2ad786"
+ },
+ "keys": {},
+ "metrics": {
+  "backbone": "xvla",
+  "choice": {
+   "goal:0": "psel",
+   "goal:1": "tsel",
+   "goal:2": "psel",
+   "goal:3": "psel",
+   "goal:4": "psel",
+   "goal:5": "psel",
+   "goal:6": "psel",
+   "goal:7": "psel",
+   "goal:8": "psel",
+   "goal:9": "psel",
+   "spatial:0": "psel",
+   "spatial:1": "psel",
+   "spatial:2": "psel",
+   "spatial:3": "tsel",
+   "spatial:4": "psel",
+   "spatial:5": "tsel",
+   "spatial:6": "psel",
+   "spatial:7": "psel",
+   "spatial:8": "tsel",
+   "spatial:9": "psel"
+  },
+  "chosen_vs_li_grasp": {
+   "diff": {
+    "diff": 0.115,
+    "hi": 0.25,
+    "hi90": 0.225,
+    "lo": 0.01,
+    "lo90": 0.02,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    54,
+    8
+   ],
+   "n": 400,
+   "sign_p": 1.709326186236787e-09,
+   "tasks": 20,
+   "x": 256,
+   "y": 210
+  },
+  "chosen_vs_ref": {
+   "diff": {
+    "diff": 0.285,
+    "hi": 0.45,
+    "hi90": 0.4225,
+    "lo": 0.13,
+    "lo90": 0.155,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    125,
+    11
+   ],
+   "n": 400,
+   "noninferior": true,
+   "sign_p": 1.2237084238398533e-25,
+   "tasks": 20,
+   "x": 256,
+   "y": 142
+  },
+  "chosen_vs_zs": {
+   "diff": {
+    "diff": 0.44,
+    "hi": 0.6025,
+    "hi90": 0.5775,
+    "lo": 0.2825,
+    "lo90": 0.305,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    176,
+    0
+   ],
+   "n": 400,
+   "sign_p": 2.088097429759528e-53,
+   "tasks": 20,
+   "x": 256,
+   "y": 80
+  },
+  "missing": [],
+  "n_tsel": 4,
+  "per_task": {
+   "goal:0": {
+    "chosen": 20,
+    "li_grasp": 20,
+    "psel": 20,
+    "tli_li": 9,
+    "tsel": 9,
+    "zs": 0
+   },
+   "goal:1": {
+    "chosen": 10,
+    "li_grasp": 5,
+    "psel": 5,
+    "tli_li": 10,
+    "tsel": 10,
+    "zs": 0
+   },
+   "goal:2": {
+    "chosen": 6,
+    "li_grasp": 6,
+    "psel": 6,
+    "tli_li": 1,
+    "tsel": 0,
+    "zs": 0
+   },
+   "goal:3": {
+    "chosen": 10,
+    "li_grasp": 7,
+    "psel": 10,
+    "tli_li": 0,
+    "tsel": 3,
+    "zs": 3
+   },
+   "goal:4": {
+    "chosen": 8,
+    "li_grasp": 8,
+    "psel": 8,
+    "tli_li": 2,
+    "tsel": 0,
+    "zs": 0
+   },
+   "goal:5": {
+    "chosen": 15,
+    "li_grasp": 12,
+    "psel": 15,
+    "tli_li": 14,
+    "tsel": 13,
+    "zs": 0
+   },
+   "goal:6": {
+    "chosen": 16,
+    "li_grasp": 17,
+    "psel": 16,
+    "tli_li": 0,
+    "tsel": 14,
+    "zs": 0
+   },
+   "goal:7": {
+    "chosen": 20,
+    "li_grasp": 20,
+    "psel": 20,
+    "tli_li": 0,
+    "tsel": 19,
+    "zs": 20
+   },
+   "goal:8": {
+    "chosen": 19,
+    "li_grasp": 19,
+    "psel": 19,
+    "tli_li": 1,
+    "tsel": 12,
+    "zs": 12
+   },
+   "goal:9": {
+    "chosen": 19,
+    "li_grasp": 19,
+    "psel": 19,
+    "tli_li": 0,
+    "tsel": 11,
+    "zs": 11
+   },
+   "spatial:0": {
+    "chosen": 20,
+    "li_grasp": 20,
+    "psel": 20,
+    "tli_li": 17,
+    "tsel": 17,
+    "zs": 17
+   },
+   "spatial:1": {
+    "chosen": 20,
+    "li_grasp": 20,
+    "psel": 20,
+    "tli_li": 17,
+    "tsel": 11,
+    "zs": 17
+   },
+   "spatial:2": {
+    "chosen": 17,
+    "li_grasp": 17,
+    "psel": 17,
+    "tli_li": 20,
+    "tsel": 20,
+    "zs": 0
+   },
+   "spatial:3": {
+    "chosen": 19,
+    "li_grasp": 19,
+    "psel": 15,
+    "tli_li": 20,
+    "tsel": 19,
+    "zs": 0
+   },
+   "spatial:4": {
+    "chosen": 0,
+    "li_grasp": 0,
+    "psel": 0,
+    "tli_li": 0,
+    "tsel": 0,
+    "zs": 0
+   },
+   "spatial:5": {
+    "chosen": 19,
+    "li_grasp": 0,
+    "psel": 0,
+    "tli_li": 16,
+    "tsel": 19,
+    "zs": 0
+   },
+   "spatial:6": {
+    "chosen": 0,
+    "li_grasp": 0,
+    "psel": 0,
+    "tli_li": 0,
+    "tsel": 0,
+    "zs": 0
+   },
+   "spatial:7": {
+    "chosen": 0,
+    "li_grasp": 0,
+    "psel": 0,
+    "tli_li": 0,
+    "tsel": 0,
+    "zs": 0
+   },
+   "spatial:8": {
+    "chosen": 18,
+    "li_grasp": 1,
+    "psel": 0,
+    "tli_li": 15,
+    "tsel": 18,
+    "zs": 0
+   },
+   "spatial:9": {
+    "chosen": 0,
+    "li_grasp": 0,
+    "psel": 0,
+    "tli_li": 0,
+    "tsel": 0,
+    "zs": 0
+   }
+  },
+  "reference": "tli_li",
+  "tasks": 20,
+  "tli": true
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g18_four_policies__libero_ood__read_xvla__s13__cd2ad786",
+ "schema": 1,
+ "script": "experiments/g18_four_policies.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-20T00:29:14+00:00",
+ "stream": null,
+ "tag": "read_xvla"
+}

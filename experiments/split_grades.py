@@ -74,13 +74,16 @@ def results():
     res = {}
     for name, f in (("G8 LIBERO-90 set d (pi0.5)", "g8_read.json"), ("Z3 pointers, zero fit (pi0.5)", "z3_read.json"),
                     ("Li OOD G15 (pi0.5)", "g15_read_pi05.json"), ("Li OOD G15 (pi0)", "g15_read_pi0.json"),
-                    ("Li OOD G18 (SmolVLA)", "g18_read_smolvla.json"), ("Li OOD G18 (X-VLA)", "g18_read_xvla.json"),
+                    ("Li OOD G18 (SmolVLA)", "g18_read_smolvla.json"), ("Li OOD G18 (X-VLA)", "g18_read_xvla.json"), ("Li OOD G23 (GR00T N1.5)", "g18_read_groot_libero.json"),
                     ("Li OOD Z1b (FLOWER, zero fit)", "z1b_read.json")):
         p = os.path.join(R, f)
         if os.path.exists(p):
             d = json.load(open(p))
             if d.get("per_task"):
                 res[name] = {k: {a: v for a, v in row.items() if isinstance(v, int)} for k, row in d["per_task"].items()}
+    p = os.path.join(R, "z5_read.json")
+    if os.path.exists(p):
+        res["Z5 soft blend, zero fit (pi0.5)"] = json.load(open(p))["per_task"]
     p = os.path.join(R, "z4_pilot.json")
     if os.path.exists(p):
         res["Z4 programs, zero fit, pilot (pi0.5)"] = {k: v for k, v in json.load(open(p))["rows"].items()}

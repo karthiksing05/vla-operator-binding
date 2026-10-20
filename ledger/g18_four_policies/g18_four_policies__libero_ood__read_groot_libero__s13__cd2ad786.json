@@ -1,0 +1,297 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/g18_four_policies.py --read --record",
+ "config": {
+  "backbone": "groot_libero"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g18_four_policies",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "cd2ad7860e32c66fab26142b045ccac9ca79f912",
+  "short": "cd2ad786"
+ },
+ "keys": {},
+ "metrics": {
+  "backbone": "groot_libero",
+  "choice": {
+   "goal:0": "psel",
+   "goal:1": "psel",
+   "goal:2": "tsel",
+   "goal:3": "tsel",
+   "goal:4": "psel",
+   "goal:5": "psel",
+   "goal:6": "psel",
+   "goal:7": "psel",
+   "goal:8": "tsel",
+   "goal:9": "tsel",
+   "spatial:0": "psel",
+   "spatial:1": "tsel",
+   "spatial:2": "psel",
+   "spatial:3": "psel",
+   "spatial:4": "psel",
+   "spatial:5": "psel",
+   "spatial:6": "psel",
+   "spatial:7": "psel",
+   "spatial:8": "psel",
+   "spatial:9": "tsel"
+  },
+  "chosen_vs_li_grasp": {
+   "diff": {
+    "diff": 0.1225,
+    "hi": 0.2275,
+    "hi90": 0.2075,
+    "lo": 0.03,
+    "lo90": 0.045,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    65,
+    16
+   ],
+   "n": 400,
+   "sign_p": 3.641398627788797e-08,
+   "tasks": 20,
+   "x": 157,
+   "y": 108
+  },
+  "chosen_vs_ref": {
+   "diff": {
+    "diff": 0.24,
+    "hi": 0.4025,
+    "hi90": 0.375,
+    "lo": 0.0775,
+    "lo90": 0.105,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    118,
+    22
+   ],
+   "n": 400,
+   "noninferior": true,
+   "sign_p": 4.488792012030927e-17,
+   "tasks": 20,
+   "x": 157,
+   "y": 61
+  },
+  "chosen_vs_zs": {
+   "diff": {
+    "diff": 0.11,
+    "hi": 0.245,
+    "hi90": 0.2225,
+    "lo": -0.0225,
+    "lo90": 0.0,
+    "n_pairs": 400,
+    "n_tasks": 20
+   },
+   "discordant": [
+    73,
+    29
+   ],
+   "n": 400,
+   "sign_p": 1.5502681985416567e-05,
+   "tasks": 20,
+   "x": 157,
+   "y": 113
+  },
+  "missing": [],
+  "n_tsel": 6,
+  "per_task": {
+   "goal:0": {
+    "chosen": 5,
+    "li_grasp": 6,
+    "psel": 5,
+    "tli_li": 17,
+    "tsel": 1,
+    "zs": 7
+   },
+   "goal:1": {
+    "chosen": 0,
+    "li_grasp": 0,
+    "psel": 0,
+    "tli_li": 0,
+    "tsel": 0,
+    "zs": 0
+   },
+   "goal:2": {
+    "chosen": 13,
+    "li_grasp": 0,
+    "psel": 7,
+    "tli_li": 1,
+    "tsel": 13,
+    "zs": 13
+   },
+   "goal:3": {
+    "chosen": 9,
+    "li_grasp": 1,
+    "psel": 0,
+    "tli_li": 0,
+    "tsel": 9,
+    "zs": 9
+   },
+   "goal:4": {
+    "chosen": 19,
+    "li_grasp": 19,
+    "psel": 19,
+    "tli_li": 4,
+    "tsel": 14,
+    "zs": 14
+   },
+   "goal:5": {
+    "chosen": 19,
+    "li_grasp": 12,
+    "psel": 19,
+    "tli_li": 1,
+    "tsel": 3,
+    "zs": 1
+   },
+   "goal:6": {
+    "chosen": 5,
+    "li_grasp": 5,
+    "psel": 5,
+    "tli_li": 1,
+    "tsel": 1,
+    "zs": 0
+   },
+   "goal:7": {
+    "chosen": 18,
+    "li_grasp": 18,
+    "psel": 18,
+    "tli_li": 12,
+    "tsel": 20,
+    "zs": 20
+   },
+   "goal:8": {
+    "chosen": 11,
+    "li_grasp": 5,
+    "psel": 5,
+    "tli_li": 11,
+    "tsel": 11,
+    "zs": 8
+   },
+   "goal:9": {
+    "chosen": 5,
+    "li_grasp": 2,
+    "psel": 1,
+    "tli_li": 7,
+    "tsel": 5,
+    "zs": 18
+   },
+   "spatial:0": {
+    "chosen": 6,
+    "li_grasp": 7,
+    "psel": 6,
+    "tli_li": 0,
+    "tsel": 4,
+    "zs": 3
+   },
+   "spatial:1": {
+    "chosen": 19,
+    "li_grasp": 14,
+    "psel": 16,
+    "tli_li": 2,
+    "tsel": 19,
+    "zs": 17
+   },
+   "spatial:2": {
+    "chosen": 13,
+    "li_grasp": 6,
+    "psel": 13,
+    "tli_li": 3,
+    "tsel": 1,
+    "zs": 2
+   },
+   "spatial:3": {
+    "chosen": 4,
+    "li_grasp": 4,
+    "psel": 4,
+    "tli_li": 0,
+    "tsel": 0,
+    "zs": 0
+   },
+   "spatial:4": {
+    "chosen": 4,
+    "li_grasp": 4,
+    "psel": 4,
+    "tli_li": 0,
+    "tsel": 0,
+    "zs": 1
+   },
+   "spatial:5": {
+    "chosen": 0,
+    "li_grasp": 0,
+    "psel": 0,
+    "tli_li": 0,
+    "tsel": 0,
+    "zs": 0
+   },
+   "spatial:6": {
+    "chosen": 0,
+    "li_grasp": 0,
+    "psel": 0,
+    "tli_li": 0,
+    "tsel": 0,
+    "zs": 0
+   },
+   "spatial:7": {
+    "chosen": 0,
+    "li_grasp": 2,
+    "psel": 0,
+    "tli_li": 0,
+    "tsel": 0,
+    "zs": 0
+   },
+   "spatial:8": {
+    "chosen": 6,
+    "li_grasp": 0,
+    "psel": 6,
+    "tli_li": 0,
+    "tsel": 0,
+    "zs": 0
+   },
+   "spatial:9": {
+    "chosen": 1,
+    "li_grasp": 3,
+    "psel": 3,
+    "tli_li": 2,
+    "tsel": 1,
+    "zs": 0
+   }
+  },
+  "reference": "tli_li",
+  "tasks": 20,
+  "tli": true
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g18_four_policies__libero_ood__read_groot_libero__s13__cd2ad786",
+ "schema": 1,
+ "script": "experiments/g18_four_policies.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-20T00:29:26+00:00",
+ "stream": null,
+ "tag": "read_groot_libero"
+}
