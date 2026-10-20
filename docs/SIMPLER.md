@@ -209,3 +209,18 @@ and 22/24 (carrot in basket; the 11.5 cm carrot sometimes rolls off the 13 x 8 c
 
 `ledger/x2_simpler_parity/`: tag `xvla` (mean of the 3 runs, per-run values and the stock-budget numbers in metrics) and tag
 `pi0` with keys ckpt = bridge_beta / bridge_uniform. `bytes` are all zero (evaluation only).
+
+## The graded split against all of Bridge V2 (2026-10-20; `experiments/x2_bridge_grades.py`, ledger `x2_bridge_grades` tag `read`)
+
+The WidowX checkpoints were trained on all of Bridge V2, so a pair is graded against its 19,974 distinct instructions
+(IPEC-COMMUNITY/bridge_orig_lerobot meta/tasks.jsonl; language only). A pair named together anywhere counts as seen. That is an
+over-count ("take carrot off plate" counts too), so "never named together" is the reliable signal for an unseen relation.
+
+| grade | pairs |
+|---|---|
+| seen (named together) | carrot → cloth (35 instructions), spoon → plate (12), eggplant → plate (3), coke can → towel (27), coke can → plate (1), apple → towel (6), apple → plate (3), sponge → plate (2) |
+| G1 relation (both parts named, never together) | green block → plate, carrot → yellow block, carrot → basket |
+| G4 part (object never named in Bridge) | Pepsi can → towel, Red Bull can → plate, 7up can → towel (Google-robot assets placed on the Bridge table) |
+
+Three of the six recombined pairs built first are therefore seen relations. The Bridge split uses the three G1 pairs and the
+G4 cans.
