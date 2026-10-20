@@ -2124,6 +2124,8 @@ BIND = [   # the Bind plan's reads (no demonstration; ledger m3_prereg tags b_bi
     ("z5: share positive", zrow("z5_blend", "read", "donation_agreement", "share_positive"), "0.25"),
     ("split: groot chosen", zsplit("Li OOD G23 (GR00T N1.5)", ("G1", "G2"), "chosen"), "157"),
     ("split: groot zs", zsplit("Li OOD G23 (GR00T N1.5)", ("G1", "G2"), "zs"), "113"),
+    ("f1: caching speedup", lambda: (float(_row("f1_profile", "Gscplate_tmp")["lazy_fit_total_min"]) / float(_row("f1_profile", "Gscplate_tmp")["cached_fit_total_min"]), 0.0, 1), "8.6"),
+    ("h3: rank-4 leaves crossover", zrow("h3_scaling", "space", "cross_space", "leaves_r4_hyp_vs_lora4_acc", "extrapolated"), "590"),
     ("g22 pi05: goal zs", lambda: (float(_row("g22_libero_pro", "read_pi05")["per_suite"]["goal"]["pro_zs"]), 0.0, 1), "0.20"),
     ("g22 pi05: goal old", lambda: (float(_row("g22_libero_pro", "read_pi05")["per_suite"]["goal"]["pro_origprompt"]), 0.0, 1), "0.09"),
     ("g22 pi05: goal sys", lambda: (float(_row("g22_libero_pro", "read_pi05")["per_suite"]["goal"]["pro_system"]), 0.0, 1), "0.31"),
