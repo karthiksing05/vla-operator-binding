@@ -1,4 +1,4 @@
-# Out-of-Distribution Learning Is Composition: A Supervised and an Unsupervised Scheme on Five Frozen Flow-Matching Policies
+# Out-of-Distribution Learning Is Composition: A Supervised and an Unsupervised Scheme for Frozen Flow-Matching Policies
 
 *Working draft. Every number is read from `ledger/` and audited by `experiments/audit_numbers.py`; sections marked PENDING wait
 on pre-registered reads that are running. Citations were checked against their arXiv pages on 2026-10-15.*
@@ -31,8 +31,8 @@ donates follows behaviour, not concept names.
 
 - Thesis: out-of-distribution learning on a frozen policy is a composition problem. The policy already carries most of a new
   task as concepts it learned under other instructions; what it lacks is the arrangement. We show it on five architectures with
-  one framework whose only architectural assumption is access to the policy's prototypes (Section 3).
-- The grade of novelty decides the regime. A test task is graded by which parts and relations it leaves unseen (Section 4).
+  one framework whose only architectural assumption is access to the policy's prototypes (Section 4).
+- The grade of novelty decides the regime. A test task is graded by which parts and relations it leaves unseen (Section 5).
   New relations and bindings in familiar scenes are learned by reuse; new scenes and new parts need units to be created.
 - Robotics is an ideal testbed for compositionality. A manipulation task is an explicit composition of parts (an object, its
   location, a goal relation and its location, a scene), each part has a measurable effect on the motion, and success is
@@ -45,10 +45,10 @@ donates follows behaviour, not concept names.
   same split for image diffusion: composing the scores of single-object prompts places objects that one prompt naming them all
   does not.
 - The failure mode: in familiar scenes the policy runs a trained routine on the wrong object; on the 6 tasks only a per-task
-  adapter solves, it grasps the wrong object first in 114 of 120 episodes (Section 6).
+  adapter solves, it grasps the wrong object first in 114 of 120 episodes (Section 7).
 - Two schemes. The supervised scheme reads concepts from the instruction and is built as one system, iterated: each iteration
   is a measured weakness of the previous version and one change motivated by it, pre-registered and tested on start states no
-  earlier decision saw (Section 6). The unsupervised scheme takes its units from the demonstration alone (Section 7).
+  earlier decision saw (Section 7). The unsupervised scheme takes its units from the demonstration alone (Section 8).
 - Lineage: Wang et al. ([arXiv](https://arxiv.org/abs/2605.07078)) select and compose a frozen
   generative model's prototypes for an out-of-distribution query; their stated gap is a mechanism to detect, consolidate and
   reuse new primitives. We supply one for an embodied flow policy: likelihood detects a new concept, and practice, not
@@ -111,7 +111,46 @@ conditionals per phase, and we compare with Li's operators on the same tasks (G4
 [arXiv](https://arxiv.org/abs/2109.08273)). We use the policy's own flow loss per concept to decide whether a concept needs new
 parameters.
 
-## 3 The framework
+## 3 The policies: flow-matching vision-language-action models
+
+Every policy we test has the same three parts, and the framework touches only the interfaces between them.
+
+1. **A vision-language encoder** reads the camera images and the instruction (and, for some, the robot's state) once per query.
+   Its output is the conditioning: a cache of keys and values, or a sequence of features.
+2. **An action expert** maps a noisy action chunk x_t, a flow time t and the conditioning to a velocity v(x_t, t). It is trained
+   by flow matching on the straight path x_t = t·ε + (1 − t)·a between noise ε and a demonstrated chunk a, with target
+   u = ε − a. Its velocity defines a field over chunks of future actions, so every identity we use holds on every policy:
+   E[a | x_t] = x_t − t·v, and the score is −E[ε | x_t] / t.
+3. **A sampler** integrates the field from noise to a chunk in a few steps. The robot executes the start of the chunk and the
+   policy is queried again (our client replans every 5 actions on every policy).
+
+The policies differ in each part:
+
+| policy | encoder | how the action expert reads the conditioning | what the expert predicts | sampler |
+|---|---|---|---|---|
+| pi0, pi0.5 (openpi) | PaliGemma (SigLIP and Gemma), eighteen layers over three image slots and the instruction | a smaller transformer attends, layer by layer, to the encoder's cached keys and values | the velocity; pi0's LIBERO model predicts arm actions relative to the current state | Euler, 10 steps |
+| SmolVLA (LeRobot) | SmolVLM2, its text model cut to sixteen layers, over two views, the instruction and a state token | attends to the cached prefix, as pi0 does | the velocity | Euler, 10 steps |
+| X-VLA | Florence-2's BART-large encoder (twelve layers) over the agent view's DaViT tokens and the instruction | a transformer reads the encoder's features | the clean chunk (x-prediction), absolute end-effector targets | re-noises each prediction with the initial noise, 10 steps |
+| GR00T N1.5 | Eagle-2.5 (SigLIP-2 and a Qwen3 language model cut to twelve layers), then four self-attention layers and a state encoder | a sixteen-layer DiT cross-attends to the features | the velocity, with time running the other way (τ = 1 − t) | Euler, 4 steps |
+| FLOWER | Florence-2-large's encoder over both views, a flow token and the instruction; no proprioception | a DiT of eighteen flow blocks cross-attends to the features | the velocity of a rectified flow | Euler, 4 steps |
+
+Two attention styles are present:
+- **joint:** the expert attends to the encoder's cache inside shared layers (pi0, pi0.5, SmolVLA);
+- **cross:** a separate DiT or transformer reads the encoder's output (X-VLA, GR00T N1.5, FLOWER).
+
+Two output types are present: velocity and clean-chunk prediction. Both define the same field, since v = (x_t − â) / t.
+
+**What the framework reads from a policy** (`lifelong_ood/policy/backbone*.py`, one wrapper per policy, one interface):
+- **the conditioning under any instruction:** a held concept is the policy's own field under a training instruction (the grasp
+  switch, pointer programs, the soft blend);
+- **the encoder's residual stream at the instruction's tokens,** through a hook before each encoder layer: text-latent
+  interpolation and the word splice;
+- **the velocity at any (x_t, t):** the flow-matching loss that decides held vs new, and the per-dimension blend;
+- **a low-rank adapter on the action expert:** the fitted prototypes and task leaves.
+
+No operator needs more than these four, which is why one framework runs unchanged on all six policies (five architectures).
+
+## 4 The framework
 
 (docs/METHOD.md, docs/UNSUPERVISED.md; Figures: one composed step; the concept hierarchy; the stream learner.)
 
@@ -150,7 +189,7 @@ position of the instruction's tokens in it (text-latent interpolation). These ar
 supplies them for PaliGemma (pi0, pi0.5), SmolVLM (SmolVLA), Florence-2 (X-VLA), Eagle (GR00T N1.5) and for FLOWER; the rest of the
 framework is shared code.
 
-## 4 The compositional split
+## 5 The compositional split
 
 (docs/SPLIT.md; `experiments/split_grades.py`.) A LIBERO task is a composition of parts in a scene. The training set is the 40
 tasks every policy we test was fine-tuned on (LIBERO-Spatial, Object, Goal and LIBERO-10), so we do not choose it. Parts are read
@@ -173,16 +212,16 @@ The grade measures how far prior knowledge must be bent to serve a new task.
 | G4 part | an object, goal relation or predicate never seen at all | LIBERO-90's ketchup in the tray, the caddy, the frying pan |
 
 Counts over the 110 evaluated tasks: G0 15; G1 9; G2 20; G3 18; G4 48. Li's 20 compositional OOD tasks are G1 or G2; the
-LIBERO-90 tasks span G0 to G4. Section 9 reports every result by grade.
+LIBERO-90 tasks span G0 to G4. Section 10 reports every result by grade.
 
-## 5 Protocol
+## 6 Protocol
 
 Pre-registered before any episode; paired episodes (same start state and noise for every arm); fresh start states from LIBERO's
 own placement sampler at unused seeds; exact sign test on discordant pairs, two-level bootstrap over tasks and episodes;
 non-inferiority margin 0.05. The strong baseline is a rank-16 LoRA per task fitted on the task's own scene's demonstration and
 given the same acceptance test.
 
-## 6 The supervised scheme: iterations of one system
+## 7 The supervised scheme: iterations of one system
 
 Each iteration names the weakness the previous version showed, the one change, and the pre-registered result.
 Figure (figures/robot/iterations.png) summarises the ladder: on LIBERO-90 the system against the per-task adapter at
@@ -306,7 +345,7 @@ place of 6,800. Non-inferiority holds in three of four streams and fails for pi0
 -0.13). Practice that reuses what earlier tasks taught it, checked by practice, keeps the success of practising each task
 from scratch with fewer practice episodes in every stream.
 
-## 7 The unsupervised scheme
+## 8 The unsupervised scheme
 
 (docs/UNSUPERVISED.md, docs/INTERPRETATION.md section 4.) The supervised scheme needs an instruction grammar to name a task's
 concepts. The unsupervised scheme takes its units from the demonstration and the policy alone. All reads here are exploratory
@@ -377,7 +416,7 @@ episodes). It wins where the source shares the 'put the X' template (the cream c
 where it comes from LIBERO-Object's 'pick up X and place it in the basket' (the butter 7 against 10): a word's binding carries
 its source sentence's placement. The practice-chosen grasp switch reaches 138 on the same states (selection-biased).
 
-## 8 Tests of the system
+## 9 Tests of the system
 
 ### Does composition generalise?
 With each concept refit with no demonstration of a held-out fold (5 folds, 53 eligible tasks), recombined concepts alone succeed
@@ -481,7 +520,7 @@ the type prototype takes the named bowl in 6 of 15.
 Object prototypes are nearly orthogonal to one another (mean cosine 0.058) and to goal prototypes (0.037); both act in the same
 layers, differing in direction; refit without one demonstration a prototype keeps a cosine of 0.64 with the full one.
 
-## 9 Results by grade
+## 10 Results by grade
 
 (docs/SPLIT.md; successes summed per grade from the per-task reads, `results/robot/split_grades.json`.) Every result above,
 stratified by what its tasks leave unseen. The reuse columns fit nothing in the network; the create column fits units on one
@@ -509,7 +548,7 @@ tasks need creation too: there the unseen binding is to a scene the policy knows
 therefore predicts which regime a task needs: reuse (the supervised pointers, or the unsupervised segment-named programs) or
 creation (fitted prototypes and leaves).
 
-## 10 What composition is
+## 11 What composition is
 (docs/INTERPRETATION.md; Figures: h1_factor_ood.png, h1_donate.png, h1_tli_layers.png, h1_switch.png.)
 
 **Composed success is a product of two competences.** The grasp is the only interface between a composed task's two phases.
@@ -531,7 +570,7 @@ composition is the choice of which concept acts on each side of it.
 **Composition is graded for motion and categorical for decisions.** Within a phase, a soft blend of held fields beats the best
 single field on position in 0.78 of familiar demos and 0.84 of LIBERO-90 demos, and on the gripper almost never (0.00 and
 0.04). Motion can be mixed; a decision such as closing the hand is taken from one field. The fit-time result says the same
-(Section 11): a unit must commit to the demonstration's mode.
+(Section 12): a unit must commit to the demonstration's mode.
 
 **A prototype corrects where the hand goes, not how it turns.** On a held-out demonstration of each concept, an object
 prototype lowers the position error of the policy's chunk from 1.205 to 0.897 and raises the alignment of the motion with the
@@ -556,7 +595,7 @@ is what makes the system architecture-agnostic.
 
 **The grade predicts reuse or creation.** A new relation or binding in a familiar scene is a recombination of held fields, and
 reuse serves it on all five policies. A new scene or a new part has no held field that carries its motion, and only a created
-unit serves it (Section 9).
+unit serves it (Section 10).
 
 **Composition as transfer.** Systematicity, in Fodor's sense, asks that a learner able to perform one arrangement of parts can
 perform the others. Cognitive psychology documents the same in people as transfer from task to task. A frozen policy shows a
@@ -564,7 +603,7 @@ measurable version of both: its prior knowledge donates expertise to tasks it wa
 names have nothing to do with the new task, and the reach of that donation ends where the parts or the scene are new. There,
 composition has to create.
 
-## 11 What composition costs
+## 12 What composition costs
 (docs/COST.md, docs/FIT_TIME.md; Figures: h2_pareto_libero90.png, h2_pareto_ood.png.) On pi0.5 and LIBERO-90 the system with
 task leaves stores 10.2 MB per task against 13.6 MB for per-task adapters and succeeds 994 against 932 of 1,320 times. It pays in
 fitting time: fitting costs 31.8 A40-minutes per task on average, against 3.5 for a per-task adapter. A unit
@@ -591,21 +630,21 @@ a prototype is fitted once per concept but costs about ten per-task adapters, so
 adapters only past about 20 thousand tasks under the fitted growth. Storage favours composition as concepts recur. Fitting time favoured per-task adapters, and caching the frozen prefix closes most of
 that gap: a prototype then fits in 4.6 minutes, close to a per-task adapter's 3.5.
 
-## 12 What does not work
+## 13 What does not work
 - Selecting prototypes by a held-out demonstration's likelihood (as Wang et al. do): the right object concept on top for 12 of
   29 queries.
-- Placing unit boundaries by the policy's likelihood: no better than random cuts (Section 7).
+- Placing unit boundaries by the policy's likelihood: no better than random cuts (Section 8).
 - A new object without a demonstration: borrowed prototypes help on 2 of the 17 tasks the policy fails.
 - Re-checking every earlier arrival after each refit (W2): no gain over W1.
 - Prototypes of concepts the policy already holds (Iteration 5's weakness) and noise-space refinement on top of the
   composition (DSRL on the library).
 - Composing held fields at the prompt in scenes the policy never trained in (Z3, Z5): no gain over the policy alone.
 
-## 13 A data defect
+## 14 A data defect
 The IPEC port of LIBERO-90 merges tasks that share an instruction: 16 tasks were given another scene's demonstration, including
 the per-task baselines. Fixed by matching each scene's block of episodes to the task's rendered first frames.
 
-## 14 Limitations
+## 15 Limitations
 Flow-matching policies only (pi0.5, pi0, SmolVLA, X-VLA, GR00T N1.5; FLOWER on its single suite, LIBERO-Goal, where both
 pre-registered tests narrowly fail); routed adapter libraries (CLARE) are not rerun here; choosing a held concept's source by
 practice costs 160 practice episodes per task; LIBERO-90, Li's OOD suites and LIBERO-PRO only; practice needs a simulator; a new
