@@ -1,0 +1,79 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "calvin_abc_d",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "for r in 0-500 500-1000: sbatch --partition=overcap --account=overcap --qos=short --gres=gpu:a40:1 --exclude=hal,tars,t1000,vicki,johnny5,c3po,olivaw --export=ALL,START=a,END=b,NPROC=5,EPLEN=360,CLIENT=/coc/flash10/ksingara3/robot/ext/X-VLA/client_e57bc00/calvin_client.py,OUT=results/x1_calvin/xvla_full_oldclient_ep360/part_a_b slurm/jobs/x1_calvin_xvla.sbatch",
+ "config": {
+  "calvin_env": "797142c",
+  "ckpt": "2toINF/X-VLA-Calvin-ABC_D@d76710e",
+  "client": "evaluation/calvin/calvin_client.py blob e57bc00 (git show ecbef0c^; chunk 15; 5 steps; gripper<0.7; reset per subtask)",
+  "published_avg_len": 4.43,
+  "results_dir": "/coc/flash10/ksingara3/lifelong-ood-learner/results/x1_calvin/xvla_full_oldclient_ep360"
+ },
+ "env": {
+  "device": null,
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.13.5",
+  "slurm_job": null,
+  "torch": null
+ },
+ "experiment": "x1_calvin_parity",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "83e576a907e5da23742f7db48df8cc24d16a71b4",
+  "short": "83e576a9"
+ },
+ "keys": {
+  "client": "e57bc00",
+  "ep_len": 360,
+  "n_chains": 1000
+ },
+ "metrics": {
+  "avg_len": 4.088,
+  "chain_sr": [
+   0.949,
+   0.887,
+   0.823,
+   0.757,
+   0.672
+  ],
+  "ep_len": 360,
+  "hist": [
+   51,
+   62,
+   64,
+   66,
+   85,
+   672
+  ],
+  "n_chains": 1000,
+  "n_shards": 10,
+  "range": [
+   0,
+   1000
+  ],
+  "shard_seconds_max": 2549.3279345035553,
+  "shard_seconds_sum": 25041.728175878525
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "x1_calvin_parity__calvin_abc_d__xvla__client-e57bc00__ep_len-360__n_chains-1000__s0__83e576a9",
+ "schema": 1,
+ "script": "experiments/x1_calvin_xvla_client.py",
+ "seconds": 2588.0,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-20T05:56:56+00:00",
+ "stream": null,
+ "tag": "xvla"
+}

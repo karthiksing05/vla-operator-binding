@@ -1,0 +1,88 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "calvin_abc_d",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "sbatch --partition=overcap --account=overcap --qos=short --gres=gpu:a40:1 --exclude=hal,tars,t1000,vicki,johnny5,c3po,olivaw --export=ALL,START=0,END=50,NPROC=5,FIX=0 slurm/jobs/x1_calvin_flower.sbatch",
+ "config": {
+  "calvin_env": "797142c",
+  "ckpt": "mbreuss/flower_calvin_abc@6424ee4",
+  "flower_vla_calvin": "acb32ee",
+  "multistep": 10,
+  "num_sampling_steps": 4,
+  "published_avg_len": 4.54,
+  "published_sr": [
+   0.993,
+   0.959,
+   0.905,
+   0.848,
+   0.775
+  ],
+  "results_dir": "/coc/flash10/ksingara3/lifelong-ood-learner/results/x1_calvin/flower_0_50_ep360_fix0_4159733"
+ },
+ "env": {
+  "device": null,
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.13.5",
+  "slurm_job": null,
+  "torch": null
+ },
+ "experiment": "x1_calvin_parity",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "30ef8849d23aed96c311a75028d99dc1243851fb",
+  "short": "30ef8849"
+ },
+ "keys": {
+  "ep_len": 360,
+  "loader": "authors",
+  "n_chains": 50
+ },
+ "metrics": {
+  "avg_len": 4.42,
+  "chain_sr": [
+   1.0,
+   1.0,
+   0.92,
+   0.8,
+   0.7
+  ],
+  "ep_len": 360,
+  "hist": [
+   0,
+   0,
+   4,
+   6,
+   5,
+   35
+  ],
+  "n_chains": 50,
+  "n_shards": 5,
+  "range": [
+   0,
+   50
+  ],
+  "shard_seconds_max": 296.3640420436859,
+  "shard_seconds_sum": 1372.0322225093842
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "x1_calvin_parity__calvin_abc_d__flower__ep_len-360__loader-authors__n_chains-50__s0__30ef8849",
+ "schema": 1,
+ "script": "experiments/x1_calvin_flower_eval.py",
+ "seconds": 296.3640420436859,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-20T04:57:02+00:00",
+ "stream": null,
+ "tag": "flower"
+}

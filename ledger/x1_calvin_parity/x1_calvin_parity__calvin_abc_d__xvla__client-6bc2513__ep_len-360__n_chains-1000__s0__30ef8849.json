@@ -1,0 +1,87 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "calvin_abc_d",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "for r in 0-500 500-1000: sbatch --partition=overcap --account=overcap --qos=short --gres=gpu:a40:1 --exclude=hal,tars,t1000,vicki,johnny5,c3po,olivaw --export=ALL,START=a,END=b,NPROC=5,EPLEN=360,OUT=results/x1_calvin/xvla_full_ep360/part_a_b slurm/jobs/x1_calvin_xvla.sbatch (+ reruns of 0-100 and 300-400 after cold-start timeouts)",
+ "config": {
+  "calvin_env": "797142c",
+  "ckpt": "2toINF/X-VLA-Calvin-ABC_D@d76710e",
+  "client": "evaluation/calvin/calvin_client.py@6bc2513 (chunk 20; 10 steps; gripper<0.8)",
+  "published_avg_len": 4.43,
+  "published_sr": [
+   0.971,
+   0.926,
+   0.885,
+   0.844,
+   0.788
+  ],
+  "results_dir": "/coc/flash10/ksingara3/lifelong-ood-learner/results/x1_calvin/xvla_full_ep360",
+  "xvla_repo": "6bc2513"
+ },
+ "env": {
+  "device": null,
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.13.5",
+  "slurm_job": null,
+  "torch": null
+ },
+ "experiment": "x1_calvin_parity",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "30ef8849d23aed96c311a75028d99dc1243851fb",
+  "short": "30ef8849"
+ },
+ "keys": {
+  "client": "6bc2513",
+  "ep_len": 360,
+  "n_chains": 1000
+ },
+ "metrics": {
+  "avg_len": 4.241,
+  "chain_sr": [
+   0.961,
+   0.905,
+   0.857,
+   0.793,
+   0.725
+  ],
+  "ep_len": 360,
+  "hist": [
+   39,
+   56,
+   48,
+   64,
+   68,
+   725
+  ],
+  "n_chains": 1000,
+  "n_shards": 16,
+  "range": [
+   0,
+   1000
+  ],
+  "shard_seconds_max": 2799.2208683490753,
+  "shard_seconds_sum": 24614.779037237167
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "x1_calvin_parity__calvin_abc_d__xvla__client-6bc2513__ep_len-360__n_chains-1000__s0__30ef8849",
+ "schema": 1,
+ "script": "experiments/x1_calvin_xvla_client.py",
+ "seconds": 2835.0,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-20T04:57:16+00:00",
+ "stream": null,
+ "tag": "xvla"
+}
