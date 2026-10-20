@@ -102,6 +102,34 @@ make_table_env("X2G4SevenUpOnTowel-v0", "opened_7up_can", "table_cloth_generated
                "G4", "7up can -> towel")
 
 
+# The registered G4 variant (prereg x2_bridge_switch): each can's density raised so its SAPIEN mass is 0.15 kg, nothing else changed.
+# Densities from experiments/x2_can_mass.py (SLURM job 4169374): at density 50 the masses are pepsi 0.02037, redbull 0.01789,
+# 7up 0.01965 kg (collision volumes 4.074e-4, 3.577e-4, 3.929e-4 m^3).
+HEAVY_DENSITY = {"opened_pepsi_can": 368.17152734885224, "opened_redbull_can": 419.29360546121825, "opened_7up_can": 381.76115223924637}
+
+
+def make_heavy_env(name, base):
+    src = GRADED[base]["source"]
+    cls = gym_registry_entry(base)
+
+    class _Heavy(cls):
+        def __init__(self, **kw):
+            kw["model_db_override"] = {src: dict(PICK_DB[src], density=HEAVY_DENSITY[src])}
+            super().__init__(**kw)
+    _Heavy.__name__ = name.replace("-", "_")
+    register_env(name, max_episode_steps=60)(_Heavy)
+    GRADED[name] = dict(GRADED[base], variant="mass 0.15 kg", density=HEAVY_DENSITY[src], base=base)
+
+
+def gym_registry_entry(name):
+    from mani_skill2_real2sim.utils.registration import REGISTERED_ENVS
+    return REGISTERED_ENVS[name].cls
+
+
+for _b in ("X2G4PepsiOnTowel-v0", "X2G4RedBullOnPlate-v0", "X2G4SevenUpOnTowel-v0"):
+    make_heavy_env(_b.replace("-v0", "Heavy-v0"), _b)
+
+
 def make(name):
     """The env as the stock evaluators build it (prepackaged visual-matching config, rgbd obs)."""
     import gymnasium as gym                      # the allenzren fork's simpler_env.make takes no kwargs
@@ -130,7 +158,10 @@ def main(out):
     from simpler_env.utils.env.observation_utils import get_image_from_maniskill2_obs_dict
     os.makedirs(out, exist_ok=True)
     rows = {}
+    only = sys.argv[2].split(":") if len(sys.argv) > 2 else None
     for name, meta in GRADED.items():
+        if only and name not in only:
+            continue
         env = make(name)
         n = len(env.unwrapped._xy_configs) * len(env.unwrapped._quat_configs)
         res = []
@@ -140,6 +171,8 @@ def main(out):
                 Image.fromarray(get_image_from_maniskill2_obs_dict(env, obs)).save(f"{out}/{name}_ep{ep}.png")
             res.append(place_check(env))
         ups = [r[2]["can_up_cos"] for r in res if r[2]["can_up_cos"] is not None]
+        if "variant" in meta:
+            meta = dict(meta, source_mass=float(env.unwrapped.episode_source_obj.mass))
         rows[name] = dict(meta, layouts=n, max_episode_steps=env.spec.max_episode_steps,
                           success_at_reset=sum(r[0] for r in res), success_after_placement=sum(r[1] for r in res),
                           src_z_settled=[round(min(r[2]["src_z"] for r in res), 4), round(max(r[2]["src_z"] for r in res), 4)],

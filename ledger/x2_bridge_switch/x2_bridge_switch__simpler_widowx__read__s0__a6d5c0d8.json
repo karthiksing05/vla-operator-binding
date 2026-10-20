@@ -1,0 +1,281 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "simpler_widowx",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "PYTHONPATH=. python3 experiments/x2_bridge_read.py read --record",
+ "config": {
+  "alpha": 0.05,
+  "bootstrap_B": 10000,
+  "prereg": "m3_prereg x2_bridge_switch"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.13.5",
+  "slurm_job": null,
+  "torch": "2.13.0+cpu"
+ },
+ "experiment": "x2_bridge_switch",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a6d5c0d8dad906ac6fcc91485eaa896228f969ac",
+  "short": "a6d5c0d8"
+ },
+ "keys": {},
+ "metrics": {
+  "G4_pooled_descriptive": {
+   "diff": {
+    "diff": -0.008333333333333333,
+    "hi": -0.001388888888888889,
+    "hi90": -0.002777777777777778,
+    "lo": -0.016666666666666666,
+    "lo90": -0.015277777777777777,
+    "n_pairs": 720,
+    "n_tasks": 3
+   },
+   "discordant": [
+    0,
+    6
+   ],
+   "n": 720,
+   "sign_p": 0.03125,
+   "tasks": 3,
+   "x": 0,
+   "y": 6
+  },
+  "H1_G1_pooled": {
+   "diff": {
+    "diff": -0.19583333333333333,
+    "hi": 0.002777777777777778,
+    "hi90": -0.027777777777777776,
+    "lo": -0.41944444444444445,
+    "lo90": -0.37083333333333335,
+    "n_pairs": 720,
+    "n_tasks": 3
+   },
+   "discordant": [
+    60,
+    201
+   ],
+   "n": 720,
+   "passes": false,
+   "sign_p": 5.79760375329347e-19,
+   "tasks": 3,
+   "x": 276,
+   "y": 417
+  },
+  "missing": [],
+  "per_task": {
+   "X2G1CarrotInBasket-v0": {
+    "alone": 164,
+    "alone_desc": {
+     "grasped": 0.8125,
+     "moved_correct": 0.9375,
+     "n": 240,
+     "success_given_fired": 0.6861924686192469,
+     "successes": 164,
+     "switch_fired": null,
+     "switch_query_median": 6
+    },
+    "diff": -0.42916666666666664,
+    "discordant_switch_only_alone_only": [
+     14,
+     117
+    ],
+    "grade": "G1",
+    "n": 240,
+    "sign_p": 2.037578093513318e-21,
+    "switch": 61,
+    "switch_desc": {
+     "grasped": 0.6125,
+     "moved_correct": 0.85,
+     "n": 240,
+     "success": 0.25416666666666665,
+     "success_given_fired": 0.324468085106383,
+     "successes": 61,
+     "switch_fired": 0.7833333333333333,
+     "switch_query_median": 11
+    }
+   },
+   "X2G1CarrotOnYellowBlock-v0": {
+    "alone": 65,
+    "alone_desc": {
+     "grasped": 0.7958333333333333,
+     "moved_correct": 0.8333333333333334,
+     "n": 240,
+     "success_given_fired": 0.2742616033755274,
+     "successes": 65,
+     "switch_fired": null,
+     "switch_query_median": 6
+    },
+    "diff": -0.17083333333333334,
+    "discordant_switch_only_alone_only": [
+     14,
+     55
+    ],
+    "grade": "G1",
+    "n": 240,
+    "sign_p": 6.921916920059638e-07,
+    "switch": 24,
+    "switch_desc": {
+     "grasped": 0.4666666666666667,
+     "moved_correct": 0.425,
+     "n": 240,
+     "success": 0.1,
+     "success_given_fired": 0.2033898305084746,
+     "successes": 24,
+     "switch_fired": 0.49166666666666664,
+     "switch_query_median": 6
+    }
+   },
+   "X2G1GreenBlockOnPlate-v0": {
+    "alone": 188,
+    "alone_desc": {
+     "grasped": 0.8666666666666667,
+     "moved_correct": 0.9333333333333333,
+     "n": 240,
+     "success_given_fired": 0.7982832618025751,
+     "successes": 188,
+     "switch_fired": null,
+     "switch_query_median": 6
+    },
+    "diff": 0.0125,
+    "discordant_switch_only_alone_only": [
+     32,
+     29
+    ],
+    "grade": "G1",
+    "n": 240,
+    "sign_p": 0.798152627305718,
+    "switch": 191,
+    "switch_desc": {
+     "grasped": 0.8083333333333333,
+     "moved_correct": 0.8125,
+     "n": 240,
+     "success": 0.7958333333333333,
+     "success_given_fired": 0.7958333333333333,
+     "successes": 191,
+     "switch_fired": 1.0,
+     "switch_query_median": 6
+    }
+   },
+   "X2G4PepsiOnTowelHeavy-v0": {
+    "alone": 2,
+    "alone_desc": {
+     "grasped": 0.39166666666666666,
+     "moved_correct": 0.9833333333333333,
+     "n": 240,
+     "success": 0.008333333333333333,
+     "success_given_fired": 0.007692307692307693,
+     "successes": 2,
+     "switch_fired": null,
+     "switch_query_median": 10
+    },
+    "diff": -0.008333333333333333,
+    "discordant_switch_only_alone_only": [
+     0,
+     2
+    ],
+    "grade": "G4 (0.15 kg variant)",
+    "n": 240,
+    "sign_p": 0.5,
+    "switch": 0,
+    "switch_desc": {
+     "grasped": 0.24583333333333332,
+     "moved_correct": 0.44166666666666665,
+     "n": 240,
+     "success": 0.0,
+     "success_given_fired": 0.0,
+     "successes": 0,
+     "switch_fired": 0.1125,
+     "switch_query_median": 12
+    }
+   },
+   "X2G4RedBullOnPlateHeavy-v0": {
+    "alone": 3,
+    "alone_desc": {
+     "grasped": 0.32916666666666666,
+     "moved_correct": 0.9833333333333333,
+     "n": 240,
+     "success": 0.0125,
+     "success_given_fired": 0.013605442176870748,
+     "successes": 3,
+     "switch_fired": null,
+     "switch_query_median": 11
+    },
+    "diff": -0.0125,
+    "discordant_switch_only_alone_only": [
+     0,
+     3
+    ],
+    "grade": "G4 (0.15 kg variant)",
+    "n": 240,
+    "sign_p": 0.25,
+    "switch": 0,
+    "switch_desc": {
+     "grasped": 0.14166666666666666,
+     "moved_correct": 0.43333333333333335,
+     "n": 240,
+     "success": 0.0,
+     "success_given_fired": 0.0,
+     "successes": 0,
+     "switch_fired": 0.1125,
+     "switch_query_median": 12
+    }
+   },
+   "X2G4SevenUpOnTowelHeavy-v0": {
+    "alone": 1,
+    "alone_desc": {
+     "grasped": 0.49166666666666664,
+     "moved_correct": 0.9583333333333334,
+     "n": 240,
+     "success": 0.004166666666666667,
+     "success_given_fired": 0.0,
+     "successes": 1,
+     "switch_fired": null,
+     "switch_query_median": 9
+    },
+    "diff": -0.004166666666666667,
+    "discordant_switch_only_alone_only": [
+     0,
+     1
+    ],
+    "grade": "G4 (0.15 kg variant)",
+    "n": 240,
+    "sign_p": 1.0,
+    "switch": 0,
+    "switch_desc": {
+     "grasped": 0.11666666666666667,
+     "moved_correct": 0.375,
+     "n": 240,
+     "success": 0.0,
+     "success_given_fired": 0.0,
+     "successes": 0,
+     "switch_fired": 0.11666666666666667,
+     "switch_query_median": 10
+    }
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "x2_bridge_switch__simpler_widowx__read__s0__a6d5c0d8",
+ "schema": 1,
+ "script": "experiments/x2_bridge_read.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-20T22:31:57+00:00",
+ "stream": null,
+ "tag": "read"
+}

@@ -323,3 +323,34 @@ Bridge alternatives for B: "put eggplant on towel" and "put knife on towel" (tow
 plate" (plate; "put carrot on plate" is itself a Bridge instruction). For green block -> plate, Bridge's own "put the green block
 on the table" is another A. Every source above should get its own zero-shot run (the stock four are in the table above) before
 the composition read.
+
+## Read X2: the grasp switch on Bridge (pre-registered: experiments/prereg/x2_bridge_switch.py; 2026-10-20)
+
+pi0 = open-pi-zero bridge_beta (float32), run with the stock protocol: 24 layouts x flow-noise seeds 0-9 = 240 episodes per task
+and arm. Episodes pair by (layout, seed) with x2_simpler_zs. Rows are in ledger `x2_bridge_switch` (tag pi0, keys task and arm)
+and the read is in tag `read`, produced by `experiments/x2_bridge_read.py`.
+
+The G4 can variant is the registered one: each can's density is raised so its SAPIEN mass is 0.15 kg (Pepsi 368.2, Red Bull
+419.3, 7up 381.8 kg/m^3; measured by `experiments/x2_can_mass.py`). The env ids are `X2G4*Heavy-v0` in
+`experiments/x2_simpler_graded.py`. Re-validation: success at reset 0/24 in all three; after placing, Pepsi 24/24, 7up 24/24 and
+Red Bull 19/24 (the tall can tips when dropped onto the plate); cans stand upright (cosine >= 0.9998); mass 0.150 kg.
+
+| task | switch | alone | discordant (switch only / alone only) | sign p | grasped: switch / alone | switch fired (median query) |
+|---|---|---|---|---|---|---|
+| G1 green block -> plate | 191/240 | 188/240 | 32 / 29 | 0.80 | 80.8 / 86.7 | 100% (6) |
+| G1 carrot -> yellow block | 24/240 | 65/240 | 14 / 55 | 6.9e-7 | 46.7 / 79.6 | 49% (6) |
+| G1 carrot -> basket | 61/240 | 164/240 | 14 / 117 | 2.0e-21 | 61.3 / 81.2 | 78% (11) |
+| G4 Pepsi -> towel (0.15 kg) | 0/240 | 2/240 | 0 / 2 | 0.50 | 24.6 / 39.2 | 11% (12) |
+| G4 Red Bull -> plate (0.15 kg) | 0/240 | 3/240 | 0 / 3 | 0.25 | 14.2 / 32.9 | 11% (12) |
+| G4 7up -> towel (0.15 kg) | 0/240 | 1/240 | 0 / 1 | 1.0 | 11.7 / 49.2 | 12% (10) |
+
+**H1 fails.** Pooled over the 720 G1 pairs, the switch gets 276 and pi0 alone gets 417, a difference of -19.6 pp (task-level
+bootstrap 95% [-41.9, +0.3]). The discordant pairs are 60 vs 201 (sign p 5.8e-19), in the opposite direction from H1. The switch
+ties on green block -> plate and loses clearly on the two carrot tasks.
+- Under prompt A ("put carrot on plate"), the policy closes the gripper on the carrot for 3 queries only 49% of the time on the
+  yellow-block table, and only 78% of the time in the sink scene, where that prompt was never trained.
+- Grasp rates drop by 20 to 33 points against the task's own instruction.
+
+**G4 (descriptive).** The 0.15 kg cans do not lift the floor: pi0 alone succeeds in 2, 3 and 1 of 240 episodes, and the switch
+in 0. pi0 alone grasps the heavier cans more often than the light ones (33 to 49%, against 25 to 35%). Under "put can in pot" the
+switch fires in only 11 to 12% of episodes.
