@@ -1,0 +1,93 @@
+{
+ "artifacts": {},
+ "backbone": "2toINF/X-VLA-WidowX",
+ "backfilled": false,
+ "bench": "simpler_widowx",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "sbatch --export=ALL,MODEL=2toINF/X-VLA-WidowX,SUITE=WidowX,TASKS=spoon:carrot:blocks:eggplant,TAG=runK slurm/jobs/x2_xvla_simpler.sbatch",
+ "config": {
+  "checkpoint": "2toINF/X-VLA-WidowX",
+  "denoise_steps": 10,
+  "domain_id": 0,
+  "early_stop_on_success": true,
+  "episodes_per_task": 24,
+  "max_steps": 1200,
+  "simpler_fork": "255isWhite/SimplerEnv (ManiSkill2_real2sim 54ae2e0, abs EE)",
+  "visual_matching": true
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.13.5",
+  "slurm_job": null,
+  "torch": "2.13.0+cpu"
+ },
+ "experiment": "x2_simpler_parity",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "30ef8849d23aed96c311a75028d99dc1243851fb",
+  "short": "30ef8849"
+ },
+ "keys": {},
+ "metrics": {
+  "avg_published": 95.8,
+  "avg_success": 93.75,
+  "avg_success_stock_budget": 72.91666666666667,
+  "blocks_published": 95.8,
+  "blocks_success": 81.94444444444444,
+  "blocks_success_runs": [
+   83.33333333333333,
+   83.33333333333333,
+   79.16666666666667
+  ],
+  "blocks_success_stock_budget": 59.72222222222223,
+  "carrot_published": 91.7,
+  "carrot_success": 97.22222222222221,
+  "carrot_success_runs": [
+   100.0,
+   95.83333333333333,
+   95.83333333333333
+  ],
+  "carrot_success_stock_budget": 75.0,
+  "eggplant_published": 95.8,
+  "eggplant_success": 95.83333333333333,
+  "eggplant_success_runs": [
+   95.83333333333333,
+   95.83333333333333,
+   95.83333333333333
+  ],
+  "eggplant_success_stock_budget": 65.27777777777779,
+  "runs": [
+   "xvla_WidowX_run1_4159519",
+   "xvla_WidowX_run2_4159604",
+   "xvla_WidowX_run3_4159551"
+  ],
+  "spoon_published": 100.0,
+  "spoon_success": 100.0,
+  "spoon_success_runs": [
+   100.0,
+   100.0,
+   100.0
+  ],
+  "spoon_success_stock_budget": 91.66666666666667
+ },
+ "notes": "docs/SIMPLER.md; eggplant scene differs from stock SimplerEnv in the 255isWhite fork (camera + robot init moved)",
+ "retired": null,
+ "run_id": "x2_simpler_parity__simpler_widowx__xvla__s0__30ef8849",
+ "schema": 1,
+ "script": "slurm/jobs/x2_xvla_simpler.sbatch",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-20T05:23:35+00:00",
+ "stream": null,
+ "tag": "xvla"
+}

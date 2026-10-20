@@ -1,0 +1,64 @@
+{
+ "artifacts": {},
+ "backbone": "2toINF/X-VLA-Google-Robot",
+ "backfilled": false,
+ "bench": "simpler_google_vm",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "sbatch --export=ALL,MODEL=2toINF/X-VLA-Google-Robot,SUITE=google-VM,TASKS=coke_can:move_near:open_close:place_in,TAG=run0 slurm/jobs/x2_xvla_simpler.sbatch",
+ "config": {
+  "checkpoint": "2toINF/X-VLA-Google-Robot",
+  "early_stop_on_success": true,
+  "max_steps": "2x stock",
+  "setting": "visual matching",
+  "simpler_fork": "255isWhite/SimplerEnv"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.13.5",
+  "slurm_job": null,
+  "torch": "2.13.0+cpu"
+ },
+ "experiment": "x2_simpler_parity",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "30ef8849d23aed96c311a75028d99dc1243851fb",
+  "short": "30ef8849"
+ },
+ "keys": {},
+ "metrics": {
+  "avg_published": 83.5,
+  "avg_success": 81.50925925925925,
+  "coke_can_episodes": 300,
+  "coke_can_published": 98.3,
+  "coke_can_success": 99.0,
+  "move_near_episodes": 240,
+  "move_near_published": 97.5,
+  "move_near_success": 98.33333333333333,
+  "open_close_episodes": 216,
+  "open_close_published": 74.5,
+  "open_close_success": 74.07407407407408,
+  "place_in_episodes": 108,
+  "place_in_published": 63.8,
+  "place_in_success": 54.629629629629626
+ },
+ "notes": "docs/SIMPLER.md; xvla_google-VM_run0_4159547",
+ "retired": null,
+ "run_id": "x2_simpler_parity__simpler_google_vm__xvla__s0__30ef8849",
+ "schema": 1,
+ "script": "slurm/jobs/x2_xvla_simpler.sbatch",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-20T05:23:36+00:00",
+ "stream": null,
+ "tag": "xvla"
+}

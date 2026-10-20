@@ -1,0 +1,66 @@
+{
+ "artifacts": {},
+ "backbone": "open-pi-zero/bridge_uniform",
+ "backfilled": false,
+ "bench": "simpler_widowx",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "sbatch --export=ALL,CKPT=bridge_uniform,TASK=<task>,NEP=240,BF16=False slurm/jobs/x2_pi0_simpler.sbatch",
+ "config": {
+  "act_steps": 4,
+  "checkpoint": "allenzren/open-pi-zero bridge_uniform",
+  "horizon_steps": 4,
+  "simpler_fork": "allenzren/SimplerEnv (proprio)",
+  "tokenizer": "paligemma tokenizer.model rebuilt from the openpi big_vision copy (sha256-identical)",
+  "trials_per_task": 240,
+  "use_bf16": false,
+  "use_torch_compile": true,
+  "visual_matching": true
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.13.5",
+  "slurm_job": null,
+  "torch": "2.13.0+cpu"
+ },
+ "experiment": "x2_simpler_parity",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "30ef8849d23aed96c311a75028d99dc1243851fb",
+  "short": "30ef8849"
+ },
+ "keys": {
+  "ckpt": "bridge_uniform"
+ },
+ "metrics": {
+  "avg_published": 55.65,
+  "avg_success": 57.1875,
+  "widowx_carrot_on_plate_published": 58.8,
+  "widowx_carrot_on_plate_success": 60.83333333333333,
+  "widowx_put_eggplant_in_basket_published": 79.2,
+  "widowx_put_eggplant_in_basket_success": 77.08333333333334,
+  "widowx_spoon_on_towel_published": 63.3,
+  "widowx_spoon_on_towel_success": 64.58333333333334,
+  "widowx_stack_cube_published": 21.3,
+  "widowx_stack_cube_success": 26.25
+ },
+ "notes": "docs/SIMPLER.md",
+ "retired": null,
+ "run_id": "x2_simpler_parity__simpler_widowx__pi0__ckpt-bridge_uniform__s0__30ef8849",
+ "schema": 1,
+ "script": "slurm/jobs/x2_pi0_simpler.sbatch",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-20T05:23:36+00:00",
+ "stream": null,
+ "tag": "pi0"
+}
