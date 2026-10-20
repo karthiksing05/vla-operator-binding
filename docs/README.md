@@ -39,6 +39,7 @@ Organised as the paper is: the question, the split, the two schemes, the results
 ## Related work
 
 - [RELATED.md](RELATED.md): baselines and related work.
+- [PLAN_X.md](PLAN_X.md): the framework beyond LIBERO (CALVIN, Bridge via SimplerEnv, EPIC-KITCHENS-100).
 
 ## History ([history/](history/))
 
