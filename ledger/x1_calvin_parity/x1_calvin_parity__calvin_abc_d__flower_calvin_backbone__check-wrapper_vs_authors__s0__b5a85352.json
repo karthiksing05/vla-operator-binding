@@ -1,0 +1,179 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "calvin_abc_d",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/x1_calvin_flower_parity.py --flower_root /coc/flash10/ksingara3/robot/ext/flower_vla_calvin --ckpt_dir /coc/flash10/ksingara3/robot/data/hf/home/hub/models--mbreuss--flower_calvin_abc/snapshots/6424ee4c064eb6654a39280314793620b149dd97 --val_dir /coc/flash10/ksingara3/robot/calvin/task_ABC_D/validation --record",
+ "config": {
+  "chains": 4,
+  "chunks": 3,
+  "ckpt": "/coc/flash10/ksingara3/robot/data/hf/home/hub/models--mbreuss--flower_calvin_abc/snapshots/6424ee4c064eb6654a39280314793620b149dd97"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "crushinator.cc.gatech.edu",
+  "python": "3.10.22",
+  "slurm_job": "4168943",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "x1_calvin_parity",
+ "git": {
+  "branch": "main",
+  "dirty": false,
+  "hash": "b5a853522c914b544373af46e2dae9e0bc21356f",
+  "short": "b5a85352"
+ },
+ "keys": {
+  "check": "wrapper_vs_authors"
+ },
+ "metrics": {
+  "fix": {
+   "flow_token": 51289,
+   "loaded": {
+    "vlm.language_model.final_logits_bias": [
+     1,
+     51290
+    ],
+    "vlm.language_model.model.shared.weight": [
+     51290,
+     1024
+    ]
+   }
+  },
+  "max_img": 0.0,
+  "max_same_noise": 0.0,
+  "max_same_seed_forward": 0.0,
+  "n_frames": 12,
+  "prompt_embed_maxdiff": 0.0,
+  "rows": [
+   {
+    "action_scale": 1.0,
+    "chain": 0,
+    "chunk": 0,
+    "img_maxdiff": 0.0,
+    "same_noise_maxdiff": 0.0,
+    "same_seed_forward_maxdiff": 0.0,
+    "subtask": "turn_on_led"
+   },
+   {
+    "action_scale": 1.0,
+    "chain": 0,
+    "chunk": 1,
+    "img_maxdiff": 0.0,
+    "same_noise_maxdiff": 0.0,
+    "same_seed_forward_maxdiff": 0.0,
+    "subtask": "turn_on_led"
+   },
+   {
+    "action_scale": 1.0,
+    "chain": 0,
+    "chunk": 2,
+    "img_maxdiff": 0.0,
+    "same_noise_maxdiff": 0.0,
+    "same_seed_forward_maxdiff": 0.0,
+    "subtask": "turn_on_led"
+   },
+   {
+    "action_scale": 1.0,
+    "chain": 1,
+    "chunk": 0,
+    "img_maxdiff": 0.0,
+    "same_noise_maxdiff": 0.0,
+    "same_seed_forward_maxdiff": 0.0,
+    "subtask": "push_red_block_left"
+   },
+   {
+    "action_scale": 1.0,
+    "chain": 1,
+    "chunk": 1,
+    "img_maxdiff": 0.0,
+    "same_noise_maxdiff": 0.0,
+    "same_seed_forward_maxdiff": 0.0,
+    "subtask": "push_red_block_left"
+   },
+   {
+    "action_scale": 1.0,
+    "chain": 1,
+    "chunk": 2,
+    "img_maxdiff": 0.0,
+    "same_noise_maxdiff": 0.0,
+    "same_seed_forward_maxdiff": 0.0,
+    "subtask": "push_red_block_left"
+   },
+   {
+    "action_scale": 1.0,
+    "chain": 2,
+    "chunk": 0,
+    "img_maxdiff": 0.0,
+    "same_noise_maxdiff": 0.0,
+    "same_seed_forward_maxdiff": 0.0,
+    "subtask": "push_blue_block_right"
+   },
+   {
+    "action_scale": 1.0,
+    "chain": 2,
+    "chunk": 1,
+    "img_maxdiff": 0.0,
+    "same_noise_maxdiff": 0.0,
+    "same_seed_forward_maxdiff": 0.0,
+    "subtask": "push_blue_block_right"
+   },
+   {
+    "action_scale": 1.0,
+    "chain": 2,
+    "chunk": 2,
+    "img_maxdiff": 0.0,
+    "same_noise_maxdiff": 0.0,
+    "same_seed_forward_maxdiff": 0.0,
+    "subtask": "push_blue_block_right"
+   },
+   {
+    "action_scale": 1.0,
+    "chain": 3,
+    "chunk": 0,
+    "img_maxdiff": 0.0,
+    "same_noise_maxdiff": 0.0,
+    "same_seed_forward_maxdiff": 0.0,
+    "subtask": "open_drawer"
+   },
+   {
+    "action_scale": 1.0,
+    "chain": 3,
+    "chunk": 1,
+    "img_maxdiff": 0.0,
+    "same_noise_maxdiff": 0.0,
+    "same_seed_forward_maxdiff": 0.0,
+    "subtask": "open_drawer"
+   },
+   {
+    "action_scale": 1.0,
+    "chain": 3,
+    "chunk": 2,
+    "img_maxdiff": 0.0,
+    "same_noise_maxdiff": 0.0,
+    "same_seed_forward_maxdiff": 0.0,
+    "subtask": "open_drawer"
+   }
+  ],
+  "weights_maxdiff": 0.0
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "x1_calvin_parity__calvin_abc_d__flower_calvin_backbone__check-wrapper_vs_authors__s0__b5a85352",
+ "schema": 1,
+ "script": "experiments/x1_calvin_flower_parity.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-20T19:51:43+00:00",
+ "stream": null,
+ "tag": "flower_calvin_backbone"
+}

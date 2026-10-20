@@ -267,3 +267,84 @@ Grades under ABC → D, by the docs/SPLIT.md rule:
 Proposed first read, no training data required: grade the 1,000 chains' consecutive subtask pairs as seen / unseen in ABC's
 training annotations (G1-relation on the chain), and report the per-pair success of each policy by grade from the runs above
 (per-chain results are on disk); a held-subtask G2 / G4 split needs a fine-tune with a subtask left out and so the dataset.
+
+## The measured split (ABC training annotations; `experiments/x1_calvin_split.py`, ledger `x1_calvin_split`)
+
+Training annotations: 17,870 windows of 64 frames over 1,795,045 frames (scene_info: B frames 0-598,909, C 598,910-1,191,338,
+A 1,191,339-1,795,044); 6,089 / 6,115 / 5,666 windows in A / B / C. **All 34 subtasks occur in all three training scenes**
+(61-281 windows per subtask and scene; fewest: rotate_blue_block_right in C, 61; push_blue_block_left in C, 72;
+rotate_red_block_right in B, 73). So no subtask, verb, object or place is new in scene D: per docs/SPLIT.md every evaluation
+subtask is **G3 (scene)** and nothing is G2 or G4.
+
+Consecutive ordered pairs (window j is the next annotated window after i in the same recording segment, starting at most 32
+frames before and 64 frames after i's end, task_i != task_j): 945 of the 34 x 33 = 1,122 ordered pairs occur in training
+(8,858 transitions). The count depends on the gap rule: 489 / 835 / 945 / 1,013 / 1,049 distinct pairs at gaps 0 / 32 / 64 /
+128 / 256 frames.
+
+The 1,000 evaluation chains contain 4,000 consecutive pairs over 501 distinct ordered pairs; **32 distinct pairs (125 instances,
+3.1 %) never occur consecutively in training** (G1 relation). 880 chains contain no unseen pair, 115 one, 5 two (mean 0.125 per
+chain; 0.975 / 0.308 / 0.049 / 0.041 at gaps 0 / 32 / 128 / 256). The relation grade on CALVIN is therefore thin: the training
+play already covers almost every transition the benchmark asks for.
+
+Does an unseen transition cost anything? Success of step k+1, given step k was reached, by the grade of the pair (k, k+1), from
+the full parity runs:
+
+| run | seen pair | unseen pair | unseen, excluding pairs that end in push_*_block_right |
+|---|---|---|---|
+| FLOWER, authors' loader | 3394 / 3610 (94.0 %) | 117 / 121 (96.7 %) | 85 / 86 (98.8 %) |
+| FLOWER, load fix | 3432 / 3627 (94.6 %) | 115 / 120 (95.8 %) | |
+| X-VLA, current client, 720 | 3244 / 3439 (94.3 %) | 98 / 119 (82.4 %) | 85 / 85 (100 %) (seen: 95.2 %) |
+| X-VLA, current client, 360 | 3182 / 3396 (93.7 %) | 98 / 120 (81.7 %) | |
+
+No cost: FLOWER is as good on unseen transitions as on seen ones, and X-VLA's apparent drop is entirely its push-right
+weakness (12 of the 32 unseen pairs end in a push to the right). CALVIN ABC -> D is a scene (G3) benchmark with almost no relation
+grade, and the policies already transfer across both.
+
+## The CALVIN backbone (`lifelong_ood/policy/backbone_flower_calvin.py`)
+
+`FlowerCalvinBackbone` subclasses `FlowerBackbone` (whose LIBERO behaviour is unchanged) with CALVIN's observation convention:
+raw `rgb_static` / `rgb_gripper` unflipped, uint8 Resize(224) on the device, / 255, CLIP normalisation; instruction-only prompt;
+no proprio; 7-D relative actions, clamp. The load fix is inherited. Parity (`experiments/x1_calvin_flower_parity.py`, SLURM;
+ledger `x1_calvin_parity` tag `flower_calvin_backbone`): against the authors' model (their loader + the fix) and their HulcWrapper
+transform, on 12 frames (4 evaluation chains x the initial frame and after each of 2 executed chunks), the weights and the `<Flow>`
+embedding are identical, the image tensors are identical, and the action chunks are **bit-identical** both for the same noise
+(sample_actions) and for the same CUDA seed through the authors' forward(). (A CPU resize first differed by one grey level,
+0.015 after normalisation, and actions by up to 7e-4; resizing on the device, as HulcWrapper does, removed it.)
+
+## The unsupervised scheme on CALVIN (`experiments/x1_calvin_unsup.py`, ledger `x1_calvin_unsup`)
+
+Data: 300 sequences, drawn at random (seed 0) from the 1,537 pairs of consecutive annotated windows (the split's pairing rule,
+task_i != task_j) whose frames were already extracted. **At run time only scene B was extracted, so all 300 are scene B**, and they
+are FLOWER's own training play (in distribution). The true boundary is the end of the first window (CALVIN annotates a window
+ending where its subtask is solved).
+
+(a) Boundaries from contact events (sign changes of the commanded gripper, rel_actions[:, 6]; 3.3 events per sequence of about
+130 frames, none with zero) against the same number of uniformly random cuts (200 draws per sequence):
+
+| tolerance | contact events | random, matched count |
+|---|---|---|
+| 5 frames | 0.247 | 0.247 |
+| 10 frames | 0.507 | 0.426 |
+| 20 frames | 0.870 | 0.682 |
+
+The median distance from the boundary to the nearest event is 10 frames. The binomial standard error at n = 300 is about 0.03.
+Contact events beat random cuts at 10-20 frames (+0.08, +0.19) but not at 5 frames: they mark the neighbourhood of a CALVIN
+boundary, not its frame. Many CALVIN subtasks end without a grasp change (buttons, switches, slider, drawer, pushes), and the
+gripper toggles often in play data, so the matched random baseline is high.
+
+(b) Identities from FLOWER's likelihood (FlowerCalvinBackbone, load fix; every 8th frame of each true segment, K = 4 shared
+(eps, t) draws per frame, the 34 evaluation instructions):
+
+| segments | top-1 names the subtask | chance | median rank of the true subtask | per-frame top-1 |
+|---|---|---|---|---|
+| 600 (300 first + 300 second) | **0.748** (0.760 / 0.737) | 0.029 | 0 (mean 0.45) | 0.461 |
+
+The errors are mostly between subtasks whose motion is the same and whose difference is a state the instruction names: turn on vs
+turn off the LED (15 + 11 of 151 errors) and the lightbulb (5 + 3); lift from drawer / slider / table of the same block
+(around 30); open drawer vs place in drawer (8). By subtask: slider, close drawer, rotations, push_red_block_left 1.0; LED
+on / off 0.40 / 0.42; lifts from the drawer 0.38-0.47.
+
+Reading: as on LIBERO (docs/UNSUPERVISED.md section 2), averaged over a segment cut at the true boundary, the frozen policy's
+likelihood names the held subtask (0.75 against 0.03 chance, in its own training scenes). Contact events place boundaries only
+to within about 10-20 frames on CALVIN, weaker than on LIBERO's pick-and-place demos, because many CALVIN subtasks have no
+grasp event.
