@@ -140,3 +140,90 @@ Language prototypes (grounded word states) are the **fillers**, and the sentence
 own syntax. The two plans meet at the per-role schedule (object before the grasp, goal after it). If pi05_l90c still ignores
 part prompts at step 5,000, plan L is the cheaper alternative to the factored-conditioning retrain: it repairs only the
 words that fail.
+
+## Results (2026-10-22: L0a, L0b, L1)
+
+Code: `lifelong_ood/lang/audit.py`; `experiments/pl0_render.py` (OOD first frames), `pl0_audit.py`, `pl0_trace.py`, `pl1_predict.py`;
+pre-registration `experiments/prereg/pl1_predict.py` (`ledger/m3_prereg` tag pl1_predict, recorded before any grounding score).
+Ledger rows: `ledger/pl0_audit` (read_pi05, read_pi0), `ledger/pl0_trace` (read_pi05), `ledger/pl1_predict` (read). Payloads
+`results/lang/pl0_audit.json`, `pl0_trace.json`, `pl1_predict.json`. Figures `figures/robot/pl_audit_kinds.png`,
+`pl_audit_ood_heat.png`, `pl_trace_map.png`, `pl_l1_predict.png`.
+
+**Set-up.** 60 sentences (40 training, Li's 20 OOD). Observations of each sentence's own scene: training sentences at 10 first
+frames (stored init states 0-9) plus the 5 demonstration frames of `results/protos/index.json`; OOD sentences at the 10 first
+frames of practice start-state set a. At each observation about 34 prompts. G = ‖eps(swap) − eps(instr)‖ / ‖eps(instr) −
+eps(null)‖, at shared points (2 drafts × 2 noises × t ∈ {0.2, 0.4, 0.6, 0.8}), averaged over alternatives and observations.
+Binding direction: cosine between the endpoint shift of paired samples (same noise) and the referent → alternative vector.
+Chance is 0. Object swaps are scored at pre-grasp frames and goal swaps at post-grasp frames; the OOD scenes have no post-grasp
+frames, so OOD goal direction is not measured.
+
+**L0a: grounding by word kind** (mean G; training sentences at first frames only, so they compare with OOD):
+
+| kind | pi0.5 train | pi0.5 OOD | pi0 train | pi0 OOD |
+|---|---|---|---|---|
+| article "the" (control) | 0.10 | 0.12 | 0.08 | 0.15 |
+| verb | 0.27 | 0.49 | 0.22 | 0.56 |
+| goal preposition | 0.17 | 0.32 | 0.23 | 0.55 |
+| spatial relation | 0.47 | 0.45 | 0.56 | 0.65 |
+| goal phrase | 0.42 | 0.85 | 0.38 | 0.83 |
+| object | 0.95 | 1.33 | 0.66 | 0.94 |
+| whole instruction (ceiling) | 1.59 | 2.13 | 1.38 | 1.51 |
+
+- Object direction: pi0.5 cos +0.38 (train, n 1770) and +0.47 (OOD, n 700); pi0 +0.29 and +0.27.
+- Goal direction (training, post-grasp): pi0.5 +0.40, pi0 +0.54.
+- The swapped endpoint ends closer to the alternative's referent in 61-80% of swaps.
+- Words do not split into grounded and ungrounded by size. Every OOD object, goal and verb moves the field by more than twice its
+  sentence's article control (both policies). The only words that fall below that floor are the goal preposition (pi0.5: 28/35
+  training, 6/20 OOD) and pi0's verb on training sentences (14/39).
+- OOD words move the field MORE than training words. The normaliser is not the cause: the instruction-vs-null gap is about the same
+  (pi0.5: 1.12 training, 1.21 OOD).
+- Binding direction is where the failing sentences differ: on pi0.5 the object-swap direction is about 0 on "the bowl on cookie
+  box" and "the bowl at table center" (−0.14 to +0.13), where zero-shot success is 0-17%.
+
+**L0b: binding map** (pi0.5, 20 sentences × 3 kinds × 2 observations = 120 traces; the noise moves the field by 2.0-2.5× the
+instruction-vs-null gap):
+
+- Residual stream. Restoring the word's own positions recovers the field only at layer inputs 0-1. At the word's last token this is
+  0.66 for object, 0.80 for verb and 0.19 for goal (goal phrases span several tokens). From layer 2 onward it recovers ≤ 0.25.
+- The word's effect moves into the **image tokens** by layer 2. Restoring all image positions recovers 0.18-0.33 at layer 2 and
+  peaks at 0.48 (object), 0.33 (goal) and 0.48 (verb) at layers 8-11.
+- Text tokens other than the word (before it, after it, BOS) carry about 0. pi05_libero's prompt holds no state tokens
+  (discrete_state_input is off).
+- Prefix K/V (what the action expert reads). Any single (layer, word position) recovers ≤ 0.20. Restoring the word's K/V at every
+  layer recovers only 0.10 (object / verb) and 0.05-0.22 (goal).
+- The largest single K/V cell is the image positions at layer 14: 0.34 object, 0.19 goal, 0.33 verb. Image K/V at every layer
+  recovers 0.58 / 0.40 / 0.60.
+- Training and OOD sentences give the same map.
+
+**L1: grounding predicts zero-shot failure** (pre-registered; 40 units = 2 policies × 20 tasks; 80 zero-shot episodes per unit
+over sets c-f; 31 failures):
+
+| | AUC(−min G) [95% CI over tasks] | AUC(−mean G) | Spearman(min G, success) | Spearman(mean G, success) |
+|---|---|---|---|---|
+| pooled (primary) | **0.459** [0.24, 0.67] | 0.627 | −0.08 (p 0.61) | +0.22 (p 0.18) |
+| pi0.5 | 0.505 | 0.670 | −0.02 (p 0.94) | +0.35 (p 0.13) |
+| pi0 | 0.556 | 0.500 | +0.13 (p 0.60) | +0.06 (p 0.79) |
+
+**The pre-registered GO (AUC ≥ 0.75) FAILS.** The minimum is almost always the verb "put", which is the same in every OOD sentence.
+Exploratory, not pre-registered: the object binding direction gives AUC 0.64 and Spearman +0.40 (p 0.08) on pi0.5, but AUC 0.31
+on pi0.
+LIBERO-90-C dev: no zero-shot dev episodes of pi05_l90c were used. This is left for later.
+
+**Reading for L2 / L3.**
+- **L1 is killed** as a free failure detector. Word-effect size does not predict zero-shot failure on either policy. Swap-effect
+  size is therefore the wrong diagnosis signal, and L2 must not route repairs by it. Every OOD word already moves the field, often
+  more than in training. The failure is in **where** the words send the action: the binding direction, about 0 on the failing
+  spatial tasks.
+- If L2 runs, it needs a direction-based diagnosis, with that metric pre-registered on fresh tasks. Today that signal is weak and
+  policy-specific (0.64 / 0.31).
+- **L0b undercuts the rank-1 locate-and-edit plan of L3.** Binding does not sit in a small (layer, word position) span. After layer
+  1 the word lives in the image tokens: a scene-specific, distributed state, spread over layers 2-15. The prefix K/V at the word's
+  positions carries ≤ 0.1-0.2 of the effect. A ROME-style rank-1 edit keyed on the word's mid-layer state has no site to target:
+  KILL the rank-1 edit as specified.
+- Two operators remain consistent with the map:
+  - an edit of the word's layer-0 / 1 representation (token inversion, L3 item 1). The word's input state does determine its
+    effect: restoring it recovers 0.66-0.80.
+  - a transplant into the early layers (L2 operators 1-2).
+- An edit of the image-token K/V, layers 8-14, is also consistent with the map. It is scene-specific, so it is not a lexicon repair.
+- Recommendation: run at most a cheap L2 pilot (transplant / TLI at layers 0-2) and token inversion. Drop the rank-1 edit. Do not
+  build the L4 lexicon on swap-magnitude grounding.

@@ -1,0 +1,851 @@
+{
+ "artifacts": {
+  "payload": "results/lang/pl1_predict.json"
+ },
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/pl1_predict.py --record",
+ "config": {
+  "prereg": "ledger/m3_prereg tag pl1_predict",
+  "sets": {
+   "pi05_libero": [
+    "g4b_main",
+    "g13_main",
+    "g15_main",
+    "g17_base"
+   ],
+   "pi0_libero": [
+    "g4c_main",
+    "g13_main",
+    "g15_main",
+    "g17_base"
+   ]
+  }
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "pl1_predict",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "3e41ecc10b9198f1e8d7bbb9957cc4266891906c",
+  "short": "3e41ecc1"
+ },
+ "keys": {},
+ "metrics": {
+  "go": false,
+  "pi05_libero": {
+   "auc_mean": 0.6703296703296703,
+   "auc_min": 0.5054945054945055,
+   "auc_min_ci": [
+    0.23795518207282912,
+    0.79
+   ],
+   "n": 20,
+   "n_fail": 13,
+   "spearman_mean": [
+    0.35347794986113,
+    0.12629817125156573
+   ],
+   "spearman_min": [
+    -0.018882369116513354,
+    0.9370216593742704
+   ]
+  },
+  "pi0_libero": {
+   "auc_mean": 0.5,
+   "auc_min": 0.5555555555555556,
+   "auc_min_ci": [
+    0.3157894736842105,
+    0.7894736842105263
+   ],
+   "n": 20,
+   "n_fail": 18,
+   "spearman_mean": [
+    0.06254985141855984,
+    0.793340056302058
+   ],
+   "spearman_min": [
+    0.1250997028371197,
+    0.5992276399570431
+   ]
+  },
+  "pooled": {
+   "auc_mean": 0.6272401433691757,
+   "auc_min": 0.45878136200716846,
+   "auc_min_ci": [
+    0.24214709051724137,
+    0.6680828573028673
+   ],
+   "n": 40,
+   "n_fail": 31,
+   "spearman_mean": [
+    0.2170027524537863,
+    0.17861971602142385
+   ],
+   "spearman_min": [
+    -0.08425606647916892,
+    0.6052223479071631
+   ]
+  },
+  "units": [
+   {
+    "argmin": "verb",
+    "dir_obj": 0.4722539287496213,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.5161133378198276,
+    "gmin": 0.22566841239755459,
+    "language": "put the cream cheese in the basket",
+    "policy": "pi05_libero",
+    "rate": 0.2125,
+    "success": 17,
+    "task": "goal:0",
+    "words": {
+     "goal": 0.28783593053452805,
+     "obj": 1.0348356705274002,
+     "verb": 0.22566841239755459
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.797335859389747,
+    "episodes": 80,
+    "fail": false,
+    "gmean": 1.1089062721029823,
+    "gmin": 0.7352546317009447,
+    "language": "put the orange juice on the stove",
+    "policy": "pi05_libero",
+    "rate": 0.5875,
+    "success": 47,
+    "task": "goal:1",
+    "words": {
+     "goal": 1.1177496339874708,
+     "obj": 1.4737145506205316,
+     "verb": 0.7352546317009447
+    }
+   },
+   {
+    "argmin": "obj",
+    "dir_obj": 0.6008640969576805,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 1.6999859359233067,
+    "gmin": 1.2466040509409626,
+    "language": "put the bbq source on the plate",
+    "policy": "pi05_libero",
+    "rate": 0.075,
+    "success": 6,
+    "task": "goal:2",
+    "words": {
+     "goal": 2.361589499754236,
+     "obj": 1.2466040509409626,
+     "verb": 1.491764257074722
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.3612064104665264,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 1.2929674540586646,
+    "gmin": 0.9734105293869598,
+    "language": "put the tomato sauce on top of the cabinet",
+    "policy": "pi05_libero",
+    "rate": 0.0,
+    "success": 0,
+    "task": "goal:3",
+    "words": {
+     "goal": 1.3058957590235913,
+     "obj": 1.599596073765443,
+     "verb": 0.9734105293869598
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.7655401138246545,
+    "episodes": 80,
+    "fail": false,
+    "gmean": 0.7436834131680753,
+    "gmin": 0.2355139349789875,
+    "language": "put the wine bottle on the stove",
+    "policy": "pi05_libero",
+    "rate": 0.9875,
+    "success": 79,
+    "task": "goal:4",
+    "words": {
+     "goal": 0.528808943978813,
+     "obj": 1.4667273605464257,
+     "verb": 0.2355139349789875
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.8866778458001007,
+    "episodes": 80,
+    "fail": false,
+    "gmean": 0.6270948606880098,
+    "gmin": 0.17516938178544847,
+    "language": "put the wine bottle on the plate",
+    "policy": "pi05_libero",
+    "rate": 0.5375,
+    "success": 43,
+    "task": "goal:5",
+    "words": {
+     "goal": 0.4868093516786901,
+     "obj": 1.2193058485998907,
+     "verb": 0.17516938178544847
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.8933645424168634,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.6622461116801496,
+    "gmin": 0.20721314475659636,
+    "language": "put the wine bottle in the bowl",
+    "policy": "pi05_libero",
+    "rate": 0.35,
+    "success": 28,
+    "task": "goal:6",
+    "words": {
+     "goal": 0.5605572393935503,
+     "obj": 1.2189679508903022,
+     "verb": 0.20721314475659636
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.8746329112160836,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.8263634443864115,
+    "gmin": 0.28097762621398636,
+    "language": "put the cream cheese on the plate",
+    "policy": "pi05_libero",
+    "rate": 0.3375,
+    "success": 27,
+    "task": "goal:7",
+    "words": {
+     "goal": 0.6318431008741812,
+     "obj": 1.5662696060710668,
+     "verb": 0.28097762621398636
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.8960416272503849,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.9456511913008491,
+    "gmin": 0.6520150449431572,
+    "language": "put the cream cheese on the stove",
+    "policy": "pi05_libero",
+    "rate": 0.175,
+    "success": 14,
+    "task": "goal:8",
+    "words": {
+     "goal": 0.8087028092664068,
+     "obj": 1.3762357196929833,
+     "verb": 0.6520150449431572
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.8306596008339289,
+    "episodes": 80,
+    "fail": false,
+    "gmean": 1.498231471079798,
+    "gmin": 0.47068631907836933,
+    "language": "put the cream cheese on top of the cabinet",
+    "policy": "pi05_libero",
+    "rate": 0.775,
+    "success": 62,
+    "task": "goal:9",
+    "words": {
+     "goal": 0.8443578930330815,
+     "obj": 3.179650201127943,
+     "verb": 0.47068631907836933
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.27899776488948713,
+    "episodes": 80,
+    "fail": false,
+    "gmean": 0.7593015247021088,
+    "gmin": 0.49059687734675944,
+    "language": "put the butter on the plate",
+    "policy": "pi05_libero",
+    "rate": 1.0,
+    "success": 80,
+    "task": "spatial:0",
+    "words": {
+     "goal": 0.9162487663743255,
+     "obj": 0.8710589303852416,
+     "verb": 0.49059687734675944
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.26946686282291243,
+    "episodes": 80,
+    "fail": false,
+    "gmean": 0.7019361430554727,
+    "gmin": 0.2978551983486549,
+    "language": "put the chocolate pudding on the plate",
+    "policy": "pi05_libero",
+    "rate": 0.975,
+    "success": 78,
+    "task": "spatial:1",
+    "words": {
+     "goal": 0.7052939123435432,
+     "obj": 1.1026593184742202,
+     "verb": 0.2978551983486549
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.49284413863448506,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.9061265119933234,
+    "gmin": 0.5693923884808967,
+    "language": "put the milk on the plate",
+    "policy": "pi05_libero",
+    "rate": 0.225,
+    "success": 18,
+    "task": "spatial:2",
+    "words": {
+     "goal": 0.8378605402496848,
+     "obj": 1.311126607249389,
+     "verb": 0.5693923884808967
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.5655851508249367,
+    "episodes": 80,
+    "fail": false,
+    "gmean": 1.8707239532616127,
+    "gmin": 0.6141908348000583,
+    "language": "put the orange juice on the plate",
+    "policy": "pi05_libero",
+    "rate": 1.0,
+    "success": 80,
+    "task": "spatial:3",
+    "words": {
+     "goal": 1.1320994413535772,
+     "obj": 3.865881583631203,
+     "verb": 0.6141908348000583
+    }
+   },
+   {
+    "argmin": "goal",
+    "dir_obj": 0.05332057305549376,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.27373983289568676,
+    "gmin": 0.22054328073582835,
+    "language": "put the bowl on cookie box on the stove",
+    "policy": "pi05_libero",
+    "rate": 0.0,
+    "success": 0,
+    "task": "spatial:4",
+    "words": {
+     "goal": 0.22054328073582835,
+     "obj": 0.2990479411196322,
+     "rel": 0.32225734906256487,
+     "verb": 0.25311076066472166
+    }
+   },
+   {
+    "argmin": "goal",
+    "dir_obj": -0.14172512717453806,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.2192334014427798,
+    "gmin": 0.18055837038246875,
+    "language": "put the bowl on cookie box on the cabinet",
+    "policy": "pi05_libero",
+    "rate": 0.0,
+    "success": 0,
+    "task": "spatial:5",
+    "words": {
+     "goal": 0.18055837038246875,
+     "obj": 0.2302862020432607,
+     "rel": 0.27334668414008284,
+     "verb": 0.19274234920530706
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.536891942749204,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.5857805383457845,
+    "gmin": 0.33980642763680013,
+    "language": "put the bowl next to the plate on the cabinet",
+    "policy": "pi05_libero",
+    "rate": 0.0,
+    "success": 0,
+    "task": "spatial:6",
+    "words": {
+     "goal": 0.8668189494643593,
+     "obj": 0.6573096524410958,
+     "rel": 0.4791871238408826,
+     "verb": 0.33980642763680013
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.4257980163615155,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 1.043032474087306,
+    "gmin": 0.7308327355046957,
+    "language": "put the bowl next to the plate on the stove",
+    "policy": "pi05_libero",
+    "rate": 0.0125,
+    "success": 1,
+    "task": "spatial:7",
+    "words": {
+     "goal": 1.313158650873446,
+     "obj": 1.060736684803838,
+     "rel": 1.0674018251672444,
+     "verb": 0.7308327355046957
+    }
+   },
+   {
+    "argmin": "rel",
+    "dir_obj": -0.05223578379799232,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.64741558982979,
+    "gmin": 0.25547708609882247,
+    "language": "put the bowl at table center on the cabinet",
+    "policy": "pi05_libero",
+    "rate": 0.175,
+    "success": 14,
+    "task": "spatial:8",
+    "words": {
+     "goal": 1.023733534291604,
+     "obj": 0.9034232291248714,
+     "rel": 0.25547708609882247,
+     "verb": 0.4070285098038622
+    }
+   },
+   {
+    "argmin": "rel",
+    "dir_obj": 0.12514443794306093,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.6318907234292418,
+    "gmin": 0.2999671087723882,
+    "language": "put the bowl at table center on the stove",
+    "policy": "pi05_libero",
+    "rate": 0.025,
+    "success": 2,
+    "task": "spatial:9",
+    "words": {
+     "goal": 0.8514670669897578,
+     "obj": 0.938904105817328,
+     "rel": 0.2999671087723882,
+     "verb": 0.4372246121374935
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.5566091030339838,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 1.0366315031128,
+    "gmin": 0.8702193732534177,
+    "language": "put the cream cheese in the basket",
+    "policy": "pi0_libero",
+    "rate": 0.15,
+    "success": 12,
+    "task": "goal:0",
+    "words": {
+     "goal": 1.0671764625987215,
+     "obj": 1.1724986734862606,
+     "verb": 0.8702193732534177
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": -0.8195020682480915,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 1.1453441808897258,
+    "gmin": 0.903531306243786,
+    "language": "put the orange juice on the stove",
+    "policy": "pi0_libero",
+    "rate": 0.0,
+    "success": 0,
+    "task": "goal:1",
+    "words": {
+     "goal": 1.2957450764405496,
+     "obj": 1.2367561599848416,
+     "verb": 0.903531306243786
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": -0.10871691770037434,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.9992801997611007,
+    "gmin": 0.6875188035179945,
+    "language": "put the bbq source on the plate",
+    "policy": "pi0_libero",
+    "rate": 0.0,
+    "success": 0,
+    "task": "goal:2",
+    "words": {
+     "goal": 1.194937380965643,
+     "obj": 1.1153844147996645,
+     "verb": 0.6875188035179945
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": -0.5202245564735392,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.6940693515939916,
+    "gmin": 0.520561690962063,
+    "language": "put the tomato sauce on top of the cabinet",
+    "policy": "pi0_libero",
+    "rate": 0.0,
+    "success": 0,
+    "task": "goal:3",
+    "words": {
+     "goal": 0.9536829821257076,
+     "obj": 0.6079633816942046,
+     "verb": 0.520561690962063
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.6437978557541517,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 1.0081747423403118,
+    "gmin": 0.8733418426347903,
+    "language": "put the wine bottle on the stove",
+    "policy": "pi0_libero",
+    "rate": 0.2375,
+    "success": 19,
+    "task": "goal:4",
+    "words": {
+     "goal": 1.053290688454752,
+     "obj": 1.0978916959313931,
+     "verb": 0.8733418426347903
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.9747354672284094,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.8809368061061758,
+    "gmin": 0.4548135109185914,
+    "language": "put the wine bottle on the plate",
+    "policy": "pi0_libero",
+    "rate": 0.0625,
+    "success": 5,
+    "task": "goal:5",
+    "words": {
+     "goal": 0.9185578102096799,
+     "obj": 1.2694390971902563,
+     "verb": 0.4548135109185914
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.9086642885077149,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 1.1935770753984563,
+    "gmin": 0.7805742019921349,
+    "language": "put the wine bottle in the bowl",
+    "policy": "pi0_libero",
+    "rate": 0.0,
+    "success": 0,
+    "task": "goal:6",
+    "words": {
+     "goal": 1.6270964522928792,
+     "obj": 1.1730605719103546,
+     "verb": 0.7805742019921349
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.8585501869828054,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.9223482703475211,
+    "gmin": 0.5925751971649283,
+    "language": "put the cream cheese on the plate",
+    "policy": "pi0_libero",
+    "rate": 0.175,
+    "success": 14,
+    "task": "goal:7",
+    "words": {
+     "goal": 1.0714216169583757,
+     "obj": 1.1030479969192588,
+     "verb": 0.5925751971649283
+    }
+   },
+   {
+    "argmin": "obj",
+    "dir_obj": 0.8248834362441362,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 1.1332475022575528,
+    "gmin": 1.0193564932101942,
+    "language": "put the cream cheese on the stove",
+    "policy": "pi0_libero",
+    "rate": 0.0,
+    "success": 0,
+    "task": "goal:8",
+    "words": {
+     "goal": 1.2631347744201546,
+     "obj": 1.0193564932101942,
+     "verb": 1.1172512391423097
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.38805275057588406,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.9529745284975922,
+    "gmin": 0.6705147464221567,
+    "language": "put the cream cheese on top of the cabinet",
+    "policy": "pi0_libero",
+    "rate": 0.0,
+    "success": 0,
+    "task": "goal:9",
+    "words": {
+     "goal": 1.2611948039806518,
+     "obj": 0.9272140350899681,
+     "verb": 0.6705147464221567
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.18156184320480667,
+    "episodes": 80,
+    "fail": false,
+    "gmean": 0.7393469758436272,
+    "gmin": 0.46721664259751544,
+    "language": "put the butter on the plate",
+    "policy": "pi0_libero",
+    "rate": 0.525,
+    "success": 42,
+    "task": "spatial:0",
+    "words": {
+     "goal": 0.7386999486324882,
+     "obj": 1.0121243363008778,
+     "verb": 0.46721664259751544
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": -0.0817114828022776,
+    "episodes": 80,
+    "fail": false,
+    "gmean": 0.8547778834708616,
+    "gmin": 0.595590523814752,
+    "language": "put the chocolate pudding on the plate",
+    "policy": "pi0_libero",
+    "rate": 0.6125,
+    "success": 49,
+    "task": "spatial:1",
+    "words": {
+     "goal": 0.8455144878369932,
+     "obj": 1.1232286387608394,
+     "verb": 0.595590523814752
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.6522634346359888,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.704506981853342,
+    "gmin": 0.3694212327466596,
+    "language": "put the milk on the plate",
+    "policy": "pi0_libero",
+    "rate": 0.0375,
+    "success": 3,
+    "task": "spatial:2",
+    "words": {
+     "goal": 0.6191996002704369,
+     "obj": 1.1249001125429297,
+     "verb": 0.3694212327466596
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.001096348553015189,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.5854756840689922,
+    "gmin": 0.24279092208077463,
+    "language": "put the orange juice on the plate",
+    "policy": "pi0_libero",
+    "rate": 0.0,
+    "success": 0,
+    "task": "spatial:3",
+    "words": {
+     "goal": 0.3588455346069211,
+     "obj": 1.154790595519281,
+     "verb": 0.24279092208077463
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": -0.06862669612744454,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.25572030664308093,
+    "gmin": 0.20582447679424964,
+    "language": "put the bowl on cookie box on the stove",
+    "policy": "pi0_libero",
+    "rate": 0.0125,
+    "success": 1,
+    "task": "spatial:4",
+    "words": {
+     "goal": 0.24384686061583696,
+     "obj": 0.32977343469423687,
+     "rel": 0.24343645446800025,
+     "verb": 0.20582447679424964
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": -0.44114909221405385,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.3397372076870428,
+    "gmin": 0.3040361828746742,
+    "language": "put the bowl on cookie box on the cabinet",
+    "policy": "pi0_libero",
+    "rate": 0.0,
+    "success": 0,
+    "task": "spatial:5",
+    "words": {
+     "goal": 0.3117885956185833,
+     "obj": 0.4337035965812179,
+     "rel": 0.3094204556736958,
+     "verb": 0.3040361828746742
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.6122254167985559,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.6439740217221546,
+    "gmin": 0.31945995932236093,
+    "language": "put the bowl next to the plate on the cabinet",
+    "policy": "pi0_libero",
+    "rate": 0.0,
+    "success": 0,
+    "task": "spatial:6",
+    "words": {
+     "goal": 0.37002142222007633,
+     "obj": 0.6778273960429162,
+     "rel": 1.2085873093032649,
+     "verb": 0.31945995932236093
+    }
+   },
+   {
+    "argmin": "verb",
+    "dir_obj": 0.6139828943785384,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.7046077685769622,
+    "gmin": 0.30993510863365026,
+    "language": "put the bowl next to the plate on the stove",
+    "policy": "pi0_libero",
+    "rate": 0.0,
+    "success": 0,
+    "task": "spatial:7",
+    "words": {
+     "goal": 0.37059715882512956,
+     "obj": 0.6678919515390564,
+     "rel": 1.4700068553100123,
+     "verb": 0.30993510863365026
+    }
+   },
+   {
+    "argmin": "rel",
+    "dir_obj": 0.10484663738123863,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.5469317824504126,
+    "gmin": 0.3528688393650065,
+    "language": "put the bowl at table center on the cabinet",
+    "policy": "pi0_libero",
+    "rate": 0.0,
+    "success": 0,
+    "task": "spatial:8",
+    "words": {
+     "goal": 0.5236797919537836,
+     "obj": 0.816772484331104,
+     "rel": 0.3528688393650065,
+     "verb": 0.49440601415175633
+    }
+   },
+   {
+    "argmin": "rel",
+    "dir_obj": 0.27492830647658845,
+    "episodes": 80,
+    "fail": true,
+    "gmean": 0.47206114995823634,
+    "gmin": 0.34038698141760915,
+    "language": "put the bowl at table center on the stove",
+    "policy": "pi0_libero",
+    "rate": 0.05,
+    "success": 4,
+    "task": "spatial:9",
+    "words": {
+     "goal": 0.5191948546399677,
+     "obj": 0.6800721986960135,
+     "rel": 0.34038698141760915,
+     "verb": 0.34859056507935476
+    }
+   }
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "pl1_predict__libero_ood__read__s13__3e41ecc1",
+ "schema": 1,
+ "script": "experiments/pl1_predict.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-22T16:46:58+00:00",
+ "stream": null,
+ "tag": "read"
+}

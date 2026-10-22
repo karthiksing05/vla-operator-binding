@@ -1,0 +1,56 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan L's probe L1 (grounding predicts zero-shot failure)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "3e41ecc10b9198f1e8d7bbb9957cc4266891906c",
+  "short": "3e41ecc1"
+ },
+ "keys": {},
+ "metrics": {
+  "backbones": [
+   "pi0_libero",
+   "pi05_libero"
+  ],
+  "hypotheses": {
+   "GO": "AUC of -min G for failure over the 40 pooled (policy, task) units >= 0.75",
+   "descriptive": "per policy; secondary predictor; Spearman with the pooled success rate; bootstrap 95% CI over tasks"
+  },
+  "outcome": "zero-shot success of the policy alone pooled over start-state sets c, d, e, f (80 episodes per task); failure = rate < 0.50",
+  "predictor_primary": "min over the instruction's content words (object, goal, verb, relation if present) of the word grounding G(w) in the task's own OOD scene (10 first frames of fresh_ood_a; G = mean over alternatives of the swap's ||delta eps|| / ||eps(instr) - eps(null)||, t in 0.2/0.4/0.6/0.8, shared noise); lower predicts failure",
+  "predictor_secondary": "mean over the same words of G(w)",
+  "written_before": "any L0a grounding score and experiments/pl1_predict.py"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__pl1_predict__s13__3e41ecc1",
+ "schema": 1,
+ "script": "experiments/prereg/pl1_predict.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-22T14:34:04+00:00",
+ "stream": null,
+ "tag": "pl1_predict"
+}
