@@ -1,7 +1,7 @@
 # docs
 
 Organised as the paper is: the question, the split, the two schemes, the results, what composition is, and what it costs.
-**[PLAN_Z.md](PLAN_Z.md)** is the one active plan. Superseded plans are in [history/](history/).
+**[PLAN_Z.md](PLAN_Z.md)** is the main plan; [PLAN_D.md](PLAN_D.md) (what prototypes donate vs what the demonstration teaches; the full baseline set) and [PLAN_CONV.md](PLAN_CONV.md) (composition converges faster on unseen tasks) extend it. Superseded plans are in [history/](history/).
 
 ## The question and the split
 
@@ -39,7 +39,8 @@ Organised as the paper is: the question, the split, the two schemes, the results
 ## Related work
 
 - [RELATED.md](RELATED.md): baselines and related work.
-- [PLAN_X.md](PLAN_X.md): the framework beyond LIBERO (CALVIN, Bridge via SimplerEnv, EPIC-KITCHENS-100).
+- [PLAN_X.md](PLAN_X.md): the framework beyond LIBERO (CALVIN, Bridge via SimplerEnv, EgoDex, Meta-World); [CALVIN.md](CALVIN.md), [SIMPLER.md](SIMPLER.md), [EGODEX.md](EGODEX.md), [METAWORLD.md](METAWORLD.md).
+- [BASELINES.md](BASELINES.md): every baseline, its paper, code, budget and result.
 - [EGODEX.md](EGODEX.md): X3 stage 1: EgoDex inventory, the graded split, contact events, the GR00T recipe, evaluation.
 - [METAWORLD.md](METAWORLD.md): X4 stage 1: Meta-World inventory, the graded split (ML45, x4_35), setup, the RLinf pi0 parity gate.
 
