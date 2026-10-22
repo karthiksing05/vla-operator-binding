@@ -21,15 +21,18 @@ def score(backbone, X, u, cls=None, emb=None, gate=None, batch=256):
 
 @torch.no_grad()
 def mode_ascent(backbone, X, u, iters=150, lr=0.1, seed=0, init="query", adam=True, tweedie=True,
-                cls=None, emb=None, gate=None, batch=256, n_starts=None):
-    """Ascend log p_u from noised copies of X (init="query") or from pure noise.
+                cls=None, emb=None, gate=None, batch=256, n_starts=None, x_init=None):
+    """Ascend log p_u from noised copies of X (init="query") or from pure noise.  `x_init` (optional, [n, dim]
+    x_t rows): start exactly there instead (shared starts across conditions; protos.store).
 
     -> (x_t modes [n, dim], x0 modes [n, dim]) as float32 numpy, n = len(X) or n_starts.
     """
     g = torch.Generator(device="cpu").manual_seed(int(seed))
     alpha, sigma, alpha2, sigma2 = path_coeffs(u, path_of(backbone))
     dev = backbone.device
-    if init == "query" and X is not None:
+    if x_init is not None:
+        x = torch.as_tensor(np.asarray(x_init, np.float32), device=dev).clone()
+    elif init == "query" and X is not None:
         Q = torch.as_tensor(np.asarray(X, np.float32), device=dev)
         if n_starts is not None:
             Q = Q[torch.arange(int(n_starts)) % len(Q)]
