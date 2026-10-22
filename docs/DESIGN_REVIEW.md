@@ -1,3 +1,5 @@
+> Correction (2026-10-22): AGNOSTOS is built on RLBench (18 seen / 23 unseen tasks), not on LIBERO assets; ManiSkill3's ICLR 2025 listing is a workshop oral.
+
 # Design review: is the experimental design valid, and what a compositional fine-tuning framework needs
 
 Written 2026-10-21 by a reviewer pass. It covers only reading and web research: no job was run. Every arXiv ID below was checked

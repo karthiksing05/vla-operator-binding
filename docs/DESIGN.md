@@ -1,126 +1,190 @@
-# Experimental design: what we must show, how, and against what (2026-10-21)
+# Experimental design (v4, 2026-10-22)
 
-This doc fixes the design before the framework is iterated. It answers docs/DESIGN_REVIEW.md, and it serves the user's goal
-(docs/FRAMEWORK.md): **a hierarchical store of reusable prototypes, combined without supervision, that learns OOD tasks
-efficiently and continually, as an alternative to traditional fine-tuning.**
+The framework is in docs/FRAMEWORK.md, and the full approved plan, with its probes, in docs/PLAN_V4.md. This file supersedes
+the 2026-10-21 design, which had CompoSuite as primary.
 
-## 1 The claims, stated so that each can fail
+## 1. Claims (each can fail)
 
-| # | claim | what would refute it |
+| | claim | primary evidence |
 |---|---|---|
-| C1 Efficiency | On a new task, the store reaches a target success with a fraction of the budget (demonstrations, gradient steps, practice episodes, GPU-seconds) that fine-tuning needs | budget-to-threshold no smaller than per-task LoRA / full SFT |
-| C2 Systematicity | Success on a held-out combination is predicted by whether its parts are in the store: high when all parts are held, low when a part is missing, until the store creates that part | no interaction between grade (parts held vs missing) and arm |
-| C3 Reuse and hierarchy | The store grows with the number of distinct parts, not with tasks. Higher nodes are reused across more tasks. Removing the hierarchy (a flat store) costs success or efficiency | bytes linear in tasks; flat store equal on every metric |
-| C4 Continual | Learning task k never lowers success on tasks < k (preservation), and the cost of task k falls with k (forward transfer) | backward transfer < 0, or no downward trend in cost |
-| C5 Unsupervised | C1-C4 hold with units discovered from raw demonstrations. No component labels, instructions or segment annotations are used to build or select units. Labels are used only to score | the label-free store far below the label-supervised one |
-| C6 Composition is the cause | The gains vanish under mechanism controls: shuffled unit assignment, a zero code, nearest-segment retrieval, and a store that leaves the target task out | controls as good as the method |
+| C1 | **Test-time recomposition.** A never-seen task with all its parts held is solved from one demo by inference alone, at a success close to per-task fine-tuning and at a fraction of its cost, *and better than published composition methods* | success and part correctness on combination cells, as a function of compound divergence (CD) at fixed atom divergence; GPU-seconds to readiness |
+| C2 | **Robust continual learning follows.** No forgetting (the policy and relation are frozen; routing is measured). New parts are created once and **reused by later recompositions**. Cost per arrival falls. Bytes grow with parts, not tasks | streams that interleave part tasks before the recombinations that use them: FWT / NBT / AUC, causal reuse, bytes vs parts |
+| C3 | **The system is compositional, by decoding**: systematicity, productivity, substitutivity, localism, overgeneralisation; TRE, topographic similarity, multiplicativity, role orthogonality, modularity | the decoding suite (section 6). No robot paper measures these, which the survey confirmed |
 
-## 2 Benchmarks
+## 3. Benchmarks: chosen to make held-out tasks guaranteed unseen *and* recomposable
 
-The review's main threat was that grade is confounded with benchmark. The fix: every grade is formed **inside one benchmark
-by a factorial split**, the split is fixed before any result, and one third of the test cells is **sealed** until the final
-read.
+The surveys of datasets and baselines (2026-10-22) found that public checkpoints contaminate every factorial split:
+FLOWER-90 and the CALVIN checkpoints saw everything. **So we train our own checkpoints on training cells.** That is the only
+way "never seen" holds at the weights.
 
-**B1. CompoSuite (primary, factorial, clean).** robosuite / MuJoCo. 4 axes × 4 values: robot (IIWA, Jaco, Kinova3, Panda),
-object (box, dumbbell, plate, hollow box), obstacle (none, wall, object door, goal wall), objective (pick-place, push,
-shelf, trashcan). That gives 256 tasks, with expert offline data for all of them (Hussing, Mendez et al.,
-[arXiv 2307.07091](https://arxiv.org/abs/2307.07091), with official train/test lists).
-- We train our own flow-matching policy on the training cells, so there is no pretraining contamination.
-- Grades:
-  - **G-rec:** every value seen, the combination unseen (systematic recombination).
-  - **G-new:** one value never seen (a new part: creation is required).
-  - **G-new2:** two unseen values.
-- The factors are used only to build the split and to score (C5). The policy is conditioned on a free per-task embedding
-  that carries no factor structure.
-- The axes give a natural parts × relations structure: objective is the relation, object and obstacle are the parts, and
-  robot is the embodiment.
+### 3.1 Primary: LIBERO-90-C (our split of LIBERO-90; very well known; 50 human demos for every task)
 
-**B2. LIBERO-90 with frozen VLAs (realism: vision, language, large pretrained flow policies).**
-- G0's design: 67 single-step pick-and-place tasks in 5 folds, where every unit is refit without the fold's tasks. It
-  becomes a sealed-fold protocol: folds 1-4 for development, fold 5 sealed.
-- Grades within it: object and goal both held (recombination), or one of them unseen.
-- pi0.5 first; GR00T N1.5 / SmolVLA for architecture generality.
+- **Atoms per task** (read by `policy/factors.py`): object type, instance qualifier, target or region, verb, scene.
+- **Compounds:** object×target, verb×object, object×scene, target×scene.
+- **Candidate pool:**
+  - (i) the 90 LIBERO-90 tasks, with the LIBERO-10 two-step tasks decomposed into their steps;
+  - (ii) a **CRAFT-style 4×4 cell scene** authored in BDDL (cube colour × plate colour; CRAFT 2610.00524). It is the
+    cleanest fully factorial sanity cell. Train on the 4 same-colour cells and test the 12 others. Demos are made by
+    MimicGen (2310.17596) or the repo's v2 generator and labelled as generated;
+  - (iii) optionally, about 40 authored recombinations in LIBERO-90 scenes, with generated demos.
+- **Split construction (MCD; Keysers et al. 1912.09713):**
+  - Greedily search a training set with **atom divergence ≤ 0.02** (every test atom seen at least twice in training).
+  - Grade the combination test tasks into **CD bins 0.1 / 0.3 / 0.5**, at least 8 tasks per bin.
+  - A separate **part-held-out set**: two objects and one predicate, e.g. ketchup, the caddy, "turn on", absent from every
+    training task.
+  - A **sealed third**, stratified, chosen by a seeded hash and committed to the ledger before any read.
+- **Training set.**
+  - Train our own **pi05_l90c** from `pi05_base` on the training cells, all 50 demos each.
+  - Suite tasks are added only if none of their compounds is held out. LIBERO-10's two-step tasks would leak.
+  - Also train **FLOWER from `flower_vla_pret`**, never `flower_libero_90`, for architecture generality.
+  - Prototypes and R come only from these checkpoints and the training-cell prompts.
+  - **Contamination audit:** flow loss of `pi05_base` on held-out demos against its loss on training demos (the I6 method).
+- **Test set.** Each held-out task gets exactly one of its 50 demos as the query. Evaluation uses 50 never-used start
+  states, never the query's state.
+- **Cost:**
+  - pi0.5 multitask over about 60 cells: about 40-100 A40-h (action expert + VLM LoRA), or about 150-300 with whole-model FSDP;
+  - FLOWER: about 30-60;
+  - reads: about 4.4 A40-h per 600 episodes.
 
-**B3 (later, realism).** EgoDex (human hands, offline metric) or CALVIN chains, once B1 / B2 settle the method.
+### 3.2 Secondary: CALVIN-C (very well known; factorial blocks; long chains for productivity)
 
-## 3 Protocol
+- **Cells.** 21 block cells: lift colour×place (9), push colour×direction (6), rotate colour×direction (6).
+- **Held out:** 6-7 cells, keeping every colour, verb, place and direction in training at least twice.
+- **Grading:** by how many of a cell's pairwise compounds are unseen (0 / 1 / 2). That is a CD ladder at zero atom divergence.
+- **Part set:** one colour×verb held out entirely, e.g. all pink rotations.
+- **Three split seeds.** Caveat: in CALVIN colour also encodes size.
+- **Training.**
+  - Fine-tune FLOWER from `flower_vla_pret` on ABC's annotated windows minus the held-out cells.
+  - Drop windows that overlap held-out windows by more than about 16 frames.
+  - Unannotated play still contains the motions; state this and run the flow-loss audit.
+  - Recipe: 4 GPUs, batch 8, 40k steps, about 50-80 A40-h per split seed. The ABC data is already on disk.
+- **Test.** Held-out cells in ABC (familiar scene, pure composition) and in D (composition plus scene shift: the
+  scene-familiarity contrast *inside one benchmark*). One held-out window is the query. 5-step chains containing held-out
+  cells give the productivity test, at about 1.5 A40-h per 1,000 chains.
 
-- **One demonstration per new task.** It is used only as the query; it is never executed and never scored.
-- **Practice** is optional. When an arm uses practice episodes, they are counted in its budget, in every table.
-- **Budgets:**
-  - gradient steps 0 / 25 / 50 / 100 / 200 / 400 / 800;
-  - demonstrations 1 / 2 / 5 / all;
-  - practice 0 / 10 / 50;
-  - GPU-seconds logged for everything.
-- **Streams for C4:** the new tasks arrive in two mirrored random orders. Success on all earlier tasks is re-measured
-  after every 10 arrivals.
-- **Episodes and statistics:**
-  - 50 episodes per task in confirmatory reads (20 in development).
-  - IQM with stratified bootstrap CIs (rliable); paired sign tests per task; one Holm correction per read.
-  - Kaplan-Meier "fraction of tasks converged vs budget", with a log-rank test, for C1.
-  - The grade × arm interaction (mixed-effects logistic, task as a random effect) for C2.
-- **Tuning parity:** every arm gets the same hyperparameter sweep budget, on development cells only.
-- **Pre-registration:** every confirmatory read has a prereg row (ledger m3_prereg) before its first episode, as now.
-  Sealed cells are read once.
+### 3.3 Controls and reference reads (cheap, existing harnesses)
 
-## 4 Baselines
+- LIBERO-PRO `_task` (combination, our existing checkpoints).
+- Li et al.'s OOD suites, which are what ReGuide and ACT-VLA compare on.
+- One LIBERO-Plus perturbed-layout read for robustness.
 
-The set is chosen to answer one question: **is this method of compositionality the strong one?**
+**Not added:**
+- RoboCasa365. It is a strong official unseen-composite and lifelong benchmark, but very heavy, and its unseen composites
+  sit in unseen kitchens, a confound. Kept as a possible future scale-up.
+- GemBench / AGNOSTOS (RLBench, mixed levels) and CompoSuite (state-only, Dryad): cited as precedents.
 
-**Fine-tuning (what the store replaces):**
-- per-task LoRA (rank 16 and rank 4);
-- full SFT;
-- multi-task SFT on all training cells plus the new task's demonstration;
-- the policy alone (zero-shot).
+### 3.4 Continual streams
 
-**Continual fine-tuning (C4):**
-- sequential LoRA (the 2026 finding that pretrained VLAs resist forgetting makes this a real baseline: Liu et al.
-  [arXiv 2603.03818](https://arxiv.org/abs/2603.03818));
-- experience replay;
-- EWC;
-- per-task adapters (TAIL-style, which preserve by construction).
+- Arrivals in **two mirrored random orders**, mixing combination tasks and part tasks.
+- **Each new part arrives before the recombinations that use it.** This directly tests "created units compose", which the
+  design review marked as not shown.
+- Re-test every earlier task every 5-10 arrivals.
+- Report LIBERO's native FWT / NBT / AUC, the cost per arrival against its index, and causal reuse (ablate the created
+  filler).
 
-**Other ways to compose (the decisive group):**
+## 4. Baselines: recent published robotics methods, chosen for the claim each would refute
 
-| baseline | what it composes | why it matters |
-|---|---|---|
-| Composable diffusion / PoCo ([arXiv 2402.02511](https://arxiv.org/abs/2402.02511)) | scores of whole per-task policies | composition by score sum, with no units or hierarchy |
-| Wang et al. prototype PoE ([arXiv 2605.07078](https://arxiv.org/abs/2605.07078)) applied to actions | action-space modes, selected by coverage | our own earlier port (q3); tests whether prototypes must live in conditioning space |
-| LoraHub / Arrow routing / TIES merging | existing per-task LoRAs, weighted from the one demonstration | LLM-style modular composition on the same units |
-| Task arithmetic / LoRA averaging | per-task LoRAs | the simplest parameter composition |
-| SPiRL-style flat latent skills (skill prior + posterior from the demonstration; [arXiv 2010.11944](https://arxiv.org/abs/2010.11944), [arXiv 2107.10253](https://arxiv.org/abs/2107.10253)) | a flat code space with a learned prior | our units without the hierarchy and without chunk composition |
-| FIST, few-shot imitation with skill transition models ([arXiv 2107.08981](https://arxiv.org/abs/2107.08981)) | latent skills plus retrieval, from few demonstrations | the closest few-shot skill-composition method |
-| BUDS / LOTUS (skill discovery and libraries) | discovered skill segments | unsupervised libraries |
-| STRAP / nearest-segment retrieval | stored segments | retrieval without composition |
+| baseline | what it does | why it is the right foil | how we run it |
+|---|---|---|---|
+| **ReGuide** (Zhang et al., 2609.38616, Sep 2026) | training-free wrapper on frozen pi0.5: rebinds the instructed object; steers the end effector with object poses plus training-demo statistics | the only published *training-free, frozen-pi0.5* compositional method (pi0.5 39.0 → 94.5 with oracle poses, 87.5 with perception) | reimplemented (no code); two versions, oracle sim poses and an off-the-shelf detector |
+| **ACT-VLA** (Peng et al., 2607.00351, Jul 2026) | interpolate part text latents (Li's TLI), roll out, filter successes, SFT pi0.5 on about 300-400 synthetic demos | "bake compositions into the weights" (Spatial-OOD 35.5 → 88.2; Goal-OOD 46.6 → 95.6) vs our test-time composition | reimplemented from our `pi0-text-latent` port plus the SFT pipeline; report its rollout and GPU budget and its effect on old tasks |
+| **MergeVLA-style** (Fu et al., 2511.18810, CVPR 2026) | task-masked sparse LoRA + TIES merging + training-free router | the strongest parameter-space, compose-only method; isolates field-space composition with a relation | reproduce mask + TIES + router over pi0.5 per-task LoRAs |
+| **CLARE** (Römer et al., 2601.09512, RA-L 2026) | exemplar-free continual VLA: adapters expanded where feature similarity says so, autoencoder router with no task id | the direct foil for "create only the new part"; strong LIBERO continual numbers (Goal AUC 89.3) | code and LIBERO checkpoint released; run natively + a PEFT port to the pi0.5 action expert |
+| **DMPEL** (Lei et al., 2506.05985, TMLR 2026) | progressive library of low-rank experts + learned mixing router | the closest "compose library experts for a new task" robot method; its codebase also yields LOTUS, IsCiL and TAIL in one harness | MIT code + a LIBERO-90 checkpoint; native + port |
+| **ER on pretrained VLA** (Liu et al., 2603.03818) | experience replay; pretrained VLAs barely forget (pi0 NBT −0.016) | without it, "no forgetting" is not a selling point; it also re-checks our SeqFT | their recipe on pi05_l90c; SeqFT alongside |
+| **Equal-weight part superposition** (composable diffusion 2206.01714 / GPC 2510.01068 style) + Comp-1/3 (ICLR-27's retrieval baseline) | sum (or a convex mix of) the same part-prompt fields with no distilled relation; or retrieve the nearest trained instructions | ablation-baselines that prove *the distilled relation and the discovered fillers* matter, not just the prompts | our machinery with R replaced |
+| **Per-task LoRA** (the fine-tuning replaced) + **DemoDiffusion** (SDEdit; 2506.20668) | per-task fit with its full fit curve; one-demo SDEdit | the speed comparison for C1; the "edit the demo" reference | existing code |
 
-**Oracle (upper bound, not a competitor):** the same store built with the true factor labels (supervised units), and on B1
-the multi-hot factor-conditioned policy.
+**Optional:**
+- **TraceFlow** (2609.20646): frozen pi0.5 action-expert correction from rewarded rollouts, with code. The practice-matched
+  comparator.
+- **DiMaS** (2607.14280): its "decodable but not steerable" result is the bar C3 must clear.
+- **RV-ICL** (2610.06843): one demo, frozen VLA, LLM agent. Optional if code appears.
 
-**Ablations of our framework (each is one principle removed):**
-- a flat store (no taxonomy);
-- no chunking (units only, no composites);
-- no content/context split (one taxonomy);
-- no PoE within a step (a single prototype per segment);
-- no creation;
-- no consolidation (no merge / split);
-- action-space prototypes in place of conditioning-space ones;
-- a fixed segmentation (contact events) in place of parsed chunks.
+**Fairness:**
+- One demo per new task in every arm; practice episodes charged when used.
+- The same tuning sweep on dev cells for every arm.
+- All arms on our own checkpoints; ReGuide's oracle-pose variant is reported as privileged.
 
-## 5 Metrics per claim
+## 5. Value proposition (honest)
 
-| claim | primary metric | secondary |
-|---|---|---|
-| C1 | KM budget-to-threshold (τ = 80% of the all-demos multi-task SFT ceiling, per task) | AUC of success vs log budget; success at budget 0 / 1 demo |
-| C2 | grade × arm interaction | success as a function of the coverage of the task's parts by the store |
-| C3 | bytes and nodes vs tasks; reuse count per node, by depth | flat-store ablation |
-| C4 | backward transfer, forward transfer (LIBERO's FWT / NBT / AUC), cost per arrival vs index | routing errors on old tasks after growth |
-| C5 | label-free vs label-supervised store, on C1-C4 | unit purity against the factors (diagnostic only) |
-| C6 | each control vs the method | |
+**What only this system does:**
+1. **It composes from the policy's own field, with no extra machinery.** ReGuide needs poses or a detector plus demo
+   statistics; RV-ICL needs an LLM; GPC / PoCo need several policies.
+2. **The composition rule is *extracted* from a VLA never trained to compose**, as per-role weights. GPC uses a scalar.
+   Composable diffusion and Factored DP (2605.22596) use equal sums, and Factored DP must be trained for it.
+3. **One demo, no gradient, and creation only of the missing part, in one loop.**
+   - In-context methods (RICL, RA-VLA, Instant Policy) keep nothing.
+   - Library methods (CLARE, DMPEL, MergeVLA, AtomicVLA) train per task from many demos and never solve an unseen
+     combination before training.
+   - ACT-VLA needs synthetic data plus SFT.
+4. **Forgetting-free by construction, with growth proportional to new parts.**
+5. **Decodable compositionality** (C3). No robot paper tests Hupkes' properties.
 
-## 6 Order
+**Where competitors are stronger, and what we must show:**
+- ReGuide reports 94.5 (oracle poses) and 87.5 (perception), and ACT-VLA 88-96, on pi0.5 compositional suites. Our earlier
+  G0 recombination failed (365 vs 354). We must at least match ReGuide's perception variant without poses, or show where
+  each wins: **we predict ReGuide wins on pure re-binding of position, and we win when a part's motion or gripper timing must
+  change, and in continual reuse.**
+- CLARE and DMPEL have tuned multi-demo continual numbers, and ER barely forgets. Our edge must be **cost per arrival and
+  reuse**, not forgetting alone.
+- VLAs under-use language (LIBERO-Plus, CRAFT, LangForce), so part-prompt fields may be weak. P1 tests this first. Training
+  our own checkpoint on factorial cells may *increase* language reliance, which is also measured.
 
-1. Build B1 (CompoSuite data, our flow policy, the factorial split with sealed cells) and its fine-tuning baselines. This
-   gives the targets.
-2. Iterate the framework (docs/FRAMEWORK.md) on B1's development cells.
-3. Port to B2 (LIBERO-90 sealed fold) with the frozen VLAs.
-4. Confirmatory reads: sealed cells, all baselines, pre-registered.
+## 6. Decoding compositionality (C3)
+
+The framework is Hupkes et al. 1908.08351. The measures come from Andreas (TRE, 1902.07181), Okawa et al. 2310.09336,
+Uselis et al. 2602.24264, Lepori et al. 2301.10884 and Keysers et al. 1912.09713. Each property is tested at the
+representation, relation and behaviour levels, against holistic controls (per-task LoRA, MLC-direct):
+
+- **Systematicity.**
+  - (X → Y) vs (Y → X) swaps.
+  - Success flat in CD at fixed atom divergence (the CD bins in 3.1 / 3.2 exist for this).
+- **Productivity.**
+  - LIBERO-10 two-step tasks composed from single-step parts.
+  - CALVIN chains longer than any trained span.
+  - Success ≈ the product of part competences (Okawa's multiplicativity).
+- **Substitutivity.** Synonymous fillers (instances of one type, paraphrased prompts) give the same composed field and the
+  same success.
+- **Localism.**
+  - Swapping the goal filler leaves the object-role components unchanged.
+  - R's cross-role terms ≈ 0.
+  - Drop-one or swap-one changes only that role's competence (g or p).
+- **Overgeneralisation.** On exception tasks (an unusual grasp or approach), NEW fires; otherwise the system over-regularises.
+- **TRE, topographic similarity, role orthogonality, structural modularity** (a double dissociation between the object and
+  goal roles).
+- **Composition cards per task:** segments, roles, fillers (each with path, object and gripper timing), R weights, NEW flags.
+
+## 7. Metrics and statistics
+
+- **C1:**
+  - success on new start states;
+  - part correctness (g, the object grasped; p, placed given the grasp; on CALVIN, block and direction or place);
+  - success vs CD bin;
+  - GPU-seconds from demo arrival to ready, and gradient steps (0 unless NEW);
+  - bytes.
+- **C2:** FWT / NBT / AUC, the cost per arrival against its index, causal reuse, and bytes vs parts.
+- **C3:** section 6.
+- **Statistics:**
+  - paired episodes, sign tests, task-cluster bootstrap CIs;
+  - the CD × arm interaction by mixed-effects logistic regression;
+  - 20 episodes per task in development, 50 in confirmatory reads;
+  - no per-bin claim from fewer than 6 tasks;
+  - Holm over at most 6 pre-listed confirmatory hypotheses;
+  - sealed sets read once.
+
+## 8. Probes, cheapest decisive first (all on SLURM)
+
+| | question | go / kill | A40-h |
+|---|---|---|---|
+| P0 | Build LIBERO-90-C and CALVIN-C splits (MCD search), commit them + the sealed third; contamination audit of pi05_base | splits meet the atom-divergence and bin targets; audit clean | 1-2 |
+| P1 | Train pi05_l90c (and FLOWER-C); parity on training cells (≥ the 40-task checkpoint's per-task level) | parity reached | 40-100 (+30-60, +50-80 CALVIN) |
+| P2 | Fillers: are action modes under part prompts distinct, interpretable and transferable? (on our checkpoints) | separation > 2 at u ≤ 0.35 on ≥ 60% of observations; attribution ≥ 2× chance; transfer correlation ≥ 0.5 | 4-6 |
+| P3 | Relation extraction: R0 on leave-cell-out training cells; stability; R1 / R2 only if needed; AND / OR / THEN readout | R0 explains ≥ 70% of the instruction-vs-null gap; template stability ≥ 0.8 | 8-12 |
+| P4 | Offline decoding suite + offline pipeline vs equal-weight superposition and Comp-1/3 | beats both (CI excludes 0) | 3-5 |
+| P5 | Closed loop on dev combination cells (CRAFT cell first) | beats Comp-3 and equal superposition; raises g; flat-ish in CD | 10-15 |
+| P6 | Baseline setup: ReGuide (two versions), ACT-VLA, MergeVLA-style, CLARE, DMPEL, ER; parity smokes | each runs and reproduces its own reported trend | 30-50 |
+| P7 | Streams (C2) and confirmatory reads (C1), then the sealed sets once, then ablations and controls | pre-registered | about 200 |
+
+P0-P3 decide the line. Training our checkpoints dominates the cost; the probes P2-P4 are about 15-25 A40-h.
+
