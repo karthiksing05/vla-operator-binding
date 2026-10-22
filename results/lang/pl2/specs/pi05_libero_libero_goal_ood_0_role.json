@@ -1,0 +1,41 @@
+{
+ "prompt": "put the cream cheese in the basket",
+ "lo": 1,
+ "hi": 17,
+ "schedule": "ph",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 7,
+   "phrase": "cream cheese",
+   "new_pos": [
+    3,
+    4
+   ],
+   "src_pos": [
+    4,
+    5
+   ]
+  },
+  {
+   "role": "g",
+   "src": 26,
+   "phrase": "in the basket",
+   "new_pos": [
+    5,
+    6,
+    7
+   ],
+   "src_pos": [
+    9,
+    10,
+    11
+   ]
+  }
+ ],
+ "meta": {
+  "task": "goal:0",
+  "arm": "role"
+ }
+}

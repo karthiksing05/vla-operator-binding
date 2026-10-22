@@ -1,0 +1,426 @@
+{
+ "key": "l90:26",
+ "text": "put the wine bottle in the bottom drawer of the cabinet",
+ "roles": {
+  "o": "wine bottle",
+  "g": "in the bottom drawer of the cabinet"
+ },
+ "cands": {
+  "o": [
+   11,
+   14
+  ],
+  "g": [
+   8,
+   14,
+   18,
+   19,
+   31,
+   39
+  ]
+ },
+ "d0": {
+  "T": 169,
+  "c0": 42,
+  "rel": 98
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 14,
+    "g": 39
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:11": 0.5994649529457092,
+    "o:14": 0.5590126514434814,
+    "g:8": 0.5573675632476807,
+    "g:14": 0.5759533643722534,
+    "g:18": 0.5736368894577026,
+    "g:19": 0.544890820980072,
+    "g:31": 0.5442036390304565,
+    "g:39": 0.48994502425193787
+   },
+   "span_loss": {
+    "1-17": 0.48994502425193787,
+    "1-6": 0.5032045841217041,
+    "7-12": 0.5540716648101807,
+    "13-17": 0.5763306617736816
+   }
+  },
+  "role": {
+   "src": {
+    "o": 14,
+    "g": 14
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:11": 0.5920780897140503,
+    "o:14": 0.5756524801254272,
+    "g:8": 0.5779632925987244,
+    "g:14": 0.5649393200874329,
+    "g:18": 0.5658354759216309,
+    "g:19": 0.5746124982833862,
+    "g:31": 0.5788835287094116,
+    "g:39": 0.5706290602684021
+   },
+   "span_loss": {
+    "1-17": 0.5649393200874329,
+    "1-6": 0.5675787925720215,
+    "7-12": 0.5785661339759827,
+    "13-17": 0.585813045501709
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 14,
+    "g": 39
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:11": 0.5907369256019592,
+    "o:14": 0.5500440001487732,
+    "g:8": 0.5687149167060852,
+    "g:14": 0.5547822117805481,
+    "g:18": 0.5467581748962402,
+    "g:19": 0.5407138466835022,
+    "g:31": 0.5301871299743652,
+    "g:39": 0.48442336916923523
+   },
+   "span_loss": {
+    "1-17": 0.48442336916923523,
+    "1-6": 0.4938444197177887,
+    "7-12": 0.5387988686561584,
+    "13-17": 0.549809455871582
+   },
+   "template": "pick up the {O} and place it {G}",
+   "prompt": "pick up the wine bottle and place it in the bottom drawer of the cabinet",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the wine bottle and place it in the bottom drawer of the cabinet",
+     "with_word": 0.48442336916923523,
+     "alone": 0.5670667886734009
+    },
+    "put the {O} {G}": {
+     "prompt": "put the wine bottle in the bottom drawer of the cabinet",
+     "with_word": 0.48994502425193787,
+     "alone": 0.5901098251342773
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    14,
+    18
+   ],
+   "lam": 12,
+   "pairs": {
+    "11.14": 0.6706256866455078,
+    "11.18": 0.6040577292442322,
+    "11.31": 0.65961754322052,
+    "11.39": 0.6533781886100769,
+    "14.18": 0.5187550187110901,
+    "14.31": 0.5836845636367798,
+    "14.39": 0.5833815932273865
+   },
+   "lams": {
+    "24": 0.5187550187110901,
+    "12": 0.5112350583076477,
+    "36": 0.5424912571907043
+   },
+   "cands": {
+    "o": [
+     11,
+     14
+    ],
+    "g": [
+     14,
+     18,
+     31,
+     39
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.5901098251342773,
+  "null": 0.6115002632141113,
+  "word": 0.48994502425193787,
+  "role": 0.5649393200874329,
+  "tmpl": 0.48442336916923523,
+  "tmpl_only": 0.5670667886734009,
+  "tli_sel": 0.5112350583076477,
+  "rand": 0.7233679294586182,
+  "pos": 0.46285825967788696,
+  "l2sel": 0.48442336916923523
+ },
+ "l1": {
+  "zs": 0.5698642134666443,
+  "null": 0.5417133569717407,
+  "word": 0.4087776243686676,
+  "role": 0.5008338689804077,
+  "tmpl": 0.3797266483306885,
+  "tmpl_only": 0.5201236605644226,
+  "tli_sel": 0.48636430501937866,
+  "rand": 0.5829647779464722,
+  "pos": 0.4041834771633148,
+  "l2sel": 0.3797266483306885
+ },
+ "l2sel": "tmpl",
+ "controls": {
+  "o": {
+   "rand": 28,
+   "pos": 10,
+   "rand_text": "pick up the tomato sauce and place it in the basket",
+   "pos_text": "put the bowl on the plate"
+  },
+  "g": {
+   "rand": 17,
+   "pos": 34,
+   "rand_text": "put the bowl on the stove",
+   "pos_text": "pick up the black bowl between the plate and the ramekin and place it on the plate"
+  }
+ },
+ "n_eval": 67,
+ "arms": {
+  "zs": {
+   "prompt": "put the wine bottle in the bottom drawer of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "word": {
+   "prompt": "put the wine bottle in the bottom drawer of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 14,
+     "phrase": "wine bottle",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      3,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 39,
+     "phrase": "cabinet",
+     "new_pos": [
+      11
+     ],
+     "src_pos": [
+      9
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the wine bottle in the bottom drawer of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 14,
+     "phrase": "wine bottle",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      3,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 14,
+     "phrase": "cabinet",
+     "new_pos": [
+      11
+     ],
+     "src_pos": [
+      9
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "pick up the wine bottle and place it in the bottom drawer of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 14,
+     "phrase": "wine bottle",
+     "new_pos": [
+      4,
+      5
+     ],
+     "src_pos": [
+      3,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 39,
+     "phrase": "cabinet",
+     "new_pos": [
+      15
+     ],
+     "src_pos": [
+      9
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "pick up the wine bottle and place it in the bottom drawer of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the wine bottle in the bottom drawer of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 14,
+    "t2": 18,
+    "lam": 12
+   }
+  },
+  "rand": {
+   "prompt": "pick up the wine bottle and place it in the bottom drawer of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 28,
+     "phrase": "wine bottle <- tomato sauce",
+     "new_pos": [
+      4,
+      5
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 17,
+     "phrase": "in the bottom drawer of the cabinet <- on the stove",
+     "new_pos": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "src_pos": [
+      4,
+      4,
+      4,
+      4,
+      4,
+      5,
+      6
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "pos": {
+   "prompt": "pick up the wine bottle and place it in the bottom drawer of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 10,
+     "phrase": "wine bottle <- bowl",
+     "new_pos": [
+      4,
+      5
+     ],
+     "src_pos": [
+      3,
+      3
+     ]
+    },
+    {
+     "role": "g",
+     "src": 34,
+     "phrase": "in the bottom drawer of the cabinet <- on the plate",
+     "new_pos": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+     ],
+     "src_pos": [
+      16,
+      16,
+      16,
+      16,
+      16,
+      17,
+      18
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  }
+ },
+ "seconds": 268.781866312027,
+ "demo_src": [
+  1323,
+  1324
+ ]
+}

@@ -1,0 +1,770 @@
+{
+ "key": "goal:7",
+ "text": "put the cream cheese on the plate",
+ "roles": {
+  "o": "cream cheese",
+  "g": "on the plate"
+ },
+ "cands": {
+  "o": [
+   4,
+   7,
+   13,
+   22
+  ],
+  "g": [
+   0,
+   1,
+   10,
+   15,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39
+  ]
+ },
+ "d0": {
+  "T": 100,
+  "c0": 43,
+  "rel": 100
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 22,
+    "g": 33
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:4": 0.6406985521316528,
+    "o:7": 0.6546155214309692,
+    "o:13": 0.5783458352088928,
+    "o:22": 0.5562013983726501,
+    "g:0": 0.5582571029663086,
+    "g:1": 0.5801989436149597,
+    "g:10": 0.5734451413154602,
+    "g:15": 0.5668997764587402,
+    "g:30": 0.562487781047821,
+    "g:31": 0.5680937767028809,
+    "g:32": 0.5605400800704956,
+    "g:33": 0.5442894101142883,
+    "g:34": 0.5559266209602356,
+    "g:35": 0.5619308352470398,
+    "g:36": 0.5558966994285583,
+    "g:37": 0.5582377910614014,
+    "g:38": 0.5606310963630676,
+    "g:39": 0.5602586269378662
+   },
+   "span_loss": {
+    "1-17": 0.5442894101142883,
+    "1-6": 0.5502400398254395,
+    "7-12": 0.5633094906806946,
+    "13-17": 0.5685302019119263
+   }
+  },
+  "role": {
+   "src": {
+    "o": 22,
+    "g": 15
+   },
+   "span": [
+    1,
+    6
+   ],
+   "trace": {
+    "o:4": 0.673808753490448,
+    "o:7": 0.6729062795639038,
+    "o:13": 0.582522988319397,
+    "o:22": 0.5814067721366882,
+    "g:0": 0.6065263152122498,
+    "g:1": 0.608676016330719,
+    "g:10": 0.5852312445640564,
+    "g:15": 0.5778086185455322,
+    "g:30": 0.6057448983192444,
+    "g:31": 0.5939387083053589,
+    "g:32": 0.6052257418632507,
+    "g:33": 0.5967896580696106,
+    "g:34": 0.5934977531433105,
+    "g:35": 0.601575493812561,
+    "g:36": 0.6056678891181946,
+    "g:37": 0.6067797541618347,
+    "g:38": 0.5970137715339661,
+    "g:39": 0.6051050424575806
+   },
+   "span_loss": {
+    "1-17": 0.5778086185455322,
+    "1-6": 0.5748231410980225,
+    "7-12": 0.5883058905601501,
+    "13-17": 0.575643002986908
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 22,
+    "g": 33
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:4": 0.6406985521316528,
+    "o:7": 0.6546155214309692,
+    "o:13": 0.5783458352088928,
+    "o:22": 0.5562013983726501,
+    "g:0": 0.5582571029663086,
+    "g:1": 0.5801989436149597,
+    "g:10": 0.5734451413154602,
+    "g:15": 0.5668997764587402,
+    "g:30": 0.562487781047821,
+    "g:31": 0.5680937767028809,
+    "g:32": 0.5605400800704956,
+    "g:33": 0.5442894101142883,
+    "g:34": 0.5559266209602356,
+    "g:35": 0.5619308352470398,
+    "g:36": 0.5558966994285583,
+    "g:37": 0.5582377910614014,
+    "g:38": 0.5606310963630676,
+    "g:39": 0.5602586269378662
+   },
+   "span_loss": {
+    "1-17": 0.5442894101142883,
+    "1-6": 0.5502400398254395,
+    "7-12": 0.5633094906806946,
+    "13-17": 0.5685302019119263
+   },
+   "template": "put the {O} {G}",
+   "prompt": "put the cream cheese on the plate",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the cream cheese and place it on the plate",
+     "with_word": 0.549267053604126,
+     "alone": 0.5614511966705322
+    },
+    "put the {O} {G}": {
+     "prompt": "put the cream cheese on the plate",
+     "with_word": 0.5442894101142883,
+     "alone": 0.583878219127655
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    13,
+    31
+   ],
+   "lam": 12,
+   "pairs": {
+    "13.10": 0.5483472943305969,
+    "13.30": 0.5370618104934692,
+    "13.31": 0.510418176651001,
+    "13.32": 0.5632404088973999,
+    "13.33": 0.541196346282959,
+    "13.34": 0.5218979120254517,
+    "13.35": 0.5413234829902649,
+    "13.36": 0.5302061438560486,
+    "13.37": 0.5389220714569092,
+    "13.38": 0.5290727615356445,
+    "13.39": 0.5283873677253723,
+    "22.10": 0.5885313153266907,
+    "22.30": 0.5347470045089722,
+    "22.31": 0.5204290747642517,
+    "22.32": 0.5403159260749817,
+    "22.33": 0.5140721201896667,
+    "22.34": 0.5135070085525513,
+    "22.35": 0.5324764847755432,
+    "22.36": 0.529085636138916,
+    "22.37": 0.533226490020752,
+    "22.38": 0.5197464227676392,
+    "22.39": 0.5144857168197632
+   },
+   "lams": {
+    "24": 0.510418176651001,
+    "12": 0.4797840118408203,
+    "36": 0.6341231465339661
+   },
+   "cands": {
+    "o": [
+     13,
+     22
+    ],
+    "g": [
+     10,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.583878219127655,
+  "null": 0.574301540851593,
+  "tli_li": 0.5483472943305969,
+  "word": 0.5442894101142883,
+  "role": 0.5748231410980225,
+  "tmpl": 0.5442894101142883,
+  "tmpl_only": 0.583878219127655,
+  "tli_sel": 0.4797840118408203,
+  "rand": 0.5955306887626648,
+  "pos": 0.6557053923606873,
+  "l2sel": 0.4797840118408203
+ },
+ "l1": {
+  "zs": 0.6635987758636475,
+  "null": 0.6342217922210693,
+  "tli_li": 0.5681326985359192,
+  "word": 0.6265954375267029,
+  "role": 0.6650246977806091,
+  "tmpl": 0.6265954375267029,
+  "tmpl_only": 0.6635987758636475,
+  "tli_sel": 0.5253888964653015,
+  "rand": 0.6621492505073547,
+  "pos": 0.7791343927383423,
+  "l2sel": 0.5253888964653015
+ },
+ "l2sel": "tli_sel",
+ "controls": {
+  "o": {
+   "rand": 9,
+   "pos": 34,
+   "rand_text": "pick up the book and place it in the back compartment of the caddy",
+   "pos_text": "pick up the black bowl between the plate and the ramekin and place it on the plate"
+  },
+  "g": {
+   "rand": 23,
+   "pos": 13,
+   "rand_text": "pick up the bbq sauce and place it in the basket",
+   "pos_text": "put the cream cheese in the bowl"
+  }
+ },
+ "n_eval": 114,
+ "arms": {
+  "zs": {
+   "prompt": "put the cream cheese on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_li": {
+   "prompt": "put the cream cheese on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 13,
+    "t2": 10,
+    "lam": 24
+   }
+  },
+  "word": {
+   "prompt": "put the cream cheese on the plate",
+   "edits": [
+    {
+     "role": "o",
+     "src": 22,
+     "phrase": "cream cheese",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 33,
+     "phrase": "on the plate",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      12,
+      13,
+      14
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the cream cheese on the plate",
+   "edits": [
+    {
+     "role": "o",
+     "src": 22,
+     "phrase": "cream cheese",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 15,
+     "phrase": "plate",
+     "new_pos": [
+      7
+     ],
+     "src_pos": [
+      3
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "put the cream cheese on the plate",
+   "edits": [
+    {
+     "role": "o",
+     "src": 22,
+     "phrase": "cream cheese",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 33,
+     "phrase": "on the plate",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      12,
+      13,
+      14
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "put the cream cheese on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the cream cheese on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 13,
+    "t2": 31,
+    "lam": 12
+   }
+  },
+  "rand": {
+   "prompt": "put the cream cheese on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 9,
+    "t2": 23,
+    "lam": 12
+   }
+  },
+  "pos": {
+   "prompt": "put the cream cheese on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 34,
+    "t2": 13,
+    "lam": 12
+   }
+  }
+ },
+ "modes": {
+  "start": {
+   "frame": 0,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.11282166961207886,
+     0.08513311987719178,
+     0.9470497992936587
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 0.75,
+    "named_point": 1.0,
+    "grip_first": 35.5,
+    "grip_closed": 0.1625
+   },
+   "word": {
+    "endpoint": [
+     -0.09097410391397852,
+     0.059589784050379416,
+     0.9204560913377924
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 0.125,
+    "named_point": 1.0,
+    "grip_first": 34.625,
+    "grip_closed": 0.0525
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.09097410391397852,
+     0.059589784050379416,
+     0.9204560913377924
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 0.125,
+    "named_point": 1.0,
+    "grip_first": 34.625,
+    "grip_closed": 0.0525
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.08757462671641307,
+     0.10021757760866792,
+     0.9971973397040934
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 32.375,
+    "grip_closed": 0.0975
+   },
+   "role": {
+    "endpoint": [
+     -0.09595041578490784,
+     0.08376492291308198,
+     0.9209167577736119
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 0.75,
+    "named_point": 1.0,
+    "grip_first": 31.5,
+    "grip_closed": 0.11499999999999999
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.08225014235034722,
+     0.12444440333469903,
+     0.9619938042992139
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 32.625,
+    "grip_closed": 0.0925
+   },
+   "rand": {
+    "endpoint": [
+     -0.1521813647645797,
+     0.0909113853452969,
+     0.9744545939929459
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 0.625,
+    "named_point": 1.0,
+    "grip_first": 38.25,
+    "grip_closed": 0.10750000000000001
+   },
+   "pos": {
+    "endpoint": [
+     -0.09848018771452123,
+     0.09462685568210343,
+     0.9603625555244779
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 0.75,
+    "named_point": 1.0,
+    "grip_first": 39.875,
+    "grip_closed": 0.2
+   }
+  },
+  "approach": {
+   "frame": 22,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.07237242040406881,
+     0.01671972957887128,
+     1.0417618558457262
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 21.125,
+    "grip_closed": 0.5775000000000001
+   },
+   "word": {
+    "endpoint": [
+     -0.047113368657002615,
+     0.09750242809155281,
+     1.0268522823745754
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.125,
+    "grip_first": 23.375,
+    "grip_closed": 0.5225
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.047113368657002615,
+     0.09750242809155281,
+     1.0268522823745754
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.125,
+    "grip_first": 23.375,
+    "grip_closed": 0.5225
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.08735146929260106,
+     0.01189391701719131,
+     1.0359333508277628
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 20.5,
+    "grip_closed": 0.59
+   },
+   "role": {
+    "endpoint": [
+     -0.055052523133737284,
+     0.06086732966769216,
+     1.044847318570881
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.375,
+    "named_point": 0.0,
+    "grip_first": 22.25,
+    "grip_closed": 0.555
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.08750059469073676,
+     0.01791605614991173,
+     1.036660719758561
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 21.875,
+    "grip_closed": 0.5625
+   },
+   "rand": {
+    "endpoint": [
+     -0.07372421923389294,
+     0.056369908968166196,
+     1.0849304486857778
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.375,
+    "named_point": 0.0,
+    "grip_first": 23.25,
+    "grip_closed": 0.535
+   },
+   "pos": {
+    "endpoint": [
+     -0.014479855462971609,
+     0.0960979233148289,
+     1.040286689406599
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 21.125,
+    "grip_closed": 0.5775
+   }
+  },
+  "carry": {
+   "frame": 92,
+   "carry": true,
+   "zs": {
+    "endpoint": [
+     -0.06972809807991456,
+     0.008557395621752303,
+     1.0177928501277156
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.75,
+    "grip_first": 3.75,
+    "grip_closed": 0.07500000000000001
+   },
+   "word": {
+    "endpoint": [
+     -0.06008982312280314,
+     0.0156656673724769,
+     1.0417905701779366
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 4.75,
+    "grip_closed": 0.095
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.06008982312280314,
+     0.0156656673724769,
+     1.0417905701779366
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 4.75,
+    "grip_closed": 0.095
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.04032886746719736,
+     0.021676133435026675,
+     1.016629001586215
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.875,
+    "grip_first": 4.875,
+    "grip_closed": 0.0975
+   },
+   "role": {
+    "endpoint": [
+     -0.06559843771607761,
+     0.02264500092752117,
+     1.0168505842846538
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 4.75,
+    "grip_closed": 0.095
+   },
+   "tli_li": {
+    "endpoint": [
+     0.005811564701613786,
+     0.001997388380161652,
+     1.1064894828540996
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 5.625,
+    "grip_closed": 0.1125
+   },
+   "rand": {
+    "endpoint": [
+     -0.014251908530094755,
+     0.016095875308476587,
+     1.105349801076913
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.625,
+    "grip_first": 3.125,
+    "grip_closed": 0.065
+   },
+   "pos": {
+    "endpoint": [
+     -0.06723236550114518,
+     0.02662897051114478,
+     1.0358151682234311
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 3.125,
+    "grip_closed": 0.0675
+   }
+  }
+ },
+ "seconds": 385.8013951778412,
+ "demo_src": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_goal_libero_goal_ood_7_tli_13.10.24_seed13_rec/task7_trial0.npz",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_goal_libero_goal_ood_7_tli_13.10.24_seed13_rec/task7_trial1.npz"
+ ]
+}

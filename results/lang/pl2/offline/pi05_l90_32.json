@@ -1,0 +1,408 @@
+{
+ "key": "l90:32",
+ "text": "put the ketchup in the top drawer of the cabinet",
+ "roles": {
+  "o": "ketchup",
+  "g": "in the top drawer of the cabinet"
+ },
+ "cands": {
+  "o": [
+   21
+  ],
+  "g": [
+   8,
+   14,
+   18,
+   19,
+   31,
+   39
+  ]
+ },
+ "d0": {
+  "T": 200,
+  "c0": 92,
+  "rel": 180
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 21,
+    "g": 31
+   },
+   "span": [
+    13,
+    17
+   ],
+   "trace": {
+    "o:21": 0.4546748697757721,
+    "g:8": 0.4568711519241333,
+    "g:14": 0.47617390751838684,
+    "g:18": 0.48455435037612915,
+    "g:19": 0.46585625410079956,
+    "g:31": 0.4544098973274231,
+    "g:39": 0.6039062142372131
+   },
+   "span_loss": {
+    "1-17": 0.4544098973274231,
+    "1-6": 0.4578823149204254,
+    "7-12": 0.45151063799858093,
+    "13-17": 0.45140114426612854
+   }
+  },
+  "role": {
+   "src": {
+    "o": 21,
+    "g": 8
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "o:21": 0.4512057602405548,
+    "g:8": 0.4520840048789978,
+    "g:14": 0.4645659625530243,
+    "g:18": 0.4635502099990845,
+    "g:19": 0.45406374335289,
+    "g:31": 0.4527131915092468,
+    "g:39": 0.49292895197868347
+   },
+   "span_loss": {
+    "1-17": 0.4520840048789978,
+    "1-6": 0.4521563947200775,
+    "7-12": 0.4513615071773529,
+    "13-17": 0.45284250378608704
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 21,
+    "g": 31
+   },
+   "span": [
+    13,
+    17
+   ],
+   "trace": {
+    "o:21": 0.4546748697757721,
+    "g:8": 0.4568711519241333,
+    "g:14": 0.47617390751838684,
+    "g:18": 0.48455435037612915,
+    "g:19": 0.46585625410079956,
+    "g:31": 0.4544098973274231,
+    "g:39": 0.6039062142372131
+   },
+   "span_loss": {
+    "1-17": 0.4544098973274231,
+    "1-6": 0.4578823149204254,
+    "7-12": 0.45151063799858093,
+    "13-17": 0.45140114426612854
+   },
+   "template": "put the {O} {G}",
+   "prompt": "put the ketchup in the top drawer of the cabinet",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the ketchup and place it in the top drawer of the cabinet",
+     "with_word": 0.4721713960170746,
+     "alone": 0.47223129868507385
+    },
+    "put the {O} {G}": {
+     "prompt": "put the ketchup in the top drawer of the cabinet",
+     "with_word": 0.45140114426612854,
+     "alone": 0.4530546963214874
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    21,
+    14
+   ],
+   "lam": 12,
+   "pairs": {
+    "21.14": 0.5124058127403259,
+    "21.18": 0.5620569586753845,
+    "21.31": 0.5629286766052246,
+    "21.39": 0.5696083307266235
+   },
+   "lams": {
+    "24": 0.5124058127403259,
+    "12": 0.4989405870437622,
+    "36": 0.5095396637916565
+   },
+   "cands": {
+    "o": [
+     21
+    ],
+    "g": [
+     14,
+     18,
+     31,
+     39
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.4530546963214874,
+  "null": 0.4362332820892334,
+  "word": 0.45140114426612854,
+  "role": 0.4513615071773529,
+  "tmpl": 0.45140114426612854,
+  "tmpl_only": 0.4530546963214874,
+  "tli_sel": 0.4989405870437622,
+  "rand": 0.461290180683136,
+  "pos": 0.45679283142089844,
+  "l2sel": 0.4513615071773529
+ },
+ "l1": {
+  "zs": 0.6210748553276062,
+  "null": 0.5724465847015381,
+  "word": 0.6181254386901855,
+  "role": 0.6187353730201721,
+  "tmpl": 0.6181254386901855,
+  "tmpl_only": 0.6210748553276062,
+  "tli_sel": 0.7044569253921509,
+  "rand": 0.6067160964012146,
+  "pos": 0.5983502864837646,
+  "l2sel": 0.6187353730201721
+ },
+ "l2sel": "role",
+ "controls": {
+  "o": {
+   "rand": 20,
+   "pos": 14,
+   "rand_text": "pick up the orange juice and place it in the basket",
+   "pos_text": "put the wine bottle on top of the cabinet"
+  },
+  "g": {
+   "rand": 33,
+   "pos": 34,
+   "rand_text": "pick up the black bowl on the stove and place it on the plate",
+   "pos_text": "pick up the black bowl between the plate and the ramekin and place it on the plate"
+  }
+ },
+ "n_eval": 61,
+ "arms": {
+  "zs": {
+   "prompt": "put the ketchup in the top drawer of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "word": {
+   "prompt": "put the ketchup in the top drawer of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 21,
+     "phrase": "ketchup",
+     "new_pos": [
+      3
+     ],
+     "src_pos": [
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 31,
+     "phrase": "cabinet",
+     "new_pos": [
+      10
+     ],
+     "src_pos": [
+      13
+     ]
+    }
+   ],
+   "lo": 13,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the ketchup in the top drawer of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 21,
+     "phrase": "ketchup",
+     "new_pos": [
+      3
+     ],
+     "src_pos": [
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 8,
+     "phrase": "cabinet",
+     "new_pos": [
+      10
+     ],
+     "src_pos": [
+      11
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "put the ketchup in the top drawer of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 21,
+     "phrase": "ketchup",
+     "new_pos": [
+      3
+     ],
+     "src_pos": [
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 31,
+     "phrase": "cabinet",
+     "new_pos": [
+      10
+     ],
+     "src_pos": [
+      13
+     ]
+    }
+   ],
+   "lo": 13,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "put the ketchup in the top drawer of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the ketchup in the top drawer of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 21,
+    "t2": 14,
+    "lam": 12
+   }
+  },
+  "rand": {
+   "prompt": "put the ketchup in the top drawer of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 20,
+     "phrase": "ketchup <- orange juice",
+     "new_pos": [
+      3
+     ],
+     "src_pos": [
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 33,
+     "phrase": "in the top drawer of the cabinet <- on the plate",
+     "new_pos": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "src_pos": [
+      12,
+      12,
+      12,
+      12,
+      12,
+      13,
+      14
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "ph",
+   "tli": null
+  },
+  "pos": {
+   "prompt": "put the ketchup in the top drawer of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 14,
+     "phrase": "ketchup <- wine bottle",
+     "new_pos": [
+      3
+     ],
+     "src_pos": [
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 34,
+     "phrase": "in the top drawer of the cabinet <- on the plate",
+     "new_pos": [
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10
+     ],
+     "src_pos": [
+      16,
+      16,
+      16,
+      16,
+      16,
+      17,
+      18
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "ph",
+   "tli": null
+  }
+ },
+ "seconds": 245.76061940193176,
+ "demo_src": [
+  1510,
+  1511
+ ]
+}

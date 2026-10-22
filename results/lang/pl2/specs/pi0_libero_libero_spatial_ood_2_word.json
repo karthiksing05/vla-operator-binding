@@ -1,0 +1,39 @@
+{
+ "prompt": "put the milk on the plate",
+ "lo": 1,
+ "hi": 6,
+ "schedule": "og",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 25,
+   "phrase": "milk",
+   "new_pos": [
+    3
+   ],
+   "src_pos": [
+    4
+   ]
+  },
+  {
+   "role": "g",
+   "src": 10,
+   "phrase": "on the plate",
+   "new_pos": [
+    4,
+    5,
+    6
+   ],
+   "src_pos": [
+    4,
+    5,
+    6
+   ]
+  }
+ ],
+ "meta": {
+  "task": "spatial:2",
+  "arm": "word"
+ }
+}

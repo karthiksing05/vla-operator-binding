@@ -1,0 +1,39 @@
+{
+ "prompt": "pick up the butter and place it on the plate",
+ "lo": 1,
+ "hi": 17,
+ "schedule": "og",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 7,
+   "phrase": "butter",
+   "new_pos": [
+    4
+   ],
+   "src_pos": [
+    9
+   ]
+  },
+  {
+   "role": "g",
+   "src": 34,
+   "phrase": "on the plate",
+   "new_pos": [
+    8,
+    9,
+    10
+   ],
+   "src_pos": [
+    16,
+    17,
+    18
+   ]
+  }
+ ],
+ "meta": {
+  "task": "spatial:0",
+  "arm": "tmpl"
+ }
+}

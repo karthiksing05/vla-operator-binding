@@ -1,0 +1,783 @@
+{
+ "key": "goal:3",
+ "text": "put the tomato sauce on top of the cabinet",
+ "roles": {
+  "o": "tomato sauce",
+  "g": "on top of the cabinet"
+ },
+ "cands": {
+  "o": [
+   5,
+   23,
+   28
+  ],
+  "g": [
+   8,
+   14,
+   18,
+   19,
+   31,
+   39
+  ]
+ },
+ "d0": {
+  "T": 113,
+  "c0": 43,
+  "rel": 105
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 23,
+    "g": 14
+   },
+   "span": [
+    1,
+    6
+   ],
+   "trace": {
+    "o:5": 0.3287428021430969,
+    "o:23": 0.29792094230651855,
+    "o:28": 0.3730370104312897,
+    "g:8": 0.38936367630958557,
+    "g:14": 0.3006134331226349,
+    "g:18": 0.30172500014305115,
+    "g:19": 0.36842596530914307,
+    "g:31": 0.4162713289260864,
+    "g:39": 0.5440608859062195
+   },
+   "span_loss": {
+    "1-17": 0.3006134331226349,
+    "1-6": 0.297207772731781,
+    "7-12": 0.3412388563156128,
+    "13-17": 0.3321799039840698
+   }
+  },
+  "role": {
+   "src": {
+    "o": 28,
+    "g": 14
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:5": 0.3267847001552582,
+    "o:23": 0.3243294358253479,
+    "o:28": 0.3103727400302887,
+    "g:8": 0.37252211570739746,
+    "g:14": 0.3079586923122406,
+    "g:18": 0.3084475100040436,
+    "g:19": 0.3655306100845337,
+    "g:31": 0.37947267293930054,
+    "g:39": 0.4346110224723816
+   },
+   "span_loss": {
+    "1-17": 0.3079586923122406,
+    "1-6": 0.3173774182796478,
+    "7-12": 0.32272619009017944,
+    "13-17": 0.33705416321754456
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 23,
+    "g": 14
+   },
+   "span": [
+    1,
+    6
+   ],
+   "trace": {
+    "o:5": 0.3287428021430969,
+    "o:23": 0.29792094230651855,
+    "o:28": 0.3730370104312897,
+    "g:8": 0.38936367630958557,
+    "g:14": 0.3006134331226349,
+    "g:18": 0.30172500014305115,
+    "g:19": 0.36842596530914307,
+    "g:31": 0.4162713289260864,
+    "g:39": 0.5440608859062195
+   },
+   "span_loss": {
+    "1-17": 0.3006134331226349,
+    "1-6": 0.297207772731781,
+    "7-12": 0.3412388563156128,
+    "13-17": 0.3321799039840698
+   },
+   "template": "put the {O} {G}",
+   "prompt": "put the tomato sauce on top of the cabinet",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the tomato sauce and place it on top of the cabinet",
+     "with_word": 0.3578774929046631,
+     "alone": 0.5748668909072876
+    },
+    "put the {O} {G}": {
+     "prompt": "put the tomato sauce on top of the cabinet",
+     "with_word": 0.297207772731781,
+     "alone": 0.3345138430595398
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    23,
+    14
+   ],
+   "lam": 12,
+   "pairs": {
+    "23.14": 0.4543049931526184,
+    "23.18": 0.47247686982154846,
+    "23.31": 0.4646458923816681,
+    "23.39": 0.5146381258964539,
+    "28.14": 0.5090651512145996,
+    "28.18": 0.49744701385498047,
+    "28.31": 0.5275725722312927,
+    "28.39": 0.5631768107414246
+   },
+   "lams": {
+    "24": 0.4543049931526184,
+    "12": 0.3758607804775238,
+    "36": 0.6561099886894226
+   },
+   "cands": {
+    "o": [
+     23,
+     28
+    ],
+    "g": [
+     14,
+     18,
+     31,
+     39
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.3345138430595398,
+  "null": 0.5846758484840393,
+  "tli_li": 0.40589988231658936,
+  "word": 0.297207772731781,
+  "role": 0.3079586923122406,
+  "tmpl": 0.297207772731781,
+  "tmpl_only": 0.3345138430595398,
+  "tli_sel": 0.3758607804775238,
+  "rand": 0.6111900210380554,
+  "pos": 0.5889063477516174,
+  "l2sel": 0.297207772731781
+ },
+ "l1": {
+  "zs": 0.6310109496116638,
+  "null": 0.6669667363166809,
+  "tli_li": 0.7088705897331238,
+  "word": 0.5917516350746155,
+  "role": 0.5735440254211426,
+  "tmpl": 0.5917516350746155,
+  "tmpl_only": 0.6310109496116638,
+  "tli_sel": 0.6268779039382935,
+  "rand": 0.8197914361953735,
+  "pos": 0.870799720287323,
+  "l2sel": 0.5917516350746155
+ },
+ "l2sel": "word",
+ "controls": {
+  "o": {
+   "rand": 25,
+   "pos": 34,
+   "rand_text": "pick up the milk and place it in the basket",
+   "pos_text": "pick up the black bowl between the plate and the ramekin and place it on the plate"
+  },
+  "g": {
+   "rand": 27,
+   "pos": 11,
+   "rand_text": "pick up the butter and place it in the basket",
+   "pos_text": "put the wine bottle on the rack"
+  }
+ },
+ "n_eval": 73,
+ "arms": {
+  "zs": {
+   "prompt": "put the tomato sauce on top of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_li": {
+   "prompt": "put the tomato sauce on top of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 13,
+    "t2": 18,
+    "lam": 24
+   }
+  },
+  "word": {
+   "prompt": "put the tomato sauce on top of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 23,
+     "phrase": "sauce",
+     "new_pos": [
+      4
+     ],
+     "src_pos": [
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 14,
+     "phrase": "on top of the cabinet",
+     "new_pos": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "src_pos": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the tomato sauce on top of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 28,
+     "phrase": "tomato sauce",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 14,
+     "phrase": "on top of the cabinet",
+     "new_pos": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "src_pos": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "put the tomato sauce on top of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 23,
+     "phrase": "sauce",
+     "new_pos": [
+      4
+     ],
+     "src_pos": [
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 14,
+     "phrase": "on top of the cabinet",
+     "new_pos": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "src_pos": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "put the tomato sauce on top of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the tomato sauce on top of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 23,
+    "t2": 14,
+    "lam": 12
+   }
+  },
+  "rand": {
+   "prompt": "put the tomato sauce on top of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 25,
+     "phrase": "tomato sauce <- milk",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 27,
+     "phrase": "on top of the cabinet <- in the basket",
+     "new_pos": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "src_pos": [
+      8,
+      8,
+      8,
+      9,
+      10
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "og",
+   "tli": null
+  },
+  "pos": {
+   "prompt": "put the tomato sauce on top of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 34,
+     "phrase": "tomato sauce <- black bowl between the plate and the ramekin",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      11,
+      12
+     ]
+    },
+    {
+     "role": "g",
+     "src": 11,
+     "phrase": "on top of the cabinet <- on the rack",
+     "new_pos": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "src_pos": [
+      5,
+      5,
+      5,
+      6,
+      7
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "og",
+   "tli": null
+  }
+ },
+ "modes": {
+  "start": {
+   "frame": 0,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.14684667804392448,
+     -0.032348675265664414,
+     1.1002276422806625
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 32.875,
+    "grip_closed": 0.33999999999999997
+   },
+   "word": {
+    "endpoint": [
+     -0.15268242948831579,
+     -0.03566408810358725,
+     1.085301963258686
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 31.625,
+    "grip_closed": 0.365
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.15268242948831579,
+     -0.03566408810358725,
+     1.085301963258686
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 31.625,
+    "grip_closed": 0.365
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.0740737935441128,
+     0.017389057286354655,
+     0.9912322874613532
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 33.75,
+    "grip_closed": 0.06999999999999999
+   },
+   "role": {
+    "endpoint": [
+     -0.11955004745809292,
+     0.028716376796636522,
+     1.0175281732422645
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.25,
+    "named_point": 0.375,
+    "grip_first": 34.875,
+    "grip_closed": 0.30000000000000004
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.07236376766326796,
+     0.1076246715270532,
+     0.990854254452616
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "tomato_sauce_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 32.125,
+    "grip_closed": 0.10250000000000001
+   },
+   "rand": {
+    "endpoint": [
+     -0.14046665821397553,
+     -0.020559260133366706,
+     1.0237413149105725
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 40.375,
+    "grip_closed": 0.19
+   },
+   "pos": {
+    "endpoint": [
+     -0.1502271176185848,
+     0.028422723115643964,
+     1.0859185104895
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "tomato_sauce_1",
+    "named_near": 0.25,
+    "named_point": 0.875,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   }
+  },
+  "approach": {
+   "frame": 21,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.0421317412480135,
+     0.07565150590731803,
+     1.1662162201393185
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 21.625,
+    "grip_closed": 0.5675
+   },
+   "word": {
+    "endpoint": [
+     -0.03947399998254046,
+     0.05201115549595088,
+     1.1594822323296898
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 21.25,
+    "grip_closed": 0.575
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.03947399998254046,
+     0.05201115549595088,
+     1.1594822323296898
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 21.25,
+    "grip_closed": 0.575
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.07495869230365827,
+     0.12008237937715582,
+     1.0820336445870278
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 0.25,
+    "grip_first": 22.25,
+    "grip_closed": 0.54
+   },
+   "role": {
+    "endpoint": [
+     -0.07187150481067887,
+     0.05754030455929913,
+     1.1340585512661312
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 20.25,
+    "grip_closed": 0.595
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.08342559634259791,
+     0.02287068150784357,
+     1.035935227788028
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.125,
+    "named_point": 0.0,
+    "grip_first": 22.5,
+    "grip_closed": 0.55
+   },
+   "rand": {
+    "endpoint": [
+     -0.06267094758712902,
+     0.035920032771066646,
+     1.1214785818229451
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.875,
+    "named_point": 0.0,
+    "grip_first": 21.625,
+    "grip_closed": 0.5675
+   },
+   "pos": {
+    "endpoint": [
+     -0.09702942966107773,
+     0.08669273169286348,
+     1.1410642864800316
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 22.5,
+    "grip_closed": 0.55
+   }
+  },
+  "carry": {
+   "frame": 77,
+   "carry": true,
+   "zs": {
+    "endpoint": [
+     0.01982276180946477,
+     -0.07288518295203802,
+     1.179400997031358
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 29.375,
+    "grip_closed": 0.5874999999999999
+   },
+   "word": {
+    "endpoint": [
+     0.009318846592459091,
+     -0.07824618139324924,
+     1.167219393646813
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 30.125,
+    "grip_closed": 0.6025
+   },
+   "tmpl": {
+    "endpoint": [
+     0.009318846592459091,
+     -0.07824618139324924,
+     1.167219393646813
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 30.125,
+    "grip_closed": 0.6025
+   },
+   "tli_sel": {
+    "endpoint": [
+     0.04001161747581926,
+     0.007078049661940514,
+     1.1948682999154137
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 29.625,
+    "grip_closed": 0.5925
+   },
+   "role": {
+    "endpoint": [
+     0.026604869757359366,
+     -0.06768296624744774,
+     1.1863948690849166
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 29.375,
+    "grip_closed": 0.5874999999999999
+   },
+   "tli_li": {
+    "endpoint": [
+     0.015426630466059774,
+     -0.10104895594912733,
+     1.1964554465303217
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 30.25,
+    "grip_closed": 0.605
+   },
+   "rand": {
+    "endpoint": [
+     -0.016384460558308785,
+     -0.01794307267056993,
+     1.1017707501256877
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 32.0,
+    "grip_closed": 0.64
+   },
+   "pos": {
+    "endpoint": [
+     -0.049556686306726376,
+     -0.010729083940297056,
+     1.120945954100927
+    ],
+    "nearest": "tomato_sauce_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 30.75,
+    "grip_closed": 0.615
+   }
+  }
+ },
+ "seconds": 324.87533593177795,
+ "demo_src": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_goal_libero_goal_ood_3_tli_13.18.24_seed13_pi0_rec/task3_trial0.npz",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_goal_libero_goal_ood_3_tli_13.18.24_seed13_pi0_rec/task3_trial1.npz"
+ ]
+}

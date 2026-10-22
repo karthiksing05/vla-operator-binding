@@ -1,0 +1,39 @@
+{
+ "prompt": "put the bowl at table center on the stove",
+ "lo": 7,
+ "hi": 12,
+ "schedule": "og",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 38,
+   "phrase": "center",
+   "new_pos": [
+    6
+   ],
+   "src_pos": [
+    8
+   ]
+  },
+  {
+   "role": "g",
+   "src": 17,
+   "phrase": "on the stove",
+   "new_pos": [
+    7,
+    8,
+    9
+   ],
+   "src_pos": [
+    4,
+    5,
+    6
+   ]
+  }
+ ],
+ "meta": {
+  "task": "spatial:9",
+  "arm": "tmpl"
+ }
+}

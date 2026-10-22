@@ -1,0 +1,740 @@
+{
+ "key": "spatial:2",
+ "text": "put the milk on the plate",
+ "roles": {
+  "o": "milk",
+  "g": "on the plate"
+ },
+ "cands": {
+  "o": [
+   25
+  ],
+  "g": [
+   0,
+   1,
+   10,
+   15,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39
+  ]
+ },
+ "d0": {
+  "T": 132,
+  "c0": 37,
+  "rel": 55
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 25,
+    "g": 10
+   },
+   "span": [
+    1,
+    6
+   ],
+   "trace": {
+    "o:25": 0.5658361315727234,
+    "g:0": 0.5973210334777832,
+    "g:1": 0.5938812494277954,
+    "g:10": 0.555945634841919,
+    "g:15": 0.5937845706939697,
+    "g:30": 0.5962622165679932,
+    "g:31": 0.5847108364105225,
+    "g:32": 0.5923067331314087,
+    "g:33": 0.5825926661491394,
+    "g:34": 0.5814509391784668,
+    "g:35": 0.589999794960022,
+    "g:36": 0.5946283340454102,
+    "g:37": 0.5937846302986145,
+    "g:38": 0.5956971049308777,
+    "g:39": 0.5918096899986267
+   },
+   "span_loss": {
+    "1-17": 0.555945634841919,
+    "1-6": 0.5533264875411987,
+    "7-12": 0.5546538233757019,
+    "13-17": 0.5713883638381958
+   }
+  },
+  "role": {
+   "src": {
+    "o": 25,
+    "g": 15
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:25": 0.5656296610832214,
+    "g:0": 0.5660526156425476,
+    "g:1": 0.5664670467376709,
+    "g:10": 0.5651743412017822,
+    "g:15": 0.5645721554756165,
+    "g:30": 0.5663609504699707,
+    "g:31": 0.5664190649986267,
+    "g:32": 0.5662288069725037,
+    "g:33": 0.5663179159164429,
+    "g:34": 0.5660961270332336,
+    "g:35": 0.5661846399307251,
+    "g:36": 0.5663504004478455,
+    "g:37": 0.5663171410560608,
+    "g:38": 0.566106915473938,
+    "g:39": 0.5661947131156921
+   },
+   "span_loss": {
+    "1-17": 0.5645721554756165,
+    "1-6": 0.5647071003913879,
+    "7-12": 0.5677932500839233,
+    "13-17": 0.569939374923706
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 25,
+    "g": 10
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "o:25": 0.5737922787666321,
+    "g:0": 0.6019530296325684,
+    "g:1": 0.5922505855560303,
+    "g:10": 0.5493459701538086,
+    "g:15": 0.5785037875175476,
+    "g:30": 0.6036412119865417,
+    "g:31": 0.6038302183151245,
+    "g:32": 0.5930233001708984,
+    "g:33": 0.5666469931602478,
+    "g:34": 0.5709203481674194,
+    "g:35": 0.5936732292175293,
+    "g:36": 0.6039989590644836,
+    "g:37": 0.6044570207595825,
+    "g:38": 0.5937244296073914,
+    "g:39": 0.6026219725608826
+   },
+   "span_loss": {
+    "1-17": 0.5493459701538086,
+    "1-6": 0.5475798845291138,
+    "7-12": 0.5471645593643188,
+    "13-17": 0.5710756778717041
+   },
+   "template": "pick up the {O} and place it {G}",
+   "prompt": "pick up the milk and place it on the plate",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the milk and place it on the plate",
+     "with_word": 0.5475798845291138,
+     "alone": 0.5675973296165466
+    },
+    "put the {O} {G}": {
+     "prompt": "put the milk on the plate",
+     "with_word": 0.5533264875411987,
+     "alone": 0.5692375302314758
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    25,
+    38
+   ],
+   "lam": 24,
+   "pairs": {
+    "25.10": 0.6597252488136292,
+    "25.30": 0.5480658411979675,
+    "25.31": 0.5492210984230042,
+    "25.32": 0.5874992609024048,
+    "25.33": 0.5854158997535706,
+    "25.34": 0.5402564406394958,
+    "25.35": 0.5885354280471802,
+    "25.36": 0.5430895686149597,
+    "25.37": 0.5611168742179871,
+    "25.38": 0.53951495885849,
+    "25.39": 0.5999053716659546
+   },
+   "lams": {
+    "24": 0.53951495885849,
+    "12": 0.5404903292655945,
+    "36": 0.5731086730957031
+   },
+   "cands": {
+    "o": [
+     25
+    ],
+    "g": [
+     10,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.5692375302314758,
+  "null": 0.6157044172286987,
+  "tli_li": 0.5878190398216248,
+  "word": 0.5533264875411987,
+  "role": 0.5645721554756165,
+  "tmpl": 0.5471645593643188,
+  "tmpl_only": 0.5675973296165466,
+  "tli_sel": 0.53951495885849,
+  "rand": 0.7654102444648743,
+  "pos": 0.5904123783111572,
+  "l2sel": 0.53951495885849
+ },
+ "l1": {
+  "zs": 0.5360918641090393,
+  "null": 0.63735431432724,
+  "tli_li": 0.7038678526878357,
+  "word": 0.5371952652931213,
+  "role": 0.5672476291656494,
+  "tmpl": 0.5320755839347839,
+  "tmpl_only": 0.5525757074356079,
+  "tli_sel": 0.5598342418670654,
+  "rand": 0.667260468006134,
+  "pos": 0.6852925419807434,
+  "l2sel": 0.5598342418670654
+ },
+ "l2sel": "tli_sel",
+ "controls": {
+  "o": {
+   "rand": 22,
+   "pos": 14,
+   "rand_text": "pick up the cream cheese and place it in the basket",
+   "pos_text": "put the wine bottle on top of the cabinet"
+  },
+  "g": {
+   "rand": 11,
+   "pos": 13,
+   "rand_text": "put the wine bottle on the rack",
+   "pos_text": "put the cream cheese in the bowl"
+  }
+ },
+ "n_eval": 94,
+ "arms": {
+  "zs": {
+   "prompt": "put the milk on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_li": {
+   "prompt": "put the milk on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 14,
+    "t2": 32,
+    "lam": 24
+   }
+  },
+  "word": {
+   "prompt": "put the milk on the plate",
+   "edits": [
+    {
+     "role": "o",
+     "src": 25,
+     "phrase": "milk",
+     "new_pos": [
+      3
+     ],
+     "src_pos": [
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 10,
+     "phrase": "on the plate",
+     "new_pos": [
+      4,
+      5,
+      6
+     ],
+     "src_pos": [
+      4,
+      5,
+      6
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the milk on the plate",
+   "edits": [
+    {
+     "role": "o",
+     "src": 25,
+     "phrase": "milk",
+     "new_pos": [
+      3
+     ],
+     "src_pos": [
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 15,
+     "phrase": "plate",
+     "new_pos": [
+      6
+     ],
+     "src_pos": [
+      3
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "pick up the milk and place it on the plate",
+   "edits": [
+    {
+     "role": "o",
+     "src": 25,
+     "phrase": "milk",
+     "new_pos": [
+      4
+     ],
+     "src_pos": [
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 10,
+     "phrase": "on the plate",
+     "new_pos": [
+      8,
+      9,
+      10
+     ],
+     "src_pos": [
+      4,
+      5,
+      6
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "pick up the milk and place it on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the milk on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 25,
+    "t2": 38,
+    "lam": 24
+   }
+  },
+  "rand": {
+   "prompt": "put the milk on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 22,
+    "t2": 11,
+    "lam": 24
+   }
+  },
+  "pos": {
+   "prompt": "put the milk on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 14,
+    "t2": 13,
+    "lam": 24
+   }
+  }
+ },
+ "modes": {
+  "start": {
+   "frame": 0,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.1627468617774499,
+     -0.03694132948544051,
+     1.0376166902013262
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 41.5,
+    "grip_closed": 0.16749999999999998
+   },
+   "word": {
+    "endpoint": [
+     -0.14220913830106421,
+     0.004148355060540161,
+     1.0226085111776957
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cookies_1",
+    "named_near": 1.0,
+    "named_point": 0.125,
+    "grip_first": 40.5,
+    "grip_closed": 0.1875
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.1638726932985462,
+     -0.042147772895086574,
+     1.07408008160628
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 0.75,
+    "grip_first": 39.25,
+    "grip_closed": 0.21250000000000002
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.16479669031953553,
+     0.045140042697021515,
+     1.0317460275008021
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 39.75,
+    "grip_closed": 0.2025
+   },
+   "role": {
+    "endpoint": [
+     -0.142371913003164,
+     -0.032214990874797796,
+     1.0345557821376885
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 0.75,
+    "grip_first": 41.75,
+    "grip_closed": 0.16249999999999998
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.15369851092727788,
+     0.009441960435399648,
+     1.1178073829471376
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cookies_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 28.5,
+    "grip_closed": 0.21500000000000002
+   },
+   "rand": {
+    "endpoint": [
+     -0.045555191404654395,
+     -0.018959448235505136,
+     0.9943521069142274
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "glazed_rim_porcelain_ramekin_1",
+    "named_near": 0.75,
+    "named_point": 0.0,
+    "grip_first": 35.375,
+    "grip_closed": 0.037500000000000006
+   },
+   "pos": {
+    "endpoint": [
+     -0.17293360805608257,
+     -0.03436284358938991,
+     1.0922134442741063
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 34.5,
+    "grip_closed": 0.3075
+   }
+  },
+  "approach": {
+   "frame": 16,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.11236987295200677,
+     0.06845483879052949,
+     1.1176356196583042
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 21.25,
+    "grip_closed": 0.5750000000000001
+   },
+   "word": {
+    "endpoint": [
+     -0.11462006232802967,
+     0.07249789401712467,
+     1.1105635430817988
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 20.625,
+    "grip_closed": 0.5875
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.11186664160023709,
+     0.07432354351075603,
+     1.1269560517440653
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 20.375,
+    "grip_closed": 0.5925
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.12860133881446897,
+     0.09310521905675048,
+     1.1142994649627178
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 21.125,
+    "grip_closed": 0.5775
+   },
+   "role": {
+    "endpoint": [
+     -0.11925548534775542,
+     0.06881899148631763,
+     1.1045528794420247
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 20.875,
+    "grip_closed": 0.5825
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.08117888097370574,
+     -0.004827378051438656,
+     1.154999831568872
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cookies_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 21.625,
+    "grip_closed": 0.5475
+   },
+   "rand": {
+    "endpoint": [
+     -0.10893921591942621,
+     0.002974873529719781,
+     0.9238402791863974
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cookies_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 22.25,
+    "grip_closed": 0.15
+   },
+   "pos": {
+    "endpoint": [
+     -0.09148301623303347,
+     -0.03441961502371573,
+     1.1932409750123514
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 19.25,
+    "grip_closed": 0.615
+   }
+  },
+  "carry": {
+   "frame": 62,
+   "carry": true,
+   "zs": {
+    "endpoint": [
+     -0.07344782946703238,
+     0.24725212570170707,
+     1.0555390199753336
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 34.0,
+    "grip_closed": 0.68
+   },
+   "word": {
+    "endpoint": [
+     -0.07134096551951918,
+     0.24626297001851483,
+     1.0573881147378166
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 33.25,
+    "grip_closed": 0.665
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.05819978243760714,
+     0.2382624230707684,
+     1.0809263380819776
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 31.5,
+    "grip_closed": 0.6325000000000001
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.07350874621795221,
+     0.2505830974323481,
+     1.0581354248352972
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 33.375,
+    "grip_closed": 0.67
+   },
+   "role": {
+    "endpoint": [
+     -0.0768805978092473,
+     0.26414963861282126,
+     1.0418290790119482
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 33.75,
+    "grip_closed": 0.675
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.07082981098836232,
+     0.24631527861977337,
+     1.0588446659612272
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 32.75,
+    "grip_closed": 0.655
+   },
+   "rand": {
+    "endpoint": [
+     -0.07451795263765944,
+     0.2476498317610863,
+     1.059061479505249
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 35.0,
+    "grip_closed": 0.7
+   },
+   "pos": {
+    "endpoint": [
+     -0.07162751066572677,
+     0.24118265894813826,
+     1.0494581167491304
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 34.0,
+    "grip_closed": 0.68
+   }
+  }
+ },
+ "seconds": 400.9014265537262,
+ "demo_src": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_spatial_libero_spatial_ood_2_pfield_14.30_seed13_rec/task2_trial0.npz",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_spatial_libero_spatial_ood_2_pfield_14.30_seed13_rec/task2_trial1.npz"
+ ]
+}

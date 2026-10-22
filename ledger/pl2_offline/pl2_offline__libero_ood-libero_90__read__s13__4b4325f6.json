@@ -1,0 +1,4296 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood+libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/pl2_compose.py --offline-read --record",
+ "config": {
+  "K": 4,
+  "demo_dir": "fresh_ood_pl2d",
+  "frames": 36,
+  "lams": [
+   12,
+   24,
+   36
+  ],
+  "ndemo_bind": 3
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4194247",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "pl2_offline",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "4b4325f65de285b9c7af83ee5d2208c98ddee58f",
+  "short": "4b4325f6"
+ },
+ "keys": {},
+ "metrics": {
+  "pi05_l90": {
+   "chosen": {
+    "role": 1,
+    "tli_sel": 11,
+    "tmpl": 4,
+    "word": 0
+   },
+   "compare": {
+    "l2sel_vs_pos": {
+     "losses": 5,
+     "n": 16,
+     "ratio": 0.884673344552545,
+     "sign_p": 0.210113525390625,
+     "wins": 11
+    },
+    "l2sel_vs_rand": {
+     "losses": 4,
+     "n": 16,
+     "ratio": 0.825995333295268,
+     "sign_p": 0.076812744140625,
+     "wins": 12
+    },
+    "tmpl_vs_tmpl_only": {
+     "losses": 2,
+     "n": 16,
+     "ratio": 0.9516831294423438,
+     "sign_p": 0.004180908203125,
+     "wins": 14
+    },
+    "word_vs_role": {
+     "losses": 4,
+     "n": 16,
+     "ratio": 0.9979780940691806,
+     "sign_p": 0.076812744140625,
+     "wins": 12
+    },
+    "word_vs_tmpl": {
+     "losses": 9,
+     "n": 16,
+     "ratio": 1.0143602670754768,
+     "sign_p": 0.14599609375,
+     "wins": 3
+    }
+   },
+   "modes": {},
+   "per_task": {
+    "l90:10": {
+     "chosen": "tli_sel",
+     "l2sel": 0.32994,
+     "null": 0.50996,
+     "pos": 0.31387,
+     "rand": 0.30029,
+     "role": 0.26305,
+     "tli_sel": 0.32994,
+     "tmpl": 0.26866,
+     "tmpl_only": 0.27062,
+     "word": 0.25693,
+     "zs": 0.27624
+    },
+    "l90:14": {
+     "chosen": "tmpl",
+     "l2sel": 0.26178,
+     "null": 0.38284,
+     "pos": 0.35229,
+     "rand": 0.30149,
+     "role": 0.31189,
+     "tli_sel": 0.34314,
+     "tmpl": 0.26178,
+     "tmpl_only": 0.32744,
+     "word": 0.30032,
+     "zs": 0.34967
+    },
+    "l90:2": {
+     "chosen": "tli_sel",
+     "l2sel": 0.25875,
+     "null": 0.26312,
+     "pos": 0.36455,
+     "rand": 0.49105,
+     "role": 0.30234,
+     "tli_sel": 0.25875,
+     "tmpl": 0.27852,
+     "tmpl_only": 0.2822,
+     "word": 0.28352,
+     "zs": 0.28904
+    },
+    "l90:26": {
+     "chosen": "tli_sel",
+     "l2sel": 0.31642,
+     "null": 0.40111,
+     "pos": 0.40737,
+     "rand": 0.64142,
+     "role": 0.42076,
+     "tli_sel": 0.31642,
+     "tmpl": 0.40098,
+     "tmpl_only": 0.42069,
+     "word": 0.40098,
+     "zs": 0.42069
+    },
+    "l90:32": {
+     "chosen": "role",
+     "l2sel": 0.61874,
+     "null": 0.57245,
+     "pos": 0.59835,
+     "rand": 0.60672,
+     "role": 0.61874,
+     "tli_sel": 0.70446,
+     "tmpl": 0.61813,
+     "tmpl_only": 0.62107,
+     "word": 0.61813,
+     "zs": 0.62107
+    },
+    "l90:37": {
+     "chosen": "tli_sel",
+     "l2sel": 0.45995,
+     "null": 0.70674,
+     "pos": 0.47841,
+     "rand": 0.50497,
+     "role": 0.49853,
+     "tli_sel": 0.45995,
+     "tmpl": 0.6213,
+     "tmpl_only": 0.76684,
+     "word": 0.6213,
+     "zs": 0.76684
+    },
+    "l90:41": {
+     "chosen": "tli_sel",
+     "l2sel": 0.40419,
+     "null": 0.4992,
+     "pos": 0.52008,
+     "rand": 0.56546,
+     "role": 0.49836,
+     "tli_sel": 0.40419,
+     "tmpl": 0.48628,
+     "tmpl_only": 0.50231,
+     "word": 0.47206,
+     "zs": 0.51206
+    },
+    "l90:46": {
+     "chosen": "tli_sel",
+     "l2sel": 0.18578,
+     "null": 0.21604,
+     "pos": 0.27395,
+     "rand": 0.21568,
+     "role": 0.22589,
+     "tli_sel": 0.18578,
+     "tmpl": 0.21617,
+     "tmpl_only": 0.20897,
+     "word": 0.21868,
+     "zs": 0.22001
+    },
+    "l90:55": {
+     "chosen": "tli_sel",
+     "l2sel": 0.18744,
+     "null": 0.19198,
+     "pos": 0.20885,
+     "rand": 0.25186,
+     "role": 0.20389,
+     "tli_sel": 0.18744,
+     "tmpl": 0.19751,
+     "tmpl_only": 0.19691,
+     "word": 0.20365,
+     "zs": 0.20384
+    },
+    "l90:57": {
+     "chosen": "tmpl",
+     "l2sel": 0.18841,
+     "null": 0.18552,
+     "pos": 0.1859,
+     "rand": 0.18623,
+     "role": 0.19154,
+     "tli_sel": 0.17575,
+     "tmpl": 0.18841,
+     "tmpl_only": 0.19681,
+     "word": 0.18893,
+     "zs": 0.1963
+    },
+    "l90:65": {
+     "chosen": "tli_sel",
+     "l2sel": 0.33613,
+     "null": 0.3361,
+     "pos": 0.32581,
+     "rand": 0.3064,
+     "role": 0.34337,
+     "tli_sel": 0.33613,
+     "tmpl": 0.34019,
+     "tmpl_only": 0.35353,
+     "word": 0.34615,
+     "zs": 0.34947
+    },
+    "l90:75": {
+     "chosen": "tmpl",
+     "l2sel": 0.2085,
+     "null": 0.21381,
+     "pos": 0.31058,
+     "rand": 0.26615,
+     "role": 0.21306,
+     "tli_sel": 0.23111,
+     "tmpl": 0.2085,
+     "tmpl_only": 0.21247,
+     "word": 0.21319,
+     "zs": 0.21311
+    },
+    "l90:76": {
+     "chosen": "tli_sel",
+     "l2sel": 0.38953,
+     "null": 0.47307,
+     "pos": 0.26489,
+     "rand": 0.56801,
+     "role": 0.5022,
+     "tli_sel": 0.38953,
+     "tmpl": 0.48664,
+     "tmpl_only": 0.50624,
+     "word": 0.48664,
+     "zs": 0.50624
+    },
+    "l90:86": {
+     "chosen": "tli_sel",
+     "l2sel": 0.46256,
+     "null": 0.47493,
+     "pos": 0.60235,
+     "rand": 0.56773,
+     "role": 0.53407,
+     "tli_sel": 0.46256,
+     "tmpl": 0.52748,
+     "tmpl_only": 0.53534,
+     "word": 0.53366,
+     "zs": 0.53602
+    },
+    "l90:87": {
+     "chosen": "tmpl",
+     "l2sel": 0.58234,
+     "null": 0.54264,
+     "pos": 0.58515,
+     "rand": 0.59625,
+     "role": 0.58099,
+     "tli_sel": 0.63398,
+     "tmpl": 0.58234,
+     "tmpl_only": 0.5861,
+     "word": 0.58045,
+     "zs": 0.58287
+    },
+    "l90:9": {
+     "chosen": "tli_sel",
+     "l2sel": 0.30224,
+     "null": 0.28652,
+     "pos": 0.34299,
+     "rand": 0.32243,
+     "role": 0.27652,
+     "tli_sel": 0.30224,
+     "tmpl": 0.2748,
+     "tmpl_only": 0.31229,
+     "word": 0.29019,
+     "zs": 0.29559
+    }
+   },
+   "repairs": {
+    "l90:10": {
+     "l1": 0.32994261384010315,
+     "l1_zs": 0.2762426435947418,
+     "lam": 24,
+     "op": "tli_sel",
+     "prompt": "put the black bowl on top of the cabinet",
+     "t1": "pick up the black bowl next to the cookie box and place it on the plate",
+     "t2": "pick up the black bowl on the wooden cabinet and place it on the plate"
+    },
+    "l90:14": {
+     "l1": 0.2617800831794739,
+     "l1_zs": 0.34966814517974854,
+     "op": "tmpl",
+     "prompt": "pick up the black bowl and place it on the plate",
+     "sched": "og",
+     "sources": {
+      "g": "pick up the black bowl next to the ramekin and place it on the plate",
+      "o": "put the cream cheese in the bowl"
+     },
+     "span": "1-17"
+    },
+    "l90:2": {
+     "l1": 0.2587510347366333,
+     "l1_zs": 0.2890360355377197,
+     "lam": 12,
+     "op": "tli_sel",
+     "prompt": "put the black bowl in the top drawer of the cabinet",
+     "t1": "pick up the black bowl on the ramekin and place it on the plate",
+     "t2": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+    },
+    "l90:26": {
+     "l1": 0.31641703844070435,
+     "l1_zs": 0.4206917881965637,
+     "lam": 12,
+     "op": "tli_sel",
+     "prompt": "put the wine bottle in the bottom drawer of the cabinet",
+     "t1": "put the wine bottle on top of the cabinet",
+     "t2": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+    },
+    "l90:32": {
+     "l1": 0.6187353730201721,
+     "l1_zs": 0.6210748553276062,
+     "op": "role",
+     "prompt": "put the ketchup in the top drawer of the cabinet",
+     "sched": "ph",
+     "sources": {
+      "g": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "o": "pick up the ketchup and place it in the basket"
+     },
+     "span": "7-12"
+    },
+    "l90:37": {
+     "l1": 0.45994502305984497,
+     "l1_zs": 0.7668430209159851,
+     "lam": 12,
+     "op": "tli_sel",
+     "prompt": "put the white bowl to the right of the plate",
+     "t1": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+     "t2": "pick up the black bowl from table center and place it on the plate"
+    },
+    "l90:41": {
+     "l1": 0.40419062972068787,
+     "l1_zs": 0.5120644569396973,
+     "lam": 36,
+     "op": "tli_sel",
+     "prompt": "put the frying pan on top of the cabinet",
+     "t1": "put the wine bottle on the rack",
+     "t2": "put the bowl on top of the cabinet"
+    },
+    "l90:46": {
+     "l1": 0.18577894568443298,
+     "l1_zs": 0.22001495957374573,
+     "lam": 12,
+     "op": "tli_sel",
+     "prompt": "pick up the alphabet soup and put it in the basket",
+     "t1": "pick up the alphabet soup and place it in the basket",
+     "t2": "pick up the bbq sauce and place it in the basket"
+    },
+    "l90:55": {
+     "l1": 0.18743747472763062,
+     "l1_zs": 0.20383816957473755,
+     "lam": 24,
+     "op": "tli_sel",
+     "prompt": "pick up the alphabet soup and put it in the tray",
+     "t1": "pick up the alphabet soup and place it in the basket",
+     "t2": "put the bowl on top of the cabinet"
+    },
+    "l90:57": {
+     "l1": 0.18841396272182465,
+     "l1_zs": 0.1962977945804596,
+     "op": "tmpl",
+     "prompt": "put the cream cheese in the tray",
+     "sched": "og",
+     "sources": {
+      "o": "put both the alphabet soup and the cream cheese box in the basket"
+     },
+     "span": "1-6"
+    },
+    "l90:65": {
+     "l1": 0.3361321687698364,
+     "l1_zs": 0.3494660258293152,
+     "lam": 36,
+     "op": "tli_sel",
+     "prompt": "put the red mug on the left plate",
+     "t1": "put the bowl on the stove",
+     "t2": "put the bowl on the plate"
+    },
+    "l90:75": {
+     "l1": 0.2085006833076477,
+     "l1_zs": 0.21310533583164215,
+     "op": "tmpl",
+     "prompt": "put the book in the right compartment of the caddy",
+     "sched": "og",
+     "sources": {
+      "g": "pick up the book and place it in the back compartment of the caddy",
+      "o": "pick up the book and place it in the back compartment of the caddy"
+     },
+     "span": "1-17"
+    },
+    "l90:76": {
+     "l1": 0.3895335793495178,
+     "l1_zs": 0.5062390565872192,
+     "lam": 12,
+     "op": "tli_sel",
+     "prompt": "pick up the yellow and white mug and place it to the right of the caddy",
+     "t1": "put the bowl on the plate",
+     "t2": "pick up the book and place it in the back compartment of the caddy"
+    },
+    "l90:86": {
+     "l1": 0.46256023645401,
+     "l1_zs": 0.5360193848609924,
+     "lam": 24,
+     "op": "tli_sel",
+     "prompt": "pick up the book in the middle and place it on the cabinet shelf",
+     "t1": "pick up the book and place it in the back compartment of the caddy",
+     "t2": "put the wine bottle on the rack"
+    },
+    "l90:87": {
+     "l1": 0.5823354125022888,
+     "l1_zs": 0.5828664898872375,
+     "op": "tmpl",
+     "prompt": "put the book on top of the shelf",
+     "sched": "og",
+     "sources": {
+      "o": "pick up the book and place it in the back compartment of the caddy"
+     },
+     "span": "7-12"
+    },
+    "l90:9": {
+     "l1": 0.3022415041923523,
+     "l1_zs": 0.2955875098705292,
+     "lam": 24,
+     "op": "tli_sel",
+     "prompt": "put the black bowl on the plate",
+     "t1": "pick up the black bowl next to the ramekin and place it on the plate",
+     "t2": "pick up the black bowl on the ramekin and place it on the plate"
+    }
+   },
+   "spans": {
+    "role": {
+     "1-17": 9,
+     "1-6": 1,
+     "13-17": 1,
+     "7-12": 5
+    },
+    "tmpl": {
+     "1-17": 7,
+     "1-6": 2,
+     "13-17": 3,
+     "7-12": 4
+    },
+    "word": {
+     "1-17": 5,
+     "1-6": 1,
+     "13-17": 3,
+     "7-12": 7
+    }
+   },
+   "table": {
+    "l2sel": {
+     "losses_vs_zs": 2,
+     "mean": 0.34329348523169756,
+     "n": 16,
+     "ratio_to_zs": 0.8824010853813599,
+     "sign_p": 0.004180908203125,
+     "wins_vs_zs": 14
+    },
+    "null": {
+     "losses_vs_zs": 3,
+     "mean": 0.39100063778460026,
+     "n": 16,
+     "ratio_to_zs": 0.9944937864388975,
+     "sign_p": 0.021270751953125,
+     "wins_vs_zs": 13
+    },
+    "pos": {
+     "losses_vs_zs": 10,
+     "mean": 0.38346227817237377,
+     "n": 16,
+     "ratio_to_zs": 0.9974315274839276,
+     "sign_p": 0.454498291015625,
+     "wins_vs_zs": 6
+    },
+    "rand": {
+     "losses_vs_zs": 10,
+     "mean": 0.4182566348463297,
+     "n": 16,
+     "ratio_to_zs": 1.0682882212676237,
+     "sign_p": 0.454498291015625,
+     "wins_vs_zs": 6
+    },
+    "role": {
+     "losses_vs_zs": 4,
+     "mean": 0.3740742029622197,
+     "n": 16,
+     "ratio_to_zs": 0.9585721855560767,
+     "sign_p": 0.076812744140625,
+     "wins_vs_zs": 12
+    },
+    "tli_sel": {
+     "losses_vs_zs": 5,
+     "mean": 0.3575851647183299,
+     "n": 16,
+     "ratio_to_zs": 0.9114768038061125,
+     "sign_p": 0.210113525390625,
+     "wins_vs_zs": 11
+    },
+    "tmpl": {
+     "losses_vs_zs": 0,
+     "mean": 0.37235669419169426,
+     "n": 16,
+     "ratio_to_zs": 0.943091004074,
+     "sign_p": 3.0517578125e-05,
+     "wins_vs_zs": 16
+    },
+    "tmpl_only": {
+     "losses_vs_zs": 4,
+     "mean": 0.39373961463570595,
+     "n": 16,
+     "ratio_to_zs": 0.9909716531663448,
+     "sign_p": 0.3876953125,
+     "wins_vs_zs": 8
+    },
+    "word": {
+     "losses_vs_zs": 1,
+     "mean": 0.3759230487048626,
+     "n": 16,
+     "ratio_to_zs": 0.9566340427689823,
+     "sign_p": 0.000518798828125,
+     "wins_vs_zs": 15
+    },
+    "zs": {
+     "losses_vs_zs": 0,
+     "mean": 0.3961909795179963,
+     "n": 16,
+     "ratio_to_zs": 1.0,
+     "sign_p": 1.0,
+     "wins_vs_zs": 0
+    }
+   },
+   "tasks": 16
+  },
+  "pi05_ood": {
+   "chosen": {
+    "role": 2,
+    "tli_sel": 13,
+    "tmpl": 3,
+    "word": 2
+   },
+   "compare": {
+    "l2sel_vs_pos": {
+     "losses": 0,
+     "n": 20,
+     "ratio": 0.6438498027971397,
+     "sign_p": 1.9073486328125e-06,
+     "wins": 20
+    },
+    "l2sel_vs_rand": {
+     "losses": 1,
+     "n": 20,
+     "ratio": 0.7185051418386489,
+     "sign_p": 4.00543212890625e-05,
+     "wins": 19
+    },
+    "l2sel_vs_tli_li": {
+     "losses": 2,
+     "n": 20,
+     "ratio": 0.9027760355982619,
+     "sign_p": 0.001312255859375,
+     "wins": 16
+    },
+    "tmpl_vs_tmpl_only": {
+     "losses": 5,
+     "n": 20,
+     "ratio": 0.9033344586306968,
+     "sign_p": 0.04138946533203125,
+     "wins": 15
+    },
+    "word_vs_role": {
+     "losses": 8,
+     "n": 20,
+     "ratio": 0.9982483205885019,
+     "sign_p": 0.5034446716308594,
+     "wins": 12
+    },
+    "word_vs_tmpl": {
+     "losses": 3,
+     "n": 20,
+     "ratio": 1.0017973478780504,
+     "sign_p": 1.0,
+     "wins": 2
+    }
+   },
+   "modes": {
+    "approach": {
+     "l2sel": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.9,
+      "named_point": 0.74375
+     },
+     "pos": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.8125,
+      "named_point": 0.45625
+     },
+     "rand": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.8625,
+      "named_point": 0.59375
+     },
+     "role": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.9,
+      "named_point": 0.79375
+     },
+     "tli_li": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.9,
+      "named_point": 0.7375
+     },
+     "tli_sel": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.9,
+      "named_point": 0.7
+     },
+     "tmpl": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.9125,
+      "named_point": 0.7875
+     },
+     "word": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.9125,
+      "named_point": 0.79375
+     },
+     "zs": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.9,
+      "named_point": 0.79375
+     }
+    },
+    "carry": {
+     "l2sel": {
+      "grip_closed": 0.9956250000000001,
+      "grip_first": -0.5625,
+      "n": 20,
+      "named_near": 1.0,
+      "named_point": 0.4125
+     },
+     "pos": {
+      "grip_closed": 0.9949999999999999,
+      "grip_first": -0.64375,
+      "n": 20,
+      "named_near": 1.0,
+      "named_point": 0.2125
+     },
+     "rand": {
+      "grip_closed": 0.9974999999999999,
+      "grip_first": -0.75,
+      "n": 20,
+      "named_near": 1.0,
+      "named_point": 0.2875
+     },
+     "role": {
+      "grip_closed": 0.9962500000000001,
+      "grip_first": -0.625,
+      "n": 20,
+      "named_near": 1.0,
+      "named_point": 0.28125
+     },
+     "tli_li": {
+      "grip_closed": 0.991875,
+      "grip_first": -0.325,
+      "n": 20,
+      "named_near": 1.0,
+      "named_point": 0.3
+     },
+     "tli_sel": {
+      "grip_closed": 0.9956250000000001,
+      "grip_first": -0.5625,
+      "n": 20,
+      "named_near": 1.0,
+      "named_point": 0.3625
+     },
+     "tmpl": {
+      "grip_closed": 0.9925,
+      "grip_first": -0.3875,
+      "n": 20,
+      "named_near": 1.0,
+      "named_point": 0.3
+     },
+     "word": {
+      "grip_closed": 0.99375,
+      "grip_first": -0.5125,
+      "n": 20,
+      "named_near": 1.0,
+      "named_point": 0.3
+     },
+     "zs": {
+      "grip_closed": 0.993125,
+      "grip_first": -0.38125,
+      "n": 20,
+      "named_near": 1.0,
+      "named_point": 0.3
+     }
+    },
+    "start": {
+     "l2sel": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.65,
+      "named_point": 0.38125
+     },
+     "pos": {
+      "grip_closed": 0.07625,
+      "grip_first": -0.85,
+      "n": 20,
+      "named_near": 0.61875,
+      "named_point": 0.34375
+     },
+     "rand": {
+      "grip_closed": 0.0043749999999999995,
+      "grip_first": -0.975,
+      "n": 20,
+      "named_near": 0.55,
+      "named_point": 0.25
+     },
+     "role": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.7,
+      "named_point": 0.43125
+     },
+     "tli_li": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.63125,
+      "named_point": 0.5125
+     },
+     "tli_sel": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.61875,
+      "named_point": 0.41875
+     },
+     "tmpl": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.675,
+      "named_point": 0.4375
+     },
+     "word": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.675,
+      "named_point": 0.45
+     },
+     "zs": {
+      "grip_closed": 0.0,
+      "grip_first": -1.0,
+      "n": 20,
+      "named_near": 0.69375,
+      "named_point": 0.43125
+     }
+    }
+   },
+   "per_task": {
+    "goal:0": {
+     "chosen": "tmpl",
+     "l2sel": 0.27633,
+     "null": 0.36451,
+     "pos": 0.35673,
+     "rand": 0.42503,
+     "role": 0.27838,
+     "tli_li": 0.2947,
+     "tli_sel": 0.28396,
+     "tmpl": 0.27633,
+     "tmpl_only": 0.3239,
+     "word": 0.2701,
+     "zs": 0.32534
+    },
+    "goal:1": {
+     "chosen": "role",
+     "l2sel": 0.30499,
+     "null": 0.30261,
+     "pos": 0.31034,
+     "rand": 0.31746,
+     "role": 0.30499,
+     "tli_li": 0.27178,
+     "tli_sel": 0.32196,
+     "tmpl": 0.3098,
+     "tmpl_only": 0.30767,
+     "word": 0.3098,
+     "zs": 0.30767
+    },
+    "goal:2": {
+     "chosen": "tli_sel",
+     "l2sel": 0.22534,
+     "null": 0.22173,
+     "pos": 0.28244,
+     "rand": 0.21872,
+     "role": 0.19966,
+     "tli_li": 0.24303,
+     "tli_sel": 0.22534,
+     "tmpl": 0.20689,
+     "tmpl_only": 0.20616,
+     "word": 0.20689,
+     "zs": 0.20616
+    },
+    "goal:3": {
+     "chosen": "word",
+     "l2sel": 0.19952,
+     "null": 0.30239,
+     "pos": 0.33469,
+     "rand": 0.35492,
+     "role": 0.18251,
+     "tli_li": 0.25202,
+     "tli_sel": 0.18474,
+     "tmpl": 0.19952,
+     "tmpl_only": 0.19235,
+     "word": 0.19952,
+     "zs": 0.19235
+    },
+    "goal:4": {
+     "chosen": "tli_sel",
+     "l2sel": 0.20076,
+     "null": 0.21624,
+     "pos": 0.287,
+     "rand": 0.22744,
+     "role": 0.20654,
+     "tli_li": 0.20076,
+     "tli_sel": 0.20076,
+     "tmpl": 0.20082,
+     "tmpl_only": 0.20291,
+     "word": 0.20082,
+     "zs": 0.20291
+    },
+    "goal:5": {
+     "chosen": "tli_sel",
+     "l2sel": 0.19075,
+     "null": 0.24996,
+     "pos": 0.36692,
+     "rand": 0.23803,
+     "role": 0.18312,
+     "tli_li": 0.19442,
+     "tli_sel": 0.19075,
+     "tmpl": 0.17532,
+     "tmpl_only": 0.18457,
+     "word": 0.17828,
+     "zs": 0.18775
+    },
+    "goal:6": {
+     "chosen": "tli_sel",
+     "l2sel": 0.30996,
+     "null": 0.35658,
+     "pos": 0.63358,
+     "rand": 0.34624,
+     "role": 0.35244,
+     "tli_li": 0.34993,
+     "tli_sel": 0.30996,
+     "tmpl": 0.38556,
+     "tmpl_only": 0.38525,
+     "word": 0.38556,
+     "zs": 0.38525
+    },
+    "goal:7": {
+     "chosen": "tli_sel",
+     "l2sel": 0.16463,
+     "null": 0.3169,
+     "pos": 0.39807,
+     "rand": 0.26153,
+     "role": 0.27231,
+     "tli_li": 0.27101,
+     "tli_sel": 0.16463,
+     "tmpl": 0.25143,
+     "tmpl_only": 0.29876,
+     "word": 0.25143,
+     "zs": 0.29876
+    },
+    "goal:8": {
+     "chosen": "tli_sel",
+     "l2sel": 0.23987,
+     "null": 0.39142,
+     "pos": 0.32669,
+     "rand": 0.40673,
+     "role": 0.24666,
+     "tli_li": 0.36071,
+     "tli_sel": 0.23987,
+     "tmpl": 0.31681,
+     "tmpl_only": 0.36957,
+     "word": 0.31681,
+     "zs": 0.36957
+    },
+    "goal:9": {
+     "chosen": "role",
+     "l2sel": 0.16298,
+     "null": 0.32476,
+     "pos": 0.37171,
+     "rand": 0.5288,
+     "role": 0.16298,
+     "tli_li": 0.22165,
+     "tli_sel": 0.16966,
+     "tmpl": 0.17497,
+     "tmpl_only": 0.17733,
+     "word": 0.17406,
+     "zs": 0.17478
+    },
+    "spatial:0": {
+     "chosen": "tmpl",
+     "l2sel": 0.26911,
+     "null": 0.26651,
+     "pos": 0.32016,
+     "rand": 0.31035,
+     "role": 0.28536,
+     "tli_li": 0.27956,
+     "tli_sel": 0.28018,
+     "tmpl": 0.26911,
+     "tmpl_only": 0.28985,
+     "word": 0.27813,
+     "zs": 0.28392
+    },
+    "spatial:1": {
+     "chosen": "tmpl",
+     "l2sel": 0.35721,
+     "null": 0.34334,
+     "pos": 0.36518,
+     "rand": 0.39739,
+     "role": 0.36479,
+     "tli_li": 0.41663,
+     "tli_sel": 0.34983,
+     "tmpl": 0.35721,
+     "tmpl_only": 0.35786,
+     "word": 0.36233,
+     "zs": 0.36351
+    },
+    "spatial:2": {
+     "chosen": "word",
+     "l2sel": 0.27607,
+     "null": 0.3067,
+     "pos": 0.36962,
+     "rand": 0.3644,
+     "role": 0.28955,
+     "tli_li": 0.19215,
+     "tli_sel": 0.25291,
+     "tmpl": 0.27607,
+     "tmpl_only": 0.27186,
+     "word": 0.27607,
+     "zs": 0.27186
+    },
+    "spatial:3": {
+     "chosen": "tli_sel",
+     "l2sel": 0.26012,
+     "null": 0.28402,
+     "pos": 0.29767,
+     "rand": 0.30445,
+     "role": 0.27714,
+     "tli_li": 0.28937,
+     "tli_sel": 0.26012,
+     "tmpl": 0.27478,
+     "tmpl_only": 0.30162,
+     "word": 0.27478,
+     "zs": 0.30162
+    },
+    "spatial:4": {
+     "chosen": "tli_sel",
+     "l2sel": 0.26015,
+     "null": 0.56858,
+     "pos": 0.61382,
+     "rand": 0.35403,
+     "role": 0.29483,
+     "tli_li": 0.27538,
+     "tli_sel": 0.26015,
+     "tmpl": 0.30918,
+     "tmpl_only": 0.38994,
+     "word": 0.30918,
+     "zs": 0.38994
+    },
+    "spatial:5": {
+     "chosen": "tli_sel",
+     "l2sel": 0.20073,
+     "null": 0.46306,
+     "pos": 0.34119,
+     "rand": 0.30329,
+     "role": 0.26025,
+     "tli_li": 0.20076,
+     "tli_sel": 0.20073,
+     "tmpl": 0.2489,
+     "tmpl_only": 0.30724,
+     "word": 0.2489,
+     "zs": 0.30724
+    },
+    "spatial:6": {
+     "chosen": "tli_sel",
+     "l2sel": 0.33916,
+     "null": 0.59395,
+     "pos": 0.53741,
+     "rand": 0.40853,
+     "role": 0.41611,
+     "tli_li": 0.36774,
+     "tli_sel": 0.33916,
+     "tmpl": 0.34913,
+     "tmpl_only": 0.53693,
+     "word": 0.34913,
+     "zs": 0.53693
+    },
+    "spatial:7": {
+     "chosen": "tli_sel",
+     "l2sel": 0.27601,
+     "null": 0.45406,
+     "pos": 0.44625,
+     "rand": 0.34473,
+     "role": 0.31931,
+     "tli_li": 0.36524,
+     "tli_sel": 0.27601,
+     "tmpl": 0.30663,
+     "tmpl_only": 0.40517,
+     "word": 0.30663,
+     "zs": 0.40517
+    },
+    "spatial:8": {
+     "chosen": "tli_sel",
+     "l2sel": 0.24609,
+     "null": 0.58516,
+     "pos": 0.35327,
+     "rand": 0.51236,
+     "role": 0.31073,
+     "tli_li": 0.26631,
+     "tli_sel": 0.24609,
+     "tmpl": 0.26111,
+     "tmpl_only": 0.29903,
+     "word": 0.26111,
+     "zs": 0.29903
+    },
+    "spatial:9": {
+     "chosen": "tli_sel",
+     "l2sel": 0.12874,
+     "null": 0.24994,
+     "pos": 0.26808,
+     "rand": 0.19662,
+     "role": 0.13848,
+     "tli_li": 0.12874,
+     "tli_sel": 0.12874,
+     "tmpl": 0.14695,
+     "tmpl_only": 0.15908,
+     "word": 0.14695,
+     "zs": 0.15908
+    }
+   },
+   "repairs": {
+    "goal:0": {
+     "l1": 0.27633050084114075,
+     "l1_zs": 0.3253386914730072,
+     "mode": {
+      "approach": {
+       "tmpl": {
+        "grip_first": -1.0,
+        "nearest": "cream_cheese_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "cream_cheese_1",
+        "pointed": "plate_1"
+       }
+      },
+      "carry": {
+       "tmpl": {
+        "grip_first": -1.0,
+        "nearest": "cream_cheese_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "cream_cheese_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      },
+      "start": {
+       "tmpl": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "cream_cheese_1"
+       }
+      }
+     },
+     "op": "tmpl",
+     "prompt": "pick up the cream cheese and place it in the basket",
+     "sched": "og",
+     "sources": {
+      "g": "pick up the salad dressing and place it in the basket",
+      "o": "put both the alphabet soup and the cream cheese box in the basket"
+     },
+     "span": "1-17"
+    },
+    "goal:1": {
+     "l1": 0.30498871207237244,
+     "l1_zs": 0.3076673448085785,
+     "mode": {
+      "approach": {
+       "role": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "orange_juice_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "orange_juice_1"
+       }
+      },
+      "carry": {
+       "role": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "orange_juice_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "orange_juice_1"
+       }
+      },
+      "start": {
+       "role": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      }
+     },
+     "op": "role",
+     "prompt": "put the orange juice on the stove",
+     "sched": "ph",
+     "sources": {
+      "g": "turn on the stove",
+      "o": "pick up the orange juice and place it in the basket"
+     },
+     "span": "13-17"
+    },
+    "goal:2": {
+     "l1": 0.22533965110778809,
+     "l1_zs": 0.20616428554058075,
+     "lam": 36,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "bbq_sauce_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "bbq_sauce_1",
+        "pointed": "bbq_sauce_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "bbq_sauce_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "bbq_sauce_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "bbq_sauce_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "bbq_sauce_1",
+        "pointed": "bbq_sauce_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the bbq source on the plate",
+     "t1": "put the bowl on top of the cabinet",
+     "t2": "put the bowl on the plate"
+    },
+    "goal:3": {
+     "l1": 0.19952334463596344,
+     "l1_zs": 0.1923503279685974,
+     "mode": {
+      "approach": {
+       "word": {
+        "grip_first": -1.0,
+        "nearest": "tomato_sauce_1",
+        "pointed": "tomato_sauce_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "tomato_sauce_1",
+        "pointed": "tomato_sauce_1"
+       }
+      },
+      "carry": {
+       "word": {
+        "grip_first": -1.0,
+        "nearest": "tomato_sauce_1",
+        "pointed": "tomato_sauce_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "tomato_sauce_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "word": {
+        "grip_first": -1.0,
+        "nearest": "tomato_sauce_1",
+        "pointed": "tomato_sauce_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "tomato_sauce_1",
+        "pointed": "tomato_sauce_1"
+       }
+      }
+     },
+     "op": "word",
+     "prompt": "put the tomato sauce on top of the cabinet",
+     "sched": "og",
+     "sources": {
+      "g": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "o": "pick up the tomato sauce and place it in the basket"
+     },
+     "span": "1-17"
+    },
+    "goal:4": {
+     "l1": 0.20075613260269165,
+     "l1_zs": 0.20291049778461456,
+     "lam": 24,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "wine_bottle_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "wine_bottle_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "wine_bottle_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "wine_bottle_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "cream_cheese_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the wine bottle on the stove",
+     "t1": "put the wine bottle on top of the cabinet",
+     "t2": "put the bowl on the stove"
+    },
+    "goal:5": {
+     "l1": 0.1907491832971573,
+     "l1_zs": 0.18775172531604767,
+     "lam": 24,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "wine_bottle_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "wine_bottle_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "wine_bottle_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "wine_bottle_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "plate_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the wine bottle on the plate",
+     "t1": "put the wine bottle on top of the cabinet",
+     "t2": "pick up the black bowl on the ramekin and place it on the plate"
+    },
+    "goal:6": {
+     "l1": 0.3099639415740967,
+     "l1_zs": 0.3852466940879822,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "wine_bottle_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "wine_bottle_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "plate_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the wine bottle in the bowl",
+     "t1": "put the wine bottle on top of the cabinet",
+     "t2": "pick up the black bowl on the stove and place it on the plate"
+    },
+    "goal:7": {
+     "l1": 0.16463333368301392,
+     "l1_zs": 0.29875943064689636,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "cream_cheese_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "cream_cheese_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cream_cheese_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the cream cheese on the plate",
+     "t1": "put the cream cheese in the bowl",
+     "t2": "put the bowl on the plate"
+    },
+    "goal:8": {
+     "l1": 0.23987014591693878,
+     "l1_zs": 0.36956915259361267,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": 0.25,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": 5.125,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cream_cheese_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the cream cheese on the stove",
+     "t1": "put the cream cheese in the bowl",
+     "t2": "put the bowl on the stove"
+    },
+    "goal:9": {
+     "l1": 0.1629829704761505,
+     "l1_zs": 0.17477969825267792,
+     "mode": {
+      "approach": {
+       "role": {
+        "grip_first": -1.0,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       }
+      },
+      "carry": {
+       "role": {
+        "grip_first": -1.0,
+        "nearest": "cream_cheese_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "cream_cheese_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "role": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cream_cheese_1"
+       }
+      }
+     },
+     "op": "role",
+     "prompt": "put the cream cheese on top of the cabinet",
+     "sched": "ph",
+     "sources": {
+      "g": "put the bowl on top of the cabinet",
+      "o": "pick up the cream cheese and place it in the basket"
+     },
+     "span": "1-17"
+    },
+    "spatial:0": {
+     "l1": 0.2691141664981842,
+     "l1_zs": 0.28392213582992554,
+     "mode": {
+      "approach": {
+       "tmpl": {
+        "grip_first": -1.0,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      },
+      "carry": {
+       "tmpl": {
+        "grip_first": -1.0,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "chocolate_pudding_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "chocolate_pudding_1"
+       }
+      },
+      "start": {
+       "tmpl": {
+        "grip_first": -1.0,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "cookies_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "plate_1"
+       }
+      }
+     },
+     "op": "tmpl",
+     "prompt": "pick up the butter and place it on the plate",
+     "sched": "og",
+     "sources": {
+      "g": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+      "o": "put both the cream cheese box and the butter in the basket"
+     },
+     "span": "1-17"
+    },
+    "spatial:1": {
+     "l1": 0.3572145104408264,
+     "l1_zs": 0.36351141333580017,
+     "mode": {
+      "approach": {
+       "tmpl": {
+        "grip_first": -1.0,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "chocolate_pudding_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "chocolate_pudding_1"
+       }
+      },
+      "carry": {
+       "tmpl": {
+        "grip_first": 6.5,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 5.25,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "tmpl": {
+        "grip_first": -1.0,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "chocolate_pudding_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "chocolate_pudding_1"
+       }
+      }
+     },
+     "op": "tmpl",
+     "prompt": "pick up the chocolate pudding and place it on the plate",
+     "sched": "og",
+     "sources": {
+      "g": "pick up the black bowl next to the ramekin and place it on the plate",
+      "o": "pick up the chocolate pudding and place it in the basket"
+     },
+     "span": "1-17"
+    },
+    "spatial:2": {
+     "l1": 0.2760685384273529,
+     "l1_zs": 0.27186495065689087,
+     "mode": {
+      "approach": {
+       "word": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "orange_juice_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "orange_juice_1"
+       }
+      },
+      "carry": {
+       "word": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "word": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "cookies_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "cookies_1"
+       }
+      }
+     },
+     "op": "word",
+     "prompt": "put the milk on the plate",
+     "sched": "og",
+     "sources": {
+      "g": "pick up the black bowl next to the plate and place it on the plate",
+      "o": "pick up the milk and place it in the basket"
+     },
+     "span": "1-17"
+    },
+    "spatial:3": {
+     "l1": 0.26012247800827026,
+     "l1_zs": 0.30161595344543457,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "orange_juice_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "orange_juice_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "akita_black_bowl_2"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "glazed_rim_porcelain_ramekin_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "orange_juice_1",
+        "pointed": "glazed_rim_porcelain_ramekin_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the orange juice on the plate",
+     "t1": "pick up the orange juice and place it in the basket",
+     "t2": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+    },
+    "spatial:4": {
+     "l1": 0.26015084981918335,
+     "l1_zs": 0.3899364173412323,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cookies_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cookies_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the bowl on cookie box on the stove",
+     "t1": "pick up the black bowl next to the cookie box and place it on the plate",
+     "t2": "put the bowl on the stove"
+    },
+    "spatial:5": {
+     "l1": 0.2007342129945755,
+     "l1_zs": 0.3072355389595032,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cookies_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cookies_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the bowl on cookie box on the cabinet",
+     "t1": "pick up the black bowl on the cookie box and place it on the plate",
+     "t2": "put the bowl on top of the cabinet"
+    },
+    "spatial:6": {
+     "l1": 0.3391590714454651,
+     "l1_zs": 0.5369269251823425,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "plate_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "plate_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cookies_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "cookies_1",
+        "pointed": "cookies_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "cookies_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the bowl next to the plate on the cabinet",
+     "t1": "put the bowl on the plate",
+     "t2": "put the bowl on top of the cabinet"
+    },
+    "spatial:7": {
+     "l1": 0.2760123312473297,
+     "l1_zs": 0.4051693379878998,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "plate_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "plate_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_2"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "cookies_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "cookies_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the bowl next to the plate on the stove",
+     "t1": "pick up the black bowl next to the ramekin and place it on the plate",
+     "t2": "pick up the black bowl on the stove and place it on the plate"
+    },
+    "spatial:8": {
+     "l1": 0.2460864931344986,
+     "l1_zs": 0.299031138420105,
+     "lam": 24,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "glazed_rim_porcelain_ramekin_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cookies_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the bowl at table center on the cabinet",
+     "t1": "pick up the black bowl from table center and place it on the plate",
+     "t2": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+    },
+    "spatial:9": {
+     "l1": 0.12873966991901398,
+     "l1_zs": 0.1590777039527893,
+     "lam": 24,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_2"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_2"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cookies_1"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the bowl at table center on the stove",
+     "t1": "pick up the black bowl from table center and place it on the plate",
+     "t2": "put the bowl on the stove"
+    }
+   },
+   "spans": {
+    "role": {
+     "1-17": 12,
+     "1-6": 3,
+     "13-17": 2,
+     "7-12": 3
+    },
+    "tmpl": {
+     "1-17": 14,
+     "13-17": 3,
+     "7-12": 3
+    },
+    "word": {
+     "1-17": 13,
+     "13-17": 4,
+     "7-12": 3
+    }
+   },
+   "table": {
+    "l2sel": {
+     "losses_vs_zs": 4,
+     "mean": 0.24442701190710067,
+     "n": 20,
+     "ratio_to_zs": 0.8335789953290821,
+     "sign_p": 0.01181793212890625,
+     "wins_vs_zs": 16
+    },
+    "null": {
+     "losses_vs_zs": 15,
+     "mean": 0.35812058076262476,
+     "n": 20,
+     "ratio_to_zs": 1.2029901309886346,
+     "sign_p": 0.04138946533203125,
+     "wins_vs_zs": 5
+    },
+    "pos": {
+     "losses_vs_zs": 18,
+     "mean": 0.3790412724018097,
+     "n": 20,
+     "ratio_to_zs": 1.2946792741221371,
+     "sign_p": 0.0004024505615234375,
+     "wins_vs_zs": 2
+    },
+    "rand": {
+     "losses_vs_zs": 14,
+     "mean": 0.3410517357289791,
+     "n": 20,
+     "ratio_to_zs": 1.1601573138307124,
+     "sign_p": 0.11531829833984375,
+     "wins_vs_zs": 6
+    },
+    "role": {
+     "losses_vs_zs": 5,
+     "mean": 0.2673070654273033,
+     "n": 20,
+     "ratio_to_zs": 0.9064541002543015,
+     "sign_p": 0.04138946533203125,
+     "wins_vs_zs": 15
+    },
+    "tli_li": {
+     "losses_vs_zs": 5,
+     "mean": 0.27209474295377734,
+     "n": 20,
+     "ratio_to_zs": 0.9233508228612609,
+     "sign_p": 0.04138946533203125,
+     "wins_vs_zs": 15
+    },
+    "tli_sel": {
+     "losses_vs_zs": 3,
+     "mean": 0.24427798837423326,
+     "n": 20,
+     "ratio_to_zs": 0.8325939906758822,
+     "sign_p": 0.0025768280029296875,
+     "wins_vs_zs": 17
+    },
+    "tmpl": {
+     "losses_vs_zs": 6,
+     "mean": 0.2648258425295353,
+     "n": 20,
+     "ratio_to_zs": 0.903242841664588,
+     "sign_p": 0.11531829833984375,
+     "wins_vs_zs": 14
+    },
+    "tmpl_only": {
+     "losses_vs_zs": 2,
+     "mean": 0.2983519397675991,
+     "n": 20,
+     "ratio_to_zs": 0.9998985791306493,
+     "sign_p": 1.0,
+     "wins_vs_zs": 3
+    },
+    "word": {
+     "losses_vs_zs": 5,
+     "mean": 0.2653236098587513,
+     "n": 20,
+     "ratio_to_zs": 0.9048662832694181,
+     "sign_p": 0.04138946533203125,
+     "wins_vs_zs": 15
+    },
+    "zs": {
+     "losses_vs_zs": 0,
+     "mean": 0.2984414681792259,
+     "n": 20,
+     "ratio_to_zs": 1.0,
+     "sign_p": 1.0,
+     "wins_vs_zs": 0
+    }
+   },
+   "tasks": 20
+  },
+  "pi0_l90": {
+   "chosen": {
+    "role": 1,
+    "tli_sel": 12,
+    "tmpl": 1,
+    "word": 2
+   },
+   "compare": {
+    "l2sel_vs_pos": {
+     "losses": 4,
+     "n": 16,
+     "ratio": 0.8782273104151056,
+     "sign_p": 0.076812744140625,
+     "wins": 12
+    },
+    "l2sel_vs_rand": {
+     "losses": 5,
+     "n": 16,
+     "ratio": 0.7823042341948537,
+     "sign_p": 0.210113525390625,
+     "wins": 11
+    },
+    "tmpl_vs_tmpl_only": {
+     "losses": 0,
+     "n": 16,
+     "ratio": 0.9372878954464668,
+     "sign_p": 3.0517578125e-05,
+     "wins": 16
+    },
+    "word_vs_role": {
+     "losses": 2,
+     "n": 16,
+     "ratio": 0.9621312797037476,
+     "sign_p": 0.004180908203125,
+     "wins": 14
+    },
+    "word_vs_tmpl": {
+     "losses": 4,
+     "n": 16,
+     "ratio": 1.006981546526226,
+     "sign_p": 1.0,
+     "wins": 4
+    }
+   },
+   "modes": {},
+   "per_task": {
+    "l90:10": {
+     "chosen": "tli_sel",
+     "l2sel": 0.31409,
+     "null": 0.81337,
+     "pos": 0.48716,
+     "rand": 0.59449,
+     "role": 0.37266,
+     "tli_sel": 0.31409,
+     "tmpl": 0.36635,
+     "tmpl_only": 0.3819,
+     "word": 0.36635,
+     "zs": 0.3819
+    },
+    "l90:14": {
+     "chosen": "tli_sel",
+     "l2sel": 0.40778,
+     "null": 0.52453,
+     "pos": 0.41336,
+     "rand": 0.5932,
+     "role": 0.48984,
+     "tli_sel": 0.40778,
+     "tmpl": 0.39699,
+     "tmpl_only": 0.54449,
+     "word": 0.40757,
+     "zs": 0.54392
+    },
+    "l90:2": {
+     "chosen": "role",
+     "l2sel": 0.37636,
+     "null": 0.56284,
+     "pos": 0.49794,
+     "rand": 0.53169,
+     "role": 0.37636,
+     "tli_sel": 0.4209,
+     "tmpl": 0.35422,
+     "tmpl_only": 0.37504,
+     "word": 0.35422,
+     "zs": 0.37504
+    },
+    "l90:26": {
+     "chosen": "tmpl",
+     "l2sel": 0.37973,
+     "null": 0.54171,
+     "pos": 0.40418,
+     "rand": 0.58296,
+     "role": 0.50083,
+     "tli_sel": 0.48636,
+     "tmpl": 0.37973,
+     "tmpl_only": 0.52012,
+     "word": 0.40878,
+     "zs": 0.56986
+    },
+    "l90:32": {
+     "chosen": "tli_sel",
+     "l2sel": 0.46723,
+     "null": 0.39925,
+     "pos": 0.39211,
+     "rand": 0.42048,
+     "role": 0.37452,
+     "tli_sel": 0.46723,
+     "tmpl": 0.37425,
+     "tmpl_only": 0.37602,
+     "word": 0.37425,
+     "zs": 0.37602
+    },
+    "l90:37": {
+     "chosen": "tli_sel",
+     "l2sel": 0.44725,
+     "null": 0.73984,
+     "pos": 0.74629,
+     "rand": 0.75224,
+     "role": 0.65736,
+     "tli_sel": 0.44725,
+     "tmpl": 0.62578,
+     "tmpl_only": 0.64948,
+     "word": 0.65597,
+     "zs": 0.69306
+    },
+    "l90:41": {
+     "chosen": "tli_sel",
+     "l2sel": 0.61622,
+     "null": 0.79503,
+     "pos": 0.71989,
+     "rand": 0.77195,
+     "role": 0.76048,
+     "tli_sel": 0.61622,
+     "tmpl": 0.66922,
+     "tmpl_only": 0.69092,
+     "word": 0.66922,
+     "zs": 0.69092
+    },
+    "l90:46": {
+     "chosen": "tli_sel",
+     "l2sel": 0.31088,
+     "null": 0.45732,
+     "pos": 0.25163,
+     "rand": 0.44902,
+     "role": 0.40505,
+     "tli_sel": 0.31088,
+     "tmpl": 0.40406,
+     "tmpl_only": 0.40598,
+     "word": 0.40302,
+     "zs": 0.40581
+    },
+    "l90:55": {
+     "chosen": "tli_sel",
+     "l2sel": 0.27077,
+     "null": 0.60435,
+     "pos": 0.41295,
+     "rand": 0.49048,
+     "role": 0.41434,
+     "tli_sel": 0.27077,
+     "tmpl": 0.41528,
+     "tmpl_only": 0.41544,
+     "word": 0.40808,
+     "zs": 0.41401
+    },
+    "l90:57": {
+     "chosen": "tli_sel",
+     "l2sel": 0.2393,
+     "null": 0.38908,
+     "pos": 0.35779,
+     "rand": 0.34896,
+     "role": 0.25835,
+     "tli_sel": 0.2393,
+     "tmpl": 0.27777,
+     "tmpl_only": 0.28197,
+     "word": 0.27392,
+     "zs": 0.27826
+    },
+    "l90:65": {
+     "chosen": "word",
+     "l2sel": 0.628,
+     "null": 0.79742,
+     "pos": 0.62696,
+     "rand": 0.61745,
+     "role": 0.62891,
+     "tli_sel": 0.68963,
+     "tmpl": 0.628,
+     "tmpl_only": 0.62842,
+     "word": 0.628,
+     "zs": 0.62842
+    },
+    "l90:75": {
+     "chosen": "tli_sel",
+     "l2sel": 0.31447,
+     "null": 0.38996,
+     "pos": 0.31482,
+     "rand": 0.28997,
+     "role": 0.28133,
+     "tli_sel": 0.31447,
+     "tmpl": 0.28079,
+     "tmpl_only": 0.28146,
+     "word": 0.28079,
+     "zs": 0.28146
+    },
+    "l90:76": {
+     "chosen": "word",
+     "l2sel": 0.84362,
+     "null": 0.82538,
+     "pos": 0.52184,
+     "rand": 0.88504,
+     "role": 0.83697,
+     "tli_sel": 0.88244,
+     "tmpl": 0.84362,
+     "tmpl_only": 0.86295,
+     "word": 0.84362,
+     "zs": 0.86295
+    },
+    "l90:86": {
+     "chosen": "tli_sel",
+     "l2sel": 0.60402,
+     "null": 0.52772,
+     "pos": 0.68903,
+     "rand": 0.5977,
+     "role": 0.5577,
+     "tli_sel": 0.60402,
+     "tmpl": 0.55129,
+     "tmpl_only": 0.55708,
+     "word": 0.55381,
+     "zs": 0.56068
+    },
+    "l90:87": {
+     "chosen": "tli_sel",
+     "l2sel": 0.74339,
+     "null": 0.96669,
+     "pos": 0.81908,
+     "rand": 0.73961,
+     "role": 0.94014,
+     "tli_sel": 0.74339,
+     "tmpl": 0.9228,
+     "tmpl_only": 0.96011,
+     "word": 0.91698,
+     "zs": 0.94213
+    },
+    "l90:9": {
+     "chosen": "tli_sel",
+     "l2sel": 0.25902,
+     "null": 0.3206,
+     "pos": 0.39817,
+     "rand": 0.32537,
+     "role": 0.26827,
+     "tli_sel": 0.25902,
+     "tmpl": 0.2595,
+     "tmpl_only": 0.2977,
+     "word": 0.2595,
+     "zs": 0.2977
+    }
+   },
+   "repairs": {
+    "l90:10": {
+     "l1": 0.31408917903900146,
+     "l1_zs": 0.3819030225276947,
+     "lam": 12,
+     "op": "tli_sel",
+     "prompt": "put the black bowl on top of the cabinet",
+     "t1": "pick up the black bowl next to the ramekin and place it on the plate",
+     "t2": "put the bowl on top of the cabinet"
+    },
+    "l90:14": {
+     "l1": 0.40778496861457825,
+     "l1_zs": 0.5439231991767883,
+     "lam": 24,
+     "op": "tli_sel",
+     "prompt": "put the middle black bowl on the plate",
+     "t1": "pick up the black bowl next to the plate and place it on the plate",
+     "t2": "put the bowl on the plate"
+    },
+    "l90:2": {
+     "l1": 0.3763583302497864,
+     "l1_zs": 0.3750372529029846,
+     "op": "role",
+     "prompt": "put the black bowl in the top drawer of the cabinet",
+     "sched": "ph",
+     "sources": {
+      "g": "put the black bowl in the bottom drawer of the cabinet and close it",
+      "o": "put the bowl on the stove"
+     },
+     "span": "1-17"
+    },
+    "l90:26": {
+     "l1": 0.3797266483306885,
+     "l1_zs": 0.5698642134666443,
+     "op": "tmpl",
+     "prompt": "pick up the wine bottle and place it in the bottom drawer of the cabinet",
+     "sched": "og",
+     "sources": {
+      "g": "pick up the black bowl on the wooden cabinet and place it on the plate",
+      "o": "put the wine bottle on top of the cabinet"
+     },
+     "span": "1-17"
+    },
+    "l90:32": {
+     "l1": 0.4672273099422455,
+     "l1_zs": 0.37601831555366516,
+     "lam": 24,
+     "op": "tli_sel",
+     "prompt": "put the ketchup in the top drawer of the cabinet",
+     "t1": "pick up the ketchup and place it in the basket",
+     "t2": "put the bowl on top of the cabinet"
+    },
+    "l90:37": {
+     "l1": 0.44725459814071655,
+     "l1_zs": 0.6930597424507141,
+     "lam": 36,
+     "op": "tli_sel",
+     "prompt": "put the white bowl to the right of the plate",
+     "t1": "pick up the black bowl on the wooden cabinet and place it on the plate",
+     "t2": "pick up the black bowl next to the cookie box and place it on the plate"
+    },
+    "l90:41": {
+     "l1": 0.6162189841270447,
+     "l1_zs": 0.6909225583076477,
+     "lam": 24,
+     "op": "tli_sel",
+     "prompt": "put the frying pan on top of the cabinet",
+     "t1": "put the wine bottle on the rack",
+     "t2": "put the bowl on top of the cabinet"
+    },
+    "l90:46": {
+     "l1": 0.3108757436275482,
+     "l1_zs": 0.4058075547218323,
+     "lam": 12,
+     "op": "tli_sel",
+     "prompt": "pick up the alphabet soup and put it in the basket",
+     "t1": "pick up the alphabet soup and place it in the basket",
+     "t2": "pick up the salad dressing and place it in the basket"
+    },
+    "l90:55": {
+     "l1": 0.27077287435531616,
+     "l1_zs": 0.4140097200870514,
+     "lam": 12,
+     "op": "tli_sel",
+     "prompt": "pick up the alphabet soup and put it in the tray",
+     "t1": "pick up the alphabet soup and place it in the basket",
+     "t2": "put the bowl on the plate"
+    },
+    "l90:57": {
+     "l1": 0.23929578065872192,
+     "l1_zs": 0.27825936675071716,
+     "lam": 24,
+     "op": "tli_sel",
+     "prompt": "pick up the cream cheese and put it in the tray",
+     "t1": "pick up the cream cheese and place it in the basket",
+     "t2": "put the bowl on top of the cabinet"
+    },
+    "l90:65": {
+     "l1": 0.6279981732368469,
+     "l1_zs": 0.62841796875,
+     "op": "word",
+     "prompt": "put the red mug on the left plate",
+     "sched": "og",
+     "sources": {
+      "g": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+      "o": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+     },
+     "span": "13-17"
+    },
+    "l90:75": {
+     "l1": 0.31447315216064453,
+     "l1_zs": 0.28145575523376465,
+     "lam": 36,
+     "op": "tli_sel",
+     "prompt": "pick up the book and place it in the right compartment of the caddy",
+     "t1": "pick up the book and place it in the back compartment of the caddy",
+     "t2": "put the cream cheese in the bowl"
+    },
+    "l90:76": {
+     "l1": 0.8436179757118225,
+     "l1_zs": 0.8629512190818787,
+     "op": "word",
+     "prompt": "pick up the yellow and white mug and place it to the right of the caddy",
+     "sched": "og",
+     "sources": {
+      "g": "pick up the book and place it in the back compartment of the caddy",
+      "o": "put the yellow and white mug in the microwave and close it"
+     },
+     "span": "1-17"
+    },
+    "l90:86": {
+     "l1": 0.6040228605270386,
+     "l1_zs": 0.560676097869873,
+     "lam": 12,
+     "op": "tli_sel",
+     "prompt": "pick up the book in the middle and place it on the cabinet shelf",
+     "t1": "pick up the book and place it in the back compartment of the caddy",
+     "t2": "put the bowl on the stove"
+    },
+    "l90:87": {
+     "l1": 0.7433866858482361,
+     "l1_zs": 0.942127525806427,
+     "lam": 12,
+     "op": "tli_sel",
+     "prompt": "pick up the book on the left and place it on top of the shelf",
+     "t1": "pick up the book and place it in the back compartment of the caddy",
+     "t2": "put the bowl on the stove"
+    },
+    "l90:9": {
+     "l1": 0.25902479887008667,
+     "l1_zs": 0.29770272970199585,
+     "lam": 36,
+     "op": "tli_sel",
+     "prompt": "put the black bowl on the plate",
+     "t1": "pick up the black bowl from table center and place it on the plate",
+     "t2": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+    }
+   },
+   "spans": {
+    "role": {
+     "1-17": 9,
+     "1-6": 3,
+     "13-17": 2,
+     "7-12": 2
+    },
+    "tmpl": {
+     "1-17": 12,
+     "13-17": 2,
+     "7-12": 2
+    },
+    "word": {
+     "1-17": 12,
+     "1-6": 1,
+     "13-17": 1,
+     "7-12": 2
+    }
+   },
+   "table": {
+    "l2sel": {
+     "losses_vs_zs": 4,
+     "mean": 0.4513830039650202,
+     "n": 16,
+     "ratio_to_zs": 0.8673392142845325,
+     "sign_p": 0.076812744140625,
+     "wins_vs_zs": 12
+    },
+    "null": {
+     "losses_vs_zs": 12,
+     "mean": 0.6034428235143423,
+     "n": 16,
+     "ratio_to_zs": 1.1862398045252176,
+     "sign_p": 0.076812744140625,
+     "wins_vs_zs": 4
+    },
+    "pos": {
+     "losses_vs_zs": 9,
+     "mean": 0.5033247116953135,
+     "n": 16,
+     "ratio_to_zs": 0.9876021890899446,
+     "sign_p": 0.803619384765625,
+     "wins_vs_zs": 7
+    },
+    "rand": {
+     "losses_vs_zs": 14,
+     "mean": 0.5619135703891516,
+     "n": 16,
+     "ratio_to_zs": 1.1086980951562875,
+     "sign_p": 0.004180908203125,
+     "wins_vs_zs": 2
+    },
+    "role": {
+     "losses_vs_zs": 4,
+     "mean": 0.5076939053833485,
+     "n": 16,
+     "ratio_to_zs": 0.9733061211328673,
+     "sign_p": 0.076812744140625,
+     "wins_vs_zs": 12
+    },
+    "tli_sel": {
+     "losses_vs_zs": 6,
+     "mean": 0.467110276222229,
+     "n": 16,
+     "ratio_to_zs": 0.8947580857517017,
+     "sign_p": 0.454498291015625,
+     "wins_vs_zs": 10
+    },
+    "tmpl": {
+     "losses_vs_zs": 1,
+     "mean": 0.4843536149710417,
+     "n": 16,
+     "ratio_to_zs": 0.9299557346403341,
+     "sign_p": 0.000518798828125,
+     "wins_vs_zs": 15
+    },
+    "tmpl_only": {
+     "losses_vs_zs": 5,
+     "mean": 0.5143174082040787,
+     "n": 16,
+     "ratio_to_zs": 0.9921772586184524,
+     "sign_p": 0.7265625,
+     "wins_vs_zs": 3
+    },
+    "word": {
+     "losses_vs_zs": 0,
+     "mean": 0.4877549223601818,
+     "n": 16,
+     "ratio_to_zs": 0.9364482638690562,
+     "sign_p": 3.0517578125e-05,
+     "wins_vs_zs": 16
+    },
+    "zs": {
+     "losses_vs_zs": 0,
+     "mean": 0.5188835151493549,
+     "n": 16,
+     "ratio_to_zs": 1.0,
+     "sign_p": 1.0,
+     "wins_vs_zs": 0
+    }
+   },
+   "tasks": 16
+  },
+  "pi0_ood": {
+   "chosen": {
+    "role": 2,
+    "tli_sel": 13,
+    "tmpl": 2,
+    "word": 3
+   },
+   "compare": {
+    "l2sel_vs_pos": {
+     "losses": 1,
+     "n": 20,
+     "ratio": 0.6837685343591412,
+     "sign_p": 4.00543212890625e-05,
+     "wins": 19
+    },
+    "l2sel_vs_rand": {
+     "losses": 1,
+     "n": 20,
+     "ratio": 0.7307048982777661,
+     "sign_p": 4.00543212890625e-05,
+     "wins": 19
+    },
+    "l2sel_vs_tli_li": {
+     "losses": 1,
+     "n": 20,
+     "ratio": 0.7710312840862398,
+     "sign_p": 0.00014495849609375,
+     "wins": 17
+    },
+    "tmpl_vs_tmpl_only": {
+     "losses": 1,
+     "n": 20,
+     "ratio": 0.8963198025496819,
+     "sign_p": 4.00543212890625e-05,
+     "wins": 19
+    },
+    "word_vs_role": {
+     "losses": 7,
+     "n": 20,
+     "ratio": 0.974205083668472,
+     "sign_p": 0.26317596435546875,
+     "wins": 13
+    },
+    "word_vs_tmpl": {
+     "losses": 6,
+     "n": 20,
+     "ratio": 1.011886353645425,
+     "sign_p": 0.125,
+     "wins": 1
+    }
+   },
+   "modes": {
+    "approach": {
+     "l2sel": {
+      "grip_closed": 0.53025,
+      "grip_first": 23.2375,
+      "n": 20,
+      "named_near": 0.6125,
+      "named_point": 0.21875
+     },
+     "pos": {
+      "grip_closed": 0.5280000000000001,
+      "grip_first": 23.35,
+      "n": 20,
+      "named_near": 0.8625,
+      "named_point": 0.425
+     },
+     "rand": {
+      "grip_closed": 0.47112499999999996,
+      "grip_first": 24.625,
+      "n": 20,
+      "named_near": 0.7875,
+      "named_point": 0.325
+     },
+     "role": {
+      "grip_closed": 0.5258750000000001,
+      "grip_first": 23.43125,
+      "n": 20,
+      "named_near": 0.69375,
+      "named_point": 0.20625
+     },
+     "tli_li": {
+      "grip_closed": 0.5270000000000001,
+      "grip_first": 23.225,
+      "n": 20,
+      "named_near": 0.48125,
+      "named_point": 0.1125
+     },
+     "tli_sel": {
+      "grip_closed": 0.51575,
+      "grip_first": 23.775,
+      "n": 20,
+      "named_near": 0.5625,
+      "named_point": 0.1375
+     },
+     "tmpl": {
+      "grip_closed": 0.5293749999999999,
+      "grip_first": 22.8,
+      "n": 20,
+      "named_near": 0.75,
+      "named_point": 0.3625
+     },
+     "word": {
+      "grip_closed": 0.513375,
+      "grip_first": 23.625,
+      "n": 20,
+      "named_near": 0.74375,
+      "named_point": 0.30625
+     },
+     "zs": {
+      "grip_closed": 0.5243750000000001,
+      "grip_first": 23.29375,
+      "n": 20,
+      "named_near": 0.60625,
+      "named_point": 0.21875
+     }
+    },
+    "carry": {
+     "l2sel": {
+      "grip_closed": 0.630625,
+      "grip_first": 26.3875,
+      "n": 20,
+      "named_near": 0.85,
+      "named_point": 0.21875
+     },
+     "pos": {
+      "grip_closed": 0.5903750000000001,
+      "grip_first": 29.44375,
+      "n": 20,
+      "named_near": 0.91875,
+      "named_point": 0.10625
+     },
+     "rand": {
+      "grip_closed": 0.6295000000000001,
+      "grip_first": 30.5,
+      "n": 20,
+      "named_near": 0.85,
+      "named_point": 0.21875
+     },
+     "role": {
+      "grip_closed": 0.6176250000000001,
+      "grip_first": 29.45,
+      "n": 20,
+      "named_near": 0.75625,
+      "named_point": 0.15625
+     },
+     "tli_li": {
+      "grip_closed": 0.5783750000000001,
+      "grip_first": 28.75625,
+      "n": 20,
+      "named_near": 0.89375,
+      "named_point": 0.2125
+     },
+     "tli_sel": {
+      "grip_closed": 0.6489999999999999,
+      "grip_first": 27.29375,
+      "n": 20,
+      "named_near": 0.74375,
+      "named_point": 0.3
+     },
+     "tmpl": {
+      "grip_closed": 0.6076249999999999,
+      "grip_first": 28.45625,
+      "n": 20,
+      "named_near": 0.8375,
+      "named_point": 0.21875
+     },
+     "word": {
+      "grip_closed": 0.61625,
+      "grip_first": 28.88125,
+      "n": 20,
+      "named_near": 0.8375,
+      "named_point": 0.2
+     },
+     "zs": {
+      "grip_closed": 0.6134999999999999,
+      "grip_first": 30.6625,
+      "n": 20,
+      "named_near": 0.7,
+      "named_point": 0.11875
+     }
+    },
+    "start": {
+     "l2sel": {
+      "grip_closed": 0.11950000000000001,
+      "grip_first": 29.3875,
+      "n": 20,
+      "named_near": 0.70625,
+      "named_point": 0.3625
+     },
+     "pos": {
+      "grip_closed": 0.12174999999999998,
+      "grip_first": 27.93125,
+      "n": 20,
+      "named_near": 0.76875,
+      "named_point": 0.7125
+     },
+     "rand": {
+      "grip_closed": 0.072875,
+      "grip_first": 28.66875,
+      "n": 20,
+      "named_near": 0.58125,
+      "named_point": 0.275
+     },
+     "role": {
+      "grip_closed": 0.10812499999999999,
+      "grip_first": 31.125,
+      "n": 20,
+      "named_near": 0.66875,
+      "named_point": 0.38125
+     },
+     "tli_li": {
+      "grip_closed": 0.11975,
+      "grip_first": 29.94375,
+      "n": 20,
+      "named_near": 0.89375,
+      "named_point": 0.65
+     },
+     "tli_sel": {
+      "grip_closed": 0.09262499999999999,
+      "grip_first": 27.0125,
+      "n": 20,
+      "named_near": 0.74375,
+      "named_point": 0.40625
+     },
+     "tmpl": {
+      "grip_closed": 0.134375,
+      "grip_first": 33.93125,
+      "n": 20,
+      "named_near": 0.53125,
+      "named_point": 0.325
+     },
+     "word": {
+      "grip_closed": 0.12162500000000001,
+      "grip_first": 30.45625,
+      "n": 20,
+      "named_near": 0.54375,
+      "named_point": 0.2875
+     },
+     "zs": {
+      "grip_closed": 0.111375,
+      "grip_first": 30.6375,
+      "n": 20,
+      "named_near": 0.69375,
+      "named_point": 0.4125
+     }
+    }
+   },
+   "per_task": {
+    "goal:0": {
+     "chosen": "tli_sel",
+     "l2sel": 0.3332,
+     "null": 0.36688,
+     "pos": 0.40822,
+     "rand": 0.44854,
+     "role": 0.33268,
+     "tli_li": 0.41542,
+     "tli_sel": 0.3332,
+     "tmpl": 0.39969,
+     "tmpl_only": 0.4204,
+     "word": 0.39969,
+     "zs": 0.4204
+    },
+    "goal:1": {
+     "chosen": "role",
+     "l2sel": 0.53042,
+     "null": 0.9244,
+     "pos": 0.74847,
+     "rand": 0.55005,
+     "role": 0.53042,
+     "tli_li": 1.03874,
+     "tli_sel": 0.58126,
+     "tmpl": 0.49662,
+     "tmpl_only": 0.56388,
+     "word": 0.51436,
+     "zs": 0.58667
+    },
+    "goal:2": {
+     "chosen": "tli_sel",
+     "l2sel": 0.83223,
+     "null": 0.69864,
+     "pos": 0.56773,
+     "rand": 0.78866,
+     "role": 0.60345,
+     "tli_li": 0.83223,
+     "tli_sel": 0.83223,
+     "tmpl": 0.60172,
+     "tmpl_only": 0.59441,
+     "word": 0.60172,
+     "zs": 0.59441
+    },
+    "goal:3": {
+     "chosen": "word",
+     "l2sel": 0.59175,
+     "null": 0.66697,
+     "pos": 0.8708,
+     "rand": 0.81979,
+     "role": 0.57354,
+     "tli_li": 0.70887,
+     "tli_sel": 0.62688,
+     "tmpl": 0.59175,
+     "tmpl_only": 0.63101,
+     "word": 0.59175,
+     "zs": 0.63101
+    },
+    "goal:4": {
+     "chosen": "role",
+     "l2sel": 0.50145,
+     "null": 0.84273,
+     "pos": 0.79743,
+     "rand": 0.71435,
+     "role": 0.50145,
+     "tli_li": 0.90734,
+     "tli_sel": 0.5582,
+     "tmpl": 0.57,
+     "tmpl_only": 0.61361,
+     "word": 0.57,
+     "zs": 0.61361
+    },
+    "goal:5": {
+     "chosen": "tli_sel",
+     "l2sel": 0.50309,
+     "null": 0.6464,
+     "pos": 0.76448,
+     "rand": 0.63218,
+     "role": 0.58088,
+     "tli_li": 0.61725,
+     "tli_sel": 0.50309,
+     "tmpl": 0.52039,
+     "tmpl_only": 0.63165,
+     "word": 0.52039,
+     "zs": 0.63165
+    },
+    "goal:6": {
+     "chosen": "tli_sel",
+     "l2sel": 0.47986,
+     "null": 0.56989,
+     "pos": 0.63285,
+     "rand": 0.56422,
+     "role": 0.59269,
+     "tli_li": 0.47123,
+     "tli_sel": 0.47986,
+     "tmpl": 0.56153,
+     "tmpl_only": 0.60276,
+     "word": 0.59997,
+     "zs": 0.62094
+    },
+    "goal:7": {
+     "chosen": "tli_sel",
+     "l2sel": 0.52539,
+     "null": 0.63422,
+     "pos": 0.77913,
+     "rand": 0.66215,
+     "role": 0.66502,
+     "tli_li": 0.56813,
+     "tli_sel": 0.52539,
+     "tmpl": 0.6266,
+     "tmpl_only": 0.6636,
+     "word": 0.6266,
+     "zs": 0.6636
+    },
+    "goal:8": {
+     "chosen": "tli_sel",
+     "l2sel": 0.38647,
+     "null": 0.58358,
+     "pos": 0.60296,
+     "rand": 0.50822,
+     "role": 0.46051,
+     "tli_li": 0.38647,
+     "tli_sel": 0.38647,
+     "tmpl": 0.44054,
+     "tmpl_only": 0.45729,
+     "word": 0.44054,
+     "zs": 0.45729
+    },
+    "goal:9": {
+     "chosen": "word",
+     "l2sel": 0.42161,
+     "null": 0.67129,
+     "pos": 0.75982,
+     "rand": 0.6222,
+     "role": 0.50825,
+     "tli_li": 0.52885,
+     "tli_sel": 0.5778,
+     "tmpl": 0.42161,
+     "tmpl_only": 0.56117,
+     "word": 0.42161,
+     "zs": 0.56117
+    },
+    "spatial:0": {
+     "chosen": "tmpl",
+     "l2sel": 0.36427,
+     "null": 0.50508,
+     "pos": 0.54979,
+     "rand": 0.52784,
+     "role": 0.37251,
+     "tli_li": 0.48337,
+     "tli_sel": 0.42661,
+     "tmpl": 0.36427,
+     "tmpl_only": 0.45835,
+     "word": 0.38453,
+     "zs": 0.3799
+    },
+    "spatial:1": {
+     "chosen": "tmpl",
+     "l2sel": 0.35853,
+     "null": 0.45407,
+     "pos": 0.48619,
+     "rand": 0.41365,
+     "role": 0.36818,
+     "tli_li": 0.43638,
+     "tli_sel": 0.35174,
+     "tmpl": 0.35853,
+     "tmpl_only": 0.40563,
+     "word": 0.34738,
+     "zs": 0.37459
+    },
+    "spatial:2": {
+     "chosen": "tli_sel",
+     "l2sel": 0.55983,
+     "null": 0.63735,
+     "pos": 0.68529,
+     "rand": 0.66726,
+     "role": 0.56725,
+     "tli_li": 0.70387,
+     "tli_sel": 0.55983,
+     "tmpl": 0.53208,
+     "tmpl_only": 0.55258,
+     "word": 0.5372,
+     "zs": 0.53609
+    },
+    "spatial:3": {
+     "chosen": "tli_sel",
+     "l2sel": 0.48406,
+     "null": 0.64953,
+     "pos": 0.70758,
+     "rand": 0.64214,
+     "role": 0.67159,
+     "tli_li": 0.73612,
+     "tli_sel": 0.48406,
+     "tmpl": 0.65276,
+     "tmpl_only": 0.68883,
+     "word": 0.69328,
+     "zs": 0.69598
+    },
+    "spatial:4": {
+     "chosen": "tli_sel",
+     "l2sel": 0.51517,
+     "null": 0.74101,
+     "pos": 0.80942,
+     "rand": 0.67225,
+     "role": 0.59512,
+     "tli_li": 0.60119,
+     "tli_sel": 0.51517,
+     "tmpl": 0.54436,
+     "tmpl_only": 0.55963,
+     "word": 0.56812,
+     "zs": 0.60113
+    },
+    "spatial:5": {
+     "chosen": "tli_sel",
+     "l2sel": 0.58072,
+     "null": 1.38796,
+     "pos": 0.96573,
+     "rand": 1.29938,
+     "role": 1.26793,
+     "tli_li": 0.74488,
+     "tli_sel": 0.58072,
+     "tmpl": 1.24833,
+     "tmpl_only": 1.28405,
+     "word": 1.24833,
+     "zs": 1.28405
+    },
+    "spatial:6": {
+     "chosen": "tli_sel",
+     "l2sel": 0.69496,
+     "null": 1.17945,
+     "pos": 1.04149,
+     "rand": 1.28634,
+     "role": 1.10753,
+     "tli_li": 0.76461,
+     "tli_sel": 0.69496,
+     "tmpl": 1.10801,
+     "tmpl_only": 1.15113,
+     "word": 1.10801,
+     "zs": 1.15113
+    },
+    "spatial:7": {
+     "chosen": "tli_sel",
+     "l2sel": 0.50078,
+     "null": 0.71513,
+     "pos": 0.68718,
+     "rand": 0.60447,
+     "role": 0.58949,
+     "tli_li": 0.8257,
+     "tli_sel": 0.50078,
+     "tmpl": 0.51787,
+     "tmpl_only": 0.72965,
+     "word": 0.51787,
+     "zs": 0.72965
+    },
+    "spatial:8": {
+     "chosen": "tli_sel",
+     "l2sel": 0.48652,
+     "null": 0.94291,
+     "pos": 0.89732,
+     "rand": 1.16599,
+     "role": 0.9329,
+     "tli_li": 0.76351,
+     "tli_sel": 0.48652,
+     "tmpl": 0.92189,
+     "tmpl_only": 0.93652,
+     "word": 0.92189,
+     "zs": 0.93652
+    },
+    "spatial:9": {
+     "chosen": "word",
+     "l2sel": 0.38493,
+     "null": 0.52715,
+     "pos": 0.9215,
+     "rand": 0.52432,
+     "role": 0.46612,
+     "tli_li": 0.61342,
+     "tli_sel": 0.41137,
+     "tmpl": 0.38493,
+     "tmpl_only": 0.54257,
+     "word": 0.38493,
+     "zs": 0.54257
+    }
+   },
+   "repairs": {
+    "goal:0": {
+     "l1": 0.33320295810699463,
+     "l1_zs": 0.4204044044017792,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": 22.75,
+        "nearest": "cream_cheese_1",
+        "pointed": "wine_bottle_1"
+       },
+       "zs": {
+        "grip_first": 21.125,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "wine_bottle_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": 27.75,
+        "nearest": "cream_cheese_1",
+        "pointed": "basket_1"
+       },
+       "zs": {
+        "grip_first": 22.25,
+        "nearest": "cream_cheese_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": 35.25,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": 33.25,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cream_cheese_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the cream cheese in the basket",
+     "t1": "pick up the cream cheese and place it in the basket",
+     "t2": "pick up the orange juice and place it in the basket"
+    },
+    "goal:1": {
+     "l1": 0.5304225087165833,
+     "l1_zs": 0.5866653323173523,
+     "mode": {
+      "approach": {
+       "role": {
+        "grip_first": 23.25,
+        "nearest": "orange_juice_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": 23.25,
+        "nearest": "orange_juice_1",
+        "pointed": "cream_cheese_1"
+       }
+      },
+      "carry": {
+       "role": {
+        "grip_first": 36.125,
+        "nearest": "orange_juice_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": 35.875,
+        "nearest": "orange_juice_1",
+        "pointed": "cream_cheese_1"
+       }
+      },
+      "start": {
+       "role": {
+        "grip_first": 34.75,
+        "nearest": "orange_juice_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": 35.375,
+        "nearest": "orange_juice_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      }
+     },
+     "op": "role",
+     "prompt": "put the orange juice on the stove",
+     "sched": "ph",
+     "sources": {
+      "g": "turn on the stove",
+      "o": "pick up the orange juice and place it in the basket"
+     },
+     "span": "1-17"
+    },
+    "goal:2": {
+     "l1": 0.8322304487228394,
+     "l1_zs": 0.5944104194641113,
+     "lam": 24,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": 22.75,
+        "nearest": "bbq_sauce_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": 23.875,
+        "nearest": "bbq_sauce_1",
+        "pointed": "bbq_sauce_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": 22.0,
+        "nearest": "bbq_sauce_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": 25.5,
+        "nearest": "bbq_sauce_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": 33.625,
+        "nearest": "bbq_sauce_1",
+        "pointed": "bbq_sauce_1"
+       },
+       "zs": {
+        "grip_first": 33.5,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the bbq source on the plate",
+     "t1": "put the cream cheese in the bowl",
+     "t2": "put the bowl on the plate"
+    },
+    "goal:3": {
+     "l1": 0.5917516350746155,
+     "l1_zs": 0.6310109496116638,
+     "mode": {
+      "approach": {
+       "word": {
+        "grip_first": 21.25,
+        "nearest": "tomato_sauce_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 21.625,
+        "nearest": "tomato_sauce_1",
+        "pointed": "plate_1"
+       }
+      },
+      "carry": {
+       "word": {
+        "grip_first": 30.125,
+        "nearest": "tomato_sauce_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 29.375,
+        "nearest": "tomato_sauce_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "word": {
+        "grip_first": 31.625,
+        "nearest": "wine_bottle_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 32.875,
+        "nearest": "wine_bottle_1",
+        "pointed": "plate_1"
+       }
+      }
+     },
+     "op": "word",
+     "prompt": "put the tomato sauce on top of the cabinet",
+     "sched": "og",
+     "sources": {
+      "g": "put the wine bottle on top of the cabinet",
+      "o": "pick up the bbq sauce and place it in the basket"
+     },
+     "span": "1-6"
+    },
+    "goal:4": {
+     "l1": 0.501448929309845,
+     "l1_zs": 0.6136077046394348,
+     "mode": {
+      "approach": {
+       "role": {
+        "grip_first": 20.625,
+        "nearest": "wine_bottle_1",
+        "pointed": "wine_bottle_1"
+       },
+       "zs": {
+        "grip_first": 20.25,
+        "nearest": "wine_bottle_1",
+        "pointed": "wine_bottle_1"
+       }
+      },
+      "carry": {
+       "role": {
+        "grip_first": 35.25,
+        "nearest": "wine_bottle_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": 31.875,
+        "nearest": "wine_bottle_1",
+        "pointed": "cream_cheese_1"
+       }
+      },
+      "start": {
+       "role": {
+        "grip_first": 43.25,
+        "nearest": "wine_bottle_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": 39.75,
+        "nearest": "wine_bottle_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      }
+     },
+     "op": "role",
+     "prompt": "put the wine bottle on the stove",
+     "sched": "ph",
+     "sources": {
+      "g": "turn on the stove",
+      "o": "put the wine bottle on the rack"
+     },
+     "span": "1-17"
+    },
+    "goal:5": {
+     "l1": 0.5030866861343384,
+     "l1_zs": 0.6316461563110352,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": 17.75,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 19.5,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": 28.375,
+        "nearest": "wine_bottle_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": 37.125,
+        "nearest": "wine_bottle_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": 32.75,
+        "nearest": "wine_bottle_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 32.25,
+        "nearest": "wine_bottle_1",
+        "pointed": "plate_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the wine bottle on the plate",
+     "t1": "put the wine bottle on top of the cabinet",
+     "t2": "pick up the black bowl on the stove and place it on the plate"
+    },
+    "goal:6": {
+     "l1": 0.4798625707626343,
+     "l1_zs": 0.6209368109703064,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": 17.875,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 17.625,
+        "nearest": "wine_bottle_1",
+        "pointed": "wine_bottle_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": 42.625,
+        "nearest": "wine_bottle_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": 30.25,
+        "nearest": "wine_bottle_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 39.125,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cream_cheese_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the wine bottle in the bowl",
+     "t1": "put the wine bottle on top of the cabinet",
+     "t2": "pick up the black bowl on the stove and place it on the plate"
+    },
+    "goal:7": {
+     "l1": 0.5253888964653015,
+     "l1_zs": 0.6635987758636475,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": 20.5,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": 21.125,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": 4.875,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": 3.75,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": 32.375,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": 35.5,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the cream cheese on the plate",
+     "t1": "put the cream cheese in the bowl",
+     "t2": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+    },
+    "goal:8": {
+     "l1": 0.3864748477935791,
+     "l1_zs": 0.45728799700737,
+     "lam": 24,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": 25.5,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": 25.25,
+        "nearest": "cream_cheese_1",
+        "pointed": "wine_bottle_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": 17.25,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": 15.375,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": 33.125,
+        "nearest": "cream_cheese_1",
+        "pointed": "cream_cheese_1"
+       },
+       "zs": {
+        "grip_first": 42.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cream_cheese_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the cream cheese on the stove",
+     "t1": "put the cream cheese in the bowl",
+     "t2": "put the bowl on the stove"
+    },
+    "goal:9": {
+     "l1": 0.4216119349002838,
+     "l1_zs": 0.5611737370491028,
+     "mode": {
+      "approach": {
+       "word": {
+        "grip_first": 21.75,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 22.625,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       }
+      },
+      "carry": {
+       "word": {
+        "grip_first": 26.75,
+        "nearest": "cream_cheese_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 25.75,
+        "nearest": "cream_cheese_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "word": {
+        "grip_first": 33.0,
+        "nearest": "wine_bottle_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 33.75,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      }
+     },
+     "op": "word",
+     "prompt": "put the cream cheese on top of the cabinet",
+     "sched": "og",
+     "sources": {
+      "g": "put the wine bottle on top of the cabinet",
+      "o": "put both the cream cheese box and the butter in the basket"
+     },
+     "span": "1-6"
+    },
+    "spatial:0": {
+     "l1": 0.36427009105682373,
+     "l1_zs": 0.37990134954452515,
+     "mode": {
+      "approach": {
+       "tmpl": {
+        "grip_first": 25.375,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "cookies_1"
+       },
+       "zs": {
+        "grip_first": 27.25,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "cookies_1"
+       }
+      },
+      "carry": {
+       "tmpl": {
+        "grip_first": 28.75,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 28.625,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "tmpl": {
+        "grip_first": 29.5,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "chocolate_pudding_1"
+       },
+       "zs": {
+        "grip_first": 5.25,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "akita_black_bowl_2"
+       }
+      }
+     },
+     "op": "tmpl",
+     "prompt": "pick up the butter and place it on the plate",
+     "sched": "og",
+     "sources": {
+      "g": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+      "o": "put both the cream cheese box and the butter in the basket"
+     },
+     "span": "1-17"
+    },
+    "spatial:1": {
+     "l1": 0.35853487253189087,
+     "l1_zs": 0.37459030747413635,
+     "mode": {
+      "approach": {
+       "tmpl": {
+        "grip_first": 25.5,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "chocolate_pudding_1"
+       },
+       "zs": {
+        "grip_first": 29.25,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "cookies_1"
+       }
+      },
+      "carry": {
+       "tmpl": {
+        "grip_first": 22.5,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 24.125,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "tmpl": {
+        "grip_first": 29.5,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "akita_black_bowl_2"
+       },
+       "zs": {
+        "grip_first": -1.0,
+        "nearest": "chocolate_pudding_1",
+        "pointed": "chocolate_pudding_1"
+       }
+      }
+     },
+     "op": "tmpl",
+     "prompt": "pick up the chocolate pudding and place it on the plate",
+     "sched": "og",
+     "sources": {
+      "g": "put the bowl on the plate",
+      "o": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+     },
+     "span": "1-6"
+    },
+    "spatial:2": {
+     "l1": 0.5598342418670654,
+     "l1_zs": 0.5360918641090393,
+     "lam": 24,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": 21.125,
+        "nearest": "orange_juice_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 21.25,
+        "nearest": "orange_juice_1",
+        "pointed": "plate_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": 33.375,
+        "nearest": "orange_juice_1",
+        "pointed": "orange_juice_1"
+       },
+       "zs": {
+        "grip_first": 34.0,
+        "nearest": "orange_juice_1",
+        "pointed": "orange_juice_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": 39.75,
+        "nearest": "orange_juice_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 41.5,
+        "nearest": "orange_juice_1",
+        "pointed": "orange_juice_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the milk on the plate",
+     "t1": "pick up the milk and place it in the basket",
+     "t2": "pick up the black bowl from table center and place it on the plate"
+    },
+    "spatial:3": {
+     "l1": 0.4840584993362427,
+     "l1_zs": 0.6959774494171143,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": 23.75,
+        "nearest": "orange_juice_1",
+        "pointed": "akita_black_bowl_2"
+       },
+       "zs": {
+        "grip_first": 21.5,
+        "nearest": "orange_juice_1",
+        "pointed": "plate_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": 39.5,
+        "nearest": "orange_juice_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 33.25,
+        "nearest": "orange_juice_1",
+        "pointed": "akita_black_bowl_2"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": 32.125,
+        "nearest": "orange_juice_1",
+        "pointed": "cookies_1"
+       },
+       "zs": {
+        "grip_first": 39.0,
+        "nearest": "orange_juice_1",
+        "pointed": "orange_juice_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the orange juice on the plate",
+     "t1": "pick up the orange juice and place it in the basket",
+     "t2": "pick up the black bowl on the stove and place it on the plate"
+    },
+    "spatial:4": {
+     "l1": 0.5151663422584534,
+     "l1_zs": 0.601129412651062,
+     "lam": 24,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": 25.0,
+        "nearest": "plate_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 22.125,
+        "nearest": "plate_1",
+        "pointed": "plate_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": 28.875,
+        "nearest": "plate_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 28.875,
+        "nearest": "plate_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": 23.75,
+        "nearest": "plate_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 43.75,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the bowl on cookie box on the stove",
+     "t1": "pick up the black bowl next to the cookie box and place it on the plate",
+     "t2": "pick up the black bowl on the stove and place it on the plate"
+    },
+    "spatial:5": {
+     "l1": 0.580716073513031,
+     "l1_zs": 1.2840521335601807,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": 25.75,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 22.625,
+        "nearest": "plate_1",
+        "pointed": "plate_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": 30.625,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 35.125,
+        "nearest": "plate_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": -1.0,
+        "nearest": "plate_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 23.75,
+        "nearest": "plate_1",
+        "pointed": "plate_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the bowl on cookie box on the cabinet",
+     "t1": "pick up the black bowl next to the cookie box and place it on the plate",
+     "t2": "put the bowl on top of the cabinet"
+    },
+    "spatial:6": {
+     "l1": 0.6949586868286133,
+     "l1_zs": 1.1511263847351074,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": 26.125,
+        "nearest": "plate_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": 25.875,
+        "nearest": "plate_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": 30.375,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_2"
+       },
+       "zs": {
+        "grip_first": 34.375,
+        "nearest": "plate_1",
+        "pointed": "plate_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": 11.5,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": 11.375,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the bowl next to the plate on the cabinet",
+     "t1": "pick up the black bowl next to the plate and place it on the plate",
+     "t2": "put the bowl on top of the cabinet"
+    },
+    "spatial:7": {
+     "l1": 0.5007764101028442,
+     "l1_zs": 0.7296481728553772,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": 28.125,
+        "nearest": "plate_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": 27.75,
+        "nearest": "plate_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": 14.125,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 39.125,
+        "nearest": "plate_1",
+        "pointed": "cookies_1"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": 11.5,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": 11.5,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the bowl next to the plate on the stove",
+     "t1": "pick up the black bowl next to the plate and place it on the plate",
+     "t2": "pick up the black bowl on the stove and place it on the plate"
+    },
+    "spatial:8": {
+     "l1": 0.48652300238609314,
+     "l1_zs": 0.9365205764770508,
+     "lam": 12,
+     "mode": {
+      "approach": {
+       "tli_sel": {
+        "grip_first": 25.625,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_2"
+       },
+       "zs": {
+        "grip_first": 25.5,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_2"
+       }
+      },
+      "carry": {
+       "tli_sel": {
+        "grip_first": 38.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_1"
+       },
+       "zs": {
+        "grip_first": 47.125,
+        "nearest": "plate_1",
+        "pointed": "akita_black_bowl_2"
+       }
+      },
+      "start": {
+       "tli_sel": {
+        "grip_first": 33.375,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 39.25,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cookies_1"
+       }
+      }
+     },
+     "op": "tli_sel",
+     "prompt": "put the bowl at table center on the cabinet",
+     "t1": "pick up the black bowl from table center and place it on the plate",
+     "t2": "put the wine bottle on top of the cabinet"
+    },
+    "spatial:9": {
+     "l1": 0.38493281602859497,
+     "l1_zs": 0.5425658226013184,
+     "mode": {
+      "approach": {
+       "word": {
+        "grip_first": 24.375,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_2"
+       },
+       "zs": {
+        "grip_first": 26.5,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_2"
+       }
+      },
+      "carry": {
+       "word": {
+        "grip_first": 34.125,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "akita_black_bowl_2"
+       },
+       "zs": {
+        "grip_first": 39.125,
+        "nearest": "akita_black_bowl_2",
+        "pointed": "akita_black_bowl_2"
+       }
+      },
+      "start": {
+       "word": {
+        "grip_first": 37.75,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "plate_1"
+       },
+       "zs": {
+        "grip_first": 41.0,
+        "nearest": "akita_black_bowl_1",
+        "pointed": "cookies_1"
+       }
+      }
+     },
+     "op": "word",
+     "prompt": "put the bowl at table center on the stove",
+     "sched": "og",
+     "sources": {
+      "g": "put the bowl on the stove",
+      "o": "pick up the black bowl from table center and place it on the plate"
+     },
+     "span": "1-17"
+    }
+   },
+   "spans": {
+    "role": {
+     "1-17": 11,
+     "1-6": 4,
+     "13-17": 2,
+     "7-12": 3
+    },
+    "tmpl": {
+     "1-17": 6,
+     "1-6": 7,
+     "13-17": 4,
+     "7-12": 3
+    },
+    "word": {
+     "1-17": 5,
+     "1-6": 7,
+     "13-17": 4,
+     "7-12": 4
+    }
+   },
+   "table": {
+    "l2sel": {
+     "losses_vs_zs": 2,
+     "mean": 0.5017626225948334,
+     "n": 20,
+     "ratio_to_zs": 0.7918196569553654,
+     "sign_p": 0.0004024505615234375,
+     "wins_vs_zs": 18
+    },
+    "null": {
+     "losses_vs_zs": 14,
+     "mean": 0.7172313630580902,
+     "n": 20,
+     "ratio_to_zs": 1.1061773501753716,
+     "sign_p": 0.11531829833984375,
+     "wins_vs_zs": 6
+    },
+    "pos": {
+     "losses_vs_zs": 14,
+     "mean": 0.7341691330075264,
+     "n": 20,
+     "ratio_to_zs": 1.1580229524564107,
+     "sign_p": 0.11531829833984375,
+     "wins_vs_zs": 6
+    },
+    "rand": {
+     "losses_vs_zs": 14,
+     "mean": 0.7057005390524864,
+     "n": 20,
+     "ratio_to_zs": 1.0836380853907557,
+     "sign_p": 0.11531829833984375,
+     "wins_vs_zs": 6
+    },
+    "role": {
+     "losses_vs_zs": 4,
+     "mean": 0.6143762171268463,
+     "n": 20,
+     "ratio_to_zs": 0.9378304934630355,
+     "sign_p": 0.01181793212890625,
+     "wins_vs_zs": 16
+    },
+    "tli_li": {
+     "losses_vs_zs": 11,
+     "mean": 0.6573792144656181,
+     "n": 20,
+     "ratio_to_zs": 1.0269617761278809,
+     "sign_p": 0.8238029479980469,
+     "wins_vs_zs": 9
+    },
+    "tli_sel": {
+     "losses_vs_zs": 4,
+     "mean": 0.5208071798086167,
+     "n": 20,
+     "ratio_to_zs": 0.8231800423956314,
+     "sign_p": 0.01181793212890625,
+     "wins_vs_zs": 16
+    },
+    "tmpl": {
+     "losses_vs_zs": 1,
+     "mean": 0.5931737050414085,
+     "n": 20,
+     "ratio_to_zs": 0.9029069628812775,
+     "sign_p": 4.00543212890625e-05,
+     "wins_vs_zs": 19
+    },
+    "tmpl_only": {
+     "losses_vs_zs": 3,
+     "mean": 0.6524356201291084,
+     "n": 20,
+     "ratio_to_zs": 1.0073491183758938,
+     "sign_p": 1.0,
+     "wins_vs_zs": 4
+    },
+    "word": {
+     "losses_vs_zs": 3,
+     "mean": 0.5999073341488839,
+     "n": 20,
+     "ratio_to_zs": 0.9136392343510009,
+     "sign_p": 0.0025768280029296875,
+     "wins_vs_zs": 17
+    },
+    "zs": {
+     "losses_vs_zs": 0,
+     "mean": 0.6506172880530358,
+     "n": 20,
+     "ratio_to_zs": 1.0,
+     "sign_p": 1.0,
+     "wins_vs_zs": 0
+    }
+   },
+   "tasks": 20
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "pl2_offline__libero_ood-libero_90__read__s13__4b4325f6",
+ "schema": 1,
+ "script": "experiments/pl2_compose.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-22T21:33:52+00:00",
+ "stream": null,
+ "tag": "read"
+}

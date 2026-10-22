@@ -227,3 +227,97 @@ LIBERO-90-C dev: no zero-shot dev episodes of pi05_l90c were used. This is left 
 - An edit of the image-token K/V, layers 8-14, is also consistent with the map. It is scene-specific, so it is not a lexicon repair.
 - Recommendation: run at most a cheap L2 pilot (transplant / TLI at layers 0-2) and token inversion. Drop the rank-1 edit. Do not
   build the L4 lexicon on swap-magnitude grounding.
+
+## L2 results (2026-10-22: fast composition from language prototypes, no gradient, no practice)
+
+Pre-registered as `ledger/m3_prereg` tag pl2_compose (experiments/prereg/pl2_compose.py) before any L2 number. Code:
+`lifelong_ood/lang/transplant.py`, `experiments/pl2_compose.py`. Ledger rows: `pl2_offline`, `pl2_dev`. Figures:
+`figures/robot/pl2_offline.png`, `figures/robot/pl2_dev.png`. Served through additive arms: `lt@<name>` in launch_pack.py, and
+`lt:<spec>` in serve_guided.py.
+
+**Protocol.**
+- **Demos.** Li's tasks have no demos, so each task gets two recorded successes on a new start-state set (fresh_ood_pl2d,
+  BASE 3300000). They come from the *other* policy's strongest set-d arm (G13). The policy's own arm is used only where the other
+  policy failed: pi0 goal:3, spatial:6 and spatial:7. So these are policy-generated demos, not teleoperation. Demo 0 selects;
+  demo 1 is held out.
+- **Selection.** It uses only the flow loss on demo 0 (36 frames, 4 fixed draws): the object source, then the goal source, then
+  the layer span from {1-17, 1-6, 7-12, 13-17}. Layer 0 is never edited. TLI picks its pair at lambda 24, then lambda from
+  {12, 24, 36}.
+- **l2sel**, the tested arm, is the operator with the lowest demo-0 loss on that task.
+- **Controls** use l2sel's form:
+  - rand: a seeded random sentence with no word overlap;
+  - pos (T8): the no-overlap sentence whose training grasp or release is nearest demo 0's.
+
+**Offline: held-out demo-1 flow loss.** "Ratio" is the geometric mean of the arm's loss over zs's; "wins" counts tasks where the
+arm beats zs.
+
+| | pi0.5 Li-20: ratio / wins | pi0 Li-20: ratio / wins | pi0.5 LIBERO-90-16: ratio / wins |
+|---|---|---|---|
+| null prompt | 1.20 / 5 | 1.11 / 6 | 0.99 / 13 |
+| TLI, Li's pairs | 0.92 / 15 | 1.03 / 9 | — |
+| word | 0.91 / 15 | 0.91 / 17 | 0.96 / 15 |
+| tmpl | 0.90 / 14 | 0.90 / 19 | 0.94 / 16 |
+| tli_sel | 0.83 / 17 | 0.82 / 16 | 0.91 / 11 |
+| role | 0.91 / 15 | 0.94 / 16 | 0.96 / 12 |
+| **l2sel** | **0.83 / 16** (sign p 0.012) | **0.79 / 18** (p 0.0004) | **0.88 / 14** (p 0.004) |
+| rand | 1.16 / 6 | 1.08 / 6 | 1.07 / 6 |
+| pos (T8) | 1.30 / 2 | 1.16 / 6 | 1.00 / 6 |
+
+- l2sel picks TLI on 13/20 tasks for both policies; word, tmpl or role on the rest.
+- The template step rarely matters. Li's sentences already use "put the X Y", so tmpl equals word on most tasks.
+- The layer span picked for word is mostly 1-17 on pi0.5 (13/20); on pi0 it is spread across spans.
+- pi0 on LIBERO-90-16: l2sel 0.87 / 12 (sign p 0.077), word 0.94 / 16, tli_sel 0.90 / 10, rand 1.11 / 2, pos 0.99 / 7.
+
+**Closed loop: 8 dev tasks × 20 episodes, fresh_ood_pl2 (never used), seed 13, paired.**
+
+| arm | pi0.5 success | g / p\|g | pi0 success | g / p\|g |
+|---|---|---|---|---|
+| zs | 63 / 160 | 0.85 / 0.46 | 11 / 160 | 0.51 / 0.11 |
+| TLI, Li's pairs | 84 | 0.86 / 0.61 | **106** | 0.93 / 0.70 |
+| **l2sel** | **91** | 0.78 / 0.71 | 39 | 0.65 / 0.37 |
+| word | 80 | 0.75 / 0.65 | 2 | 0.26 / 0.05 |
+| tmpl | 80 | 0.75 / 0.65 | 2 | 0.25 / 0.05 |
+| tli_sel | 81 | 0.82 / 0.60 | 40 | 0.78 / 0.32 |
+| role | 73 | 0.84 / 0.54 | 3 | 0.29 / 0.04 |
+| rand | 39 | 0.61 / 0.39 | 0 | 0.37 / 0.00 |
+| pos (T8) | 15 | 0.29 / 0.33 | 15 | 0.34 / 0.27 |
+
+Pre-registered tests:
+- **pi0.5.**
+  - H1 PASSES: 91 vs 63, discordant 34:6, sign p 8e-6. The task-level bootstrap interval still includes 0 (+0.175, -0.037 to
+    +0.419): the gain sits on 3-4 tasks.
+  - H2 PASSES: difference to Li's TLI +0.044, 95% interval -0.031 to +0.150, so the lower bound is above -0.05.
+  - The controls fall far below l2sel (rand 39, pos 15).
+- **pi0.**
+  - H1 PASSES: 39 vs 11, sign p 6e-5.
+  - H2 FAILS badly: difference -0.419, 95% interval -0.675 to -0.169, against Li's TLI at 106.
+
+**Reading.**
+1. **The pi0.5 result holds only conditionally: a weak operator choice fails safe.** With no practice and one demo, the
+   demo-selected composition matches TLI with Li's hand pairs. Nearly all of the gain is from TLI with a demo-chosen pair:
+   20/20 on goal:5, goal:6 and goal:7.
+2. **Word transplants help pi0.5 but break pi0 in closed loop.** On pi0, word, tmpl and role reach 2-3 / 160, below zs's 11,
+   although offline they beat zs on 16-19/20 tasks. Lower demo-1 flow loss does not transfer to rollouts for word edits on pi0.
+   This is the main negative. For pi0, the demo flow loss is not a safe selector between operator families.
+3. **The selector is not robust across tasks.** On pi0.5 goal:1 it picked role (11/20, zs 15). On goal:2 TLI's demo-1 loss was
+   already worse than zs's (overfit selection). On pi0 goal:1 / goal:4, role's goal source was "turn on the stove": the word
+   matched, but its role was wrong.
+4. **T8 control: word grounding, not position, on average.**
+   - The position-matched no-overlap source is the worst arm on pi0.5 (15/160) and well below l2sel on pi0 (15 vs 39).
+   - Exception: pi0 goal:1, where pos reaches 15/20 while every word-matched arm gets 0. There, position or trajectory
+     selection beats word grounding.
+5. **Interpretation.**
+   - Mode readouts at demo-1 frames, from protos/store.py interpret (`results/lang/pl2/offline_read.json`, keys modes and
+     repairs), barely change the approach endpoint.
+   - The repairs act mostly in the carrying phase, on where the motion points. For example, pi0.5 goal:7 (TLI "put the cream
+     cheese in the bowl" → "put the bowl on the plate", lambda 12) moves the carrying direction from the bowl to the plate,
+     and success goes from 8 to 20.
+   - Gripper timing is unchanged. This agrees with p|g rising (0.46 → 0.71 on pi0.5) while g does not (0.85 → 0.78).
+6. **Layer span vs the L0b trace.** The only spans tried start at layer 1, and spans 1-17 / 1-6 contain layers 1-2, where the trace
+   locates the binding. Demo selection chose 1-17 or 1-6 on 13/20 (pi0.5) and 12/20 (pi0) tasks for word.
+
+**Not yet done:**
+- the confirm read on the other 12 tasks (rules frozen);
+- a teleop-style demo source (these demos come from a policy, and on pi0.5 the source is TLI on pi0, which may favour the TLI
+  family);
+- a guard that falls back to zs when no operator's demo-0 loss beats it.

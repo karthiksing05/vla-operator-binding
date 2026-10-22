@@ -1,0 +1,41 @@
+{
+ "prompt": "put the orange juice on the stove",
+ "lo": 13,
+ "hi": 17,
+ "schedule": "ph",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 9,
+   "phrase": "orange juice <- book",
+   "new_pos": [
+    3,
+    4
+   ],
+   "src_pos": [
+    4,
+    4
+   ]
+  },
+  {
+   "role": "g",
+   "src": 13,
+   "phrase": "on the stove <- in the bowl",
+   "new_pos": [
+    5,
+    6,
+    7
+   ],
+   "src_pos": [
+    5,
+    6,
+    7
+   ]
+  }
+ ],
+ "meta": {
+  "task": "goal:1",
+  "arm": "rand"
+ }
+}

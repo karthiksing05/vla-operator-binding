@@ -1,0 +1,45 @@
+{
+ "prompt": "put the cream cheese on top of the cabinet",
+ "lo": 1,
+ "hi": 6,
+ "schedule": "og",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 21,
+   "phrase": "cream cheese <- ketchup",
+   "new_pos": [
+    3,
+    4
+   ],
+   "src_pos": [
+    4,
+    4
+   ]
+  },
+  {
+   "role": "g",
+   "src": 35,
+   "phrase": "on top of the cabinet <- on the plate",
+   "new_pos": [
+    5,
+    6,
+    7,
+    8,
+    9
+   ],
+   "src_pos": [
+    13,
+    13,
+    13,
+    14,
+    15
+   ]
+  }
+ ],
+ "meta": {
+  "task": "goal:9",
+  "arm": "rand"
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "prompt": "pick up the orange juice and place it on the plate",
+ "lo": 7,
+ "hi": 12,
+ "schedule": "og",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 20,
+   "phrase": "orange juice",
+   "new_pos": [
+    4,
+    5
+   ],
+   "src_pos": [
+    4,
+    5
+   ]
+  },
+  {
+   "role": "g",
+   "src": 33,
+   "phrase": "on the plate",
+   "new_pos": [
+    9,
+    10,
+    11
+   ],
+   "src_pos": [
+    12,
+    13,
+    14
+   ]
+  }
+ ],
+ "meta": {
+  "task": "spatial:3",
+  "arm": "tmpl"
+ }
+}

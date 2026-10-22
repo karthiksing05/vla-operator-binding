@@ -1,0 +1,750 @@
+{
+ "key": "goal:1",
+ "text": "put the orange juice on the stove",
+ "roles": {
+  "o": "orange juice",
+  "g": "on the stove"
+ },
+ "cands": {
+  "o": [
+   20
+  ],
+  "g": [
+   3,
+   6,
+   15,
+   16,
+   17,
+   33
+  ]
+ },
+ "d0": {
+  "T": 93,
+  "c0": 39,
+  "rel": 93
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 20,
+    "g": 16
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "o:20": 0.4137418866157532,
+    "g:3": 0.41364407539367676,
+    "g:6": 0.4691537618637085,
+    "g:15": 0.4609535336494446,
+    "g:16": 0.3852357268333435,
+    "g:17": 0.3912770450115204,
+    "g:33": 0.4657931923866272
+   },
+   "span_loss": {
+    "1-17": 0.3852357268333435,
+    "1-6": 0.38185128569602966,
+    "7-12": 0.37402287125587463,
+    "13-17": 0.40842539072036743
+   }
+  },
+  "role": {
+   "src": {
+    "o": 20,
+    "g": 16
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:20": 0.4176889657974243,
+    "g:3": 0.3961000144481659,
+    "g:6": 0.43264713883399963,
+    "g:15": 0.4274214804172516,
+    "g:16": 0.3573112487792969,
+    "g:17": 0.42706406116485596,
+    "g:33": 0.41105619072914124
+   },
+   "span_loss": {
+    "1-17": 0.3573112487792969,
+    "1-6": 0.3783307373523712,
+    "7-12": 0.37859228253364563,
+    "13-17": 0.40766310691833496
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 20,
+    "g": 17
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "o:20": 0.4091275632381439,
+    "g:3": 0.38547247648239136,
+    "g:6": 0.4622337222099304,
+    "g:15": 0.45823046565055847,
+    "g:16": 0.3928791880607605,
+    "g:17": 0.3744078576564789,
+    "g:33": 0.4504413604736328
+   },
+   "span_loss": {
+    "1-17": 0.3744078576564789,
+    "1-6": 0.3733053207397461,
+    "7-12": 0.3704034984111786,
+    "13-17": 0.4076641798019409
+   },
+   "template": "pick up the {O} and place it {G}",
+   "prompt": "pick up the orange juice and place it on the stove",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the orange juice and place it on the stove",
+     "with_word": 0.34457412362098694,
+     "alone": 0.4083130359649658
+    },
+    "put the {O} {G}": {
+     "prompt": "put the orange juice on the stove",
+     "with_word": 0.37402287125587463,
+     "alone": 0.419294148683548
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    20,
+    33
+   ],
+   "lam": 24,
+   "pairs": {
+    "20.17": 0.5112356543540955,
+    "20.33": 0.4140474200248718
+   },
+   "lams": {
+    "24": 0.4140474200248718,
+    "12": 0.4491479694843292,
+    "36": 0.4483051300048828
+   },
+   "cands": {
+    "o": [
+     20
+    ],
+    "g": [
+     17,
+     33
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.419294148683548,
+  "null": 0.7073396444320679,
+  "tli_li": 0.780443012714386,
+  "word": 0.37402287125587463,
+  "role": 0.3573112487792969,
+  "tmpl": 0.3704034984111786,
+  "tmpl_only": 0.4083130359649658,
+  "tli_sel": 0.4140474200248718,
+  "rand": 0.4391483664512634,
+  "pos": 0.5537539124488831,
+  "l2sel": 0.3573112487792969
+ },
+ "l1": {
+  "zs": 0.5866653323173523,
+  "null": 0.9243971109390259,
+  "tli_li": 1.038737177848816,
+  "word": 0.5143554210662842,
+  "role": 0.5304225087165833,
+  "tmpl": 0.49662238359451294,
+  "tmpl_only": 0.5638781785964966,
+  "tli_sel": 0.5812563300132751,
+  "rand": 0.5500501990318298,
+  "pos": 0.7484704256057739,
+  "l2sel": 0.5304225087165833
+ },
+ "l2sel": "role",
+ "controls": {
+  "o": {
+   "rand": 9,
+   "pos": 14,
+   "rand_text": "pick up the book and place it in the back compartment of the caddy",
+   "pos_text": "put the wine bottle on top of the cabinet"
+  },
+  "g": {
+   "rand": 13,
+   "pos": 13,
+   "rand_text": "put the cream cheese in the bowl",
+   "pos_text": "put the cream cheese in the bowl"
+  }
+ },
+ "n_eval": 61,
+ "arms": {
+  "zs": {
+   "prompt": "put the orange juice on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_li": {
+   "prompt": "put the orange juice on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 14,
+    "t2": 17,
+    "lam": 24
+   }
+  },
+  "word": {
+   "prompt": "put the orange juice on the stove",
+   "edits": [
+    {
+     "role": "o",
+     "src": 20,
+     "phrase": "orange juice",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 16,
+     "phrase": "on the stove",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      2,
+      3,
+      4
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the orange juice on the stove",
+   "edits": [
+    {
+     "role": "o",
+     "src": 20,
+     "phrase": "orange juice",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 16,
+     "phrase": "on the stove",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      2,
+      3,
+      4
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "pick up the orange juice and place it on the stove",
+   "edits": [
+    {
+     "role": "o",
+     "src": 20,
+     "phrase": "orange juice",
+     "new_pos": [
+      4,
+      5
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 17,
+     "phrase": "on the stove",
+     "new_pos": [
+      9,
+      10,
+      11
+     ],
+     "src_pos": [
+      4,
+      5,
+      6
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "pick up the orange juice and place it on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the orange juice on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 20,
+    "t2": 33,
+    "lam": 24
+   }
+  },
+  "rand": {
+   "prompt": "put the orange juice on the stove",
+   "edits": [
+    {
+     "role": "o",
+     "src": 9,
+     "phrase": "orange juice <- book",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 13,
+     "phrase": "on the stove <- in the bowl",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      5,
+      6,
+      7
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "pos": {
+   "prompt": "put the orange juice on the stove",
+   "edits": [
+    {
+     "role": "o",
+     "src": 14,
+     "phrase": "orange juice <- wine bottle",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      3,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 13,
+     "phrase": "on the stove <- in the bowl",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      5,
+      6,
+      7
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  }
+ },
+ "modes": {
+  "start": {
+   "frame": 0,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.1190612929398831,
+     0.0033666861757142303,
+     1.0183057573056091
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 35.375,
+    "grip_closed": 0.037500000000000006
+   },
+   "word": {
+    "endpoint": [
+     -0.17686168375194872,
+     0.05092439434239599,
+     1.0080409321579187
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 34.625,
+    "grip_closed": 0.0525
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.12882327409690872,
+     0.003931122775157526,
+     1.0221776028261729
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 0.125,
+    "grip_first": 36.875,
+    "grip_closed": 0.1275
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.10156533580315252,
+     0.03493780863977956,
+     1.0270799694992798
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 32.375,
+    "grip_closed": 0.0975
+   },
+   "role": {
+    "endpoint": [
+     -0.1093499172829672,
+     0.005075706555849697,
+     1.0046789166118213
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.875,
+    "named_point": 0.0,
+    "grip_first": 34.75,
+    "grip_closed": 0.049999999999999996
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.18841002692231135,
+     -0.005893914798562987,
+     1.1134123109071095
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 0.5,
+    "grip_first": 30.25,
+    "grip_closed": 0.125
+   },
+   "rand": {
+    "endpoint": [
+     -0.15432055096640784,
+     0.05432697393059243,
+     0.9547251484244526
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 38.875,
+    "grip_closed": 0.095
+   },
+   "pos": {
+    "endpoint": [
+     -0.1868574022151141,
+     0.0059979518610130565,
+     1.094199891466537
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 0.25,
+    "grip_first": 28.875,
+    "grip_closed": 0.04
+   }
+  },
+  "approach": {
+   "frame": 16,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.1322626127412188,
+     0.07006385789080559,
+     1.0942270771027116
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 23.25,
+    "grip_closed": 0.5325
+   },
+   "word": {
+    "endpoint": [
+     -0.18134881166487835,
+     0.06740758224233001,
+     0.9784843987450833
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 0.75,
+    "grip_first": 28.875,
+    "grip_closed": 0.4075
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.17608628838013232,
+     0.11222229738688028,
+     1.081143923113828
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.25,
+    "grip_first": 21.25,
+    "grip_closed": 0.565
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.13030478478061183,
+     0.07758857874663039,
+     1.0853025683945592
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 24.125,
+    "grip_closed": 0.5075000000000001
+   },
+   "role": {
+    "endpoint": [
+     -0.13137114922784615,
+     0.0656821731045995,
+     1.0837797927443875
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 23.25,
+    "grip_closed": 0.535
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.08896674599907903,
+     -0.036954289265338315,
+     1.210867023396805
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 19.875,
+    "grip_closed": 0.6025
+   },
+   "rand": {
+    "endpoint": [
+     -0.1669047199859834,
+     0.0777385596669614,
+     1.0357418614857046
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.25,
+    "grip_first": 22.375,
+    "grip_closed": 0.5525
+   },
+   "pos": {
+    "endpoint": [
+     -0.13991107904242928,
+     0.026698177318968834,
+     1.129974167032045
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 22.125,
+    "grip_closed": 0.5575000000000001
+   }
+  },
+  "carry": {
+   "frame": 55,
+   "carry": true,
+   "zs": {
+    "endpoint": [
+     -0.19437685931094384,
+     0.21874180163443674,
+     1.048936041134469
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 35.875,
+    "grip_closed": 0.7175
+   },
+   "word": {
+    "endpoint": [
+     -0.19702275876898218,
+     0.2159175381502901,
+     1.0385535432988153
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 37.25,
+    "grip_closed": 0.745
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.2042362687202792,
+     0.21944083187988103,
+     1.0588772519804326
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 34.0,
+    "grip_closed": 0.68
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.18201787785294224,
+     0.2264940527120306,
+     1.0447585397016506
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 37.125,
+    "grip_closed": 0.7424999999999999
+   },
+   "role": {
+    "endpoint": [
+     -0.20212426456105395,
+     0.20818978011370015,
+     1.0176579066580917
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 36.125,
+    "grip_closed": 0.7224999999999999
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.1107140209822467,
+     -0.09131591423897667,
+     1.1740426357683487
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 37.25,
+    "grip_closed": 0.745
+   },
+   "rand": {
+    "endpoint": [
+     -0.16495118133478742,
+     0.22492105155500433,
+     1.063332424836255
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 36.5,
+    "grip_closed": 0.73
+   },
+   "pos": {
+    "endpoint": [
+     -0.16495118133478742,
+     0.22492105155500433,
+     1.063332424836255
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 36.5,
+    "grip_closed": 0.73
+   }
+  }
+ },
+ "seconds": 296.3247573375702,
+ "demo_src": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_goal_libero_goal_ood_1_pfield_14.17_seed13_rec/task1_trial0.npz",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_goal_libero_goal_ood_1_pfield_14.17_seed13_rec/task1_trial1.npz"
+ ]
+}

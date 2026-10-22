@@ -1,0 +1,289 @@
+{
+ "key": "l90:86",
+ "text": "pick up the book in the middle and place it on the cabinet shelf",
+ "roles": {
+  "o": "book",
+  "g": "on the cabinet shelf"
+ },
+ "cands": {
+  "o": [
+   9
+  ],
+  "g": []
+ },
+ "d0": {
+  "T": 167,
+  "c0": 51,
+  "rel": 167
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 9
+   },
+   "span": [
+    1,
+    6
+   ],
+   "trace": {
+    "o:9": 1.172905683517456
+   },
+   "span_loss": {
+    "1-17": 1.172905683517456,
+    "1-6": 1.1716517210006714,
+    "7-12": 1.1817445755004883,
+    "13-17": 1.1821062564849854
+   }
+  },
+  "role": {
+   "src": {
+    "o": 9
+   },
+   "span": [
+    1,
+    6
+   ],
+   "trace": {
+    "o:9": 1.183485746383667
+   },
+   "span_loss": {
+    "1-17": 1.183485746383667,
+    "1-6": 1.1820095777511597,
+    "7-12": 1.1835222244262695,
+    "13-17": 1.1823663711547852
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 9
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:9": 1.1862714290618896
+   },
+   "span_loss": {
+    "1-17": 1.1862714290618896,
+    "1-6": 1.1884955167770386,
+    "7-12": 1.1919891834259033,
+    "13-17": 1.1925427913665771
+   },
+   "template": "put the {O} {G}",
+   "prompt": "put the book on the cabinet shelf",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the book and place it on the cabinet shelf",
+     "with_word": 1.1907168626785278,
+     "alone": 1.2023603916168213
+    },
+    "put the {O} {G}": {
+     "prompt": "put the book on the cabinet shelf",
+     "with_word": 1.1884955167770386,
+     "alone": 1.1934301853179932
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    9,
+    17
+   ],
+   "lam": 12,
+   "pairs": {
+    "9.10": 1.2258274555206299,
+    "9.11": 1.240330696105957,
+    "9.13": 1.2252833843231201,
+    "9.14": 1.2749770879745483,
+    "9.17": 1.1080636978149414,
+    "9.18": 1.2593833208084106
+   },
+   "lams": {
+    "24": 1.1080636978149414,
+    "12": 1.0945690870285034,
+    "36": 1.1163146495819092
+   },
+   "cands": {
+    "o": [
+     9
+    ],
+    "g": [
+     10,
+     11,
+     13,
+     14,
+     17,
+     18
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 1.1833887100219727,
+  "null": 1.1401054859161377,
+  "word": 1.1716517210006714,
+  "role": 1.1820095777511597,
+  "tmpl": 1.1862714290618896,
+  "tmpl_only": 1.1934301853179932,
+  "tli_sel": 1.0945690870285034,
+  "rand": 1.1614335775375366,
+  "pos": 1.3063799142837524,
+  "l2sel": 1.0945690870285034
+ },
+ "l1": {
+  "zs": 0.560676097869873,
+  "null": 0.5277152061462402,
+  "word": 0.5538076162338257,
+  "role": 0.5576999187469482,
+  "tmpl": 0.551291286945343,
+  "tmpl_only": 0.5570781230926514,
+  "tli_sel": 0.6040228605270386,
+  "rand": 0.5976999402046204,
+  "pos": 0.6890296339988708,
+  "l2sel": 0.6040228605270386
+ },
+ "l2sel": "tli_sel",
+ "controls": {
+  "o": {
+   "rand": 21,
+   "pos": 33,
+   "rand_text": "pick up the ketchup and place it in the basket",
+   "pos_text": "pick up the black bowl on the stove and place it on the plate"
+  },
+  "g": {
+   "rand": 37,
+   "pos": 17,
+   "rand_text": "pick up the black bowl next to the ramekin and place it on the plate",
+   "pos_text": "put the bowl on the stove"
+  }
+ },
+ "n_eval": 45,
+ "arms": {
+  "zs": {
+   "prompt": "pick up the book in the middle and place it on the cabinet shelf",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "word": {
+   "prompt": "pick up the book in the middle and place it on the cabinet shelf",
+   "edits": [
+    {
+     "role": "o",
+     "src": 9,
+     "phrase": "book",
+     "new_pos": [
+      4
+     ],
+     "src_pos": [
+      4
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "pick up the book in the middle and place it on the cabinet shelf",
+   "edits": [
+    {
+     "role": "o",
+     "src": 9,
+     "phrase": "book",
+     "new_pos": [
+      4
+     ],
+     "src_pos": [
+      4
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "put the book on the cabinet shelf",
+   "edits": [
+    {
+     "role": "o",
+     "src": 9,
+     "phrase": "book",
+     "new_pos": [
+      3
+     ],
+     "src_pos": [
+      4
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "put the book on the cabinet shelf",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "pick up the book in the middle and place it on the cabinet shelf",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 9,
+    "t2": 17,
+    "lam": 12
+   }
+  },
+  "rand": {
+   "prompt": "pick up the book in the middle and place it on the cabinet shelf",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 21,
+    "t2": 37,
+    "lam": 12
+   }
+  },
+  "pos": {
+   "prompt": "pick up the book in the middle and place it on the cabinet shelf",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 33,
+    "t2": 17,
+    "lam": 12
+   }
+  }
+ },
+ "seconds": 119.77702808380127,
+ "demo_src": [
+  1048,
+  1049
+ ]
+}

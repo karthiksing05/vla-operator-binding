@@ -1,0 +1,41 @@
+{
+ "prompt": "put the cream cheese on the plate",
+ "lo": 1,
+ "hi": 17,
+ "schedule": "og",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 7,
+   "phrase": "cream cheese",
+   "new_pos": [
+    3,
+    4
+   ],
+   "src_pos": [
+    4,
+    5
+   ]
+  },
+  {
+   "role": "g",
+   "src": 33,
+   "phrase": "on the plate",
+   "new_pos": [
+    5,
+    6,
+    7
+   ],
+   "src_pos": [
+    12,
+    13,
+    14
+   ]
+  }
+ ],
+ "meta": {
+  "task": "goal:7",
+  "arm": "tmpl"
+ }
+}

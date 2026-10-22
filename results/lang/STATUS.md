@@ -26,3 +26,10 @@
 - 12:50: pi0 audit COMPLETE; ledger pl0_audit (read_pi05, read_pi0) and pl1_predict (read) recorded. L1 pre-registered GO FAILS: pooled AUC(-min G) 0.459 [0.24, 0.67]; pi05 0.505, pi0 0.556; mean-G AUC 0.627. Trace 101/120 running (4191026).
 - 13:10: ALL DONE. L0a (both policies, 800 obs each), L0b (120 traces), L1 recorded. Results section appended to docs/PLAN_LANG.md.
   Verdict: L1 KILL (pooled AUC 0.459); L0b: word leaves its positions after layer 1 into image tokens -> rank-1 edit KILL; token inversion / early-layer transplant remain.
+- 2026-10-22 14:40 (L2): offline done for Li's 20 x {pi0.5, pi0} and pi0.5 LIBERO-90 16 (pi0 LIBERO-90 3/16, rest queued).
+  Held-out demo-1 flow loss: l2sel beats zs on 16/20 (pi0.5) and 18/20 (pi0) tasks; l2sel beats both controls 19-20/20.
+  l2sel picks TLI on 13/20 for both policies. Closed loop on 8 dev tasks running: pi0 packs 4192693-708, pi0.5 4193247-262.
+- 2026-10-22 17:40 (L2): DONE. Ledger pl2_offline, pl2_dev recorded; docs/PLAN_LANG.md "L2 results"; figures/robot/pl2_offline.png,
+  pl2_dev.png. Dev closed loop: pi0.5 l2sel 91/160 vs zs 63 (H1 pass) vs Li-TLI 84 (H2 pass, lb -0.031); pi0 l2sel 39 vs zs 11 (H1
+  pass) vs Li-TLI 106 (H2 FAIL). Word transplants collapse on pi0 closed loop (2-3/160) despite offline wins. T8 pos control worst
+  arm on pi0.5. Confirm read (12 tasks) not run.

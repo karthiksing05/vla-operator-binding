@@ -1,0 +1,41 @@
+{
+ "prompt": "put the wine bottle on the stove",
+ "lo": 1,
+ "hi": 17,
+ "schedule": "ph",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 18,
+   "phrase": "wine bottle <- bowl",
+   "new_pos": [
+    3,
+    4
+   ],
+   "src_pos": [
+    3,
+    3
+   ]
+  },
+  {
+   "role": "g",
+   "src": 13,
+   "phrase": "on the stove <- in the bowl",
+   "new_pos": [
+    5,
+    6,
+    7
+   ],
+   "src_pos": [
+    5,
+    6,
+    7
+   ]
+  }
+ ],
+ "meta": {
+  "task": "goal:4",
+  "arm": "pos"
+ }
+}

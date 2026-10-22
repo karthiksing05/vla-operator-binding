@@ -1,0 +1,299 @@
+{
+ "key": "l90:87",
+ "text": "pick up the book on the left and place it on top of the shelf",
+ "roles": {
+  "o": "book",
+  "g": "on top of the shelf"
+ },
+ "cands": {
+  "o": [
+   9
+  ],
+  "g": []
+ },
+ "d0": {
+  "T": 146,
+  "c0": 53,
+  "rel": 133
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 9
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "o:9": 0.5442070960998535
+   },
+   "span_loss": {
+    "1-17": 0.5442070960998535,
+    "1-6": 0.5453734993934631,
+    "7-12": 0.5432987809181213,
+    "13-17": 0.5441411733627319
+   }
+  },
+  "role": {
+   "src": {
+    "o": 9
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:9": 0.5437265038490295
+   },
+   "span_loss": {
+    "1-17": 0.5437265038490295,
+    "1-6": 0.543797492980957,
+    "7-12": 0.5437949895858765,
+    "13-17": 0.544193685054779
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 9
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "o:9": 0.5181928873062134
+   },
+   "span_loss": {
+    "1-17": 0.5181928873062134,
+    "1-6": 0.5187159776687622,
+    "7-12": 0.5154411196708679,
+    "13-17": 0.5197100043296814
+   },
+   "template": "put the {O} {G}",
+   "prompt": "put the book on top of the shelf",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the book and place it on top of the shelf",
+     "with_word": 0.540995180606842,
+     "alone": 0.5426176190376282
+    },
+    "put the {O} {G}": {
+     "prompt": "put the book on top of the shelf",
+     "with_word": 0.5154411196708679,
+     "alone": 0.519434928894043
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    9,
+    11
+   ],
+   "lam": 36,
+   "pairs": {
+    "9.10": 0.6866876482963562,
+    "9.11": 0.5271392464637756,
+    "9.13": 0.6111534237861633,
+    "9.14": 0.5668586492538452,
+    "9.17": 0.7147234082221985,
+    "9.18": 0.5741623044013977
+   },
+   "lams": {
+    "24": 0.5271392464637756,
+    "12": 0.6214481592178345,
+    "36": 0.5248602628707886
+   },
+   "cands": {
+    "o": [
+     9
+    ],
+    "g": [
+     10,
+     11,
+     13,
+     14,
+     17,
+     18
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.5442214608192444,
+  "null": 0.5160725712776184,
+  "word": 0.5432987809181213,
+  "role": 0.5437265038490295,
+  "tmpl": 0.5154411196708679,
+  "tmpl_only": 0.519434928894043,
+  "tli_sel": 0.5248602628707886,
+  "rand": 0.5256397724151611,
+  "pos": 0.5373403429985046,
+  "l2sel": 0.5154411196708679
+ },
+ "l1": {
+  "zs": 0.5828664898872375,
+  "null": 0.5426357984542847,
+  "word": 0.5804517865180969,
+  "role": 0.5809911489486694,
+  "tmpl": 0.5823354125022888,
+  "tmpl_only": 0.586101770401001,
+  "tli_sel": 0.6339769959449768,
+  "rand": 0.5962482690811157,
+  "pos": 0.5851530432701111,
+  "l2sel": 0.5823354125022888
+ },
+ "l2sel": "tmpl",
+ "controls": {
+  "o": {
+   "rand": 23,
+   "pos": 33,
+   "rand_text": "pick up the bbq sauce and place it in the basket",
+   "pos_text": "pick up the black bowl on the stove and place it on the plate"
+  }
+ },
+ "n_eval": 45,
+ "arms": {
+  "zs": {
+   "prompt": "pick up the book on the left and place it on top of the shelf",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "word": {
+   "prompt": "pick up the book on the left and place it on top of the shelf",
+   "edits": [
+    {
+     "role": "o",
+     "src": 9,
+     "phrase": "book",
+     "new_pos": [
+      4
+     ],
+     "src_pos": [
+      4
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "pick up the book on the left and place it on top of the shelf",
+   "edits": [
+    {
+     "role": "o",
+     "src": 9,
+     "phrase": "book",
+     "new_pos": [
+      4
+     ],
+     "src_pos": [
+      4
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "put the book on top of the shelf",
+   "edits": [
+    {
+     "role": "o",
+     "src": 9,
+     "phrase": "book",
+     "new_pos": [
+      3
+     ],
+     "src_pos": [
+      4
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "put the book on top of the shelf",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "pick up the book on the left and place it on top of the shelf",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 9,
+    "t2": 11,
+    "lam": 36
+   }
+  },
+  "rand": {
+   "prompt": "put the book on top of the shelf",
+   "edits": [
+    {
+     "role": "o",
+     "src": 23,
+     "phrase": "book <- bbq sauce",
+     "new_pos": [
+      3
+     ],
+     "src_pos": [
+      5
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "og",
+   "tli": null
+  },
+  "pos": {
+   "prompt": "put the book on top of the shelf",
+   "edits": [
+    {
+     "role": "o",
+     "src": 33,
+     "phrase": "book <- black bowl on the stove",
+     "new_pos": [
+      3
+     ],
+     "src_pos": [
+      8
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "og",
+   "tli": null
+  }
+ },
+ "seconds": 161.90890192985535,
+ "demo_src": [
+  2796,
+  2797
+ ]
+}

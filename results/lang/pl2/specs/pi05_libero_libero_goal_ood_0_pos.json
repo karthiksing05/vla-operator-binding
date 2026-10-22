@@ -1,0 +1,41 @@
+{
+ "prompt": "pick up the cream cheese and place it in the basket",
+ "lo": 1,
+ "hi": 17,
+ "schedule": "og",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 34,
+   "phrase": "cream cheese <- black bowl between the plate and the ramekin",
+   "new_pos": [
+    4,
+    5
+   ],
+   "src_pos": [
+    11,
+    12
+   ]
+  },
+  {
+   "role": "g",
+   "src": 17,
+   "phrase": "in the basket <- on the stove",
+   "new_pos": [
+    9,
+    10,
+    11
+   ],
+   "src_pos": [
+    4,
+    5,
+    6
+   ]
+  }
+ ],
+ "meta": {
+  "task": "goal:0",
+  "arm": "pos"
+ }
+}

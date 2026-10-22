@@ -1,0 +1,41 @@
+{
+ "prompt": "pick up the chocolate pudding and place it on the plate",
+ "lo": 1,
+ "hi": 6,
+ "schedule": "og",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 1,
+   "phrase": "chocolate pudding",
+   "new_pos": [
+    4,
+    5
+   ],
+   "src_pos": [
+    11,
+    12
+   ]
+  },
+  {
+   "role": "g",
+   "src": 10,
+   "phrase": "on the plate",
+   "new_pos": [
+    9,
+    10,
+    11
+   ],
+   "src_pos": [
+    4,
+    5,
+    6
+   ]
+  }
+ ],
+ "meta": {
+  "task": "spatial:1",
+  "arm": "tmpl"
+ }
+}

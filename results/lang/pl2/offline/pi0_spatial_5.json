@@ -1,0 +1,703 @@
+{
+ "key": "spatial:5",
+ "text": "put the bowl on cookie box on the cabinet",
+ "roles": {
+  "o": "bowl on cookie box",
+  "g": "on the cabinet"
+ },
+ "cands": {
+  "o": [
+   4,
+   7,
+   30,
+   35
+  ],
+  "g": [
+   8,
+   14,
+   18,
+   19,
+   31,
+   39
+  ]
+ },
+ "d0": {
+  "T": 117,
+  "c0": 44,
+  "rel": 117
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 7,
+    "g": 18
+   },
+   "span": [
+    1,
+    6
+   ],
+   "trace": {
+    "o:4": 1.2745277881622314,
+    "o:7": 1.2550338506698608,
+    "o:30": 1.3651899099349976,
+    "o:35": 1.3218224048614502,
+    "g:8": 1.391366720199585,
+    "g:14": 1.2944191694259644,
+    "g:18": 1.269085168838501,
+    "g:19": 1.386494755744934,
+    "g:31": 1.3818415403366089,
+    "g:39": 1.3538215160369873
+   },
+   "span_loss": {
+    "1-17": 1.269085168838501,
+    "1-6": 1.2681386470794678,
+    "7-12": 1.2882721424102783,
+    "13-17": 1.3039630651474
+   }
+  },
+  "role": {
+   "src": {
+    "o": 7,
+    "g": 18
+   },
+   "span": [
+    1,
+    6
+   ],
+   "trace": {
+    "o:4": 1.2979410886764526,
+    "o:7": 1.28922438621521,
+    "o:30": 1.3318709135055542,
+    "o:35": 1.3188062906265259,
+    "g:8": 1.3515383005142212,
+    "g:14": 1.2991516590118408,
+    "g:18": 1.2881975173950195,
+    "g:19": 1.3458064794540405,
+    "g:31": 1.34605073928833,
+    "g:39": 1.3210557699203491
+   },
+   "span_loss": {
+    "1-17": 1.2881975173950195,
+    "1-6": 1.2870116233825684,
+    "7-12": 1.3055306673049927,
+    "13-17": 1.3102779388427734
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 7,
+    "g": 18
+   },
+   "span": [
+    1,
+    6
+   ],
+   "trace": {
+    "o:4": 1.2745277881622314,
+    "o:7": 1.2550338506698608,
+    "o:30": 1.3651899099349976,
+    "o:35": 1.3218224048614502,
+    "g:8": 1.391366720199585,
+    "g:14": 1.2944191694259644,
+    "g:18": 1.269085168838501,
+    "g:19": 1.386494755744934,
+    "g:31": 1.3818415403366089,
+    "g:39": 1.3538215160369873
+   },
+   "span_loss": {
+    "1-17": 1.269085168838501,
+    "1-6": 1.2681386470794678,
+    "7-12": 1.2882721424102783,
+    "13-17": 1.3039630651474
+   },
+   "template": "put the {O} {G}",
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the bowl on cookie box and place it on the cabinet",
+     "with_word": 1.3095892667770386,
+     "alone": 1.3752228021621704
+    },
+    "put the {O} {G}": {
+     "prompt": "put the bowl on cookie box on the cabinet",
+     "with_word": 1.2681386470794678,
+     "alone": 1.3120795488357544
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    30,
+    18
+   ],
+   "lam": 12,
+   "pairs": {
+    "30.14": 1.106740951538086,
+    "30.18": 0.9315937757492065,
+    "30.31": 1.2747104167938232,
+    "30.39": 1.3401339054107666,
+    "35.14": 1.1032180786132812,
+    "35.18": 1.0614150762557983,
+    "35.31": 1.3194851875305176,
+    "35.39": 1.3483229875564575
+   },
+   "lams": {
+    "24": 0.9315937757492065,
+    "12": 0.6158761978149414,
+    "36": 1.2412500381469727
+   },
+   "cands": {
+    "o": [
+     30,
+     35
+    ],
+    "g": [
+     14,
+     18,
+     31,
+     39
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 1.3120795488357544,
+  "null": 1.3653395175933838,
+  "tli_li": 0.7929974794387817,
+  "word": 1.2681386470794678,
+  "role": 1.2870116233825684,
+  "tmpl": 1.2681386470794678,
+  "tmpl_only": 1.3120795488357544,
+  "tli_sel": 0.6158761978149414,
+  "rand": 1.2833778858184814,
+  "pos": 1.0037859678268433,
+  "l2sel": 0.6158761978149414
+ },
+ "l1": {
+  "zs": 1.2840521335601807,
+  "null": 1.3879591226577759,
+  "tli_li": 0.7448812127113342,
+  "word": 1.2483258247375488,
+  "role": 1.267934799194336,
+  "tmpl": 1.2483258247375488,
+  "tmpl_only": 1.2840521335601807,
+  "tli_sel": 0.580716073513031,
+  "rand": 1.2993841171264648,
+  "pos": 0.9657348990440369,
+  "l2sel": 0.580716073513031
+ },
+ "l2sel": "tli_sel",
+ "controls": {
+  "o": {
+   "rand": 28,
+   "pos": 9,
+   "rand_text": "pick up the tomato sauce and place it in the basket",
+   "pos_text": "pick up the book and place it in the back compartment of the caddy"
+  },
+  "g": {
+   "rand": 20,
+   "pos": 11,
+   "rand_text": "pick up the orange juice and place it in the basket",
+   "pos_text": "put the wine bottle on the rack"
+  }
+ },
+ "n_eval": 76,
+ "arms": {
+  "zs": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_li": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 35,
+    "t2": 18,
+    "lam": 14
+   }
+  },
+  "word": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 7,
+     "phrase": "box",
+     "new_pos": [
+      6
+     ],
+     "src_pos": [
+      6
+     ]
+    },
+    {
+     "role": "g",
+     "src": 18,
+     "phrase": "cabinet",
+     "new_pos": [
+      9
+     ],
+     "src_pos": [
+      8
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 7,
+     "phrase": "box",
+     "new_pos": [
+      6
+     ],
+     "src_pos": [
+      6
+     ]
+    },
+    {
+     "role": "g",
+     "src": 18,
+     "phrase": "cabinet",
+     "new_pos": [
+      9
+     ],
+     "src_pos": [
+      8
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 7,
+     "phrase": "box",
+     "new_pos": [
+      6
+     ],
+     "src_pos": [
+      6
+     ]
+    },
+    {
+     "role": "g",
+     "src": 18,
+     "phrase": "cabinet",
+     "new_pos": [
+      9
+     ],
+     "src_pos": [
+      8
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 30,
+    "t2": 18,
+    "lam": 12
+   }
+  },
+  "rand": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 28,
+    "t2": 20,
+    "lam": 12
+   }
+  },
+  "pos": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 9,
+    "t2": 11,
+    "lam": 12
+   }
+  }
+ },
+ "modes": {
+  "start": {
+   "frame": 0,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.03824298282646507,
+     0.11976964375261037,
+     1.010758695047404
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.25,
+    "named_point": 0.0,
+    "grip_first": 23.75,
+    "grip_closed": 0.015000000000000001
+   },
+   "word": {
+    "endpoint": [
+     -0.03589260563559926,
+     0.12477543333067996,
+     1.0103129168638743
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 35.5,
+    "grip_closed": 0.0325
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.03589260563559926,
+     0.12477543333067996,
+     1.0103129168638743
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 35.5,
+    "grip_closed": 0.0325
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.009121480521365972,
+     0.1869046895809195,
+     1.0256911930175718
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "role": {
+    "endpoint": [
+     -0.016689589456072705,
+     0.0956560034968951,
+     1.048284796557317
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "plate_1",
+    "named_near": 0.875,
+    "named_point": 0.0,
+    "grip_first": 5.25,
+    "grip_closed": 0.0025
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.0639285777294251,
+     0.15966137078214085,
+     1.0175675559339943
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 35.375,
+    "grip_closed": 0.0375
+   },
+   "rand": {
+    "endpoint": [
+     -0.020483960822344677,
+     0.04463091581928339,
+     1.1157764763781675
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "cookies_1",
+    "named_near": 1.0,
+    "named_point": 0.125,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "pos": {
+    "endpoint": [
+     -0.08959457497989244,
+     0.1434239716383675,
+     1.0760969795853472
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   }
+  },
+  "approach": {
+   "frame": 21,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.006332619526722855,
+     0.14465987125397284,
+     1.054958276454979
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 22.625,
+    "grip_closed": 0.5475000000000001
+   },
+   "word": {
+    "endpoint": [
+     -0.012386911357482001,
+     0.1320636985584109,
+     1.0730889565191346
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.125,
+    "named_point": 0.0,
+    "grip_first": 22.625,
+    "grip_closed": 0.5475000000000001
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.012386911357482001,
+     0.1320636985584109,
+     1.0730889565191346
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.125,
+    "named_point": 0.0,
+    "grip_first": 22.625,
+    "grip_closed": 0.5475000000000001
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.01739969482038347,
+     0.059433397653724934,
+     0.9996811149764318
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.375,
+    "grip_first": 25.75,
+    "grip_closed": 0.485
+   },
+   "role": {
+    "endpoint": [
+     -0.00714660634993304,
+     0.1367817154605666,
+     1.0658383212031164
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.125,
+    "named_point": 0.0,
+    "grip_first": 22.75,
+    "grip_closed": 0.545
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.013882638759484959,
+     0.16154032517411665,
+     1.0451781528748922
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 22.75,
+    "grip_closed": 0.545
+   },
+   "rand": {
+    "endpoint": [
+     -0.02476800904719121,
+     0.08298438602258139,
+     1.0824058751785464
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "plate_1",
+    "named_near": 0.875,
+    "named_point": 0.0,
+    "grip_first": 25.625,
+    "grip_closed": 0.4875
+   },
+   "pos": {
+    "endpoint": [
+     -0.012917749889606351,
+     0.11791257780897406,
+     1.0708459943255446
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.5,
+    "named_point": 0.0,
+    "grip_first": 24.375,
+    "grip_closed": 0.5075000000000001
+   }
+  },
+  "carry": {
+   "frame": 77,
+   "carry": true,
+   "zs": {
+    "endpoint": [
+     0.06759743648780817,
+     0.21417306180260018,
+     1.0438187560494303
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 35.125,
+    "grip_closed": 0.7024999999999999
+   },
+   "word": {
+    "endpoint": [
+     0.07149871507349889,
+     0.20377312847779674,
+     1.0663674243770438
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 34.625,
+    "grip_closed": 0.6925
+   },
+   "tmpl": {
+    "endpoint": [
+     0.07149871507349889,
+     0.20377312847779674,
+     1.0663674243770438
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 34.625,
+    "grip_closed": 0.6925
+   },
+   "tli_sel": {
+    "endpoint": [
+     0.044960889588251736,
+     0.06891132148317106,
+     1.0810275409095838
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "plate_1",
+    "named_near": 0.625,
+    "named_point": 0.0,
+    "grip_first": 30.625,
+    "grip_closed": 0.6125
+   },
+   "role": {
+    "endpoint": [
+     0.06939197757919785,
+     0.20667952986655458,
+     1.0615578201262892
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 34.875,
+    "grip_closed": 0.6975
+   },
+   "tli_li": {
+    "endpoint": [
+     0.05681599397752442,
+     -0.08893368441372909,
+     1.1444872135932334
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_2",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 30.75,
+    "grip_closed": 0.615
+   },
+   "rand": {
+    "endpoint": [
+     0.038782811919302676,
+     0.20214992148748798,
+     0.9939642160532391
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 39.625,
+    "grip_closed": 0.7925
+   },
+   "pos": {
+    "endpoint": [
+     0.05175308074115355,
+     0.1457040168303734,
+     1.0869515946857846
+    ],
+    "nearest": "plate_1",
+    "pointed": "plate_1",
+    "named_near": 0.5,
+    "named_point": 0.0,
+    "grip_first": 34.375,
+    "grip_closed": 0.6924999999999999
+   }
+  }
+ },
+ "seconds": 272.0648105144501,
+ "demo_src": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_spatial_libero_spatial_ood_5_pfield_10.18_seed13_rec/task5_trial0.npz",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_spatial_libero_spatial_ood_5_pfield_10.18_seed13_rec/task5_trial1.npz"
+ ]
+}

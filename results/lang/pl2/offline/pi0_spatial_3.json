@@ -1,0 +1,750 @@
+{
+ "key": "spatial:3",
+ "text": "put the orange juice on the plate",
+ "roles": {
+  "o": "orange juice",
+  "g": "on the plate"
+ },
+ "cands": {
+  "o": [
+   20
+  ],
+  "g": [
+   0,
+   1,
+   10,
+   15,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39
+  ]
+ },
+ "d0": {
+  "T": 95,
+  "c0": 39,
+  "rel": 95
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 20,
+    "g": 10
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "o:20": 0.5480059385299683,
+    "g:0": 0.5818029046058655,
+    "g:1": 0.5734881162643433,
+    "g:10": 0.5461028814315796,
+    "g:15": 0.602911114692688,
+    "g:30": 0.5849083662033081,
+    "g:31": 0.5778853893280029,
+    "g:32": 0.5810211896896362,
+    "g:33": 0.556653618812561,
+    "g:34": 0.567299485206604,
+    "g:35": 0.5785117149353027,
+    "g:36": 0.5844957828521729,
+    "g:37": 0.5841919183731079,
+    "g:38": 0.5685840249061584,
+    "g:39": 0.5803979635238647
+   },
+   "span_loss": {
+    "1-17": 0.5461028814315796,
+    "1-6": 0.5466564893722534,
+    "7-12": 0.5456703901290894,
+    "13-17": 0.55912184715271
+   }
+  },
+  "role": {
+   "src": {
+    "o": 20,
+    "g": 33
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "o:20": 0.5630888938903809,
+    "g:0": 0.5755202770233154,
+    "g:1": 0.5681016445159912,
+    "g:10": 0.5680207014083862,
+    "g:15": 0.5729317665100098,
+    "g:30": 0.5751917362213135,
+    "g:31": 0.5681846737861633,
+    "g:32": 0.5753688216209412,
+    "g:33": 0.5550549030303955,
+    "g:34": 0.5662673711776733,
+    "g:35": 0.5734628438949585,
+    "g:36": 0.5759397745132446,
+    "g:37": 0.5761444568634033,
+    "g:38": 0.5701832175254822,
+    "g:39": 0.5753624439239502
+   },
+   "span_loss": {
+    "1-17": 0.5550549030303955,
+    "1-6": 0.5666172504425049,
+    "7-12": 0.5402465462684631,
+    "13-17": 0.5578211545944214
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 20,
+    "g": 33
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "o:20": 0.5401536226272583,
+    "g:0": 0.5702342391014099,
+    "g:1": 0.5563899278640747,
+    "g:10": 0.5285080671310425,
+    "g:15": 0.5740687847137451,
+    "g:30": 0.5726730823516846,
+    "g:31": 0.5557004809379578,
+    "g:32": 0.5682542324066162,
+    "g:33": 0.5242480039596558,
+    "g:34": 0.5366368293762207,
+    "g:35": 0.5593091249465942,
+    "g:36": 0.5706039071083069,
+    "g:37": 0.5741941332817078,
+    "g:38": 0.5513508319854736,
+    "g:39": 0.5638697147369385
+   },
+   "span_loss": {
+    "1-17": 0.5242480039596558,
+    "1-6": 0.5387433767318726,
+    "7-12": 0.5148285627365112,
+    "13-17": 0.5401431918144226
+   },
+   "template": "pick up the {O} and place it {G}",
+   "prompt": "pick up the orange juice and place it on the plate",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the orange juice and place it on the plate",
+     "with_word": 0.5220743417739868,
+     "alone": 0.539101243019104
+    },
+    "put the {O} {G}": {
+     "prompt": "put the orange juice on the plate",
+     "with_word": 0.5456703901290894,
+     "alone": 0.5579900145530701
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    20,
+    33
+   ],
+   "lam": 12,
+   "pairs": {
+    "20.10": 0.664891242980957,
+    "20.30": 0.5463780760765076,
+    "20.31": 0.5590906143188477,
+    "20.32": 0.5924162864685059,
+    "20.33": 0.5274046063423157,
+    "20.34": 0.5519437789916992,
+    "20.35": 0.5809859037399292,
+    "20.36": 0.5505160689353943,
+    "20.37": 0.5489857196807861,
+    "20.38": 0.5740596652030945,
+    "20.39": 0.5942786335945129
+   },
+   "lams": {
+    "24": 0.5274046063423157,
+    "12": 0.4069300889968872,
+    "36": 0.5975109338760376
+   },
+   "cands": {
+    "o": [
+     20
+    ],
+    "g": [
+     10,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.5579900145530701,
+  "null": 0.5606222152709961,
+  "tli_li": 0.6436760425567627,
+  "word": 0.5456703901290894,
+  "role": 0.5402465462684631,
+  "tmpl": 0.5148285627365112,
+  "tmpl_only": 0.539101243019104,
+  "tli_sel": 0.4069300889968872,
+  "rand": 0.5561812520027161,
+  "pos": 0.5551327466964722,
+  "l2sel": 0.4069300889968872
+ },
+ "l1": {
+  "zs": 0.6959774494171143,
+  "null": 0.6495267748832703,
+  "tli_li": 0.7361165881156921,
+  "word": 0.6932819485664368,
+  "role": 0.6715915203094482,
+  "tmpl": 0.6527559757232666,
+  "tmpl_only": 0.6888296604156494,
+  "tli_sel": 0.4840584993362427,
+  "rand": 0.6421405076980591,
+  "pos": 0.7075806260108948,
+  "l2sel": 0.4840584993362427
+ },
+ "l2sel": "tli_sel",
+ "controls": {
+  "o": {
+   "rand": 39,
+   "pos": 14,
+   "rand_text": "pick up the black bowl on the wooden cabinet and place it on the plate",
+   "pos_text": "put the wine bottle on top of the cabinet"
+  },
+  "g": {
+   "rand": 27,
+   "pos": 13,
+   "rand_text": "pick up the butter and place it in the basket",
+   "pos_text": "put the cream cheese in the bowl"
+  }
+ },
+ "n_eval": 94,
+ "arms": {
+  "zs": {
+   "prompt": "put the orange juice on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_li": {
+   "prompt": "put the orange juice on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 14,
+    "t2": 32,
+    "lam": 24
+   }
+  },
+  "word": {
+   "prompt": "put the orange juice on the plate",
+   "edits": [
+    {
+     "role": "o",
+     "src": 20,
+     "phrase": "orange juice",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 10,
+     "phrase": "on the plate",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      4,
+      5,
+      6
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the orange juice on the plate",
+   "edits": [
+    {
+     "role": "o",
+     "src": 20,
+     "phrase": "orange juice",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 33,
+     "phrase": "on the plate",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      12,
+      13,
+      14
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "pick up the orange juice and place it on the plate",
+   "edits": [
+    {
+     "role": "o",
+     "src": 20,
+     "phrase": "orange juice",
+     "new_pos": [
+      4,
+      5
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 33,
+     "phrase": "on the plate",
+     "new_pos": [
+      9,
+      10,
+      11
+     ],
+     "src_pos": [
+      12,
+      13,
+      14
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "pick up the orange juice and place it on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the orange juice on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 20,
+    "t2": 33,
+    "lam": 12
+   }
+  },
+  "rand": {
+   "prompt": "put the orange juice on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 39,
+    "t2": 27,
+    "lam": 12
+   }
+  },
+  "pos": {
+   "prompt": "put the orange juice on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 14,
+    "t2": 13,
+    "lam": 12
+   }
+  }
+ },
+ "modes": {
+  "start": {
+   "frame": 0,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.07865181556535406,
+     -0.03090138599224063,
+     1.0438248250063245
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 0.625,
+    "grip_first": 39.0,
+    "grip_closed": 0.0925
+   },
+   "word": {
+    "endpoint": [
+     -0.07665172595579987,
+     -0.02573685337922448,
+     1.0335088095052245
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 0.375,
+    "grip_first": 38.75,
+    "grip_closed": 0.0975
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.07388179405061186,
+     -0.024580897164920967,
+     1.0468899409532824
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 0.25,
+    "grip_first": 43.75,
+    "grip_closed": 0.1225
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.0980216288402704,
+     0.017006176890247412,
+     1.0437255319980503
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cookies_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 32.125,
+    "grip_closed": 0.10250000000000001
+   },
+   "role": {
+    "endpoint": [
+     -0.077852419222323,
+     -0.026253508862532384,
+     1.0403010721658044
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 0.375,
+    "grip_first": 39.0,
+    "grip_closed": 0.0925
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.15191817014931888,
+     0.008921862113553794,
+     1.1159987438206396
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cookies_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 33.0,
+    "grip_closed": 0.195
+   },
+   "rand": {
+    "endpoint": [
+     -0.08518299116270714,
+     -0.027747514229451837,
+     1.062489764971947
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 0.375,
+    "grip_first": 37.75,
+    "grip_closed": 0.1175
+   },
+   "pos": {
+    "endpoint": [
+     -0.15972842695092332,
+     -0.02298999833007758,
+     1.1074229219397016
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "orange_juice_1",
+    "named_near": 1.0,
+    "named_point": 0.75,
+    "grip_first": 33.875,
+    "grip_closed": 0.32
+   }
+  },
+  "approach": {
+   "frame": 17,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.11812816791736136,
+     0.07650560892852032,
+     1.1098485460920224
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 21.5,
+    "grip_closed": 0.5700000000000001
+   },
+   "word": {
+    "endpoint": [
+     -0.11424458795433154,
+     0.069045522603498,
+     1.1110343145457655
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 21.375,
+    "grip_closed": 0.5725
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.10163199067659649,
+     0.07641694627795312,
+     1.1121738860058448
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 19.25,
+    "grip_closed": 0.615
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.13746166449551467,
+     0.08791003894609635,
+     1.1172905636400476
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_2",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 23.75,
+    "grip_closed": 0.525
+   },
+   "role": {
+    "endpoint": [
+     -0.11588258287689739,
+     0.07486772478732726,
+     1.110375941870214
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 21.5,
+    "grip_closed": 0.5700000000000001
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.09606242795173826,
+     -0.005122343006589933,
+     1.1444328867696807
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "cookies_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 20.0,
+    "grip_closed": 0.5525
+   },
+   "rand": {
+    "endpoint": [
+     -0.13194223449465114,
+     0.10844229400870029,
+     1.061812498740895
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_2",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 20.375,
+    "grip_closed": 0.5925
+   },
+   "pos": {
+    "endpoint": [
+     -0.10615755086944562,
+     -0.008603479832771623,
+     1.159445157588793
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 19.375,
+    "grip_closed": 0.6125
+   }
+  },
+  "carry": {
+   "frame": 64,
+   "carry": true,
+   "zs": {
+    "endpoint": [
+     -0.13521136177479076,
+     0.2611409695004785,
+     1.0626874703594638
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_2",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 33.25,
+    "grip_closed": 0.665
+   },
+   "word": {
+    "endpoint": [
+     -0.13719085287009355,
+     0.2532832831654986,
+     1.0648249914250199
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_2",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 33.0,
+    "grip_closed": 0.66
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.1258457866400625,
+     0.2748286881411831,
+     1.0514893680115558
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_2",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 33.125,
+    "grip_closed": 0.6625000000000001
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.08054746866299586,
+     0.2442860705812544,
+     0.9989056124521174
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "plate_1",
+    "named_near": 0.625,
+    "named_point": 0.0,
+    "grip_first": 39.5,
+    "grip_closed": 0.79
+   },
+   "role": {
+    "endpoint": [
+     -0.12613174613485328,
+     0.2725463672399846,
+     1.0457017234984933
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_2",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 34.375,
+    "grip_closed": 0.6875
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.13661833944267165,
+     0.2716566050832789,
+     1.0670408475022466
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_2",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 32.5,
+    "grip_closed": 0.65
+   },
+   "rand": {
+    "endpoint": [
+     -0.11180559866491421,
+     0.2704723140928845,
+     1.1073495360559007
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "akita_black_bowl_2",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 32.625,
+    "grip_closed": 0.6525000000000001
+   },
+   "pos": {
+    "endpoint": [
+     -0.10320960691722851,
+     0.22563877066559632,
+     1.085338115670398
+    ],
+    "nearest": "orange_juice_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 24.25,
+    "grip_closed": 0.485
+   }
+  }
+ },
+ "seconds": 390.7816619873047,
+ "demo_src": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_spatial_libero_spatial_ood_3_pfield_14.30_seed13_rec/task3_trial0.npz",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_spatial_libero_spatial_ood_3_pfield_14.30_seed13_rec/task3_trial1.npz"
+ ]
+}

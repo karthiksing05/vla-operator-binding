@@ -1,0 +1,41 @@
+{
+ "prompt": "pick up the chocolate pudding and place it on the plate",
+ "lo": 1,
+ "hi": 6,
+ "schedule": "og",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 35,
+   "phrase": "chocolate pudding <- black bowl on the cookie box",
+   "new_pos": [
+    4,
+    5
+   ],
+   "src_pos": [
+    8,
+    9
+   ]
+  },
+  {
+   "role": "g",
+   "src": 27,
+   "phrase": "on the plate <- in the basket",
+   "new_pos": [
+    9,
+    10,
+    11
+   ],
+   "src_pos": [
+    8,
+    9,
+    10
+   ]
+  }
+ ],
+ "meta": {
+  "task": "spatial:1",
+  "arm": "rand"
+ }
+}

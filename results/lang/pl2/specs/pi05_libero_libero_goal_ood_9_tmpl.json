@@ -1,0 +1,45 @@
+{
+ "prompt": "pick up the cream cheese and place it on top of the cabinet",
+ "lo": 1,
+ "hi": 17,
+ "schedule": "og",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 13,
+   "phrase": "cream cheese",
+   "new_pos": [
+    4,
+    5
+   ],
+   "src_pos": [
+    3,
+    4
+   ]
+  },
+  {
+   "role": "g",
+   "src": 18,
+   "phrase": "on top of the cabinet",
+   "new_pos": [
+    9,
+    10,
+    11,
+    12,
+    13
+   ],
+   "src_pos": [
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  }
+ ],
+ "meta": {
+  "task": "goal:9",
+  "arm": "tmpl"
+ }
+}

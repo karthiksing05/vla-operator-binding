@@ -1,0 +1,35 @@
+{
+ "prompt": "put the bowl on cookie box on the cabinet",
+ "lo": 1,
+ "hi": 17,
+ "schedule": "og",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 7,
+   "phrase": "box",
+   "new_pos": [
+    6
+   ],
+   "src_pos": [
+    6
+   ]
+  },
+  {
+   "role": "g",
+   "src": 18,
+   "phrase": "cabinet",
+   "new_pos": [
+    9
+   ],
+   "src_pos": [
+    8
+   ]
+  }
+ ],
+ "meta": {
+  "task": "spatial:5",
+  "arm": "tmpl"
+ }
+}

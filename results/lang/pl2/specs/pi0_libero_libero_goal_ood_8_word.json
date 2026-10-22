@@ -1,0 +1,41 @@
+{
+ "prompt": "put the cream cheese on the stove",
+ "lo": 13,
+ "hi": 17,
+ "schedule": "og",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 13,
+   "phrase": "cream cheese",
+   "new_pos": [
+    3,
+    4
+   ],
+   "src_pos": [
+    3,
+    4
+   ]
+  },
+  {
+   "role": "g",
+   "src": 16,
+   "phrase": "on the stove",
+   "new_pos": [
+    5,
+    6,
+    7
+   ],
+   "src_pos": [
+    2,
+    3,
+    4
+   ]
+  }
+ ],
+ "meta": {
+  "task": "goal:8",
+  "arm": "word"
+ }
+}

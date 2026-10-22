@@ -1,0 +1,37 @@
+{
+ "prompt": "put the wine bottle in the bowl",
+ "lo": 7,
+ "hi": 12,
+ "schedule": "ph",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 14,
+   "phrase": "wine bottle",
+   "new_pos": [
+    3,
+    4
+   ],
+   "src_pos": [
+    3,
+    4
+   ]
+  },
+  {
+   "role": "g",
+   "src": 37,
+   "phrase": "bowl",
+   "new_pos": [
+    7
+   ],
+   "src_pos": [
+    5
+   ]
+  }
+ ],
+ "meta": {
+  "task": "goal:6",
+  "arm": "role"
+ }
+}

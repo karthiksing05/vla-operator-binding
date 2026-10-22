@@ -1,0 +1,99 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan L's probe L2 (demo-selected language-prototype composition, no practice)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "3e41ecc10b9198f1e8d7bbb9957cc4266891906c",
+  "short": "3e41ecc1"
+ },
+ "keys": {},
+ "metrics": {
+  "arms": [
+   "zs",
+   "tli_li",
+   "word",
+   "tmpl",
+   "tli_sel",
+   "role",
+   "rand",
+   "pos"
+  ],
+  "backbones": [
+   "pi05_libero",
+   "pi0_libero"
+  ],
+  "confirm_tasks": [
+   "goal:0",
+   "goal:3",
+   "goal:8",
+   "goal:9",
+   "spatial:0",
+   "spatial:1",
+   "spatial:2",
+   "spatial:3",
+   "spatial:4",
+   "spatial:5",
+   "spatial:8",
+   "spatial:9"
+  ],
+  "demos": "2 recorded successes per task on fresh_ood_pl2d (BASE 3300000) by the other policy's strongest set-d arm (G13); own-policy fallback flagged; demo 0 selects, demo 1 scores",
+  "dev_tasks": [
+   "goal:1",
+   "goal:2",
+   "goal:4",
+   "goal:5",
+   "goal:6",
+   "goal:7",
+   "spatial:6",
+   "spatial:7"
+  ],
+  "hypotheses": {
+   "H1": "per policy, l2sel > zs on the 8 dev tasks x 20 episodes (exact sign test on discordant pairs, alpha 0.05)",
+   "H2": "per policy, l2sel non-inferior to TLI with Li's hand pairs and lambda (task-level bootstrap 95% lower bound of the difference above -0.05)",
+   "controls": "rand (seeded random no-overlap sentence) and pos (T8: no-overlap sentence whose training grasp / release is nearest demo 0's), each on l2sel's operator form; descriptive comparisons l2sel vs rand / pos",
+   "descriptive": "offline demo-1 flow loss per arm vs zs (Li's 20 x 2 policies, 16 LIBERO-90 tasks); each operator vs zs in closed loop; part correctness g and p|g; per-repair source, span and action-mode change"
+  },
+  "operators": [
+   "word",
+   "tmpl",
+   "tli_sel",
+   "role"
+  ],
+  "selection": "demo-0 flow loss only (36 frames, 4 fixed draws); object source, goal source, layer span {1-17,1-6,7-12,13-17}; TLI pair at lambda 24 then lambda {12,24,36}; no practice, no reward",
+  "states": "fresh_ood_pl2 (BASE 3400000, 20 per task, never used), noise seed 13, paired",
+  "tested_arm": "l2sel = per task the operator with the lowest demo-0 flow loss",
+  "written_before": "any L2 flow loss and any L2 closed-loop episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__pl2_compose__s13__3e41ecc1",
+ "schema": 1,
+ "script": "experiments/prereg/pl2_compose.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-22T14:55:28+00:00",
+ "stream": null,
+ "tag": "pl2_compose"
+}

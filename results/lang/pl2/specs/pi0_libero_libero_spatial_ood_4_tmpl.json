@@ -1,0 +1,39 @@
+{
+ "prompt": "pick up the bowl on cookie box and place it on the stove",
+ "lo": 1,
+ "hi": 6,
+ "schedule": "og",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 35,
+   "phrase": "box",
+   "new_pos": [
+    7
+   ],
+   "src_pos": [
+    9
+   ]
+  },
+  {
+   "role": "g",
+   "src": 16,
+   "phrase": "on the stove",
+   "new_pos": [
+    11,
+    12,
+    13
+   ],
+   "src_pos": [
+    2,
+    3,
+    4
+   ]
+  }
+ ],
+ "meta": {
+  "task": "spatial:4",
+  "arm": "tmpl"
+ }
+}

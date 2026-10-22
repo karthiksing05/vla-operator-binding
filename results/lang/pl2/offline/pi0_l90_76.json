@@ -1,0 +1,426 @@
+{
+ "key": "l90:76",
+ "text": "pick up the yellow and white mug and place it to the right of the caddy",
+ "roles": {
+  "o": "yellow and white mug",
+  "g": "to the right of the caddy"
+ },
+ "cands": {
+  "o": [
+   0,
+   1,
+   2
+  ],
+  "g": [
+   9
+  ]
+ },
+ "d0": {
+  "T": 129,
+  "c0": 52,
+  "rel": 129
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 2,
+    "g": 9
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:0": 0.7527140378952026,
+    "o:1": 0.7605060935020447,
+    "o:2": 0.7258896231651306,
+    "g:9": 0.6785449981689453
+   },
+   "span_loss": {
+    "1-17": 0.6785449981689453,
+    "1-6": 0.6879136562347412,
+    "7-12": 0.7379067540168762,
+    "13-17": 0.7433272004127502
+   }
+  },
+  "role": {
+   "src": {
+    "o": 2,
+    "g": 9
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:0": 0.7492446303367615,
+    "o:1": 0.7521410584449768,
+    "o:2": 0.7353399395942688,
+    "g:9": 0.7236101031303406
+   },
+   "span_loss": {
+    "1-17": 0.7236101031303406,
+    "1-6": 0.7266765236854553,
+    "7-12": 0.7399024367332458,
+    "13-17": 0.7458988428115845
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 2,
+    "g": 9
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:0": 0.7527140378952026,
+    "o:1": 0.7605060935020447,
+    "o:2": 0.7258896231651306,
+    "g:9": 0.6785449981689453
+   },
+   "span_loss": {
+    "1-17": 0.6785449981689453,
+    "1-6": 0.6879136562347412,
+    "7-12": 0.7379067540168762,
+    "13-17": 0.7433272004127502
+   },
+   "template": "pick up the {O} and place it {G}",
+   "prompt": "pick up the yellow and white mug and place it to the right of the caddy",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the yellow and white mug and place it to the right of the caddy",
+     "with_word": 0.6785449981689453,
+     "alone": 0.7459450960159302
+    },
+    "put the {O} {G}": {
+     "prompt": "put the yellow and white mug to the right of the caddy",
+     "with_word": 0.7085474133491516,
+     "alone": 0.7693305015563965
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    13,
+    9
+   ],
+   "lam": 12,
+   "pairs": {
+    "10.9": 0.810523509979248,
+    "11.9": 0.8748918771743774,
+    "13.9": 0.7385833263397217,
+    "14.9": 0.7979583740234375,
+    "17.9": 0.7792680263519287,
+    "18.9": 0.876943051815033
+   },
+   "lams": {
+    "24": 0.7385833263397217,
+    "12": 0.7277141213417053,
+    "36": 0.7988102436065674
+   },
+   "cands": {
+    "o": [
+     10,
+     11,
+     13,
+     14,
+     17,
+     18
+    ],
+    "g": [
+     9
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.7459450960159302,
+  "null": 0.7155987024307251,
+  "word": 0.6785449981689453,
+  "role": 0.7236101031303406,
+  "tmpl": 0.6785449981689453,
+  "tmpl_only": 0.7459450960159302,
+  "tli_sel": 0.7277141213417053,
+  "rand": 0.8249807357788086,
+  "pos": 0.5135154128074646,
+  "l2sel": 0.6785449981689453
+ },
+ "l1": {
+  "zs": 0.8629512190818787,
+  "null": 0.8253755569458008,
+  "word": 0.8436179757118225,
+  "role": 0.8369693160057068,
+  "tmpl": 0.8436179757118225,
+  "tmpl_only": 0.8629512190818787,
+  "tli_sel": 0.8824440836906433,
+  "rand": 0.885042130947113,
+  "pos": 0.5218366980552673,
+  "l2sel": 0.8436179757118225
+ },
+ "l2sel": "word",
+ "controls": {
+  "o": {
+   "rand": 32,
+   "pos": 18,
+   "rand_text": "pick up the black bowl on the ramekin and place it on the plate",
+   "pos_text": "put the bowl on top of the cabinet"
+  },
+  "g": {
+   "rand": 18,
+   "pos": 17,
+   "rand_text": "put the bowl on top of the cabinet",
+   "pos_text": "put the bowl on the stove"
+  }
+ },
+ "n_eval": 54,
+ "arms": {
+  "zs": {
+   "prompt": "pick up the yellow and white mug and place it to the right of the caddy",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "word": {
+   "prompt": "pick up the yellow and white mug and place it to the right of the caddy",
+   "edits": [
+    {
+     "role": "o",
+     "src": 2,
+     "phrase": "yellow and white mug",
+     "new_pos": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    {
+     "role": "g",
+     "src": 9,
+     "phrase": "caddy",
+     "new_pos": [
+      16
+     ],
+     "src_pos": [
+      14
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "pick up the yellow and white mug and place it to the right of the caddy",
+   "edits": [
+    {
+     "role": "o",
+     "src": 2,
+     "phrase": "yellow and white mug",
+     "new_pos": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    {
+     "role": "g",
+     "src": 9,
+     "phrase": "caddy",
+     "new_pos": [
+      16
+     ],
+     "src_pos": [
+      14
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "pick up the yellow and white mug and place it to the right of the caddy",
+   "edits": [
+    {
+     "role": "o",
+     "src": 2,
+     "phrase": "yellow and white mug",
+     "new_pos": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      3,
+      4,
+      5,
+      6
+     ]
+    },
+    {
+     "role": "g",
+     "src": 9,
+     "phrase": "caddy",
+     "new_pos": [
+      16
+     ],
+     "src_pos": [
+      14
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "pick up the yellow and white mug and place it to the right of the caddy",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "pick up the yellow and white mug and place it to the right of the caddy",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 13,
+    "t2": 9,
+    "lam": 12
+   }
+  },
+  "rand": {
+   "prompt": "pick up the yellow and white mug and place it to the right of the caddy",
+   "edits": [
+    {
+     "role": "o",
+     "src": 32,
+     "phrase": "yellow and white mug <- black bowl on the ramekin",
+     "new_pos": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      6,
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "role": "g",
+     "src": 18,
+     "phrase": "to the right of the caddy <- on top of the cabinet",
+     "new_pos": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+     ],
+     "src_pos": [
+      4,
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "pos": {
+   "prompt": "pick up the yellow and white mug and place it to the right of the caddy",
+   "edits": [
+    {
+     "role": "o",
+     "src": 18,
+     "phrase": "yellow and white mug <- bowl",
+     "new_pos": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      3,
+      3,
+      3,
+      3
+     ]
+    },
+    {
+     "role": "g",
+     "src": 17,
+     "phrase": "to the right of the caddy <- on the stove",
+     "new_pos": [
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+     ],
+     "src_pos": [
+      4,
+      4,
+      4,
+      4,
+      5,
+      6
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  }
+ },
+ "seconds": 179.44368934631348,
+ "demo_src": [
+  1003,
+  1004
+ ]
+}

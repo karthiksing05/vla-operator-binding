@@ -1,0 +1,766 @@
+{
+ "key": "goal:5",
+ "text": "put the wine bottle on the plate",
+ "roles": {
+  "o": "wine bottle",
+  "g": "on the plate"
+ },
+ "cands": {
+  "o": [
+   11,
+   14
+  ],
+  "g": [
+   0,
+   1,
+   10,
+   15,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39
+  ]
+ },
+ "d0": {
+  "T": 211,
+  "c0": 43,
+  "rel": 211
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 11,
+    "g": 39
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:11": 0.201804980635643,
+    "o:14": 0.20925304293632507,
+    "g:0": 0.2824077904224396,
+    "g:1": 0.19108712673187256,
+    "g:10": 0.19596725702285767,
+    "g:15": 0.26463019847869873,
+    "g:30": 0.1950986236333847,
+    "g:31": 0.1883060783147812,
+    "g:32": 0.18705511093139648,
+    "g:33": 0.1831241399049759,
+    "g:34": 0.22147196531295776,
+    "g:35": 0.18944473564624786,
+    "g:36": 0.21733129024505615,
+    "g:37": 0.19239088892936707,
+    "g:38": 0.18450485169887543,
+    "g:39": 0.18268530070781708
+   },
+   "span_loss": {
+    "1-17": 0.18268530070781708,
+    "1-6": 0.19043472409248352,
+    "7-12": 0.1888543665409088,
+    "13-17": 0.19728714227676392
+   }
+  },
+  "role": {
+   "src": {
+    "o": 14,
+    "g": 39
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:11": 0.20492534339427948,
+    "o:14": 0.20419926941394806,
+    "g:0": 0.27859270572662354,
+    "g:1": 0.19387663900852203,
+    "g:10": 0.1975126564502716,
+    "g:15": 0.2624390125274658,
+    "g:30": 0.19760993123054504,
+    "g:31": 0.19100022315979004,
+    "g:32": 0.18996183574199677,
+    "g:33": 0.18610122799873352,
+    "g:34": 0.22192610800266266,
+    "g:35": 0.19234050810337067,
+    "g:36": 0.21844832599163055,
+    "g:37": 0.19469159841537476,
+    "g:38": 0.18695029616355896,
+    "g:39": 0.18606477975845337
+   },
+   "span_loss": {
+    "1-17": 0.18606477975845337,
+    "1-6": 0.19101469218730927,
+    "7-12": 0.19262908399105072,
+    "13-17": 0.19804371893405914
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 11,
+    "g": 31
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:11": 0.18423379957675934,
+    "o:14": 0.19107958674430847,
+    "g:0": 0.2538985013961792,
+    "g:1": 0.19456267356872559,
+    "g:10": 0.19580022990703583,
+    "g:15": 0.23905761539936066,
+    "g:30": 0.1854146122932434,
+    "g:31": 0.1761585921049118,
+    "g:32": 0.18308812379837036,
+    "g:33": 0.18282918632030487,
+    "g:34": 0.19885630905628204,
+    "g:35": 0.1844417005777359,
+    "g:36": 0.2006351202726364,
+    "g:37": 0.18549197912216187,
+    "g:38": 0.17799228429794312,
+    "g:39": 0.1789189726114273
+   },
+   "span_loss": {
+    "1-17": 0.1761585921049118,
+    "1-6": 0.18361812829971313,
+    "7-12": 0.17971521615982056,
+    "13-17": 0.1875954419374466
+   },
+   "template": "pick up the {O} and place it {G}",
+   "prompt": "pick up the wine bottle and place it on the plate",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the wine bottle and place it on the plate",
+     "with_word": 0.1789189726114273,
+     "alone": 0.18903692066669464
+    },
+    "put the {O} {G}": {
+     "prompt": "put the wine bottle on the plate",
+     "with_word": 0.18268530070781708,
+     "alone": 0.2045830339193344
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    14,
+    32
+   ],
+   "lam": 24,
+   "pairs": {
+    "11.10": 0.18888990581035614,
+    "11.30": 0.1902734786272049,
+    "11.31": 0.18378761410713196,
+    "11.32": 0.21353067457675934,
+    "11.33": 0.22592946887016296,
+    "11.34": 0.23115523159503937,
+    "11.35": 0.21858112514019012,
+    "11.36": 0.19435031712055206,
+    "11.37": 0.19311019778251648,
+    "11.38": 0.19388723373413086,
+    "11.39": 0.20463503897190094,
+    "14.10": 0.1809053272008896,
+    "14.30": 0.1548977941274643,
+    "14.31": 0.16446806490421295,
+    "14.32": 0.1339419037103653,
+    "14.33": 0.21869125962257385,
+    "14.34": 0.18069063127040863,
+    "14.35": 0.22418001294136047,
+    "14.36": 0.15839534997940063,
+    "14.37": 0.16443705558776855,
+    "14.38": 0.18070894479751587,
+    "14.39": 0.16867142915725708
+   },
+   "lams": {
+    "24": 0.1339419037103653,
+    "12": 0.15899436175823212,
+    "36": 0.171388179063797
+   },
+   "cands": {
+    "o": [
+     11,
+     14
+    ],
+    "g": [
+     10,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.2045830339193344,
+  "null": 0.24679963290691376,
+  "tli_li": 0.1809053272008896,
+  "word": 0.18268530070781708,
+  "role": 0.18606477975845337,
+  "tmpl": 0.1761585921049118,
+  "tmpl_only": 0.18903692066669464,
+  "tli_sel": 0.1339419037103653,
+  "rand": 0.23736602067947388,
+  "pos": 0.3123447299003601,
+  "l2sel": 0.1339419037103653
+ },
+ "l1": {
+  "zs": 0.18775172531604767,
+  "null": 0.24996024370193481,
+  "tli_li": 0.19441883265972137,
+  "word": 0.17828023433685303,
+  "role": 0.18311505019664764,
+  "tmpl": 0.17531506717205048,
+  "tmpl_only": 0.18456734716892242,
+  "tli_sel": 0.1907491832971573,
+  "rand": 0.23803161084651947,
+  "pos": 0.366921991109848,
+  "l2sel": 0.1907491832971573
+ },
+ "l2sel": "tli_sel",
+ "controls": {
+  "o": {
+   "rand": 23,
+   "pos": 33,
+   "rand_text": "pick up the bbq sauce and place it in the basket",
+   "pos_text": "pick up the black bowl on the stove and place it on the plate"
+  },
+  "g": {
+   "rand": 25,
+   "pos": 13,
+   "rand_text": "pick up the milk and place it in the basket",
+   "pos_text": "put the cream cheese in the bowl"
+  }
+ },
+ "n_eval": 108,
+ "arms": {
+  "zs": {
+   "prompt": "put the wine bottle on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_li": {
+   "prompt": "put the wine bottle on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 14,
+    "t2": 10,
+    "lam": 24
+   }
+  },
+  "word": {
+   "prompt": "put the wine bottle on the plate",
+   "edits": [
+    {
+     "role": "o",
+     "src": 11,
+     "phrase": "wine bottle",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      3,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 39,
+     "phrase": "on the plate",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      13,
+      14,
+      15
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the wine bottle on the plate",
+   "edits": [
+    {
+     "role": "o",
+     "src": 14,
+     "phrase": "wine bottle",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      3,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 39,
+     "phrase": "on the plate",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      13,
+      14,
+      15
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "pick up the wine bottle and place it on the plate",
+   "edits": [
+    {
+     "role": "o",
+     "src": 11,
+     "phrase": "wine bottle",
+     "new_pos": [
+      4,
+      5
+     ],
+     "src_pos": [
+      3,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 31,
+     "phrase": "on the plate",
+     "new_pos": [
+      9,
+      10,
+      11
+     ],
+     "src_pos": [
+      17,
+      18,
+      19
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "pick up the wine bottle and place it on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the wine bottle on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 14,
+    "t2": 32,
+    "lam": 24
+   }
+  },
+  "rand": {
+   "prompt": "put the wine bottle on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 23,
+    "t2": 25,
+    "lam": 24
+   }
+  },
+  "pos": {
+   "prompt": "put the wine bottle on the plate",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 33,
+    "t2": 13,
+    "lam": 24
+   }
+  }
+ },
+ "modes": {
+  "start": {
+   "frame": 0,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.1749624607603691,
+     -0.011862034332700212,
+     1.1734056711378669
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "word": {
+    "endpoint": [
+     -0.17350985733737587,
+     -0.013762970512863017,
+     1.1741686370405457
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.17543919193063484,
+     -0.013893716285469189,
+     1.1740768729068163
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.17170805579889542,
+     -0.01820674256352761,
+     1.178880760823508
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "role": {
+    "endpoint": [
+     -0.17339575069108493,
+     -0.013318395849681086,
+     1.1737872157112224
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.17639319879196846,
+     -0.017224626232260728,
+     1.1769756142788712
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "rand": {
+    "endpoint": [
+     -0.18658015182313226,
+     -0.005836829924969852,
+     1.1782051548668675
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "pos": {
+    "endpoint": [
+     -0.16952505441043053,
+     0.029326907697905212,
+     1.1724804343552138
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 0.875,
+    "named_point": 0.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   }
+  },
+  "approach": {
+   "frame": 22,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.1932389423910101,
+     -0.044506983868464634,
+     1.0545959264090095
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "word": {
+    "endpoint": [
+     -0.19709740462814807,
+     -0.0446677027498141,
+     1.0522149183599054
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.19678572003731332,
+     -0.04350545816766148,
+     1.0522384183070281
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.18864399337325558,
+     -0.04682421993840559,
+     1.0584471647785745
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "role": {
+    "endpoint": [
+     -0.1950379215128076,
+     -0.04445848733225812,
+     1.0527262302272227
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.1918550570574285,
+     -0.044190391644155516,
+     1.0552474011039865
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "rand": {
+    "endpoint": [
+     -0.1803958541733154,
+     -0.04143521380216675,
+     1.0555383585843305
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   },
+   "pos": {
+    "endpoint": [
+     -0.1340649094993858,
+     -0.025560607280151075,
+     1.0678450541796054
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.375,
+    "named_point": 0.0,
+    "grip_first": -1.0,
+    "grip_closed": 0.0
+   }
+  },
+  "carry": {
+   "frame": 78,
+   "carry": true,
+   "zs": {
+    "endpoint": [
+     -0.003962747054679907,
+     -0.047166123579143945,
+     1.2565995140141277
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": -1.0,
+    "grip_closed": 1.0
+   },
+   "word": {
+    "endpoint": [
+     -0.0069007753822981095,
+     -0.04039331021839472,
+     1.2517251373359877
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": -1.0,
+    "grip_closed": 1.0
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.005849673367930611,
+     -0.038577240751158204,
+     1.2450815665714816
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": -1.0,
+    "grip_closed": 1.0
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.006939894444331098,
+     -0.03455934321477426,
+     1.235498492455035
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 0.875,
+    "grip_first": -1.0,
+    "grip_closed": 1.0
+   },
+   "role": {
+    "endpoint": [
+     -0.0070778407633633605,
+     -0.04274409118396415,
+     1.2565113848165803
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": -1.0,
+    "grip_closed": 1.0
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.0032348072410860757,
+     -0.037833310187015017,
+     1.2308069997229514
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": -1.0,
+    "grip_closed": 1.0
+   },
+   "rand": {
+    "endpoint": [
+     -0.009375346898754518,
+     -0.041118537933928445,
+     1.257751529931248
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": -1.0,
+    "grip_closed": 1.0
+   },
+   "pos": {
+    "endpoint": [
+     -0.03301822040384616,
+     -0.0058296573814636205,
+     1.206147959826304
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": -1.0,
+    "grip_closed": 1.0
+   }
+  }
+ },
+ "seconds": 528.8371207714081,
+ "demo_src": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_goal_libero_goal_ood_5_tli_14.10.24_seed13_pi0_rec/task5_trial1.npz",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_goal_libero_goal_ood_5_tli_14.10.24_seed13_pi0_rec/task5_trial2.npz"
+ ]
+}

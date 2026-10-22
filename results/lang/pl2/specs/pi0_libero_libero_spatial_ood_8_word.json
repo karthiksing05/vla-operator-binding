@@ -1,0 +1,35 @@
+{
+ "prompt": "put the bowl at table center on the cabinet",
+ "lo": 13,
+ "hi": 17,
+ "schedule": "og",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 38,
+   "phrase": "center",
+   "new_pos": [
+    6
+   ],
+   "src_pos": [
+    8
+   ]
+  },
+  {
+   "role": "g",
+   "src": 18,
+   "phrase": "cabinet",
+   "new_pos": [
+    9
+   ],
+   "src_pos": [
+    8
+   ]
+  }
+ ],
+ "meta": {
+  "task": "spatial:8",
+  "arm": "word"
+ }
+}

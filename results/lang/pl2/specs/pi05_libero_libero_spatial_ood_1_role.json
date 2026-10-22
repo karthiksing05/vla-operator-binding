@@ -1,0 +1,41 @@
+{
+ "prompt": "put the chocolate pudding on the plate",
+ "lo": 13,
+ "hi": 17,
+ "schedule": "ph",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 29,
+   "phrase": "chocolate pudding",
+   "new_pos": [
+    3,
+    4
+   ],
+   "src_pos": [
+    4,
+    5
+   ]
+  },
+  {
+   "role": "g",
+   "src": 37,
+   "phrase": "on the plate",
+   "new_pos": [
+    5,
+    6,
+    7
+   ],
+   "src_pos": [
+    14,
+    15,
+    16
+   ]
+  }
+ ],
+ "meta": {
+  "task": "spatial:1",
+  "arm": "role"
+ }
+}

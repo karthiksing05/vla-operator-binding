@@ -1,0 +1,783 @@
+{
+ "key": "goal:6",
+ "text": "put the wine bottle in the bowl",
+ "roles": {
+  "o": "wine bottle",
+  "g": "in the bowl"
+ },
+ "cands": {
+  "o": [
+   11,
+   14
+  ],
+  "g": [
+   8,
+   10,
+   12,
+   13,
+   17,
+   18,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39
+  ]
+ },
+ "d0": {
+  "T": 83,
+  "c0": 37,
+  "rel": 83
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 11,
+    "g": 13
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:11": 0.6396174430847168,
+    "o:14": 0.7158416509628296,
+    "g:8": 0.7704840302467346,
+    "g:10": 0.7426443099975586,
+    "g:12": 0.7773156762123108,
+    "g:13": 0.6528302431106567,
+    "g:17": 0.730272650718689,
+    "g:18": 0.6959691047668457,
+    "g:30": 0.7789466381072998,
+    "g:31": 0.7799361944198608,
+    "g:32": 0.7775571942329407,
+    "g:33": 0.776909589767456,
+    "g:34": 0.7770423889160156,
+    "g:35": 0.7777701616287231,
+    "g:36": 0.7780132293701172,
+    "g:37": 0.7773310542106628,
+    "g:38": 0.7770519256591797,
+    "g:39": 0.775770366191864
+   },
+   "span_loss": {
+    "1-17": 0.6528302431106567,
+    "1-6": 0.6690375804901123,
+    "7-12": 0.7027727961540222,
+    "13-17": 0.7210590839385986
+   }
+  },
+  "role": {
+   "src": {
+    "o": 11,
+    "g": 13
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:11": 0.6975753903388977,
+    "o:14": 0.7089751958847046,
+    "g:8": 0.726219654083252,
+    "g:10": 0.7293978929519653,
+    "g:12": 0.7302457094192505,
+    "g:13": 0.6727080345153809,
+    "g:17": 0.7247849106788635,
+    "g:18": 0.7198357582092285,
+    "g:30": 0.7300581336021423,
+    "g:31": 0.7300021648406982,
+    "g:32": 0.7292766571044922,
+    "g:33": 0.7291728258132935,
+    "g:34": 0.7288380861282349,
+    "g:35": 0.7296286821365356,
+    "g:36": 0.7286397218704224,
+    "g:37": 0.7283564805984497,
+    "g:38": 0.7290242910385132,
+    "g:39": 0.7292775511741638
+   },
+   "span_loss": {
+    "1-17": 0.6727080345153809,
+    "1-6": 0.6833964586257935,
+    "7-12": 0.7142816185951233,
+    "13-17": 0.7198789715766907
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 11,
+    "g": 13
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:11": 0.6111092567443848,
+    "o:14": 0.6944756507873535,
+    "g:8": 0.6835541725158691,
+    "g:10": 0.6486014127731323,
+    "g:12": 0.7022924423217773,
+    "g:13": 0.5896498560905457,
+    "g:17": 0.6480095982551575,
+    "g:18": 0.6468976140022278,
+    "g:30": 0.7151103615760803,
+    "g:31": 0.7167785167694092,
+    "g:32": 0.7116308212280273,
+    "g:33": 0.7123657464981079,
+    "g:34": 0.7110835313796997,
+    "g:35": 0.7123235464096069,
+    "g:36": 0.7144311666488647,
+    "g:37": 0.7121593952178955,
+    "g:38": 0.7127669453620911,
+    "g:39": 0.709754467010498
+   },
+   "span_loss": {
+    "1-17": 0.5896498560905457,
+    "1-6": 0.6158528923988342,
+    "7-12": 0.681144118309021,
+    "13-17": 0.6896868944168091
+   },
+   "template": "pick up the {O} and place it {G}",
+   "prompt": "pick up the wine bottle and place it in the bowl",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the wine bottle and place it in the bowl",
+     "with_word": 0.5896498560905457,
+     "alone": 0.7000508308410645
+    },
+    "put the {O} {G}": {
+     "prompt": "put the wine bottle in the bowl",
+     "with_word": 0.6528302431106567,
+     "alone": 0.7259091138839722
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    14,
+    33
+   ],
+   "lam": 12,
+   "pairs": {
+    "11.10": 0.9095270037651062,
+    "11.13": 0.8948232531547546,
+    "11.17": 0.9458314180374146,
+    "11.18": 0.9269320368766785,
+    "11.30": 0.8514260053634644,
+    "11.31": 0.8673964142799377,
+    "11.32": 0.8656445741653442,
+    "11.33": 0.8551152348518372,
+    "11.34": 0.9142323732376099,
+    "11.35": 0.9053585529327393,
+    "11.36": 0.8333787322044373,
+    "11.37": 0.846653163433075,
+    "11.38": 0.8508184552192688,
+    "11.39": 0.9021823406219482,
+    "14.10": 0.7284303307533264,
+    "14.13": 0.762543797492981,
+    "14.17": 0.7528426647186279,
+    "14.18": 0.7082846760749817,
+    "14.30": 0.7293354272842407,
+    "14.31": 0.7030101418495178,
+    "14.32": 0.7018827199935913,
+    "14.33": 0.6896264553070068,
+    "14.34": 0.710698664188385,
+    "14.35": 0.7349810600280762,
+    "14.36": 0.7134706377983093,
+    "14.37": 0.7292052507400513,
+    "14.38": 0.7220094203948975,
+    "14.39": 0.7323713302612305
+   },
+   "lams": {
+    "24": 0.6896264553070068,
+    "12": 0.4999576807022095,
+    "36": 0.7747376561164856
+   },
+   "cands": {
+    "o": [
+     11,
+     14
+    ],
+    "g": [
+     10,
+     13,
+     17,
+     18,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.7259091138839722,
+  "null": 0.6605395674705505,
+  "tli_li": 0.5892426371574402,
+  "word": 0.6528302431106567,
+  "role": 0.6727080345153809,
+  "tmpl": 0.5896498560905457,
+  "tmpl_only": 0.7000508308410645,
+  "tli_sel": 0.4999576807022095,
+  "rand": 0.66108238697052,
+  "pos": 0.6985857486724854,
+  "l2sel": 0.4999576807022095
+ },
+ "l1": {
+  "zs": 0.6209368109703064,
+  "null": 0.569890558719635,
+  "tli_li": 0.47123080492019653,
+  "word": 0.5999714732170105,
+  "role": 0.5926883220672607,
+  "tmpl": 0.5615333914756775,
+  "tmpl_only": 0.6027562022209167,
+  "tli_sel": 0.4798625707626343,
+  "rand": 0.5642221570014954,
+  "pos": 0.6328481435775757,
+  "l2sel": 0.4798625707626343
+ },
+ "l2sel": "tli_sel",
+ "controls": {
+  "o": {
+   "rand": 38,
+   "pos": 33,
+   "rand_text": "pick up the black bowl from table center and place it on the plate",
+   "pos_text": "pick up the black bowl on the stove and place it on the plate"
+  },
+  "g": {
+   "rand": 22,
+   "pos": 14,
+   "rand_text": "pick up the cream cheese and place it in the basket",
+   "pos_text": "put the wine bottle on top of the cabinet"
+  }
+ },
+ "n_eval": 120,
+ "arms": {
+  "zs": {
+   "prompt": "put the wine bottle in the bowl",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_li": {
+   "prompt": "put the wine bottle in the bowl",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 14,
+    "t2": 13,
+    "lam": 12
+   }
+  },
+  "word": {
+   "prompt": "put the wine bottle in the bowl",
+   "edits": [
+    {
+     "role": "o",
+     "src": 11,
+     "phrase": "wine bottle",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      3,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 13,
+     "phrase": "in the bowl",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      5,
+      6,
+      7
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the wine bottle in the bowl",
+   "edits": [
+    {
+     "role": "o",
+     "src": 11,
+     "phrase": "wine bottle",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      3,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 13,
+     "phrase": "in the bowl",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      5,
+      6,
+      7
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "pick up the wine bottle and place it in the bowl",
+   "edits": [
+    {
+     "role": "o",
+     "src": 11,
+     "phrase": "wine bottle",
+     "new_pos": [
+      4,
+      5
+     ],
+     "src_pos": [
+      3,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 13,
+     "phrase": "in the bowl",
+     "new_pos": [
+      9,
+      10,
+      11
+     ],
+     "src_pos": [
+      5,
+      6,
+      7
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "pick up the wine bottle and place it in the bowl",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the wine bottle in the bowl",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 14,
+    "t2": 33,
+    "lam": 12
+   }
+  },
+  "rand": {
+   "prompt": "put the wine bottle in the bowl",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 38,
+    "t2": 22,
+    "lam": 12
+   }
+  },
+  "pos": {
+   "prompt": "put the wine bottle in the bowl",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 33,
+    "t2": 14,
+    "lam": 12
+   }
+  }
+ },
+ "modes": {
+  "start": {
+   "frame": 0,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.16542094881390848,
+     0.03513570966496081,
+     0.9953433325186998
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 0.375,
+    "named_point": 0.0,
+    "grip_first": 39.125,
+    "grip_closed": 0.09
+   },
+   "word": {
+    "endpoint": [
+     -0.13973270289639012,
+     0.10788400494386971,
+     0.944724417387343
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 38.125,
+    "grip_closed": 0.11000000000000001
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.11302418878753208,
+     0.10464315954079666,
+     0.9578538603626041
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 41.0,
+    "grip_closed": 0.1775
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.15672745316694034,
+     -0.01931936254916168,
+     1.1263177145500862
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 0.75,
+    "named_point": 0.125,
+    "grip_first": 30.25,
+    "grip_closed": 0.2
+   },
+   "role": {
+    "endpoint": [
+     -0.1423816520944703,
+     0.07728908682302293,
+     0.9764761359615024
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 39.125,
+    "grip_closed": 0.09
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.18379845911382883,
+     -0.04554801706612545,
+     1.0908875780562266
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 0.875,
+    "named_point": 0.75,
+    "grip_first": 33.75,
+    "grip_closed": 0.3225
+   },
+   "rand": {
+    "endpoint": [
+     -0.12156285780015152,
+     0.0534425411288774,
+     0.9873530260063687
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 32.375,
+    "grip_closed": 0.0975
+   },
+   "pos": {
+    "endpoint": [
+     -0.23651376143099134,
+     0.00818684412980797,
+     0.9357900820538209
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 0.75,
+    "grip_first": 39.0,
+    "grip_closed": 0.21750000000000003
+   }
+  },
+  "approach": {
+   "frame": 18,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.13839752589457827,
+     -0.052745939177074874,
+     1.0972847271334212
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 0.625,
+    "named_point": 0.625,
+    "grip_first": 17.625,
+    "grip_closed": 0.6200000000000001
+   },
+   "word": {
+    "endpoint": [
+     -0.16880573972053106,
+     -0.01846410028066029,
+     0.9994558883795244
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 0.875,
+    "named_point": 0.75,
+    "grip_first": 18.125,
+    "grip_closed": 0.505
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.1965098000723207,
+     -0.02957189506640555,
+     0.9770753307661446
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 17.0,
+    "grip_closed": 0.5149999999999999
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.06835929637362627,
+     -0.07591251267943036,
+     1.2155345601230294
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "plate_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 17.875,
+    "grip_closed": 0.6425000000000001
+   },
+   "role": {
+    "endpoint": [
+     -0.15090707883472063,
+     -0.04847110450348968,
+     1.0624925749480454
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 0.75,
+    "named_point": 0.625,
+    "grip_first": 17.75,
+    "grip_closed": 0.6200000000000001
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.09953083438140961,
+     -0.1015775337356661,
+     1.198381637546207
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 0.5,
+    "named_point": 0.0,
+    "grip_first": 17.75,
+    "grip_closed": 0.645
+   },
+   "rand": {
+    "endpoint": [
+     -0.15037734056315036,
+     -0.001169643484964832,
+     1.038150774110998
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 0.5,
+    "named_point": 0.25,
+    "grip_first": 26.125,
+    "grip_closed": 0.4625
+   },
+   "pos": {
+    "endpoint": [
+     -0.23818521696126232,
+     -0.06707611405021764,
+     0.952456229203962
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "wine_bottle_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 22.75,
+    "grip_closed": 0.545
+   }
+  },
+  "carry": {
+   "frame": 56,
+   "carry": true,
+   "zs": {
+    "endpoint": [
+     -0.05754922818136156,
+     -0.21334886284513765,
+     1.2289663232563368
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 42.625,
+    "grip_closed": 0.855
+   },
+   "word": {
+    "endpoint": [
+     -0.1164899391381258,
+     -0.19244821734342926,
+     1.1917810823721104
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 39.875,
+    "grip_closed": 0.8
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.12279813569825727,
+     -0.16913914947522896,
+     1.1571767580652879
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 37.75,
+    "grip_closed": 0.755
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.014422305796916505,
+     0.16960937376021923,
+     1.0659670355174211
+    ],
+    "nearest": "cream_cheese_1",
+    "pointed": "cream_cheese_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": -1.0,
+    "grip_closed": 1.0
+   },
+   "role": {
+    "endpoint": [
+     -0.08246816555124639,
+     -0.21301651189704107,
+     1.2299821950652041
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 40.625,
+    "grip_closed": 0.8125
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.1796169518511965,
+     -0.11758320708715854,
+     1.0704103836793815
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 30.375,
+    "grip_closed": 0.6074999999999999
+   },
+   "rand": {
+    "endpoint": [
+     -0.051445535811330975,
+     -0.1369374408431093,
+     1.1693695827157218
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 41.625,
+    "grip_closed": 0.8325
+   },
+   "pos": {
+    "endpoint": [
+     -0.005604002041327397,
+     -0.1798823433907758,
+     1.2735147281884804
+    ],
+    "nearest": "wine_bottle_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 41.5,
+    "grip_closed": 0.8300000000000001
+   }
+  }
+ },
+ "seconds": 563.3794665336609,
+ "demo_src": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_goal_libero_goal_ood_6_tli_14.13.12_seed13_rec/task6_trial0.npz",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_goal_libero_goal_ood_6_tli_14.13.12_seed13_rec/task6_trial1.npz"
+ ]
+}

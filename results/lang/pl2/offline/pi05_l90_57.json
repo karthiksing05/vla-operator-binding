@@ -1,0 +1,327 @@
+{
+ "key": "l90:57",
+ "text": "pick up the cream cheese and put it in the tray",
+ "roles": {
+  "o": "cream cheese",
+  "g": "in the tray"
+ },
+ "cands": {
+  "o": [
+   4,
+   7,
+   13,
+   22
+  ],
+  "g": []
+ },
+ "d0": {
+  "T": 148,
+  "c0": 66,
+  "rel": 139
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 4
+   },
+   "span": [
+    1,
+    6
+   ],
+   "trace": {
+    "o:4": 0.1572209894657135,
+    "o:7": 0.15804506838321686,
+    "o:13": 0.15782849490642548,
+    "o:22": 0.16074220836162567
+   },
+   "span_loss": {
+    "1-17": 0.1572209894657135,
+    "1-6": 0.15692757070064545,
+    "7-12": 0.1572476625442505,
+    "13-17": 0.1585175096988678
+   }
+  },
+  "role": {
+   "src": {
+    "o": 4
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:4": 0.1570155918598175,
+    "o:7": 0.15918675065040588,
+    "o:13": 0.15956906974315643,
+    "o:22": 0.16134347021579742
+   },
+   "span_loss": {
+    "1-17": 0.1570155918598175,
+    "1-6": 0.1570499688386917,
+    "7-12": 0.1587984263896942,
+    "13-17": 0.1589444875717163
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 4
+   },
+   "span": [
+    1,
+    6
+   ],
+   "trace": {
+    "o:4": 0.15724638104438782,
+    "o:7": 0.15844464302062988,
+    "o:13": 0.16015782952308655,
+    "o:22": 0.15841563045978546
+   },
+   "span_loss": {
+    "1-17": 0.15724638104438782,
+    "1-6": 0.15621426701545715,
+    "7-12": 0.15924081206321716,
+    "13-17": 0.1590641587972641
+   },
+   "template": "put the {O} {G}",
+   "prompt": "put the cream cheese in the tray",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the cream cheese and place it in the tray",
+     "with_word": 0.15704941749572754,
+     "alone": 0.16195011138916016
+    },
+    "put the {O} {G}": {
+     "prompt": "put the cream cheese in the tray",
+     "with_word": 0.15621426701545715,
+     "alone": 0.1609399914741516
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    22,
+    17
+   ],
+   "lam": 36,
+   "pairs": {
+    "13.10": 0.208245649933815,
+    "13.11": 0.1719522923231125,
+    "13.14": 0.18204917013645172,
+    "13.17": 0.1739334762096405,
+    "13.18": 0.18783728778362274,
+    "22.10": 0.1946260929107666,
+    "22.11": 0.22743377089500427,
+    "22.13": 0.22503793239593506,
+    "22.14": 0.22688469290733337,
+    "22.17": 0.16839073598384857,
+    "22.18": 0.1967981606721878
+   },
+   "lams": {
+    "24": 0.16839073598384857,
+    "12": 0.18735235929489136,
+    "36": 0.16365699470043182
+   },
+   "cands": {
+    "o": [
+     13,
+     22
+    ],
+    "g": [
+     10,
+     11,
+     13,
+     14,
+     17,
+     18
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.1614656299352646,
+  "null": 0.15284116566181183,
+  "word": 0.15692757070064545,
+  "role": 0.1570155918598175,
+  "tmpl": 0.15621426701545715,
+  "tmpl_only": 0.1609399914741516,
+  "tli_sel": 0.16365699470043182,
+  "rand": 0.15702907741069794,
+  "pos": 0.15306024253368378,
+  "l2sel": 0.15621426701545715
+ },
+ "l1": {
+  "zs": 0.1962977945804596,
+  "null": 0.18552358448505402,
+  "word": 0.18893010914325714,
+  "role": 0.19153694808483124,
+  "tmpl": 0.18841396272182465,
+  "tmpl_only": 0.1968075931072235,
+  "tli_sel": 0.17574754357337952,
+  "rand": 0.18623124063014984,
+  "pos": 0.1859007328748703,
+  "l2sel": 0.18841396272182465
+ },
+ "l2sel": "tmpl",
+ "controls": {
+  "o": {
+   "rand": 25,
+   "pos": 26,
+   "rand_text": "pick up the milk and place it in the basket",
+   "pos_text": "pick up the salad dressing and place it in the basket"
+  }
+ },
+ "n_eval": 59,
+ "arms": {
+  "zs": {
+   "prompt": "pick up the cream cheese and put it in the tray",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "word": {
+   "prompt": "pick up the cream cheese and put it in the tray",
+   "edits": [
+    {
+     "role": "o",
+     "src": 4,
+     "phrase": "cream cheese",
+     "new_pos": [
+      4,
+      5
+     ],
+     "src_pos": [
+      8,
+      9
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "pick up the cream cheese and put it in the tray",
+   "edits": [
+    {
+     "role": "o",
+     "src": 4,
+     "phrase": "cream cheese",
+     "new_pos": [
+      4,
+      5
+     ],
+     "src_pos": [
+      8,
+      9
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "put the cream cheese in the tray",
+   "edits": [
+    {
+     "role": "o",
+     "src": 4,
+     "phrase": "cream cheese",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      8,
+      9
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "put the cream cheese in the tray",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "pick up the cream cheese and put it in the tray",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 22,
+    "t2": 17,
+    "lam": 36
+   }
+  },
+  "rand": {
+   "prompt": "put the cream cheese in the tray",
+   "edits": [
+    {
+     "role": "o",
+     "src": 25,
+     "phrase": "cream cheese <- milk",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      4
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "og",
+   "tli": null
+  },
+  "pos": {
+   "prompt": "put the cream cheese in the tray",
+   "edits": [
+    {
+     "role": "o",
+     "src": 26,
+     "phrase": "cream cheese <- salad dressing",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "og",
+   "tli": null
+  }
+ },
+ "seconds": 245.48815608024597,
+ "demo_src": [
+  78,
+  79
+ ]
+}

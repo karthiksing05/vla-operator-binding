@@ -1,0 +1,791 @@
+{
+ "key": "spatial:7",
+ "text": "put the bowl next to the plate on the stove",
+ "roles": {
+  "o": "bowl next to the plate",
+  "g": "on the stove"
+ },
+ "cands": {
+  "o": [
+   0,
+   1,
+   10,
+   15,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35,
+   36,
+   37,
+   38,
+   39
+  ],
+  "g": [
+   3,
+   6,
+   15,
+   16,
+   17,
+   33
+  ]
+ },
+ "d0": {
+  "T": 297,
+  "c0": 50,
+  "rel": 193
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 36,
+    "g": 16
+   },
+   "span": [
+    1,
+    6
+   ],
+   "trace": {
+    "o:0": 0.721684992313385,
+    "o:1": 0.7193318009376526,
+    "o:10": 0.7251845002174377,
+    "o:15": 0.706107497215271,
+    "o:30": 0.7080689072608948,
+    "o:31": 0.7140634655952454,
+    "o:32": 0.7089551687240601,
+    "o:33": 0.7232123017311096,
+    "o:34": 0.709148108959198,
+    "o:35": 0.7149386405944824,
+    "o:36": 0.683815598487854,
+    "o:37": 0.7112190127372742,
+    "o:38": 0.6885578036308289,
+    "o:39": 0.7104584574699402,
+    "g:3": 0.528557300567627,
+    "g:6": 0.7387382388114929,
+    "g:15": 0.7090396285057068,
+    "g:16": 0.5181726813316345,
+    "g:17": 0.609661877155304,
+    "g:33": 0.6737627387046814
+   },
+   "span_loss": {
+    "1-17": 0.5181726813316345,
+    "1-6": 0.5068338513374329,
+    "7-12": 0.5285193920135498,
+    "13-17": 0.605539858341217
+   }
+  },
+  "role": {
+   "src": {
+    "o": 38,
+    "g": 16
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:0": 0.7252586483955383,
+    "o:1": 0.7260661125183105,
+    "o:10": 0.7253233194351196,
+    "o:15": 0.7453637719154358,
+    "o:30": 0.7129238843917847,
+    "o:31": 0.7199200391769409,
+    "o:32": 0.7150673270225525,
+    "o:33": 0.7217079401016235,
+    "o:34": 0.7215635180473328,
+    "o:35": 0.7180010676383972,
+    "o:36": 0.7056843638420105,
+    "o:37": 0.7166364192962646,
+    "o:38": 0.7052595019340515,
+    "o:39": 0.7172598838806152,
+    "g:3": 0.6044678688049316,
+    "g:6": 0.736889123916626,
+    "g:15": 0.720074474811554,
+    "g:16": 0.5684108734130859,
+    "g:17": 0.6853052973747253,
+    "g:33": 0.6828357577323914
+   },
+   "span_loss": {
+    "1-17": 0.5684108734130859,
+    "1-6": 0.5891518592834473,
+    "7-12": 0.6594573259353638,
+    "13-17": 0.6755331754684448
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 36,
+    "g": 16
+   },
+   "span": [
+    1,
+    6
+   ],
+   "trace": {
+    "o:0": 0.721684992313385,
+    "o:1": 0.7193318009376526,
+    "o:10": 0.7251845002174377,
+    "o:15": 0.706107497215271,
+    "o:30": 0.7080689072608948,
+    "o:31": 0.7140634655952454,
+    "o:32": 0.7089551687240601,
+    "o:33": 0.7232123017311096,
+    "o:34": 0.709148108959198,
+    "o:35": 0.7149386405944824,
+    "o:36": 0.683815598487854,
+    "o:37": 0.7112190127372742,
+    "o:38": 0.6885578036308289,
+    "o:39": 0.7104584574699402,
+    "g:3": 0.528557300567627,
+    "g:6": 0.7387382388114929,
+    "g:15": 0.7090396285057068,
+    "g:16": 0.5181726813316345,
+    "g:17": 0.609661877155304,
+    "g:33": 0.6737627387046814
+   },
+   "span_loss": {
+    "1-17": 0.5181726813316345,
+    "1-6": 0.5068338513374329,
+    "7-12": 0.5285193920135498,
+    "13-17": 0.605539858341217
+   },
+   "template": "put the {O} {G}",
+   "prompt": "put the bowl next to the plate on the stove",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the bowl next to the plate and place it on the stove",
+     "with_word": 0.5090943574905396,
+     "alone": 0.6657916903495789
+    },
+    "put the {O} {G}": {
+     "prompt": "put the bowl next to the plate on the stove",
+     "with_word": 0.5068338513374329,
+     "alone": 0.7224688529968262
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    36,
+    33
+   ],
+   "lam": 12,
+   "pairs": {
+    "10.17": 0.5738279223442078,
+    "10.33": 0.6357667446136475,
+    "30.17": 0.7972369194030762,
+    "30.33": 0.5070669651031494,
+    "31.17": 0.8149233460426331,
+    "31.33": 0.6164024472236633,
+    "32.17": 0.8061524629592896,
+    "32.33": 0.6000761985778809,
+    "33.17": 0.8033745288848877,
+    "34.17": 0.8676778674125671,
+    "34.33": 0.5936716198921204,
+    "35.17": 0.7985396385192871,
+    "35.33": 0.6141177415847778,
+    "36.17": 0.7890369892120361,
+    "36.33": 0.49951401352882385,
+    "37.17": 0.7982253432273865,
+    "37.33": 0.5026858448982239,
+    "38.17": 0.8203867673873901,
+    "38.33": 0.638955295085907,
+    "39.17": 0.7901673316955566,
+    "39.33": 0.6147812008857727
+   },
+   "lams": {
+    "24": 0.49951401352882385,
+    "12": 0.4494986832141876,
+    "36": 0.5422647595405579
+   },
+   "cands": {
+    "o": [
+     10,
+     30,
+     31,
+     32,
+     33,
+     34,
+     35,
+     36,
+     37,
+     38,
+     39
+    ],
+    "g": [
+     17,
+     33
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.7224688529968262,
+  "null": 0.7057405114173889,
+  "tli_li": 0.8092370629310608,
+  "word": 0.5068338513374329,
+  "role": 0.5684108734130859,
+  "tmpl": 0.5068338513374329,
+  "tmpl_only": 0.7224688529968262,
+  "tli_sel": 0.4494986832141876,
+  "rand": 0.6138019561767578,
+  "pos": 0.6510355472564697,
+  "l2sel": 0.4494986832141876
+ },
+ "l1": {
+  "zs": 0.7296481728553772,
+  "null": 0.7151304483413696,
+  "tli_li": 0.8257032632827759,
+  "word": 0.5178741812705994,
+  "role": 0.5894912481307983,
+  "tmpl": 0.5178741812705994,
+  "tmpl_only": 0.7296481728553772,
+  "tli_sel": 0.5007764101028442,
+  "rand": 0.6044699549674988,
+  "pos": 0.6871817708015442,
+  "l2sel": 0.5007764101028442
+ },
+ "l2sel": "tli_sel",
+ "controls": {
+  "o": {
+   "rand": 20,
+   "pos": 9,
+   "rand_text": "pick up the orange juice and place it in the basket",
+   "pos_text": "pick up the book and place it in the back compartment of the caddy"
+  },
+  "g": {
+   "rand": 28,
+   "pos": 32,
+   "rand_text": "pick up the tomato sauce and place it in the basket",
+   "pos_text": "pick up the black bowl on the ramekin and place it on the plate"
+  }
+ },
+ "n_eval": 119,
+ "arms": {
+  "zs": {
+   "prompt": "put the bowl next to the plate on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_li": {
+   "prompt": "put the bowl next to the plate on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 36,
+    "t2": 17,
+    "lam": 30
+   }
+  },
+  "word": {
+   "prompt": "put the bowl next to the plate on the stove",
+   "edits": [
+    {
+     "role": "o",
+     "src": 36,
+     "phrase": "bowl next to the plate",
+     "new_pos": [
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "role": "g",
+     "src": 16,
+     "phrase": "on the stove",
+     "new_pos": [
+      8,
+      9,
+      10
+     ],
+     "src_pos": [
+      2,
+      3,
+      4
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the bowl next to the plate on the stove",
+   "edits": [
+    {
+     "role": "o",
+     "src": 38,
+     "phrase": "plate",
+     "new_pos": [
+      7
+     ],
+     "src_pos": [
+      14
+     ]
+    },
+    {
+     "role": "g",
+     "src": 16,
+     "phrase": "on the stove",
+     "new_pos": [
+      8,
+      9,
+      10
+     ],
+     "src_pos": [
+      2,
+      3,
+      4
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "put the bowl next to the plate on the stove",
+   "edits": [
+    {
+     "role": "o",
+     "src": 36,
+     "phrase": "bowl next to the plate",
+     "new_pos": [
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ]
+    },
+    {
+     "role": "g",
+     "src": 16,
+     "phrase": "on the stove",
+     "new_pos": [
+      8,
+      9,
+      10
+     ],
+     "src_pos": [
+      2,
+      3,
+      4
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "put the bowl next to the plate on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the bowl next to the plate on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 36,
+    "t2": 33,
+    "lam": 12
+   }
+  },
+  "rand": {
+   "prompt": "put the bowl next to the plate on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 20,
+    "t2": 28,
+    "lam": 12
+   }
+  },
+  "pos": {
+   "prompt": "put the bowl next to the plate on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 9,
+    "t2": 32,
+    "lam": 12
+   }
+  }
+ },
+ "modes": {
+  "start": {
+   "frame": 0,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.07886344386671074,
+     0.22977975252650387,
+     0.9929153482639105
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 11.5,
+    "grip_closed": 0.005
+   },
+   "word": {
+    "endpoint": [
+     -0.27707473150471457,
+     0.26848588761701175,
+     0.9979263837250284
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 34.625,
+    "grip_closed": 0.0525
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.27707473150471457,
+     0.26848588761701175,
+     0.9979263837250284
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 34.625,
+    "grip_closed": 0.0525
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.058615772222034325,
+     0.23605120076966513,
+     1.005249529557378
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 11.5,
+    "grip_closed": 0.005
+   },
+   "role": {
+    "endpoint": [
+     -0.09002890316010176,
+     0.22359966111024263,
+     0.9993274489531419
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 29.875,
+    "grip_closed": 0.02
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.06370157202827748,
+     0.24692149480439377,
+     0.9957858048573209
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 11.5,
+    "grip_closed": 0.005
+   },
+   "rand": {
+    "endpoint": [
+     -0.14248581277303773,
+     0.22341618129098512,
+     1.008918415796094
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 29.75,
+    "grip_closed": 0.0225
+   },
+   "pos": {
+    "endpoint": [
+     -0.1568453389654158,
+     0.1533240618495006,
+     1.037073645561948
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 29.375,
+    "grip_closed": 0.03
+   }
+  },
+  "approach": {
+   "frame": 22,
+   "carry": false,
+   "zs": {
+    "endpoint": [
+     -0.035538967005065925,
+     0.2016854403937875,
+     1.0222330765793597
+    ],
+    "nearest": "plate_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.25,
+    "named_point": 1.0,
+    "grip_first": 27.75,
+    "grip_closed": 0.445
+   },
+   "word": {
+    "endpoint": [
+     -0.12407114704033134,
+     0.2651531906984484,
+     1.0084905076269692
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 30.0,
+    "grip_closed": 0.4
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.12407114704033134,
+     0.2651531906984484,
+     1.0084905076269692
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 30.0,
+    "grip_closed": 0.4
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.02638983760839995,
+     0.20710829351036317,
+     1.021917397155915
+    ],
+    "nearest": "plate_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.375,
+    "named_point": 1.0,
+    "grip_first": 28.125,
+    "grip_closed": 0.4375
+   },
+   "role": {
+    "endpoint": [
+     -0.0496395747692808,
+     0.2008408576579419,
+     1.050002397345129
+    ],
+    "nearest": "plate_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.5,
+    "named_point": 1.0,
+    "grip_first": 26.875,
+    "grip_closed": 0.46249999999999997
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.026853837916956884,
+     0.2221716845835344,
+     1.014874186680615
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.625,
+    "named_point": 1.0,
+    "grip_first": 28.875,
+    "grip_closed": 0.4225
+   },
+   "rand": {
+    "endpoint": [
+     -0.04844178574303786,
+     0.1972256472202669,
+     1.042531087664278
+    ],
+    "nearest": "plate_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.5,
+    "named_point": 1.0,
+    "grip_first": 28.125,
+    "grip_closed": 0.4375
+   },
+   "pos": {
+    "endpoint": [
+     -0.059734976988738975,
+     0.17825859401104843,
+     1.0486910040800543
+    ],
+    "nearest": "plate_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 0.125,
+    "named_point": 1.0,
+    "grip_first": 29.75,
+    "grip_closed": 0.405
+   }
+  },
+  "carry": {
+   "frame": 94,
+   "carry": true,
+   "zs": {
+    "endpoint": [
+     -0.04963930544490811,
+     0.1993721905756903,
+     0.9870135142417741
+    ],
+    "nearest": "plate_1",
+    "pointed": "cookies_1",
+    "named_near": 0.0,
+    "named_point": 0.0,
+    "grip_first": 39.125,
+    "grip_closed": 0.7825
+   },
+   "word": {
+    "endpoint": [
+     -0.15830984782946694,
+     0.3229747884574109,
+     0.8557297820038905
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 0.875,
+    "grip_first": 7.375,
+    "grip_closed": 0.9125
+   },
+   "tmpl": {
+    "endpoint": [
+     -0.15830984782946694,
+     0.3229747884574109,
+     0.8557297820038905
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 0.875,
+    "grip_first": 7.375,
+    "grip_closed": 0.9125
+   },
+   "tli_sel": {
+    "endpoint": [
+     -0.06476112050817703,
+     0.31439931327052695,
+     0.9270909622938844
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.125,
+    "grip_first": 14.125,
+    "grip_closed": 0.9275
+   },
+   "role": {
+    "endpoint": [
+     -0.1712360093367466,
+     0.3320157754514723,
+     0.8638856330209413
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "akita_black_bowl_1",
+    "named_near": 1.0,
+    "named_point": 1.0,
+    "grip_first": 13.75,
+    "grip_closed": 0.845
+   },
+   "tli_li": {
+    "endpoint": [
+     -0.084851247884561,
+     0.26109112455956335,
+     0.9995082133892089
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "cookies_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 31.25,
+    "grip_closed": 0.625
+   },
+   "rand": {
+    "endpoint": [
+     -0.05768541780647066,
+     0.30354610977279195,
+     0.9933215709687601
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "plate_1",
+    "named_near": 1.0,
+    "named_point": 0.0,
+    "grip_first": 33.375,
+    "grip_closed": 0.6675
+   },
+   "pos": {
+    "endpoint": [
+     -0.01544121543971811,
+     0.2949921857050991,
+     0.977334869746945
+    ],
+    "nearest": "akita_black_bowl_1",
+    "pointed": "plate_1",
+    "named_near": 0.875,
+    "named_point": 0.0,
+    "grip_first": 39.875,
+    "grip_closed": 0.7975
+   }
+  }
+ },
+ "seconds": 422.20280861854553,
+ "demo_src": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_spatial_libero_spatial_ood_7_pfield_36.17_seed13_pi0_rec/task7_trial0.npz",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_demo_spatial_libero_spatial_ood_7_pfield_36.17_seed13_pi0_rec/task7_trial1.npz"
+ ]
+}

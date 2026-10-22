@@ -1,0 +1,35 @@
+{
+ "prompt": "put the bowl next to the plate on the cabinet",
+ "lo": 7,
+ "hi": 12,
+ "schedule": "ph",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 32,
+   "phrase": "plate",
+   "new_pos": [
+    7
+   ],
+   "src_pos": [
+    15
+   ]
+  },
+  {
+   "role": "g",
+   "src": 18,
+   "phrase": "cabinet",
+   "new_pos": [
+    10
+   ],
+   "src_pos": [
+    8
+   ]
+  }
+ ],
+ "meta": {
+  "task": "spatial:6",
+  "arm": "role"
+ }
+}

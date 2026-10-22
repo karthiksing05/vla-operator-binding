@@ -1,0 +1,303 @@
+{
+ "key": "l90:55",
+ "text": "pick up the alphabet soup and put it in the tray",
+ "roles": {
+  "o": "alphabet soup",
+  "g": "in the tray"
+ },
+ "cands": {
+  "o": [
+   4,
+   5,
+   24
+  ],
+  "g": []
+ },
+ "d0": {
+  "T": 111,
+  "c0": 46,
+  "rel": 105
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 24
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "o:4": 0.18143557012081146,
+    "o:5": 0.18180294334888458,
+    "o:24": 0.17942051589488983
+   },
+   "span_loss": {
+    "1-17": 0.17942051589488983,
+    "1-6": 0.17965634167194366,
+    "7-12": 0.1793089210987091,
+    "13-17": 0.17947962880134583
+   }
+  },
+  "role": {
+   "src": {
+    "o": 24
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "o:4": 0.1801619976758957,
+    "o:5": 0.17990049719810486,
+    "o:24": 0.17929711937904358
+   },
+   "span_loss": {
+    "1-17": 0.17929711937904358,
+    "1-6": 0.17963437736034393,
+    "7-12": 0.17928652465343475,
+    "13-17": 0.17950879037380219
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 24
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "o:4": 0.1778048574924469,
+    "o:5": 0.17775589227676392,
+    "o:24": 0.17468680441379547
+   },
+   "span_loss": {
+    "1-17": 0.17468680441379547,
+    "1-6": 0.1759905070066452,
+    "7-12": 0.17337670922279358,
+    "13-17": 0.17386183142662048
+   },
+   "template": "put the {O} {G}",
+   "prompt": "put the alphabet soup in the tray",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the alphabet soup and place it in the tray",
+     "with_word": 0.18013741075992584,
+     "alone": 0.1802484095096588
+    },
+    "put the {O} {G}": {
+     "prompt": "put the alphabet soup in the tray",
+     "with_word": 0.17337670922279358,
+     "alone": 0.17465616762638092
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    24,
+    18
+   ],
+   "lam": 24,
+   "pairs": {
+    "24.10": 0.16698409616947174,
+    "24.11": 0.19449947774410248,
+    "24.13": 0.19017310440540314,
+    "24.14": 0.2139975130558014,
+    "24.17": 0.18010953068733215,
+    "24.18": 0.16607896983623505
+   },
+   "lams": {
+    "24": 0.16607896983623505,
+    "12": 0.1973588913679123,
+    "36": 0.18321700394153595
+   },
+   "cands": {
+    "o": [
+     24
+    ],
+    "g": [
+     10,
+     11,
+     13,
+     14,
+     17,
+     18
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.1795552521944046,
+  "null": 0.17484824359416962,
+  "word": 0.1793089210987091,
+  "role": 0.17928652465343475,
+  "tmpl": 0.17337670922279358,
+  "tmpl_only": 0.17465616762638092,
+  "tli_sel": 0.16607896983623505,
+  "rand": 0.2089446485042572,
+  "pos": 0.18365459144115448,
+  "l2sel": 0.16607896983623505
+ },
+ "l1": {
+  "zs": 0.20383816957473755,
+  "null": 0.19197578728199005,
+  "word": 0.20364564657211304,
+  "role": 0.20388686656951904,
+  "tmpl": 0.19750568270683289,
+  "tmpl_only": 0.19690856337547302,
+  "tli_sel": 0.18743747472763062,
+  "rand": 0.25185728073120117,
+  "pos": 0.20884819328784943,
+  "l2sel": 0.18743747472763062
+ },
+ "l2sel": "tli_sel",
+ "controls": {
+  "o": {
+   "rand": 13,
+   "pos": 21,
+   "rand_text": "put the cream cheese in the bowl",
+   "pos_text": "pick up the ketchup and place it in the basket"
+  },
+  "g": {
+   "rand": 38,
+   "pos": 21,
+   "rand_text": "pick up the black bowl from table center and place it on the plate",
+   "pos_text": "pick up the ketchup and place it in the basket"
+  }
+ },
+ "n_eval": 51,
+ "arms": {
+  "zs": {
+   "prompt": "pick up the alphabet soup and put it in the tray",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "word": {
+   "prompt": "pick up the alphabet soup and put it in the tray",
+   "edits": [
+    {
+     "role": "o",
+     "src": 24,
+     "phrase": "alphabet soup",
+     "new_pos": [
+      4,
+      5
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "pick up the alphabet soup and put it in the tray",
+   "edits": [
+    {
+     "role": "o",
+     "src": 24,
+     "phrase": "alphabet soup",
+     "new_pos": [
+      4,
+      5
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "put the alphabet soup in the tray",
+   "edits": [
+    {
+     "role": "o",
+     "src": 24,
+     "phrase": "alphabet soup",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "put the alphabet soup in the tray",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "pick up the alphabet soup and put it in the tray",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 24,
+    "t2": 18,
+    "lam": 24
+   }
+  },
+  "rand": {
+   "prompt": "pick up the alphabet soup and put it in the tray",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 13,
+    "t2": 38,
+    "lam": 24
+   }
+  },
+  "pos": {
+   "prompt": "pick up the alphabet soup and put it in the tray",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 21,
+    "t2": 9,
+    "lam": 24
+   }
+  }
+ },
+ "seconds": 193.6289200782776,
+ "demo_src": [
+  2431,
+  2432
+ ]
+}

@@ -1,0 +1,328 @@
+{
+ "key": "l90:41",
+ "text": "put the frying pan on top of the cabinet",
+ "roles": {
+  "o": "frying pan",
+  "g": "on top of the cabinet"
+ },
+ "cands": {
+  "o": [],
+  "g": [
+   8,
+   14,
+   18,
+   19,
+   31,
+   39
+  ]
+ },
+ "d0": {
+  "T": 195,
+  "c0": 88,
+  "rel": 109
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "g": 19
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "g:8": 0.5021717548370361,
+    "g:14": 0.5226489305496216,
+    "g:18": 0.5281506180763245,
+    "g:19": 0.4890174865722656,
+    "g:31": 0.5013777613639832,
+    "g:39": 0.5047978758811951
+   },
+   "span_loss": {
+    "1-17": 0.4890174865722656,
+    "1-6": 0.49472787976264954,
+    "7-12": 0.4782792627811432,
+    "13-17": 0.513484001159668
+   }
+  },
+  "role": {
+   "src": {
+    "g": 31
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "g:8": 0.5106120705604553,
+    "g:14": 0.5128191709518433,
+    "g:18": 0.5123380422592163,
+    "g:19": 0.5106151103973389,
+    "g:31": 0.5105265378952026,
+    "g:39": 0.5107240676879883
+   },
+   "span_loss": {
+    "1-17": 0.5105265378952026,
+    "1-6": 0.5106128454208374,
+    "7-12": 0.5106911063194275,
+    "13-17": 0.5117788910865784
+   }
+  },
+  "tmpl": {
+   "src": {
+    "g": 19
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "g:8": 0.5145439505577087,
+    "g:14": 0.5147351622581482,
+    "g:18": 0.5144962072372437,
+    "g:19": 0.5010551810264587,
+    "g:31": 0.5138325691223145,
+    "g:39": 0.5095105171203613
+   },
+   "span_loss": {
+    "1-17": 0.5010551810264587,
+    "1-6": 0.5070696473121643,
+    "7-12": 0.4745521545410156,
+    "13-17": 0.49165961146354675
+   },
+   "template": "pick up the {O} and place it {G}",
+   "prompt": "pick up the frying pan and place it on top of the cabinet",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the frying pan and place it on top of the cabinet",
+     "with_word": 0.4745521545410156,
+     "alone": 0.4938777983188629
+    },
+    "put the {O} {G}": {
+     "prompt": "put the frying pan on top of the cabinet",
+     "with_word": 0.4782792627811432,
+     "alone": 0.5119783282279968
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    11,
+    18
+   ],
+   "lam": 36,
+   "pairs": {
+    "10.14": 0.6349505186080933,
+    "10.18": 0.49657705426216125,
+    "10.31": 0.504943311214447,
+    "10.39": 0.5260165929794312,
+    "11.14": 0.5189913511276245,
+    "11.18": 0.47327926754951477,
+    "11.31": 0.4803633987903595,
+    "11.39": 0.49234312772750854,
+    "13.14": 0.6378932595252991,
+    "13.18": 0.5414353609085083,
+    "13.31": 0.5537503361701965,
+    "13.39": 0.5622193813323975,
+    "14.18": 0.48260942101478577,
+    "14.31": 0.4792366921901703,
+    "14.39": 0.5496124625205994,
+    "17.14": 0.6050300598144531,
+    "17.18": 0.5033410787582397,
+    "17.31": 0.5253843069076538,
+    "17.39": 0.5423805713653564,
+    "18.14": 0.6283021569252014,
+    "18.31": 0.5758782625198364,
+    "18.39": 0.5790219902992249
+   },
+   "lams": {
+    "24": 0.47327926754951477,
+    "12": 0.5374378561973572,
+    "36": 0.4401931166648865
+   },
+   "cands": {
+    "o": [
+     10,
+     11,
+     13,
+     14,
+     17,
+     18
+    ],
+    "g": [
+     14,
+     18,
+     31,
+     39
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.5119783282279968,
+  "null": 0.5343683958053589,
+  "word": 0.4782792627811432,
+  "role": 0.5105265378952026,
+  "tmpl": 0.4745521545410156,
+  "tmpl_only": 0.4938777983188629,
+  "tli_sel": 0.4401931166648865,
+  "rand": 0.5191245675086975,
+  "pos": 0.47525396943092346,
+  "l2sel": 0.4401931166648865
+ },
+ "l1": {
+  "zs": 0.5120644569396973,
+  "null": 0.4992031753063202,
+  "word": 0.4720594882965088,
+  "role": 0.4983573853969574,
+  "tmpl": 0.4862824082374573,
+  "tmpl_only": 0.5023088455200195,
+  "tli_sel": 0.40419062972068787,
+  "rand": 0.5654559135437012,
+  "pos": 0.52008455991745,
+  "l2sel": 0.40419062972068787
+ },
+ "l2sel": "tli_sel",
+ "controls": {
+  "o": {
+   "rand": 10,
+   "pos": 35,
+   "rand_text": "put the bowl on the plate",
+   "pos_text": "pick up the black bowl on the cookie box and place it on the plate"
+  },
+  "g": {
+   "rand": 13,
+   "pos": 34,
+   "rand_text": "put the cream cheese in the bowl",
+   "pos_text": "pick up the black bowl between the plate and the ramekin and place it on the plate"
+  }
+ },
+ "n_eval": 76,
+ "arms": {
+  "zs": {
+   "prompt": "put the frying pan on top of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "word": {
+   "prompt": "put the frying pan on top of the cabinet",
+   "edits": [
+    {
+     "role": "g",
+     "src": 19,
+     "phrase": "cabinet",
+     "new_pos": [
+      9
+     ],
+     "src_pos": [
+      7
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the frying pan on top of the cabinet",
+   "edits": [
+    {
+     "role": "g",
+     "src": 31,
+     "phrase": "cabinet",
+     "new_pos": [
+      9
+     ],
+     "src_pos": [
+      13
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "pick up the frying pan and place it on top of the cabinet",
+   "edits": [
+    {
+     "role": "g",
+     "src": 19,
+     "phrase": "cabinet",
+     "new_pos": [
+      13
+     ],
+     "src_pos": [
+      7
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "pick up the frying pan and place it on top of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the frying pan on top of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 11,
+    "t2": 18,
+    "lam": 36
+   }
+  },
+  "rand": {
+   "prompt": "put the frying pan on top of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 10,
+    "t2": 13,
+    "lam": 36
+   }
+  },
+  "pos": {
+   "prompt": "put the frying pan on top of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 35,
+    "t2": 34,
+    "lam": 36
+   }
+  }
+ },
+ "seconds": 305.152845621109,
+ "demo_src": [
+  2886,
+  2887
+ ]
+}

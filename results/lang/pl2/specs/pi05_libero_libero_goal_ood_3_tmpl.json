@@ -1,0 +1,37 @@
+{
+ "prompt": "put the tomato sauce on top of the cabinet",
+ "lo": 1,
+ "hi": 17,
+ "schedule": "og",
+ "tli": null,
+ "edits": [
+  {
+   "role": "o",
+   "src": 28,
+   "phrase": "tomato sauce",
+   "new_pos": [
+    3,
+    4
+   ],
+   "src_pos": [
+    4,
+    5
+   ]
+  },
+  {
+   "role": "g",
+   "src": 8,
+   "phrase": "cabinet",
+   "new_pos": [
+    9
+   ],
+   "src_pos": [
+    11
+   ]
+  }
+ ],
+ "meta": {
+  "task": "goal:3",
+  "arm": "tmpl"
+ }
+}
