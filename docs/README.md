@@ -1,7 +1,7 @@
 # docs
 
 Organised as the paper is: the question, the split, the two schemes, the results, what composition is, and what it costs.
-**[PLAN_F.md](PLAN_F.md)** is the active plan: a hierarchical store of reusable prototypes composed without supervision. [PLAN_Z.md](PLAN_Z.md) is the plan it builds on; [PLAN_D.md](PLAN_D.md) (what prototypes donate vs what the demonstration teaches; the full baseline set) and [PLAN_CONV.md](PLAN_CONV.md) (composition converges faster on unseen tasks) extend it. Superseded plans are in [history/](history/).
+**[FRAMEWORK.md](FRAMEWORK.md)** is the active framework (symbolic TRELLIS-style composition over diffusion prototypes), tested by **[DESIGN.md](DESIGN.md)** (claims, factorial benchmarks, baselines); [PLAN_F.md](PLAN_F.md) holds its first probes. [PLAN_Z.md](PLAN_Z.md) is the plan it builds on; [PLAN_D.md](PLAN_D.md) (what prototypes donate vs what the demonstration teaches; the full baseline set) and [PLAN_CONV.md](PLAN_CONV.md) (composition converges faster on unseen tasks) extend it. Superseded plans are in [history/](history/).
 
 ## The question and the split
 

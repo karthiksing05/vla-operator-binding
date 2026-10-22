@@ -1,3 +1,5 @@
+> Superseded as the framework statement by docs/FRAMEWORK.md (v2) and docs/DESIGN.md; probes F0 / F1 below test its assumption A1.
+
 # Plan F: a hierarchical store of reusable prototypes, composed without supervision, as an alternative to fine-tuning (user direction, 2026-10-21)
 
 **The goal (user).**
