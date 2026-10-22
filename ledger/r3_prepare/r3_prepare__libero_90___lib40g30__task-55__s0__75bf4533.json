@@ -1,0 +1,116 @@
+{
+ "artifacts": [
+  "results/robot/r3_prog_55_code_lib40g30.npz",
+  "results/robot/r3_prog_55_raw_lib40g30.npz"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 17427,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 17427,
+  "tree": 0
+ },
+ "command": "experiments/r3_prepare.py --tree results/robot/r2b_libero_40_tree.npz --library-npz results/robot/r2b_libero_40.npz --tasks 55 --levels 2,3,4 --tag _lib40g30",
+ "config": {
+  "K": 3,
+  "held": 5,
+  "levels": "2,3,4",
+  "library_npz": "results/robot/r2b_libero_40.npz",
+  "tag": "_lib40g30",
+  "tasks": "55",
+  "tree": "results/robot/r2b_libero_40_tree.npz"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4170906",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_prepare",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "task": 55
+ },
+ "metrics": {
+  "bddl": "LIVING_ROOM_SCENE3_pick_up_the_alphabet_soup_and_put_it_in_the_tray",
+  "code": {
+   "bytes": 17427,
+   "mean_rms_to_demo": 0.07435052841901779,
+   "nll_per_dim": -1.2305834293365479,
+   "path": "results/robot/r3_prog_55_code_lib40g30.npz"
+  },
+  "demo_episode": 2431,
+  "depth_hist": {
+   "0.05": 1,
+   "0.1": 0,
+   "0.2": 1,
+   "0.3": 4,
+   "0.4": 2,
+   "0.55": 0,
+   "0.7": 5,
+   "explained": 98
+  },
+  "gripper_events": [
+   46,
+   105
+  ],
+  "n_frames": 111,
+  "n_ipec_episodes": 44,
+  "nll_median": {
+   "0.05": -0.8361877595848688,
+   "0.1": -1.3338832148532058,
+   "0.2": -0.9913723855570086,
+   "0.3": -0.6245506891547433,
+   "0.4": -0.34278566404619343,
+   "0.55": -0.05976478588451225,
+   "0.7": 0.15998550575774378
+  },
+  "out_of_range_frac": 0.0978120978120978,
+  "prompt_program": {
+   "pick up the chocolate pudding and place it in the basket": 13,
+   "pick up the ketchup and place it in the basket": 43,
+   "pick up the milk and place it in the basket": 18,
+   "put both moka pots on the stove": 16,
+   "put both the alphabet soup and the cream cheese box in the basket": 21
+  },
+  "raw": {
+   "bytes": 3567,
+   "mean_rms_to_demo": 0.0,
+   "nll_per_dim": -1.3836462497711182,
+   "path": "results/robot/r3_prog_55_raw_lib40g30.npz"
+  },
+  "task_id": 55,
+  "text": "pick up the alphabet soup and put it in the tray",
+  "unexplained_by_level": {
+   "0.05": 0.018018018018018018,
+   "0.1": 0.02702702702702703,
+   "0.2": 0.036036036036036036,
+   "0.3": 0.06306306306306306,
+   "0.4": 0.02702702702702703,
+   "0.55": 0.02702702702702703,
+   "0.7": 0.04504504504504504
+  },
+  "unexplained_frac": 0.11711711711711711
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_prepare__libero_90___lib40g30__task-55__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/r3_prepare.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-21T00:06:43+00:00",
+ "stream": null,
+ "tag": "_lib40g30"
+}

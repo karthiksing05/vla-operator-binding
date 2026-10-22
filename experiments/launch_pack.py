@@ -95,12 +95,20 @@ def arm_spec(tid, arm, fold, demo=0):
         return (f"lora:{os.path.join(R, arm[5:] + '_' + str(tid) + '_lora.pt')}", "0", False)
     if arm == "lora_learn":                                              # LoRA on the demo + the same successful rollouts
         return (f"lora:{os.path.join(R, 'r15_' + str(tid) + '_lora.pt')}", "0", False)
+    if arm == "demodiff@g30":                                            # plan D2: DemoDiffusion on the current own-scene demo
+        return (f"demodiff:{tid}?s=0.2&steps=20&index=time&window=20&prog=_lib40g30", "0", False)
     if arm in ("demodiff", "demodiff_state"):                            # DemoDiffusion (SDEdit of the demo chunk), s* = 0.2, 20 steps
         return (f"demodiff:{tid}?s=0.2&steps=20&index={'time' if arm == 'demodiff' else 'state'}&window=20", "0", False)
     if arm in ("lora_eq", "lora_r64"):                                   # equal-bytes adapter / stronger LoRA (r3_fewshot.py)
         return (f"lora:{os.path.join(R, 'r3_lora_' + str(tid) + ('_eq' if arm == 'lora_eq' else '_r64') + '.pt')}", "0", False)
     if arm == "fullft":                                                  # full fine-tuning of the action expert
         return (f"fullft:{os.path.join(R, 'r3_full_' + str(tid) + '.pt')}", "0", False)
+    if arm.startswith("fullft@"):                                        # plan D2: fullft@<tag> -- r3_full_<task><tag>.pt
+        return (f"fullft:{os.path.join(R, 'r3_full_' + str(tid) + arm[7:] + '.pt')}", "0", False)
+    if arm == "sdp@g30":                                                 # plan D2: the adapted SDP (experiments/g30_sdp.py)
+        return (f"sdp:{os.path.join(R, 'sdp_' + str(tid) + '_g30_router.pt')}", "0", False)
+    if arm.startswith("r3lora@"):                                        # plan D2: r3lora@<tag> -- r3_lora_<task><tag>.pt (multi-demo SFT)
+        return (f"lora:{os.path.join(R, 'r3_lora_' + str(tid) + arm[7:] + '.pt')}", "0", False)
     if arm in ("playback", "vinn"):                                      # no policy: the demo's actions (open loop / nearest frame)
         return (f"{arm}:{tid}", "0", False)
     if arm in ("promptret", "loraret"):                                  # retrieval baselines (experiments/r14_retrieval.py)
@@ -334,6 +342,10 @@ def arm_spec(tid, arm, fold, demo=0):
         mode = f"train=1&save={act}&warmup=10" if arm.startswith("dsrlf_train") else f"train=0&load={act}"
         return (f"dsrl:{tid}?{mode}&official=1&lora=none&apath={pth(o_)}&gpath={pth(g_)}"
                 f"&suite={SUITE_OF.get('suite', 'libero_90')}", "0", False)
+    if arm == "pirl_train":                                              # plan D2 (g30_rl): pi_RL Flow-Noise PPO from the one-demo LoRA
+        P_ = lambda name: os.path.join(R, name)                           # noqa: E731
+        return (f"pirl:{tid}?lora={_lorasc(tid)}&save={P_(f'pirl_{tid}_lora.pt')}&matched={P_(f'pirlm_{tid}_lora.pt')}"
+                f"&ckpt={P_(f'pirl_{tid}.ckpt.pt')}&budget=577&episodes=100", "0", False)
     if arm == "dsrl":                                                    # DSRL scored: the trained actor, deterministic noise
         return (f"dsrl:{tid}?train=0&load={os.path.join(R, f'dsrl_{tid}_actor.pt')}&beta=2", "0", False)
     if arm == "phasebind2_rjpred_e":                                     # own demo, events fire on arrival (PhaseBindHooks events=1)
@@ -368,6 +380,8 @@ def sbatch(args, dry):
     if dry:
         print("  [dry] sbatch " + " ".join(args))
         return "DRY"
+    if not any(x.startswith("--exclude") for x in args):                  # SBATCH_EXCLUDE is not honoured on this cluster
+        args = ["--exclude=hal,tars,t1000,vicki,johnny5,c3po,olivaw"] + args
     return subprocess.run(["sbatch", "--parsable"] + args, capture_output=True, text=True, check=True).stdout.strip().split(";")[0]
 
 
@@ -434,7 +448,7 @@ def main():
                         PROGRAM_BYTES=s[1], OUT=out, **({"RECORD": "1"} if a.record else {}), **({"SERVE_SEED": str(a.seed)} if a.seed else {}),
                         **({"OBJECTS": "1"} if arm in ("phasebind", "phasebind_nofold", "phasebind2_nofold", "compose2", "sibling2") else {}),
                         **({"LIGHT": "1"} if a.light else {}), **({"OBJECTS": "1", "ALL_OBJECTS": "1"} if a.all_objects else {}),
-                        **({"STATE_MOD": "30"} if (arm in ("dsrl_train", "dsrlo_train", "dsrlz_train", "dsrls_train") or arm.startswith("dsrlf_train@")) else {}),
+                        **({"STATE_MOD": "30"} if (arm in ("dsrl_train", "dsrlo_train", "dsrlz_train", "dsrls_train", "pirl_train") or arm.startswith("dsrlf_train@")) else {}),
                         **({"SEG": "1"} if "src=oracle" in (s[0] or "") else {}), **({"BIND": a.bind} if a.bind else {}),
                         **({"FRESH": os.path.join(R, a.fresh_dir)} if a.fresh else {}),
                         **(s[3] if len(s) > 3 else {}),

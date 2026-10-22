@@ -1,0 +1,122 @@
+{
+ "artifacts": [
+  "results/robot/r3_prog_9_code_lib40g30.npz",
+  "results/robot/r3_prog_9_raw_lib40g30.npz"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 21509,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 21509,
+  "tree": 0
+ },
+ "command": "experiments/r3_prepare.py --tree results/robot/r2b_libero_40_tree.npz --library-npz results/robot/r2b_libero_40.npz --tasks 9 --levels 2,3,4 --tag _lib40g30",
+ "config": {
+  "K": 3,
+  "held": 5,
+  "levels": "2,3,4",
+  "library_npz": "results/robot/r2b_libero_40.npz",
+  "tag": "_lib40g30",
+  "tasks": "9",
+  "tree": "results/robot/r2b_libero_40_tree.npz"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4170906",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_prepare",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "task": 9
+ },
+ "metrics": {
+  "bddl": "KITCHEN_SCENE1_put_the_black_bowl_on_the_plate",
+  "code": {
+   "bytes": 21509,
+   "mean_rms_to_demo": 0.09404836595058441,
+   "nll_per_dim": -1.094110131263733,
+   "path": "results/robot/r3_prog_9_code_lib40g30.npz"
+  },
+  "demo_episode": 3460,
+  "depth_hist": {
+   "0.05": 0,
+   "0.1": 0,
+   "0.2": 1,
+   "0.3": 18,
+   "0.4": 1,
+   "0.55": 0,
+   "0.7": 10,
+   "explained": 107
+  },
+  "gripper_events": [
+   57,
+   122
+  ],
+  "n_frames": 137,
+  "n_ipec_episodes": 46,
+  "nll_median": {
+   "0.05": -0.266683361396415,
+   "0.1": -1.104694547833173,
+   "0.2": -0.9587004533329221,
+   "0.3": -0.6112850420661249,
+   "0.4": -0.3375337671653105,
+   "0.55": -0.0653821661552467,
+   "0.7": 0.14917566155802292
+  },
+  "out_of_range_frac": 0.0954118873826903,
+  "prompt_program": {
+   "pick up the black bowl from table center and place it on the plate": 4,
+   "pick up the black bowl on the cookie box and place it on the plate": 7,
+   "pick up the black bowl on the stove and place it on the plate": 12,
+   "pick up the chocolate pudding and place it in the basket": 13,
+   "pick up the ketchup and place it in the basket": 17,
+   "put both moka pots on the stove": 18,
+   "put both the alphabet soup and the cream cheese box in the basket": 3,
+   "put both the alphabet soup and the tomato sauce in the basket": 27,
+   "put the white mug on the left plate and put the yellow and white mug on the right plate": 14,
+   "put the white mug on the plate and put the chocolate pudding to the right of the plate": 6,
+   "put the yellow and white mug in the microwave and close it": 16
+  },
+  "raw": {
+   "bytes": 4373,
+   "mean_rms_to_demo": 0.0,
+   "nll_per_dim": -1.3836463689804077,
+   "path": "results/robot/r3_prog_9_raw_lib40g30.npz"
+  },
+  "task_id": 9,
+  "text": "put the black bowl on the plate",
+  "unexplained_by_level": {
+   "0.05": 0.0948905109489051,
+   "0.1": 0.10218978102189781,
+   "0.2": 0.0948905109489051,
+   "0.3": 0.17518248175182483,
+   "0.4": 0.043795620437956206,
+   "0.55": 0.043795620437956206,
+   "0.7": 0.072992700729927
+  },
+  "unexplained_frac": 0.21897810218978103
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_prepare__libero_90___lib40g30__task-9__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/r3_prepare.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-20T23:46:31+00:00",
+ "stream": null,
+ "tag": "_lib40g30"
+}

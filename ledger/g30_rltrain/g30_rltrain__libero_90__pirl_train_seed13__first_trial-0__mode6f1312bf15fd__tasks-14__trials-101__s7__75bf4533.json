@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g30_rltrain_14_pirl_train_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=pirl:14?lora=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_14.pt&save=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pirl_14_lora.pt&matched=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pirlm_14_lora.pt&ckpt=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pirl_14.ckpt.pt&budget=577&episodes=100 SUITE=libero_90 TASKS=14 TRIALS=101 (job 4172284)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g30_rltrain_14_pirl_train_seed13.json",
+   "port": 9162,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 30,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "14",
+   "trials": 101,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4172284",
+  "mode": "pirl:14?lora=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_14.pt&save=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pirl_14_lora.pt&matched=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pirlm_14_lora.pt&ckpt=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pirl_14.ckpt.pt&budget=577&episodes=100"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "xaea-12.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4172284",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g30_rltrain",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "pirl:14?lora=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_lora_14.pt&save=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pirl_14_lora.pt&matched=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pirlm_14_lora.pt&ckpt=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pirl_14.ckpt.pt&budget=577&episodes=100",
+  "tasks": "14",
+  "trials": 101
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 101,
+  "secs": 4540.919788122177,
+  "success_rate": 0.8118811881188119,
+  "tasks": {
+   "14": {
+    "errors": 0,
+    "language": "put the middle black bowl on the plate",
+    "mean_steps": 177.72277227722773,
+    "n": 101,
+    "success_rate": 0.8118811881188119
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g30_rltrain__libero_90__pirl_train_seed13__first_trial-0__mode6f1312bf15fd__tasks-14__trials-101__s7__75bf4533",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-21T04:09:15+00:00",
+ "stream": null,
+ "tag": "pirl_train_seed13"
+}

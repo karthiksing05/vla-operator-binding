@@ -1,0 +1,51 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan D2's read g30_demodiffusion",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {},
+ "metrics": {
+  "acceptance": "as E3: 10 practice episodes per task on stored init states 0-9 at seed 13; the arm is kept where it beats the frozen policy there, else the policy serves",
+  "hypotheses": {
+   "H1": "E3's library with acceptance > DemoDiffusion with acceptance (sign test, alpha 0.05)",
+   "descriptive": "DemoDiffusion alone vs zero-shot; by grade"
+  },
+  "protocol": "E3's 30 LIBERO-90 tasks (29 with a demonstration; task 51 has none and is served by the policy), E3's fresh start states set b (sampler seeds 200000-200019), 20 episodes per task, policy noise seed 13, paired with E3's arms (library with acceptance 480 of 580, per-task LoRA with acceptance 494 of 580, zero-shot) and G7's DSRL arms; exact sign test on discordant pairs, two-level bootstrap over tasks and episodes, non-inferiority margin 0.05; reported overall and by grade (docs/SPLIT.md)",
+  "written_before": "any G30d episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__g30_demodiffusion__s13__75bf4533",
+ "schema": 1,
+ "script": "experiments/prereg/g30_demodiffusion.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-21T00:51:41+00:00",
+ "stream": null,
+ "tag": "g30_demodiffusion"
+}

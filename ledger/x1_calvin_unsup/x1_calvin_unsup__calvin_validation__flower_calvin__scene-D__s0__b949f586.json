@@ -1,0 +1,273 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "calvin_validation",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/x1_calvin_unsup.py --data /coc/flash10/ksingara3/robot/data/calvin_abc/task_ABC_D --flower_root /coc/flash10/ksingara3/robot/ext/flower_vla_calvin --ckpt_dir /coc/flash10/ksingara3/robot/data/hf/home/hub/models--mbreuss--flower_calvin_abc/snapshots/6424ee4c064eb6654a39280314793620b149dd97 --n 300 --split validation --out results/x1_calvin/unsup_sceneD.json --record",
+ "config": {
+  "K": 4,
+  "ckpt_dir": "/coc/flash10/ksingara3/robot/data/hf/home/hub/models--mbreuss--flower_calvin_abc/snapshots/6424ee4c064eb6654a39280314793620b149dd97",
+  "data": "/coc/flash10/ksingara3/robot/data/calvin_abc/task_ABC_D",
+  "flower_root": "/coc/flash10/ksingara3/robot/ext/flower_vla_calvin",
+  "n": 300,
+  "no_id": false,
+  "out": "results/x1_calvin/unsup_sceneD.json",
+  "record": true,
+  "scene": null,
+  "seed": 0,
+  "split": "validation",
+  "stride": 8
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "puma.cc.gatech.edu",
+  "python": "3.10.22",
+  "slurm_job": "4169431",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "x1_calvin_unsup",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "b949f58685d093cddca017d6d7e8c0646c142e85",
+  "short": "b949f586"
+ },
+ "keys": {
+  "scene": "D"
+ },
+ "metrics": {
+  "boundary": {
+   "10": {
+    "contact": 0.5033333333333333,
+    "random_matched": 0.40691666666666665
+   },
+   "20": {
+    "contact": 0.8866666666666667,
+    "random_matched": 0.6678166666666666
+   },
+   "5": {
+    "contact": 0.28,
+    "random_matched": 0.22534999999999997
+   }
+  },
+  "events_per_seq": {
+   "mean": 2.87,
+   "zero": 0
+  },
+  "identity": {
+   "by_task": {
+    "close_drawer": {
+     "n": 28,
+     "top1": 0.6428571428571429
+    },
+    "lift_blue_block_drawer": {
+     "n": 17,
+     "top1": 0.7058823529411765
+    },
+    "lift_blue_block_slider": {
+     "n": 32,
+     "top1": 0.8125
+    },
+    "lift_blue_block_table": {
+     "n": 23,
+     "top1": 0.34782608695652173
+    },
+    "lift_pink_block_slider": {
+     "n": 13,
+     "top1": 0.15384615384615385
+    },
+    "lift_pink_block_table": {
+     "n": 24,
+     "top1": 0.20833333333333334
+    },
+    "lift_red_block_drawer": {
+     "n": 31,
+     "top1": 1.0
+    },
+    "lift_red_block_slider": {
+     "n": 19,
+     "top1": 1.0
+    },
+    "lift_red_block_table": {
+     "n": 27,
+     "top1": 0.4444444444444444
+    },
+    "move_slider_left": {
+     "n": 36,
+     "top1": 1.0
+    },
+    "move_slider_right": {
+     "n": 31,
+     "top1": 1.0
+    },
+    "open_drawer": {
+     "n": 19,
+     "top1": 1.0
+    },
+    "place_in_drawer": {
+     "n": 35,
+     "top1": 0.8857142857142857
+    },
+    "place_in_slider": {
+     "n": 30,
+     "top1": 1.0
+    },
+    "push_into_drawer": {
+     "n": 11,
+     "top1": 0.6363636363636364
+    },
+    "push_red_block_left": {
+     "n": 11,
+     "top1": 0.45454545454545453
+    },
+    "push_red_block_right": {
+     "n": 8,
+     "top1": 0.75
+    },
+    "rotate_blue_block_left": {
+     "n": 5,
+     "top1": 1.0
+    },
+    "rotate_blue_block_right": {
+     "n": 9,
+     "top1": 1.0
+    },
+    "rotate_pink_block_left": {
+     "n": 18,
+     "top1": 0.5555555555555556
+    },
+    "rotate_pink_block_right": {
+     "n": 10,
+     "top1": 1.0
+    },
+    "rotate_red_block_left": {
+     "n": 23,
+     "top1": 0.5652173913043478
+    },
+    "rotate_red_block_right": {
+     "n": 19,
+     "top1": 1.0
+    },
+    "stack_block": {
+     "n": 21,
+     "top1": 0.9047619047619048
+    },
+    "turn_off_led": {
+     "n": 27,
+     "top1": 0.8888888888888888
+    },
+    "turn_off_lightbulb": {
+     "n": 10,
+     "top1": 1.0
+    },
+    "turn_on_led": {
+     "n": 40,
+     "top1": 0.475
+    },
+    "turn_on_lightbulb": {
+     "n": 12,
+     "top1": 1.0
+    },
+    "unstack_block": {
+     "n": 11,
+     "top1": 1.0
+    }
+   },
+   "chance": 0.029411764705882353,
+   "confusions": [
+    [
+     "turn_on_led -> turn_off_led",
+     21
+    ],
+    [
+     "lift_blue_block_table -> lift_blue_block_slider",
+     14
+    ],
+    [
+     "lift_pink_block_table -> lift_pink_block_slider",
+     13
+    ],
+    [
+     "close_drawer -> place_in_drawer",
+     10
+    ],
+    [
+     "lift_pink_block_table -> stack_block",
+     6
+    ],
+    [
+     "lift_pink_block_slider -> push_pink_block_left",
+     6
+    ],
+    [
+     "lift_pink_block_slider -> lift_pink_block_table",
+     5
+    ],
+    [
+     "lift_red_block_table -> push_red_block_left",
+     5
+    ],
+    [
+     "rotate_pink_block_left -> lift_pink_block_drawer",
+     5
+    ],
+    [
+     "push_into_drawer -> place_in_drawer",
+     4
+    ],
+    [
+     "place_in_drawer -> push_into_drawer",
+     4
+    ],
+    [
+     "turn_off_led -> turn_on_led",
+     3
+    ],
+    [
+     "lift_red_block_table -> stack_block",
+     3
+    ],
+    [
+     "rotate_red_block_left -> place_in_drawer",
+     3
+    ],
+    [
+     "lift_red_block_table -> lift_red_block_drawer",
+     3
+    ]
+   ],
+   "first_segment_top1": 0.7733333333333333,
+   "frame_top1": 0.4202738095238095,
+   "mean_rank": 0.62,
+   "median_rank": 0.0,
+   "n_segments": 600,
+   "second_segment_top1": 0.7566666666666667,
+   "top1": 0.765
+  },
+  "median_event_dist": 10.0,
+  "n_candidates": 484,
+  "n_sequences": 300,
+  "scenes": {
+   "calvin_scene_D": 300
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "x1_calvin_unsup__calvin_validation__flower_calvin__scene-D__s0__b949f586",
+ "schema": 1,
+ "script": "experiments/x1_calvin_unsup.py",
+ "seconds": 4703.03407740593,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-20T23:09:54+00:00",
+ "stream": null,
+ "tag": "flower_calvin"
+}

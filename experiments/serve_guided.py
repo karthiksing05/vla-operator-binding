@@ -83,6 +83,20 @@ def main():
     else:
         bk = PolicyBackbone(cfg, checkpoint_dir=ck, device="cuda")
     logging.info(bk.describe())
+    if a.mode.startswith("pirl:"):
+        # pirl:<task>?lora=<one-demo LoRA>&save=<final.pt>&matched=<matched.pt>&ckpt=<ckpt.pt>&budget=577&episodes=100 -- plan D2
+        # (ledger m3_prereg g30_rl): pi_RL's Flow-Noise PPO with a LoRA on the action expert, trained online on the client's
+        # episodes (lifelong_ood/policy/pirl.py); the trained LoRAs are then served as ordinary adapters (lora@pirlm, lora@pirl)
+        from lifelong_ood.policy.pirl import PiRLPolicy
+        body, q = (a.mode[len("pirl:"):].split("?", 1) + [""])[:2]
+        kv = dict(x.split("=", 1) for x in q.split("&") if x)
+        policy = PiRLPolicy(bk, kv["lora"], save=kv["save"], save_matched=kv.get("matched"), ckpt=kv.get("ckpt"),
+                            budget_s=float(kv.get("budget", 577)), episodes=int(kv.get("episodes", 100)),
+                            seed=int(os.environ.get("SERVE_SEED", "0") or 0), num_steps=a.num_steps, log=logging.info)
+        logging.info(f"pirl: task {body}, LoRA {kv['lora']}, budget {policy.budget_s:.0f}s, {policy.episodes} episodes")
+        warm(policy)
+        serve(policy, a.port)
+        return
     hooks = None
     if a.mode.startswith("proto:"):
         _, tree_path, node_id, *rest = a.mode.split(":")
@@ -340,6 +354,14 @@ def main():
         state, key, banks = adapt.load(bk, a.mode.split(":", 1)[1])
         state["on"] = frozenset({key})
         logging.info(f"expert {key} loaded into {len(banks)} banks and switched on")
+    elif a.mode.startswith("sdp:"):
+        # sdp:<router.pt> -- plan D2: the adapted Sparse Diffusion Policy, top-k routers over frozen per-task LoRAs (policy/sdp.py)
+        import torch
+        from lifelong_ood.policy import sdp as SDP
+        z = torch.load(a.mode.split(":", 1)[1], map_location="cpu")
+        _sdp, state, banks = SDP.build(bk, z["meta"]["experts"], k=int(z["k"]))
+        _sdp.load_routers(z["routers"])
+        logging.info(f"sdp: {len(z['meta']['experts'])} experts, top-{z['k']}, routers on {len(_sdp.banks)} banks")
     elif a.mode.startswith("loras:"):
         # loras:<p1>+<p2>?w=<weight> -- adapter-composition baselines (plan G2): several per-task LoRAs on at once, each scaled
         # by w (task arithmetic: w=1; averaging: w=1/n)
@@ -383,7 +405,7 @@ def main():
         from lifelong_ood.policy.compose import DemoProgram
         body, q = (a.mode[len("demodiff:"):].split("?", 1) + [""])[:2]
         kv = dict(x.split("=", 1) for x in q.split("&") if x)
-        prog = DemoProgram.load(os.path.join(ROOT, "results", "robot", f"r3_prog_{int(body)}_raw_lib40.npz"))
+        prog = DemoProgram.load(os.path.join(ROOT, "results", "robot", f"r3_prog_{int(body)}_raw{kv.get('prog', '_lib40')}.npz"))   # prog: plan D2's _lib40g30
         hooks = DemoDiffusionHooks(prog, s_star=float(kv.get("s", 0.2)), index=kv.get("index", "time"), key_mode="pose",
                                    window=int(kv.get("window", 20)))
         a.num_steps = int(kv.get("steps", 20))                 # DemoDiffusion's openpi fork integrates with 20 steps

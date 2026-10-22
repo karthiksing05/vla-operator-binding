@@ -17,6 +17,7 @@ velocity (expert off) as the target: no teacher copy.
 """
 from __future__ import annotations
 
+import os
 import time
 
 import numpy as np
@@ -127,7 +128,7 @@ def _flow_batch(n, H, A, gen, device):
 
 def train(bk, state, key, params, bank, chunks_full, steps=1000, lr=1e-4, batch=32, seed=0, anchor=None,
           anchor_weight=1.0, log_every=100, log=print, weight_decay=0.0, groups=None, gate_of=None, eval_fn=None, eval_every=0,
-          profile=None):
+          profile=None, penalty=None, grad_hook=None, ckpt=None, ckpt_every=200):
     """Flow-matching fine-tune of the expert `key` on (bank rows, chunks_full [N, H, A] padded, normalised).
     anchor = (anchor_bank, anchor_chunks_full): the r ~ 0 half, target = the base velocity (expert off).
     groups = [(row indices, rows per batch), ...]: every batch draws that many rows from each group (default: uniform over the
@@ -136,6 +137,11 @@ def train(bk, state, key, params, bank, chunks_full, steps=1000, lr=1e-4, batch=
     heldout_loss with fixed_draws), recorded in hist["eval_step"] / hist["eval"].  profile: a dict that accumulates the
     synchronised seconds of the batch's prefixes (take: a VLM forward for a lazy bank, a gather for a cached one), the forward
     and backward pass, and the optimiser step, plus their counts (plan F1's fit-time profile).  Both default off: unchanged.
+    penalty() -> a scalar tensor added to the loss (plan D2: EWC's quadratic term); grad_hook() runs after the backward pass and
+    before clipping (plan D2: PackNet zeroes the gradients of weights other tasks own).  Both default None: unchanged.
+    ckpt: a path; every ckpt_every steps the parameters, the optimiser, every generator and the curves are saved there (atomically),
+    and a run that finds the file resumes from it exactly (plan D2: long multi-demonstration fits on preemptible nodes).  The
+    caller deletes it once the final adapter is saved.  Default None: unchanged.
     -> dict of loss curves."""
     torch.manual_seed(seed)
     gen = torch.Generator(device="cpu").manual_seed(seed)
@@ -148,7 +154,19 @@ def train(bk, state, key, params, bank, chunks_full, steps=1000, lr=1e-4, batch=
         hist["eval_step"], hist["eval"] = [], []
     t0 = time.time()
     tick = _ticker(profile)
-    for s in range(1, steps + 1):
+    start = 1
+    if ckpt is not None and os.path.exists(ckpt):
+        c = torch.load(ckpt, map_location="cpu", weights_only=False)
+        with torch.no_grad():
+            for p_, w in zip(params, c["params"]):
+                p_.copy_(w.to(p_.device, p_.dtype))
+        opt.load_state_dict(c["opt"])
+        torch.set_rng_state(c["torch_rng"])
+        gen.set_state(c["gen"])
+        rng.bit_generator.state = c["np_rng"]
+        hist, start = c["hist"], int(c["step"]) + 1
+        log(f"[adapt] {key}: resumed {ckpt} at step {start - 1}/{steps}")
+    for s in range(start, steps + 1):
         if groups is None:
             idx = rng.integers(0, bank.n, size=min(batch, bank.n))
         else:
@@ -177,8 +195,12 @@ def train(bk, state, key, params, bank, chunks_full, steps=1000, lr=1e-4, batch=
                 v_on = bk.v_full(xa, ta, apre)
             la = ((v_on - v_off) ** 2).mean()
         tot = loss + anchor_weight * la
+        if penalty is not None:
+            tot = tot + penalty()
         opt.zero_grad(set_to_none=True)
         tot.backward()
+        if grad_hook is not None:
+            grad_hook()
         tick("fwd_bwd")
         torch.nn.utils.clip_grad_norm_(params, 1.0)
         opt.step()
@@ -189,6 +211,10 @@ def train(bk, state, key, params, bank, chunks_full, steps=1000, lr=1e-4, batch=
         if eval_fn is not None and eval_every and s % eval_every == 0:
             hist["eval_step"].append(s); hist["eval"].append(float(eval_fn()))
             tick(None)
+        if ckpt is not None and s % ckpt_every == 0 and s < steps:
+            torch.save(dict(params=[p_.detach().cpu() for p_ in params], opt=opt.state_dict(), torch_rng=torch.get_rng_state(),
+                            gen=gen.get_state(), np_rng=rng.bit_generator.state, hist=hist, step=s), ckpt + ".tmp")
+            os.replace(ckpt + ".tmp", ckpt)
     return hist
 
 

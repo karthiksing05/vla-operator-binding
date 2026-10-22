@@ -1,0 +1,99 @@
+{
+ "artifacts": [
+  "results/robot/r3_full_54_g30.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 1382512640,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 1382512640,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 54 --tag _g30 --full --half",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": true,
+  "half": true,
+  "lr": 0.0001,
+  "ndemo": 1,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_g30",
+  "task": 54
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "tachikoma.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4170839",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "task": 54
+ },
+ "metrics": {
+  "curve": {
+   "loss": [
+    0.037159569561481476,
+    0.0013642578851431608,
+    0.001013988978229463,
+    0.0005976135726086795,
+    0.003514031646773219,
+    0.0006477483548223972,
+    0.0006129113025963306,
+    0.0009431323269382119,
+    0.0012864649761468172,
+    0.00529142701998353,
+    0.0029851843137294054
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 127,
+  "final_loss": 0.0029851843137294054,
+  "first_loss": 0.037159569561481476,
+  "full": true,
+  "n_frames": 103,
+  "ndemo": 1,
+  "task": 54,
+  "text": "pick up the tomato sauce and put it in the basket",
+  "train_secs": 206.31258368492126
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___g30__task-54__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-21T00:32:44+00:00",
+ "stream": null,
+ "tag": "_g30"
+}

@@ -1,0 +1,71 @@
+{
+ "artifacts": {},
+ "backbone": "GrootEgoDexBackbone(results/robot/egodex/train/run1/final: H=16 at stride 2, A=64, real=48, steps=4, n_params=2,416,145,344, expert=550,386,688, load 24.6s)",
+ "backfilled": false,
+ "bench": "egodex_test_g0",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/x3_egodex_parity.py --check --ckpt results/robot/egodex/train/run1/final --record",
+ "config": {
+  "batch": 24,
+  "ckpt": "results/robot/egodex/train/run1/final",
+  "every": 8
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "conroy.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4181131",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "x3_egodex_parity",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "check": "backbone_vs_get_action",
+  "run": "run1"
+ },
+ "metrics": {
+  "flow_loss_t05": [
+   0.011392842046916485,
+   0.037432219833135605,
+   0.008958443067967892
+  ],
+  "get_action_noise_dtype": [
+   "torch.float32"
+  ],
+  "hook_layers": [
+   12,
+   12,
+   12
+  ],
+  "other_noise_max_abs_norm": 0.27590426802635193,
+  "parity_max_abs_m": 0.0,
+  "parity_max_abs_norm": 0.0,
+  "parity_same_dtype_state_max_abs_norm": 0.0,
+  "secs_per_query": 0.09660506248474121,
+  "span_ok": true,
+  "zero_shift": 0.0
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "x3_egodex_parity__egodex_test_g0__backbone_vs_get_action__check-backbone_vs_get_action__run-run1__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/x3_egodex_parity.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-21T23:07:50+00:00",
+ "stream": null,
+ "tag": "backbone_vs_get_action"
+}

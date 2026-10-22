@@ -1,0 +1,116 @@
+{
+ "artifacts": [
+  "results/robot/r3_prog_56_code_lib40g30.npz",
+  "results/robot/r3_prog_56_raw_lib40g30.npz"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 16171,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 16171,
+  "tree": 0
+ },
+ "command": "experiments/r3_prepare.py --tree results/robot/r2b_libero_40_tree.npz --library-npz results/robot/r2b_libero_40.npz --tasks 56 --levels 2,3,4 --tag _lib40g30",
+ "config": {
+  "K": 3,
+  "held": 5,
+  "levels": "2,3,4",
+  "library_npz": "results/robot/r2b_libero_40.npz",
+  "tag": "_lib40g30",
+  "tasks": "56",
+  "tree": "results/robot/r2b_libero_40_tree.npz"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4170906",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_prepare",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "task": 56
+ },
+ "metrics": {
+  "bddl": "LIVING_ROOM_SCENE3_pick_up_the_butter_and_put_it_in_the_tray",
+  "code": {
+   "bytes": 16171,
+   "mean_rms_to_demo": 0.07693186402320862,
+   "nll_per_dim": -1.1322753429412842,
+   "path": "results/robot/r3_prog_56_code_lib40g30.npz"
+  },
+  "demo_episode": 3013,
+  "depth_hist": {
+   "0.05": 0,
+   "0.1": 1,
+   "0.2": 2,
+   "0.3": 2,
+   "0.4": 0,
+   "0.55": 0,
+   "0.7": 8,
+   "explained": 90
+  },
+  "gripper_events": [
+   38,
+   86
+  ],
+  "n_frames": 103,
+  "n_ipec_episodes": 50,
+  "nll_median": {
+   "0.05": -0.72258710016796,
+   "0.1": -1.272952904990595,
+   "0.2": -0.9917398751168841,
+   "0.3": -0.6108996422666686,
+   "0.4": -0.35894169753278393,
+   "0.55": -0.061905341991232495,
+   "0.7": 0.15429420976516117
+  },
+  "out_of_range_frac": 0.09431345353675451,
+  "prompt_program": {
+   "pick up the orange juice and place it in the basket": 39,
+   "push the plate to the front of the stove": 19,
+   "put both the alphabet soup and the cream cheese box in the basket": 25,
+   "put both the cream cheese box and the butter in the basket": 17,
+   "put the yellow and white mug in the microwave and close it": 3
+  },
+  "raw": {
+   "bytes": 3319,
+   "mean_rms_to_demo": 0.0,
+   "nll_per_dim": -1.3836462497711182,
+   "path": "results/robot/r3_prog_56_raw_lib40g30.npz"
+  },
+  "task_id": 56,
+  "text": "pick up the butter and put it in the tray",
+  "unexplained_by_level": {
+   "0.05": 0.038834951456310676,
+   "0.1": 0.038834951456310676,
+   "0.2": 0.038834951456310676,
+   "0.3": 0.038834951456310676,
+   "0.4": 0.02912621359223301,
+   "0.55": 0.038834951456310676,
+   "0.7": 0.07766990291262135
+  },
+  "unexplained_frac": 0.1262135922330097
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_prepare__libero_90___lib40g30__task-56__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/r3_prepare.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-21T00:07:39+00:00",
+ "stream": null,
+ "tag": "_lib40g30"
+}

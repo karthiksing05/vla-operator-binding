@@ -1,0 +1,678 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "metaworld_v3",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/x4_metaworld_split.py --record",
+ "config": {
+  "g1_holdout": [
+   "door-close",
+   "window-close",
+   "drawer-open",
+   "faucet-open",
+   "coffee-push",
+   "stick-pull",
+   "handle-pull-side",
+   "plate-slide-back-side",
+   "button-press-topdown-wall",
+   "push-wall"
+  ],
+  "ml45_test": [
+   "bin-picking",
+   "box-close",
+   "hand-insert",
+   "door-lock",
+   "door-unlock"
+  ],
+  "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/x4_metaworld/split.json",
+  "x4_train": [
+   "assembly",
+   "basketball",
+   "button-press",
+   "button-press-topdown",
+   "button-press-wall",
+   "coffee-button",
+   "coffee-pull",
+   "dial-turn",
+   "disassemble",
+   "door-open",
+   "drawer-close",
+   "faucet-close",
+   "hammer",
+   "handle-press",
+   "handle-press-side",
+   "handle-pull",
+   "lever-pull",
+   "peg-insert-side",
+   "peg-unplug-side",
+   "pick-out-of-hole",
+   "pick-place",
+   "pick-place-wall",
+   "plate-slide",
+   "plate-slide-back",
+   "plate-slide-side",
+   "push",
+   "push-back",
+   "reach",
+   "reach-wall",
+   "shelf-place",
+   "soccer",
+   "stick-push",
+   "sweep",
+   "sweep-into",
+   "window-open"
+  ]
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.11.14",
+  "slurm_job": "4181664",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "x4_metaworld_split",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {},
+ "metrics": {
+  "factors": {
+   "assembly": [
+    "place",
+    "nut",
+    "peg",
+    []
+   ],
+   "basketball": [
+    "place",
+    "ball",
+    "basket",
+    []
+   ],
+   "bin-picking": [
+    "place",
+    "puck",
+    "bin",
+    []
+   ],
+   "box-close": [
+    "close",
+    "lid",
+    "box",
+    []
+   ],
+   "button-press": [
+    "press",
+    "button",
+    null,
+    []
+   ],
+   "button-press-topdown": [
+    "press",
+    "button",
+    null,
+    [
+     "topdown"
+    ]
+   ],
+   "button-press-topdown-wall": [
+    "press",
+    "button",
+    null,
+    [
+     "topdown",
+     "wall"
+    ]
+   ],
+   "button-press-wall": [
+    "press",
+    "button",
+    null,
+    [
+     "wall"
+    ]
+   ],
+   "coffee-button": [
+    "press",
+    "button",
+    "coffee machine",
+    []
+   ],
+   "coffee-pull": [
+    "pull",
+    "mug",
+    "coffee machine",
+    []
+   ],
+   "coffee-push": [
+    "push",
+    "mug",
+    "coffee machine",
+    []
+   ],
+   "dial-turn": [
+    "turn",
+    "dial",
+    null,
+    []
+   ],
+   "disassemble": [
+    "pick-out",
+    "nut",
+    "peg",
+    []
+   ],
+   "door-close": [
+    "close",
+    "door",
+    null,
+    []
+   ],
+   "door-lock": [
+    "lock",
+    "door",
+    null,
+    []
+   ],
+   "door-open": [
+    "open",
+    "door",
+    null,
+    []
+   ],
+   "door-unlock": [
+    "unlock",
+    "door",
+    null,
+    []
+   ],
+   "drawer-close": [
+    "close",
+    "drawer",
+    null,
+    []
+   ],
+   "drawer-open": [
+    "open",
+    "drawer",
+    null,
+    []
+   ],
+   "faucet-close": [
+    "close",
+    "faucet",
+    null,
+    []
+   ],
+   "faucet-open": [
+    "open",
+    "faucet",
+    null,
+    []
+   ],
+   "hammer": [
+    "hammer",
+    "hammer",
+    "nail",
+    []
+   ],
+   "hand-insert": [
+    "insert",
+    null,
+    "hole",
+    []
+   ],
+   "handle-press": [
+    "press",
+    "handle",
+    null,
+    []
+   ],
+   "handle-press-side": [
+    "press",
+    "handle",
+    null,
+    [
+     "side"
+    ]
+   ],
+   "handle-pull": [
+    "pull",
+    "handle",
+    null,
+    []
+   ],
+   "handle-pull-side": [
+    "pull",
+    "handle",
+    null,
+    [
+     "side"
+    ]
+   ],
+   "lever-pull": [
+    "pull",
+    "lever",
+    null,
+    []
+   ],
+   "peg-insert-side": [
+    "insert",
+    "peg",
+    "hole",
+    [
+     "side"
+    ]
+   ],
+   "peg-unplug-side": [
+    "unplug",
+    "peg",
+    null,
+    [
+     "side"
+    ]
+   ],
+   "pick-out-of-hole": [
+    "pick-out",
+    "puck",
+    "hole",
+    []
+   ],
+   "pick-place": [
+    "place",
+    "puck",
+    "goal",
+    []
+   ],
+   "pick-place-wall": [
+    "place",
+    "puck",
+    "goal",
+    [
+     "wall"
+    ]
+   ],
+   "plate-slide": [
+    "slide",
+    "plate",
+    "cabinet",
+    []
+   ],
+   "plate-slide-back": [
+    "slide",
+    "plate",
+    "cabinet",
+    [
+     "back"
+    ]
+   ],
+   "plate-slide-back-side": [
+    "slide",
+    "plate",
+    "cabinet",
+    [
+     "back",
+     "side"
+    ]
+   ],
+   "plate-slide-side": [
+    "slide",
+    "plate",
+    "cabinet",
+    [
+     "side"
+    ]
+   ],
+   "push": [
+    "push",
+    "puck",
+    "goal",
+    []
+   ],
+   "push-back": [
+    "push",
+    "puck",
+    "goal",
+    [
+     "back"
+    ]
+   ],
+   "push-wall": [
+    "push",
+    "puck",
+    "goal",
+    [
+     "wall"
+    ]
+   ],
+   "reach": [
+    "reach",
+    null,
+    "goal",
+    []
+   ],
+   "reach-wall": [
+    "reach",
+    null,
+    "goal",
+    [
+     "wall"
+    ]
+   ],
+   "shelf-place": [
+    "place",
+    "puck",
+    "shelf",
+    []
+   ],
+   "soccer": [
+    "push",
+    "ball",
+    "goal",
+    []
+   ],
+   "stick-pull": [
+    "pull",
+    "box",
+    null,
+    [
+     "stick"
+    ]
+   ],
+   "stick-push": [
+    "push",
+    "box",
+    null,
+    [
+     "stick"
+    ]
+   ],
+   "sweep": [
+    "sweep",
+    "puck",
+    null,
+    []
+   ],
+   "sweep-into": [
+    "sweep",
+    "puck",
+    "hole",
+    []
+   ],
+   "window-close": [
+    "close",
+    "window",
+    null,
+    []
+   ],
+   "window-open": [
+    "open",
+    "window",
+    null,
+    []
+   ]
+  },
+  "leave_one_out": {
+   "counts": {
+    "G1": 40,
+    "G4": 10
+   },
+   "grades": {
+    "assembly": "G1",
+    "basketball": "G4",
+    "bin-picking": "G4",
+    "box-close": "G4",
+    "button-press": "G1",
+    "button-press-topdown": "G1",
+    "button-press-topdown-wall": "G1",
+    "button-press-wall": "G1",
+    "coffee-button": "G1",
+    "coffee-pull": "G1",
+    "coffee-push": "G1",
+    "dial-turn": "G4",
+    "disassemble": "G1",
+    "door-close": "G1",
+    "door-lock": "G4",
+    "door-open": "G1",
+    "door-unlock": "G4",
+    "drawer-close": "G1",
+    "drawer-open": "G1",
+    "faucet-close": "G1",
+    "faucet-open": "G1",
+    "hammer": "G4",
+    "hand-insert": "G1",
+    "handle-press": "G1",
+    "handle-press-side": "G1",
+    "handle-pull": "G1",
+    "handle-pull-side": "G1",
+    "lever-pull": "G4",
+    "peg-insert-side": "G1",
+    "peg-unplug-side": "G4",
+    "pick-out-of-hole": "G1",
+    "pick-place": "G1",
+    "pick-place-wall": "G1",
+    "plate-slide": "G1",
+    "plate-slide-back": "G1",
+    "plate-slide-back-side": "G1",
+    "plate-slide-side": "G1",
+    "push": "G1",
+    "push-back": "G1",
+    "push-wall": "G1",
+    "reach": "G1",
+    "reach-wall": "G1",
+    "shelf-place": "G4",
+    "soccer": "G1",
+    "stick-pull": "G1",
+    "stick-push": "G1",
+    "sweep": "G1",
+    "sweep-into": "G1",
+    "window-close": "G1",
+    "window-open": "G1"
+   },
+   "n_test": 50,
+   "n_train": 49,
+   "unseen": {
+    "basketball": [
+     "target:basket"
+    ],
+    "bin-picking": [
+     "target:bin"
+    ],
+    "box-close": [
+     "object:lid",
+     "target:box"
+    ],
+    "dial-turn": [
+     "object:dial",
+     "verb:turn"
+    ],
+    "door-lock": [
+     "verb:lock"
+    ],
+    "door-unlock": [
+     "verb:unlock"
+    ],
+    "hammer": [
+     "object:hammer",
+     "target:nail",
+     "verb:hammer"
+    ],
+    "lever-pull": [
+     "object:lever"
+    ],
+    "peg-unplug-side": [
+     "verb:unplug"
+    ],
+    "shelf-place": [
+     "target:shelf"
+    ]
+   }
+  },
+  "metaworld_check": {
+   "checked": true,
+   "ml45_test": [
+    "bin-picking",
+    "box-close",
+    "door-lock",
+    "door-unlock",
+    "hand-insert"
+   ],
+   "n_envs": 50,
+   "names_match": true,
+   "ok": true,
+   "version": null
+  },
+  "ml45": {
+   "counts": {
+    "G1": 1,
+    "G4": 4
+   },
+   "grades": {
+    "bin-picking": "G4",
+    "box-close": "G4",
+    "door-lock": "G4",
+    "door-unlock": "G4",
+    "hand-insert": "G1"
+   },
+   "n_test": 5,
+   "n_train": 45,
+   "unseen": {
+    "bin-picking": [
+     "target:bin"
+    ],
+    "box-close": [
+     "object:lid",
+     "target:box"
+    ],
+    "door-lock": [
+     "verb:lock"
+    ],
+    "door-unlock": [
+     "verb:unlock"
+    ]
+   }
+  },
+  "mt50": {
+   "counts": {
+    "G0": 50
+   },
+   "grades": {
+    "assembly": "G0",
+    "basketball": "G0",
+    "bin-picking": "G0",
+    "box-close": "G0",
+    "button-press": "G0",
+    "button-press-topdown": "G0",
+    "button-press-topdown-wall": "G0",
+    "button-press-wall": "G0",
+    "coffee-button": "G0",
+    "coffee-pull": "G0",
+    "coffee-push": "G0",
+    "dial-turn": "G0",
+    "disassemble": "G0",
+    "door-close": "G0",
+    "door-lock": "G0",
+    "door-open": "G0",
+    "door-unlock": "G0",
+    "drawer-close": "G0",
+    "drawer-open": "G0",
+    "faucet-close": "G0",
+    "faucet-open": "G0",
+    "hammer": "G0",
+    "hand-insert": "G0",
+    "handle-press": "G0",
+    "handle-press-side": "G0",
+    "handle-pull": "G0",
+    "handle-pull-side": "G0",
+    "lever-pull": "G0",
+    "peg-insert-side": "G0",
+    "peg-unplug-side": "G0",
+    "pick-out-of-hole": "G0",
+    "pick-place": "G0",
+    "pick-place-wall": "G0",
+    "plate-slide": "G0",
+    "plate-slide-back": "G0",
+    "plate-slide-back-side": "G0",
+    "plate-slide-side": "G0",
+    "push": "G0",
+    "push-back": "G0",
+    "push-wall": "G0",
+    "reach": "G0",
+    "reach-wall": "G0",
+    "shelf-place": "G0",
+    "soccer": "G0",
+    "stick-pull": "G0",
+    "stick-push": "G0",
+    "sweep": "G0",
+    "sweep-into": "G0",
+    "window-close": "G0",
+    "window-open": "G0"
+   },
+   "n_test": 50,
+   "n_train": 50,
+   "unseen": {}
+  },
+  "x4_35": {
+   "counts": {
+    "G1": 11,
+    "G4": 4
+   },
+   "grades": {
+    "bin-picking": "G4",
+    "box-close": "G4",
+    "button-press-topdown-wall": "G1",
+    "coffee-push": "G1",
+    "door-close": "G1",
+    "door-lock": "G4",
+    "door-unlock": "G4",
+    "drawer-open": "G1",
+    "faucet-open": "G1",
+    "hand-insert": "G1",
+    "handle-pull-side": "G1",
+    "plate-slide-back-side": "G1",
+    "push-wall": "G1",
+    "stick-pull": "G1",
+    "window-close": "G1"
+   },
+   "n_test": 15,
+   "n_train": 35,
+   "unseen": {
+    "bin-picking": [
+     "target:bin"
+    ],
+    "box-close": [
+     "object:lid",
+     "target:box"
+    ],
+    "door-lock": [
+     "verb:lock"
+    ],
+    "door-unlock": [
+     "verb:unlock"
+    ]
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "x4_metaworld_split__metaworld_v3__split__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/x4_metaworld_split.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-21T23:38:15+00:00",
+ "stream": null,
+ "tag": "split"
+}

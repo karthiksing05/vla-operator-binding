@@ -1,0 +1,73 @@
+{
+ "artifacts": {
+  "derived": "/coc/flash10/ksingara3/robot/data/egodex/derived",
+  "raw": "/coc/flash10/ksingara3/robot/data/egodex/train_subset"
+ },
+ "backbone": null,
+ "backfilled": false,
+ "bench": "egodex",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/x3_egodex_fetch.py --summarize --record",
+ "config": {
+  "jpeg_quality": 90,
+  "manifest": "results/robot/egodex/fetch/shard*.json",
+  "size": 224,
+  "stride": 2
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4171079",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "x3_egodex_fetch",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {},
+ "metrics": {
+  "errors": 0,
+  "manifest_episodes": 19828,
+  "raw_train_gb": 180.66,
+  "test": {
+   "derived_gb": 3.65,
+   "episodes": 3243,
+   "fewer_frames_than_poses": 0,
+   "folders": 111,
+   "frames_224": 413808,
+   "mismatch_examples": [],
+   "video_pose_len_mismatch": 0
+  },
+  "train": {
+   "derived_gb": 34.13,
+   "episodes": 19828,
+   "fewer_frames_than_poses": 0,
+   "folders": 90,
+   "frames_224": 3756013,
+   "mismatch_examples": [],
+   "video_pose_len_mismatch": 0
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "x3_egodex_fetch__egodex__train_subset_plan__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/x3_egodex_fetch.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-21T00:07:34+00:00",
+ "stream": null,
+ "tag": "train_subset_plan"
+}

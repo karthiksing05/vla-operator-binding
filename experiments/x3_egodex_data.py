@@ -127,6 +127,63 @@ class Episode:
             self._container = None
 
 
+class DerivedEpisode(Episode):
+    """The same episode read from its pre-extracted file (x3_egodex_fetch.py: <data>/derived/<split>/<folder>/<ep>.npz): poses at
+    30 Hz, JPEG frames 224x224 at every STRIDE-th frame.  frame48 / sample are Episode's; image(t) needs t in fidx."""
+
+    def __init__(self, npz_path):
+        z = np.load(npz_path)
+        self.path = npz_path
+        self.cam = z["cam"].astype(np.float64)
+        self.T = int(z["T"])
+        w, tp = z["wrist"].astype(np.float64), z["tips"].astype(np.float64)
+        self.wrist = {h: w[i] for i, h in enumerate(HANDS)}
+        self.tips = {h: tp[i] for i, h in enumerate(HANDS)}
+        c = z["conf"]
+        self.conf = None if np.isnan(c).all() else c
+        self.instruction = str(z["instruction"])
+        self.attrs = {}
+        self._jpg, self._off = None, z["off"]                   # the JPEG bytes are read per frame (lazy_jpg), not all at once
+        self.fidx = z["fidx"]
+        self._pos = {int(f): i for i, f in enumerate(self.fidx)}
+        self.n_video_frames = int(z["n_video_frames"])
+        self._container = None
+
+    def _jpg_bytes(self, i):
+        """Frame i's JPEG without loading the whole array: np.savez stores members uncompressed, so seek inside jpg.npy."""
+        import zipfile
+        with zipfile.ZipFile(self.path) as zf, zf.open("jpg.npy") as f:
+            ver = np.lib.format.read_magic(f)
+            np.lib.format._read_array_header(f, ver)
+            base = f.tell()
+            f.seek(base + int(self._off[i]))
+            return np.frombuffer(f.read(int(self._off[i + 1] - self._off[i])), np.uint8)
+
+    def image(self, t, size=224):
+        import cv2
+        i = self._pos[int(t)]
+        img = cv2.imdecode(self._jpg_bytes(i), cv2.IMREAD_COLOR)[:, :, ::-1]
+        if size and size != img.shape[0]:
+            img = cv2.resize(img, (size, size), interpolation=cv2.INTER_AREA)
+        return np.ascontiguousarray(img)
+
+
+def action_mask48(conf, n_real=48, A=64, H=16):
+    """[H, 12] keypoint confidences (or None) -> [H, A] bool: a hand's wrist dims (xyz + 6D) follow its wrist's confidence, each
+    fingertip's 3 dims its own; confidence 0 (occluded, per the EgoDex README) masks the target; padded dims are False."""
+    H = H if conf is None else len(conf)
+    m = np.zeros((H, A), bool)
+    m[:, :n_real] = True
+    if conf is None:
+        return m
+    for hi in range(2):
+        o, c = 24 * hi, conf[:, 6 * hi:6 * hi + 6] > 0
+        m[:, o:o + 9] &= c[:, :1]
+        for k in range(5):
+            m[:, o + 9 + 3 * k:o + 12 + 3 * k] &= c[:, 1 + k:2 + k]
+    return m
+
+
 def to_camera48(x):
     """[..., 48] with fingertips in the wrist frame -> the official camera-frame 48-D layout (for compute_metrics)."""
     x = np.array(x, np.float64, copy=True)

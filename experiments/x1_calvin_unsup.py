@@ -13,9 +13,13 @@ b = end_i; segment 1 = [start_i, end_i], segment 2 = [max(start_j, end_i + 1), e
     rel_actions[f : f + 10] (clamped to [-1, 1], as training) under each of the 34 subtask instructions (the evaluation
     annotation of each subtask), with K shared draws (eps, t; t stratified uniform, FLOWER's sampling_type) per frame; averaged
     over the segment's frames and draws -> the argmin instruction.  Top-1 = it names the segment's annotated subtask (chance
-    1 / 34); also the true subtask's rank.  NB: these are FLOWER's own training episodes (in-distribution scenes A-C).
+    1 / 34); also the true subtask's rank.
+Splits: --split training (FLOWER's own training play, scenes A-C; --scene calvin_scene_A keeps one scene) or --split validation
+(task_ABC_D/validation: annotated scene-D play, never seen by flower_calvin_abc; no scene_info.npy there, so all of it is D).
+Ledger rows: bench calvin_<split>, key scene = A / B / C / D.
 
-python experiments/x1_calvin_unsup.py --data <task_ABC_D> --flower_root <flower_vla_calvin> --ckpt_dir <snapshot> --n 300
+python experiments/x1_calvin_unsup.py --data <task_ABC_D> --flower_root <flower_vla_calvin> --ckpt_dir <snapshot> --n 300 \
+    [--split training --scene calvin_scene_A | --split validation] --out results/x1_calvin/unsup_scene<X>.json --record
 """
 from __future__ import annotations
 
@@ -34,10 +38,17 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "experiments"))
 
 
-def sequences(data, rng, n, gap=64, overlap=32):
-    from x1_calvin_split import load, scene_of, seg_of
-    idx, tasks, scene, segs = load(data)
-    tr = pathlib.Path(data) / "training"
+def sequences(data, rng, n, gap=64, overlap=32, split="training", scene_filter=None):
+    from x1_calvin_split import scene_of, seg_of
+    tr = pathlib.Path(data) / split
+    lang = np.load(tr / "lang_annotations" / "auto_lang_ann.npy", allow_pickle=True).item()
+    idx = np.asarray(lang["info"]["indx"])
+    tasks = list(lang["language"]["task"])
+    segs = np.load(tr / "ep_start_end_ids.npy")
+    if (tr / "scene_info.npy").exists():
+        scene = np.load(tr / "scene_info.npy", allow_pickle=True).item()
+    else:                                                    # validation of task_ABC_D: scene D only, no scene_info.npy
+        scene = {"calvin_scene_D": [int(segs.min()), int(segs.max())]}
     have = set()
     for name in os.listdir(tr):
         if name.startswith("episode_") and name.endswith(".npz"):
@@ -47,6 +58,8 @@ def sequences(data, rng, n, gap=64, overlap=32):
     cands = []
     for k, i in enumerate(order):
         e = idx[i, 1]
+        if scene_filter and scene_of(int(idx[i, 0]), scene) != scene_filter:
+            continue
         for j in order[k + 1:]:
             if idx[j, 0] > e + gap or seg[j] != seg[i]:
                 break
@@ -66,8 +79,8 @@ def sequences(data, rng, n, gap=64, overlap=32):
     return out, len(cands)
 
 
-def load_frames(data, a, b, keys=("rel_actions", "rgb_static", "rgb_gripper", "robot_obs")):
-    tr = pathlib.Path(data) / "training"
+def load_frames(data, a, b, keys=("rel_actions", "rgb_static", "rgb_gripper", "robot_obs"), split="training"):
+    tr = pathlib.Path(data) / split
     fr = {k: [] for k in keys}
     for f in range(a, b + 1):
         z = np.load(tr / f"episode_{f:07d}.npz")
@@ -86,12 +99,14 @@ def main():
     ap.add_argument("--K", type=int, default=4)
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--no_id", action="store_true", help="read (a) only")
+    ap.add_argument("--split", default="training", help="training (scenes A-C) or validation (scene D, unseen by the policy)")
+    ap.add_argument("--scene", default=None, help="keep sequences whose first window starts in this scene, e.g. calvin_scene_A")
     ap.add_argument("--out", default=str(ROOT / "results/x1_calvin/unsup.json"))
     ap.add_argument("--record", action="store_true")
     a = ap.parse_args()
 
     rng = np.random.default_rng(a.seed)
-    seqs, n_cands = sequences(a.data, rng, a.n)
+    seqs, n_cands = sequences(a.data, rng, a.n, split=a.split, scene_filter=a.scene)
     print(f"[unsup] {len(seqs)} sequences of {n_cands} available consecutive pairs; scenes {Counter(s['scene'] for s in seqs)}",
           flush=True)
 
@@ -117,7 +132,7 @@ def main():
     t0 = time.time()
     for si, s in enumerate(seqs):
         lo, hi = s["seg1"][0], s["seg2"][1]
-        fr = load_frames(a.data, lo, hi + 9)
+        fr = load_frames(a.data, lo, hi + 9, split=a.split)
         g = np.sign(fr["rel_actions"][:, 6])
         T = hi - lo + 1
         ev = [lo + f for f in range(1, T) if g[f] != g[f - 1]]
@@ -187,7 +202,9 @@ def main():
     print(json.dumps(res, indent=1, default=str), flush=True)
     if a.record:
         from lifelong_ood import ledger
-        p = ledger.record("x1_calvin_unsup", bench="calvin_abc_training", tag="flower_calvin", seed=a.seed, metrics=res,
+        scn = (a.scene or ("calvin_scene_D" if a.split == "validation" else "ABC")).replace("calvin_scene_", "")
+        p = ledger.record("x1_calvin_unsup", bench=f"calvin_{a.split}", tag="flower_calvin", seed=a.seed, metrics=res,
+                          keys=dict(scene=scn),
                           bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0),
                           config=dict(vars(a)), script="experiments/x1_calvin_unsup.py", command=" ".join(sys.argv),
                           seconds=time.time() - t0)

@@ -41,6 +41,7 @@ Organised as the paper is: the question, the split, the two schemes, the results
 - [RELATED.md](RELATED.md): baselines and related work.
 - [PLAN_X.md](PLAN_X.md): the framework beyond LIBERO (CALVIN, Bridge via SimplerEnv, EPIC-KITCHENS-100).
 - [EGODEX.md](EGODEX.md): X3 stage 1: EgoDex inventory, the graded split, contact events, the GR00T recipe, evaluation.
+- [METAWORLD.md](METAWORLD.md): X4 stage 1: Meta-World inventory, the graded split (ML45, x4_35), setup, the RLinf pi0 parity gate.
 
 ## History ([history/](history/))
 

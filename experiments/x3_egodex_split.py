@@ -173,11 +173,21 @@ def main():
               f"{u['train_gb']}GB {'; '.join(u['notes'])}")
 
 
+_COLOURS = set("red orange yellow green blue purple pink brown black white gray grey silver gold beige tan navy clear transparent "
+               "metal wood wooden multicolor color multi".split())
+
+
 def _ot(e):
     env, obj = str(e.get("environment", "")), str(e.get("object", ""))
     o = re.search(r"object:\s*([^,]+)", obj)
     to = re.search(r"to:\s*([^,]+)", env)
-    return (norm_obj(o.group(1)) if o else None, norm_obj(to.group(1)) if to else None)
+    ov = o.group(1) if o else None
+    c = re.search(r"color:\s*([^,]+)", obj)
+    # swapped fields (session 2025-04-03_16-42-36: "object:brown, color:croissant"): the object is a colour word and the colour
+    # field a noun -> the colour field holds the object (found by experiments/x3_egodex_verify_split.py, 2026-10-20)
+    if ov and c and ov.strip().lower() in _COLOURS and c.group(1).strip().lower().replace("-", " ").split()[-1] not in _COLOURS:
+        ov = c.group(1)
+    return (norm_obj(ov) if ov else None, norm_obj(to.group(1)) if to else None)
 
 
 def bpp_split(train_eps, test_eps, out, min_other=2):

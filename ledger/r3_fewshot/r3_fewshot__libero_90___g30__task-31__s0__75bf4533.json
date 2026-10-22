@@ -1,0 +1,99 @@
+{
+ "artifacts": [
+  "results/robot/r3_full_31_g30.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 1382512640,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 1382512640,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 31 --tag _g30 --full --half",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": true,
+  "half": true,
+  "lr": 0.0001,
+  "ndemo": 1,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_g30",
+  "task": 31
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "baymax.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4170838",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "task": 31
+ },
+ "metrics": {
+  "curve": {
+   "loss": [
+    0.07023336738348007,
+    0.006667539477348328,
+    0.003161270171403885,
+    0.0018124300986528397,
+    0.006263203918933868,
+    0.0011485836002975702,
+    0.0011084037832915783,
+    0.0016613254556432366,
+    0.0008517314563505352,
+    0.005038226488977671,
+    0.0023669188376516104
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 2561,
+  "final_loss": 0.0023669188376516104,
+  "first_loss": 0.07023336738348007,
+  "full": true,
+  "n_frames": 146,
+  "ndemo": 1,
+  "task": 31,
+  "text": "put the black bowl on top of the cabinet",
+  "train_secs": 206.38684797286987
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___g30__task-31__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-21T00:26:59+00:00",
+ "stream": null,
+ "tag": "_g30"
+}

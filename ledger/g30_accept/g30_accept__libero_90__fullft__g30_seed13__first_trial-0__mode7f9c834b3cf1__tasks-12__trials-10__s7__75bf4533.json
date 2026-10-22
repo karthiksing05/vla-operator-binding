@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g30_accept_12_fullft__g30_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=fullft:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_full_12_g30.pt SUITE=libero_90 TASKS=12 TRIALS=10 (job 4181446)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g30_accept_12_fullft__g30_seed13.json",
+   "port": 9678,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "12",
+   "trials": 10,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4181446",
+  "mode": "fullft:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_full_12_g30.pt"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "megazord.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4181446",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g30_accept",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "fullft:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/r3_full_12_g30.pt",
+  "tasks": "12",
+  "trials": 10
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 10,
+  "secs": 260.42994475364685,
+  "success_rate": 0.9,
+  "tasks": {
+   "12": {
+    "errors": 0,
+    "language": "put the black bowl at the back on the plate",
+    "mean_steps": 119.1,
+    "n": 10,
+    "success_rate": 0.9
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g30_accept__libero_90__fullft__g30_seed13__first_trial-0__mode7f9c834b3cf1__tasks-12__trials-10__s7__75bf4533",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-22T00:01:21+00:00",
+ "stream": null,
+ "tag": "fullft__g30_seed13"
+}

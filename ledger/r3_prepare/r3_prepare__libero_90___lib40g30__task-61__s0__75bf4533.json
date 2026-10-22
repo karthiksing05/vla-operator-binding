@@ -1,0 +1,122 @@
+{
+ "artifacts": [
+  "results/robot/r3_prog_61_code_lib40g30.npz",
+  "results/robot/r3_prog_61_raw_lib40g30.npz"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 23707,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 23707,
+  "tree": 0
+ },
+ "command": "experiments/r3_prepare.py --tree results/robot/r2b_libero_40_tree.npz --library-npz results/robot/r2b_libero_40.npz --tasks 61 --levels 2,3,4 --tag _lib40g30",
+ "config": {
+  "K": 3,
+  "held": 5,
+  "levels": "2,3,4",
+  "library_npz": "results/robot/r2b_libero_40.npz",
+  "tag": "_lib40g30",
+  "tasks": "61",
+  "tree": "results/robot/r2b_libero_40_tree.npz"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4170906",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_prepare",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "task": 61
+ },
+ "metrics": {
+  "bddl": "LIVING_ROOM_SCENE4_pick_up_the_chocolate_pudding_and_put_it_in_the_tray",
+  "code": {
+   "bytes": 23707,
+   "mean_rms_to_demo": 0.05795082449913025,
+   "nll_per_dim": -1.2941954135894775,
+   "path": "results/robot/r3_prog_61_code_lib40g30.npz"
+  },
+  "demo_episode": 1600,
+  "depth_hist": {
+   "0.05": 0,
+   "0.1": 0,
+   "0.2": 0,
+   "0.3": 5,
+   "0.4": 1,
+   "0.55": 0,
+   "0.7": 8,
+   "explained": 137
+  },
+  "gripper_events": [
+   58,
+   132
+  ],
+  "n_frames": 151,
+  "n_ipec_episodes": 49,
+  "nll_median": {
+   "0.05": -1.10100708166435,
+   "0.1": -1.3881539039832582,
+   "0.2": -1.0162923638363355,
+   "0.3": -0.6350918584853413,
+   "0.4": -0.3606775422972905,
+   "0.55": -0.07066804530608875,
+   "0.7": 0.14750869521327425
+  },
+  "out_of_range_frac": 0.08420056764427625,
+  "prompt_program": {
+   "open the top drawer and put the bowl inside": 12,
+   "pick up the bbq sauce and place it in the basket": 26,
+   "pick up the black bowl on the cookie box and place it on the plate": 17,
+   "pick up the cream cheese and place it in the basket": 15,
+   "pick up the ketchup and place it in the basket": 11,
+   "put both moka pots on the stove": 7,
+   "put both the alphabet soup and the cream cheese box in the basket": 17,
+   "put both the alphabet soup and the tomato sauce in the basket": 3,
+   "put both the cream cheese box and the butter in the basket": 13,
+   "put the black bowl in the bottom drawer of the cabinet and close it": 22,
+   "put the white mug on the plate and put the chocolate pudding to the right of the plate": 8
+  },
+  "raw": {
+   "bytes": 4807,
+   "mean_rms_to_demo": 0.0,
+   "nll_per_dim": -1.3836463689804077,
+   "path": "results/robot/r3_prog_61_raw_lib40g30.npz"
+  },
+  "task_id": 61,
+  "text": "pick up the chocolate pudding and put it in the tray",
+  "unexplained_by_level": {
+   "0.05": 0.0,
+   "0.1": 0.0,
+   "0.2": 0.0,
+   "0.3": 0.052980132450331126,
+   "0.4": 0.033112582781456956,
+   "0.55": 0.019867549668874173,
+   "0.7": 0.052980132450331126
+  },
+  "unexplained_frac": 0.09271523178807947
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_prepare__libero_90___lib40g30__task-61__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/r3_prepare.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-21T00:11:30+00:00",
+ "stream": null,
+ "tag": "_lib40g30"
+}

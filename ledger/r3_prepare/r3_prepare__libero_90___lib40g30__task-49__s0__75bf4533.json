@@ -1,0 +1,122 @@
+{
+ "artifacts": [
+  "results/robot/r3_prog_49_code_lib40g30.npz",
+  "results/robot/r3_prog_49_raw_lib40g30.npz"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 25120,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 25120,
+  "tree": 0
+ },
+ "command": "experiments/r3_prepare.py --tree results/robot/r2b_libero_40_tree.npz --library-npz results/robot/r2b_libero_40.npz --tasks 49 --levels 2,3,4 --tag _lib40g30",
+ "config": {
+  "K": 3,
+  "held": 5,
+  "levels": "2,3,4",
+  "library_npz": "results/robot/r2b_libero_40.npz",
+  "tag": "_lib40g30",
+  "tasks": "49",
+  "tree": "results/robot/r2b_libero_40_tree.npz"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4170906",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_prepare",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "task": 49
+ },
+ "metrics": {
+  "bddl": "LIVING_ROOM_SCENE1_pick_up_the_tomato_sauce_and_put_it_in_the_basket",
+  "code": {
+   "bytes": 25120,
+   "mean_rms_to_demo": 0.05130407214164734,
+   "nll_per_dim": -1.282138466835022,
+   "path": "results/robot/r3_prog_49_code_lib40g30.npz"
+  },
+  "demo_episode": 3366,
+  "depth_hist": {
+   "0.05": 0,
+   "0.1": 0,
+   "0.2": 0,
+   "0.3": 1,
+   "0.4": 1,
+   "0.55": 1,
+   "0.7": 6,
+   "explained": 151
+  },
+  "gripper_events": [
+   75,
+   140
+  ],
+  "n_frames": 160,
+  "n_ipec_episodes": 45,
+  "nll_median": {
+   "0.05": -1.0316049388684636,
+   "0.1": -1.3703824473470423,
+   "0.2": -1.0028873699889473,
+   "0.3": -0.6449988078241038,
+   "0.4": -0.3679934048563662,
+   "0.55": -0.07243909565964106,
+   "0.7": 0.14896954282262365
+  },
+  "out_of_range_frac": 0.06517857142857143,
+  "prompt_program": {
+   "pick up the alphabet soup and place it in the basket": 18,
+   "pick up the bbq sauce and place it in the basket": 21,
+   "pick up the salad dressing and place it in the basket": 10,
+   "pick up the tomato sauce and place it in the basket": 7,
+   "put both moka pots on the stove": 7,
+   "put both the alphabet soup and the tomato sauce in the basket": 7,
+   "put both the cream cheese box and the butter in the basket": 23,
+   "put the black bowl in the bottom drawer of the cabinet and close it": 18,
+   "put the white mug on the left plate and put the yellow and white mug on the right plate": 17,
+   "put the white mug on the plate and put the chocolate pudding to the right of the plate": 8,
+   "put the yellow and white mug in the microwave and close it": 24
+  },
+  "raw": {
+   "bytes": 5086,
+   "mean_rms_to_demo": 0.0,
+   "nll_per_dim": -1.3836463689804077,
+   "path": "results/robot/r3_prog_49_raw_lib40g30.npz"
+  },
+  "task_id": 49,
+  "text": "pick up the tomato sauce and put it in the basket",
+  "unexplained_by_level": {
+   "0.05": 0.0,
+   "0.1": 0.0,
+   "0.2": 0.0125,
+   "0.3": 0.025,
+   "0.4": 0.01875,
+   "0.55": 0.01875,
+   "0.7": 0.0375
+  },
+  "unexplained_frac": 0.05625
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_prepare__libero_90___lib40g30__task-49__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/r3_prepare.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-21T00:02:00+00:00",
+ "stream": null,
+ "tag": "_lib40g30"
+}

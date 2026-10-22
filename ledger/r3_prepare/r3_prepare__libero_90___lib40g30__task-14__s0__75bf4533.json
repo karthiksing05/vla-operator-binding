@@ -1,0 +1,117 @@
+{
+ "artifacts": [
+  "results/robot/r3_prog_14_code_lib40g30.npz",
+  "results/robot/r3_prog_14_raw_lib40g30.npz"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 16956,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 16956,
+  "tree": 0
+ },
+ "command": "experiments/r3_prepare.py --tree results/robot/r2b_libero_40_tree.npz --library-npz results/robot/r2b_libero_40.npz --tasks 14 --levels 2,3,4 --tag _lib40g30",
+ "config": {
+  "K": 3,
+  "held": 5,
+  "levels": "2,3,4",
+  "library_npz": "results/robot/r2b_libero_40.npz",
+  "tag": "_lib40g30",
+  "tasks": "14",
+  "tree": "results/robot/r2b_libero_40_tree.npz"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4170906",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_prepare",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "task": 14
+ },
+ "metrics": {
+  "bddl": "KITCHEN_SCENE2_put_the_middle_black_bowl_on_the_plate",
+  "code": {
+   "bytes": 16956,
+   "mean_rms_to_demo": 0.07465972006320953,
+   "nll_per_dim": -1.0767074823379517,
+   "path": "results/robot/r3_prog_14_code_lib40g30.npz"
+  },
+  "demo_episode": 224,
+  "depth_hist": {
+   "0.05": 0,
+   "0.1": 0,
+   "0.2": 0,
+   "0.3": 2,
+   "0.4": 4,
+   "0.55": 5,
+   "0.7": 10,
+   "explained": 87
+  },
+  "gripper_events": [
+   38,
+   95
+  ],
+  "n_frames": 108,
+  "n_ipec_episodes": 49,
+  "nll_median": {
+   "0.05": -0.20065949369079794,
+   "0.1": -1.1207296784972804,
+   "0.2": -0.9695205566433012,
+   "0.3": -0.6278125476130809,
+   "0.4": -0.35161502056290883,
+   "0.55": -0.04422167320922674,
+   "0.7": 0.1583426373199377
+  },
+  "out_of_range_frac": 0.09259259259259259,
+  "prompt_program": {
+   "pick up the black bowl next to the plate and place it on the plate": 5,
+   "pick up the book and place it in the back compartment of the caddy": 18,
+   "put the bowl on top of the cabinet": 20,
+   "put the cream cheese in the bowl": 40,
+   "put the white mug on the left plate and put the yellow and white mug on the right plate": 14,
+   "put the white mug on the plate and put the chocolate pudding to the right of the plate": 11
+  },
+  "raw": {
+   "bytes": 3474,
+   "mean_rms_to_demo": 0.0,
+   "nll_per_dim": -1.3836463689804077,
+   "path": "results/robot/r3_prog_14_raw_lib40g30.npz"
+  },
+  "task_id": 14,
+  "text": "put the middle black bowl on the plate",
+  "unexplained_by_level": {
+   "0.05": 0.0,
+   "0.1": 0.0,
+   "0.2": 0.018518518518518517,
+   "0.3": 0.08333333333333333,
+   "0.4": 0.07407407407407407,
+   "0.55": 0.1111111111111111,
+   "0.7": 0.09259259259259259
+  },
+  "unexplained_frac": 0.19444444444444445
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_prepare__libero_90___lib40g30__task-14__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/r3_prepare.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-20T23:50:32+00:00",
+ "stream": null,
+ "tag": "_lib40g30"
+}

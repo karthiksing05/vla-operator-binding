@@ -1,0 +1,293 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "calvin_training",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/x1_calvin_unsup.py --data /coc/flash10/ksingara3/robot/data/calvin_abc/task_ABC_D --flower_root /coc/flash10/ksingara3/robot/ext/flower_vla_calvin --ckpt_dir /coc/flash10/ksingara3/robot/data/hf/home/hub/models--mbreuss--flower_calvin_abc/snapshots/6424ee4c064eb6654a39280314793620b149dd97 --n 300 --split training --scene calvin_scene_B --out results/x1_calvin/unsup_sceneB.json --record",
+ "config": {
+  "K": 4,
+  "ckpt_dir": "/coc/flash10/ksingara3/robot/data/hf/home/hub/models--mbreuss--flower_calvin_abc/snapshots/6424ee4c064eb6654a39280314793620b149dd97",
+  "data": "/coc/flash10/ksingara3/robot/data/calvin_abc/task_ABC_D",
+  "flower_root": "/coc/flash10/ksingara3/robot/ext/flower_vla_calvin",
+  "n": 300,
+  "no_id": false,
+  "out": "results/x1_calvin/unsup_sceneB.json",
+  "record": true,
+  "scene": "calvin_scene_B",
+  "seed": 0,
+  "split": "training",
+  "stride": 8
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "dendrite.cc.gatech.edu",
+  "python": "3.10.22",
+  "slurm_job": "4169429",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "x1_calvin_unsup",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "b949f58685d093cddca017d6d7e8c0646c142e85",
+  "short": "b949f586"
+ },
+ "keys": {
+  "scene": "B"
+ },
+ "metrics": {
+  "boundary": {
+   "10": {
+    "contact": 0.5366666666666666,
+    "random_matched": 0.43373333333333336
+   },
+   "20": {
+    "contact": 0.8833333333333333,
+    "random_matched": 0.6965166666666667
+   },
+   "5": {
+    "contact": 0.30333333333333334,
+    "random_matched": 0.24911666666666665
+   }
+  },
+  "events_per_seq": {
+   "mean": 3.3633333333333333,
+   "zero": 0
+  },
+  "identity": {
+   "by_task": {
+    "close_drawer": {
+     "n": 17,
+     "top1": 1.0
+    },
+    "lift_blue_block_drawer": {
+     "n": 15,
+     "top1": 0.6
+    },
+    "lift_blue_block_slider": {
+     "n": 20,
+     "top1": 0.8
+    },
+    "lift_blue_block_table": {
+     "n": 26,
+     "top1": 0.5769230769230769
+    },
+    "lift_pink_block_drawer": {
+     "n": 8,
+     "top1": 0.5
+    },
+    "lift_pink_block_slider": {
+     "n": 17,
+     "top1": 0.6470588235294118
+    },
+    "lift_pink_block_table": {
+     "n": 15,
+     "top1": 0.6
+    },
+    "lift_red_block_drawer": {
+     "n": 21,
+     "top1": 0.6666666666666666
+    },
+    "lift_red_block_slider": {
+     "n": 23,
+     "top1": 0.6956521739130435
+    },
+    "lift_red_block_table": {
+     "n": 22,
+     "top1": 0.45454545454545453
+    },
+    "move_slider_left": {
+     "n": 24,
+     "top1": 1.0
+    },
+    "move_slider_right": {
+     "n": 18,
+     "top1": 1.0
+    },
+    "open_drawer": {
+     "n": 25,
+     "top1": 0.84
+    },
+    "place_in_drawer": {
+     "n": 10,
+     "top1": 0.6
+    },
+    "place_in_slider": {
+     "n": 27,
+     "top1": 1.0
+    },
+    "push_blue_block_left": {
+     "n": 22,
+     "top1": 0.8181818181818182
+    },
+    "push_blue_block_right": {
+     "n": 20,
+     "top1": 0.95
+    },
+    "push_into_drawer": {
+     "n": 26,
+     "top1": 0.7692307692307693
+    },
+    "push_pink_block_left": {
+     "n": 14,
+     "top1": 0.8571428571428571
+    },
+    "push_pink_block_right": {
+     "n": 18,
+     "top1": 1.0
+    },
+    "push_red_block_left": {
+     "n": 16,
+     "top1": 1.0
+    },
+    "push_red_block_right": {
+     "n": 9,
+     "top1": 0.8888888888888888
+    },
+    "rotate_blue_block_left": {
+     "n": 21,
+     "top1": 1.0
+    },
+    "rotate_blue_block_right": {
+     "n": 16,
+     "top1": 1.0
+    },
+    "rotate_pink_block_left": {
+     "n": 21,
+     "top1": 0.9523809523809523
+    },
+    "rotate_pink_block_right": {
+     "n": 14,
+     "top1": 1.0
+    },
+    "rotate_red_block_left": {
+     "n": 13,
+     "top1": 0.8461538461538461
+    },
+    "rotate_red_block_right": {
+     "n": 5,
+     "top1": 1.0
+    },
+    "stack_block": {
+     "n": 12,
+     "top1": 0.8333333333333334
+    },
+    "turn_off_led": {
+     "n": 25,
+     "top1": 0.64
+    },
+    "turn_off_lightbulb": {
+     "n": 10,
+     "top1": 0.9
+    },
+    "turn_on_led": {
+     "n": 17,
+     "top1": 0.47058823529411764
+    },
+    "turn_on_lightbulb": {
+     "n": 19,
+     "top1": 0.9473684210526315
+    },
+    "unstack_block": {
+     "n": 14,
+     "top1": 0.5714285714285714
+    }
+   },
+   "chance": 0.029411764705882353,
+   "confusions": [
+    [
+     "turn_off_led -> turn_on_led",
+     9
+    ],
+    [
+     "turn_on_led -> turn_off_led",
+     9
+    ],
+    [
+     "push_into_drawer -> place_in_drawer",
+     6
+    ],
+    [
+     "lift_red_block_table -> lift_red_block_slider",
+     5
+    ],
+    [
+     "place_in_drawer -> push_into_drawer",
+     4
+    ],
+    [
+     "lift_blue_block_table -> lift_blue_block_slider",
+     4
+    ],
+    [
+     "lift_red_block_drawer -> lift_red_block_table",
+     4
+    ],
+    [
+     "push_blue_block_left -> push_pink_block_left",
+     3
+    ],
+    [
+     "lift_blue_block_drawer -> lift_blue_block_table",
+     3
+    ],
+    [
+     "open_drawer -> place_in_drawer",
+     3
+    ],
+    [
+     "lift_red_block_slider -> stack_block",
+     2
+    ],
+    [
+     "lift_blue_block_slider -> lift_blue_block_drawer",
+     2
+    ],
+    [
+     "unstack_block -> lift_pink_block_table",
+     2
+    ],
+    [
+     "lift_pink_block_table -> rotate_pink_block_left",
+     2
+    ],
+    [
+     "lift_blue_block_drawer -> lift_blue_block_slider",
+     2
+    ]
+   ],
+   "first_segment_top1": 0.81,
+   "frame_top1": 0.503611111111111,
+   "mean_rank": 0.3883333333333333,
+   "median_rank": 0.0,
+   "n_segments": 600,
+   "second_segment_top1": 0.8033333333333333,
+   "top1": 0.8066666666666666
+  },
+  "median_event_dist": 10.0,
+  "n_candidates": 3013,
+  "n_sequences": 300,
+  "scenes": {
+   "calvin_scene_B": 300
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "x1_calvin_unsup__calvin_training__flower_calvin__scene-B__s0__b949f586",
+ "schema": 1,
+ "script": "experiments/x1_calvin_unsup.py",
+ "seconds": 4718.180748462677,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-20T22:54:06+00:00",
+ "stream": null,
+ "tag": "flower_calvin"
+}

@@ -1,0 +1,99 @@
+{
+ "artifacts": [
+  "results/robot/r3_full_61_g30.pt"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 1382512640,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 1382512640,
+  "tree": 0
+ },
+ "command": "experiments/r3_fewshot.py --task 61 --tag _g30 --full --half",
+ "config": {
+  "backbone": "pi05_libero",
+  "batch": 32,
+  "demo": 0,
+  "full": true,
+  "half": true,
+  "lr": 0.0001,
+  "ndemo": 1,
+  "rank": 16,
+  "scope": "expert",
+  "seed": 0,
+  "steps": 1000,
+  "tag": "_g30",
+  "task": 61
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "tachikoma.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4170840",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_fewshot",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "task": 61
+ },
+ "metrics": {
+  "curve": {
+   "loss": [
+    0.04921331629157066,
+    0.0037658277433365583,
+    0.001965555129572749,
+    0.0014058219967409968,
+    0.004123804625123739,
+    0.0012144023785367608,
+    0.0013976397458463907,
+    0.0012122471816837788,
+    0.00099813228007406,
+    0.0058655026368796825,
+    0.002703591948375106
+   ],
+   "step": [
+    1,
+    100,
+    200,
+    300,
+    400,
+    500,
+    600,
+    700,
+    800,
+    900,
+    1000
+   ]
+  },
+  "demo_episode": 1600,
+  "final_loss": 0.002703591948375106,
+  "first_loss": 0.04921331629157066,
+  "full": true,
+  "n_frames": 151,
+  "ndemo": 1,
+  "task": 61,
+  "text": "pick up the chocolate pudding and put it in the tray",
+  "train_secs": 207.40564346313477
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_fewshot__libero_90___g30__task-61__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/r3_fewshot.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-21T00:13:03+00:00",
+ "stream": null,
+ "tag": "_g30"
+}

@@ -1,0 +1,52 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan D2's read g30_cl",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {},
+ "metrics": {
+  "hypotheses": {
+   "H1": "W1's served library (order a) > EWC's final adapter (exact sign test, alpha 0.05)",
+   "H2": "W1's served library (order a) > PackNet (equal share) with each task's own masks (same test); Holm over H1, H2",
+   "descriptive": "PackNet with prune_perc 0.75; each against zero-shot and against G11's sequential fine-tuning (52) and experience replay (335); successes on the first and last ten arrivals (forgetting); storage"
+  },
+  "protocol": "G11's: E3's fresh set b at seed 13, 20 episodes per task on all 30 tasks of order a, paired with W1's served arms (order a); no acceptance (as G11: the CL baselines serve every task); exact sign test on discordant pairs, two-level bootstrap over tasks and episodes",
+  "task_51": "no demonstration: EWC's final adapter serves it; PackNet serves it with the weights of tasks up to its predecessor 52",
+  "written_before": "any G30c episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__g30_cl__s13__75bf4533",
+ "schema": 1,
+ "script": "experiments/prereg/g30_cl.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-21T00:51:26+00:00",
+ "stream": null,
+ "tag": "g30_cl"
+}

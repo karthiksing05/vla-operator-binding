@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g30_rlaccept_15_lora_pirlm_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pirlm_15_lora.pt SUITE=libero_90 TASKS=15 TRIALS=10 (job 4172816)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g30_rlaccept_15_lora_pirlm_seed13.json",
+   "port": 9018,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "15",
+   "trials": 10,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4172816",
+  "mode": "lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pirlm_15_lora.pt"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "xaea-12.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4172816",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "g30_rlaccept",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pirlm_15_lora.pt",
+  "tasks": "15",
+  "trials": 10
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 10,
+  "secs": 395.0287082195282,
+  "success_rate": 0.5,
+  "tasks": {
+   "15": {
+    "errors": 0,
+    "language": "put the middle black bowl on top of the cabinet",
+    "mean_steps": 278.6,
+    "n": 10,
+    "success_rate": 0.5
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "g30_rlaccept__libero_90__lora_pirlm_seed13__first_trial-0__mode7c61eacd3da3__tasks-15__trials-10__s7__75bf4533",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-21T04:52:13+00:00",
+ "stream": null,
+ "tag": "lora_pirlm_seed13"
+}

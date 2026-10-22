@@ -1,0 +1,118 @@
+{
+ "artifacts": {
+  "final": "results/robot/egodex/train/run1/final",
+  "log": "results/robot/egodex/train/run1/log.jsonl"
+ },
+ "backbone": null,
+ "backfilled": false,
+ "bench": "egodex_train_subset",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "head_bytes": 4285752208,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/x3_egodex_train.py --steps 30000 --ckpt-every 2000 --out results/robot/egodex/train/run1 --record",
+ "config": {
+  "batch": 32,
+  "build": {
+   "base": "/coc/flash10/ksingara3/robot/data/hf/home/hub/models--nvidia--GR00T-N1.5-3B/snapshots/869830fc749c35f34771aa5209f923ac57e4564e",
+   "reinit": [
+    "action_head.action_encoder.W1",
+    "action_head.action_decoder.layer2"
+   ]
+  },
+  "ckpt_every": 2000,
+  "lr": 0.0001,
+  "max_minutes": 225,
+  "norm": null,
+  "out": "results/robot/egodex/train/run1",
+  "record": true,
+  "seed": 0,
+  "smoke": false,
+  "split": {
+   "files": 19813,
+   "folders": 90,
+   "held_objects": [
+    "cup",
+    "banana",
+    "croissant",
+    "iphone",
+    "stapler",
+    "mouse"
+   ],
+   "held_pairs": [
+    [
+     "block",
+     "bowl"
+    ],
+    [
+     "duck",
+     "plate"
+    ],
+    [
+     "plush",
+     "plate"
+    ],
+    [
+     "egg",
+     "bowl"
+    ],
+    [
+     "die",
+     "bowl"
+    ],
+    [
+     "donut",
+     "tupperware"
+    ]
+   ]
+  },
+  "stats": false,
+  "steps": 30000,
+  "timing": false,
+  "train_episodes": 19813,
+  "train_samples": 3438765,
+  "trainable_params": 1071428608,
+  "warmup": 0.05,
+  "workers": 6
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "deebot.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4171196",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "x3_egodex_train",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {},
+ "metrics": {
+  "final_loss": 0.03867967588827014,
+  "gpu_hours": 7.684791084317421,
+  "mem_gb": 33.7811584,
+  "s_per_step": 0.9221749301180906,
+  "steps": 30000,
+  "timing_data_wait": 0.00701428589067961,
+  "timing_s_per_step": 0.9045794850901554
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "x3_egodex_train__egodex_train_subset__run1__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/x3_egodex_train.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-21T09:15:05+00:00",
+ "stream": null,
+ "tag": "run1"
+}

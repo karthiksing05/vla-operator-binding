@@ -1,0 +1,118 @@
+{
+ "artifacts": [
+  "results/robot/r3_prog_50_code_lib40g30.npz",
+  "results/robot/r3_prog_50_raw_lib40g30.npz"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 20410,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 20410,
+  "tree": 0
+ },
+ "command": "experiments/r3_prepare.py --tree results/robot/r2b_libero_40_tree.npz --library-npz results/robot/r2b_libero_40.npz --tasks 50 --levels 2,3,4 --tag _lib40g30",
+ "config": {
+  "K": 3,
+  "held": 5,
+  "levels": "2,3,4",
+  "library_npz": "results/robot/r2b_libero_40.npz",
+  "tag": "_lib40g30",
+  "tasks": "50",
+  "tree": "results/robot/r2b_libero_40_tree.npz"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4170906",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_prepare",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "task": 50
+ },
+ "metrics": {
+  "bddl": "LIVING_ROOM_SCENE2_pick_up_the_alphabet_soup_and_put_it_in_the_basket",
+  "code": {
+   "bytes": 20410,
+   "mean_rms_to_demo": 0.09347763657569885,
+   "nll_per_dim": -1.0263170003890991,
+   "path": "results/robot/r3_prog_50_code_lib40g30.npz"
+  },
+  "demo_episode": 1436,
+  "depth_hist": {
+   "0.05": 0,
+   "0.1": 4,
+   "0.2": 0,
+   "0.3": 3,
+   "0.4": 3,
+   "0.55": 1,
+   "0.7": 6,
+   "explained": 113
+  },
+  "gripper_events": [
+   49,
+   118
+  ],
+  "n_frames": 130,
+  "n_ipec_episodes": 42,
+  "nll_median": {
+   "0.05": -0.44675660553463736,
+   "0.1": -1.2025115803268616,
+   "0.2": -0.9595086473551679,
+   "0.3": -0.6215983098969573,
+   "0.4": -0.35059153716141755,
+   "0.55": -0.07524026715206888,
+   "0.7": 0.14694164213602845
+  },
+  "out_of_range_frac": 0.08901098901098901,
+  "prompt_program": {
+   "pick up the alphabet soup and place it in the basket": 24,
+   "pick up the butter and place it in the basket": 9,
+   "pick up the chocolate pudding and place it in the basket": 27,
+   "put both moka pots on the stove": 7,
+   "put both the alphabet soup and the tomato sauce in the basket": 42,
+   "put the white mug on the plate and put the chocolate pudding to the right of the plate": 9,
+   "put the wine bottle on top of the cabinet": 12
+  },
+  "raw": {
+   "bytes": 4156,
+   "mean_rms_to_demo": 0.0,
+   "nll_per_dim": -1.3836466073989868,
+   "path": "results/robot/r3_prog_50_raw_lib40g30.npz"
+  },
+  "task_id": 50,
+  "text": "pick up the alphabet soup and put it in the basket",
+  "unexplained_by_level": {
+   "0.05": 0.05384615384615385,
+   "0.1": 0.05384615384615385,
+   "0.2": 0.015384615384615385,
+   "0.3": 0.05384615384615385,
+   "0.4": 0.06153846153846154,
+   "0.55": 0.015384615384615385,
+   "0.7": 0.046153846153846156
+  },
+  "unexplained_frac": 0.13076923076923078
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_prepare__libero_90___lib40g30__task-50__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/r3_prepare.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-21T00:02:57+00:00",
+ "stream": null,
+ "tag": "_lib40g30"
+}

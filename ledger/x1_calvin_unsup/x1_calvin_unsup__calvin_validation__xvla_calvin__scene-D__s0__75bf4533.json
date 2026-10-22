@@ -1,0 +1,246 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "calvin_validation",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/x1_calvin_xvla_ident.py --xvla_root /coc/flash10/ksingara3/robot/ext/X-VLA/X-VLA --ckpt_dir /coc/flash10/ksingara3/robot/data/hf/home/hub/models--2toINF--X-VLA-Calvin-ABC_D/snapshots/d76710ee314ee1fa8506f421664c989b40bae415 --data /coc/flash10/ksingara3/robot/data/calvin_abc/task_ABC_D --seqs results/x1_calvin/unsup_sceneD.json --annotations /coc/flash10/ksingara3/robot/calvin/task_ABC_D/validation/new_playtable_validation.yaml --record",
+ "config": {
+  "K": 4,
+  "annotations": "/coc/flash10/ksingara3/robot/calvin/task_ABC_D/validation/new_playtable_validation.yaml",
+  "ckpt_dir": "/coc/flash10/ksingara3/robot/data/hf/home/hub/models--2toINF--X-VLA-Calvin-ABC_D/snapshots/d76710ee314ee1fa8506f421664c989b40bae415",
+  "data": "/coc/flash10/ksingara3/robot/data/calvin_abc/task_ABC_D",
+  "limit": 0,
+  "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/x1_calvin/xvla_ident_sceneD.json",
+  "record": true,
+  "seqs": "results/x1_calvin/unsup_sceneD.json",
+  "split": "validation",
+  "stride": 8,
+  "xvla_root": "/coc/flash10/ksingara3/robot/ext/X-VLA/X-VLA"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "cheetah.cc.gatech.edu",
+  "python": "3.10.22",
+  "slurm_job": "4169441",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "x1_calvin_unsup",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "scene": "D"
+ },
+ "metrics": {
+  "identity": {
+   "by_task": {
+    "close_drawer": {
+     "n": 28,
+     "top1": 0.8214285714285714
+    },
+    "lift_blue_block_drawer": {
+     "n": 17,
+     "top1": 1.0
+    },
+    "lift_blue_block_slider": {
+     "n": 32,
+     "top1": 0.40625
+    },
+    "lift_blue_block_table": {
+     "n": 23,
+     "top1": 0.5217391304347826
+    },
+    "lift_pink_block_slider": {
+     "n": 13,
+     "top1": 0.15384615384615385
+    },
+    "lift_pink_block_table": {
+     "n": 24,
+     "top1": 0.0
+    },
+    "lift_red_block_drawer": {
+     "n": 31,
+     "top1": 1.0
+    },
+    "lift_red_block_slider": {
+     "n": 19,
+     "top1": 1.0
+    },
+    "lift_red_block_table": {
+     "n": 27,
+     "top1": 0.37037037037037035
+    },
+    "move_slider_left": {
+     "n": 36,
+     "top1": 0.6666666666666666
+    },
+    "move_slider_right": {
+     "n": 31,
+     "top1": 0.7096774193548387
+    },
+    "open_drawer": {
+     "n": 19,
+     "top1": 1.0
+    },
+    "place_in_drawer": {
+     "n": 35,
+     "top1": 0.45714285714285713
+    },
+    "place_in_slider": {
+     "n": 30,
+     "top1": 0.6
+    },
+    "push_into_drawer": {
+     "n": 11,
+     "top1": 0.0
+    },
+    "push_red_block_left": {
+     "n": 11,
+     "top1": 0.45454545454545453
+    },
+    "push_red_block_right": {
+     "n": 8,
+     "top1": 0.0
+    },
+    "rotate_blue_block_left": {
+     "n": 5,
+     "top1": 0.0
+    },
+    "rotate_blue_block_right": {
+     "n": 9,
+     "top1": 0.4444444444444444
+    },
+    "rotate_pink_block_left": {
+     "n": 18,
+     "top1": 0.8888888888888888
+    },
+    "rotate_pink_block_right": {
+     "n": 10,
+     "top1": 1.0
+    },
+    "rotate_red_block_left": {
+     "n": 23,
+     "top1": 0.5652173913043478
+    },
+    "rotate_red_block_right": {
+     "n": 19,
+     "top1": 1.0
+    },
+    "stack_block": {
+     "n": 21,
+     "top1": 1.0
+    },
+    "turn_off_led": {
+     "n": 27,
+     "top1": 0.07407407407407407
+    },
+    "turn_off_lightbulb": {
+     "n": 10,
+     "top1": 0.0
+    },
+    "turn_on_led": {
+     "n": 40,
+     "top1": 0.125
+    },
+    "turn_on_lightbulb": {
+     "n": 12,
+     "top1": 1.0
+    },
+    "unstack_block": {
+     "n": 11,
+     "top1": 0.2727272727272727
+    }
+   },
+   "chance": 0.029411764705882353,
+   "confusions": [
+    [
+     "lift_blue_block_slider -> place_in_slider",
+     19
+    ],
+    [
+     "turn_on_led -> push_blue_block_right",
+     19
+    ],
+    [
+     "turn_off_led -> turn_on_led",
+     15
+    ],
+    [
+     "lift_red_block_table -> push_red_block_right",
+     15
+    ],
+    [
+     "lift_pink_block_table -> rotate_pink_block_left",
+     15
+    ],
+    [
+     "place_in_drawer -> lift_red_block_drawer",
+     14
+    ],
+    [
+     "turn_on_led -> push_red_block_right",
+     13
+    ],
+    [
+     "place_in_slider -> lift_blue_block_slider",
+     12
+    ],
+    [
+     "move_slider_left -> move_slider_right",
+     12
+    ],
+    [
+     "lift_pink_block_slider -> place_in_slider",
+     11
+    ],
+    [
+     "lift_blue_block_table -> rotate_red_block_right",
+     11
+    ],
+    [
+     "push_into_drawer -> lift_blue_block_drawer",
+     10
+    ],
+    [
+     "turn_off_lightbulb -> turn_on_lightbulb",
+     10
+    ],
+    [
+     "rotate_red_block_left -> push_red_block_right",
+     10
+    ],
+    [
+     "turn_off_led -> push_red_block_right",
+     10
+    ]
+   ],
+   "frame_top1": 0.4231111111111111,
+   "mean_rank": 1.2266666666666666,
+   "median_rank": 0.0,
+   "n_segments": 600,
+   "top1": 0.56
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "x1_calvin_unsup__calvin_validation__xvla_calvin__scene-D__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/x1_calvin_xvla_ident.py",
+ "seconds": 6742.279543638229,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-21T01:03:06+00:00",
+ "stream": null,
+ "tag": "xvla_calvin"
+}

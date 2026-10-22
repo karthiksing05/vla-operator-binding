@@ -1,0 +1,118 @@
+{
+ "artifacts": [
+  "results/robot/r3_prog_71_code_lib40g30.npz",
+  "results/robot/r3_prog_71_raw_lib40g30.npz"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 18212,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 18212,
+  "tree": 0
+ },
+ "command": "experiments/r3_prepare.py --tree results/robot/r2b_libero_40_tree.npz --library-npz results/robot/r2b_libero_40.npz --tasks 71 --levels 2,3,4 --tag _lib40g30",
+ "config": {
+  "K": 3,
+  "held": 5,
+  "levels": "2,3,4",
+  "library_npz": "results/robot/r2b_libero_40.npz",
+  "tag": "_lib40g30",
+  "tasks": "71",
+  "tree": "results/robot/r2b_libero_40_tree.npz"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4170906",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r3_prepare",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {
+  "task": 71
+ },
+ "metrics": {
+  "bddl": "LIVING_ROOM_SCENE6_put_the_red_mug_on_the_plate",
+  "code": {
+   "bytes": 18212,
+   "mean_rms_to_demo": 0.06421876698732376,
+   "nll_per_dim": -1.2134982347488403,
+   "path": "results/robot/r3_prog_71_code_lib40g30.npz"
+  },
+  "demo_episode": 686,
+  "depth_hist": {
+   "0.05": 0,
+   "0.1": 0,
+   "0.2": 0,
+   "0.3": 0,
+   "0.4": 4,
+   "0.55": 3,
+   "0.7": 9,
+   "explained": 100
+  },
+  "gripper_events": [
+   41,
+   108
+  ],
+  "n_frames": 116,
+  "n_ipec_episodes": 44,
+  "nll_median": {
+   "0.05": -0.3538935451692634,
+   "0.1": -1.1272839993171764,
+   "0.2": -0.9661083977056271,
+   "0.3": -0.6418147086293757,
+   "0.4": -0.3387736961208341,
+   "0.55": -0.05478427179176226,
+   "0.7": 0.15552264620603776
+  },
+  "out_of_range_frac": 0.09852216748768473,
+  "prompt_program": {
+   "pick up the black bowl next to the ramekin and place it on the plate": 7,
+   "pick up the black bowl on the ramekin and place it on the plate": 19,
+   "pick up the book and place it in the back compartment of the caddy": 17,
+   "put both moka pots on the stove": 5,
+   "put both the alphabet soup and the tomato sauce in the basket": 10,
+   "put the bowl on the plate": 4,
+   "put the white mug on the plate and put the chocolate pudding to the right of the plate": 54
+  },
+  "raw": {
+   "bytes": 3722,
+   "mean_rms_to_demo": 0.0,
+   "nll_per_dim": -1.3836462497711182,
+   "path": "results/robot/r3_prog_71_raw_lib40g30.npz"
+  },
+  "task_id": 71,
+  "text": "put the red mug on the plate",
+  "unexplained_by_level": {
+   "0.05": 0.0,
+   "0.1": 0.0,
+   "0.2": 0.0,
+   "0.3": 0.0,
+   "0.4": 0.07758620689655173,
+   "0.55": 0.04310344827586207,
+   "0.7": 0.07758620689655173
+  },
+  "unexplained_frac": 0.13793103448275862
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r3_prepare__libero_90___lib40g30__task-71__s0__75bf4533",
+ "schema": 1,
+ "script": "experiments/r3_prepare.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-21T00:13:21+00:00",
+ "stream": null,
+ "tag": "_lib40g30"
+}

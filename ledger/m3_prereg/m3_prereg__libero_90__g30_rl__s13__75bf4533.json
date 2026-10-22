@@ -1,0 +1,59 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration of plan D2's read g30_rl",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": null,
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75bf45331b5dc79692951379f0eb557e21d1d912",
+  "short": "75bf4533"
+ },
+ "keys": {},
+ "metrics": {
+  "acceptance": "as E3: 10 episodes on stored init states 0-9 at seed 13; the arm is kept where it beats the frozen policy there, else the policy serves",
+  "hypotheses": {
+   "H1": "E3's library with acceptance is non-inferior to pi_RL (LoRA, matched budget, lora@pirlm) with acceptance on the G3/G4 subset (margin 0.05: lower bound of the task-level difference > -0.05)",
+   "descriptive": "pi_RL at 100 practice episodes (lora@pirl) with acceptance against the library, the per-task LoRA with acceptance and DSRL on the per-task LoRA (G7 dsrls, 100 practice episodes) with acceptance; each pi_RL arm against its own initialisation (the per-task LoRA) and against zero-shot; practice successes (first 10 / last 20 episodes); environment steps, chunks, PPO updates and A40-hours of each arm; storage (the served LoRA, 18.8 MB, as the per-task LoRA)"
+  },
+  "parity": "RLinf-Pi05-LIBERO-SFT on LIBERO-Spatial in RLinf's harness: 0.79 success (100 trajectories, job 4171082) against the published 84.6, recorded before this pre-registration; the PPO checkpoints' parity runs alongside",
+  "protocol": "the G3/G4 tasks of E3 (9, 10, 12, 13, 14, 15, 30; 25, 31, 36, 41, 43, 55, 56, 57, 58, 59, 61, 62, 71), E3's fresh set b (sampler seeds 200000-200019), 20 episodes per task, noise seed 13, paired with E3's arms (library with acceptance, per-task LoRA with acceptance, zero-shot) and G7's dsrls; exact sign test on discordant pairs, two-level bootstrap over tasks and episodes (experiments/e1_read.py compare); RL practice on stored init states 0-29 only (STATE_MOD 30), never set b",
+  "recipe": {
+   "critic": "ValueHead 2048-1024-512-256-1 on the masked mean of the VLM prefix output (value_after_vlm)",
+   "logprob": "joint over the chain (mean over K+1 steps), executed 5 actions x 7 dims summed",
+   "noise": "Flow-Noise: ExploreNoiseNet on the expert's final hidden state, sigma in RLinf's [0.08, 0.16] scaled by sqrt(3/10) for 10 Euler steps (RLinf's pi0.5 LIBERO PPO uses 3)",
+   "ppo": "GAE 0.99 / 0.95, normalised advantages, clip 0.2, dual clip 3.0, value clip 0.2, Adam (0.9, 0.95), grad clip 1.0, actor lr 2e-5 (LoRA + noise head), value lr 1e-4, one epoch per 4-episode batch, minibatch 16 chunks",
+   "test": "deterministic ODE through the trained LoRA (noise head off), 10 steps, as every adapter arm"
+  },
+  "written_before": "any G30e training episode or read episode"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90__g30_rl__s13__75bf4533",
+ "schema": 1,
+ "script": "experiments/prereg/g30_rl.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-21T01:21:30+00:00",
+ "stream": null,
+ "tag": "g30_rl"
+}

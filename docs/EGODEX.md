@@ -146,9 +146,12 @@ and tray 1,661. All 277 test episodes are G0 as shipped. Grades are constructed 
   - 62 test episodes in all; 4,702 basic_pick_place training episodes dropped.
   - Each held object keeps 281-1,949 training episodes with other targets, and each target 2,647-11,000 with other objects.
 - **G2 objects held out of pick-place**, but named in other training folders' instructions:
-  - cup 6 (clean_cups, ...), banana 4 (setup_cleanup_table), croissant 4 (wrap_unwrap_food), iphone 4 (measure_objects;
+  - cup 6 (clean_cups, ...), banana 4 (setup_cleanup_table), croissant 5 (wrap_unwrap_food), iphone 4 (measure_objects;
     "phone" in charge_uncharge_device), stapler 2 (staple_paper).
-  - 20 test episodes; 1,630 training episodes dropped.
+  - 21 test episodes; 1,741 training episodes dropped. (Corrected 2026-10-20: one session, 2025-04-03_16-42-36, has swapped
+    metadata, `object:brown, color:croissant`. The first parser read its object as "brown", so 111 croissant episodes counted as
+    allowed and 15 were fetched; one croissant test episode was graded G0. `_ot` now reads the colour field when the object field
+    is a colour word; the 15 files were moved out of training before the fine-tune, `fetch/excluded_after_fetch.json`.)
 - **G4 object**: mouse, 5 test episodes. Outside pick-place it appears only in zip_unzip_bag, which is held out.
 
 This within-task split is the cleanest test of composition in EgoDex. The verb, scene and hand stay fixed, and only the
