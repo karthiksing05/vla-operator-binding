@@ -6,6 +6,22 @@ program (factored object and goal prototypes, plan E, and its streams, plan W) i
 "PLAN D, FACTORED STEPS". The current summary is in the [README](../README.md); the readable account is the results page
 (https://claude.ai/artifact/9TTYizddrmLnsA6GxuLeQk); `experiments/status.py` shows what is running.
 
+**How to read the rows (re-scoped 2026-10-21 after [DESIGN_REVIEW.md](DESIGN_REVIEW.md)).** The rows are unchanged; the claims
+drawn from them are narrower.
+- "OOD learning is composition" is not a general claim. It holds as: in familiar scenes, recombining the policy's own
+  conditionals per phase recovers new pairings.
+- The grades (G0-G4) were assigned after the reads and are confounded with benchmark (Li's suites for G1/G2, LIBERO-90 scenes
+  for G3/G4), so they describe the rows and do not predict the regime. G3 is a scene shift and G4 a new part.
+- Rows marked "nothing fitted" or "zero fit" on Li's suites spend 340 rewarded practice episodes per task
+  ([COST.md](COST.md)); those 20 tasks were reused across iterations, and practice may select sources by trajectory or object
+  position more than by concept.
+- Task leaves against the per-task LoRA: the leaves choose from a larger candidate set with more practice.
+- "No damage" in the streams holds by construction. The novelty detector's AUC scores held concepts on the policy's own
+  training demonstrations.
+- `lib` is left out of donation claims (its prototypes saw the target task). The unsupervised scheme in closed loop (Z3, Z5)
+  and "prototypes speed convergence" are not supported yet.
+- [VALIDITY.md](VALIDITY.md) is a historical M3-era record. The forward plan is [FRAMEWORK.md](FRAMEWORK.md), tested by [DESIGN.md](DESIGN.md).
+
 ## The thesis benchmark: tasks never seen, at most one demonstration as the query
 
 A new task arrives as its instruction and its scene. Since 2026-10-01 (late) at most ONE demonstration may come with it, used once as the query that selects what the policy already holds (here, its 4 KB object prototype) and never executed, replayed or fitted; rows that use it say so. Nothing else of the task is shown: no recorded

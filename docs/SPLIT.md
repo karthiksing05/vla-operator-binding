@@ -1,4 +1,9 @@
-# The compositional split, graded by what is unseen
+# The split, graded by what is unseen
+
+*Re-scoped 2026-10-21 after [DESIGN_REVIEW.md](DESIGN_REVIEW.md) (threats T1-T4). The grades were assigned after the results
+existed, and no pre-registration names them, so every table here is descriptive. Grade is confounded with benchmark: Li's
+suites (training scenes) supply every G1/G2 result, LIBERO-90's scenes every G3/G4 result. Only G1 and G2 keep every part seen;
+G3 is a scene shift and G4 a new part, which test robustness to new scenes and new vocabulary more than composition.*
 
 ## Motivation
 
@@ -30,14 +35,15 @@ alike (`experiments/split_grades.py: norm`):
 | G0 seen | nothing: the (object, relation) pair in this scene is a training task | LIBERO-90 copies of LIBERO-10 steps |
 | G1 relation | the pairing only: object and goal each seen in this scene, never together | Li's "put the cream cheese on the plate" |
 | G2 binding | a part never seen in this scene, though seen elsewhere | Li's "put the butter on the plate" (butter only in LIBERO-Object) |
-| G3 scene | the scene; every part seen in other scenes | LIBERO-90 kitchens and living rooms not in LIBERO-10 |
-| G4 part | an object, goal relation or predicate never seen at all | LIBERO-90's ketchup in the tray, the caddy, the frying pan |
+| G3 scene shift | the scene; every part seen in other scenes | LIBERO-90 kitchens and living rooms not in LIBERO-10 |
+| G4 new part | an object, goal relation or predicate never seen at all | LIBERO-90's ketchup in the tray, the caddy, the frying pan |
 
 Counts over the 110 evaluated tasks: G0 15, G1 9, G2 20, G3 18, G4 48.
 
 ## Results by grade
 
-Successes are summed per grade from the per-task reads (`results/robot/split_grades.json`).
+Successes are summed per grade from the per-task reads (`results/robot/split_grades.json`). On Li's suites the zero-fit
+column still spends 340 rewarded practice episodes per task ([COST.md](COST.md)).
 
 | result | grade | tasks | the policy alone | composition, zero fit | fitted units |
 |---|---|---|---|---|---|
@@ -56,15 +62,21 @@ Successes are summed per grade from the per-task reads (`results/robot/split_gra
 
 ## Reading
 
-When only relations or bindings are new (G1, G2) and the scene is familiar, composing held units, with nothing fitted, recovers
-most of the behaviour. This holds on all five flow-matching architectures.
+When only relations or bindings are new (G1, G2) and the scene is familiar, composing held units, with nothing fitted and 340
+practice episodes per task, recovers most of the behaviour. This holds on all five flow-matching architectures. Two
+qualifications: Li's 20 tasks were reused across the design iterations, and practice may choose sources whose trained motion
+reaches where the target object lies, whatever their concepts; controls for that are still to run.
 
-When the scene or a part is new (G3, G4), composing held units does nothing. A unit must be created, and created units compose
-(the library and leaves beat the per-task LoRA).
+When the scene shifts or a part is new (G3, G4), composing held units does nothing. A unit must be created (the library and
+leaves beat the per-task LoRA, but leaves choose from a larger candidate set with more practice). That created units compose
+is not shown: recombined concepts refit without a demonstration of the held-out fold fail their test against the policy.
 
 LIBERO-90's G2 tasks need creation too. There the unseen binding is to a scene the policy knows only from LIBERO-10's two-step
 tasks.
 
-The grade predicts which of the two learning regimes a task needs:
-- **reuse:** the supervised pointers, or the unsupervised segment-named programs;
+In our data, then, scene familiarity separates the two regimes; the grade does not yet predict them:
+- **reuse:** the supervised pointers (the unsupervised programs and blend do not yet beat the policy in closed loop);
 - **create:** fitted prototypes and leaves.
+
+A test of the grade as a prediction needs a factorial split inside one benchmark, graded and pre-registered before any read
+([DESIGN_REVIEW.md](DESIGN_REVIEW.md) fix 8; [PLAN_F.md](PLAN_F.md) probe F3).

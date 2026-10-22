@@ -1,7 +1,10 @@
 # lifelong-ood-learner
 
-**Out-of-distribution learning is composition.** A frozen flow-matching robot policy meets tasks it was never trained on and
-takes them on by composing what it already holds, creating new units only where nothing it holds explains the task.
+**How far can composition carry a frozen policy on new tasks?** A frozen flow-matching robot policy meets tasks it was never
+trained on and takes them on by composing what it already holds, creating new units only where nothing it holds explains the
+task. In familiar scenes this works; it is not a general account of out-of-distribution learning (re-scoped 2026-10-21 after
+[docs/DESIGN_REVIEW.md](docs/DESIGN_REVIEW.md); forward plan [docs/FRAMEWORK.md](docs/FRAMEWORK.md) with its design [docs/DESIGN.md](docs/DESIGN.md): a hierarchical store of reusable
+prototypes composed without supervision, as an alternative to fine-tuning).
 
 Robot manipulation is the testbed. A LIBERO task is a composition of parts (an object and its location, a goal relation and its
 location, a scene). The policy's 40 training tasks expose the parts, and every test task is graded by which parts and relations
@@ -23,15 +26,27 @@ In both schemes:
 - practice chooses sources and operators;
 - the policy's likelihood decides held vs new;
 - every unit gets a donation analysis: what it contributes, to which axis, in which phase, and by which relation to the task
-  ([docs/INTERPRETATION.md](docs/INTERPRETATION.md); `experiments/zi_blend.py`).
+  ([docs/INTERPRETATION.md](docs/INTERPRETATION.md); `experiments/zi_blend.py`). The supervised library `lib` is left out of
+  every donation claim: its prototypes were fitted on demonstrations that include the target task.
 
-## What the grade predicts (docs/SPLIT.md)
+Status of the unsupervised scheme: in closed loop neither the pointer programs nor the soft blend yet beats the policy alone
+(Z3, Z5), so it is analysis for now. That prototypes speed convergence ([docs/PLAN_CONV.md](docs/PLAN_CONV.md)) is not
+supported yet.
+
+## Results by grade (docs/SPLIT.md; descriptive)
+
+The grades were assigned after these results, and grade is confounded with benchmark: every G1/G2 row is one of Li's tasks in a
+training scene, every G3/G4 row a LIBERO-90 scene. "Nothing fitted" at G1/G2 still spends 340 rewarded practice episodes per task
+([docs/COST.md](docs/COST.md)); Li's 20 tasks were reused across the design iterations, and practice may pick sources by where
+their motion goes more than by their concepts. The leaves choose from a larger candidate set with more practice than the per-task
+LoRA. "No damage" in the stream holds by construction (frozen policy, frozen units). The novelty detector's AUC scores held
+concepts on the policy's own training demonstrations. Threats: [paper/DRAFT.md](paper/DRAFT.md) Section 16.
 
 | unseen | composing held units, nothing fitted | creating units |
 |---|---|---|
-| a relation or a binding, familiar scene (G1, G2: Li et al.'s 20 recombinations) | pi0.5 312 vs 143 of 400 for the policy alone; pi0 336 vs 35; SmolVLA 96 vs 5; X-VLA 256 vs 80; GR00T N1.5 157 vs 113 | not needed |
-| the scene (G3) | 8 LIBERO-90 tasks: 67 vs 68 for the policy alone | the same 8: library 154; all 15 G3 tasks: leaves 225 vs 90 |
-| a part (G4) | 2 tasks: 0 vs 4 | 31 tasks: leaves 455 vs 117 |
+| a relation or a binding, familiar scene (G1, G2: Li et al.'s 20 recombinations; 340 practice episodes per task) | pi0.5 312 vs 143 of 400 for the policy alone; pi0 336 vs 35; SmolVLA 96 vs 5; X-VLA 256 vs 80; GR00T N1.5 157 vs 113 | not needed |
+| a scene shift (G3) | 8 LIBERO-90 tasks: 67 vs 68 for the policy alone | the same 8: library 154; all 15 G3 tasks: leaves 225 vs 90 |
+| a new part (G4) | 2 tasks: 0 vs 4 | 31 tasks: leaves 455 vs 117 |
 
 ## Where to look
 
