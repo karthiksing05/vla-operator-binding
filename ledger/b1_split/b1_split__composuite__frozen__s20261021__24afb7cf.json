@@ -1,0 +1,118 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/b1/split.json",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/b1/split_sealed.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "composuite",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/b1_split.py --record",
+ "config": {
+  "held_out": {
+   "object": "Hollowbox",
+   "obstacle": "ObjectWall"
+  },
+  "rule": "G-rec = base cells with sum of seed-permuted value indices % 4 == 0; dev/sealed = 2/3 / 1/3 per stratum",
+  "seed": 20261021
+ },
+ "env": {
+  "device": "cpu",
+  "host": "sky1.cc.gatech.edu",
+  "python": "3.13.5",
+  "slurm_job": null,
+  "torch": "2.13.0+cpu"
+ },
+ "experiment": "b1_split",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "24afb7cf104d6d20af30c75e095483a55bc8a6cb",
+  "short": "24afb7cf"
+ },
+ "keys": {},
+ "metrics": {
+  "checks": {
+   "seen_pairs_missing_from_train": 0,
+   "train_values_object": [
+    "Box",
+    "Dumbbell",
+    "Plate"
+   ],
+   "train_values_objective": [
+    "PickPlace",
+    "Push",
+    "Shelf",
+    "Trashcan"
+   ],
+   "train_values_obstacle": [
+    "GoalWall",
+    "None",
+    "ObjectDoor"
+   ],
+   "train_values_robot": [
+    "IIWA",
+    "Jaco",
+    "Kinova3",
+    "Panda"
+   ],
+   "value_counts_train": {
+    "object": {
+     "Box": 36,
+     "Dumbbell": 36,
+     "Plate": 36
+    },
+    "objective": {
+     "PickPlace": 27,
+     "Push": 27,
+     "Shelf": 27,
+     "Trashcan": 27
+    },
+    "obstacle": {
+     "GoalWall": 36,
+     "None": 36,
+     "ObjectDoor": 36
+    },
+    "robot": {
+     "IIWA": 27,
+     "Jaco": 27,
+     "Kinova3": 27,
+     "Panda": 27
+    }
+   }
+  },
+  "counts": {
+   "dev_G-new": 64,
+   "dev_G-new2": 11,
+   "dev_G-rec": 24,
+   "sealed_G-new": 32,
+   "sealed_G-new2": 5,
+   "sealed_G-rec": 12,
+   "train": 108
+  },
+  "held_out": {
+   "object": "Hollowbox",
+   "obstacle": "ObjectWall"
+  },
+  "sealed_sha256": "c4b7cb7c3ccde274bc97849ecb7252c898ead89c85bdc2fd1d5eab475b9f9870",
+  "split_sha256": "41c7658d0a80cf0c8091f902c363c6bc0ade06b9cbf68471a307ad313ce0cb2a"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "b1_split__composuite__frozen__s20261021__24afb7cf",
+ "schema": 1,
+ "script": "experiments/b1_split.py",
+ "seconds": null,
+ "seed": 20261021,
+ "source_commit": null,
+ "started": "2026-10-22T03:30:37+00:00",
+ "stream": null,
+ "tag": "frozen"
+}

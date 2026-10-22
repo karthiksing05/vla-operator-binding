@@ -1,0 +1,304 @@
+{
+ "robosuite": "1.4.0",
+ "mujoco": "2.3.7",
+ "host": "eva.cc.gatech.edu",
+ "mujoco_gl": "egl",
+ "tasks": {
+  "IIWA_Box_None_PickPlace": {
+   "obs_dim": 93,
+   "act_dim": 8,
+   "act_low": [
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0
+   ],
+   "act_high": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "layout": {
+    "object-state": [
+     0,
+     14
+    ],
+    "obstacle-state": [
+     14,
+     28
+    ],
+    "goal-state": [
+     28,
+     45
+    ],
+    "object_id": [
+     45,
+     49
+    ],
+    "robot_id": [
+     49,
+     53
+    ],
+    "obstacle_id": [
+     53,
+     57
+    ],
+    "subtask_id": [
+     57,
+     61
+    ],
+    "robot0_proprio-state": [
+     61,
+     93
+    ]
+   },
+   "keys": [
+    "object-state",
+    "obstacle-state",
+    "goal-state",
+    "object_id",
+    "robot_id",
+    "obstacle_id",
+    "subtask_id",
+    "robot0_proprio-state"
+   ],
+   "steps_per_s": 74.92902668550178,
+   "max_reward_random": 0.0024821723881370164,
+   "control_freq": 20,
+   "horizon": 500,
+   "step_return_len": 4
+  },
+  "Jaco_Dumbbell_GoalWall_Push": {
+   "obs_dim": 93,
+   "act_dim": 8,
+   "act_low": [
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0
+   ],
+   "act_high": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "layout": {
+    "object-state": [
+     0,
+     14
+    ],
+    "obstacle-state": [
+     14,
+     28
+    ],
+    "goal-state": [
+     28,
+     45
+    ],
+    "object_id": [
+     45,
+     49
+    ],
+    "robot_id": [
+     49,
+     53
+    ],
+    "obstacle_id": [
+     53,
+     57
+    ],
+    "subtask_id": [
+     57,
+     61
+    ],
+    "robot0_proprio-state": [
+     61,
+     93
+    ]
+   },
+   "keys": [
+    "object-state",
+    "obstacle-state",
+    "goal-state",
+    "object_id",
+    "robot_id",
+    "obstacle_id",
+    "subtask_id",
+    "robot0_proprio-state"
+   ],
+   "steps_per_s": 82.5834011715794,
+   "max_reward_random": 0.0021114950891132135,
+   "control_freq": 20,
+   "horizon": 500,
+   "step_return_len": 4
+  },
+  "Kinova3_Plate_ObjectDoor_Shelf": {
+   "obs_dim": 93,
+   "act_dim": 8,
+   "act_low": [
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0
+   ],
+   "act_high": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "layout": {
+    "object-state": [
+     0,
+     14
+    ],
+    "obstacle-state": [
+     14,
+     28
+    ],
+    "goal-state": [
+     28,
+     45
+    ],
+    "object_id": [
+     45,
+     49
+    ],
+    "robot_id": [
+     49,
+     53
+    ],
+    "obstacle_id": [
+     53,
+     57
+    ],
+    "subtask_id": [
+     57,
+     61
+    ],
+    "robot0_proprio-state": [
+     61,
+     93
+    ]
+   },
+   "keys": [
+    "object-state",
+    "obstacle-state",
+    "goal-state",
+    "object_id",
+    "robot_id",
+    "obstacle_id",
+    "subtask_id",
+    "robot0_proprio-state"
+   ],
+   "steps_per_s": 78.92046733185363,
+   "max_reward_random": 0.0010852939046654077,
+   "control_freq": 20,
+   "horizon": 500,
+   "step_return_len": 4
+  },
+  "Panda_Hollowbox_ObjectWall_Trashcan": {
+   "obs_dim": 93,
+   "act_dim": 8,
+   "act_low": [
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0,
+    -1.0
+   ],
+   "act_high": [
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0,
+    1.0
+   ],
+   "layout": {
+    "object-state": [
+     0,
+     14
+    ],
+    "obstacle-state": [
+     14,
+     28
+    ],
+    "goal-state": [
+     28,
+     45
+    ],
+    "object_id": [
+     45,
+     49
+    ],
+    "robot_id": [
+     49,
+     53
+    ],
+    "obstacle_id": [
+     53,
+     57
+    ],
+    "subtask_id": [
+     57,
+     61
+    ],
+    "robot0_proprio-state": [
+     61,
+     93
+    ]
+   },
+   "keys": [
+    "object-state",
+    "obstacle-state",
+    "goal-state",
+    "object_id",
+    "robot_id",
+    "obstacle_id",
+    "subtask_id",
+    "robot0_proprio-state"
+   ],
+   "steps_per_s": 71.60746247965805,
+   "max_reward_random": 0.0005762429119131163,
+   "control_freq": 20,
+   "horizon": 500,
+   "step_return_len": 4
+  }
+ },
+ "render": {
+  "ok": false,
+  "error": "ImportError('Cannot initialize a EGL device display. This likely means that your EGL driver does not support the PLATFORM_DEVICE extension, which is required for creating a headless rendering context.')"
+ }
+}
