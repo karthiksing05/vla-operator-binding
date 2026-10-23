@@ -1,0 +1,244 @@
+{
+ "suite": "libero_goal_ood",
+ "tasks": {
+  "0": {
+   "language": "put the cream cheese in the basket",
+   "success_rate": 0.15,
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 41.38251280784607,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 57
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "steps": 277,
+     "calls": 56,
+     "secs": 41.36606812477112,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 53
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 45.02056837081909,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 55
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "steps": 157,
+     "calls": 32,
+     "secs": 24.501785278320312,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 86
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 44.15391159057617,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 66
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 42.79616022109985,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 63
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 44.641719579696655,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 47
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "steps": 138,
+     "calls": 28,
+     "secs": 20.014909267425537,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 58
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 44.90285038948059,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 81
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 44.38448715209961,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 90
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 43.45117211341858,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 56
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 38.81821656227112,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 56
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 35.67302179336548,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 89
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 30.638448238372803,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 97
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 31.416339874267578,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 52
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 31.3463716506958,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 100
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 31.603708744049072,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 56
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 33.39499044418335,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 59
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 30.74861216545105,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 57
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 31.266244411468506,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 58
+    }
+   ]
+  }
+ },
+ "args": {
+  "host": "127.0.0.1",
+  "port": 9650,
+  "suite": "libero_goal_ood",
+  "tasks": "0",
+  "trials": 20,
+  "state_mod": 0,
+  "first_trial": 0,
+  "seed": 7,
+  "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_pl2c",
+  "replan": 5,
+  "wait": 10,
+  "resize": 224,
+  "max_steps": 0,
+  "videos": 2,
+  "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2c_goal_libero_goal_ood_0_zs_seed13_pi0.json",
+  "no_meta": false,
+  "record": false,
+  "light": false,
+  "all_objects": false,
+  "objects": false,
+  "branches": "",
+  "seg": false,
+  "swap": "",
+  "swap_mode": "render",
+  "swap_cams": "both",
+  "swap_phase": "all",
+  "bind": "track"
+ },
+ "started": 1792735391.1364508,
+ "success_rate": 0.15,
+ "n_episodes": 20,
+ "secs": 777.4755501747131
+}

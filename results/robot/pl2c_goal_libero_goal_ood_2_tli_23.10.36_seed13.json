@@ -1,0 +1,244 @@
+{
+ "suite": "libero_goal_ood",
+ "tasks": {
+  "2": {
+   "language": "put the bbq source on the plate",
+   "success_rate": 0.15,
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "steps": 120,
+     "calls": 25,
+     "secs": 15.766489267349243,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 86
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 43.04334759712219,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 68
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 45.30548691749573,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 71
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 44.6784188747406,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 79
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 45.105939626693726,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 75
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 45.07737445831299,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 67
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 45.74220323562622,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 65
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "steps": 157,
+     "calls": 32,
+     "secs": 23.720057249069214,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 81
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 44.6702606678009,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 120
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 43.426955223083496,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 70
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 45.575316190719604,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 67
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 43.8976993560791,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 68
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 44.91719055175781,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 68
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 45.72617173194885,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 84
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 45.488749980926514,
+     "error": null,
+     "bound": null,
+     "bound_step": null
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 45.72831201553345,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 65
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "steps": 121,
+     "calls": 25,
+     "secs": 18.15150213241577,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 88
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 44.93530035018921,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 65
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 44.27214789390564,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 75
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 44.98748016357422,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 82
+    }
+   ]
+  }
+ },
+ "args": {
+  "host": "127.0.0.1",
+  "port": 9610,
+  "suite": "libero_goal_ood",
+  "tasks": "2",
+  "trials": 20,
+  "state_mod": 0,
+  "first_trial": 0,
+  "seed": 7,
+  "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_pl2c",
+  "replan": 5,
+  "wait": 10,
+  "resize": 224,
+  "max_steps": 0,
+  "videos": 2,
+  "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2c_goal_libero_goal_ood_2_tli_23.10.36_seed13.json",
+  "no_meta": false,
+  "record": false,
+  "light": false,
+  "all_objects": false,
+  "objects": false,
+  "branches": "",
+  "seg": false,
+  "swap": "",
+  "swap_mode": "render",
+  "swap_cams": "both",
+  "swap_phase": "all",
+  "bind": "track"
+ },
+ "started": 1792729483.484008,
+ "success_rate": 0.15,
+ "n_episodes": 20,
+ "secs": 849.5529725551605
+}

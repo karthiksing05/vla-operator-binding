@@ -1,0 +1,244 @@
+{
+ "suite": "libero_goal_ood",
+ "tasks": {
+  "5": {
+   "language": "put the wine bottle on the plate",
+   "success_rate": 0.0,
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 39.20421648025513,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 90
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 42.42976212501526,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 88
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 43.713095903396606,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 75
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 42.021562337875366,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 93
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 43.39118146896362,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 85
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 45.50090742111206,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 80
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 43.578803300857544,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 74
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 44.348493337631226,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 98
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 42.24338340759277,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 90
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 44.05872821807861,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 96
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 44.51642894744873,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 81
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 41.865941762924194,
+     "error": null,
+     "bound": null,
+     "bound_step": null
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 40.51492238044739,
+     "error": null,
+     "bound": null,
+     "bound_step": null
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 43.693671226501465,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 89
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 43.95617413520813,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 85
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 44.26889610290527,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 86
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 40.31037354469299,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 84
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 36.045101165771484,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 91
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 32.36491918563843,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 79
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 31.29481339454651,
+     "error": null,
+     "bound": "wine_bottle_1",
+     "bound_step": 93
+    }
+   ]
+  }
+ },
+ "args": {
+  "host": "127.0.0.1",
+  "port": 9666,
+  "suite": "libero_goal_ood",
+  "tasks": "5",
+  "trials": 20,
+  "state_mod": 0,
+  "first_trial": 0,
+  "seed": 7,
+  "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_pl2c",
+  "replan": 5,
+  "wait": 10,
+  "resize": 224,
+  "max_steps": 0,
+  "videos": 2,
+  "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2c_goal_libero_goal_ood_5_tli_11.10.12_seed13_pi0.json",
+  "no_meta": false,
+  "record": false,
+  "light": false,
+  "all_objects": false,
+  "objects": false,
+  "branches": "",
+  "seg": false,
+  "swap": "",
+  "swap_mode": "render",
+  "swap_cams": "both",
+  "swap_phase": "all",
+  "bind": "track"
+ },
+ "started": 1792739660.47865,
+ "success_rate": 0.0,
+ "n_episodes": 20,
+ "secs": 869.4119062423706
+}

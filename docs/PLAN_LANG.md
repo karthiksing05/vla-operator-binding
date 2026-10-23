@@ -349,3 +349,17 @@ Pre-registered tests:
   129 / 240 vs 128. Always using the demo-chosen TLI pair gets 143; Li's hand pairs 169.
 - Reading: the signal is between operator families, not within them. TLI with the right pair is the robust operator, and the
   pair matters more than any demo criterion. Li's pairs are chosen by which training sentences hold the new sentence's parts.
+
+## L2c: demo-free role-coverage pair retrieval (2026-10-23; prereg pl2c_cover, ledger pl2c_read; fresh starts BASE 5100000)
+
+| 20 Li tasks x 20 | zs | Li's hand pairs | auto-cover (Li lambda) | auto-cover (demo lambda) |
+|---|---|---|---|---|
+| pi0.5 | 146 | 249 | 193 | 211 |
+| pi0 | 34 | 317 | 152 | 153 |
+
+- H2 (auto > zero-shot) passes on both policies; H1 (non-inferior to Li's pairs) fails on both.
+- Coverage matches Li exactly on 9 / 20 tasks. On the 11 others Li's sources come from the OOD task's own scene and template
+  family and often hold none of the new words; coverage picks scene-blind word holders (libero_object "pick up X and place it
+  in the basket") and loses (pi0 13 vs 178 / 220 on those tasks).
+- Reading: matching the words in their role is not enough; the source must come from the same scene. This agrees with L0b
+  (a word's effect moves into the scene's image tokens by layer 2): language prototypes are scene-bound keys.

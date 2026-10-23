@@ -1,0 +1,414 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: L2c symbolic coverage rule, picks frozen, before any L2c rollout",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4197354",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "b57d001f6d9a716ad432ff189cb14cb2ae7affc7",
+  "short": "b57d001f"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": "auto_li - tli_li: task-cluster bootstrap 95% lower bound >= -0.05 (e1_read.compare), per policy, 20 tasks pooled",
+  "H2": "auto_li > zs: exact sign test on discordant pairs, alpha 0.05, per policy",
+  "agreement": {
+   "exact": 9,
+   "n": 20,
+   "same_set": 9,
+   "t1": 10,
+   "t2": 15
+  },
+  "backbones": [
+   "pi05_libero",
+   "pi0_libero"
+  ],
+  "disclosure": "dev/confirm tasks were used before (pl2, G12, G13); aggregate tli_li / tli_sel totals known to the agent; the rule reads no success data; demo 0 only sets auto_dl's lambda; identical arm strings share one rollout",
+  "files_sha256": {
+   "demo_lam_pi0.json": "e498b6520826dba0becdc031f06c97615b71e3b4711b657d1bdb5fbf510508ac",
+   "demo_lam_pi05.json": "d8123c6d320f266dc3442b0c591b4f49d23ccf67c90437c5fad6e76cdd97595d",
+   "fresh_check.json": "c6e1ec73cf449a1fd1d217725ff094bd0b716c6be8fa1007fde20c576a80ac4f",
+   "picks.json": "1973ddb872c6c7cdf9f7630f97c2d121b743bc5fc4051cf54a13b4aad7b165aa"
+  },
+  "frozen_arms": {
+   "goal:0": {
+    "auto_dl": {
+     "pi0": "tli@13.22.12",
+     "pi05": "tli@13.22.24"
+    },
+    "auto_li": "tli@13.22.24",
+    "auto_text": [
+     "put the cream cheese in the bowl",
+     "pick up the cream cheese and place it in the basket"
+    ],
+    "exact": false,
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on the stove"
+    ],
+    "tli_li": "tli@13.17.24"
+   },
+   "goal:1": {
+    "auto_dl": {
+     "pi0": "tli@20.17.36",
+     "pi05": "tli@20.17.24"
+    },
+    "auto_li": "tli@20.17.24",
+    "auto_text": [
+     "pick up the orange juice and place it in the basket",
+     "put the bowl on the stove"
+    ],
+    "exact": false,
+    "li_text": [
+     "put the wine bottle on top of the cabinet",
+     "put the bowl on the stove"
+    ],
+    "tli_li": "tli@14.17.24"
+   },
+   "goal:2": {
+    "auto_dl": {
+     "pi0": "tli@23.10.24",
+     "pi05": "tli@23.10.36"
+    },
+    "auto_li": "tli@23.10.24",
+    "auto_text": [
+     "pick up the bbq sauce and place it in the basket",
+     "put the bowl on the plate"
+    ],
+    "exact": false,
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on the plate"
+    ],
+    "tli_li": "tli@13.10.24"
+   },
+   "goal:3": {
+    "auto_dl": {
+     "pi0": "tli@28.18.12",
+     "pi05": "tli@28.18.24"
+    },
+    "auto_li": "tli@28.18.24",
+    "auto_text": [
+     "pick up the tomato sauce and place it in the basket",
+     "put the bowl on top of the cabinet"
+    ],
+    "exact": false,
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on top of the cabinet"
+    ],
+    "tli_li": "tli@13.18.24"
+   },
+   "goal:4": {
+    "auto_dl": {
+     "pi0": "tli@11.17.12",
+     "pi05": "tli@11.17.24"
+    },
+    "auto_li": "tli@11.17.24",
+    "auto_text": [
+     "put the wine bottle on the rack",
+     "put the bowl on the stove"
+    ],
+    "exact": false,
+    "li_text": [
+     "put the wine bottle on top of the cabinet",
+     "put the bowl on the stove"
+    ],
+    "tli_li": "tli@14.17.24"
+   },
+   "goal:5": {
+    "auto_dl": {
+     "pi0": "tli@11.10.12",
+     "pi05": "tli@11.10.24"
+    },
+    "auto_li": "tli@11.10.24",
+    "auto_text": [
+     "put the wine bottle on the rack",
+     "put the bowl on the plate"
+    ],
+    "exact": false,
+    "li_text": [
+     "put the wine bottle on top of the cabinet",
+     "put the bowl on the plate"
+    ],
+    "tli_li": "tli@14.10.24"
+   },
+   "goal:6": {
+    "auto_dl": {
+     "pi0": "tli@11.13.12",
+     "pi05": "tli@11.13.12"
+    },
+    "auto_li": "tli@11.13.12",
+    "auto_text": [
+     "put the wine bottle on the rack",
+     "put the cream cheese in the bowl"
+    ],
+    "exact": false,
+    "li_text": [
+     "put the wine bottle on top of the cabinet",
+     "put the cream cheese in the bowl"
+    ],
+    "tli_li": "tli@14.13.12"
+   },
+   "goal:7": {
+    "auto_dl": {
+     "pi0": "tli@13.10.24",
+     "pi05": "tli@13.10.12"
+    },
+    "auto_li": "tli@13.10.24",
+    "auto_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on the plate"
+    ],
+    "exact": true,
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on the plate"
+    ],
+    "tli_li": "tli@13.10.24"
+   },
+   "goal:8": {
+    "auto_dl": {
+     "pi0": "tli@13.17.24",
+     "pi05": "tli@13.17.12"
+    },
+    "auto_li": "tli@13.17.24",
+    "auto_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on the stove"
+    ],
+    "exact": true,
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on the stove"
+    ],
+    "tli_li": "tli@13.17.24"
+   },
+   "goal:9": {
+    "auto_dl": {
+     "pi0": "tli@13.18.12",
+     "pi05": "tli@13.18.12"
+    },
+    "auto_li": "tli@13.18.24",
+    "auto_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on top of the cabinet"
+    ],
+    "exact": true,
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on top of the cabinet"
+    ],
+    "tli_li": "tli@13.18.24"
+   },
+   "spatial:0": {
+    "auto_dl": {
+     "pi0": "tli@27.10.12",
+     "pi05": "tli@27.10.12"
+    },
+    "auto_li": "tli@27.10.24",
+    "auto_text": [
+     "pick up the butter and place it in the basket",
+     "put the bowl on the plate"
+    ],
+    "exact": false,
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "pick up the black bowl on the cookie box and place it on the plate"
+    ],
+    "tli_li": "tli@13.35.24"
+   },
+   "spatial:1": {
+    "auto_dl": {
+     "pi0": "tli@29.10.12",
+     "pi05": "tli@29.10.36"
+    },
+    "auto_li": "tli@29.10.24",
+    "auto_text": [
+     "pick up the chocolate pudding and place it in the basket",
+     "put the bowl on the plate"
+    ],
+    "exact": false,
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "pick up the black bowl on the cookie box and place it on the plate"
+    ],
+    "tli_li": "tli@13.35.24"
+   },
+   "spatial:2": {
+    "auto_dl": {
+     "pi0": "tli@25.10.36",
+     "pi05": "tli@25.10.36"
+    },
+    "auto_li": "tli@25.10.24",
+    "auto_text": [
+     "pick up the milk and place it in the basket",
+     "put the bowl on the plate"
+    ],
+    "exact": false,
+    "li_text": [
+     "put the wine bottle on top of the cabinet",
+     "pick up the black bowl on the ramekin and place it on the plate"
+    ],
+    "tli_li": "tli@14.32.24"
+   },
+   "spatial:3": {
+    "auto_dl": {
+     "pi0": "tli@20.10.36",
+     "pi05": "tli@20.10.36"
+    },
+    "auto_li": "tli@20.10.24",
+    "auto_text": [
+     "pick up the orange juice and place it in the basket",
+     "put the bowl on the plate"
+    ],
+    "exact": false,
+    "li_text": [
+     "put the wine bottle on top of the cabinet",
+     "pick up the black bowl on the ramekin and place it on the plate"
+    ],
+    "tli_li": "tli@14.32.24"
+   },
+   "spatial:4": {
+    "auto_dl": {
+     "pi0": "tli@35.17.36",
+     "pi05": "tli@35.17.12"
+    },
+    "auto_li": "tli@35.17.24",
+    "auto_text": [
+     "pick up the black bowl on the cookie box and place it on the plate",
+     "put the bowl on the stove"
+    ],
+    "exact": true,
+    "li_text": [
+     "pick up the black bowl on the cookie box and place it on the plate",
+     "put the bowl on the stove"
+    ],
+    "tli_li": "tli@35.17.24"
+   },
+   "spatial:5": {
+    "auto_dl": {
+     "pi0": "tli@35.18.12",
+     "pi05": "tli@35.18.12"
+    },
+    "auto_li": "tli@35.18.14",
+    "auto_text": [
+     "pick up the black bowl on the cookie box and place it on the plate",
+     "put the bowl on top of the cabinet"
+    ],
+    "exact": true,
+    "li_text": [
+     "pick up the black bowl on the cookie box and place it on the plate",
+     "put the bowl on top of the cabinet"
+    ],
+    "tli_li": "tli@35.18.14"
+   },
+   "spatial:6": {
+    "auto_dl": {
+     "pi0": "tli@36.18.12",
+     "pi05": "tli@36.18.24"
+    },
+    "auto_li": "tli@36.18.24",
+    "auto_text": [
+     "pick up the black bowl next to the plate and place it on the plate",
+     "put the bowl on top of the cabinet"
+    ],
+    "exact": true,
+    "li_text": [
+     "pick up the black bowl next to the plate and place it on the plate",
+     "put the bowl on top of the cabinet"
+    ],
+    "tli_li": "tli@36.18.24"
+   },
+   "spatial:7": {
+    "auto_dl": {
+     "pi0": "tli@36.17.12",
+     "pi05": "tli@36.17.12"
+    },
+    "auto_li": "tli@36.17.30",
+    "auto_text": [
+     "pick up the black bowl next to the plate and place it on the plate",
+     "put the bowl on the stove"
+    ],
+    "exact": true,
+    "li_text": [
+     "pick up the black bowl next to the plate and place it on the plate",
+     "put the bowl on the stove"
+    ],
+    "tli_li": "tli@36.17.30"
+   },
+   "spatial:8": {
+    "auto_dl": {
+     "pi0": "tli@38.18.12",
+     "pi05": "tli@38.18.24"
+    },
+    "auto_li": "tli@38.18.24",
+    "auto_text": [
+     "pick up the black bowl from table center and place it on the plate",
+     "put the bowl on top of the cabinet"
+    ],
+    "exact": true,
+    "li_text": [
+     "pick up the black bowl from table center and place it on the plate",
+     "put the bowl on top of the cabinet"
+    ],
+    "tli_li": "tli@38.18.24"
+   },
+   "spatial:9": {
+    "auto_dl": {
+     "pi0": "tli@38.17.12",
+     "pi05": "tli@38.17.24"
+    },
+    "auto_li": "tli@38.17.24",
+    "auto_text": [
+     "pick up the black bowl from table center and place it on the plate",
+     "put the bowl on the stove"
+    ],
+    "exact": true,
+    "li_text": [
+     "pick up the black bowl from table center and place it on the plate",
+     "put the bowl on the stove"
+    ],
+    "tli_li": "tli@38.17.24"
+   }
+  },
+  "lambda": {
+   "auto_dl": "argmin demo-0 flow loss over {24,12,36}",
+   "auto_li": "Li's per-task lambda (g12_tli.MAP, as tli_li)"
+  },
+  "rule": "role-filler coverage (V, O head, L landmark, G goal; same-role only) over the 27 single-step training prompts; greedy, ties total-cover > same frame > word Jaccard > lower index; 2 sources; t1 = object-leaning pick",
+  "secondary": "auto_dl, same tests, descriptive",
+  "states": "fresh_ood_pl2c (BASE 5100000, 20 per task, asserted unused), noise seed 13, paired",
+  "written_before": "any pl2c rollout"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__pl2c_cover__s13__b57d001f",
+ "schema": 1,
+ "script": "experiments/prereg/pl2c_cover.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-23T04:14:42+00:00",
+ "stream": null,
+ "tag": "pl2c_cover"
+}

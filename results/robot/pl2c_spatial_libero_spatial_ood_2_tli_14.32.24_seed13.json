@@ -1,0 +1,244 @@
+{
+ "suite": "libero_spatial_ood",
+ "tasks": {
+  "2": {
+   "language": "put the milk on the plate",
+   "success_rate": 0.15,
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 50.32393169403076,
+     "error": null,
+     "bound": null,
+     "bound_step": null
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 55.75607085227966,
+     "error": null,
+     "bound": "orange_juice_1",
+     "bound_step": 83
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 55.03446006774902,
+     "error": null,
+     "bound": "orange_juice_1",
+     "bound_step": 90
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 52.67960524559021,
+     "error": null,
+     "bound": "orange_juice_1",
+     "bound_step": 175
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 51.987982988357544,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 163
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 53.68151330947876,
+     "error": null,
+     "bound": "orange_juice_1",
+     "bound_step": 91
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "steps": 243,
+     "calls": 49,
+     "secs": 49.34921169281006,
+     "error": null,
+     "bound": "orange_juice_1",
+     "bound_step": 107
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 57.49829697608948,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 248
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 52.07548785209656,
+     "error": null,
+     "bound": null,
+     "bound_step": null
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "steps": 177,
+     "calls": 36,
+     "secs": 29.387373447418213,
+     "error": null,
+     "bound": "orange_juice_1",
+     "bound_step": 125
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 51.17682981491089,
+     "error": null,
+     "bound": "orange_juice_1",
+     "bound_step": 87
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 50.444127321243286,
+     "error": null,
+     "bound": "orange_juice_1",
+     "bound_step": 87
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 48.804858922958374,
+     "error": null,
+     "bound": "orange_juice_1",
+     "bound_step": 125
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "steps": 220,
+     "calls": 45,
+     "secs": 37.151050090789795,
+     "error": null,
+     "bound": "orange_juice_1",
+     "bound_step": 93
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 51.556121587753296,
+     "error": null,
+     "bound": "orange_juice_1",
+     "bound_step": 89
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 49.03272342681885,
+     "error": null,
+     "bound": null,
+     "bound_step": null
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 42.330769538879395,
+     "error": null,
+     "bound": "orange_juice_1",
+     "bound_step": 83
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 40.73164772987366,
+     "error": null,
+     "bound": null,
+     "bound_step": null
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 49.29903531074524,
+     "error": null,
+     "bound": "orange_juice_1",
+     "bound_step": 160
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 38.304415225982666,
+     "error": null,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 209
+    }
+   ]
+  }
+ },
+ "args": {
+  "host": "127.0.0.1",
+  "port": 9633,
+  "suite": "libero_spatial_ood",
+  "tasks": "2",
+  "trials": 20,
+  "state_mod": 0,
+  "first_trial": 0,
+  "seed": 7,
+  "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_pl2c",
+  "replan": 5,
+  "wait": 10,
+  "resize": 224,
+  "max_steps": 0,
+  "videos": 2,
+  "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2c_spatial_libero_spatial_ood_2_tli_14.32.24_seed13.json",
+  "no_meta": false,
+  "record": false,
+  "light": false,
+  "all_objects": false,
+  "objects": false,
+  "branches": "",
+  "seg": false,
+  "swap": "",
+  "swap_mode": "render",
+  "swap_cams": "both",
+  "swap_phase": "all",
+  "bind": "track"
+ },
+ "started": 1792732999.9721568,
+ "success_rate": 0.15,
+ "n_episodes": 20,
+ "secs": 1019.5059509277344
+}

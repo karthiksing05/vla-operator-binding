@@ -1,0 +1,244 @@
+{
+ "suite": "libero_goal_ood",
+ "tasks": {
+  "2": {
+   "language": "put the bbq source on the plate",
+   "success_rate": 0.8,
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "steps": 98,
+     "calls": 20,
+     "secs": 16.412351608276367,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 58
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "steps": 103,
+     "calls": 21,
+     "secs": 11.981587171554565,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 57
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "steps": 100,
+     "calls": 21,
+     "secs": 16.657636404037476,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 59
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "steps": 103,
+     "calls": 21,
+     "secs": 17.710312843322754,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 48
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 47.93035054206848,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 149
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "steps": 89,
+     "calls": 18,
+     "secs": 15.046939849853516,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 58
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 45.12101078033447,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 69
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "steps": 99,
+     "calls": 20,
+     "secs": 12.476312160491943,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 59
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "steps": 99,
+     "calls": 20,
+     "secs": 11.797388315200806,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 54
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "steps": 98,
+     "calls": 20,
+     "secs": 14.474724531173706,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 68
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 37.24074697494507,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 191
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "steps": 101,
+     "calls": 21,
+     "secs": 17.73875117301941,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 68
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "steps": 99,
+     "calls": 20,
+     "secs": 16.79603624343872,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 58
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "steps": 99,
+     "calls": 20,
+     "secs": 13.639255285263062,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 56
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "steps": 137,
+     "calls": 28,
+     "secs": 16.65190625190735,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 59
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "steps": 98,
+     "calls": 20,
+     "secs": 11.505535125732422,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 53
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "steps": 105,
+     "calls": 22,
+     "secs": 13.37806749343872,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 58
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "steps": 300,
+     "calls": 60,
+     "secs": 40.42199921607971,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 57
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "steps": 100,
+     "calls": 21,
+     "secs": 17.80464482307434,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 55
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "steps": 100,
+     "calls": 21,
+     "secs": 17.46609854698181,
+     "error": null,
+     "bound": "bbq_sauce_1",
+     "bound_step": 61
+    }
+   ]
+  }
+ },
+ "args": {
+  "host": "127.0.0.1",
+  "port": 9657,
+  "suite": "libero_goal_ood",
+  "tasks": "2",
+  "trials": 20,
+  "state_mod": 0,
+  "first_trial": 0,
+  "seed": 7,
+  "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_pl2c",
+  "replan": 5,
+  "wait": 10,
+  "resize": 224,
+  "max_steps": 0,
+  "videos": 2,
+  "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2c_goal_libero_goal_ood_2_tli_13.10.24_seed13_pi0.json",
+  "no_meta": false,
+  "record": false,
+  "light": false,
+  "all_objects": false,
+  "objects": false,
+  "branches": "",
+  "seg": false,
+  "swap": "",
+  "swap_mode": "render",
+  "swap_cams": "both",
+  "swap_phase": "all",
+  "bind": "track"
+ },
+ "started": 1792735404.5798607,
+ "success_rate": 0.8,
+ "n_episodes": 20,
+ "secs": 446.97698760032654
+}
