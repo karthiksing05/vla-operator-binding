@@ -59,7 +59,8 @@ def main():
     from lifelong_ood.policy import data as D
     from lifelong_ood.policy.backbone import PolicyBackbone
     from lifelong_ood.protos import store as S
-    idx = json.load(open(os.path.join(OUT, "index.json")))
+    ip = os.path.join(OUT, f"index_{a.tag}.json")                  # another checkpoint's own index (pp_prep.py index_l90c)
+    idx = json.load(open(ip if a.tag and os.path.exists(ip) else os.path.join(OUT, "index.json")))
     bk = PolicyBackbone(a.config, checkpoint_dir=a.checkpoint, device="cuda")
     log(f"[pp_fields] {bk.describe()}")
     cfgname = a.config if not a.tag else f"{a.config}_{a.tag}"
@@ -92,7 +93,13 @@ def main():
         t0 = time.time()
         # the observation
         ep = None
-        if o["set"] == "train":
+        if o["set"] == "train" and o.get("src") == "ipec":            # index_l90c: a LIBERO-90 training cell (IPEC demo)
+            if ("l90", o["episode"]) not in cache:
+                cache.clear()
+                cache[("l90", o["episode"])] = d90.load(o["episode"])
+            ep = cache[("l90", o["episode"])]
+            od = d90.observation(ep, o["frame"])
+        elif o["set"] == "train":
             if ("tr", o["episode"]) not in cache:
                 cache.clear()
                 cache[("tr", o["episode"])] = demos.load(o["episode"], images=True)

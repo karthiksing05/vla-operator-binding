@@ -1,0 +1,124 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/l90c/parity_pi05_libero_libero_10_0-4.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_10",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=ours SUITE=libero_10 TASKS=0,1,2,3,4 TRIALS=20 (job 4188241)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/l90c/parity_pi05_libero_libero_10_0-4.json",
+   "port": 9183,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_10",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "0,1,2,3,4",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4188241",
+  "mode": "ours"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "dave.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4188241",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c_parity",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "9149bef85233422a37e66baafdddb8b8f1c54832",
+  "short": "9149bef8"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "ours",
+  "tasks": "0,1,2,3,4",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 100,
+  "secs": 2726.583586215973,
+  "success_rate": 0.98,
+  "tasks": {
+   "0": {
+    "errors": 0,
+    "language": "put both the alphabet soup and the tomato sauce in the basket",
+    "mean_steps": 289.7,
+    "n": 20,
+    "success_rate": 0.95
+   },
+   "1": {
+    "errors": 0,
+    "language": "put both the cream cheese box and the butter in the basket",
+    "mean_steps": 248.95,
+    "n": 20,
+    "success_rate": 1.0
+   },
+   "2": {
+    "errors": 0,
+    "language": "turn on the stove and put the moka pot on it",
+    "mean_steps": 251.05,
+    "n": 20,
+    "success_rate": 1.0
+   },
+   "3": {
+    "errors": 0,
+    "language": "put the black bowl in the bottom drawer of the cabinet and close it",
+    "mean_steps": 229.65,
+    "n": 20,
+    "success_rate": 1.0
+   },
+   "4": {
+    "errors": 0,
+    "language": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+    "mean_steps": 251.5,
+    "n": 20,
+    "success_rate": 0.95
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c_parity__libero_10__pi05_libero__first_trial-0__mode-ours__tasks-0-1-2-3-4__trials-20__s7__9149bef8",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-22T08:35:06+00:00",
+ "stream": null,
+ "tag": "pi05_libero"
+}

@@ -1,0 +1,142 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/l90c/split.json",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/l90c/split_sealed.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c_split.py --record",
+ "config": {
+  "ad_max": 0.02,
+  "bin_edges": [
+   0.0,
+   0.4
+  ],
+  "bins": [
+   "0.1",
+   "0.3",
+   "0.5"
+  ],
+  "min_per_bin": 8,
+  "parser_hash": "8d8d83f8cd14",
+  "part": {
+   "object": "ketchup",
+   "target": "desk_caddy",
+   "verb": "Turnon"
+  },
+  "seed": 20261022,
+  "w_max": 30
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4188142",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c_split",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "9149bef85233422a37e66baafdddb8b8f1c54832",
+  "short": "9149bef8"
+ },
+ "keys": {},
+ "metrics": {
+  "checks": {
+   "atom_divergence_meets_0.02": false,
+   "atom_divergence_null": {
+    "mean": 0.1795733821705224,
+    "min": 0.10201435417621696,
+    "n_test": 24,
+    "p05": 0.13155820152377629
+   },
+   "atom_divergence_train90_vs_test": 0.13684582820455704,
+   "atom_divergence_trainall_vs_test": 0.1892307824210332,
+   "bin_cd": {
+    "0.1": 0.1393,
+    "0.3": 0.3787,
+    "0.5": 0.5883
+   },
+   "bin_mean_task_cd": {
+    "0.1": 0.2628,
+    "0.3": 0.4646,
+    "0.5": 0.6625
+   },
+   "bin_n": {
+    "0.1": 8,
+    "0.3": 8,
+    "0.5": 8
+   },
+   "compound_divergence_train90_vs_test": 0.3136701188966676,
+   "held_compounds_in_training": [],
+   "min_train_count_of_test_atoms": 2,
+   "part_atom_divergence": 0.5013,
+   "part_atoms_in_training": [],
+   "part_cd": 0.7384,
+   "part_objects_as_distractor": {
+    "desk_caddy": [],
+    "ketchup": [
+     "libero_10:1",
+     "libero_10:7",
+     "libero_90:28",
+     "libero_90:31",
+     "libero_90:46",
+     "libero_90:47",
+     "libero_90:49",
+     "libero_90:52",
+     "libero_90:53",
+     "libero_90:54",
+     "libero_90:55",
+     "libero_90:57",
+     "libero_object:2",
+     "libero_object:3",
+     "libero_object:6",
+     "libero_object:8",
+     "libero_object:9"
+    ]
+   },
+   "test_atoms_below_2": []
+  },
+  "counts": {
+   "dev_0.1": 5,
+   "dev_0.3": 5,
+   "dev_0.5": 5,
+   "dev_part": 14,
+   "sealed_0.1": 3,
+   "sealed_0.3": 3,
+   "sealed_0.5": 3,
+   "sealed_part": 7,
+   "train": 76,
+   "train_adds": 32,
+   "train_l90": 44
+  },
+  "part": {
+   "object": "ketchup",
+   "target": "desk_caddy",
+   "verb": "Turnon"
+  },
+  "sealed_sha256": "db0ec897d1c296ca0dd8f639fe78a4eb1b1ba6cf46e9d0ed6f7b19a627667a7c",
+  "split_sha256": "939921df1e5219ddd6c4097642a32be1c9249371c0e873025256b398166060b1"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c_split__libero_90_c__frozen__s20261022__9149bef8",
+ "schema": 1,
+ "script": "experiments/c_split.py",
+ "seconds": null,
+ "seed": 20261022,
+ "source_commit": null,
+ "started": "2026-10-22T06:32:24+00:00",
+ "stream": null,
+ "tag": "frozen"
+}

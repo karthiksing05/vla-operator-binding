@@ -1,0 +1,107 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/l90c/c_audit.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c_audit.py --score --record",
+ "config": {
+  "demos": [
+   0,
+   1
+  ],
+  "draws": 4,
+  "frames": 16
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "dendrite.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4188950",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c_audit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "9149bef85233422a37e66baafdddb8b8f1c54832",
+  "short": "9149bef8"
+ },
+ "keys": {},
+ "metrics": {
+  "groups": {
+   "l40": 40,
+   "part": 14,
+   "test": 15,
+   "train": 44
+  },
+  "readout": {
+   "base_l40_over_libero_l40": 26.360797374969195,
+   "base_l90_over_base_l40": 0.9365213422566796,
+   "base_l90_over_libero_l40": 24.687449340562505,
+   "base_part_minus_train": -0.013891610329027304,
+   "base_test_minus_train": 0.0001334133924859593,
+   "libero_l90_over_libero_l40": 24.7266985666582
+  },
+  "summary": {
+   "pi05_base_libero": {
+    "auc_train_lt_heldout": 0.42946708463949845,
+    "l40_full_mean": 0.08596503315493464,
+    "l40_full_median": 0.08477474004030228,
+    "l40_real_mean": 0.3771997906267643,
+    "l40_real_median": 0.36880137026309967,
+    "part_full_mean": 0.07801938376256398,
+    "part_full_median": 0.07697540894150734,
+    "part_real_mean": 0.3392973371914455,
+    "part_real_median": 0.33526478707790375,
+    "test_full_mean": 0.08157440274953842,
+    "test_full_median": 0.08322316408157349,
+    "test_real_mean": 0.35332236091295877,
+    "test_real_median": 0.3439776301383972,
+    "train_full_mean": 0.08211049098860133,
+    "train_full_median": 0.08037298917770386,
+    "train_real_mean": 0.3531889475204728,
+    "train_real_median": 0.34571266174316406
+   },
+   "pi05_libero": {
+    "auc_train_lt_heldout": 0.4012539184952978,
+    "l40_full_mean": 0.0031800972035853194,
+    "l40_full_median": 0.003104848088696599,
+    "l40_real_mean": 0.014309119153767823,
+    "l40_real_median": 0.014047286473214626,
+    "part_full_mean": 0.06269030805144991,
+    "part_full_median": 0.05763217806816101,
+    "part_real_mean": 0.285927805517401,
+    "part_real_median": 0.2614261358976364,
+    "test_full_mean": 0.07697879945238431,
+    "test_full_median": 0.07012707740068436,
+    "test_real_mean": 0.3514891038338343,
+    "test_real_median": 0.32031089067459106,
+    "train_full_mean": 0.07806401657448574,
+    "train_full_median": 0.0708496943116188,
+    "train_real_mean": 0.3561454483053901,
+    "train_real_median": 0.3225220739841461
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c_audit__libero_90_c__pi05_base__s0__9149bef8",
+ "schema": 1,
+ "script": "experiments/c_audit.py",
+ "seconds": 718.7410972118378,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-22T08:02:58+00:00",
+ "stream": null,
+ "tag": "pi05_base"
+}

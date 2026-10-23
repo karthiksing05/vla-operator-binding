@@ -1,0 +1,82 @@
+{
+ "suite": "libero_90",
+ "tasks": {
+  "3": {
+   "language": "put the butter at the back in the top drawer of the cabinet and close it",
+   "success_rate": 0.0,
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "steps": 400,
+     "calls": 80,
+     "secs": 38.74778604507446,
+     "error": null
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "steps": 400,
+     "calls": 80,
+     "secs": 38.257277965545654,
+     "error": null
+    }
+   ]
+  },
+  "65": {
+   "language": "put the red mug on the left plate",
+   "success_rate": 0.0,
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "steps": 400,
+     "calls": 80,
+     "secs": 38.686716079711914,
+     "error": null
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "steps": 400,
+     "calls": 80,
+     "secs": 38.71324110031128,
+     "error": null
+    }
+   ]
+  }
+ },
+ "args": {
+  "host": "127.0.0.1",
+  "port": 9759,
+  "suite": "libero_90",
+  "tasks": "3,65",
+  "trials": 2,
+  "state_mod": 0,
+  "first_trial": 0,
+  "seed": 7,
+  "fresh": "",
+  "replan": 5,
+  "wait": 10,
+  "resize": 224,
+  "max_steps": 0,
+  "videos": 2,
+  "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/l90c/smoke_timing.json",
+  "no_meta": false,
+  "record": false,
+  "light": false,
+  "all_objects": false,
+  "objects": false,
+  "branches": "",
+  "seg": false,
+  "swap": "",
+  "swap_mode": "render",
+  "swap_cams": "both",
+  "swap_phase": "all",
+  "bind": ""
+ },
+ "started": 1792664399.6290894,
+ "success_rate": 0.0,
+ "n_episodes": 4,
+ "secs": 170.6416416168213
+}

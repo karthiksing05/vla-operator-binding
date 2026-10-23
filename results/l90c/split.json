@@ -1,0 +1,682 @@
+{
+ "benchmark": "LIBERO-90-C (our MCD split of LIBERO-90; docs/PLAN_V4.md 3.1, docs/L90C.md)",
+ "seed": 20261022,
+ "parser_hash": "8d8d83f8cd14",
+ "part": {
+  "object": "ketchup",
+  "target": "desk_caddy",
+  "verb": "Turnon"
+ },
+ "no_demos": [
+  "libero_90:51"
+ ],
+ "bins": [
+  "0.1",
+  "0.3",
+  "0.5"
+ ],
+ "bin_edges": [
+  0.0,
+  0.4
+ ],
+ "ad_max": 0.02,
+ "alpha": {
+  "atom": 0.5,
+  "compound": 0.1
+ },
+ "train": [
+  "libero_10:1",
+  "libero_10:4",
+  "libero_10:6",
+  "libero_10:7",
+  "libero_10:9",
+  "libero_90:10",
+  "libero_90:13",
+  "libero_90:15",
+  "libero_90:17",
+  "libero_90:18",
+  "libero_90:19",
+  "libero_90:23",
+  "libero_90:25",
+  "libero_90:26",
+  "libero_90:27",
+  "libero_90:28",
+  "libero_90:3",
+  "libero_90:31",
+  "libero_90:33",
+  "libero_90:34",
+  "libero_90:35",
+  "libero_90:37",
+  "libero_90:39",
+  "libero_90:4",
+  "libero_90:41",
+  "libero_90:42",
+  "libero_90:43",
+  "libero_90:46",
+  "libero_90:47",
+  "libero_90:49",
+  "libero_90:5",
+  "libero_90:52",
+  "libero_90:53",
+  "libero_90:54",
+  "libero_90:55",
+  "libero_90:57",
+  "libero_90:6",
+  "libero_90:62",
+  "libero_90:63",
+  "libero_90:65",
+  "libero_90:67",
+  "libero_90:68",
+  "libero_90:69",
+  "libero_90:70",
+  "libero_90:71",
+  "libero_90:72",
+  "libero_90:86",
+  "libero_90:88",
+  "libero_90:89",
+  "libero_goal:0",
+  "libero_goal:1",
+  "libero_goal:2",
+  "libero_goal:4",
+  "libero_goal:5",
+  "libero_goal:6",
+  "libero_goal:8",
+  "libero_goal:9",
+  "libero_object:0",
+  "libero_object:1",
+  "libero_object:2",
+  "libero_object:3",
+  "libero_object:5",
+  "libero_object:6",
+  "libero_object:7",
+  "libero_object:8",
+  "libero_object:9",
+  "libero_spatial:0",
+  "libero_spatial:1",
+  "libero_spatial:2",
+  "libero_spatial:3",
+  "libero_spatial:4",
+  "libero_spatial:5",
+  "libero_spatial:6",
+  "libero_spatial:7",
+  "libero_spatial:8",
+  "libero_spatial:9"
+ ],
+ "train_l90": [
+  "libero_90:10",
+  "libero_90:13",
+  "libero_90:15",
+  "libero_90:17",
+  "libero_90:18",
+  "libero_90:19",
+  "libero_90:23",
+  "libero_90:25",
+  "libero_90:26",
+  "libero_90:27",
+  "libero_90:28",
+  "libero_90:3",
+  "libero_90:31",
+  "libero_90:33",
+  "libero_90:34",
+  "libero_90:35",
+  "libero_90:37",
+  "libero_90:39",
+  "libero_90:4",
+  "libero_90:41",
+  "libero_90:42",
+  "libero_90:43",
+  "libero_90:46",
+  "libero_90:47",
+  "libero_90:49",
+  "libero_90:5",
+  "libero_90:52",
+  "libero_90:53",
+  "libero_90:54",
+  "libero_90:55",
+  "libero_90:57",
+  "libero_90:6",
+  "libero_90:62",
+  "libero_90:63",
+  "libero_90:65",
+  "libero_90:67",
+  "libero_90:68",
+  "libero_90:69",
+  "libero_90:70",
+  "libero_90:71",
+  "libero_90:72",
+  "libero_90:86",
+  "libero_90:88",
+  "libero_90:89"
+ ],
+ "train_suite_additions": [
+  "libero_10:1",
+  "libero_10:4",
+  "libero_10:6",
+  "libero_10:7",
+  "libero_10:9",
+  "libero_goal:0",
+  "libero_goal:1",
+  "libero_goal:2",
+  "libero_goal:4",
+  "libero_goal:5",
+  "libero_goal:6",
+  "libero_goal:8",
+  "libero_goal:9",
+  "libero_object:0",
+  "libero_object:1",
+  "libero_object:2",
+  "libero_object:3",
+  "libero_object:5",
+  "libero_object:6",
+  "libero_object:7",
+  "libero_object:8",
+  "libero_object:9",
+  "libero_spatial:0",
+  "libero_spatial:1",
+  "libero_spatial:2",
+  "libero_spatial:3",
+  "libero_spatial:4",
+  "libero_spatial:5",
+  "libero_spatial:6",
+  "libero_spatial:7",
+  "libero_spatial:8",
+  "libero_spatial:9"
+ ],
+ "suite_rejected": {
+  "libero_10:0": {
+   "part": [],
+   "held_compounds": [
+    "('o:alphabet_soup', 's:LIVING_ROOM_SCENE2')"
+   ]
+  },
+  "libero_10:2": {
+   "part": [
+    "v:Turnon"
+   ],
+   "held_compounds": [
+    "('o:flat_stove', 's:KITCHEN_SCENE3')",
+    "('v:Turnon', 'o:flat_stove')"
+   ]
+  },
+  "libero_10:3": {
+   "part": [],
+   "held_compounds": [
+    "('o:akita_black_bowl', 't:white_cabinet:bottom')"
+   ]
+  },
+  "libero_10:5": {
+   "part": [
+    "t:desk_caddy:back_contain"
+   ],
+   "held_compounds": [
+    "('o:black_book', 's:STUDY_SCENE1')",
+    "('o:black_book', 't:desk_caddy:back_contain')"
+   ]
+  },
+  "libero_10:8": {
+   "part": [
+    "v:Turnon"
+   ],
+   "held_compounds": [
+    "('o:moka_pot', 's:KITCHEN_SCENE8')",
+    "('t:flat_stove', 's:KITCHEN_SCENE8')",
+    "('v:Turnon', 'o:flat_stove')"
+   ]
+  },
+  "libero_object:4": {
+   "part": [
+    "o:ketchup"
+   ],
+   "held_compounds": [
+    "('o:ketchup', 't:basket')",
+    "('v:In', 'o:ketchup')"
+   ]
+  },
+  "libero_goal:3": {
+   "part": [],
+   "held_compounds": [
+    "('o:akita_black_bowl', 't:wooden_cabinet:top')"
+   ]
+  },
+  "libero_goal:7": {
+   "part": [
+    "v:Turnon"
+   ],
+   "held_compounds": [
+    "('v:Turnon', 'o:flat_stove')"
+   ]
+  }
+ },
+ "two_step_test": [
+  "libero_10:0",
+  "libero_10:2",
+  "libero_10:3",
+  "libero_10:5",
+  "libero_10:8"
+ ],
+ "dev": {
+  "0.1": [
+   "libero_90:0",
+   "libero_90:14",
+   "libero_90:16",
+   "libero_90:22",
+   "libero_90:60"
+  ],
+  "0.3": [
+   "libero_90:1",
+   "libero_90:29",
+   "libero_90:50",
+   "libero_90:7",
+   "libero_90:9"
+  ],
+  "0.5": [
+   "libero_90:11",
+   "libero_90:36",
+   "libero_90:40",
+   "libero_90:59",
+   "libero_90:61"
+  ],
+  "part": [
+   "libero_90:32",
+   "libero_90:58",
+   "libero_90:73",
+   "libero_90:75",
+   "libero_90:76",
+   "libero_90:77",
+   "libero_90:78",
+   "libero_90:79",
+   "libero_90:80",
+   "libero_90:82",
+   "libero_90:83",
+   "libero_90:38",
+   "libero_90:44",
+   "libero_90:45"
+  ]
+ },
+ "dev_per_task": {
+  "libero_90:0": {
+   "u": 0.0,
+   "cd": 0.2277,
+   "bin": "0.1",
+   "unseen": []
+  },
+  "libero_90:14": {
+   "u": 0.0,
+   "cd": 0.264,
+   "bin": "0.1",
+   "unseen": []
+  },
+  "libero_90:16": {
+   "u": 0.0,
+   "cd": 0.2518,
+   "bin": "0.1",
+   "unseen": []
+  },
+  "libero_90:22": {
+   "u": 0.0,
+   "cd": 0.2837,
+   "bin": "0.1",
+   "unseen": []
+  },
+  "libero_90:60": {
+   "u": 0.0,
+   "cd": 0.2959,
+   "bin": "0.1",
+   "unseen": []
+  },
+  "libero_90:1": {
+   "u": 0.25,
+   "cd": 0.3779,
+   "bin": "0.3",
+   "unseen": [
+    "('o:akita_black_bowl', 's:KITCHEN_SCENE10')",
+    "('t:wooden_cabinet:top_side', 's:KITCHEN_SCENE10')"
+   ]
+  },
+  "libero_90:29": {
+   "u": 0.25,
+   "cd": 0.4902,
+   "bin": "0.3",
+   "unseen": [
+    "('o:akita_black_bowl', 't:white_cabinet:top')"
+   ]
+  },
+  "libero_90:50": {
+   "u": 0.25,
+   "cd": 0.4583,
+   "bin": "0.3",
+   "unseen": [
+    "('o:alphabet_soup', 's:LIVING_ROOM_SCENE2')"
+   ]
+  },
+  "libero_90:7": {
+   "u": 0.25,
+   "cd": 0.4705,
+   "bin": "0.3",
+   "unseen": [
+    "('t:wooden_cabinet:top', 's:KITCHEN_SCENE1')"
+   ]
+  },
+  "libero_90:9": {
+   "u": 0.25,
+   "cd": 0.4537,
+   "bin": "0.3",
+   "unseen": [
+    "('t:plate', 's:KITCHEN_SCENE1')"
+   ]
+  },
+  "libero_90:11": {
+   "u": 0.5,
+   "cd": 0.6404,
+   "bin": "0.5",
+   "unseen": [
+    "('o:wooden_cabinet', 's:KITCHEN_SCENE2')",
+    "('t:wooden_cabinet:top', 's:KITCHEN_SCENE2')"
+   ]
+  },
+  "libero_90:36": {
+   "u": 0.5,
+   "cd": 0.6479,
+   "bin": "0.5",
+   "unseen": [
+    "('o:white_bowl', 't:plate')",
+    "('t:plate', 's:KITCHEN_SCENE7')"
+   ]
+  },
+  "libero_90:40": {
+   "u": 0.5,
+   "cd": 0.6479,
+   "bin": "0.5",
+   "unseen": [
+    "('o:chefmate_8_frypan', 't:wooden_two_layer_shelf:top')",
+    "('t:wooden_two_layer_shelf:top', 's:KITCHEN_SCENE9')"
+   ]
+  },
+  "libero_90:59": {
+   "u": 0.5,
+   "cd": 0.6357,
+   "bin": "0.5",
+   "unseen": [
+    "('o:tomato_sauce', 's:LIVING_ROOM_SCENE3')",
+    "('o:tomato_sauce', 't:wooden_tray')"
+   ]
+  },
+  "libero_90:61": {
+   "u": 0.5,
+   "cd": 0.6479,
+   "bin": "0.5",
+   "unseen": [
+    "('o:chocolate_pudding', 's:LIVING_ROOM_SCENE4')",
+    "('o:chocolate_pudding', 't:wooden_tray')"
+   ]
+  }
+ },
+ "n_sealed": {
+  "0.1": 3,
+  "0.3": 3,
+  "0.5": 3,
+  "part": 7
+ },
+ "hash_salt": "713da8d250784981",
+ "sealed_hashes": [
+  "056df34ab4fd7287f72fa21aa42bc973983a0b5a05a4c7b276530f38d9a07779",
+  "09768fac0174cafbeade8668bf2190cd4724ce1ae28145aef4f4271b613991d8",
+  "0eb0aeb9d89638941b0d84bf1018c65df50e09d91d2ad619569c3c0894bfba3d",
+  "113a05fc050804c97325fdbaaf9045f5ec643b54e158647beb7c81ef964e1480",
+  "125e7104b5e4294bce8dec11f2a86fd9e92cf5abdba5b7e976de8aec09d19b84",
+  "1a6d11310c5b85ce9ca9213aea7a08d76a89bdad3806d78a81cd47d0908de634",
+  "1b22e5b9415294719caedd99b88033ad959918923f5844a4b0572cace726d450",
+  "1b4401a134f55e9dc3fe0ae8d9f25e5722f733275846406c3a57c1d3cb03c74e",
+  "234ba99f5588759ea4aecc0b5f23733b16ad65c3acdca3ec127e12f032ece0d3",
+  "24751e60e879e82d817567a08e8d03fcf789473ac58f2edde22aecb03eea82c5",
+  "2b2ac59893fa5dd99d15f535b980f486b5e0ebd02d00a5eac35074f1cf7b2b53",
+  "2d08d848d42fba2d6f9204f54bbc0d2aa839120d809c1d1b773eb1d35c4e02bc",
+  "2e51d6b0c4522d2af78b0bb15b53b8c6744a19da596c0025fe7d16e0d02db0b7",
+  "80e6e25b043fbba09e9e12f22d82e8a883c771226a2bcd564f57fa6db1ba4b73",
+  "857e59af2c2d71082045cc8d2b010d1e4da6b04d849a7f2d03ac174683fe8eb7",
+  "d103b1a5e8a8ce6c649b7479a1dbaaf47eb59e9268d373b8d54f11e92c573811"
+ ],
+ "sealed_sha256": "db0ec897d1c296ca0dd8f639fe78a4eb1b1ba6cf46e9d0ed6f7b19a627667a7c",
+ "held_compounds": [
+  "('o:akita_black_bowl', 's:KITCHEN_SCENE10')",
+  "('o:akita_black_bowl', 't:white_cabinet:bottom')",
+  "('o:akita_black_bowl', 't:white_cabinet:top')",
+  "('o:akita_black_bowl', 't:wooden_cabinet:top')",
+  "('o:alphabet_soup', 's:LIVING_ROOM_SCENE2')",
+  "('o:black_book', 's:STUDY_SCENE1')",
+  "('o:black_book', 's:STUDY_SCENE2')",
+  "('o:black_book', 's:STUDY_SCENE3')",
+  "('o:black_book', 't:desk_caddy:back_contain')",
+  "('o:black_book', 't:desk_caddy:front_contain')",
+  "('o:black_book', 't:desk_caddy:left_contain')",
+  "('o:black_book', 't:desk_caddy:right_contain')",
+  "('o:butter', 's:LIVING_ROOM_SCENE3')",
+  "('o:butter', 't:wooden_tray')",
+  "('o:chefmate_8_frypan', 't:wooden_two_layer_shelf:top')",
+  "('o:chocolate_pudding', 's:LIVING_ROOM_SCENE4')",
+  "('o:chocolate_pudding', 't:wooden_tray')",
+  "('o:flat_stove', 's:KITCHEN_SCENE3')",
+  "('o:flat_stove', 's:KITCHEN_SCENE9')",
+  "('o:ketchup', 's:KITCHEN_SCENE5')",
+  "('o:ketchup', 's:LIVING_ROOM_SCENE1')",
+  "('o:ketchup', 's:LIVING_ROOM_SCENE3')",
+  "('o:ketchup', 't:basket')",
+  "('o:ketchup', 't:white_cabinet:top')",
+  "('o:ketchup', 't:wooden_tray')",
+  "('o:moka_pot', 's:KITCHEN_SCENE8')",
+  "('o:porcelain_mug', 's:STUDY_SCENE3')",
+  "('o:porcelain_mug', 't:desk_caddy:right')",
+  "('o:red_coffee_mug', 's:STUDY_SCENE3')",
+  "('o:red_coffee_mug', 't:desk_caddy:right')",
+  "('o:tomato_sauce', 's:LIVING_ROOM_SCENE3')",
+  "('o:tomato_sauce', 't:wooden_tray')",
+  "('o:white_bowl', 't:plate')",
+  "('o:white_yellow_mug', 's:STUDY_SCENE1')",
+  "('o:white_yellow_mug', 't:desk_caddy:right')",
+  "('o:wooden_cabinet', 's:KITCHEN_SCENE2')",
+  "('o:yellow_book', 't:wooden_two_layer_shelf:top_side')",
+  "('t:desk_caddy:back_contain', 's:STUDY_SCENE2')",
+  "('t:desk_caddy:front_contain', 's:STUDY_SCENE1')",
+  "('t:desk_caddy:front_contain', 's:STUDY_SCENE2')",
+  "('t:desk_caddy:front_contain', 's:STUDY_SCENE3')",
+  "('t:desk_caddy:left_contain', 's:STUDY_SCENE1')",
+  "('t:desk_caddy:left_contain', 's:STUDY_SCENE2')",
+  "('t:desk_caddy:left_contain', 's:STUDY_SCENE3')",
+  "('t:desk_caddy:right', 's:STUDY_SCENE1')",
+  "('t:desk_caddy:right', 's:STUDY_SCENE3')",
+  "('t:desk_caddy:right_contain', 's:STUDY_SCENE1')",
+  "('t:desk_caddy:right_contain', 's:STUDY_SCENE2')",
+  "('t:desk_caddy:right_contain', 's:STUDY_SCENE3')",
+  "('t:flat_stove', 's:KITCHEN_SCENE8')",
+  "('t:flat_stove', 's:KITCHEN_SCENE9')",
+  "('t:plate', 's:KITCHEN_SCENE1')",
+  "('t:plate', 's:KITCHEN_SCENE5')",
+  "('t:plate', 's:KITCHEN_SCENE7')",
+  "('t:wooden_cabinet:top', 's:KITCHEN_SCENE1')",
+  "('t:wooden_cabinet:top', 's:KITCHEN_SCENE2')",
+  "('t:wooden_cabinet:top_side', 's:KITCHEN_SCENE10')",
+  "('t:wooden_two_layer_shelf:top', 's:KITCHEN_SCENE9')",
+  "('t:wooden_two_layer_shelf:top_side', 's:STUDY_SCENE4')",
+  "('v:In', 'o:ketchup')",
+  "('v:On', 'o:yellow_book')",
+  "('v:Turnon', 'o:flat_stove')"
+ ],
+ "checks": {
+  "atom_divergence_train90_vs_test": 0.13684582820455704,
+  "atom_divergence_trainall_vs_test": 0.1892307824210332,
+  "compound_divergence_train90_vs_test": 0.3136701188966676,
+  "min_train_count_of_test_atoms": 2,
+  "test_atoms_below_2": [],
+  "part_atoms_in_training": [],
+  "held_compounds_in_training": [],
+  "part_objects_as_distractor": {
+   "ketchup": [
+    "libero_10:1",
+    "libero_10:7",
+    "libero_90:28",
+    "libero_90:31",
+    "libero_90:46",
+    "libero_90:47",
+    "libero_90:49",
+    "libero_90:52",
+    "libero_90:53",
+    "libero_90:54",
+    "libero_90:55",
+    "libero_90:57",
+    "libero_object:2",
+    "libero_object:3",
+    "libero_object:6",
+    "libero_object:8",
+    "libero_object:9"
+   ],
+   "desk_caddy": []
+  },
+  "bin_cd": {
+   "0.1": 0.1393,
+   "0.3": 0.3787,
+   "0.5": 0.5883
+  },
+  "bin_n": {
+   "0.1": 8,
+   "0.3": 8,
+   "0.5": 8
+  },
+  "bin_mean_task_cd": {
+   "0.1": 0.2628,
+   "0.3": 0.4646,
+   "0.5": 0.6625
+  },
+  "part_cd": 0.7384,
+  "part_atom_divergence": 0.5013,
+  "atom_divergence_null": {
+   "n_test": 24,
+   "mean": 0.1795733821705224,
+   "p05": 0.13155820152377629,
+   "min": 0.10201435417621696
+  },
+  "atom_divergence_meets_0.02": false
+ },
+ "languages": {
+  "libero_90:3": "put the butter at the back in the top drawer of the cabinet and close it",
+  "libero_90:4": "put the butter at the front in the top drawer of the cabinet and close it",
+  "libero_90:5": "put the chocolate pudding in the top drawer of the cabinet and close it",
+  "libero_90:6": "open the bottom drawer of the cabinet",
+  "libero_90:10": "put the black bowl on top of the cabinet",
+  "libero_90:13": "put the black bowl at the front on the plate",
+  "libero_90:15": "put the middle black bowl on top of the cabinet",
+  "libero_90:17": "stack the middle black bowl on the back black bowl",
+  "libero_90:18": "put the frying pan on the stove",
+  "libero_90:19": "put the moka pot on the stove",
+  "libero_90:23": "close the bottom drawer of the cabinet and open the top drawer",
+  "libero_90:25": "put the black bowl on top of the cabinet",
+  "libero_90:26": "put the wine bottle in the bottom drawer of the cabinet",
+  "libero_90:27": "put the wine bottle on the wine rack",
+  "libero_90:28": "close the top drawer of the cabinet",
+  "libero_90:31": "put the black bowl on top of the cabinet",
+  "libero_90:33": "close the microwave",
+  "libero_90:34": "put the yellow and white mug to the front of the white mug",
+  "libero_90:35": "open the microwave",
+  "libero_90:37": "put the white bowl to the right of the plate",
+  "libero_90:39": "turn off the stove",
+  "libero_90:41": "put the frying pan on top of the cabinet",
+  "libero_90:42": "put the frying pan under the cabinet shelf",
+  "libero_90:43": "put the white bowl on top of the cabinet",
+  "libero_90:46": "pick up the alphabet soup and put it in the basket",
+  "libero_90:47": "pick up the cream cheese box and put it in the basket",
+  "libero_90:49": "pick up the tomato sauce and put it in the basket",
+  "libero_90:52": "pick up the milk and put it in the basket",
+  "libero_90:53": "pick up the orange juice and put it in the basket",
+  "libero_90:54": "pick up the tomato sauce and put it in the basket",
+  "libero_90:55": "pick up the alphabet soup and put it in the tray",
+  "libero_90:57": "pick up the cream cheese and put it in the tray",
+  "libero_90:62": "pick up the salad dressing and put it in the tray",
+  "libero_90:63": "stack the left bowl on the right bowl and place them in the tray",
+  "libero_90:65": "put the red mug on the left plate",
+  "libero_90:67": "put the white mug on the left plate",
+  "libero_90:68": "put the yellow and white mug on the right plate",
+  "libero_90:69": "put the chocolate pudding to the left of the plate",
+  "libero_90:70": "put the chocolate pudding to the right of the plate",
+  "libero_90:71": "put the red mug on the plate",
+  "libero_90:72": "put the white mug on the plate",
+  "libero_90:86": "pick up the book in the middle and place it on the cabinet shelf",
+  "libero_90:88": "pick up the book on the right and place it on the cabinet shelf",
+  "libero_90:89": "pick up the book on the right and place it under the cabinet shelf",
+  "libero_10:1": "put both the cream cheese box and the butter in the basket",
+  "libero_10:4": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+  "libero_10:6": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+  "libero_10:7": "put both the alphabet soup and the cream cheese box in the basket",
+  "libero_10:9": "put the yellow and white mug in the microwave and close it",
+  "libero_spatial:0": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+  "libero_spatial:1": "pick up the black bowl next to the ramekin and place it on the plate",
+  "libero_spatial:2": "pick up the black bowl from table center and place it on the plate",
+  "libero_spatial:3": "pick up the black bowl on the cookie box and place it on the plate",
+  "libero_spatial:4": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+  "libero_spatial:5": "pick up the black bowl on the ramekin and place it on the plate",
+  "libero_spatial:6": "pick up the black bowl next to the cookie box and place it on the plate",
+  "libero_spatial:7": "pick up the black bowl on the stove and place it on the plate",
+  "libero_spatial:8": "pick up the black bowl next to the plate and place it on the plate",
+  "libero_spatial:9": "pick up the black bowl on the wooden cabinet and place it on the plate",
+  "libero_object:0": "pick up the alphabet soup and place it in the basket",
+  "libero_object:1": "pick up the cream cheese and place it in the basket",
+  "libero_object:2": "pick up the salad dressing and place it in the basket",
+  "libero_object:3": "pick up the bbq sauce and place it in the basket",
+  "libero_object:5": "pick up the tomato sauce and place it in the basket",
+  "libero_object:6": "pick up the butter and place it in the basket",
+  "libero_object:7": "pick up the milk and place it in the basket",
+  "libero_object:8": "pick up the chocolate pudding and place it in the basket",
+  "libero_object:9": "pick up the orange juice and place it in the basket",
+  "libero_goal:0": "open the middle drawer of the cabinet",
+  "libero_goal:1": "put the bowl on the stove",
+  "libero_goal:2": "put the wine bottle on top of the cabinet",
+  "libero_goal:4": "put the bowl on top of the cabinet",
+  "libero_goal:5": "push the plate to the front of the stove",
+  "libero_goal:6": "put the cream cheese in the bowl",
+  "libero_goal:8": "put the bowl on the plate",
+  "libero_goal:9": "put the wine bottle on the rack",
+  "libero_90:0": "close the top drawer of the cabinet",
+  "libero_90:1": "close the top drawer of the cabinet and put the black bowl on top of it",
+  "libero_90:2": "put the black bowl in the top drawer of the cabinet",
+  "libero_90:7": "open the top drawer of the cabinet",
+  "libero_90:8": "open the top drawer of the cabinet and put the bowl in it",
+  "libero_90:9": "put the black bowl on the plate",
+  "libero_90:11": "open the top drawer of the cabinet",
+  "libero_90:12": "put the black bowl at the back on the plate",
+  "libero_90:14": "put the middle black bowl on the plate",
+  "libero_90:16": "stack the black bowl at the front on the black bowl in the middle",
+  "libero_90:22": "close the bottom drawer of the cabinet",
+  "libero_90:24": "put the black bowl in the bottom drawer of the cabinet",
+  "libero_90:29": "put the black bowl in the top drawer of the cabinet",
+  "libero_90:30": "put the black bowl on the plate",
+  "libero_90:36": "put the white bowl on the plate",
+  "libero_90:40": "put the frying pan on the cabinet shelf",
+  "libero_90:50": "pick up the alphabet soup and put it in the basket",
+  "libero_90:56": "pick up the butter and put it in the tray",
+  "libero_90:59": "pick up the tomato sauce and put it in the tray",
+  "libero_90:60": "pick up the black bowl on the left and put it in the tray",
+  "libero_90:61": "pick up the chocolate pudding and put it in the tray",
+  "libero_90:64": "stack the right bowl on the left bowl and place them in the tray",
+  "libero_90:66": "put the red mug on the right plate",
+  "libero_90:87": "pick up the book on the left and place it on top of the shelf",
+  "libero_90:20": "turn on the stove",
+  "libero_90:21": "turn on the stove and put the frying pan on it",
+  "libero_90:32": "put the ketchup in the top drawer of the cabinet",
+  "libero_90:38": "put the right moka pot on the stove",
+  "libero_90:44": "turn on the stove",
+  "libero_90:45": "turn on the stove and put the frying pan on it",
+  "libero_90:48": "pick up the ketchup and put it in the basket",
+  "libero_90:58": "pick up the ketchup and put it in the tray",
+  "libero_90:73": "pick up the book and place it in the front compartment of the caddy",
+  "libero_90:74": "pick up the book and place it in the left compartment of the caddy",
+  "libero_90:75": "pick up the book and place it in the right compartment of the caddy",
+  "libero_90:76": "pick up the yellow and white mug and place it to the right of the caddy",
+  "libero_90:77": "pick up the book and place it in the back compartment of the caddy",
+  "libero_90:78": "pick up the book and place it in the front compartment of the caddy",
+  "libero_90:79": "pick up the book and place it in the left compartment of the caddy",
+  "libero_90:80": "pick up the book and place it in the right compartment of the caddy",
+  "libero_90:81": "pick up the book and place it in the front compartment of the caddy",
+  "libero_90:82": "pick up the book and place it in the left compartment of the caddy",
+  "libero_90:83": "pick up the book and place it in the right compartment of the caddy",
+  "libero_90:84": "pick up the red mug and place it to the right of the caddy",
+  "libero_90:85": "pick up the white mug and place it to the right of the caddy"
+ }
+}

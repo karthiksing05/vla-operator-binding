@@ -43,7 +43,8 @@ def frac(Y, Yh):
 def main(record=False, tag=""):
     from lifelong_ood.protos import relation as R
     from lifelong_ood.protos import store as S
-    idx = json.load(open(os.path.join(OUT, "index.json")))
+    ip = os.path.join(OUT, f"index_{tag}.json")                    # another checkpoint's own index (pp_prep.py index_l90c)
+    idx = json.load(open(ip if tag and os.path.exists(ip) else os.path.join(OUT, "index.json")))
     od = os.path.join(OUT, "obs" + (f"_{tag}" if tag else ""))
     L = len(S.LEVELS)
     data = []
@@ -156,7 +157,7 @@ def main(record=False, tag=""):
         print(ledger.record("pp3_dev", bench="libero", tag=tag or "pi05_libero", seed=0, metrics=res,
                             bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0),
                             config=dict(levels=list(S.LEVELS), roles=list(ROLES), variants=VARIANTS, lam_grid=list(grid)),
-                            script="experiments/pp3_dev.py", command=" ".join(sys.argv), backbone=dict(config="pi05_libero"),
+                            script="experiments/pp3_dev.py", command=" ".join(sys.argv), backbone=dict(config=f"pi05_{tag}" if tag else "pi05_libero"),
                             artifacts=[path]))
 
 

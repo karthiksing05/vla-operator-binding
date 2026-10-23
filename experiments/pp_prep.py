@@ -139,6 +139,94 @@ def index():
             print("   ", c["name"], "|", c["prompt"], "|", [(b[0], b[1]) for b in c["binds"]], "|", c["target"])
 
 
+def index_path(tag=""):
+    """results/protos/index.json, or index_<tag>.json for another checkpoint's index (e.g. l90c: experiments/pp_prep.py index_l90c)."""
+    return os.path.join(OUT, f"index_{tag}.json" if tag else "index.json")
+
+
+def _tag():
+    return next((x.split("=", 1)[1] for x in sys.argv if x.startswith("--tag=")), "")
+
+
+def index_l90c():
+    """The index for pi05_l90c (docs/L90C.md): its TRAINING observations are its own training tasks, its l90 observations its
+    held-out DEV tasks (combination bins and the part set; the sealed third is never read: lifelong_ood.l90c.check_task).
+      train    the split's suite tasks (physical-intelligence/libero; the same keys and frames as index.json, so their poses exist)
+               + its LIBERO-90 training cells that have a raw match (results/robot/p0_demo/<tid>_match.npz), N_TRAIN_FRAMES frames
+      l90      its dev test and dev part tasks with a raw match, N_L90_FRAMES frames
+      transfer as index.json (first frames of 10 init states)
+    train_texts are POSITIONAL over pi05_l90c's training instructions (pp_fields' E_instr rows; pp3's hf_task is that position).
+    Splice sources (binds) stay physical-intelligence/libero task ids, restricted to the suite tasks pi05_l90c trains on.
+    Each training observation carries src = "hf" | "ipec" (src_hf / l90_task: its source)."""
+    from lifelong_ood import l90c
+    from lifelong_ood.policy import data as D
+    from lifelong_ood.policy import factors as F
+    from lifelong_ood.protos import store as S
+    demos, d90 = D.Demos(), D.Demos90()
+    allt = F.load()
+    split = l90c.load_split()
+    train = set(split["train"])
+    hf_of_text = {v: k for k, v in demos.tasks.items()}
+    tasks = {t.tid: t for t in allt}
+    bind_src = {hf_of_text[tasks[tid].language]: tasks[tid].language for tid in sorted(train) if not tid.startswith("libero_90:")}
+    order = sorted(train, key=lambda x: (x.split(":")[0], int(x.split(":")[1])))
+    texts = []
+    for tid in order:
+        if tasks[tid].language not in texts:
+            texts.append(tasks[tid].language)
+    pos = {t: i for i, t in enumerate(texts)}
+    l90 = {t.index: t for t in allt if t.suite == "libero_90"}
+
+    def conds(task, exclude, kinds="full"):
+        ph = F.scene_phrases(task, allt)
+        scene = [t for t in allt if t.scene == task.scene and t.tid != task.tid]
+        return [c.to_json() for c in S.conditions_for(task, scene, ph, bind_src, exclude, kinds)]
+
+    base = json.load(open(index_path()))
+    obs = []
+    for o in base["obs"]:
+        if o["set"] == "train":
+            t = tasks[f"{o['suite']}:{o['index']}"]
+            if t.tid in train:
+                obs.append(dict(o, hf_task=pos[t.language], src="hf", src_hf=o["hf_task"], conds=conds(t, {o["hf_task"]})))
+    have = sorted(int(m.group(1)) for m in (re.match(r"^(\d+)_match\.npz$", x) for x in os.listdir(P0)) if m)
+    dev = [x for b in split["bins"] for x in split["dev"][b]] + list(split["dev"]["part"])
+    for tid in have:
+        key = f"libero_90:{tid}"
+        role = "train" if key in train else "l90" if key in dev else None
+        if role is None:
+            continue
+        l90c.check_task(key)
+        t = l90[tid]
+        m = np.load(os.path.join(P0, f"{tid}_match.npz"))
+        e = resolve_l90(d90, tid, m, t.language)
+        if e is None:
+            print(f"[pp_prep] LIBERO-90 task {tid}: no IPEC episode matches its raw match file; skipped", flush=True)
+            continue
+        ep = d90.load(e)
+        T = len(ep["actions"])
+        nf = N_TRAIN_FRAMES if role == "train" else N_L90_FRAMES
+        for f in np.unique(np.linspace(0, T - 10, nf).round().astype(int)):
+            ph, grip, since = context(ep["actions"], ep["state"], int(f))
+            o = dict(key=f"{'tr90' if role == 'train' else 'l90'}_{tid:02d}_e{e}_f{int(f)}", set=role, l90_task=tid, suite="libero_90",
+                     index=tid, episode=int(e), frame=int(f), T=T, language=t.language, phase=ph, grip=grip, since=since,
+                     conds=conds(t, set()))
+            if role == "train":
+                o.update(hf_task=pos[t.language], src="ipec")
+            obs.append(o)
+    for o in base["obs"]:
+        if o["set"] == "transfer":
+            t = tasks[f"{o['suite']}:{o['index']}"]
+            ex = {o["hf_task"]} if "hf_task" in o else set()
+            obs.append(dict(o, conds=conds(t, ex, "transfer")))
+    write_json(index_path("l90c"), dict(train_texts={str(i): x for i, x in enumerate(texts)}, bind_src=bind_src, obs=obs,
+                                        split_sha=split.get("sealed_sha256")))
+    n = {s: sum(o["set"] == s for o in obs) for s in ("train", "l90", "transfer")}
+    print(f"[pp_prep] index_l90c: {n}; train tasks {len({o['hf_task'] for o in obs if o['set'] == 'train'})} of {len(texts)} "
+          f"instructions; l90 tasks {sorted({o['l90_task'] for o in obs if o['set'] == 'l90'})}; splice sources {len(bind_src)}",
+          flush=True)
+
+
 def noop_mask(actions):
     keep, prev = [], None
     for a in actions:
@@ -188,13 +276,14 @@ def fetch():
 def poses():
     from libero.libero import benchmark, get_libero_path
     from libero.libero.envs import OffScreenRenderEnv
-    idx = json.load(open(os.path.join(OUT, "index.json")))
+    idx = json.load(open(index_path(_tag())))
     os.makedirs(os.path.join(OUT, "poses"), exist_ok=True)
     bench = benchmark.get_benchmark_dict()
     groups = {}
     for o in idx["obs"]:
         if o["set"] in ("train", "l90"):
-            groups.setdefault((o["suite"], o["index"], o.get("hf_task"), o.get("l90_task")), []).append(o)
+            k_ = o.get("src_hf", o.get("hf_task")) if o.get("src") != "ipec" else None      # index_l90c: hf_task is positional
+            groups.setdefault((o["suite"], o["index"], k_, o.get("l90_task")), []).append(o)
     for (suite, ti, k, tid), obs in sorted(groups.items(), key=lambda x: str(x[0])):
         todo = [o for o in obs if not os.path.exists(os.path.join(OUT, "poses", o["key"] + ".npz"))]
         if not todo:
@@ -225,4 +314,6 @@ def poses():
 
 if __name__ == "__main__":
     for cmd in sys.argv[1:]:
-        {"index": index, "fetch": fetch, "poses": poses}[cmd]()
+        if cmd.startswith("--"):
+            continue
+        {"index": index, "index_l90c": index_l90c, "fetch": fetch, "poses": poses}[cmd]()

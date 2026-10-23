@@ -49,11 +49,13 @@ def clusters(M, tol):
 def scale_from_demos(idx):
     from lifelong_ood.policy import data as D
     from lifelong_ood.protos import store as S
-    demos = D.Demos()
-    eps = sorted({o["episode"] for o in idx["obs"] if o["set"] == "train"})
+    demos, d90 = D.Demos(), None
+    eps = sorted({(o.get("src") == "ipec", o["episode"]) for o in idx["obs"] if o["set"] == "train"})
     st, ac = [], []
-    for e in eps:
-        ep = demos.load(e)
+    for ipec, e in eps:                                     # index_l90c: LIBERO-90 training cells come from the IPEC port
+        if ipec and d90 is None:
+            d90 = D.Demos90()
+        ep = (d90 if ipec else demos).load(e)
         st.append(ep["state"])
         ac.append(ep["actions"])
     return S.displacement_scale(st, ac)
@@ -69,7 +71,8 @@ def task_types():
 
 def main(record=False, tag=""):
     from lifelong_ood.protos import store as S
-    idx = json.load(open(os.path.join(OUT, "index.json")))
+    ip = os.path.join(OUT, f"index_{tag}.json")                    # another checkpoint's own index (pp_prep.py index_l90c)
+    idx = json.load(open(ip if tag and os.path.exists(ip) else os.path.join(OUT, "index.json")))
     od = os.path.join(OUT, "obs" + (f"_{tag}" if tag else ""))
     scale = scale_from_demos(idx)
     TT = task_types()
@@ -246,7 +249,7 @@ def main(record=False, tag=""):
         print(ledger.record("pp2_dev", bench="libero", tag=tag or "pi05_libero", seed=0, metrics=res,
                             bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0),
                             config=dict(levels=list(S.LEVELS), core=list(CORE)), script="experiments/pp2_dev.py",
-                            command=" ".join(sys.argv), backbone=dict(config="pi05_libero"), artifacts=[path]))
+                            command=" ".join(sys.argv), backbone=dict(config=f"pi05_{tag}" if tag else "pi05_libero"), artifacts=[path]))
 
 
 if __name__ == "__main__":

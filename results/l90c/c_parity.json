@@ -1,0 +1,634 @@
+{
+ "pi05_libero": {
+  "tasks": 40,
+  "episodes": 800,
+  "mean": 0.96875,
+  "median": 1.0,
+  "min": 0.55,
+  "by_suite": {
+   "libero_10": 0.93,
+   "libero_goal": 0.9700000000000001,
+   "libero_object": 0.99,
+   "libero_spatial": 0.985
+  }
+ },
+ "pi05_l90c": {
+  "tasks": 76,
+  "episodes": 1520,
+  "mean": 0.9585526315789474,
+  "median": 1.0,
+  "min": 0.65,
+  "by_suite": {
+   "libero_10": 0.93,
+   "libero_90": 0.9659090909090909,
+   "libero_goal": 0.9375,
+   "libero_object": 0.9666666666666666,
+   "libero_spatial": 0.95
+  }
+ },
+ "parity": {
+  "level_40": 0.96875,
+  "l90c_mean": 0.9585526315789474,
+  "l90c_ci95": [
+   0.9414473684210528,
+   0.974342105263158
+  ],
+  "reached": false,
+  "tasks_below_level_minus_0p2": [
+   "libero_10:9",
+   "libero_90:23",
+   "libero_90:26"
+  ],
+  "same_tasks": {
+   "n": 32,
+   "libero": 0.9765625,
+   "l90c": 0.9484374999999999
+  }
+ },
+ "per_task": {
+  "pi05_libero": {
+   "libero_10:0": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "put both the alphabet soup and the tomato sauce in the basket"
+   },
+   "libero_10:1": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put both the cream cheese box and the butter in the basket"
+   },
+   "libero_10:2": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "turn on the stove and put the moka pot on it"
+   },
+   "libero_10:3": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the black bowl in the bottom drawer of the cabinet and close it"
+   },
+   "libero_10:4": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+   },
+   "libero_10:5": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the book and place it in the back compartment of the caddy"
+   },
+   "libero_10:6": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+   },
+   "libero_10:7": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put both the alphabet soup and the cream cheese box in the basket"
+   },
+   "libero_10:8": {
+    "sr": 0.55,
+    "n": 20,
+    "language": "put both moka pots on the stove"
+   },
+   "libero_10:9": {
+    "sr": 0.9,
+    "n": 20,
+    "language": "put the yellow and white mug in the microwave and close it"
+   },
+   "libero_goal:0": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "open the middle drawer of the cabinet"
+   },
+   "libero_goal:1": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the bowl on the stove"
+   },
+   "libero_goal:2": {
+    "sr": 0.85,
+    "n": 20,
+    "language": "put the wine bottle on top of the cabinet"
+   },
+   "libero_goal:3": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "open the top drawer and put the bowl inside"
+   },
+   "libero_goal:4": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the bowl on top of the cabinet"
+   },
+   "libero_goal:5": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "push the plate to the front of the stove"
+   },
+   "libero_goal:6": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "put the cream cheese in the bowl"
+   },
+   "libero_goal:7": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "turn on the stove"
+   },
+   "libero_goal:8": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the bowl on the plate"
+   },
+   "libero_goal:9": {
+    "sr": 0.9,
+    "n": 20,
+    "language": "put the wine bottle on the rack"
+   },
+   "libero_object:0": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "pick up the alphabet soup and place it in the basket"
+   },
+   "libero_object:1": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the cream cheese and place it in the basket"
+   },
+   "libero_object:2": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the salad dressing and place it in the basket"
+   },
+   "libero_object:3": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the bbq sauce and place it in the basket"
+   },
+   "libero_object:4": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the ketchup and place it in the basket"
+   },
+   "libero_object:5": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the tomato sauce and place it in the basket"
+   },
+   "libero_object:6": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the butter and place it in the basket"
+   },
+   "libero_object:7": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "pick up the milk and place it in the basket"
+   },
+   "libero_object:8": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the chocolate pudding and place it in the basket"
+   },
+   "libero_object:9": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the orange juice and place it in the basket"
+   },
+   "libero_spatial:0": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the black bowl between the plate and the ramekin and place it on the plate"
+   },
+   "libero_spatial:1": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the black bowl next to the ramekin and place it on the plate"
+   },
+   "libero_spatial:2": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the black bowl from table center and place it on the plate"
+   },
+   "libero_spatial:3": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the black bowl on the cookie box and place it on the plate"
+   },
+   "libero_spatial:4": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+   },
+   "libero_spatial:5": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "pick up the black bowl on the ramekin and place it on the plate"
+   },
+   "libero_spatial:6": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the black bowl next to the cookie box and place it on the plate"
+   },
+   "libero_spatial:7": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the black bowl on the stove and place it on the plate"
+   },
+   "libero_spatial:8": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the black bowl next to the plate and place it on the plate"
+   },
+   "libero_spatial:9": {
+    "sr": 0.9,
+    "n": 20,
+    "language": "pick up the black bowl on the wooden cabinet and place it on the plate"
+   }
+  },
+  "pi05_l90c": {
+   "libero_10:1": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put both the cream cheese box and the butter in the basket"
+   },
+   "libero_10:4": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the white mug on the left plate and put the yellow and white mug on the right plate"
+   },
+   "libero_10:6": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+   },
+   "libero_10:7": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put both the alphabet soup and the cream cheese box in the basket"
+   },
+   "libero_10:9": {
+    "sr": 0.65,
+    "n": 20,
+    "language": "put the yellow and white mug in the microwave and close it"
+   },
+   "libero_90:13": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the black bowl at the front on the plate"
+   },
+   "libero_90:15": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the middle black bowl on top of the cabinet"
+   },
+   "libero_90:17": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "stack the middle black bowl on the back black bowl"
+   },
+   "libero_90:18": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the frying pan on the stove"
+   },
+   "libero_90:19": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the moka pot on the stove"
+   },
+   "libero_90:23": {
+    "sr": 0.7,
+    "n": 20,
+    "language": "close the bottom drawer of the cabinet and open the top drawer"
+   },
+   "libero_90:25": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the black bowl on top of the cabinet"
+   },
+   "libero_90:26": {
+    "sr": 0.75,
+    "n": 20,
+    "language": "put the wine bottle in the bottom drawer of the cabinet"
+   },
+   "libero_90:27": {
+    "sr": 0.9,
+    "n": 20,
+    "language": "put the wine bottle on the wine rack"
+   },
+   "libero_90:28": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "close the top drawer of the cabinet"
+   },
+   "libero_90:10": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the black bowl on top of the cabinet"
+   },
+   "libero_90:3": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the butter at the back in the top drawer of the cabinet and close it"
+   },
+   "libero_90:4": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the butter at the front in the top drawer of the cabinet and close it"
+   },
+   "libero_90:5": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the chocolate pudding in the top drawer of the cabinet and close it"
+   },
+   "libero_90:6": {
+    "sr": 0.8,
+    "n": 20,
+    "language": "open the bottom drawer of the cabinet"
+   },
+   "libero_90:31": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the black bowl on top of the cabinet"
+   },
+   "libero_90:33": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "close the microwave"
+   },
+   "libero_90:34": {
+    "sr": 0.9,
+    "n": 20,
+    "language": "put the yellow and white mug to the front of the white mug"
+   },
+   "libero_90:35": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "open the microwave"
+   },
+   "libero_90:37": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "put the white bowl to the right of the plate"
+   },
+   "libero_90:39": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "turn off the stove"
+   },
+   "libero_90:41": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the frying pan on top of the cabinet"
+   },
+   "libero_90:42": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the frying pan under the cabinet shelf"
+   },
+   "libero_90:43": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "put the white bowl on top of the cabinet"
+   },
+   "libero_90:46": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the alphabet soup and put it in the basket"
+   },
+   "libero_90:47": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the cream cheese box and put it in the basket"
+   },
+   "libero_90:49": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "pick up the tomato sauce and put it in the basket"
+   },
+   "libero_90:52": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the milk and put it in the basket"
+   },
+   "libero_90:53": {
+    "sr": 0.9,
+    "n": 20,
+    "language": "pick up the orange juice and put it in the basket"
+   },
+   "libero_90:54": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "pick up the tomato sauce and put it in the basket"
+   },
+   "libero_90:55": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the alphabet soup and put it in the tray"
+   },
+   "libero_90:57": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the cream cheese and put it in the tray"
+   },
+   "libero_90:62": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the salad dressing and put it in the tray"
+   },
+   "libero_90:63": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "stack the left bowl on the right bowl and place them in the tray"
+   },
+   "libero_90:65": {
+    "sr": 0.9,
+    "n": 20,
+    "language": "put the red mug on the left plate"
+   },
+   "libero_90:67": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the white mug on the left plate"
+   },
+   "libero_90:68": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the yellow and white mug on the right plate"
+   },
+   "libero_90:69": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the chocolate pudding to the left of the plate"
+   },
+   "libero_90:70": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the chocolate pudding to the right of the plate"
+   },
+   "libero_90:71": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the red mug on the plate"
+   },
+   "libero_90:72": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the white mug on the plate"
+   },
+   "libero_90:86": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the book in the middle and place it on the cabinet shelf"
+   },
+   "libero_90:88": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the book on the right and place it on the cabinet shelf"
+   },
+   "libero_90:89": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "pick up the book on the right and place it under the cabinet shelf"
+   },
+   "libero_goal:0": {
+    "sr": 0.85,
+    "n": 20,
+    "language": "open the middle drawer of the cabinet"
+   },
+   "libero_goal:1": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the bowl on the stove"
+   },
+   "libero_goal:2": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the wine bottle on top of the cabinet"
+   },
+   "libero_goal:4": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "put the bowl on top of the cabinet"
+   },
+   "libero_goal:5": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "push the plate to the front of the stove"
+   },
+   "libero_goal:6": {
+    "sr": 0.85,
+    "n": 20,
+    "language": "put the cream cheese in the bowl"
+   },
+   "libero_goal:8": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "put the bowl on the plate"
+   },
+   "libero_goal:9": {
+    "sr": 0.9,
+    "n": 20,
+    "language": "put the wine bottle on the rack"
+   },
+   "libero_object:0": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "pick up the alphabet soup and place it in the basket"
+   },
+   "libero_object:1": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the cream cheese and place it in the basket"
+   },
+   "libero_object:2": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the salad dressing and place it in the basket"
+   },
+   "libero_object:3": {
+    "sr": 0.9,
+    "n": 20,
+    "language": "pick up the bbq sauce and place it in the basket"
+   },
+   "libero_object:5": {
+    "sr": 0.85,
+    "n": 20,
+    "language": "pick up the tomato sauce and place it in the basket"
+   },
+   "libero_object:6": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the butter and place it in the basket"
+   },
+   "libero_object:7": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the milk and place it in the basket"
+   },
+   "libero_object:8": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the chocolate pudding and place it in the basket"
+   },
+   "libero_object:9": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the orange juice and place it in the basket"
+   },
+   "libero_spatial:0": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the black bowl between the plate and the ramekin and place it on the plate"
+   },
+   "libero_spatial:1": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the black bowl next to the ramekin and place it on the plate"
+   },
+   "libero_spatial:2": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the black bowl from table center and place it on the plate"
+   },
+   "libero_spatial:3": {
+    "sr": 0.9,
+    "n": 20,
+    "language": "pick up the black bowl on the cookie box and place it on the plate"
+   },
+   "libero_spatial:4": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate"
+   },
+   "libero_spatial:5": {
+    "sr": 0.8,
+    "n": 20,
+    "language": "pick up the black bowl on the ramekin and place it on the plate"
+   },
+   "libero_spatial:6": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "pick up the black bowl next to the cookie box and place it on the plate"
+   },
+   "libero_spatial:7": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "pick up the black bowl on the stove and place it on the plate"
+   },
+   "libero_spatial:8": {
+    "sr": 1.0,
+    "n": 20,
+    "language": "pick up the black bowl next to the plate and place it on the plate"
+   },
+   "libero_spatial:9": {
+    "sr": 0.95,
+    "n": 20,
+    "language": "pick up the black bowl on the wooden cabinet and place it on the plate"
+   }
+  }
+ }
+}
