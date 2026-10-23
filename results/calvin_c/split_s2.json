@@ -1,0 +1,257 @@
+{
+ "benchmark": "CALVIN-C: CALVIN ABC -> D (Mees et al. 2022) block cells; docs/PLAN_V4.md 3.2",
+ "seed": 20261022,
+ "split_seed": 2,
+ "part": {
+  "colour": "blue",
+  "verb": "push",
+  "cells": [
+   "push_blue_block_left",
+   "push_blue_block_right"
+  ]
+ },
+ "caveat": "CALVIN colour also fixes block size (red middle, blue small, pink big): the colour atom is colour+size",
+ "rule": "|H| in {6,7}; every atom in >= 2 training cells; exactly one verb-colour pair (the part) fully held out; grade = # of the cell's 3 pairwise compounds absent from training, in {0,1,2}; maximise min per-grade count, then minimise spread, then |H| = 7, then verbs among non-part cells; seeded tie-break",
+ "search": {
+  "best_score": [
+   1,
+   -2,
+   7,
+   3,
+   -0.123481
+  ],
+  "n_tied": 24
+ },
+ "cells": [
+  "lift_red_block_table",
+  "lift_red_block_slider",
+  "lift_red_block_drawer",
+  "lift_blue_block_table",
+  "lift_blue_block_slider",
+  "lift_blue_block_drawer",
+  "lift_pink_block_table",
+  "lift_pink_block_slider",
+  "lift_pink_block_drawer",
+  "push_red_block_left",
+  "push_red_block_right",
+  "push_blue_block_left",
+  "push_blue_block_right",
+  "push_pink_block_left",
+  "push_pink_block_right",
+  "rotate_red_block_left",
+  "rotate_red_block_right",
+  "rotate_blue_block_left",
+  "rotate_blue_block_right",
+  "rotate_pink_block_left",
+  "rotate_pink_block_right"
+ ],
+ "train": [
+  [
+   "lift",
+   "blue",
+   "drawer"
+  ],
+  [
+   "lift",
+   "blue",
+   "slider"
+  ],
+  [
+   "lift",
+   "blue",
+   "table"
+  ],
+  [
+   "lift",
+   "pink",
+   "drawer"
+  ],
+  [
+   "lift",
+   "pink",
+   "slider"
+  ],
+  [
+   "lift",
+   "pink",
+   "table"
+  ],
+  [
+   "lift",
+   "red",
+   "slider"
+  ],
+  [
+   "lift",
+   "red",
+   "table"
+  ],
+  [
+   "push",
+   "pink",
+   "left"
+  ],
+  [
+   "push",
+   "red",
+   "left"
+  ],
+  [
+   "push",
+   "red",
+   "right"
+  ],
+  [
+   "rotate",
+   "blue",
+   "right"
+  ],
+  [
+   "rotate",
+   "pink",
+   "right"
+  ],
+  [
+   "rotate",
+   "red",
+   "left"
+  ]
+ ],
+ "train_names": [
+  "lift_blue_block_drawer",
+  "lift_blue_block_slider",
+  "lift_blue_block_table",
+  "lift_pink_block_drawer",
+  "lift_pink_block_slider",
+  "lift_pink_block_table",
+  "lift_red_block_slider",
+  "lift_red_block_table",
+  "push_pink_block_left",
+  "push_red_block_left",
+  "push_red_block_right",
+  "rotate_blue_block_right",
+  "rotate_pink_block_right",
+  "rotate_red_block_left"
+ ],
+ "dev": [
+  {
+   "cell": [
+    "lift",
+    "red",
+    "drawer"
+   ],
+   "name": "lift_red_block_drawer",
+   "grade": 1,
+   "part": false,
+   "unseen": [
+    "cs-red-drawer"
+   ]
+  },
+  {
+   "cell": [
+    "push",
+    "blue",
+    "left"
+   ],
+   "name": "push_blue_block_left",
+   "grade": 2,
+   "part": true,
+   "unseen": [
+    "vc-push-blue",
+    "cs-blue-left"
+   ]
+  },
+  {
+   "cell": [
+    "push",
+    "blue",
+    "right"
+   ],
+   "name": "push_blue_block_right",
+   "grade": 1,
+   "part": true,
+   "unseen": [
+    "vc-push-blue"
+   ]
+  },
+  {
+   "cell": [
+    "push",
+    "pink",
+    "right"
+   ],
+   "name": "push_pink_block_right",
+   "grade": 0,
+   "part": false,
+   "unseen": []
+  },
+  {
+   "cell": [
+    "rotate",
+    "pink",
+    "left"
+   ],
+   "name": "rotate_pink_block_left",
+   "grade": 0,
+   "part": false,
+   "unseen": []
+  }
+ ],
+ "n_held_out": 7,
+ "n_sealed": 2,
+ "n_sealed_by_grade": {
+  "0": 1,
+  "1": 1,
+  "2": 0
+ },
+ "hash_salt": "84a8ba8b7ebca531",
+ "sealed_hashes": [
+  "3a65330f7d7a923170caecb5b14b42bc3dd8be38554d7807e8e863dece582631",
+  "514c9e4913d1402d3d4e7dddcc3f3fa819f4082dd71a1cb3c002de100edfffd3"
+ ],
+ "sealed_sha256": "087532053f66ee57804689162dd493c5efa96d8a39a7c329976dd620f278e44e",
+ "checks": {
+  "atom_counts_train": {
+   "colour:blue": 4,
+   "colour:pink": 5,
+   "colour:red": 5,
+   "direction:left": 3,
+   "direction:right": 3,
+   "place:drawer": 2,
+   "place:slider": 3,
+   "place:table": 3,
+   "verb:lift": 8,
+   "verb:push": 3,
+   "verb:rotate": 3
+  },
+  "grade_counts": {
+   "0": 3,
+   "1": 3,
+   "2": 1
+  },
+  "divergence_all": {
+   "D_A": 0.12348061561803203,
+   "D_C": 0.2882635149771926
+  },
+  "divergence_by_grade": {
+   "0": {
+    "D_A": 0.29218858467041764,
+    "D_C": 0.13592983658425672
+   },
+   "1": {
+    "D_A": 0.16494426716638788,
+    "D_C": 0.41483816616209745
+   },
+   "2": {
+    "D_A": 0.5132191388008666,
+    "D_C": 0.7256095820023186
+   }
+  },
+  "unseen_compounds_dev": [
+   "cs-blue-left",
+   "cs-red-drawer",
+   "vc-push-blue"
+  ],
+  "n_unseen_compounds_all": 3
+ }
+}

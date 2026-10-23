@@ -1,0 +1,101 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/windows_s1.json",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/windows_s1.npz"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "calvin_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c_calvin_split.py windows --seed 1 --record",
+ "config": {
+  "data": "/coc/flash10/ksingara3/robot/data/calvin_abc/task_ABC_D",
+  "lang_folder": "lang_clip_resnet50",
+  "overlap": 16
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.13.5",
+  "slurm_job": "4188110",
+  "torch": "2.13.0+cpu"
+ },
+ "experiment": "c_calvin_windows",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "9149bef85233422a37e66baafdddb8b8f1c54832",
+  "short": "9149bef8"
+ },
+ "keys": {},
+ "metrics": {
+  "dropped_overlap_by_task": {
+   "lift_blue_block_drawer": 6,
+   "lift_blue_block_table": 29,
+   "lift_pink_block_drawer": 4,
+   "lift_pink_block_slider": 3,
+   "lift_pink_block_table": 34,
+   "move_slider_left": 6,
+   "move_slider_right": 5,
+   "open_drawer": 3,
+   "place_in_drawer": 7,
+   "place_in_slider": 13,
+   "push_blue_block_right": 8,
+   "push_into_drawer": 1,
+   "push_pink_block_right": 2,
+   "push_red_block_left": 13,
+   "push_red_block_right": 14,
+   "rotate_blue_block_left": 2,
+   "rotate_pink_block_right": 2,
+   "rotate_red_block_left": 17,
+   "rotate_red_block_right": 25,
+   "stack_block": 45,
+   "turn_off_led": 2,
+   "turn_off_lightbulb": 1,
+   "turn_on_led": 2,
+   "turn_on_lightbulb": 6,
+   "unstack_block": 1
+  },
+  "held_out_frames": 126809,
+  "held_out_frames_in_kept_windows": 3694,
+  "kept_fraction": 0.7802462227196418,
+  "lang_folder": "lang_clip_resnet50",
+  "n_clean_chains": 443,
+  "n_dropped_overlap": 251,
+  "n_eval_chains": 1000,
+  "n_held_out_windows": 3676,
+  "n_held_out_windows_dev": {
+   "lift_red_block_drawer": 525,
+   "lift_red_block_slider": 525,
+   "push_pink_block_left": 525,
+   "rotate_blue_block_right": 525,
+   "rotate_pink_block_left": 525
+  },
+  "n_held_out_windows_sealed_total": 1051,
+  "n_kept": 13943,
+  "n_samples_all": 893043,
+  "n_samples_kept": 691068,
+  "n_windows": 17870,
+  "overlap_rule": "drop a non-held-out window that overlaps any held-out window by > 16 frames",
+  "same_windows_as_lang_annotations": true,
+  "split_seed": 1
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c_calvin_windows__calvin_c__s1__s1__9149bef8",
+ "schema": 1,
+ "script": "experiments/c_calvin_split.py",
+ "seconds": null,
+ "seed": 1,
+ "source_commit": null,
+ "started": "2026-10-22T06:24:32+00:00",
+ "stream": null,
+ "tag": "s1"
+}

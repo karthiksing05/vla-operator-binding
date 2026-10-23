@@ -1,0 +1,232 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/split_s0.json",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/split_s1.json",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/split_s2.json",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/split_s0_sealed.json",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/split_s1_sealed.json",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/split_s2_sealed.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "calvin_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c_calvin_split.py split --record",
+ "config": {
+  "overlap": 16,
+  "part0": [
+   "pink",
+   "rotate"
+  ],
+  "seed": 20261022,
+  "sizes": [
+   6,
+   7
+  ]
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.13.5",
+  "slurm_job": "4188110",
+  "torch": "2.13.0+cpu"
+ },
+ "experiment": "c_calvin_split",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "9149bef85233422a37e66baafdddb8b8f1c54832",
+  "short": "9149bef8"
+ },
+ "keys": {},
+ "metrics": {
+  "seeds": {
+   "0": {
+    "dev": [
+     {
+      "grade": 0,
+      "name": "push_blue_block_right"
+     },
+     {
+      "grade": 1,
+      "name": "push_pink_block_left"
+     },
+     {
+      "grade": 2,
+      "name": "rotate_pink_block_left"
+     },
+     {
+      "grade": 1,
+      "name": "rotate_pink_block_right"
+     },
+     {
+      "grade": 0,
+      "name": "rotate_red_block_left"
+     }
+    ],
+    "divergence_all": {
+     "D_A": 0.12348061561803203,
+     "D_C": 0.2882635149771926
+    },
+    "divergence_by_grade": {
+     "0": {
+      "D_A": 0.29218858467041764,
+      "D_C": 0.1555231053237368
+     },
+     "1": {
+      "D_A": 0.16494426716638788,
+      "D_C": 0.4011655788209868
+     },
+     "2": {
+      "D_A": 0.5132191388008666,
+      "D_C": 0.7439846874465883
+     }
+    },
+    "grade_counts": {
+     "0": 3,
+     "1": 3,
+     "2": 1
+    },
+    "n_held_out": 7,
+    "n_sealed": 2,
+    "part": [
+     "pink",
+     "rotate"
+    ],
+    "sealed_sha256": "756e0a9bb04f49f6a8ea9d6456ed8d34e611fab47a8a5dc2e2320efb2f682aec",
+    "split": "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/split_s0.json",
+    "split_sha256": "96d1e829dafd0eb413a9422c9f9d226f07bb34568c0b1e6c9a77109a20a360fc"
+   },
+   "1": {
+    "dev": [
+     {
+      "grade": 2,
+      "name": "lift_red_block_drawer"
+     },
+     {
+      "grade": 2,
+      "name": "lift_red_block_slider"
+     },
+     {
+      "grade": 1,
+      "name": "push_pink_block_left"
+     },
+     {
+      "grade": 0,
+      "name": "rotate_blue_block_right"
+     },
+     {
+      "grade": 1,
+      "name": "rotate_pink_block_left"
+     }
+    ],
+    "divergence_all": {
+     "D_A": 0.01790072040825763,
+     "D_C": 0.41241432972318604
+    },
+    "divergence_by_grade": {
+     "0": {
+      "D_A": 0.29885092886536724,
+      "D_C": 0.16698177081371868
+     },
+     "1": {
+      "D_A": 0.39451556647602426,
+      "D_C": 0.44137218881140006
+     },
+     "2": {
+      "D_A": 0.3853900582530657,
+      "D_C": 0.6937464957399381
+     }
+    },
+    "grade_counts": {
+     "0": 2,
+     "1": 2,
+     "2": 3
+    },
+    "n_held_out": 7,
+    "n_sealed": 2,
+    "part": [
+     "red",
+     "lift"
+    ],
+    "sealed_sha256": "e786fccb38a10109a276eed9965e8a8af33175abdd7d587e05c61f095c0f57d4",
+    "split": "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/split_s1.json",
+    "split_sha256": "3b1cd87d84efdf7e3f529730147732cb28cff94303d5f98e32a919457c082d4e"
+   },
+   "2": {
+    "dev": [
+     {
+      "grade": 1,
+      "name": "lift_red_block_drawer"
+     },
+     {
+      "grade": 2,
+      "name": "push_blue_block_left"
+     },
+     {
+      "grade": 1,
+      "name": "push_blue_block_right"
+     },
+     {
+      "grade": 0,
+      "name": "push_pink_block_right"
+     },
+     {
+      "grade": 0,
+      "name": "rotate_pink_block_left"
+     }
+    ],
+    "divergence_all": {
+     "D_A": 0.12348061561803203,
+     "D_C": 0.2882635149771926
+    },
+    "divergence_by_grade": {
+     "0": {
+      "D_A": 0.29218858467041764,
+      "D_C": 0.13592983658425672
+     },
+     "1": {
+      "D_A": 0.16494426716638788,
+      "D_C": 0.41483816616209745
+     },
+     "2": {
+      "D_A": 0.5132191388008666,
+      "D_C": 0.7256095820023186
+     }
+    },
+    "grade_counts": {
+     "0": 3,
+     "1": 3,
+     "2": 1
+    },
+    "n_held_out": 7,
+    "n_sealed": 2,
+    "part": [
+     "blue",
+     "push"
+    ],
+    "sealed_sha256": "087532053f66ee57804689162dd493c5efa96d8a39a7c329976dd620f278e44e",
+    "split": "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/split_s2.json",
+    "split_sha256": "bdc008fb5776527fd17e7432ac24962ed8be2a59c9019bd5d7fe8cb87aef9d2d"
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c_calvin_split__calvin_c__frozen__s20261022__9149bef8",
+ "schema": 1,
+ "script": "experiments/c_calvin_split.py",
+ "seconds": null,
+ "seed": 20261022,
+ "source_commit": null,
+ "started": "2026-10-22T06:24:13+00:00",
+ "stream": null,
+ "tag": "frozen"
+}
