@@ -1,0 +1,112 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "addendum pre-registration: plan L L2 confirm read (pi0.5, 12 confirm tasks, dev protocol frozen)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4194327",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "426df7fe5ebd7d0dfa50b2097af5d8c70a20b6a2",
+  "short": "426df7fe"
+ },
+ "keys": {},
+ "metrics": {
+  "addendum_to": "m3_prereg__libero_ood__pl2_compose__s13__3e41ecc1",
+  "arms": [
+   "zs",
+   "tli_li",
+   "word",
+   "tmpl",
+   "tli_sel",
+   "role",
+   "rand",
+   "pos"
+  ],
+  "backbones": [
+   "pi05_libero"
+  ],
+  "confirm_tasks": [
+   "goal:0",
+   "goal:3",
+   "goal:8",
+   "goal:9",
+   "spatial:0",
+   "spatial:1",
+   "spatial:2",
+   "spatial:3",
+   "spatial:4",
+   "spatial:5",
+   "spatial:8",
+   "spatial:9"
+  ],
+  "demos": "results/lang/pl2/demos.json (unchanged; cross-policy, fresh_ood_pl2d BASE 3300000); demo 0 selects, demo 1 scores",
+  "demos_sha256": "08e1345e076ff37f41f72de8355c87f9bd64fe92b45a81b2fb4117bb48852b33",
+  "hypotheses": {
+   "H1": "pi0.5, l2sel > zs on the 12 confirm tasks x 20 episodes (exact sign test on discordant pairs, alpha 0.05)",
+   "H2": "pi0.5, l2sel non-inferior to tli_li (Li's hand pairs and lambda): 95% lower bound of the pooled success difference, two-level paired cluster bootstrap (tasks, then starts; B 10000, seed 0) above -0.05",
+   "descriptive": "l2sel vs rand / pos; each arm vs zs; g and p|g; per-task picks"
+  },
+  "l2sel_picks": {
+   "goal:0": "tmpl",
+   "goal:3": "word",
+   "goal:8": "tli_sel",
+   "goal:9": "role",
+   "spatial:0": "tmpl",
+   "spatial:1": "tmpl",
+   "spatial:2": "word",
+   "spatial:3": "tli_sel",
+   "spatial:4": "tli_sel",
+   "spatial:5": "tli_sel",
+   "spatial:8": "tli_sel",
+   "spatial:9": "tli_sel"
+  },
+  "offline_sha256": {
+   "goal:0": "1ae9ff2c57220a0f8cd0e875eee5431330cf6aec78d54a5cb4c32401d52d5436",
+   "goal:3": "c56a0019870686ed890c8566dcfca1518248736d7abee22e46b261bf17027de6",
+   "goal:8": "eed574c58c598ff045279b3422e52babde5084c44dedd9271d541efb31d2ac8a",
+   "goal:9": "c839533d6f33a5371493047ca69ae1c224240529d4e6e7d4d0598e0f18b4590a",
+   "spatial:0": "0e54f0e9149b8f66a4507e28b2b95923b1bcbe670c16102617aa0499fd20f667",
+   "spatial:1": "5776c257a2e609f8f5d7e2a830c3b915be454d665f2b1f03237bd8c03d194d1b",
+   "spatial:2": "eea6f2f9437c830a89a77585cd5d85e81bcea5498b0efccba9c2074c2f872f73",
+   "spatial:3": "5f1fd926dc77cf55b32db516e4e1e8da27d4dc8c325d5ee64603f4ea72fbb32e",
+   "spatial:4": "af8fff23a67296a5e90bdbe61700c6fdb924cf22f5d6a5710acf9eb9858f0983",
+   "spatial:5": "a0e52a3af666af28f7ebc499193bb2770502e8fddd870ef49c51928eadf9bb53",
+   "spatial:8": "8f1c100358802103974bd32f84cae3e86fbfc8ae445982cc5632dd9ecce39515",
+   "spatial:9": "066c41f76c41afba0f666bebc517f92cf22c27c02fd122bda0d4cdaa14658977"
+  },
+  "protocol": "the dev protocol of pl2_compose / pl2_dev applied unchanged to the 12 confirm tasks",
+  "scope": "pi0.5 only; pi0 confirm not run in this read",
+  "selection": "frozen offline files (demo-0 flow loss only; l2sel = lowest demo-0 loss among word/tmpl/tli_sel/role; no zero-shot fallback, no guard; spans {1-17,1-6,7-12,13-17}; lambda {12,24,36}); not re-run",
+  "states": "fresh_ood_pl2 (BASE 3400000, 20 per task; confirm tasks never rolled on it), noise seed 13, paired, bind track",
+  "written_before": "any closed-loop episode on the 12 confirm tasks"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__pl2_confirm__s13__426df7fe",
+ "schema": 1,
+ "script": "experiments/prereg/pl2_confirm.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-22T21:50:45+00:00",
+ "stream": null,
+ "tag": "pl2_confirm"
+}

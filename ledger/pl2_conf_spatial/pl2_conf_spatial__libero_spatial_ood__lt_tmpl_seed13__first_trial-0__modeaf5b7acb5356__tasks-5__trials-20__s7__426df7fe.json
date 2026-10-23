@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_conf_spatial_libero_spatial_ood_5_lt_tmpl_seed13.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_spatial_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/lang/pl2/specs/pi05_libero_libero_spatial_ood_5_tmpl.json SUITE=libero_spatial_ood TASKS=5 TRIALS=20 (job 4194402)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_ood_pl2",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2_conf_spatial_libero_spatial_ood_5_lt_tmpl_seed13.json",
+   "port": 9399,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_spatial_ood",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "5",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4194402",
+  "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/lang/pl2/specs/pi05_libero_libero_spatial_ood_5_tmpl.json"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "puma.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4194402",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "pl2_conf_spatial",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "426df7fe5ebd7d0dfa50b2097af5d8c70a20b6a2",
+  "short": "426df7fe"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/lang/pl2/specs/pi05_libero_libero_spatial_ood_5_tmpl.json",
+  "tasks": "5",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 732.2147147655487,
+  "success_rate": 0.05,
+  "tasks": {
+   "5": {
+    "errors": 0,
+    "language": "put the bowl on cookie box on the cabinet",
+    "mean_steps": 290.35,
+    "n": 20,
+    "success_rate": 0.05
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "pl2_conf_spatial__libero_spatial_ood__lt_tmpl_seed13__first_trial-0__modeaf5b7acb5356__tasks-5__trials-20__s7__426df7fe",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-22T23:21:26+00:00",
+ "stream": null,
+ "tag": "lt_tmpl_seed13"
+}

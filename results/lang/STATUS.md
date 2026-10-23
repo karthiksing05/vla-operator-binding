@@ -33,3 +33,12 @@
   pl2_dev.png. Dev closed loop: pi0.5 l2sel 91/160 vs zs 63 (H1 pass) vs Li-TLI 84 (H2 pass, lb -0.031); pi0 l2sel 39 vs zs 11 (H1
   pass) vs Li-TLI 106 (H2 FAIL). Word transplants collapse on pi0 closed loop (2-3/160) despite offline wins. T8 pos control worst
   arm on pi0.5. Confirm read (12 tasks) not run.
+- 2026-10-22 17:50 (L2 confirm, pi0.5 only): addendum prereg recorded BEFORE any confirm episode (ledger
+  m3_prereg__libero_ood__pl2_confirm__s13__426df7fe, experiments/prereg/pl2_confirm.py): dev protocol unchanged on the 12 confirm
+  tasks; frozen offline picks (sha256 in the row); 8 arms; fresh_ood_pl2 (confirm starts never rolled). pl2_compose.py gained
+  --launch-confirm / --read-confirm (exp pl2_conf, ledger pl2_confirm). Packs 4194384-407 (overcap, 4 lanes).
+- 2026-10-22 21:30 (L2 confirm): DONE, ledger pl2_confirm/pl2_confirm__libero_ood__read__s13__eb3a3b2f.json (payload
+  results/lang/pl2/confirm_read.json, figure figures/robot/pl2_confirm.png). pi0.5, 12 tasks x 20: l2sel 128/240, zs 93, tli_li 169.
+  H1 PASSES (discordant 77:42, sign p 0.0017; task-bootstrap diff +0.146 [-0.171, +0.442]). H2 FAILS (l2sel - tli_li -0.171
+  [-0.375, +0.004]). Selector failures without a guard: spatial:0 tmpl 0/20 vs zs 20; spatial:3 tli_sel 7 vs zs 20. One pack
+  instance (spatial:2 tmpl) OOM'd at model load on cheetah (foreign GPU process), resubmitted alone (4196320), same starts/seed.

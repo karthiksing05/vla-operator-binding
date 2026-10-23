@@ -19,6 +19,8 @@ Demo 0 = the first success, demo 1 = the second.  LIBERO-90: the task's own IPEC
     $PY experiments/pl2_compose.py --offline-read [--record]       tables, figure, ledger pl2_offline
     $PY experiments/pl2_compose.py --launch-dev [--dry]            closed loop: 8 dev tasks x 20 episodes x arms, fresh_ood_pl2
     $PY experiments/pl2_compose.py --read-dev [--record]           success, part correctness, ledger pl2_dev, figures
+    $PY experiments/pl2_compose.py --launch-confirm [--dry] [--bbs pi05_libero]   the 12 confirm tasks (prereg addendum
+    $PY experiments/pl2_compose.py --read-confirm [--record]       m3_prereg tag pl2_confirm), exp pl2_conf, ledger pl2_confirm
 """
 import argparse
 import glob
@@ -687,18 +689,19 @@ def dev_arms(bb, k, v):
     return out, d
 
 
-def launch_dev(dry, bbs=BBS):
+def launch_dev(dry, bbs=BBS, which="dev", prefix="pl2_dev"):
+    """which='dev' (8 tasks) or 'confirm' (the other 12; prereg addendum m3_prereg tag pl2_confirm, exp prefix pl2_conf)."""
     pl = plan()
     specs = []
     for bb in bbs:
-        for k in split()["dev"]:
+        for k in split()[which]:
             v = pl["tasks"][k]
             if not os.path.exists(os.path.join(OUT, "offline", f"{short(bb)}_{sh(k)}.json")):
                 print("no offline selection yet:", bb, k)
                 continue
             arms, _ = dev_arms(bb, k, v)
             for arm in dict.fromkeys(arms[n] for n in ARMS_DEV):
-                specs.append(_spec(v["index"], arm, v["suite"], bb, f"pl2_dev_{k.split(':')[0]}", 20, TEST_DIR))
+                specs.append(_spec(v["index"], arm, v["suite"], bb, f"{prefix}_{k.split(':')[0]}", 20, TEST_DIR))
     submit(specs, dry=dry)
 
 
@@ -709,22 +712,22 @@ def _eps(exp, v, arm, bb):
     return {int(e["trial"]): e for t in json.load(open(f))["tasks"].values() for e in t["episodes"]}
 
 
-def read_dev(record):
+def read_dev(record, bbs=BBS, which="dev", prefix="pl2_dev", ledger_exp="pl2_dev"):
     import e1_read as E1
     import h1_factor as HF
     pl = plan()
     named = HF.named_objects()
     res = {}
-    for bb in BBS:
+    for bb in bbs:
         x, parts, missing, sel = {}, {}, [], {}
-        for k in split()["dev"]:
+        for k in split()[which]:
             v = pl["tasks"][k]
             if not os.path.exists(os.path.join(OUT, "offline", f"{short(bb)}_{sh(k)}.json")):
                 missing.append(k)
                 continue
             arms, d = dev_arms(bb, k, v)
             sel[k] = d["l2sel"]
-            z = {n: _eps(f"pl2_dev_{k.split(':')[0]}", v, arms[n], bb) for n in ARMS_DEV + ("l2sel",)}
+            z = {n: _eps(f"{prefix}_{k.split(':')[0]}", v, arms[n], bb) for n in ARMS_DEV + ("l2sel",)}
             if None in z.values():
                 missing.append(k)
                 continue
@@ -753,24 +756,26 @@ def read_dev(record):
             r["per_task"] = parts
         res[short(bb)] = r
         if x:
-            print(f"\n[pl2 dev] {short(bb)}: {len(x)} tasks, missing {missing}; l2sel {sel}")
+            print(f"\n[pl2 {which}] {short(bb)}: {len(x)} tasks, missing {missing}; l2sel {sel}")
             for n in ("H1", "H2", "l2sel_vs_rand", "l2sel_vs_pos"):
                 h = r[n]
                 print(f"  {n:14} {h['x']} vs {h['y']} of {h['n']}, discordant {h['discordant']}, sign p {h['sign_p']:.3g}, "
                       f"diff {h['diff']['diff']:+.3f} [{h['diff']['lo']:+.3f}, {h['diff']['hi']:+.3f}]")
             for n, p in r["parts"].items():
                 print(f"  {n:8} success {p['success']}/{p['n']}  g {p['g']:.2f}  p|g {p['p']:.2f}")
-    json.dump(res, open(os.path.join(OUT, "dev_read.json"), "w", encoding="utf-8"), indent=1)
-    fig_dev(res)
+    json.dump(res, open(os.path.join(OUT, f"{which}_read.json"), "w", encoding="utf-8"), indent=1)
+    fig_dev(res, which)
     if record:
         from lifelong_ood import ledger
-        print(ledger.record("pl2_dev", bench="libero_ood", tag="read", seed=SEED, metrics=res,
+        print(ledger.record(ledger_exp, bench="libero_ood", tag="read", seed=SEED, metrics=res,
                             bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0),
-                            config=dict(states=TEST_DIR, episodes=20, split=split()), script="experiments/pl2_compose.py",
-                            command=" ".join(sys.argv)))
+                            config=dict(states=TEST_DIR, episodes=20, split=split(), which=which, backbones=list(bbs),
+                                        prereg="m3_prereg__libero_ood__pl2_compose__s13__3e41ecc1"
+                                        + ("" if which == "dev" else " + m3_prereg__libero_ood__pl2_confirm__s13__426df7fe")),
+                            script="experiments/pl2_compose.py", command=" ".join(sys.argv)))
 
 
-def fig_dev(res):
+def fig_dev(res, which="dev"):
     import matplotlib
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
@@ -788,17 +793,19 @@ def fig_dev(res):
         a.set_xticks(xs)
         a.set_xticklabels(ns, rotation=40, fontsize=8)
         a.set_ylim(0, 1)
-        a.set_title(f"{k}: {res[k]['tasks']} dev tasks x 20 episodes", fontsize=9)
+        a.set_title(f"{k}: {res[k]['tasks']} {which} tasks x 20 episodes", fontsize=9)
     ax[0][0].legend(fontsize=7)
     fig.tight_layout()
-    fig.savefig(os.path.join(FIG, "pl2_dev.png"), dpi=140)
-    print("figure", os.path.join(FIG, "pl2_dev.png"))
+    fig.savefig(os.path.join(FIG, f"pl2_{which}.png"), dpi=140)
+    print("figure", os.path.join(FIG, f"pl2_{which}.png"))
 
 
 if __name__ == "__main__":
     ap = argparse.ArgumentParser()
-    for f in ("split", "demos-launch", "demos-read", "offline", "offline-read", "launch-dev", "read-dev", "dry", "record"):
+    for f in ("split", "demos-launch", "demos-read", "offline", "offline-read", "launch-dev", "read-dev", "launch-confirm",
+              "read-confirm", "dry", "record"):
         ap.add_argument("--" + f, action="store_true")
+    ap.add_argument("--bbs", default="pi05_libero", help="confirm read backbones, '+'-joined (prereg addendum: pi0.5 only)")
     ap.add_argument("--backbone", default="pi05_libero")
     ap.add_argument("--set", default="ood", choices=("ood", "l90"))
     ap.add_argument("--only", default="")
@@ -818,3 +825,7 @@ if __name__ == "__main__":
         launch_dev(a.dry)
     if a.read_dev:
         read_dev(a.record)
+    if a.launch_confirm:
+        launch_dev(a.dry, tuple(a.bbs.split("+")), "confirm", "pl2_conf")
+    if a.read_confirm:
+        read_dev(a.record, tuple(a.bbs.split("+")), "confirm", "pl2_conf", "pl2_confirm")

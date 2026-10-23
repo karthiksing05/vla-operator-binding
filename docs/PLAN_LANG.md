@@ -321,3 +321,21 @@ Pre-registered tests:
 - a teleop-style demo source (these demos come from a policy, and on pi0.5 the source is TLI on pi0, which may favour the TLI
   family);
 - a guard that falls back to zs when no operator's demo-0 loss beats it.
+
+## L2 confirm read (pi0.5, 12 held-out Li tasks, 2026-10-22; ledger pl2_confirm, prereg addendum pl2_confirm)
+
+| arm | success / 240 |
+|---|---|
+| zero-shot | 93 |
+| Li's hand TLI pairs | 169 |
+| l2sel (demo-0 selection, frozen) | 128 |
+| tli_sel (demo-chosen TLI pair) | 143 |
+| word / tmpl / role | 83 / 92 / 107 |
+| rand / pos controls | 4 / 17 |
+
+- H1 (l2sel > zero-shot) passes: discordant 77:42, sign p 0.0017; the task-bootstrap CI includes 0 (+0.146 [-0.171, +0.442]).
+- H2 (l2sel non-inferior to Li's pairs) fails: -0.171 [-0.375, +0.004]. The dev non-inferiority does not replicate.
+- Failure mode: with no zero-shot fallback the selector breaks tasks zero-shot already solves (spatial:0 20 -> 0 with tmpl;
+  spatial:3 20 -> 7). The demo-chosen TLI pair is the strongest selected operator but stays below Li's hand pairs.
+- Next: L2b chooses a selection rule on dev only; the confirm rollouts (all 8 arms rolled on every task) then test that rule
+  once, as held-out data.
