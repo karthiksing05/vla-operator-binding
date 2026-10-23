@@ -1,0 +1,244 @@
+{
+ "suite": "libero_10_task",
+ "tasks": {
+  "5": {
+   "language": "pick up the cup and place it in the back compartment of the caddy",
+   "success_rate": 0.0,
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 68.35233950614929,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 89
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 67.22151613235474,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 73
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 64.285480260849,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 167
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 65.49241065979004,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 73
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 65.91340255737305,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 78
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 64.73012828826904,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 56
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 67.26045894622803,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 69
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 59.58057999610901,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 65
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 52.88832402229309,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 66
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 50.46113681793213,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 62
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 52.0524160861969,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 76
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 56.466474771499634,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 62
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 58.72760462760925,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 79
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 55.47125697135925,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 70
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 59.23868465423584,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 64
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 55.54040884971619,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 84
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 57.393240213394165,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 77
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 56.03935980796814,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 83
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 58.25695776939392,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 68
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "steps": 520,
+     "calls": 104,
+     "secs": 49.24763488769531,
+     "error": null,
+     "bound": "black_book_1",
+     "bound_step": 66
+    }
+   ]
+  }
+ },
+ "args": {
+  "host": "127.0.0.1",
+  "port": 9513,
+  "suite": "libero_10_task",
+  "tasks": "5",
+  "trials": 20,
+  "state_mod": 0,
+  "first_trial": 0,
+  "seed": 7,
+  "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_pro_pl2d",
+  "replan": 5,
+  "wait": 10,
+  "resize": 224,
+  "max_steps": 0,
+  "videos": 2,
+  "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2d_ten_libero_10_task_5_tli_36.28.24_seed13_pi0.json",
+  "no_meta": false,
+  "record": false,
+  "light": false,
+  "all_objects": false,
+  "objects": false,
+  "branches": "",
+  "seg": false,
+  "swap": "",
+  "swap_mode": "render",
+  "swap_cams": "both",
+  "swap_phase": "all",
+  "bind": "track"
+ },
+ "started": 1792750530.6892831,
+ "success_rate": 0.0,
+ "n_episodes": 20,
+ "secs": 1219.0279686450958
+}

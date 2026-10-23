@@ -1,0 +1,244 @@
+{
+ "suite": "libero_object_task",
+ "tasks": {
+  "3": {
+   "language": "pick the ketchup and place it in the basket",
+   "success_rate": 0.0,
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 38.596951961517334,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 127
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 44.17235469818115,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 80
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 32.121472120285034,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 111
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 32.69466543197632,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 170
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 33.243449687957764,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 107
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 33.30079197883606,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 89
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 32.75080418586731,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 99
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 33.526073932647705,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 143
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 33.9850287437439,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 88
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 34.24589562416077,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 99
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 47.406888246536255,
+     "error": null,
+     "bound": null,
+     "bound_step": null
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 37.98311185836792,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 105
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 35.174315214157104,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 95
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 35.69190168380737,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 99
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 46.02618765830994,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 122
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 43.168235063552856,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 83
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 36.35133218765259,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 82
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 41.94213557243347,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 86
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 42.11741280555725,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 145
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 37.2254798412323,
+     "error": null,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 115
+    }
+   ]
+  }
+ },
+ "args": {
+  "host": "127.0.0.1",
+  "port": 9485,
+  "suite": "libero_object_task",
+  "tasks": "3",
+  "trials": 20,
+  "state_mod": 0,
+  "first_trial": 0,
+  "seed": 7,
+  "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_pro_pl2d",
+  "replan": 5,
+  "wait": 10,
+  "resize": 224,
+  "max_steps": 0,
+  "videos": 2,
+  "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2d_object_libero_object_task_3_tli_21.25.24_seed13_pi0.json",
+  "no_meta": false,
+  "record": false,
+  "light": false,
+  "all_objects": false,
+  "objects": false,
+  "branches": "",
+  "seg": false,
+  "swap": "",
+  "swap_mode": "render",
+  "swap_cams": "both",
+  "swap_phase": "all",
+  "bind": "track"
+ },
+ "started": 1792748975.641824,
+ "success_rate": 0.0,
+ "n_episodes": 20,
+ "secs": 787.6551191806793
+}

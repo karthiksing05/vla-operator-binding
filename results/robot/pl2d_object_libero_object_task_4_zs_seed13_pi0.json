@@ -1,0 +1,244 @@
+{
+ "suite": "libero_object_task",
+ "tasks": {
+  "4": {
+   "language": "pick the milk and place it in the basket",
+   "success_rate": 0.0,
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 24.599911212921143,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 63
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 38.25026607513428,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 62
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 39.650383710861206,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 55
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 39.147942543029785,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 60
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 37.66561412811279,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 76
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 38.73093056678772,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 98
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 37.24142861366272,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 61
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 38.78699731826782,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 62
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 33.00593018531799,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 61
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 32.62186670303345,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 66
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 32.30386018753052,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 59
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 31.995645999908447,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 63
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 31.943050384521484,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 63
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 32.19303798675537,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 57
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 31.255164623260498,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 64
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 32.31896114349365,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 60
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 37.06058883666992,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 65
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 37.60105919837952,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 58
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 37.92031669616699,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 58
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 38.74735450744629,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 107
+    }
+   ]
+  }
+ },
+ "args": {
+  "host": "127.0.0.1",
+  "port": 9486,
+  "suite": "libero_object_task",
+  "tasks": "4",
+  "trials": 20,
+  "state_mod": 0,
+  "first_trial": 0,
+  "seed": 7,
+  "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_pro_pl2d",
+  "replan": 5,
+  "wait": 10,
+  "resize": 224,
+  "max_steps": 0,
+  "videos": 2,
+  "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2d_object_libero_object_task_4_zs_seed13_pi0.json",
+  "no_meta": false,
+  "record": false,
+  "light": false,
+  "all_objects": false,
+  "objects": false,
+  "branches": "",
+  "seg": false,
+  "swap": "",
+  "swap_mode": "render",
+  "swap_cams": "both",
+  "swap_phase": "all",
+  "bind": "track"
+ },
+ "started": 1792749314.4004064,
+ "success_rate": 0.0,
+ "n_episodes": 20,
+ "secs": 737.2106909751892
+}

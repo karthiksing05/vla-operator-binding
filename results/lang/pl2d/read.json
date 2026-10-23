@@ -1,0 +1,916 @@
+{
+ "pi05": {
+  "backbone": "pi05_libero",
+  "tasks": 21,
+  "missing": [],
+  "per_task": {
+   "goal:1": {
+    "zs": 1,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@10.17.24",
+     "blind_cover": "tli@10.17.24",
+     "scene_random": "tli@14.13.24"
+    },
+    "level": "scene"
+   },
+   "goal:2": {
+    "zs": 3,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@11.13.24",
+     "blind_cover": "tli@11.13.24",
+     "scene_random": "tli@10.13.24"
+    },
+    "level": "scene"
+   },
+   "goal:4": {
+    "zs": 1,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@18.10.24",
+     "blind_cover": "tli@18.10.24",
+     "scene_random": "tli@18.17.24"
+    },
+    "level": "scene"
+   },
+   "goal:6": {
+    "zs": 3,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@11.13.24",
+     "blind_cover": "tli@11.13.24",
+     "scene_random": "tli@14.17.24"
+    },
+    "level": "scene"
+   },
+   "goal:8": {
+    "zs": 9,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 6,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@11.10.24",
+     "blind_cover": "tli@11.10.24",
+     "scene_random": "tli@14.10.24"
+    },
+    "level": "scene"
+   },
+   "goal:9": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@13.11.24",
+     "blind_cover": "tli@13.11.24",
+     "scene_random": "tli@13.17.24"
+    },
+    "level": "scene"
+   },
+   "object:0": {
+    "zs": 3,
+    "scene_cover": 8,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@22.21.24",
+     "blind_cover": "tli@13.22.24",
+     "scene_random": "tli@20.23.24"
+    },
+    "level": "suite"
+   },
+   "object:2": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 8,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@28.23.24",
+     "blind_cover": "tli@28.23.24",
+     "scene_random": "tli@24.21.24"
+    },
+    "level": "suite"
+   },
+   "object:3": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@21.25.24",
+     "blind_cover": "tli@21.25.24",
+     "scene_random": "tli@28.25.24"
+    },
+    "level": "suite"
+   },
+   "object:4": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@25.21.24",
+     "blind_cover": "tli@25.21.24",
+     "scene_random": "tli@20.29.24"
+    },
+    "level": "suite"
+   },
+   "object:5": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@23.28.24",
+     "blind_cover": "tli@23.28.24",
+     "scene_random": "tli@28.26.24"
+    },
+    "level": "suite"
+   },
+   "object:6": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@20.21.24",
+     "blind_cover": "tli@20.21.24",
+     "scene_random": "tli@23.26.24"
+    },
+    "level": "suite"
+   },
+   "object:7": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 2,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@27.21.24",
+     "blind_cover": "tli@27.21.24",
+     "scene_random": "tli@27.28.24"
+    },
+    "level": "suite"
+   },
+   "object:8": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@26.21.24",
+     "blind_cover": "tli@26.21.24",
+     "scene_random": "tli@22.27.24"
+    },
+    "level": "suite"
+   },
+   "object:9": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 4,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@29.21.24",
+     "blind_cover": "tli@29.21.24",
+     "scene_random": "tli@22.27.24"
+    },
+    "level": "suite"
+   },
+   "spatial:0": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@34.32.24",
+     "blind_cover": "tli@34.32.24",
+     "scene_random": "tli@32.38.24"
+    },
+    "level": "scene"
+   },
+   "spatial:2": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@36.34.24",
+     "blind_cover": "tli@36.34.24",
+     "scene_random": "tli@31.32.24"
+    },
+    "level": "scene"
+   },
+   "spatial:3": {
+    "zs": 2,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@31.39.24",
+     "blind_cover": "tli@31.39.24",
+     "scene_random": "tli@30.34.24"
+    },
+    "level": "scene"
+   },
+   "spatial:4": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@31.39.24",
+     "blind_cover": "tli@31.39.24",
+     "scene_random": "tli@30.38.24"
+    },
+    "level": "scene"
+   },
+   "spatial:8": {
+    "zs": 11,
+    "scene_cover": 11,
+    "blind_cover": 11,
+    "scene_random": 5,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@37.32.24",
+     "blind_cover": "tli@37.32.24",
+     "scene_random": "tli@32.35.24"
+    },
+    "level": "scene"
+   },
+   "ten:5": {
+    "zs": 1,
+    "scene_cover": 4,
+    "blind_cover": 4,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@21.9.24",
+     "blind_cover": "tli@21.9.24",
+     "scene_random": "tli@36.28.24"
+    },
+    "level": "all"
+   }
+  },
+  "totals": {
+   "zs": 34,
+   "scene_cover": 23,
+   "blind_cover": 15,
+   "scene_random": 25
+  },
+  "n": 420,
+  "H1": {
+   "x": 23,
+   "y": 34,
+   "n": 420,
+   "tasks": 21,
+   "diff": {
+    "diff": -0.02619047619047619,
+    "lo": -0.0880952380952381,
+    "hi": 0.030952380952380953,
+    "lo90": -0.07857142857142857,
+    "hi90": 0.02142857142857143,
+    "n_pairs": 420,
+    "n_tasks": 21
+   },
+   "discordant": [
+    13,
+    24
+   ],
+   "sign_p": 0.09887174959294498,
+   "arms": [
+    "scene_cover",
+    "zs"
+   ],
+   "holm_rejected": false,
+   "passes": false
+  },
+  "H2": {
+   "x": 23,
+   "y": 15,
+   "n": 420,
+   "tasks": 21,
+   "diff": {
+    "diff": 0.01904761904761905,
+    "lo": 0.0,
+    "hi": 0.06428571428571428,
+    "lo90": 0.0,
+    "hi90": 0.05476190476190476,
+    "n_pairs": 420,
+    "n_tasks": 21
+   },
+   "discordant": [
+    8,
+    0
+   ],
+   "sign_p": 0.0078125,
+   "arms": [
+    "scene_cover",
+    "blind_cover"
+   ],
+   "holm_rejected": true,
+   "passes": true
+  },
+  "H3": {
+   "x": 23,
+   "y": 25,
+   "n": 420,
+   "tasks": 21,
+   "diff": {
+    "diff": -0.004761904761904762,
+    "lo": -0.08333333333333333,
+    "hi": 0.07142857142857142,
+    "lo90": -0.07142857142857142,
+    "hi90": 0.05714285714285714,
+    "n_pairs": 420,
+    "n_tasks": 21
+   },
+   "discordant": [
+    18,
+    20
+   ],
+   "sign_p": 0.8714146793645341,
+   "arms": [
+    "scene_cover",
+    "scene_random"
+   ],
+   "holm_rejected": false,
+   "passes": false
+  },
+  "desc": {
+   "blind_vs_zs": {
+    "x": 15,
+    "y": 34,
+    "n": 420,
+    "tasks": 21,
+    "diff": {
+     "diff": -0.04523809523809524,
+     "lo": -0.10476190476190476,
+     "hi": 0.002380952380952381,
+     "lo90": -0.09285714285714286,
+     "hi90": -0.004761904761904762,
+     "n_pairs": 420,
+     "n_tasks": 21
+    },
+    "discordant": [
+     6,
+     25
+    ],
+    "sign_p": 0.0008779102936387062
+   },
+   "random_vs_zs": {
+    "x": 25,
+    "y": 34,
+    "n": 420,
+    "tasks": 21,
+    "diff": {
+     "diff": -0.02142857142857143,
+     "lo": -0.08571428571428572,
+     "hi": 0.05,
+     "lo90": -0.0761904761904762,
+     "hi90": 0.03571428571428571,
+     "n_pairs": 420,
+     "n_tasks": 21
+    },
+    "discordant": [
+     18,
+     27
+    ],
+    "sign_p": 0.23269319190831084
+   },
+   "scene_vs_blind_differing": {
+    "x": 8,
+    "y": 0,
+    "n": 20,
+    "tasks": 1,
+    "diff": {
+     "diff": 0.4,
+     "lo": 0.2,
+     "hi": 0.6,
+     "lo90": 0.25,
+     "hi90": 0.6,
+     "n_pairs": 20,
+     "n_tasks": 1
+    },
+    "discordant": [
+     8,
+     0
+    ],
+    "sign_p": 0.0078125
+   }
+  },
+  "by_suite": {
+   "goal": {
+    "zs": 17,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 6,
+    "tasks": 6
+   },
+   "spatial": {
+    "zs": 13,
+    "scene_cover": 11,
+    "blind_cover": 11,
+    "scene_random": 5,
+    "tasks": 5
+   },
+   "object": {
+    "zs": 3,
+    "scene_cover": 8,
+    "blind_cover": 0,
+    "scene_random": 14,
+    "tasks": 9
+   },
+   "ten": {
+    "zs": 1,
+    "scene_cover": 4,
+    "blind_cover": 4,
+    "scene_random": 0,
+    "tasks": 1
+   }
+  }
+ },
+ "pi0": {
+  "backbone": "pi0_libero",
+  "tasks": 21,
+  "missing": [],
+  "per_task": {
+   "goal:1": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@10.17.24",
+     "blind_cover": "tli@10.17.24",
+     "scene_random": "tli@14.13.24"
+    },
+    "level": "scene"
+   },
+   "goal:2": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@11.13.24",
+     "blind_cover": "tli@11.13.24",
+     "scene_random": "tli@10.13.24"
+    },
+    "level": "scene"
+   },
+   "goal:4": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@18.10.24",
+     "blind_cover": "tli@18.10.24",
+     "scene_random": "tli@18.17.24"
+    },
+    "level": "scene"
+   },
+   "goal:6": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@11.13.24",
+     "blind_cover": "tli@11.13.24",
+     "scene_random": "tli@14.17.24"
+    },
+    "level": "scene"
+   },
+   "goal:8": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 3,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@11.10.24",
+     "blind_cover": "tli@11.10.24",
+     "scene_random": "tli@14.10.24"
+    },
+    "level": "scene"
+   },
+   "goal:9": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@13.11.24",
+     "blind_cover": "tli@13.11.24",
+     "scene_random": "tli@13.17.24"
+    },
+    "level": "scene"
+   },
+   "object:0": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@22.21.24",
+     "blind_cover": "tli@13.22.24",
+     "scene_random": "tli@20.23.24"
+    },
+    "level": "suite"
+   },
+   "object:2": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@28.23.24",
+     "blind_cover": "tli@28.23.24",
+     "scene_random": "tli@24.21.24"
+    },
+    "level": "suite"
+   },
+   "object:3": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@21.25.24",
+     "blind_cover": "tli@21.25.24",
+     "scene_random": "tli@28.25.24"
+    },
+    "level": "suite"
+   },
+   "object:4": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@25.21.24",
+     "blind_cover": "tli@25.21.24",
+     "scene_random": "tli@20.29.24"
+    },
+    "level": "suite"
+   },
+   "object:5": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@23.28.24",
+     "blind_cover": "tli@23.28.24",
+     "scene_random": "tli@28.26.24"
+    },
+    "level": "suite"
+   },
+   "object:6": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@20.21.24",
+     "blind_cover": "tli@20.21.24",
+     "scene_random": "tli@23.26.24"
+    },
+    "level": "suite"
+   },
+   "object:7": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@27.21.24",
+     "blind_cover": "tli@27.21.24",
+     "scene_random": "tli@27.28.24"
+    },
+    "level": "suite"
+   },
+   "object:8": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@26.21.24",
+     "blind_cover": "tli@26.21.24",
+     "scene_random": "tli@22.27.24"
+    },
+    "level": "suite"
+   },
+   "object:9": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@29.21.24",
+     "blind_cover": "tli@29.21.24",
+     "scene_random": "tli@22.27.24"
+    },
+    "level": "suite"
+   },
+   "spatial:0": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@34.32.24",
+     "blind_cover": "tli@34.32.24",
+     "scene_random": "tli@32.38.24"
+    },
+    "level": "scene"
+   },
+   "spatial:2": {
+    "zs": 1,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@36.34.24",
+     "blind_cover": "tli@36.34.24",
+     "scene_random": "tli@31.32.24"
+    },
+    "level": "scene"
+   },
+   "spatial:3": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@31.39.24",
+     "blind_cover": "tli@31.39.24",
+     "scene_random": "tli@30.34.24"
+    },
+    "level": "scene"
+   },
+   "spatial:4": {
+    "zs": 1,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@31.39.24",
+     "blind_cover": "tli@31.39.24",
+     "scene_random": "tli@30.38.24"
+    },
+    "level": "scene"
+   },
+   "spatial:8": {
+    "zs": 10,
+    "scene_cover": 4,
+    "blind_cover": 4,
+    "scene_random": 8,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@37.32.24",
+     "blind_cover": "tli@37.32.24",
+     "scene_random": "tli@32.35.24"
+    },
+    "level": "scene"
+   },
+   "ten:5": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "arms": {
+     "zs": "zs",
+     "scene_cover": "tli@21.9.24",
+     "blind_cover": "tli@21.9.24",
+     "scene_random": "tli@36.28.24"
+    },
+    "level": "all"
+   }
+  },
+  "totals": {
+   "zs": 12,
+   "scene_cover": 4,
+   "blind_cover": 4,
+   "scene_random": 11
+  },
+  "n": 420,
+  "H1": {
+   "x": 4,
+   "y": 12,
+   "n": 420,
+   "tasks": 21,
+   "diff": {
+    "diff": -0.01904761904761905,
+    "lo": -0.05476190476190476,
+    "hi": 0.0,
+    "lo90": -0.047619047619047616,
+    "hi90": 0.0,
+    "n_pairs": 420,
+    "n_tasks": 21
+   },
+   "discordant": [
+    0,
+    8
+   ],
+   "sign_p": 0.0078125,
+   "arms": [
+    "scene_cover",
+    "zs"
+   ],
+   "holm_rejected": true,
+   "passes": false
+  },
+  "H2": {
+   "x": 4,
+   "y": 4,
+   "n": 420,
+   "tasks": 21,
+   "diff": {
+    "diff": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "lo90": 0.0,
+    "hi90": 0.0,
+    "n_pairs": 420,
+    "n_tasks": 21
+   },
+   "discordant": [
+    0,
+    0
+   ],
+   "sign_p": 1.0,
+   "arms": [
+    "scene_cover",
+    "blind_cover"
+   ],
+   "holm_rejected": false,
+   "passes": false
+  },
+  "H3": {
+   "x": 4,
+   "y": 11,
+   "n": 420,
+   "tasks": 21,
+   "diff": {
+    "diff": -0.016666666666666666,
+    "lo": -0.047619047619047616,
+    "hi": 0.0,
+    "lo90": -0.04285714285714286,
+    "hi90": 0.0,
+    "n_pairs": 420,
+    "n_tasks": 21
+   },
+   "discordant": [
+    1,
+    8
+   ],
+   "sign_p": 0.0390625,
+   "arms": [
+    "scene_cover",
+    "scene_random"
+   ],
+   "holm_rejected": false,
+   "passes": false
+  },
+  "desc": {
+   "blind_vs_zs": {
+    "x": 4,
+    "y": 12,
+    "n": 420,
+    "tasks": 21,
+    "diff": {
+     "diff": -0.01904761904761905,
+     "lo": -0.05476190476190476,
+     "hi": 0.0,
+     "lo90": -0.047619047619047616,
+     "hi90": 0.0,
+     "n_pairs": 420,
+     "n_tasks": 21
+    },
+    "discordant": [
+     0,
+     8
+    ],
+    "sign_p": 0.0078125
+   },
+   "random_vs_zs": {
+    "x": 11,
+    "y": 12,
+    "n": 420,
+    "tasks": 21,
+    "diff": {
+     "diff": -0.002380952380952381,
+     "lo": -0.02619047619047619,
+     "hi": 0.02142857142857143,
+     "lo90": -0.02142857142857143,
+     "hi90": 0.016666666666666666,
+     "n_pairs": 420,
+     "n_tasks": 21
+    },
+    "discordant": [
+     5,
+     6
+    ],
+    "sign_p": 1.0
+   },
+   "scene_vs_blind_differing": {
+    "x": 0,
+    "y": 0,
+    "n": 20,
+    "tasks": 1,
+    "diff": {
+     "diff": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "lo90": 0.0,
+     "hi90": 0.0,
+     "n_pairs": 20,
+     "n_tasks": 1
+    },
+    "discordant": [
+     0,
+     0
+    ],
+    "sign_p": 1.0
+   }
+  },
+  "by_suite": {
+   "goal": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 3,
+    "tasks": 6
+   },
+   "spatial": {
+    "zs": 12,
+    "scene_cover": 4,
+    "blind_cover": 4,
+    "scene_random": 8,
+    "tasks": 5
+   },
+   "object": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "tasks": 9
+   },
+   "ten": {
+    "zs": 0,
+    "scene_cover": 0,
+    "blind_cover": 0,
+    "scene_random": 0,
+    "tasks": 1
+   }
+  }
+ }
+}

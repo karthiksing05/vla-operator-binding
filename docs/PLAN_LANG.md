@@ -363,3 +363,29 @@ Pre-registered tests:
   in the basket") and loses (pi0 13 vs 178 / 220 on those tasks).
 - Reading: matching the words in their role is not enough; the source must come from the same scene. This agrees with L0b
   (a word's effect moves into the scene's image tokens by layer 2): language prototypes are scene-bound keys.
+
+## L2d: hierarchical scene key for demo-free TLI pairs (2026-10-23; prereg pl2d_scene, ledger pl2d_picks / pl2d_read; LIBERO-PRO task split, fresh starts BASE 5300000)
+
+Rule (`experiments/pl2d_scene.py`): candidates = pl2c pool prompts in the new task's scene (factors.parse scene rule, base
+suite), else its base suite, else all (each only with >= 2); inside, pl2c's same-role coverage, 2 sources, pl2c slots; lambda 24
+(Li's modal lambda; Li's map has no entry for new tasks). Arms: zs, scene_cover, blind_cover (pl2c), scene_random (2 seeded
+draws from scene_cover's candidates).
+
+- **Design check (Li's 20, descriptive):** the scene rule reproduces Li's exact pair on 3 / 20 (pl2c: 9 / 20). Li's two sources
+  are both in-scene on only the 10 Goal-OOD tasks; every Spatial-OOD pair takes a LIBERO-Goal source. So the L2c reading "Li's
+  sources come from the task's own scene" holds only for Goal-OOD.
+- **Test set:** 21 G22-eligible LIBERO-PRO task-split tasks with pi0.5 G22 fresh-t zs <= 15 / 20 (all qualifying; Goal 6, Object
+  9, Spatial 5, LIBERO-10 1); used before only by G22. Offline, scene_cover = blind_cover on 20 / 21 tasks (only object:0 differs).
+
+| 21 tasks x 20 | zs | scene_cover | blind_cover | scene_random |
+|---|---|---|---|---|
+| pi0.5 | 34 | 23 | 15 | 25 |
+| pi0 | 12 | 4 | 4 | 11 |
+
+- pi0.5: H1 fails (23 vs 34, discordant 13:24, p 0.099); H2 passes under Holm (8:0, p 0.0078), all on object:0 (8 vs 0) alone; H3
+  fails (23 vs 25, p 0.87).
+- pi0: H1 is significant in the WRONG direction (4 vs 12, 0:8, p 0.0078); H2 has no discordant pairs; H3 fails (4 vs 11, p 0.039,
+  not Holm-significant, wrong direction).
+- Reading: on new instructions in the training scenes, TLI with a coverage pair at lambda 24 does not beat zero-shot and on Goal
+  breaks what zs solves (pi0.5 Goal: zs 17, scene_cover 0). The scene key only matters where blind coverage leaves the scene, which
+  LIBERO-PRO's in-scene wording almost never triggers. Fixed-lambda TLI is not a safe default here.

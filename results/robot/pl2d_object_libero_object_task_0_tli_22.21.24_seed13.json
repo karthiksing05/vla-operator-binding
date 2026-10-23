@@ -1,0 +1,244 @@
+{
+ "suite": "libero_object_task",
+ "tasks": {
+  "0": {
+   "language": "pick the cream cheese and place it in the basket",
+   "success_rate": 0.4,
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 34.67011618614197,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 99
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "steps": 140,
+     "calls": 29,
+     "secs": 18.237785577774048,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 61
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 35.89434576034546,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 56
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 34.70954418182373,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 58
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "steps": 168,
+     "calls": 34,
+     "secs": 21.559558868408203,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 98
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 34.98683762550354,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 82
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "steps": 141,
+     "calls": 29,
+     "secs": 17.962707042694092,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 93
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 35.37039017677307,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 55
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 35.23119640350342,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 70
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 34.72744917869568,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 97
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "steps": 146,
+     "calls": 30,
+     "secs": 19.304513692855835,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 89
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 35.496522665023804,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 61
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 35.32435131072998,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 73
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "steps": 158,
+     "calls": 32,
+     "secs": 19.850049018859863,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 101
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "steps": 142,
+     "calls": 29,
+     "secs": 18.348145008087158,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 97
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 35.50871229171753,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 98
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "steps": 238,
+     "calls": 48,
+     "secs": 29.813091278076172,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 183
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "steps": 166,
+     "calls": 34,
+     "secs": 21.813764333724976,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 103
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 34.72787261009216,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 79
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 34.96657156944275,
+     "error": null,
+     "bound": "cream_cheese_1",
+     "bound_step": 64
+    }
+   ]
+  }
+ },
+ "args": {
+  "host": "127.0.0.1",
+  "port": 9432,
+  "suite": "libero_object_task",
+  "tasks": "0",
+  "trials": 20,
+  "state_mod": 0,
+  "first_trial": 0,
+  "seed": 7,
+  "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_pro_pl2d",
+  "replan": 5,
+  "wait": 10,
+  "resize": 224,
+  "max_steps": 0,
+  "videos": 2,
+  "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2d_object_libero_object_task_0_tli_22.21.24_seed13.json",
+  "no_meta": false,
+  "record": false,
+  "light": false,
+  "all_objects": false,
+  "objects": false,
+  "branches": "",
+  "seg": false,
+  "swap": "",
+  "swap_mode": "render",
+  "swap_cams": "both",
+  "swap_phase": "all",
+  "bind": "track"
+ },
+ "started": 1792745254.9880736,
+ "success_rate": 0.4,
+ "n_episodes": 20,
+ "secs": 618.3349874019623
+}

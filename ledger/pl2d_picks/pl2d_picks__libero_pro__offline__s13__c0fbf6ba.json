@@ -1,0 +1,536 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_pro",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/pl2d_scene.py --record-picks",
+ "config": {
+  "k": 2,
+  "lam": 24
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4200207",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "pl2d_picks",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c0fbf6ba14361f0a550f86e6d31fe12bc46316aa",
+  "short": "c0fbf6ba"
+ },
+ "keys": {},
+ "metrics": {
+  "arms": {
+   "goal:1": {
+    "blind_cover": "tli@10.17.24",
+    "level": "scene",
+    "n_candidates": 6,
+    "scene_cover": "tli@10.17.24",
+    "scene_random": "tli@14.13.24",
+    "zs": "zs"
+   },
+   "goal:2": {
+    "blind_cover": "tli@11.13.24",
+    "level": "scene",
+    "n_candidates": 6,
+    "scene_cover": "tli@11.13.24",
+    "scene_random": "tli@10.13.24",
+    "zs": "zs"
+   },
+   "goal:4": {
+    "blind_cover": "tli@18.10.24",
+    "level": "scene",
+    "n_candidates": 6,
+    "scene_cover": "tli@18.10.24",
+    "scene_random": "tli@18.17.24",
+    "zs": "zs"
+   },
+   "goal:6": {
+    "blind_cover": "tli@11.13.24",
+    "level": "scene",
+    "n_candidates": 6,
+    "scene_cover": "tli@11.13.24",
+    "scene_random": "tli@14.17.24",
+    "zs": "zs"
+   },
+   "goal:8": {
+    "blind_cover": "tli@11.10.24",
+    "level": "scene",
+    "n_candidates": 6,
+    "scene_cover": "tli@11.10.24",
+    "scene_random": "tli@14.10.24",
+    "zs": "zs"
+   },
+   "goal:9": {
+    "blind_cover": "tli@13.11.24",
+    "level": "scene",
+    "n_candidates": 6,
+    "scene_cover": "tli@13.11.24",
+    "scene_random": "tli@13.17.24",
+    "zs": "zs"
+   },
+   "object:0": {
+    "blind_cover": "tli@13.22.24",
+    "level": "suite",
+    "n_candidates": 10,
+    "scene_cover": "tli@22.21.24",
+    "scene_random": "tli@20.23.24",
+    "zs": "zs"
+   },
+   "object:2": {
+    "blind_cover": "tli@28.23.24",
+    "level": "suite",
+    "n_candidates": 10,
+    "scene_cover": "tli@28.23.24",
+    "scene_random": "tli@24.21.24",
+    "zs": "zs"
+   },
+   "object:3": {
+    "blind_cover": "tli@21.25.24",
+    "level": "suite",
+    "n_candidates": 10,
+    "scene_cover": "tli@21.25.24",
+    "scene_random": "tli@28.25.24",
+    "zs": "zs"
+   },
+   "object:4": {
+    "blind_cover": "tli@25.21.24",
+    "level": "suite",
+    "n_candidates": 10,
+    "scene_cover": "tli@25.21.24",
+    "scene_random": "tli@20.29.24",
+    "zs": "zs"
+   },
+   "object:5": {
+    "blind_cover": "tli@23.28.24",
+    "level": "suite",
+    "n_candidates": 10,
+    "scene_cover": "tli@23.28.24",
+    "scene_random": "tli@28.26.24",
+    "zs": "zs"
+   },
+   "object:6": {
+    "blind_cover": "tli@20.21.24",
+    "level": "suite",
+    "n_candidates": 10,
+    "scene_cover": "tli@20.21.24",
+    "scene_random": "tli@23.26.24",
+    "zs": "zs"
+   },
+   "object:7": {
+    "blind_cover": "tli@27.21.24",
+    "level": "suite",
+    "n_candidates": 10,
+    "scene_cover": "tli@27.21.24",
+    "scene_random": "tli@27.28.24",
+    "zs": "zs"
+   },
+   "object:8": {
+    "blind_cover": "tli@26.21.24",
+    "level": "suite",
+    "n_candidates": 10,
+    "scene_cover": "tli@26.21.24",
+    "scene_random": "tli@22.27.24",
+    "zs": "zs"
+   },
+   "object:9": {
+    "blind_cover": "tli@29.21.24",
+    "level": "suite",
+    "n_candidates": 10,
+    "scene_cover": "tli@29.21.24",
+    "scene_random": "tli@22.27.24",
+    "zs": "zs"
+   },
+   "spatial:0": {
+    "blind_cover": "tli@34.32.24",
+    "level": "scene",
+    "n_candidates": 10,
+    "scene_cover": "tli@34.32.24",
+    "scene_random": "tli@32.38.24",
+    "zs": "zs"
+   },
+   "spatial:2": {
+    "blind_cover": "tli@36.34.24",
+    "level": "scene",
+    "n_candidates": 10,
+    "scene_cover": "tli@36.34.24",
+    "scene_random": "tli@31.32.24",
+    "zs": "zs"
+   },
+   "spatial:3": {
+    "blind_cover": "tli@31.39.24",
+    "level": "scene",
+    "n_candidates": 10,
+    "scene_cover": "tli@31.39.24",
+    "scene_random": "tli@30.34.24",
+    "zs": "zs"
+   },
+   "spatial:4": {
+    "blind_cover": "tli@31.39.24",
+    "level": "scene",
+    "n_candidates": 10,
+    "scene_cover": "tli@31.39.24",
+    "scene_random": "tli@30.38.24",
+    "zs": "zs"
+   },
+   "spatial:8": {
+    "blind_cover": "tli@37.32.24",
+    "level": "scene",
+    "n_candidates": 10,
+    "scene_cover": "tli@37.32.24",
+    "scene_random": "tli@32.35.24",
+    "zs": "zs"
+   },
+   "ten:5": {
+    "blind_cover": "tli@21.9.24",
+    "level": "all",
+    "n_candidates": 27,
+    "scene_cover": "tli@21.9.24",
+    "scene_random": "tli@36.28.24",
+    "zs": "zs"
+   }
+  },
+  "li_design_check": {
+   "agreement": {
+    "exact": 3,
+    "n": 20,
+    "same_set": 3,
+    "t1": 10,
+    "t2": 8
+   },
+   "li_sources_in_task_scene": 10,
+   "per_task": {
+    "goal:0": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      13,
+      17
+     ],
+     "scene": [
+      13,
+      10
+     ]
+    },
+    "goal:1": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      14,
+      17
+     ],
+     "scene": [
+      10,
+      17
+     ]
+    },
+    "goal:2": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      13,
+      10
+     ],
+     "scene": [
+      17,
+      10
+     ]
+    },
+    "goal:3": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      13,
+      18
+     ],
+     "scene": [
+      18,
+      14
+     ]
+    },
+    "goal:4": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      14,
+      17
+     ],
+     "scene": [
+      11,
+      17
+     ]
+    },
+    "goal:5": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      14,
+      10
+     ],
+     "scene": [
+      11,
+      10
+     ]
+    },
+    "goal:6": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      14,
+      13
+     ],
+     "scene": [
+      11,
+      13
+     ]
+    },
+    "goal:7": {
+     "exact": true,
+     "level": "scene",
+     "li": [
+      13,
+      10
+     ],
+     "scene": [
+      13,
+      10
+     ]
+    },
+    "goal:8": {
+     "exact": true,
+     "level": "scene",
+     "li": [
+      13,
+      17
+     ],
+     "scene": [
+      13,
+      17
+     ]
+    },
+    "goal:9": {
+     "exact": true,
+     "level": "scene",
+     "li": [
+      13,
+      18
+     ],
+     "scene": [
+      13,
+      18
+     ]
+    },
+    "spatial:0": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      13,
+      35
+     ],
+     "scene": [
+      32,
+      33
+     ]
+    },
+    "spatial:1": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      13,
+      35
+     ],
+     "scene": [
+      32,
+      33
+     ]
+    },
+    "spatial:2": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      14,
+      32
+     ],
+     "scene": [
+      32,
+      33
+     ]
+    },
+    "spatial:3": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      14,
+      32
+     ],
+     "scene": [
+      32,
+      33
+     ]
+    },
+    "spatial:4": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      35,
+      17
+     ],
+     "scene": [
+      35,
+      30
+     ]
+    },
+    "spatial:5": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      35,
+      18
+     ],
+     "scene": [
+      35,
+      30
+     ]
+    },
+    "spatial:6": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      36,
+      18
+     ],
+     "scene": [
+      36,
+      34
+     ]
+    },
+    "spatial:7": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      36,
+      17
+     ],
+     "scene": [
+      36,
+      34
+     ]
+    },
+    "spatial:8": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      38,
+      18
+     ],
+     "scene": [
+      38,
+      39
+     ]
+    },
+    "spatial:9": {
+     "exact": false,
+     "level": "scene",
+     "li": [
+      38,
+      17
+     ],
+     "scene": [
+      38,
+      33
+     ]
+    }
+   },
+   "pl2c_agreement": {
+    "exact": 9,
+    "n": 20,
+    "same_set": 9,
+    "t1": 10,
+    "t2": 15
+   }
+  },
+  "overlap": {
+   "levels": {
+    "all": 1,
+    "scene": 11,
+    "suite": 9
+   },
+   "scene_eq_blind": 20,
+   "scene_eq_random": 0
+  },
+  "test_set": {
+   "qualifying": 21,
+   "rule": "G22-eligible LIBERO-PRO task-split task, pi0.5 G22 fresh-t zs <= 15/20, no plan-L use; all qualifying ordered by sha256('pl2d:13:'+key), first 24",
+   "sha256": "020ff2d104b3954215b2f40c346eff524999c9f65c75118d0b91d7aea86109be",
+   "tasks": [
+    "goal:1",
+    "goal:2",
+    "goal:4",
+    "goal:6",
+    "goal:8",
+    "goal:9",
+    "object:0",
+    "object:2",
+    "object:3",
+    "object:4",
+    "object:5",
+    "object:6",
+    "object:7",
+    "object:8",
+    "object:9",
+    "spatial:0",
+    "spatial:2",
+    "spatial:3",
+    "spatial:4",
+    "spatial:8",
+    "ten:5"
+   ],
+   "zs_pi05_fresh_t": {
+    "goal:1": 6,
+    "goal:2": 5,
+    "goal:4": 4,
+    "goal:6": 5,
+    "goal:8": 10,
+    "goal:9": 0,
+    "object:0": 1,
+    "object:2": 0,
+    "object:3": 0,
+    "object:4": 0,
+    "object:5": 0,
+    "object:6": 0,
+    "object:7": 3,
+    "object:8": 0,
+    "object:9": 0,
+    "spatial:0": 0,
+    "spatial:2": 0,
+    "spatial:3": 6,
+    "spatial:4": 0,
+    "spatial:8": 4,
+    "ten:5": 0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "pl2d_picks__libero_pro__offline__s13__c0fbf6ba",
+ "schema": 1,
+ "script": "experiments/pl2d_scene.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-23T08:44:09+00:00",
+ "stream": null,
+ "tag": "offline"
+}

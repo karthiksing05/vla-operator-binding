@@ -1,0 +1,6590 @@
+{
+ "pool": [
+  9,
+  10,
+  11,
+  13,
+  14,
+  17,
+  18,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39
+ ],
+ "train_scenes": {
+  "9": {
+   "suite": "libero_10",
+   "scene": "STUDY_SCENE1",
+   "name": "STUDY_SCENE1_pick_up_the_book_and_place_it_in_the_back_compartment_of_the_caddy"
+  },
+  "10": {
+   "suite": "libero_goal",
+   "scene": "libero_goal",
+   "name": "put_the_bowl_on_the_plate"
+  },
+  "11": {
+   "suite": "libero_goal",
+   "scene": "libero_goal",
+   "name": "put_the_wine_bottle_on_the_rack"
+  },
+  "13": {
+   "suite": "libero_goal",
+   "scene": "libero_goal",
+   "name": "put_the_cream_cheese_in_the_bowl"
+  },
+  "14": {
+   "suite": "libero_goal",
+   "scene": "libero_goal",
+   "name": "put_the_wine_bottle_on_top_of_the_cabinet"
+  },
+  "17": {
+   "suite": "libero_goal",
+   "scene": "libero_goal",
+   "name": "put_the_bowl_on_the_stove"
+  },
+  "18": {
+   "suite": "libero_goal",
+   "scene": "libero_goal",
+   "name": "put_the_bowl_on_top_of_the_cabinet"
+  },
+  "20": {
+   "suite": "libero_object",
+   "scene": "libero_object:basket+bbq_sauce+butter+chocolate_pudding+ketchup+orange_juice+salad_dressing",
+   "name": "pick_up_the_orange_juice_and_place_it_in_the_basket"
+  },
+  "21": {
+   "suite": "libero_object",
+   "scene": "libero_object:alphabet_soup+basket+bbq_sauce+cream_cheese+ketchup+milk+salad_dressing",
+   "name": "pick_up_the_ketchup_and_place_it_in_the_basket"
+  },
+  "22": {
+   "suite": "libero_object",
+   "scene": "libero_object:alphabet_soup+basket+butter+cream_cheese+milk+orange_juice+tomato_sauce",
+   "name": "pick_up_the_cream_cheese_and_place_it_in_the_basket"
+  },
+  "23": {
+   "suite": "libero_object",
+   "scene": "libero_object:alphabet_soup+basket+bbq_sauce+chocolate_pudding+cream_cheese+ketchup+salad_dressing",
+   "name": "pick_up_the_bbq_sauce_and_place_it_in_the_basket"
+  },
+  "24": {
+   "suite": "libero_object",
+   "scene": "libero_object:alphabet_soup+basket+butter+cream_cheese+milk+salad_dressing+tomato_sauce",
+   "name": "pick_up_the_alphabet_soup_and_place_it_in_the_basket"
+  },
+  "25": {
+   "suite": "libero_object",
+   "scene": "libero_object:basket+butter+chocolate_pudding+cream_cheese+milk+orange_juice+tomato_sauce",
+   "name": "pick_up_the_milk_and_place_it_in_the_basket"
+  },
+  "26": {
+   "suite": "libero_object",
+   "scene": "libero_object:alphabet_soup+basket+cream_cheese+ketchup+milk+salad_dressing+tomato_sauce",
+   "name": "pick_up_the_salad_dressing_and_place_it_in_the_basket"
+  },
+  "27": {
+   "suite": "libero_object",
+   "scene": "libero_object:basket+bbq_sauce+butter+chocolate_pudding+ketchup+orange_juice+tomato_sauce",
+   "name": "pick_up_the_butter_and_place_it_in_the_basket"
+  },
+  "28": {
+   "suite": "libero_object",
+   "scene": "libero_object:basket+bbq_sauce+butter+chocolate_pudding+milk+orange_juice+tomato_sauce",
+   "name": "pick_up_the_tomato_sauce_and_place_it_in_the_basket"
+  },
+  "29": {
+   "suite": "libero_object",
+   "scene": "libero_object:alphabet_soup+basket+bbq_sauce+chocolate_pudding+ketchup+orange_juice+salad_dressing",
+   "name": "pick_up_the_chocolate_pudding_and_place_it_in_the_basket"
+  },
+  "30": {
+   "suite": "libero_spatial",
+   "scene": "libero_spatial",
+   "name": "pick_up_the_black_bowl_next_to_the_cookie_box_and_place_it_on_the_plate"
+  },
+  "31": {
+   "suite": "libero_spatial",
+   "scene": "libero_spatial",
+   "name": "pick_up_the_black_bowl_in_the_top_drawer_of_the_wooden_cabinet_and_place_it_on_the_plate"
+  },
+  "32": {
+   "suite": "libero_spatial",
+   "scene": "libero_spatial",
+   "name": "pick_up_the_black_bowl_on_the_ramekin_and_place_it_on_the_plate"
+  },
+  "33": {
+   "suite": "libero_spatial",
+   "scene": "libero_spatial",
+   "name": "pick_up_the_black_bowl_on_the_stove_and_place_it_on_the_plate"
+  },
+  "34": {
+   "suite": "libero_spatial",
+   "scene": "libero_spatial",
+   "name": "pick_up_the_black_bowl_between_the_plate_and_the_ramekin_and_place_it_on_the_plate"
+  },
+  "35": {
+   "suite": "libero_spatial",
+   "scene": "libero_spatial",
+   "name": "pick_up_the_black_bowl_on_the_cookie_box_and_place_it_on_the_plate"
+  },
+  "36": {
+   "suite": "libero_spatial",
+   "scene": "libero_spatial",
+   "name": "pick_up_the_black_bowl_next_to_the_plate_and_place_it_on_the_plate"
+  },
+  "37": {
+   "suite": "libero_spatial",
+   "scene": "libero_spatial",
+   "name": "pick_up_the_black_bowl_next_to_the_ramekin_and_place_it_on_the_plate"
+  },
+  "38": {
+   "suite": "libero_spatial",
+   "scene": "libero_spatial",
+   "name": "pick_up_the_black_bowl_from_table_center_and_place_it_on_the_plate"
+  },
+  "39": {
+   "suite": "libero_spatial",
+   "scene": "libero_spatial",
+   "name": "pick_up_the_black_bowl_on_the_wooden_cabinet_and_place_it_on_the_plate"
+  }
+ },
+ "lam": 24,
+ "li_design_check": {
+  "agreement": {
+   "exact": 3,
+   "same_set": 3,
+   "t1": 10,
+   "t2": 8,
+   "n": 20
+  },
+  "pl2c_agreement": {
+   "exact": 9,
+   "same_set": 9,
+   "t1": 10,
+   "t2": 15,
+   "n": 20
+  },
+  "blind_equals_pl2c": 20,
+  "per_task": {
+   "goal:0": {
+    "text": "put the cream cheese in the basket",
+    "scene": "libero_goal",
+    "level": "scene",
+    "n_candidates": 6,
+    "li": [
+     13,
+     17
+    ],
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on the stove"
+    ],
+    "li_scenes": [
+     "libero_goal",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     13,
+     10
+    ],
+    "scene_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on the plate"
+    ],
+    "blind": [
+     13,
+     22
+    ],
+    "pl2c_exact": false,
+    "exact": false,
+    "same_set": false,
+    "t1": true,
+    "t2": false
+   },
+   "goal:1": {
+    "text": "put the orange juice on the stove",
+    "scene": "libero_goal",
+    "level": "scene",
+    "n_candidates": 6,
+    "li": [
+     14,
+     17
+    ],
+    "li_text": [
+     "put the wine bottle on top of the cabinet",
+     "put the bowl on the stove"
+    ],
+    "li_scenes": [
+     "libero_goal",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     10,
+     17
+    ],
+    "scene_text": [
+     "put the bowl on the plate",
+     "put the bowl on the stove"
+    ],
+    "blind": [
+     20,
+     17
+    ],
+    "pl2c_exact": false,
+    "exact": false,
+    "same_set": false,
+    "t1": false,
+    "t2": true
+   },
+   "goal:2": {
+    "text": "put the bbq source on the plate",
+    "scene": "libero_goal",
+    "level": "scene",
+    "n_candidates": 6,
+    "li": [
+     13,
+     10
+    ],
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on the plate"
+    ],
+    "li_scenes": [
+     "libero_goal",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     17,
+     10
+    ],
+    "scene_text": [
+     "put the bowl on the stove",
+     "put the bowl on the plate"
+    ],
+    "blind": [
+     23,
+     10
+    ],
+    "pl2c_exact": false,
+    "exact": false,
+    "same_set": false,
+    "t1": false,
+    "t2": true
+   },
+   "goal:3": {
+    "text": "put the tomato sauce on top of the cabinet",
+    "scene": "libero_goal",
+    "level": "scene",
+    "n_candidates": 6,
+    "li": [
+     13,
+     18
+    ],
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on top of the cabinet"
+    ],
+    "li_scenes": [
+     "libero_goal",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     18,
+     14
+    ],
+    "scene_text": [
+     "put the bowl on top of the cabinet",
+     "put the wine bottle on top of the cabinet"
+    ],
+    "blind": [
+     28,
+     18
+    ],
+    "pl2c_exact": false,
+    "exact": false,
+    "same_set": false,
+    "t1": false,
+    "t2": false
+   },
+   "goal:4": {
+    "text": "put the wine bottle on the stove",
+    "scene": "libero_goal",
+    "level": "scene",
+    "n_candidates": 6,
+    "li": [
+     14,
+     17
+    ],
+    "li_text": [
+     "put the wine bottle on top of the cabinet",
+     "put the bowl on the stove"
+    ],
+    "li_scenes": [
+     "libero_goal",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     11,
+     17
+    ],
+    "scene_text": [
+     "put the wine bottle on the rack",
+     "put the bowl on the stove"
+    ],
+    "blind": [
+     11,
+     17
+    ],
+    "pl2c_exact": false,
+    "exact": false,
+    "same_set": false,
+    "t1": false,
+    "t2": true
+   },
+   "goal:5": {
+    "text": "put the wine bottle on the plate",
+    "scene": "libero_goal",
+    "level": "scene",
+    "n_candidates": 6,
+    "li": [
+     14,
+     10
+    ],
+    "li_text": [
+     "put the wine bottle on top of the cabinet",
+     "put the bowl on the plate"
+    ],
+    "li_scenes": [
+     "libero_goal",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     11,
+     10
+    ],
+    "scene_text": [
+     "put the wine bottle on the rack",
+     "put the bowl on the plate"
+    ],
+    "blind": [
+     11,
+     10
+    ],
+    "pl2c_exact": false,
+    "exact": false,
+    "same_set": false,
+    "t1": false,
+    "t2": true
+   },
+   "goal:6": {
+    "text": "put the wine bottle in the bowl",
+    "scene": "libero_goal",
+    "level": "scene",
+    "n_candidates": 6,
+    "li": [
+     14,
+     13
+    ],
+    "li_text": [
+     "put the wine bottle on top of the cabinet",
+     "put the cream cheese in the bowl"
+    ],
+    "li_scenes": [
+     "libero_goal",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     11,
+     13
+    ],
+    "scene_text": [
+     "put the wine bottle on the rack",
+     "put the cream cheese in the bowl"
+    ],
+    "blind": [
+     11,
+     13
+    ],
+    "pl2c_exact": false,
+    "exact": false,
+    "same_set": false,
+    "t1": false,
+    "t2": true
+   },
+   "goal:7": {
+    "text": "put the cream cheese on the plate",
+    "scene": "libero_goal",
+    "level": "scene",
+    "n_candidates": 6,
+    "li": [
+     13,
+     10
+    ],
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on the plate"
+    ],
+    "li_scenes": [
+     "libero_goal",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     13,
+     10
+    ],
+    "scene_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on the plate"
+    ],
+    "blind": [
+     13,
+     10
+    ],
+    "pl2c_exact": true,
+    "exact": true,
+    "same_set": true,
+    "t1": true,
+    "t2": true
+   },
+   "goal:8": {
+    "text": "put the cream cheese on the stove",
+    "scene": "libero_goal",
+    "level": "scene",
+    "n_candidates": 6,
+    "li": [
+     13,
+     17
+    ],
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on the stove"
+    ],
+    "li_scenes": [
+     "libero_goal",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     13,
+     17
+    ],
+    "scene_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on the stove"
+    ],
+    "blind": [
+     13,
+     17
+    ],
+    "pl2c_exact": true,
+    "exact": true,
+    "same_set": true,
+    "t1": true,
+    "t2": true
+   },
+   "goal:9": {
+    "text": "put the cream cheese on top of the cabinet",
+    "scene": "libero_goal",
+    "level": "scene",
+    "n_candidates": 6,
+    "li": [
+     13,
+     18
+    ],
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on top of the cabinet"
+    ],
+    "li_scenes": [
+     "libero_goal",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     13,
+     18
+    ],
+    "scene_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on top of the cabinet"
+    ],
+    "blind": [
+     13,
+     18
+    ],
+    "pl2c_exact": true,
+    "exact": true,
+    "same_set": true,
+    "t1": true,
+    "t2": true
+   },
+   "spatial:0": {
+    "text": "put the butter on the plate",
+    "scene": "libero_spatial",
+    "level": "scene",
+    "n_candidates": 10,
+    "li": [
+     13,
+     35
+    ],
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "pick up the black bowl on the cookie box and place it on the plate"
+    ],
+    "li_scenes": [
+     "libero_goal",
+     "libero_spatial"
+    ],
+    "scene_cover": [
+     32,
+     33
+    ],
+    "scene_text": [
+     "pick up the black bowl on the ramekin and place it on the plate",
+     "pick up the black bowl on the stove and place it on the plate"
+    ],
+    "blind": [
+     27,
+     10
+    ],
+    "pl2c_exact": false,
+    "exact": false,
+    "same_set": false,
+    "t1": false,
+    "t2": false
+   },
+   "spatial:1": {
+    "text": "put the chocolate pudding on the plate",
+    "scene": "libero_spatial",
+    "level": "scene",
+    "n_candidates": 10,
+    "li": [
+     13,
+     35
+    ],
+    "li_text": [
+     "put the cream cheese in the bowl",
+     "pick up the black bowl on the cookie box and place it on the plate"
+    ],
+    "li_scenes": [
+     "libero_goal",
+     "libero_spatial"
+    ],
+    "scene_cover": [
+     32,
+     33
+    ],
+    "scene_text": [
+     "pick up the black bowl on the ramekin and place it on the plate",
+     "pick up the black bowl on the stove and place it on the plate"
+    ],
+    "blind": [
+     29,
+     10
+    ],
+    "pl2c_exact": false,
+    "exact": false,
+    "same_set": false,
+    "t1": false,
+    "t2": false
+   },
+   "spatial:2": {
+    "text": "put the milk on the plate",
+    "scene": "libero_spatial",
+    "level": "scene",
+    "n_candidates": 10,
+    "li": [
+     14,
+     32
+    ],
+    "li_text": [
+     "put the wine bottle on top of the cabinet",
+     "pick up the black bowl on the ramekin and place it on the plate"
+    ],
+    "li_scenes": [
+     "libero_goal",
+     "libero_spatial"
+    ],
+    "scene_cover": [
+     32,
+     33
+    ],
+    "scene_text": [
+     "pick up the black bowl on the ramekin and place it on the plate",
+     "pick up the black bowl on the stove and place it on the plate"
+    ],
+    "blind": [
+     25,
+     10
+    ],
+    "pl2c_exact": false,
+    "exact": false,
+    "same_set": false,
+    "t1": false,
+    "t2": false
+   },
+   "spatial:3": {
+    "text": "put the orange juice on the plate",
+    "scene": "libero_spatial",
+    "level": "scene",
+    "n_candidates": 10,
+    "li": [
+     14,
+     32
+    ],
+    "li_text": [
+     "put the wine bottle on top of the cabinet",
+     "pick up the black bowl on the ramekin and place it on the plate"
+    ],
+    "li_scenes": [
+     "libero_goal",
+     "libero_spatial"
+    ],
+    "scene_cover": [
+     32,
+     33
+    ],
+    "scene_text": [
+     "pick up the black bowl on the ramekin and place it on the plate",
+     "pick up the black bowl on the stove and place it on the plate"
+    ],
+    "blind": [
+     20,
+     10
+    ],
+    "pl2c_exact": false,
+    "exact": false,
+    "same_set": false,
+    "t1": false,
+    "t2": false
+   },
+   "spatial:4": {
+    "text": "put the bowl on cookie box on the stove",
+    "scene": "libero_spatial",
+    "level": "scene",
+    "n_candidates": 10,
+    "li": [
+     35,
+     17
+    ],
+    "li_text": [
+     "pick up the black bowl on the cookie box and place it on the plate",
+     "put the bowl on the stove"
+    ],
+    "li_scenes": [
+     "libero_spatial",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     35,
+     30
+    ],
+    "scene_text": [
+     "pick up the black bowl on the cookie box and place it on the plate",
+     "pick up the black bowl next to the cookie box and place it on the plate"
+    ],
+    "blind": [
+     35,
+     17
+    ],
+    "pl2c_exact": true,
+    "exact": false,
+    "same_set": false,
+    "t1": true,
+    "t2": false
+   },
+   "spatial:5": {
+    "text": "put the bowl on cookie box on the cabinet",
+    "scene": "libero_spatial",
+    "level": "scene",
+    "n_candidates": 10,
+    "li": [
+     35,
+     18
+    ],
+    "li_text": [
+     "pick up the black bowl on the cookie box and place it on the plate",
+     "put the bowl on top of the cabinet"
+    ],
+    "li_scenes": [
+     "libero_spatial",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     35,
+     30
+    ],
+    "scene_text": [
+     "pick up the black bowl on the cookie box and place it on the plate",
+     "pick up the black bowl next to the cookie box and place it on the plate"
+    ],
+    "blind": [
+     35,
+     18
+    ],
+    "pl2c_exact": true,
+    "exact": false,
+    "same_set": false,
+    "t1": true,
+    "t2": false
+   },
+   "spatial:6": {
+    "text": "put the bowl next to the plate on the cabinet",
+    "scene": "libero_spatial",
+    "level": "scene",
+    "n_candidates": 10,
+    "li": [
+     36,
+     18
+    ],
+    "li_text": [
+     "pick up the black bowl next to the plate and place it on the plate",
+     "put the bowl on top of the cabinet"
+    ],
+    "li_scenes": [
+     "libero_spatial",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     36,
+     34
+    ],
+    "scene_text": [
+     "pick up the black bowl next to the plate and place it on the plate",
+     "pick up the black bowl between the plate and the ramekin and place it on the plate"
+    ],
+    "blind": [
+     36,
+     18
+    ],
+    "pl2c_exact": true,
+    "exact": false,
+    "same_set": false,
+    "t1": true,
+    "t2": false
+   },
+   "spatial:7": {
+    "text": "put the bowl next to the plate on the stove",
+    "scene": "libero_spatial",
+    "level": "scene",
+    "n_candidates": 10,
+    "li": [
+     36,
+     17
+    ],
+    "li_text": [
+     "pick up the black bowl next to the plate and place it on the plate",
+     "put the bowl on the stove"
+    ],
+    "li_scenes": [
+     "libero_spatial",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     36,
+     34
+    ],
+    "scene_text": [
+     "pick up the black bowl next to the plate and place it on the plate",
+     "pick up the black bowl between the plate and the ramekin and place it on the plate"
+    ],
+    "blind": [
+     36,
+     17
+    ],
+    "pl2c_exact": true,
+    "exact": false,
+    "same_set": false,
+    "t1": true,
+    "t2": false
+   },
+   "spatial:8": {
+    "text": "put the bowl at table center on the cabinet",
+    "scene": "libero_spatial",
+    "level": "scene",
+    "n_candidates": 10,
+    "li": [
+     38,
+     18
+    ],
+    "li_text": [
+     "pick up the black bowl from table center and place it on the plate",
+     "put the bowl on top of the cabinet"
+    ],
+    "li_scenes": [
+     "libero_spatial",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     38,
+     39
+    ],
+    "scene_text": [
+     "pick up the black bowl from table center and place it on the plate",
+     "pick up the black bowl on the wooden cabinet and place it on the plate"
+    ],
+    "blind": [
+     38,
+     18
+    ],
+    "pl2c_exact": true,
+    "exact": false,
+    "same_set": false,
+    "t1": true,
+    "t2": false
+   },
+   "spatial:9": {
+    "text": "put the bowl at table center on the stove",
+    "scene": "libero_spatial",
+    "level": "scene",
+    "n_candidates": 10,
+    "li": [
+     38,
+     17
+    ],
+    "li_text": [
+     "pick up the black bowl from table center and place it on the plate",
+     "put the bowl on the stove"
+    ],
+    "li_scenes": [
+     "libero_spatial",
+     "libero_goal"
+    ],
+    "scene_cover": [
+     38,
+     33
+    ],
+    "scene_text": [
+     "pick up the black bowl from table center and place it on the plate",
+     "pick up the black bowl on the stove and place it on the plate"
+    ],
+    "blind": [
+     38,
+     17
+    ],
+    "pl2c_exact": true,
+    "exact": false,
+    "same_set": false,
+    "t1": true,
+    "t2": false
+   }
+  },
+  "li_sources_in_task_scene": 10
+ },
+ "test": {
+  "goal:1": {
+   "scene": "libero_goal",
+   "level": "scene",
+   "candidates": [
+    10,
+    11,
+    13,
+    14,
+    17,
+    18
+   ],
+   "scene_cover": {
+    "picks": [
+     17,
+     10
+    ],
+    "t1": 10,
+    "t2": 17,
+    "trace": [
+     {
+      "pick": 17,
+      "key": [
+       2,
+       2,
+       true,
+       0.666667,
+       -17
+      ],
+      "runner_up": 10,
+      "runner_up_key": [
+       1,
+       1,
+       true,
+       0.666667,
+       -10
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 10,
+      "key": [
+       0,
+       1,
+       true,
+       0.666667,
+       -10
+      ],
+      "runner_up": 11,
+      "runner_up_key": [
+       0,
+       1,
+       true,
+       0.375,
+       -11
+      ],
+      "tie_on": "jaccard"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "stove"
+     ],
+     [
+      "O",
+      "plate"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "plate",
+     "landmark": "",
+     "goal": "on the stove"
+    },
+    "frame": "put the {O} {G}",
+    "uncovered": [
+     [
+      "O",
+      "plate"
+     ]
+    ],
+    "covered_by": {
+     "17": [
+      [
+       "G",
+       "stove"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "10": [
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     17,
+     10
+    ],
+    "t1": 10,
+    "t2": 17,
+    "trace": [
+     {
+      "pick": 17,
+      "key": [
+       2,
+       2,
+       true,
+       0.666667,
+       -17
+      ],
+      "runner_up": 10,
+      "runner_up_key": [
+       1,
+       1,
+       true,
+       0.666667,
+       -10
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 10,
+      "key": [
+       0,
+       1,
+       true,
+       0.666667,
+       -10
+      ],
+      "runner_up": 11,
+      "runner_up_key": [
+       0,
+       1,
+       true,
+       0.375,
+       -11
+      ],
+      "tie_on": "jaccard"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "stove"
+     ],
+     [
+      "O",
+      "plate"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "plate",
+     "landmark": "",
+     "goal": "on the stove"
+    },
+    "frame": "put the {O} {G}",
+    "uncovered": [
+     [
+      "O",
+      "plate"
+     ]
+    ],
+    "covered_by": {
+     "17": [
+      [
+       "G",
+       "stove"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "10": [
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     14,
+     13
+    ],
+    "t1": 14,
+    "t2": 13
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@10.17.24",
+    "blind_cover": "tli@10.17.24",
+    "scene_random": "tli@14.13.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "put the bowl on the plate",
+     "put the bowl on the stove"
+    ],
+    "blind_cover": [
+     "put the bowl on the plate",
+     "put the bowl on the stove"
+    ],
+    "scene_random": [
+     "put the wine bottle on top of the cabinet",
+     "put the cream cheese in the bowl"
+    ]
+   },
+   "text": "put the plate on the stove",
+   "parse_text": "put the plate on the stove",
+   "suite": "libero_goal_task",
+   "index": 1,
+   "original": "put the bowl on the stove",
+   "original_scene": "libero_goal",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "goal:2": {
+   "scene": "libero_goal",
+   "level": "scene",
+   "candidates": [
+    10,
+    11,
+    13,
+    14,
+    17,
+    18
+   ],
+   "scene_cover": {
+    "picks": [
+     11,
+     13
+    ],
+    "t1": 11,
+    "t2": 13,
+    "trace": [
+     {
+      "pick": 11,
+      "key": [
+       3,
+       3,
+       true,
+       0.5,
+       -11
+      ],
+      "runner_up": 14,
+      "runner_up_key": [
+       3,
+       3,
+       true,
+       0.4,
+       -14
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 13,
+      "key": [
+       1,
+       2,
+       true,
+       0.5,
+       -13
+      ],
+      "runner_up": 14,
+      "runner_up_key": [
+       0,
+       3,
+       true,
+       0.4,
+       -14
+      ],
+      "tie_on": "gain"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "bowl"
+     ],
+     [
+      "O",
+      "bottle"
+     ],
+     [
+      "O",
+      "wine"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "wine bottle",
+     "landmark": "",
+     "goal": "in the bowl"
+    },
+    "frame": "put the {O} {G}",
+    "uncovered": [],
+    "covered_by": {
+     "11": [
+      [
+       "O",
+       "bottle"
+      ],
+      [
+       "O",
+       "wine"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "13": [
+      [
+       "G",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     11,
+     13
+    ],
+    "t1": 11,
+    "t2": 13,
+    "trace": [
+     {
+      "pick": 11,
+      "key": [
+       3,
+       3,
+       true,
+       0.5,
+       -11
+      ],
+      "runner_up": 14,
+      "runner_up_key": [
+       3,
+       3,
+       true,
+       0.4,
+       -14
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 13,
+      "key": [
+       1,
+       2,
+       true,
+       0.5,
+       -13
+      ],
+      "runner_up": 14,
+      "runner_up_key": [
+       0,
+       3,
+       true,
+       0.4,
+       -14
+      ],
+      "tie_on": "gain"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "bowl"
+     ],
+     [
+      "O",
+      "bottle"
+     ],
+     [
+      "O",
+      "wine"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "wine bottle",
+     "landmark": "",
+     "goal": "in the bowl"
+    },
+    "frame": "put the {O} {G}",
+    "uncovered": [],
+    "covered_by": {
+     "11": [
+      [
+       "O",
+       "bottle"
+      ],
+      [
+       "O",
+       "wine"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "13": [
+      [
+       "G",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     13,
+     10
+    ],
+    "t1": 10,
+    "t2": 13
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@11.13.24",
+    "blind_cover": "tli@11.13.24",
+    "scene_random": "tli@10.13.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "put the wine bottle on the rack",
+     "put the cream cheese in the bowl"
+    ],
+    "blind_cover": [
+     "put the wine bottle on the rack",
+     "put the cream cheese in the bowl"
+    ],
+    "scene_random": [
+     "put the bowl on the plate",
+     "put the cream cheese in the bowl"
+    ]
+   },
+   "text": "put the wine bottle in the bowl",
+   "parse_text": "put the wine bottle in the bowl",
+   "suite": "libero_goal_task",
+   "index": 2,
+   "original": "put the wine bottle on top of the cabinet",
+   "original_scene": "libero_goal",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "goal:4": {
+   "scene": "libero_goal",
+   "level": "scene",
+   "candidates": [
+    10,
+    11,
+    13,
+    14,
+    17,
+    18
+   ],
+   "scene_cover": {
+    "picks": [
+     18,
+     10
+    ],
+    "t1": 18,
+    "t2": 10,
+    "trace": [
+     {
+      "pick": 18,
+      "key": [
+       1,
+       1,
+       true,
+       0.555556,
+       -18
+      ],
+      "runner_up": 10,
+      "runner_up_key": [
+       1,
+       1,
+       true,
+       0.5,
+       -10
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 10,
+      "key": [
+       0,
+       1,
+       true,
+       0.5,
+       -10
+      ],
+      "runner_up": 14,
+      "runner_up_key": [
+       0,
+       1,
+       true,
+       0.5,
+       -14
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "drawer"
+     ],
+     [
+      "O",
+      "plate"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "plate",
+     "landmark": "",
+     "goal": "on the top of the drawer"
+    },
+    "frame": "put the {O} {G}",
+    "uncovered": [
+     [
+      "G",
+      "drawer"
+     ],
+     [
+      "O",
+      "plate"
+     ]
+    ],
+    "covered_by": {
+     "18": [
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "10": [
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     18,
+     10
+    ],
+    "t1": 18,
+    "t2": 10,
+    "trace": [
+     {
+      "pick": 18,
+      "key": [
+       1,
+       1,
+       true,
+       0.555556,
+       -18
+      ],
+      "runner_up": 10,
+      "runner_up_key": [
+       1,
+       1,
+       true,
+       0.5,
+       -10
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 10,
+      "key": [
+       0,
+       1,
+       true,
+       0.5,
+       -10
+      ],
+      "runner_up": 14,
+      "runner_up_key": [
+       0,
+       1,
+       true,
+       0.5,
+       -14
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "drawer"
+     ],
+     [
+      "O",
+      "plate"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "plate",
+     "landmark": "",
+     "goal": "on the top of the drawer"
+    },
+    "frame": "put the {O} {G}",
+    "uncovered": [
+     [
+      "G",
+      "drawer"
+     ],
+     [
+      "O",
+      "plate"
+     ]
+    ],
+    "covered_by": {
+     "18": [
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "10": [
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     18,
+     17
+    ],
+    "t1": 18,
+    "t2": 17
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@18.10.24",
+    "blind_cover": "tli@18.10.24",
+    "scene_random": "tli@18.17.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "put the bowl on top of the cabinet",
+     "put the bowl on the plate"
+    ],
+    "blind_cover": [
+     "put the bowl on top of the cabinet",
+     "put the bowl on the plate"
+    ],
+    "scene_random": [
+     "put the bowl on top of the cabinet",
+     "put the bowl on the stove"
+    ]
+   },
+   "text": "put the plate on the top of the drawer",
+   "parse_text": "put the plate on the top of the drawer",
+   "suite": "libero_goal_task",
+   "index": 4,
+   "original": "put the bowl on top of the cabinet",
+   "original_scene": "libero_goal",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "goal:6": {
+   "scene": "libero_goal",
+   "level": "scene",
+   "candidates": [
+    10,
+    11,
+    13,
+    14,
+    17,
+    18
+   ],
+   "scene_cover": {
+    "picks": [
+     11,
+     13
+    ],
+    "t1": 11,
+    "t2": 13,
+    "trace": [
+     {
+      "pick": 11,
+      "key": [
+       3,
+       3,
+       true,
+       0.5,
+       -11
+      ],
+      "runner_up": 14,
+      "runner_up_key": [
+       3,
+       3,
+       true,
+       0.4,
+       -14
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 13,
+      "key": [
+       1,
+       2,
+       true,
+       0.5,
+       -13
+      ],
+      "runner_up": 14,
+      "runner_up_key": [
+       0,
+       3,
+       true,
+       0.4,
+       -14
+      ],
+      "tie_on": "gain"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "bowl"
+     ],
+     [
+      "O",
+      "bottle"
+     ],
+     [
+      "O",
+      "wine"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "wine bottle",
+     "landmark": "",
+     "goal": "in the bowl"
+    },
+    "frame": "put the {O} {G}",
+    "uncovered": [],
+    "covered_by": {
+     "11": [
+      [
+       "O",
+       "bottle"
+      ],
+      [
+       "O",
+       "wine"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "13": [
+      [
+       "G",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     11,
+     13
+    ],
+    "t1": 11,
+    "t2": 13,
+    "trace": [
+     {
+      "pick": 11,
+      "key": [
+       3,
+       3,
+       true,
+       0.5,
+       -11
+      ],
+      "runner_up": 14,
+      "runner_up_key": [
+       3,
+       3,
+       true,
+       0.4,
+       -14
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 13,
+      "key": [
+       1,
+       2,
+       true,
+       0.5,
+       -13
+      ],
+      "runner_up": 14,
+      "runner_up_key": [
+       0,
+       3,
+       true,
+       0.4,
+       -14
+      ],
+      "tie_on": "gain"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "bowl"
+     ],
+     [
+      "O",
+      "bottle"
+     ],
+     [
+      "O",
+      "wine"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "wine bottle",
+     "landmark": "",
+     "goal": "in the bowl"
+    },
+    "frame": "put the {O} {G}",
+    "uncovered": [],
+    "covered_by": {
+     "11": [
+      [
+       "O",
+       "bottle"
+      ],
+      [
+       "O",
+       "wine"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "13": [
+      [
+       "G",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     17,
+     14
+    ],
+    "t1": 14,
+    "t2": 17
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@11.13.24",
+    "blind_cover": "tli@11.13.24",
+    "scene_random": "tli@14.17.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "put the wine bottle on the rack",
+     "put the cream cheese in the bowl"
+    ],
+    "blind_cover": [
+     "put the wine bottle on the rack",
+     "put the cream cheese in the bowl"
+    ],
+    "scene_random": [
+     "put the wine bottle on top of the cabinet",
+     "put the bowl on the stove"
+    ]
+   },
+   "text": "put the wine bottle in the bowl",
+   "parse_text": "put the wine bottle in the bowl",
+   "suite": "libero_goal_task",
+   "index": 6,
+   "original": "put the cream cheese in the bowl",
+   "original_scene": "libero_goal",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "goal:8": {
+   "scene": "libero_goal",
+   "level": "scene",
+   "candidates": [
+    10,
+    11,
+    13,
+    14,
+    17,
+    18
+   ],
+   "scene_cover": {
+    "picks": [
+     11,
+     10
+    ],
+    "t1": 11,
+    "t2": 10,
+    "trace": [
+     {
+      "pick": 11,
+      "key": [
+       3,
+       3,
+       true,
+       0.714286,
+       -11
+      ],
+      "runner_up": 14,
+      "runner_up_key": [
+       3,
+       3,
+       true,
+       0.555556,
+       -14
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 10,
+      "key": [
+       1,
+       2,
+       true,
+       0.571429,
+       -10
+      ],
+      "runner_up": 14,
+      "runner_up_key": [
+       0,
+       3,
+       true,
+       0.555556,
+       -14
+      ],
+      "tie_on": "gain"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "O",
+      "bottle"
+     ],
+     [
+      "O",
+      "wine"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "wine bottle",
+     "landmark": "",
+     "goal": "on the plate"
+    },
+    "frame": "put the {O} {G}",
+    "uncovered": [],
+    "covered_by": {
+     "11": [
+      [
+       "O",
+       "bottle"
+      ],
+      [
+       "O",
+       "wine"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "10": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     11,
+     10
+    ],
+    "t1": 11,
+    "t2": 10,
+    "trace": [
+     {
+      "pick": 11,
+      "key": [
+       3,
+       3,
+       true,
+       0.714286,
+       -11
+      ],
+      "runner_up": 14,
+      "runner_up_key": [
+       3,
+       3,
+       true,
+       0.555556,
+       -14
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 10,
+      "key": [
+       1,
+       2,
+       true,
+       0.571429,
+       -10
+      ],
+      "runner_up": 32,
+      "runner_up_key": [
+       1,
+       2,
+       false,
+       0.214286,
+       -32
+      ],
+      "tie_on": "frame"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "O",
+      "bottle"
+     ],
+     [
+      "O",
+      "wine"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "wine bottle",
+     "landmark": "",
+     "goal": "on the plate"
+    },
+    "frame": "put the {O} {G}",
+    "uncovered": [],
+    "covered_by": {
+     "11": [
+      [
+       "O",
+       "bottle"
+      ],
+      [
+       "O",
+       "wine"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "10": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     10,
+     14
+    ],
+    "t1": 14,
+    "t2": 10
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@11.10.24",
+    "blind_cover": "tli@11.10.24",
+    "scene_random": "tli@14.10.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "put the wine bottle on the rack",
+     "put the bowl on the plate"
+    ],
+    "blind_cover": [
+     "put the wine bottle on the rack",
+     "put the bowl on the plate"
+    ],
+    "scene_random": [
+     "put the wine bottle on top of the cabinet",
+     "put the bowl on the plate"
+    ]
+   },
+   "text": "put the wine bottle on the plate",
+   "parse_text": "put the wine bottle on the plate",
+   "suite": "libero_goal_task",
+   "index": 8,
+   "original": "put the bowl on the plate",
+   "original_scene": "libero_goal",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "goal:9": {
+   "scene": "libero_goal",
+   "level": "scene",
+   "candidates": [
+    10,
+    11,
+    13,
+    14,
+    17,
+    18
+   ],
+   "scene_cover": {
+    "picks": [
+     13,
+     11
+    ],
+    "t1": 13,
+    "t2": 11,
+    "trace": [
+     {
+      "pick": 13,
+      "key": [
+       3,
+       3,
+       true,
+       0.5,
+       -13
+      ],
+      "runner_up": 11,
+      "runner_up_key": [
+       2,
+       2,
+       true,
+       0.5,
+       -11
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 11,
+      "key": [
+       1,
+       2,
+       true,
+       0.5,
+       -11
+      ],
+      "runner_up": 10,
+      "runner_up_key": [
+       0,
+       1,
+       true,
+       0.375,
+       -10
+      ],
+      "tie_on": "gain"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "rack"
+     ],
+     [
+      "O",
+      "cheese"
+     ],
+     [
+      "O",
+      "cream"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "cream cheese",
+     "landmark": "",
+     "goal": "on the rack"
+    },
+    "frame": "put the {O} {G}",
+    "uncovered": [],
+    "covered_by": {
+     "13": [
+      [
+       "O",
+       "cheese"
+      ],
+      [
+       "O",
+       "cream"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "11": [
+      [
+       "G",
+       "rack"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     13,
+     11
+    ],
+    "t1": 13,
+    "t2": 11,
+    "trace": [
+     {
+      "pick": 13,
+      "key": [
+       3,
+       3,
+       true,
+       0.5,
+       -13
+      ],
+      "runner_up": 22,
+      "runner_up_key": [
+       3,
+       3,
+       false,
+       0.230769,
+       -22
+      ],
+      "tie_on": "frame"
+     },
+     {
+      "pick": 11,
+      "key": [
+       1,
+       2,
+       true,
+       0.5,
+       -11
+      ],
+      "runner_up": 22,
+      "runner_up_key": [
+       0,
+       3,
+       false,
+       0.230769,
+       -22
+      ],
+      "tie_on": "gain"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "rack"
+     ],
+     [
+      "O",
+      "cheese"
+     ],
+     [
+      "O",
+      "cream"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "cream cheese",
+     "landmark": "",
+     "goal": "on the rack"
+    },
+    "frame": "put the {O} {G}",
+    "uncovered": [],
+    "covered_by": {
+     "13": [
+      [
+       "O",
+       "cheese"
+      ],
+      [
+       "O",
+       "cream"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "11": [
+      [
+       "G",
+       "rack"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     13,
+     17
+    ],
+    "t1": 13,
+    "t2": 17
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@13.11.24",
+    "blind_cover": "tli@13.11.24",
+    "scene_random": "tli@13.17.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "put the cream cheese in the bowl",
+     "put the wine bottle on the rack"
+    ],
+    "blind_cover": [
+     "put the cream cheese in the bowl",
+     "put the wine bottle on the rack"
+    ],
+    "scene_random": [
+     "put the cream cheese in the bowl",
+     "put the bowl on the stove"
+    ]
+   },
+   "text": "put the cream cheese on the rack",
+   "parse_text": "put the cream cheese on the rack",
+   "suite": "libero_goal_task",
+   "index": 9,
+   "original": "put the wine bottle on the rack",
+   "original_scene": "libero_goal",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "object:0": {
+   "scene": "libero_object:alphabet_soup+basket+butter+cream_cheese+milk+salad_dressing+tomato_sauce",
+   "level": "suite",
+   "candidates": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "scene_cover": {
+    "picks": [
+     22,
+     21
+    ],
+    "t1": 22,
+    "t2": 21,
+    "trace": [
+     {
+      "pick": 22,
+      "key": [
+       4,
+       4,
+       true,
+       1.0,
+       -22
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       2,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 21,
+      "key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "runner_up": 25,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -25
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "cheese"
+     ],
+     [
+      "O",
+      "cream"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "cream cheese",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "22": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "cheese"
+      ],
+      [
+       "O",
+       "cream"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "21": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     22,
+     13
+    ],
+    "t1": 13,
+    "t2": 22,
+    "trace": [
+     {
+      "pick": 22,
+      "key": [
+       4,
+       4,
+       true,
+       1.0,
+       -22
+      ],
+      "runner_up": 13,
+      "runner_up_key": [
+       3,
+       3,
+       false,
+       0.333333,
+       -13
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 13,
+      "key": [
+       0,
+       3,
+       false,
+       0.333333,
+       -13
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "tie_on": "total"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "cheese"
+     ],
+     [
+      "O",
+      "cream"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "cream cheese",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "22": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "cheese"
+      ],
+      [
+       "O",
+       "cream"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "13": [
+      [
+       "O",
+       "cheese"
+      ],
+      [
+       "O",
+       "cream"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     20,
+     23
+    ],
+    "t1": 20,
+    "t2": 23
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@22.21.24",
+    "blind_cover": "tli@13.22.24",
+    "scene_random": "tli@20.23.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "pick up the cream cheese and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "blind_cover": [
+     "put the cream cheese in the bowl",
+     "pick up the cream cheese and place it in the basket"
+    ],
+    "scene_random": [
+     "pick up the orange juice and place it in the basket",
+     "pick up the bbq sauce and place it in the basket"
+    ]
+   },
+   "text": "pick the cream cheese and place it in the basket",
+   "parse_text": "pick up the cream cheese and place it in the basket",
+   "suite": "libero_object_task",
+   "index": 0,
+   "original": "pick up the alphabet soup and place it in the basket",
+   "original_scene": "libero_object:alphabet_soup+basket+butter+cream_cheese+milk+salad_dressing+tomato_sauce",
+   "scene_equals_original": true,
+   "distinct_arms": 4
+  },
+  "object:2": {
+   "scene": "libero_object:alphabet_soup+basket+cream_cheese+ketchup+milk+salad_dressing+tomato_sauce",
+   "level": "suite",
+   "candidates": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "scene_cover": {
+    "picks": [
+     28,
+     23
+    ],
+    "t1": 28,
+    "t2": 23,
+    "trace": [
+     {
+      "pick": 28,
+      "key": [
+       4,
+       4,
+       true,
+       1.0,
+       -28
+      ],
+      "runner_up": 23,
+      "runner_up_key": [
+       3,
+       3,
+       true,
+       0.818182,
+       -23
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 23,
+      "key": [
+       0,
+       3,
+       true,
+       0.818182,
+       -23
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "tie_on": "total"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "sauce"
+     ],
+     [
+      "O",
+      "tomato"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "tomato sauce",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "28": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "sauce"
+      ],
+      [
+       "O",
+       "tomato"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "23": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "sauce"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     28,
+     23
+    ],
+    "t1": 28,
+    "t2": 23,
+    "trace": [
+     {
+      "pick": 28,
+      "key": [
+       4,
+       4,
+       true,
+       1.0,
+       -28
+      ],
+      "runner_up": 23,
+      "runner_up_key": [
+       3,
+       3,
+       true,
+       0.818182,
+       -23
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 23,
+      "key": [
+       0,
+       3,
+       true,
+       0.818182,
+       -23
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "tie_on": "total"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "sauce"
+     ],
+     [
+      "O",
+      "tomato"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "tomato sauce",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "28": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "sauce"
+      ],
+      [
+       "O",
+       "tomato"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "23": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "sauce"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     24,
+     21
+    ],
+    "t1": 24,
+    "t2": 21
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@28.23.24",
+    "blind_cover": "tli@28.23.24",
+    "scene_random": "tli@24.21.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "pick up the tomato sauce and place it in the basket",
+     "pick up the bbq sauce and place it in the basket"
+    ],
+    "blind_cover": [
+     "pick up the tomato sauce and place it in the basket",
+     "pick up the bbq sauce and place it in the basket"
+    ],
+    "scene_random": [
+     "pick up the alphabet soup and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ]
+   },
+   "text": "pick the tomato sauce and place it in the basket",
+   "parse_text": "pick up the tomato sauce and place it in the basket",
+   "suite": "libero_object_task",
+   "index": 2,
+   "original": "pick up the salad dressing and place it in the basket",
+   "original_scene": "libero_object:alphabet_soup+basket+cream_cheese+ketchup+milk+salad_dressing+tomato_sauce",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "object:3": {
+   "scene": "libero_object:alphabet_soup+basket+bbq_sauce+chocolate_pudding+cream_cheese+ketchup+salad_dressing",
+   "level": "suite",
+   "candidates": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "scene_cover": {
+    "picks": [
+     21,
+     25
+    ],
+    "t1": 21,
+    "t2": 25,
+    "trace": [
+     {
+      "pick": 21,
+      "key": [
+       3,
+       3,
+       true,
+       1.0,
+       -21
+      ],
+      "runner_up": 25,
+      "runner_up_key": [
+       2,
+       2,
+       true,
+       0.8,
+       -25
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 25,
+      "key": [
+       0,
+       2,
+       true,
+       0.8,
+       -25
+      ],
+      "runner_up": 27,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.8,
+       -27
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "ketchup"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "ketchup",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "21": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "ketchup"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "25": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     21,
+     25
+    ],
+    "t1": 21,
+    "t2": 25,
+    "trace": [
+     {
+      "pick": 21,
+      "key": [
+       3,
+       3,
+       true,
+       1.0,
+       -21
+      ],
+      "runner_up": 25,
+      "runner_up_key": [
+       2,
+       2,
+       true,
+       0.8,
+       -25
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 25,
+      "key": [
+       0,
+       2,
+       true,
+       0.8,
+       -25
+      ],
+      "runner_up": 27,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.8,
+       -27
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "ketchup"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "ketchup",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "21": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "ketchup"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "25": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     28,
+     25
+    ],
+    "t1": 28,
+    "t2": 25
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@21.25.24",
+    "blind_cover": "tli@21.25.24",
+    "scene_random": "tli@28.25.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "pick up the ketchup and place it in the basket",
+     "pick up the milk and place it in the basket"
+    ],
+    "blind_cover": [
+     "pick up the ketchup and place it in the basket",
+     "pick up the milk and place it in the basket"
+    ],
+    "scene_random": [
+     "pick up the tomato sauce and place it in the basket",
+     "pick up the milk and place it in the basket"
+    ]
+   },
+   "text": "pick the ketchup and place it in the basket",
+   "parse_text": "pick up the ketchup and place it in the basket",
+   "suite": "libero_object_task",
+   "index": 3,
+   "original": "pick up the bbq sauce and place it in the basket",
+   "original_scene": "libero_object:alphabet_soup+basket+bbq_sauce+chocolate_pudding+cream_cheese+ketchup+salad_dressing",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "object:4": {
+   "scene": "libero_object:alphabet_soup+basket+bbq_sauce+cream_cheese+ketchup+milk+salad_dressing",
+   "level": "suite",
+   "candidates": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "scene_cover": {
+    "picks": [
+     25,
+     21
+    ],
+    "t1": 25,
+    "t2": 21,
+    "trace": [
+     {
+      "pick": 25,
+      "key": [
+       3,
+       3,
+       true,
+       1.0,
+       -25
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       2,
+       2,
+       true,
+       0.8,
+       -21
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 21,
+      "key": [
+       0,
+       2,
+       true,
+       0.8,
+       -21
+      ],
+      "runner_up": 27,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.8,
+       -27
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "milk"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "milk",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "25": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "milk"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "21": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     25,
+     21
+    ],
+    "t1": 25,
+    "t2": 21,
+    "trace": [
+     {
+      "pick": 25,
+      "key": [
+       3,
+       3,
+       true,
+       1.0,
+       -25
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       2,
+       2,
+       true,
+       0.8,
+       -21
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 21,
+      "key": [
+       0,
+       2,
+       true,
+       0.8,
+       -21
+      ],
+      "runner_up": 27,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.8,
+       -27
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "milk"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "milk",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "25": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "milk"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "21": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     20,
+     29
+    ],
+    "t1": 20,
+    "t2": 29
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@25.21.24",
+    "blind_cover": "tli@25.21.24",
+    "scene_random": "tli@20.29.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "pick up the milk and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "blind_cover": [
+     "pick up the milk and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "scene_random": [
+     "pick up the orange juice and place it in the basket",
+     "pick up the chocolate pudding and place it in the basket"
+    ]
+   },
+   "text": "pick the milk and place it in the basket",
+   "parse_text": "pick up the milk and place it in the basket",
+   "suite": "libero_object_task",
+   "index": 4,
+   "original": "pick up the ketchup and place it in the basket",
+   "original_scene": "libero_object:alphabet_soup+basket+bbq_sauce+cream_cheese+ketchup+milk+salad_dressing",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "object:5": {
+   "scene": "libero_object:basket+bbq_sauce+butter+chocolate_pudding+milk+orange_juice+tomato_sauce",
+   "level": "suite",
+   "candidates": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "scene_cover": {
+    "picks": [
+     23,
+     28
+    ],
+    "t1": 23,
+    "t2": 28,
+    "trace": [
+     {
+      "pick": 23,
+      "key": [
+       4,
+       4,
+       true,
+       1.0,
+       -23
+      ],
+      "runner_up": 28,
+      "runner_up_key": [
+       3,
+       3,
+       true,
+       0.818182,
+       -28
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 28,
+      "key": [
+       0,
+       3,
+       true,
+       0.818182,
+       -28
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "tie_on": "total"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "bbq"
+     ],
+     [
+      "O",
+      "sauce"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "bbq sauce",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "23": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "bbq"
+      ],
+      [
+       "O",
+       "sauce"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "28": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "sauce"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     23,
+     28
+    ],
+    "t1": 23,
+    "t2": 28,
+    "trace": [
+     {
+      "pick": 23,
+      "key": [
+       4,
+       4,
+       true,
+       1.0,
+       -23
+      ],
+      "runner_up": 28,
+      "runner_up_key": [
+       3,
+       3,
+       true,
+       0.818182,
+       -28
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 28,
+      "key": [
+       0,
+       3,
+       true,
+       0.818182,
+       -28
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "tie_on": "total"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "bbq"
+     ],
+     [
+      "O",
+      "sauce"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "bbq sauce",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "23": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "bbq"
+      ],
+      [
+       "O",
+       "sauce"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "28": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "sauce"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     26,
+     28
+    ],
+    "t1": 28,
+    "t2": 26
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@23.28.24",
+    "blind_cover": "tli@23.28.24",
+    "scene_random": "tli@28.26.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "pick up the bbq sauce and place it in the basket",
+     "pick up the tomato sauce and place it in the basket"
+    ],
+    "blind_cover": [
+     "pick up the bbq sauce and place it in the basket",
+     "pick up the tomato sauce and place it in the basket"
+    ],
+    "scene_random": [
+     "pick up the tomato sauce and place it in the basket",
+     "pick up the salad dressing and place it in the basket"
+    ]
+   },
+   "text": "pick the bbq sauce and place it in the basket",
+   "parse_text": "pick up the bbq sauce and place it in the basket",
+   "suite": "libero_object_task",
+   "index": 5,
+   "original": "pick up the tomato sauce and place it in the basket",
+   "original_scene": "libero_object:basket+bbq_sauce+butter+chocolate_pudding+milk+orange_juice+tomato_sauce",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "object:6": {
+   "scene": "libero_object:basket+bbq_sauce+butter+chocolate_pudding+ketchup+orange_juice+tomato_sauce",
+   "level": "suite",
+   "candidates": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "scene_cover": {
+    "picks": [
+     20,
+     21
+    ],
+    "t1": 20,
+    "t2": 21,
+    "trace": [
+     {
+      "pick": 20,
+      "key": [
+       4,
+       4,
+       true,
+       1.0,
+       -20
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       2,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 21,
+      "key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "runner_up": 25,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -25
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "juice"
+     ],
+     [
+      "O",
+      "orange"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "orange juice",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "20": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "juice"
+      ],
+      [
+       "O",
+       "orange"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "21": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     20,
+     21
+    ],
+    "t1": 20,
+    "t2": 21,
+    "trace": [
+     {
+      "pick": 20,
+      "key": [
+       4,
+       4,
+       true,
+       1.0,
+       -20
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       2,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 21,
+      "key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "runner_up": 25,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -25
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "juice"
+     ],
+     [
+      "O",
+      "orange"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "orange juice",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "20": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "juice"
+      ],
+      [
+       "O",
+       "orange"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "21": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     23,
+     26
+    ],
+    "t1": 23,
+    "t2": 26
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@20.21.24",
+    "blind_cover": "tli@20.21.24",
+    "scene_random": "tli@23.26.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "pick up the orange juice and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "blind_cover": [
+     "pick up the orange juice and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "scene_random": [
+     "pick up the bbq sauce and place it in the basket",
+     "pick up the salad dressing and place it in the basket"
+    ]
+   },
+   "text": "pick the orange juice and place it in the basket",
+   "parse_text": "pick up the orange juice and place it in the basket",
+   "suite": "libero_object_task",
+   "index": 6,
+   "original": "pick up the butter and place it in the basket",
+   "original_scene": "libero_object:basket+bbq_sauce+butter+chocolate_pudding+ketchup+orange_juice+tomato_sauce",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "object:7": {
+   "scene": "libero_object:basket+butter+chocolate_pudding+cream_cheese+milk+orange_juice+tomato_sauce",
+   "level": "suite",
+   "candidates": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "scene_cover": {
+    "picks": [
+     27,
+     21
+    ],
+    "t1": 27,
+    "t2": 21,
+    "trace": [
+     {
+      "pick": 27,
+      "key": [
+       3,
+       3,
+       true,
+       1.0,
+       -27
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       2,
+       2,
+       true,
+       0.8,
+       -21
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 21,
+      "key": [
+       0,
+       2,
+       true,
+       0.8,
+       -21
+      ],
+      "runner_up": 25,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.8,
+       -25
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "butter"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "butter",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "27": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "butter"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "21": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     27,
+     21
+    ],
+    "t1": 27,
+    "t2": 21,
+    "trace": [
+     {
+      "pick": 27,
+      "key": [
+       3,
+       3,
+       true,
+       1.0,
+       -27
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       2,
+       2,
+       true,
+       0.8,
+       -21
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 21,
+      "key": [
+       0,
+       2,
+       true,
+       0.8,
+       -21
+      ],
+      "runner_up": 25,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.8,
+       -25
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "butter"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "butter",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "27": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "butter"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "21": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     27,
+     28
+    ],
+    "t1": 27,
+    "t2": 28
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@27.21.24",
+    "blind_cover": "tli@27.21.24",
+    "scene_random": "tli@27.28.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "pick up the butter and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "blind_cover": [
+     "pick up the butter and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "scene_random": [
+     "pick up the butter and place it in the basket",
+     "pick up the tomato sauce and place it in the basket"
+    ]
+   },
+   "text": "pick the butter and place it in the basket",
+   "parse_text": "pick up the butter and place it in the basket",
+   "suite": "libero_object_task",
+   "index": 7,
+   "original": "pick up the milk and place it in the basket",
+   "original_scene": "libero_object:basket+butter+chocolate_pudding+cream_cheese+milk+orange_juice+tomato_sauce",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "object:8": {
+   "scene": "libero_object:alphabet_soup+basket+bbq_sauce+chocolate_pudding+ketchup+orange_juice+salad_dressing",
+   "level": "suite",
+   "candidates": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "scene_cover": {
+    "picks": [
+     26,
+     21
+    ],
+    "t1": 26,
+    "t2": 21,
+    "trace": [
+     {
+      "pick": 26,
+      "key": [
+       4,
+       4,
+       true,
+       1.0,
+       -26
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       2,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 21,
+      "key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "runner_up": 25,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -25
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "dressing"
+     ],
+     [
+      "O",
+      "salad"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "salad dressing",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "26": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "dressing"
+      ],
+      [
+       "O",
+       "salad"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "21": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     26,
+     21
+    ],
+    "t1": 26,
+    "t2": 21,
+    "trace": [
+     {
+      "pick": 26,
+      "key": [
+       4,
+       4,
+       true,
+       1.0,
+       -26
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       2,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 21,
+      "key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "runner_up": 25,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -25
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "dressing"
+     ],
+     [
+      "O",
+      "salad"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "salad dressing",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "26": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "dressing"
+      ],
+      [
+       "O",
+       "salad"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "21": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     22,
+     27
+    ],
+    "t1": 22,
+    "t2": 27
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@26.21.24",
+    "blind_cover": "tli@26.21.24",
+    "scene_random": "tli@22.27.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "pick up the salad dressing and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "blind_cover": [
+     "pick up the salad dressing and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "scene_random": [
+     "pick up the cream cheese and place it in the basket",
+     "pick up the butter and place it in the basket"
+    ]
+   },
+   "text": "pick the salad dressing and place it in the basket",
+   "parse_text": "pick up the salad dressing and place it in the basket",
+   "suite": "libero_object_task",
+   "index": 8,
+   "original": "pick up the chocolate pudding and place it in the basket",
+   "original_scene": "libero_object:alphabet_soup+basket+bbq_sauce+chocolate_pudding+ketchup+orange_juice+salad_dressing",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "object:9": {
+   "scene": "libero_object:basket+bbq_sauce+butter+chocolate_pudding+ketchup+orange_juice+salad_dressing",
+   "level": "suite",
+   "candidates": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+   ],
+   "scene_cover": {
+    "picks": [
+     29,
+     21
+    ],
+    "t1": 29,
+    "t2": 21,
+    "trace": [
+     {
+      "pick": 29,
+      "key": [
+       4,
+       4,
+       true,
+       1.0,
+       -29
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       2,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 21,
+      "key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "runner_up": 25,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -25
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "chocolate"
+     ],
+     [
+      "O",
+      "pudding"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "chocolate pudding",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "29": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "chocolate"
+      ],
+      [
+       "O",
+       "pudding"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "21": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     29,
+     21
+    ],
+    "t1": 29,
+    "t2": 21,
+    "trace": [
+     {
+      "pick": 29,
+      "key": [
+       4,
+       4,
+       true,
+       1.0,
+       -29
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       2,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 21,
+      "key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -21
+      ],
+      "runner_up": 25,
+      "runner_up_key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -25
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "chocolate"
+     ],
+     [
+      "O",
+      "pudding"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "chocolate pudding",
+     "landmark": "",
+     "goal": "in the basket"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [],
+    "covered_by": {
+     "29": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "chocolate"
+      ],
+      [
+       "O",
+       "pudding"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "21": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     22,
+     27
+    ],
+    "t1": 22,
+    "t2": 27
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@29.21.24",
+    "blind_cover": "tli@29.21.24",
+    "scene_random": "tli@22.27.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "pick up the chocolate pudding and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "blind_cover": [
+     "pick up the chocolate pudding and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "scene_random": [
+     "pick up the cream cheese and place it in the basket",
+     "pick up the butter and place it in the basket"
+    ]
+   },
+   "text": "pick the chocolate pudding and place it in the basket",
+   "parse_text": "pick up the chocolate pudding and place it in the basket",
+   "suite": "libero_object_task",
+   "index": 9,
+   "original": "pick up the orange juice and place it in the basket",
+   "original_scene": "libero_object:basket+bbq_sauce+butter+chocolate_pudding+ketchup+orange_juice+salad_dressing",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "spatial:0": {
+   "scene": "libero_spatial",
+   "level": "scene",
+   "candidates": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+   ],
+   "scene_cover": {
+    "picks": [
+     34,
+     32
+    ],
+    "t1": 34,
+    "t2": 32,
+    "trace": [
+     {
+      "pick": 34,
+      "key": [
+       6,
+       6,
+       true,
+       0.857143,
+       -34
+      ],
+      "runner_up": 32,
+      "runner_up_key": [
+       5,
+       5,
+       true,
+       0.785714,
+       -32
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 32,
+      "key": [
+       0,
+       5,
+       true,
+       0.785714,
+       -32
+      ],
+      "runner_up": 37,
+      "runner_up_key": [
+       0,
+       5,
+       true,
+       0.6875,
+       -37
+      ],
+      "tie_on": "jaccard"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "L",
+      "plate"
+     ],
+     [
+      "L",
+      "ramekin"
+     ],
+     [
+      "O",
+      "akita"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "O",
+      "not"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "akita black bowl not",
+     "landmark": "the plate and the ramekin",
+     "goal": "on the plate"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [
+     [
+      "O",
+      "akita"
+     ],
+     [
+      "O",
+      "not"
+     ]
+    ],
+    "covered_by": {
+     "34": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "plate"
+      ],
+      [
+       "L",
+       "ramekin"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "32": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "ramekin"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     34,
+     32
+    ],
+    "t1": 34,
+    "t2": 32,
+    "trace": [
+     {
+      "pick": 34,
+      "key": [
+       6,
+       6,
+       true,
+       0.857143,
+       -34
+      ],
+      "runner_up": 32,
+      "runner_up_key": [
+       5,
+       5,
+       true,
+       0.785714,
+       -32
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 32,
+      "key": [
+       0,
+       5,
+       true,
+       0.785714,
+       -32
+      ],
+      "runner_up": 37,
+      "runner_up_key": [
+       0,
+       5,
+       true,
+       0.6875,
+       -37
+      ],
+      "tie_on": "jaccard"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "L",
+      "plate"
+     ],
+     [
+      "L",
+      "ramekin"
+     ],
+     [
+      "O",
+      "akita"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "O",
+      "not"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "akita black bowl not",
+     "landmark": "the plate and the ramekin",
+     "goal": "on the plate"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [
+     [
+      "O",
+      "akita"
+     ],
+     [
+      "O",
+      "not"
+     ]
+    ],
+    "covered_by": {
+     "34": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "plate"
+      ],
+      [
+       "L",
+       "ramekin"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "32": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "ramekin"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     38,
+     32
+    ],
+    "t1": 32,
+    "t2": 38
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@34.32.24",
+    "blind_cover": "tli@34.32.24",
+    "scene_random": "tli@32.38.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "pick up the black bowl between the plate and the ramekin and place it on the plate",
+     "pick up the black bowl on the ramekin and place it on the plate"
+    ],
+    "blind_cover": [
+     "pick up the black bowl between the plate and the ramekin and place it on the plate",
+     "pick up the black bowl on the ramekin and place it on the plate"
+    ],
+    "scene_random": [
+     "pick up the black bowl on the ramekin and place it on the plate",
+     "pick up the black bowl from table center and place it on the plate"
+    ]
+   },
+   "text": "pick the akita black bowl not between the plate and the ramekin and place it on the plate",
+   "parse_text": "pick up the akita black bowl not between the plate and the ramekin and place it on the plate",
+   "suite": "libero_spatial_task",
+   "index": 0,
+   "original": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+   "original_scene": "libero_spatial",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "spatial:2": {
+   "scene": "libero_spatial",
+   "level": "scene",
+   "candidates": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+   ],
+   "scene_cover": {
+    "picks": [
+     36,
+     34
+    ],
+    "t1": 36,
+    "t2": 34,
+    "trace": [
+     {
+      "pick": 36,
+      "key": [
+       5,
+       5,
+       true,
+       0.923077,
+       -36
+      ],
+      "runner_up": 34,
+      "runner_up_key": [
+       5,
+       5,
+       true,
+       0.666667,
+       -34
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 34,
+      "key": [
+       0,
+       5,
+       true,
+       0.666667,
+       -34
+      ],
+      "runner_up": 37,
+      "runner_up_key": [
+       0,
+       4,
+       true,
+       0.857143,
+       -37
+      ],
+      "tie_on": "total"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "L",
+      "plate"
+     ],
+     [
+      "O",
+      "akita"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "akita black bowl",
+     "landmark": "the plate",
+     "goal": "on the plate"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [
+     [
+      "O",
+      "akita"
+     ]
+    ],
+    "covered_by": {
+     "36": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "plate"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "34": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "plate"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     36,
+     34
+    ],
+    "t1": 36,
+    "t2": 34,
+    "trace": [
+     {
+      "pick": 36,
+      "key": [
+       5,
+       5,
+       true,
+       0.923077,
+       -36
+      ],
+      "runner_up": 34,
+      "runner_up_key": [
+       5,
+       5,
+       true,
+       0.666667,
+       -34
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 34,
+      "key": [
+       0,
+       5,
+       true,
+       0.666667,
+       -34
+      ],
+      "runner_up": 37,
+      "runner_up_key": [
+       0,
+       4,
+       true,
+       0.857143,
+       -37
+      ],
+      "tie_on": "total"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "L",
+      "plate"
+     ],
+     [
+      "O",
+      "akita"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "akita black bowl",
+     "landmark": "the plate",
+     "goal": "on the plate"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [
+     [
+      "O",
+      "akita"
+     ]
+    ],
+    "covered_by": {
+     "36": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "plate"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "34": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "plate"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     31,
+     32
+    ],
+    "t1": 31,
+    "t2": 32
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@36.34.24",
+    "blind_cover": "tli@36.34.24",
+    "scene_random": "tli@31.32.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "pick up the black bowl next to the plate and place it on the plate",
+     "pick up the black bowl between the plate and the ramekin and place it on the plate"
+    ],
+    "blind_cover": [
+     "pick up the black bowl next to the plate and place it on the plate",
+     "pick up the black bowl between the plate and the ramekin and place it on the plate"
+    ],
+    "scene_random": [
+     "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+     "pick up the black bowl on the ramekin and place it on the plate"
+    ]
+   },
+   "text": "pick the akita black bowl next to the plate and place it on the plate",
+   "parse_text": "pick up the akita black bowl next to the plate and place it on the plate",
+   "suite": "libero_spatial_task",
+   "index": 2,
+   "original": "pick up the black bowl from table center and place it on the plate",
+   "original_scene": "libero_spatial",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "spatial:3": {
+   "scene": "libero_spatial",
+   "level": "scene",
+   "candidates": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+   ],
+   "scene_cover": {
+    "picks": [
+     31,
+     39
+    ],
+    "t1": 31,
+    "t2": 39,
+    "trace": [
+     {
+      "pick": 31,
+      "key": [
+       5,
+       5,
+       true,
+       0.764706,
+       -31
+      ],
+      "runner_up": 39,
+      "runner_up_key": [
+       5,
+       5,
+       true,
+       0.733333,
+       -39
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 39,
+      "key": [
+       0,
+       5,
+       true,
+       0.733333,
+       -39
+      ],
+      "runner_up": 32,
+      "runner_up_key": [
+       0,
+       4,
+       true,
+       0.666667,
+       -32
+      ],
+      "tie_on": "total"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "L",
+      "cabinet"
+     ],
+     [
+      "O",
+      "akita"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "akita black bowl",
+     "landmark": "the top of the cabinet",
+     "goal": "on the plate"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [
+     [
+      "O",
+      "akita"
+     ]
+    ],
+    "covered_by": {
+     "31": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "cabinet"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "39": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "cabinet"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     31,
+     39
+    ],
+    "t1": 31,
+    "t2": 39,
+    "trace": [
+     {
+      "pick": 31,
+      "key": [
+       5,
+       5,
+       true,
+       0.764706,
+       -31
+      ],
+      "runner_up": 39,
+      "runner_up_key": [
+       5,
+       5,
+       true,
+       0.733333,
+       -39
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 39,
+      "key": [
+       0,
+       5,
+       true,
+       0.733333,
+       -39
+      ],
+      "runner_up": 32,
+      "runner_up_key": [
+       0,
+       4,
+       true,
+       0.666667,
+       -32
+      ],
+      "tie_on": "total"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "L",
+      "cabinet"
+     ],
+     [
+      "O",
+      "akita"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "akita black bowl",
+     "landmark": "the top of the cabinet",
+     "goal": "on the plate"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [
+     [
+      "O",
+      "akita"
+     ]
+    ],
+    "covered_by": {
+     "31": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "cabinet"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "39": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "cabinet"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     30,
+     34
+    ],
+    "t1": 30,
+    "t2": 34
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@31.39.24",
+    "blind_cover": "tli@31.39.24",
+    "scene_random": "tli@30.34.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+     "pick up the black bowl on the wooden cabinet and place it on the plate"
+    ],
+    "blind_cover": [
+     "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+     "pick up the black bowl on the wooden cabinet and place it on the plate"
+    ],
+    "scene_random": [
+     "pick up the black bowl next to the cookie box and place it on the plate",
+     "pick up the black bowl between the plate and the ramekin and place it on the plate"
+    ]
+   },
+   "text": "pick the akita black bowl on the top of the cabinet and place it on the plate",
+   "parse_text": "pick up the akita black bowl on the top of the cabinet and place it on the plate",
+   "suite": "libero_spatial_task",
+   "index": 3,
+   "original": "pick up the black bowl on the cookie box and place it on the plate",
+   "original_scene": "libero_spatial",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "spatial:4": {
+   "scene": "libero_spatial",
+   "level": "scene",
+   "candidates": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+   ],
+   "scene_cover": {
+    "picks": [
+     31,
+     39
+    ],
+    "t1": 31,
+    "t2": 39,
+    "trace": [
+     {
+      "pick": 31,
+      "key": [
+       6,
+       6,
+       true,
+       0.823529,
+       -31
+      ],
+      "runner_up": 39,
+      "runner_up_key": [
+       6,
+       6,
+       true,
+       0.8,
+       -39
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 39,
+      "key": [
+       0,
+       6,
+       true,
+       0.8,
+       -39
+      ],
+      "runner_up": 32,
+      "runner_up_key": [
+       0,
+       4,
+       true,
+       0.625,
+       -32
+      ],
+      "tie_on": "total"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "L",
+      "cabinet"
+     ],
+     [
+      "L",
+      "wooden"
+     ],
+     [
+      "O",
+      "akita"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "akita black bowl",
+     "landmark": "the top of the wooden cabinet",
+     "goal": "on the plate"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [
+     [
+      "O",
+      "akita"
+     ]
+    ],
+    "covered_by": {
+     "31": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "cabinet"
+      ],
+      [
+       "L",
+       "wooden"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "39": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "cabinet"
+      ],
+      [
+       "L",
+       "wooden"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     31,
+     39
+    ],
+    "t1": 31,
+    "t2": 39,
+    "trace": [
+     {
+      "pick": 31,
+      "key": [
+       6,
+       6,
+       true,
+       0.823529,
+       -31
+      ],
+      "runner_up": 39,
+      "runner_up_key": [
+       6,
+       6,
+       true,
+       0.8,
+       -39
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 39,
+      "key": [
+       0,
+       6,
+       true,
+       0.8,
+       -39
+      ],
+      "runner_up": 32,
+      "runner_up_key": [
+       0,
+       4,
+       true,
+       0.625,
+       -32
+      ],
+      "tie_on": "total"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "L",
+      "cabinet"
+     ],
+     [
+      "L",
+      "wooden"
+     ],
+     [
+      "O",
+      "akita"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "akita black bowl",
+     "landmark": "the top of the wooden cabinet",
+     "goal": "on the plate"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [
+     [
+      "O",
+      "akita"
+     ]
+    ],
+    "covered_by": {
+     "31": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "cabinet"
+      ],
+      [
+       "L",
+       "wooden"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "39": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "cabinet"
+      ],
+      [
+       "L",
+       "wooden"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     30,
+     38
+    ],
+    "t1": 30,
+    "t2": 38
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@31.39.24",
+    "blind_cover": "tli@31.39.24",
+    "scene_random": "tli@30.38.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+     "pick up the black bowl on the wooden cabinet and place it on the plate"
+    ],
+    "blind_cover": [
+     "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+     "pick up the black bowl on the wooden cabinet and place it on the plate"
+    ],
+    "scene_random": [
+     "pick up the black bowl next to the cookie box and place it on the plate",
+     "pick up the black bowl from table center and place it on the plate"
+    ]
+   },
+   "text": "pick the akita black bowl on the top of the wooden cabinet and place it on the plate",
+   "parse_text": "pick up the akita black bowl on the top of the wooden cabinet and place it on the plate",
+   "suite": "libero_spatial_task",
+   "index": 4,
+   "original": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+   "original_scene": "libero_spatial",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "spatial:8": {
+   "scene": "libero_spatial",
+   "level": "scene",
+   "candidates": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+   ],
+   "scene_cover": {
+    "picks": [
+     37,
+     32
+    ],
+    "t1": 37,
+    "t2": 32,
+    "trace": [
+     {
+      "pick": 37,
+      "key": [
+       5,
+       5,
+       true,
+       0.928571,
+       -37
+      ],
+      "runner_up": 32,
+      "runner_up_key": [
+       5,
+       5,
+       true,
+       0.785714,
+       -32
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 32,
+      "key": [
+       0,
+       5,
+       true,
+       0.785714,
+       -32
+      ],
+      "runner_up": 34,
+      "runner_up_key": [
+       0,
+       5,
+       true,
+       0.733333,
+       -34
+      ],
+      "tie_on": "jaccard"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "L",
+      "ramekin"
+     ],
+     [
+      "O",
+      "akita"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "akita black bowl",
+     "landmark": "the ramekin",
+     "goal": "on the plate"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [
+     [
+      "O",
+      "akita"
+     ]
+    ],
+    "covered_by": {
+     "37": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "ramekin"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "32": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "ramekin"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     37,
+     32
+    ],
+    "t1": 37,
+    "t2": 32,
+    "trace": [
+     {
+      "pick": 37,
+      "key": [
+       5,
+       5,
+       true,
+       0.928571,
+       -37
+      ],
+      "runner_up": 32,
+      "runner_up_key": [
+       5,
+       5,
+       true,
+       0.785714,
+       -32
+      ],
+      "tie_on": "jaccard"
+     },
+     {
+      "pick": 32,
+      "key": [
+       0,
+       5,
+       true,
+       0.785714,
+       -32
+      ],
+      "runner_up": 34,
+      "runner_up_key": [
+       0,
+       5,
+       true,
+       0.733333,
+       -34
+      ],
+      "tie_on": "jaccard"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "L",
+      "ramekin"
+     ],
+     [
+      "O",
+      "akita"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "akita black bowl",
+     "landmark": "the ramekin",
+     "goal": "on the plate"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [
+     [
+      "O",
+      "akita"
+     ]
+    ],
+    "covered_by": {
+     "37": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "ramekin"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "32": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "L",
+       "ramekin"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     35,
+     32
+    ],
+    "t1": 32,
+    "t2": 35
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@37.32.24",
+    "blind_cover": "tli@37.32.24",
+    "scene_random": "tli@32.35.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "pick up the black bowl next to the ramekin and place it on the plate",
+     "pick up the black bowl on the ramekin and place it on the plate"
+    ],
+    "blind_cover": [
+     "pick up the black bowl next to the ramekin and place it on the plate",
+     "pick up the black bowl on the ramekin and place it on the plate"
+    ],
+    "scene_random": [
+     "pick up the black bowl on the ramekin and place it on the plate",
+     "pick up the black bowl on the cookie box and place it on the plate"
+    ]
+   },
+   "text": "pick the akita black bowl next to the ramekin and place it on the plate",
+   "parse_text": "pick up the akita black bowl next to the ramekin and place it on the plate",
+   "suite": "libero_spatial_task",
+   "index": 8,
+   "original": "pick up the black bowl next to the plate and place it on the plate",
+   "original_scene": "libero_spatial",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  },
+  "ten:5": {
+   "scene": "STUDY_SCENE1",
+   "level": "all",
+   "candidates": [
+    9,
+    10,
+    11,
+    13,
+    14,
+    17,
+    18,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39
+   ],
+   "scene_cover": {
+    "picks": [
+     9,
+     21
+    ],
+    "t1": 21,
+    "t2": 9,
+    "trace": [
+     {
+      "pick": 9,
+      "key": [
+       3,
+       3,
+       true,
+       0.846154,
+       -9
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       1,
+       1,
+       true,
+       0.5,
+       -21
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 21,
+      "key": [
+       0,
+       1,
+       true,
+       0.5,
+       -21
+      ],
+      "runner_up": 25,
+      "runner_up_key": [
+       0,
+       1,
+       true,
+       0.5,
+       -25
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ],
+     [
+      "O",
+      "cup"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "cup",
+     "landmark": "",
+     "goal": "in the back compartment of the caddy"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [
+     [
+      "O",
+      "cup"
+     ]
+    ],
+    "covered_by": {
+     "9": [
+      [
+       "G",
+       "caddy"
+      ],
+      [
+       "G",
+       "compartment"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "21": [
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "blind_cover": {
+    "picks": [
+     9,
+     21
+    ],
+    "t1": 21,
+    "t2": 9,
+    "trace": [
+     {
+      "pick": 9,
+      "key": [
+       3,
+       3,
+       true,
+       0.846154,
+       -9
+      ],
+      "runner_up": 21,
+      "runner_up_key": [
+       1,
+       1,
+       true,
+       0.5,
+       -21
+      ],
+      "tie_on": "gain"
+     },
+     {
+      "pick": 21,
+      "key": [
+       0,
+       1,
+       true,
+       0.5,
+       -21
+      ],
+      "runner_up": 25,
+      "runner_up_key": [
+       0,
+       1,
+       true,
+       0.5,
+       -25
+      ],
+      "tie_on": "index"
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ],
+     [
+      "O",
+      "cup"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "parts": {
+     "verb": "put",
+     "head": "cup",
+     "landmark": "",
+     "goal": "in the back compartment of the caddy"
+    },
+    "frame": "pick up the {O} and place it {G}",
+    "uncovered": [
+     [
+      "O",
+      "cup"
+     ]
+    ],
+    "covered_by": {
+     "9": [
+      [
+       "G",
+       "caddy"
+      ],
+      [
+       "G",
+       "compartment"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "21": [
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_random": {
+    "drawn": [
+     36,
+     28
+    ],
+    "t1": 36,
+    "t2": 28
+   },
+   "arms": {
+    "zs": "zs",
+    "scene_cover": "tli@21.9.24",
+    "blind_cover": "tli@21.9.24",
+    "scene_random": "tli@36.28.24"
+   },
+   "texts": {
+    "scene_cover": [
+     "pick up the ketchup and place it in the basket",
+     "pick up the book and place it in the back compartment of the caddy"
+    ],
+    "blind_cover": [
+     "pick up the ketchup and place it in the basket",
+     "pick up the book and place it in the back compartment of the caddy"
+    ],
+    "scene_random": [
+     "pick up the black bowl next to the plate and place it on the plate",
+     "pick up the tomato sauce and place it in the basket"
+    ]
+   },
+   "text": "pick up the cup and place it in the back compartment of the caddy",
+   "parse_text": "pick up the cup and place it in the back compartment of the caddy",
+   "suite": "libero_10_task",
+   "index": 5,
+   "original": "pick up the book and place it in the back compartment of the caddy",
+   "original_scene": "STUDY_SCENE1",
+   "scene_equals_original": true,
+   "distinct_arms": 3
+  }
+ },
+ "test_sha256": "020ff2d104b3954215b2f40c346eff524999c9f65c75118d0b91d7aea86109be",
+ "overlap": {
+  "scene_eq_blind": 20,
+  "scene_eq_random": 0,
+  "levels": {
+   "scene": 11,
+   "suite": 9,
+   "all": 1
+  }
+ }
+}

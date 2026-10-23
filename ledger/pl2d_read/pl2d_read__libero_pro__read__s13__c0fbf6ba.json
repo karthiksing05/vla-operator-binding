@@ -1,0 +1,974 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_pro",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/pl2d_scene.py --read --record",
+ "config": {
+  "arms": [
+   "zs",
+   "scene_cover",
+   "blind_cover",
+   "scene_random"
+  ],
+  "backbones": [
+   "pi05_libero",
+   "pi0_libero"
+  ],
+  "base": 5300000,
+  "episodes": 20,
+  "lam": 24,
+  "prereg": "m3_prereg tag pl2d_scene",
+  "states": "fresh_pro_pl2d"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "kipp.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4201186",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "pl2d_read",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c0fbf6ba14361f0a550f86e6d31fe12bc46316aa",
+  "short": "c0fbf6ba"
+ },
+ "keys": {},
+ "metrics": {
+  "pi0": {
+   "H1": {
+    "arms": [
+     "scene_cover",
+     "zs"
+    ],
+    "diff": {
+     "diff": -0.01904761904761905,
+     "hi": 0.0,
+     "hi90": 0.0,
+     "lo": -0.05476190476190476,
+     "lo90": -0.047619047619047616,
+     "n_pairs": 420,
+     "n_tasks": 21
+    },
+    "discordant": [
+     0,
+     8
+    ],
+    "holm_rejected": true,
+    "n": 420,
+    "passes": false,
+    "sign_p": 0.0078125,
+    "tasks": 21,
+    "x": 4,
+    "y": 12
+   },
+   "H2": {
+    "arms": [
+     "scene_cover",
+     "blind_cover"
+    ],
+    "diff": {
+     "diff": 0.0,
+     "hi": 0.0,
+     "hi90": 0.0,
+     "lo": 0.0,
+     "lo90": 0.0,
+     "n_pairs": 420,
+     "n_tasks": 21
+    },
+    "discordant": [
+     0,
+     0
+    ],
+    "holm_rejected": false,
+    "n": 420,
+    "passes": false,
+    "sign_p": 1.0,
+    "tasks": 21,
+    "x": 4,
+    "y": 4
+   },
+   "H3": {
+    "arms": [
+     "scene_cover",
+     "scene_random"
+    ],
+    "diff": {
+     "diff": -0.016666666666666666,
+     "hi": 0.0,
+     "hi90": 0.0,
+     "lo": -0.047619047619047616,
+     "lo90": -0.04285714285714286,
+     "n_pairs": 420,
+     "n_tasks": 21
+    },
+    "discordant": [
+     1,
+     8
+    ],
+    "holm_rejected": false,
+    "n": 420,
+    "passes": false,
+    "sign_p": 0.0390625,
+    "tasks": 21,
+    "x": 4,
+    "y": 11
+   },
+   "backbone": "pi0_libero",
+   "by_suite": {
+    "goal": {
+     "blind_cover": 0,
+     "scene_cover": 0,
+     "scene_random": 3,
+     "tasks": 6,
+     "zs": 0
+    },
+    "object": {
+     "blind_cover": 0,
+     "scene_cover": 0,
+     "scene_random": 0,
+     "tasks": 9,
+     "zs": 0
+    },
+    "spatial": {
+     "blind_cover": 4,
+     "scene_cover": 4,
+     "scene_random": 8,
+     "tasks": 5,
+     "zs": 12
+    },
+    "ten": {
+     "blind_cover": 0,
+     "scene_cover": 0,
+     "scene_random": 0,
+     "tasks": 1,
+     "zs": 0
+    }
+   },
+   "desc": {
+    "blind_vs_zs": {
+     "diff": {
+      "diff": -0.01904761904761905,
+      "hi": 0.0,
+      "hi90": 0.0,
+      "lo": -0.05476190476190476,
+      "lo90": -0.047619047619047616,
+      "n_pairs": 420,
+      "n_tasks": 21
+     },
+     "discordant": [
+      0,
+      8
+     ],
+     "n": 420,
+     "sign_p": 0.0078125,
+     "tasks": 21,
+     "x": 4,
+     "y": 12
+    },
+    "random_vs_zs": {
+     "diff": {
+      "diff": -0.002380952380952381,
+      "hi": 0.02142857142857143,
+      "hi90": 0.016666666666666666,
+      "lo": -0.02619047619047619,
+      "lo90": -0.02142857142857143,
+      "n_pairs": 420,
+      "n_tasks": 21
+     },
+     "discordant": [
+      5,
+      6
+     ],
+     "n": 420,
+     "sign_p": 1.0,
+     "tasks": 21,
+     "x": 11,
+     "y": 12
+    },
+    "scene_vs_blind_differing": {
+     "diff": {
+      "diff": 0.0,
+      "hi": 0.0,
+      "hi90": 0.0,
+      "lo": 0.0,
+      "lo90": 0.0,
+      "n_pairs": 20,
+      "n_tasks": 1
+     },
+     "discordant": [
+      0,
+      0
+     ],
+     "n": 20,
+     "sign_p": 1.0,
+     "tasks": 1,
+     "x": 0,
+     "y": 0
+    }
+   },
+   "missing": [],
+   "n": 420,
+   "per_task": {
+    "goal:1": {
+     "arms": {
+      "blind_cover": "tli@10.17.24",
+      "scene_cover": "tli@10.17.24",
+      "scene_random": "tli@14.13.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "goal:2": {
+     "arms": {
+      "blind_cover": "tli@11.13.24",
+      "scene_cover": "tli@11.13.24",
+      "scene_random": "tli@10.13.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "goal:4": {
+     "arms": {
+      "blind_cover": "tli@18.10.24",
+      "scene_cover": "tli@18.10.24",
+      "scene_random": "tli@18.17.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "goal:6": {
+     "arms": {
+      "blind_cover": "tli@11.13.24",
+      "scene_cover": "tli@11.13.24",
+      "scene_random": "tli@14.17.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "goal:8": {
+     "arms": {
+      "blind_cover": "tli@11.10.24",
+      "scene_cover": "tli@11.10.24",
+      "scene_random": "tli@14.10.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 3,
+     "zs": 0
+    },
+    "goal:9": {
+     "arms": {
+      "blind_cover": "tli@13.11.24",
+      "scene_cover": "tli@13.11.24",
+      "scene_random": "tli@13.17.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "object:0": {
+     "arms": {
+      "blind_cover": "tli@13.22.24",
+      "scene_cover": "tli@22.21.24",
+      "scene_random": "tli@20.23.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "object:2": {
+     "arms": {
+      "blind_cover": "tli@28.23.24",
+      "scene_cover": "tli@28.23.24",
+      "scene_random": "tli@24.21.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "object:3": {
+     "arms": {
+      "blind_cover": "tli@21.25.24",
+      "scene_cover": "tli@21.25.24",
+      "scene_random": "tli@28.25.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "object:4": {
+     "arms": {
+      "blind_cover": "tli@25.21.24",
+      "scene_cover": "tli@25.21.24",
+      "scene_random": "tli@20.29.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "object:5": {
+     "arms": {
+      "blind_cover": "tli@23.28.24",
+      "scene_cover": "tli@23.28.24",
+      "scene_random": "tli@28.26.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "object:6": {
+     "arms": {
+      "blind_cover": "tli@20.21.24",
+      "scene_cover": "tli@20.21.24",
+      "scene_random": "tli@23.26.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "object:7": {
+     "arms": {
+      "blind_cover": "tli@27.21.24",
+      "scene_cover": "tli@27.21.24",
+      "scene_random": "tli@27.28.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "object:8": {
+     "arms": {
+      "blind_cover": "tli@26.21.24",
+      "scene_cover": "tli@26.21.24",
+      "scene_random": "tli@22.27.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "object:9": {
+     "arms": {
+      "blind_cover": "tli@29.21.24",
+      "scene_cover": "tli@29.21.24",
+      "scene_random": "tli@22.27.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "spatial:0": {
+     "arms": {
+      "blind_cover": "tli@34.32.24",
+      "scene_cover": "tli@34.32.24",
+      "scene_random": "tli@32.38.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "spatial:2": {
+     "arms": {
+      "blind_cover": "tli@36.34.24",
+      "scene_cover": "tli@36.34.24",
+      "scene_random": "tli@31.32.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 1
+    },
+    "spatial:3": {
+     "arms": {
+      "blind_cover": "tli@31.39.24",
+      "scene_cover": "tli@31.39.24",
+      "scene_random": "tli@30.34.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "spatial:4": {
+     "arms": {
+      "blind_cover": "tli@31.39.24",
+      "scene_cover": "tli@31.39.24",
+      "scene_random": "tli@30.38.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 1
+    },
+    "spatial:8": {
+     "arms": {
+      "blind_cover": "tli@37.32.24",
+      "scene_cover": "tli@37.32.24",
+      "scene_random": "tli@32.35.24",
+      "zs": "zs"
+     },
+     "blind_cover": 4,
+     "level": "scene",
+     "scene_cover": 4,
+     "scene_random": 8,
+     "zs": 10
+    },
+    "ten:5": {
+     "arms": {
+      "blind_cover": "tli@21.9.24",
+      "scene_cover": "tli@21.9.24",
+      "scene_random": "tli@36.28.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "all",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    }
+   },
+   "tasks": 21,
+   "totals": {
+    "blind_cover": 4,
+    "scene_cover": 4,
+    "scene_random": 11,
+    "zs": 12
+   }
+  },
+  "pi05": {
+   "H1": {
+    "arms": [
+     "scene_cover",
+     "zs"
+    ],
+    "diff": {
+     "diff": -0.02619047619047619,
+     "hi": 0.030952380952380953,
+     "hi90": 0.02142857142857143,
+     "lo": -0.0880952380952381,
+     "lo90": -0.07857142857142857,
+     "n_pairs": 420,
+     "n_tasks": 21
+    },
+    "discordant": [
+     13,
+     24
+    ],
+    "holm_rejected": false,
+    "n": 420,
+    "passes": false,
+    "sign_p": 0.09887174959294498,
+    "tasks": 21,
+    "x": 23,
+    "y": 34
+   },
+   "H2": {
+    "arms": [
+     "scene_cover",
+     "blind_cover"
+    ],
+    "diff": {
+     "diff": 0.01904761904761905,
+     "hi": 0.06428571428571428,
+     "hi90": 0.05476190476190476,
+     "lo": 0.0,
+     "lo90": 0.0,
+     "n_pairs": 420,
+     "n_tasks": 21
+    },
+    "discordant": [
+     8,
+     0
+    ],
+    "holm_rejected": true,
+    "n": 420,
+    "passes": true,
+    "sign_p": 0.0078125,
+    "tasks": 21,
+    "x": 23,
+    "y": 15
+   },
+   "H3": {
+    "arms": [
+     "scene_cover",
+     "scene_random"
+    ],
+    "diff": {
+     "diff": -0.004761904761904762,
+     "hi": 0.07142857142857142,
+     "hi90": 0.05714285714285714,
+     "lo": -0.08333333333333333,
+     "lo90": -0.07142857142857142,
+     "n_pairs": 420,
+     "n_tasks": 21
+    },
+    "discordant": [
+     18,
+     20
+    ],
+    "holm_rejected": false,
+    "n": 420,
+    "passes": false,
+    "sign_p": 0.8714146793645341,
+    "tasks": 21,
+    "x": 23,
+    "y": 25
+   },
+   "backbone": "pi05_libero",
+   "by_suite": {
+    "goal": {
+     "blind_cover": 0,
+     "scene_cover": 0,
+     "scene_random": 6,
+     "tasks": 6,
+     "zs": 17
+    },
+    "object": {
+     "blind_cover": 0,
+     "scene_cover": 8,
+     "scene_random": 14,
+     "tasks": 9,
+     "zs": 3
+    },
+    "spatial": {
+     "blind_cover": 11,
+     "scene_cover": 11,
+     "scene_random": 5,
+     "tasks": 5,
+     "zs": 13
+    },
+    "ten": {
+     "blind_cover": 4,
+     "scene_cover": 4,
+     "scene_random": 0,
+     "tasks": 1,
+     "zs": 1
+    }
+   },
+   "desc": {
+    "blind_vs_zs": {
+     "diff": {
+      "diff": -0.04523809523809524,
+      "hi": 0.002380952380952381,
+      "hi90": -0.004761904761904762,
+      "lo": -0.10476190476190476,
+      "lo90": -0.09285714285714286,
+      "n_pairs": 420,
+      "n_tasks": 21
+     },
+     "discordant": [
+      6,
+      25
+     ],
+     "n": 420,
+     "sign_p": 0.0008779102936387062,
+     "tasks": 21,
+     "x": 15,
+     "y": 34
+    },
+    "random_vs_zs": {
+     "diff": {
+      "diff": -0.02142857142857143,
+      "hi": 0.05,
+      "hi90": 0.03571428571428571,
+      "lo": -0.08571428571428572,
+      "lo90": -0.0761904761904762,
+      "n_pairs": 420,
+      "n_tasks": 21
+     },
+     "discordant": [
+      18,
+      27
+     ],
+     "n": 420,
+     "sign_p": 0.23269319190831084,
+     "tasks": 21,
+     "x": 25,
+     "y": 34
+    },
+    "scene_vs_blind_differing": {
+     "diff": {
+      "diff": 0.4,
+      "hi": 0.6,
+      "hi90": 0.6,
+      "lo": 0.2,
+      "lo90": 0.25,
+      "n_pairs": 20,
+      "n_tasks": 1
+     },
+     "discordant": [
+      8,
+      0
+     ],
+     "n": 20,
+     "sign_p": 0.0078125,
+     "tasks": 1,
+     "x": 8,
+     "y": 0
+    }
+   },
+   "missing": [],
+   "n": 420,
+   "per_task": {
+    "goal:1": {
+     "arms": {
+      "blind_cover": "tli@10.17.24",
+      "scene_cover": "tli@10.17.24",
+      "scene_random": "tli@14.13.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 1
+    },
+    "goal:2": {
+     "arms": {
+      "blind_cover": "tli@11.13.24",
+      "scene_cover": "tli@11.13.24",
+      "scene_random": "tli@10.13.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 3
+    },
+    "goal:4": {
+     "arms": {
+      "blind_cover": "tli@18.10.24",
+      "scene_cover": "tli@18.10.24",
+      "scene_random": "tli@18.17.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 1
+    },
+    "goal:6": {
+     "arms": {
+      "blind_cover": "tli@11.13.24",
+      "scene_cover": "tli@11.13.24",
+      "scene_random": "tli@14.17.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 3
+    },
+    "goal:8": {
+     "arms": {
+      "blind_cover": "tli@11.10.24",
+      "scene_cover": "tli@11.10.24",
+      "scene_random": "tli@14.10.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 6,
+     "zs": 9
+    },
+    "goal:9": {
+     "arms": {
+      "blind_cover": "tli@13.11.24",
+      "scene_cover": "tli@13.11.24",
+      "scene_random": "tli@13.17.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "object:0": {
+     "arms": {
+      "blind_cover": "tli@13.22.24",
+      "scene_cover": "tli@22.21.24",
+      "scene_random": "tli@20.23.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 8,
+     "scene_random": 0,
+     "zs": 3
+    },
+    "object:2": {
+     "arms": {
+      "blind_cover": "tli@28.23.24",
+      "scene_cover": "tli@28.23.24",
+      "scene_random": "tli@24.21.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 8,
+     "zs": 0
+    },
+    "object:3": {
+     "arms": {
+      "blind_cover": "tli@21.25.24",
+      "scene_cover": "tli@21.25.24",
+      "scene_random": "tli@28.25.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "object:4": {
+     "arms": {
+      "blind_cover": "tli@25.21.24",
+      "scene_cover": "tli@25.21.24",
+      "scene_random": "tli@20.29.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "object:5": {
+     "arms": {
+      "blind_cover": "tli@23.28.24",
+      "scene_cover": "tli@23.28.24",
+      "scene_random": "tli@28.26.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "object:6": {
+     "arms": {
+      "blind_cover": "tli@20.21.24",
+      "scene_cover": "tli@20.21.24",
+      "scene_random": "tli@23.26.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "object:7": {
+     "arms": {
+      "blind_cover": "tli@27.21.24",
+      "scene_cover": "tli@27.21.24",
+      "scene_random": "tli@27.28.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 2,
+     "zs": 0
+    },
+    "object:8": {
+     "arms": {
+      "blind_cover": "tli@26.21.24",
+      "scene_cover": "tli@26.21.24",
+      "scene_random": "tli@22.27.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "object:9": {
+     "arms": {
+      "blind_cover": "tli@29.21.24",
+      "scene_cover": "tli@29.21.24",
+      "scene_random": "tli@22.27.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "suite",
+     "scene_cover": 0,
+     "scene_random": 4,
+     "zs": 0
+    },
+    "spatial:0": {
+     "arms": {
+      "blind_cover": "tli@34.32.24",
+      "scene_cover": "tli@34.32.24",
+      "scene_random": "tli@32.38.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "spatial:2": {
+     "arms": {
+      "blind_cover": "tli@36.34.24",
+      "scene_cover": "tli@36.34.24",
+      "scene_random": "tli@31.32.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "spatial:3": {
+     "arms": {
+      "blind_cover": "tli@31.39.24",
+      "scene_cover": "tli@31.39.24",
+      "scene_random": "tli@30.34.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 2
+    },
+    "spatial:4": {
+     "arms": {
+      "blind_cover": "tli@31.39.24",
+      "scene_cover": "tli@31.39.24",
+      "scene_random": "tli@30.38.24",
+      "zs": "zs"
+     },
+     "blind_cover": 0,
+     "level": "scene",
+     "scene_cover": 0,
+     "scene_random": 0,
+     "zs": 0
+    },
+    "spatial:8": {
+     "arms": {
+      "blind_cover": "tli@37.32.24",
+      "scene_cover": "tli@37.32.24",
+      "scene_random": "tli@32.35.24",
+      "zs": "zs"
+     },
+     "blind_cover": 11,
+     "level": "scene",
+     "scene_cover": 11,
+     "scene_random": 5,
+     "zs": 11
+    },
+    "ten:5": {
+     "arms": {
+      "blind_cover": "tli@21.9.24",
+      "scene_cover": "tli@21.9.24",
+      "scene_random": "tli@36.28.24",
+      "zs": "zs"
+     },
+     "blind_cover": 4,
+     "level": "all",
+     "scene_cover": 4,
+     "scene_random": 0,
+     "zs": 1
+    }
+   },
+   "tasks": 21,
+   "totals": {
+    "blind_cover": 15,
+    "scene_cover": 23,
+    "scene_random": 25,
+    "zs": 34
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "pl2d_read__libero_pro__read__s13__c0fbf6ba",
+ "schema": 1,
+ "script": "experiments/pl2d_scene.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-23T10:36:41+00:00",
+ "stream": null,
+ "tag": "read"
+}

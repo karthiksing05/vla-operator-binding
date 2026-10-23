@@ -1,0 +1,244 @@
+{
+ "suite": "libero_object_task",
+ "tasks": {
+  "7": {
+   "language": "pick the butter and place it in the basket",
+   "success_rate": 0.0,
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 36.955087423324585,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 53
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 38.226959466934204,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 49
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 39.696106910705566,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 44
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 41.15304398536682,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 55
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 40.440996408462524,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 56
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 40.12032127380371,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 49
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 39.152658462524414,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 50
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 38.65890908241272,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 50
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 39.92502284049988,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 53
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 41.304370641708374,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 54
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 39.640347957611084,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 53
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 42.53732085227966,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 53
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 40.92438817024231,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 57
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 37.029362201690674,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 52
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 36.74146008491516,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 53
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 38.97983193397522,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 86
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 36.886876821517944,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 54
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 38.505791902542114,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 52
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 37.23182821273804,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 54
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 33.90769720077515,
+     "error": null,
+     "bound": "milk_1",
+     "bound_step": 57
+    }
+   ]
+  }
+ },
+ "args": {
+  "host": "127.0.0.1",
+  "port": 9493,
+  "suite": "libero_object_task",
+  "tasks": "7",
+  "trials": 20,
+  "state_mod": 0,
+  "first_trial": 0,
+  "seed": 7,
+  "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_pro_pl2d",
+  "replan": 5,
+  "wait": 10,
+  "resize": 224,
+  "max_steps": 0,
+  "videos": 2,
+  "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2d_object_libero_object_task_7_zs_seed13_pi0.json",
+  "no_meta": false,
+  "record": false,
+  "light": false,
+  "all_objects": false,
+  "objects": false,
+  "branches": "",
+  "seg": false,
+  "swap": "",
+  "swap_mode": "render",
+  "swap_cams": "both",
+  "swap_phase": "all",
+  "bind": "track"
+ },
+ "started": 1792749475.5500057,
+ "success_rate": 0.0,
+ "n_episodes": 20,
+ "secs": 815.1246266365051
+}

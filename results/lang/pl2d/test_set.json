@@ -1,0 +1,1026 @@
+{
+ "rule": "G22-eligible LIBERO-PRO task-split task, pi0.5 G22 fresh-t zs <= 15/20, no plan-L use; all qualifying ordered by sha256('pl2d:13:'+key), first 24",
+ "zs_source": "ledger/g22_libero_pro/g22_libero_pro__libero_pro__read_pi05__s13__29c1dde7.json",
+ "qualifying": 21,
+ "hash_order": [
+  "spatial:0",
+  "spatial:3",
+  "object:4",
+  "goal:2",
+  "object:6",
+  "object:0",
+  "ten:5",
+  "spatial:4",
+  "goal:8",
+  "goal:4",
+  "object:9",
+  "goal:6",
+  "goal:9",
+  "object:5",
+  "object:3",
+  "object:8",
+  "object:7",
+  "goal:1",
+  "spatial:8",
+  "object:2",
+  "spatial:2"
+ ],
+ "test": [
+  "goal:1",
+  "goal:2",
+  "goal:4",
+  "goal:6",
+  "goal:8",
+  "goal:9",
+  "object:0",
+  "object:2",
+  "object:3",
+  "object:4",
+  "object:5",
+  "object:6",
+  "object:7",
+  "object:8",
+  "object:9",
+  "spatial:0",
+  "spatial:2",
+  "spatial:3",
+  "spatial:4",
+  "spatial:8",
+  "ten:5"
+ ],
+ "test_sha256": "020ff2d104b3954215b2f40c346eff524999c9f65c75118d0b91d7aea86109be",
+ "per_task": {
+  "goal:0": {
+   "language": "open the bottom drawer of the cabinet",
+   "original": "open the middle drawer of the cabinet",
+   "eligible": false,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "goal:1": {
+   "language": "put the plate on the stove",
+   "original": "put the bowl on the stove",
+   "eligible": true,
+   "zs_pi05_fresh_t": 6,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_smoke",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_smoke",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "goal:2": {
+   "language": "put the wine bottle in the bowl",
+   "original": "put the wine bottle on top of the cabinet",
+   "eligible": true,
+   "zs_pi05_fresh_t": 5,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "goal:3": {
+   "language": "open the top layer of the drawer and put the cream cheese inside",
+   "original": "open the top drawer and put the bowl inside",
+   "eligible": false,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "goal:4": {
+   "language": "put the plate on the top of the drawer",
+   "original": "put the bowl on top of the cabinet",
+   "eligible": true,
+   "zs_pi05_fresh_t": 4,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "goal:5": {
+   "language": "push the cream cheese to the front of the stove",
+   "original": "push the plate to the front of the stove",
+   "eligible": false,
+   "zs_pi05_fresh_t": 1,
+   "used_by_ledger": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "goal:6": {
+   "language": "put the wine bottle in the bowl",
+   "original": "put the cream cheese in the bowl",
+   "eligible": true,
+   "zs_pi05_fresh_t": 5,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "goal:7": {
+   "language": "turn off the stove",
+   "original": "turn on the stove",
+   "eligible": false,
+   "zs_pi05_fresh_t": 18,
+   "used_by_ledger": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "goal:8": {
+   "language": "put the wine bottle on the plate",
+   "original": "put the bowl on the plate",
+   "eligible": true,
+   "zs_pi05_fresh_t": 10,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "goal:9": {
+   "language": "put the cream cheese on the rack",
+   "original": "put the wine bottle on the rack",
+   "eligible": true,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "object:0": {
+   "language": "pick the cream cheese and place it in the basket",
+   "original": "pick up the alphabet soup and place it in the basket",
+   "eligible": true,
+   "zs_pi05_fresh_t": 1,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_smoke",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_smoke",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "object:1": {
+   "language": "pick the alphabet soup and place it in the basket",
+   "original": "pick up the cream cheese and place it in the basket",
+   "eligible": true,
+   "zs_pi05_fresh_t": 20,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "object:2": {
+   "language": "pick the tomato sauce and place it in the basket",
+   "original": "pick up the salad dressing and place it in the basket",
+   "eligible": true,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "object:3": {
+   "language": "pick the ketchup and place it in the basket",
+   "original": "pick up the bbq sauce and place it in the basket",
+   "eligible": true,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "object:4": {
+   "language": "pick the milk and place it in the basket",
+   "original": "pick up the ketchup and place it in the basket",
+   "eligible": true,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "object:5": {
+   "language": "pick the bbq sauce and place it in the basket",
+   "original": "pick up the tomato sauce and place it in the basket",
+   "eligible": true,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "object:6": {
+   "language": "pick the orange juice and place it in the basket",
+   "original": "pick up the butter and place it in the basket",
+   "eligible": true,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "object:7": {
+   "language": "pick the butter and place it in the basket",
+   "original": "pick up the milk and place it in the basket",
+   "eligible": true,
+   "zs_pi05_fresh_t": 3,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "object:8": {
+   "language": "pick the salad dressing and place it in the basket",
+   "original": "pick up the chocolate pudding and place it in the basket",
+   "eligible": true,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "object:9": {
+   "language": "pick the chocolate pudding and place it in the basket",
+   "original": "pick up the orange juice and place it in the basket",
+   "eligible": true,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "spatial:0": {
+   "language": "pick the akita black bowl not between the plate and the ramekin and place it on the plate",
+   "original": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+   "eligible": true,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_smoke",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_smoke",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "spatial:1": {
+   "language": "pick the akita black bowl next to the cookie box and place it on the plate",
+   "original": "pick up the black bowl next to the ramekin and place it on the plate",
+   "eligible": true,
+   "zs_pi05_fresh_t": 19,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "spatial:2": {
+   "language": "pick the akita black bowl next to the plate and place it on the plate",
+   "original": "pick up the black bowl from table center and place it on the plate",
+   "eligible": true,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "spatial:3": {
+   "language": "pick the akita black bowl on the top of the cabinet and place it on the plate",
+   "original": "pick up the black bowl on the cookie box and place it on the plate",
+   "eligible": true,
+   "zs_pi05_fresh_t": 6,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "spatial:4": {
+   "language": "pick the akita black bowl on the top of the wooden cabinet and place it on the plate",
+   "original": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+   "eligible": true,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "spatial:5": {
+   "language": "pick the akita black bowl on the cookie box and place it on the plate",
+   "original": "pick up the black bowl on the ramekin and place it on the plate",
+   "eligible": true,
+   "zs_pi05_fresh_t": 19,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "spatial:6": {
+   "language": "pick the akita black bowl on the stove and place it on the plate",
+   "original": "pick up the black bowl next to the cookie box and place it on the plate",
+   "eligible": true,
+   "zs_pi05_fresh_t": 19,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "spatial:7": {
+   "language": "pick the akita black bowl on the top of the cabinet and place it on the plate",
+   "original": "pick up the black bowl on the stove and place it on the plate",
+   "eligible": true,
+   "zs_pi05_fresh_t": 18,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "spatial:8": {
+   "language": "pick the akita black bowl next to the ramekin and place it on the plate",
+   "original": "pick up the black bowl next to the plate and place it on the plate",
+   "eligible": true,
+   "zs_pi05_fresh_t": 4,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "spatial:9": {
+   "language": "pick the akita black bowl on the stove and place it on the plate",
+   "original": "pick up the black bowl on the wooden cabinet and place it on the plate",
+   "eligible": true,
+   "zs_pi05_fresh_t": 20,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "ten:0": {
+   "language": "put both the cream cheese and the tomato sauce in the basket",
+   "original": "put both the alphabet soup and the tomato sauce in the basket",
+   "eligible": false,
+   "zs_pi05_fresh_t": 11,
+   "used_by_ledger": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "ten:1": {
+   "language": "put both the alphabet soup and the butter in the basket",
+   "original": "put both the cream cheese box and the butter in the basket",
+   "eligible": false,
+   "zs_pi05_fresh_t": 9,
+   "used_by_ledger": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "ten:2": {
+   "language": "turn on the stove and put the pan on it",
+   "original": "turn on the stove and put the moka pot on it",
+   "eligible": false,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "ten:3": {
+   "language": "put the bottle in the bottom drawer of the cabinet and close it",
+   "original": "put the black bowl in the bottom drawer of the cabinet and close it",
+   "eligible": false,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "ten:4": {
+   "language": "put the yellow and white mug on the left plate and put the white mug on the right plate",
+   "original": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+   "eligible": false,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "ten:5": {
+   "language": "pick up the cup and place it in the back compartment of the caddy",
+   "original": "pick up the book and place it in the back compartment of the caddy",
+   "eligible": true,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_smoke",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_accp",
+    "g22_acct",
+    "g22_pro",
+    "g22_s1p",
+    "g22_s1t",
+    "g22_s2p",
+    "g22_s2t",
+    "g22_smoke",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": true
+  },
+  "ten:6": {
+   "language": "put the red mug on the plate and put the chocolate pudding to the right of the plate",
+   "original": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+   "eligible": false,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "ten:7": {
+   "language": "put both the ketchup and the cream cheese box in the basket",
+   "original": "put both the alphabet soup and the cream cheese box in the basket",
+   "eligible": false,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "ten:8": {
+   "language": "put the left moka pot on the stove",
+   "original": "put both moka pots on the stove",
+   "eligible": false,
+   "zs_pi05_fresh_t": 14,
+   "used_by_ledger": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  },
+  "ten:9": {
+   "language": "put the white mug in the microwave and close it",
+   "original": "put the yellow and white mug in the microwave and close it",
+   "eligible": false,
+   "zs_pi05_fresh_t": 0,
+   "used_by_ledger": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "used_by_episode_files": [
+    "g22_pro",
+    "g22_test"
+   ],
+   "plan_l_use": [],
+   "qualifies": false
+  }
+ }
+}

@@ -1,0 +1,244 @@
+{
+ "suite": "libero_object_task",
+ "tasks": {
+  "2": {
+   "language": "pick the tomato sauce and place it in the basket",
+   "success_rate": 0.0,
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 39.212461948394775,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 191
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 42.43202614784241,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 244
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 44.30860662460327,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 55
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 43.46673631668091,
+     "error": null,
+     "bound": null,
+     "bound_step": null
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 44.98144006729126,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 260
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 43.02117133140564,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 273
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 42.035664796829224,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 130
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 41.50614309310913,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 185
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 40.29035663604736,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 122
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 35.1211998462677,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 82
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 40.3141975402832,
+     "error": null,
+     "bound": null,
+     "bound_step": null
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 40.631938457489014,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 134
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 39.35956931114197,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 128
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 35.48134970664978,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 60
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 40.467610120773315,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 182
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 39.964422941207886,
+     "error": null,
+     "bound": null,
+     "bound_step": null
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 40.14119052886963,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 204
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 40.95691156387329,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 169
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 29.97164297103882,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 153
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 29.01097822189331,
+     "error": null,
+     "bound": "salad_dressing_1",
+     "bound_step": 116
+    }
+   ]
+  }
+ },
+ "args": {
+  "host": "127.0.0.1",
+  "port": 9482,
+  "suite": "libero_object_task",
+  "tasks": "2",
+  "trials": 20,
+  "state_mod": 0,
+  "first_trial": 0,
+  "seed": 7,
+  "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_pro_pl2d",
+  "replan": 5,
+  "wait": 10,
+  "resize": 224,
+  "max_steps": 0,
+  "videos": 2,
+  "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2d_object_libero_object_task_2_zs_seed13_pi0.json",
+  "no_meta": false,
+  "record": false,
+  "light": false,
+  "all_objects": false,
+  "objects": false,
+  "branches": "",
+  "seg": false,
+  "swap": "",
+  "swap_mode": "render",
+  "swap_cams": "both",
+  "swap_phase": "all",
+  "bind": "track"
+ },
+ "started": 1792749511.4404738,
+ "success_rate": 0.0,
+ "n_episodes": 20,
+ "secs": 832.8898797035217
+}

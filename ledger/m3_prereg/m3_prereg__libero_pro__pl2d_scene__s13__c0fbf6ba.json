@@ -1,0 +1,557 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_pro",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: L2d hierarchical scene key, test set and arms frozen, before any L2d rollout",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4200207",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c0fbf6ba14361f0a550f86e6d31fe12bc46316aa",
+  "short": "c0fbf6ba"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": "scene_cover > zs: exact two-sided sign test on discordant pairs",
+  "H2": "scene_cover > blind_cover: same (arms identical on 20/21 tasks offline; expected low power)",
+  "H3": "scene_cover > scene_random: same",
+  "backbones": [
+   "pi05_libero",
+   "pi0_libero"
+  ],
+  "design_check_li20": {
+   "exact": 3,
+   "n": 20,
+   "same_set": 3,
+   "t1": 10,
+   "t2": 8
+  },
+  "design_check_pl2c": {
+   "exact": 9,
+   "n": 20,
+   "same_set": 9,
+   "t1": 10,
+   "t2": 15
+  },
+  "disclosure": "the 21 tasks were used by G22 (zs, origprompt, practice-chosen switch / TLI); selection reads only G22's pi0.5 fresh-t zs; G22 composition counts were visible to the agent, selection is mechanical (all qualifying tasks); Li's 20 tasks are spent and only enter the descriptive design check",
+  "files_sha256": {
+   "fresh_check.json": "72de0ad8d9836a660909dd58eb21d1818f6322476903e2f74efc42750a28dfb9",
+   "picks.json": "671eab00f811f834929c1e41b7eabb5d00bc2647465302e573860063736859bc",
+   "test_set.json": "f604493636012237849123f2df8bc78b6affa7c07a48ed2c4ec78aea6a96c8ec"
+  },
+  "frozen_arms": {
+   "goal:1": {
+    "blind_cover": "tli@10.17.24",
+    "blind_text": [
+     "put the bowl on the plate",
+     "put the bowl on the stove"
+    ],
+    "level": "scene",
+    "random_text": [
+     "put the wine bottle on top of the cabinet",
+     "put the cream cheese in the bowl"
+    ],
+    "scene_cover": "tli@10.17.24",
+    "scene_random": "tli@14.13.24",
+    "scene_text": [
+     "put the bowl on the plate",
+     "put the bowl on the stove"
+    ],
+    "text": "put the plate on the stove",
+    "zs": "zs"
+   },
+   "goal:2": {
+    "blind_cover": "tli@11.13.24",
+    "blind_text": [
+     "put the wine bottle on the rack",
+     "put the cream cheese in the bowl"
+    ],
+    "level": "scene",
+    "random_text": [
+     "put the bowl on the plate",
+     "put the cream cheese in the bowl"
+    ],
+    "scene_cover": "tli@11.13.24",
+    "scene_random": "tli@10.13.24",
+    "scene_text": [
+     "put the wine bottle on the rack",
+     "put the cream cheese in the bowl"
+    ],
+    "text": "put the wine bottle in the bowl",
+    "zs": "zs"
+   },
+   "goal:4": {
+    "blind_cover": "tli@18.10.24",
+    "blind_text": [
+     "put the bowl on top of the cabinet",
+     "put the bowl on the plate"
+    ],
+    "level": "scene",
+    "random_text": [
+     "put the bowl on top of the cabinet",
+     "put the bowl on the stove"
+    ],
+    "scene_cover": "tli@18.10.24",
+    "scene_random": "tli@18.17.24",
+    "scene_text": [
+     "put the bowl on top of the cabinet",
+     "put the bowl on the plate"
+    ],
+    "text": "put the plate on the top of the drawer",
+    "zs": "zs"
+   },
+   "goal:6": {
+    "blind_cover": "tli@11.13.24",
+    "blind_text": [
+     "put the wine bottle on the rack",
+     "put the cream cheese in the bowl"
+    ],
+    "level": "scene",
+    "random_text": [
+     "put the wine bottle on top of the cabinet",
+     "put the bowl on the stove"
+    ],
+    "scene_cover": "tli@11.13.24",
+    "scene_random": "tli@14.17.24",
+    "scene_text": [
+     "put the wine bottle on the rack",
+     "put the cream cheese in the bowl"
+    ],
+    "text": "put the wine bottle in the bowl",
+    "zs": "zs"
+   },
+   "goal:8": {
+    "blind_cover": "tli@11.10.24",
+    "blind_text": [
+     "put the wine bottle on the rack",
+     "put the bowl on the plate"
+    ],
+    "level": "scene",
+    "random_text": [
+     "put the wine bottle on top of the cabinet",
+     "put the bowl on the plate"
+    ],
+    "scene_cover": "tli@11.10.24",
+    "scene_random": "tli@14.10.24",
+    "scene_text": [
+     "put the wine bottle on the rack",
+     "put the bowl on the plate"
+    ],
+    "text": "put the wine bottle on the plate",
+    "zs": "zs"
+   },
+   "goal:9": {
+    "blind_cover": "tli@13.11.24",
+    "blind_text": [
+     "put the cream cheese in the bowl",
+     "put the wine bottle on the rack"
+    ],
+    "level": "scene",
+    "random_text": [
+     "put the cream cheese in the bowl",
+     "put the bowl on the stove"
+    ],
+    "scene_cover": "tli@13.11.24",
+    "scene_random": "tli@13.17.24",
+    "scene_text": [
+     "put the cream cheese in the bowl",
+     "put the wine bottle on the rack"
+    ],
+    "text": "put the cream cheese on the rack",
+    "zs": "zs"
+   },
+   "object:0": {
+    "blind_cover": "tli@13.22.24",
+    "blind_text": [
+     "put the cream cheese in the bowl",
+     "pick up the cream cheese and place it in the basket"
+    ],
+    "level": "suite",
+    "random_text": [
+     "pick up the orange juice and place it in the basket",
+     "pick up the bbq sauce and place it in the basket"
+    ],
+    "scene_cover": "tli@22.21.24",
+    "scene_random": "tli@20.23.24",
+    "scene_text": [
+     "pick up the cream cheese and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "text": "pick the cream cheese and place it in the basket",
+    "zs": "zs"
+   },
+   "object:2": {
+    "blind_cover": "tli@28.23.24",
+    "blind_text": [
+     "pick up the tomato sauce and place it in the basket",
+     "pick up the bbq sauce and place it in the basket"
+    ],
+    "level": "suite",
+    "random_text": [
+     "pick up the alphabet soup and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "scene_cover": "tli@28.23.24",
+    "scene_random": "tli@24.21.24",
+    "scene_text": [
+     "pick up the tomato sauce and place it in the basket",
+     "pick up the bbq sauce and place it in the basket"
+    ],
+    "text": "pick the tomato sauce and place it in the basket",
+    "zs": "zs"
+   },
+   "object:3": {
+    "blind_cover": "tli@21.25.24",
+    "blind_text": [
+     "pick up the ketchup and place it in the basket",
+     "pick up the milk and place it in the basket"
+    ],
+    "level": "suite",
+    "random_text": [
+     "pick up the tomato sauce and place it in the basket",
+     "pick up the milk and place it in the basket"
+    ],
+    "scene_cover": "tli@21.25.24",
+    "scene_random": "tli@28.25.24",
+    "scene_text": [
+     "pick up the ketchup and place it in the basket",
+     "pick up the milk and place it in the basket"
+    ],
+    "text": "pick the ketchup and place it in the basket",
+    "zs": "zs"
+   },
+   "object:4": {
+    "blind_cover": "tli@25.21.24",
+    "blind_text": [
+     "pick up the milk and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "level": "suite",
+    "random_text": [
+     "pick up the orange juice and place it in the basket",
+     "pick up the chocolate pudding and place it in the basket"
+    ],
+    "scene_cover": "tli@25.21.24",
+    "scene_random": "tli@20.29.24",
+    "scene_text": [
+     "pick up the milk and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "text": "pick the milk and place it in the basket",
+    "zs": "zs"
+   },
+   "object:5": {
+    "blind_cover": "tli@23.28.24",
+    "blind_text": [
+     "pick up the bbq sauce and place it in the basket",
+     "pick up the tomato sauce and place it in the basket"
+    ],
+    "level": "suite",
+    "random_text": [
+     "pick up the tomato sauce and place it in the basket",
+     "pick up the salad dressing and place it in the basket"
+    ],
+    "scene_cover": "tli@23.28.24",
+    "scene_random": "tli@28.26.24",
+    "scene_text": [
+     "pick up the bbq sauce and place it in the basket",
+     "pick up the tomato sauce and place it in the basket"
+    ],
+    "text": "pick the bbq sauce and place it in the basket",
+    "zs": "zs"
+   },
+   "object:6": {
+    "blind_cover": "tli@20.21.24",
+    "blind_text": [
+     "pick up the orange juice and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "level": "suite",
+    "random_text": [
+     "pick up the bbq sauce and place it in the basket",
+     "pick up the salad dressing and place it in the basket"
+    ],
+    "scene_cover": "tli@20.21.24",
+    "scene_random": "tli@23.26.24",
+    "scene_text": [
+     "pick up the orange juice and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "text": "pick the orange juice and place it in the basket",
+    "zs": "zs"
+   },
+   "object:7": {
+    "blind_cover": "tli@27.21.24",
+    "blind_text": [
+     "pick up the butter and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "level": "suite",
+    "random_text": [
+     "pick up the butter and place it in the basket",
+     "pick up the tomato sauce and place it in the basket"
+    ],
+    "scene_cover": "tli@27.21.24",
+    "scene_random": "tli@27.28.24",
+    "scene_text": [
+     "pick up the butter and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "text": "pick the butter and place it in the basket",
+    "zs": "zs"
+   },
+   "object:8": {
+    "blind_cover": "tli@26.21.24",
+    "blind_text": [
+     "pick up the salad dressing and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "level": "suite",
+    "random_text": [
+     "pick up the cream cheese and place it in the basket",
+     "pick up the butter and place it in the basket"
+    ],
+    "scene_cover": "tli@26.21.24",
+    "scene_random": "tli@22.27.24",
+    "scene_text": [
+     "pick up the salad dressing and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "text": "pick the salad dressing and place it in the basket",
+    "zs": "zs"
+   },
+   "object:9": {
+    "blind_cover": "tli@29.21.24",
+    "blind_text": [
+     "pick up the chocolate pudding and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "level": "suite",
+    "random_text": [
+     "pick up the cream cheese and place it in the basket",
+     "pick up the butter and place it in the basket"
+    ],
+    "scene_cover": "tli@29.21.24",
+    "scene_random": "tli@22.27.24",
+    "scene_text": [
+     "pick up the chocolate pudding and place it in the basket",
+     "pick up the ketchup and place it in the basket"
+    ],
+    "text": "pick the chocolate pudding and place it in the basket",
+    "zs": "zs"
+   },
+   "spatial:0": {
+    "blind_cover": "tli@34.32.24",
+    "blind_text": [
+     "pick up the black bowl between the plate and the ramekin and place it on the plate",
+     "pick up the black bowl on the ramekin and place it on the plate"
+    ],
+    "level": "scene",
+    "random_text": [
+     "pick up the black bowl on the ramekin and place it on the plate",
+     "pick up the black bowl from table center and place it on the plate"
+    ],
+    "scene_cover": "tli@34.32.24",
+    "scene_random": "tli@32.38.24",
+    "scene_text": [
+     "pick up the black bowl between the plate and the ramekin and place it on the plate",
+     "pick up the black bowl on the ramekin and place it on the plate"
+    ],
+    "text": "pick the akita black bowl not between the plate and the ramekin and place it on the plate",
+    "zs": "zs"
+   },
+   "spatial:2": {
+    "blind_cover": "tli@36.34.24",
+    "blind_text": [
+     "pick up the black bowl next to the plate and place it on the plate",
+     "pick up the black bowl between the plate and the ramekin and place it on the plate"
+    ],
+    "level": "scene",
+    "random_text": [
+     "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+     "pick up the black bowl on the ramekin and place it on the plate"
+    ],
+    "scene_cover": "tli@36.34.24",
+    "scene_random": "tli@31.32.24",
+    "scene_text": [
+     "pick up the black bowl next to the plate and place it on the plate",
+     "pick up the black bowl between the plate and the ramekin and place it on the plate"
+    ],
+    "text": "pick the akita black bowl next to the plate and place it on the plate",
+    "zs": "zs"
+   },
+   "spatial:3": {
+    "blind_cover": "tli@31.39.24",
+    "blind_text": [
+     "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+     "pick up the black bowl on the wooden cabinet and place it on the plate"
+    ],
+    "level": "scene",
+    "random_text": [
+     "pick up the black bowl next to the cookie box and place it on the plate",
+     "pick up the black bowl between the plate and the ramekin and place it on the plate"
+    ],
+    "scene_cover": "tli@31.39.24",
+    "scene_random": "tli@30.34.24",
+    "scene_text": [
+     "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+     "pick up the black bowl on the wooden cabinet and place it on the plate"
+    ],
+    "text": "pick the akita black bowl on the top of the cabinet and place it on the plate",
+    "zs": "zs"
+   },
+   "spatial:4": {
+    "blind_cover": "tli@31.39.24",
+    "blind_text": [
+     "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+     "pick up the black bowl on the wooden cabinet and place it on the plate"
+    ],
+    "level": "scene",
+    "random_text": [
+     "pick up the black bowl next to the cookie box and place it on the plate",
+     "pick up the black bowl from table center and place it on the plate"
+    ],
+    "scene_cover": "tli@31.39.24",
+    "scene_random": "tli@30.38.24",
+    "scene_text": [
+     "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+     "pick up the black bowl on the wooden cabinet and place it on the plate"
+    ],
+    "text": "pick the akita black bowl on the top of the wooden cabinet and place it on the plate",
+    "zs": "zs"
+   },
+   "spatial:8": {
+    "blind_cover": "tli@37.32.24",
+    "blind_text": [
+     "pick up the black bowl next to the ramekin and place it on the plate",
+     "pick up the black bowl on the ramekin and place it on the plate"
+    ],
+    "level": "scene",
+    "random_text": [
+     "pick up the black bowl on the ramekin and place it on the plate",
+     "pick up the black bowl on the cookie box and place it on the plate"
+    ],
+    "scene_cover": "tli@37.32.24",
+    "scene_random": "tli@32.35.24",
+    "scene_text": [
+     "pick up the black bowl next to the ramekin and place it on the plate",
+     "pick up the black bowl on the ramekin and place it on the plate"
+    ],
+    "text": "pick the akita black bowl next to the ramekin and place it on the plate",
+    "zs": "zs"
+   },
+   "ten:5": {
+    "blind_cover": "tli@21.9.24",
+    "blind_text": [
+     "pick up the ketchup and place it in the basket",
+     "pick up the book and place it in the back compartment of the caddy"
+    ],
+    "level": "all",
+    "random_text": [
+     "pick up the black bowl next to the plate and place it on the plate",
+     "pick up the tomato sauce and place it in the basket"
+    ],
+    "scene_cover": "tli@21.9.24",
+    "scene_random": "tli@36.28.24",
+    "scene_text": [
+     "pick up the ketchup and place it in the basket",
+     "pick up the book and place it in the back compartment of the caddy"
+    ],
+    "text": "pick up the cup and place it in the back compartment of the caddy",
+    "zs": "zs"
+   }
+  },
+  "li_sources_in_task_scene": 10,
+  "multiplicity": "Holm over {H1,H2,H3} per policy, family alpha 0.05; pass = Holm-rejected and more successes",
+  "overlap": {
+   "levels": {
+    "all": 1,
+    "scene": 11,
+    "suite": 9
+   },
+   "scene_eq_blind": 20,
+   "scene_eq_random": 0
+  },
+  "parser": "8d8d83f8cd14",
+  "qualifying": 21,
+  "rule": "scene (factors.parse rule, base suite) -> base suite -> all, each only with >= 2 candidates of the 27-prompt pl2c pool; inside: pl2c greedy same-role coverage, 2 sources, pl2c slots; lambda 24 (modal Li lambda)",
+  "selection": "G22-eligible LIBERO-PRO task-split task, pi0.5 G22 fresh-t zs <= 15/20, no plan-L use; all qualifying ordered by sha256('pl2d:13:'+key), first 24",
+  "states": "fresh_pro_pl2d (BASE 5300000, 20 per task, asserted unused), noise seed 13, paired",
+  "test_set": [
+   "goal:1",
+   "goal:2",
+   "goal:4",
+   "goal:6",
+   "goal:8",
+   "goal:9",
+   "object:0",
+   "object:2",
+   "object:3",
+   "object:4",
+   "object:5",
+   "object:6",
+   "object:7",
+   "object:8",
+   "object:9",
+   "spatial:0",
+   "spatial:2",
+   "spatial:3",
+   "spatial:4",
+   "spatial:8",
+   "ten:5"
+  ],
+  "test_sha256": "020ff2d104b3954215b2f40c346eff524999c9f65c75118d0b91d7aea86109be",
+  "written_before": "any pl2d rollout",
+  "zs_pi05_fresh_t": {
+   "goal:1": 6,
+   "goal:2": 5,
+   "goal:4": 4,
+   "goal:6": 5,
+   "goal:8": 10,
+   "goal:9": 0,
+   "object:0": 1,
+   "object:2": 0,
+   "object:3": 0,
+   "object:4": 0,
+   "object:5": 0,
+   "object:6": 0,
+   "object:7": 3,
+   "object:8": 0,
+   "object:9": 0,
+   "spatial:0": 0,
+   "spatial:2": 0,
+   "spatial:3": 6,
+   "spatial:4": 0,
+   "spatial:8": 4,
+   "ten:5": 0
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_pro__pl2d_scene__s13__c0fbf6ba",
+ "schema": 1,
+ "script": "experiments/prereg/pl2d_scene.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-23T08:44:12+00:00",
+ "stream": null,
+ "tag": "pl2d_scene"
+}

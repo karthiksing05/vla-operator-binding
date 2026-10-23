@@ -1,0 +1,244 @@
+{
+ "suite": "libero_object_task",
+ "tasks": {
+  "2": {
+   "language": "pick the tomato sauce and place it in the basket",
+   "success_rate": 0.4,
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 42.206835985183716,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 56
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 29.56972312927246,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 52
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 33.49271869659424,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 99
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "steps": 241,
+     "calls": 49,
+     "secs": 31.53164029121399,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 105
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "steps": 206,
+     "calls": 42,
+     "secs": 27.663666009902954,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 110
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "steps": 177,
+     "calls": 36,
+     "secs": 21.558745861053467,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 49
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 35.71780800819397,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 54
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 37.81425070762634,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 56
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 33.83008646965027,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 143
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 34.170801401138306,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 49
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "steps": 229,
+     "calls": 46,
+     "secs": 29.753957271575928,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 99
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "steps": 200,
+     "calls": 41,
+     "secs": 24.783466577529907,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 49
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "steps": 160,
+     "calls": 33,
+     "secs": 19.32506251335144,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 53
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 33.304712772369385,
+     "error": null,
+     "bound": "ketchup_1",
+     "bound_step": 75
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "steps": 219,
+     "calls": 44,
+     "secs": 27.016900300979614,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 49
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 44.31167268753052,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 53
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 40.106388568878174,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 51
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "steps": 151,
+     "calls": 31,
+     "secs": 21.692779064178467,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 53
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 39.658371686935425,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 247
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "steps": 280,
+     "calls": 56,
+     "secs": 40.94528365135193,
+     "error": null,
+     "bound": "tomato_sauce_1",
+     "bound_step": 55
+    }
+   ]
+  }
+ },
+ "args": {
+  "host": "127.0.0.1",
+  "port": 9435,
+  "suite": "libero_object_task",
+  "tasks": "2",
+  "trials": 20,
+  "state_mod": 0,
+  "first_trial": 0,
+  "seed": 7,
+  "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_pro_pl2d",
+  "replan": 5,
+  "wait": 10,
+  "resize": 224,
+  "max_steps": 0,
+  "videos": 2,
+  "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/pl2d_object_libero_object_task_2_tli_24.21.24_seed13.json",
+  "no_meta": false,
+  "record": false,
+  "light": false,
+  "all_objects": false,
+  "objects": false,
+  "branches": "",
+  "seg": false,
+  "swap": "",
+  "swap_mode": "render",
+  "swap_cams": "both",
+  "swap_phase": "all",
+  "bind": "track"
+ },
+ "started": 1792746238.7915776,
+ "success_rate": 0.4,
+ "n_episodes": 20,
+ "secs": 678.8071796894073
+}
