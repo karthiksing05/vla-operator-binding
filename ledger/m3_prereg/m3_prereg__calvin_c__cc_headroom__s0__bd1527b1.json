@@ -1,0 +1,109 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "calvin_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: CALVIN-C Stage A headroom (FLOWER-C vs control on dev held-out cells)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.10.22",
+  "slurm_job": "4198712",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "bd1527b100c8b838f581ea6f63a270b220737133",
+  "short": "bd1527b1"
+ },
+ "keys": {},
+ "metrics": {
+  "cells": [
+   [
+    "push_blue_block_right",
+    "heldout",
+    0
+   ],
+   [
+    "push_pink_block_left",
+    "heldout",
+    1
+   ],
+   [
+    "rotate_pink_block_left",
+    "heldout",
+    2
+   ],
+   [
+    "rotate_pink_block_right",
+    "heldout",
+    1
+   ],
+   [
+    "rotate_red_block_left",
+    "heldout",
+    0
+   ],
+   [
+    "push_blue_block_left",
+    "train",
+    null
+   ],
+   [
+    "rotate_red_block_right",
+    "train",
+    null
+   ],
+   [
+    "push_pink_block_right",
+    "train",
+    null
+   ]
+  ],
+  "ci": "two-stage cluster bootstrap (cells, then paired episodes), 10000 draws, default_rng(0), 95% percentile",
+  "decision": "headroom iff CI lower bound > 0.10; else no headroom and Stage B is not run",
+  "descriptive": "per-cell success, per-grade means, sibling (training) cell gap, FLOWER-C failure modes",
+  "episodes_per_cell": {
+   "push_blue_block_left|train|None": 96,
+   "push_blue_block_right|heldout|0": 96,
+   "push_pink_block_left|heldout|1": 96,
+   "push_pink_block_right|train|None": 96,
+   "rotate_pink_block_left|heldout|2": 96,
+   "rotate_pink_block_right|heldout|1": 96,
+   "rotate_red_block_left|heldout|0": 96,
+   "rotate_red_block_right|train|None": 96
+  },
+  "episodes_sha256": "61b3bff24b4141b5a59110e7fc9ec5c4b6698b1e6c97f4f95dcd942b7c2481fa",
+  "known_before": "clean-chain parity 4.527/4.528; all-chain 4.269/4.438; audit +0.030; no per-held-out-cell success",
+  "measure": "per dev held-out cell: control success - FLOWER-C success over paired episodes; pooled = unweighted mean over the 5 dev held-out cells",
+  "models": {
+   "flower_abc_full": "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/flower_abc_full/export_stepfinal",
+   "flower_c_s0": "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/flower_c_s0/export_stepfinal"
+  },
+  "rollout": "ep_len 360, num_sampling_steps 4, multistep 10, val instruction [0], per-episode seed sha256(cell|k)",
+  "scene": "D (task_ABC_D/validation env config; no ABC env config exists)",
+  "written_before": "any held-out single-subtask rollout"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__calvin_c__cc_headroom__s0__bd1527b1",
+ "schema": 1,
+ "script": "experiments/prereg/cc_headroom.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-23T05:59:36+00:00",
+ "stream": null,
+ "tag": "cc_headroom"
+}

@@ -149,4 +149,28 @@ cell-cluster bootstraps of held-out minus training.
   - The control (the same recipe on every window) has no held-out gap (-0.000), so FLOWER-C's +0.030 comes from the removal.
     Its Delta pattern (colour -0.030, slot +0.156) is the same as FLOWER-C's: the Deltas are a property of the cells.
 
+## Stage A: headroom on the dev held-out cells (2026-10-23, `experiments/cc_headroom.py`)
+
+Pre-registered (`experiments/prereg/cc_headroom.py`, ledger `m3_prereg__calvin_c__cc_headroom__s0__bd1527b1`) before any
+held-out rollout. Single-subtask rollouts in scene D (the harness has only the scene-D env config). Each cell gets all 96 of
+the authors' initial conditions with its block on the table, CALVIN's validation sentence, ep_len 360 and per-episode seeds
+sha256(cell|k), identical for both models (jobs 4198881/2). Read: ledger `cc_headroom__calvin_c__stage_a__s0__bd1527b1`,
+`headroom/headroom_s0.json`.
+
+| cell | role | grade | FLOWER-C | control | gap |
+|---|---|---|---|---|---|
+| push_blue_block_right | held-out | 0 | 0.417 | 0.896 | +0.479 |
+| rotate_red_block_left | held-out | 0 | 1.000 | 1.000 | 0.000 |
+| push_pink_block_left | held-out | 1 | 1.000 | 1.000 | 0.000 |
+| rotate_pink_block_right (part) | held-out | 1 | 0.990 | 0.979 | -0.010 |
+| rotate_pink_block_left (part) | held-out | 2 | 1.000 | 1.000 | 0.000 |
+| push_blue_block_left | training sibling | - | 1.000 | 0.990 | -0.010 |
+| rotate_red_block_right | training sibling | - | 1.000 | 1.000 | 0.000 |
+| push_pink_block_right | training sibling | - | 0.760 | 0.823 | +0.062 |
+
+Pooled held-out gap +0.094, 95 % CI [-0.010, +0.292]. The bar is a lower bound > 0.10, so: NO HEADROOM. Stage B (the P2/P3
+ports) was not run. FLOWER-C solves 4 of the 5 held-out cells zero-shot at ceiling, including the grade-2 part cell (pink
+rotations it never saw). The whole gap is one grade-0 cell, push_blue_block_right. On it, FLOWER-C's 56 failures are 53 with
+no task detected and 3 pushes the wrong way (left).
+
 ## Next (waiting for the lead's go): no composition arm and no split seeds 1-2 have been started.

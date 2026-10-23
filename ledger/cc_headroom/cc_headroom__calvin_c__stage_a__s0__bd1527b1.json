@@ -1,0 +1,227 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/headroom/headroom_s0.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "calvin_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/cc_headroom.py read --record",
+ "config": {
+  "boot": 10000,
+  "ep_len": 360,
+  "models": {
+   "flower_abc_full": "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/flower_abc_full/export_stepfinal",
+   "flower_c_s0": "/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/flower_c_s0/export_stepfinal"
+  },
+  "prereg": "m3_prereg tag cc_headroom",
+  "siblings": [
+   "push_blue_block_left",
+   "rotate_red_block_right",
+   "push_pink_block_right"
+  ]
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.10.22",
+  "slurm_job": "4199147",
+  "torch": "2.10.0+cu128"
+ },
+ "experiment": "cc_headroom",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "bd1527b100c8b838f581ea6f63a270b220737133",
+  "short": "bd1527b1"
+ },
+ "keys": {},
+ "metrics": {
+  "bar": 0.1,
+  "by_grade": {
+   "0": {
+    "control": 0.9479166666666667,
+    "flower_c": 0.7083333333333334,
+    "gap": 0.23958333333333334,
+    "n_cells": 2
+   },
+   "1": {
+    "control": 0.9895833333333333,
+    "flower_c": 0.9947916666666667,
+    "gap": -0.00520833333333337,
+    "n_cells": 2
+   },
+   "2": {
+    "control": 1.0,
+    "flower_c": 1.0,
+    "gap": 0.0,
+    "n_cells": 1
+   }
+  },
+  "cells": [
+   {
+    "both": 39,
+    "cell": "push_blue_block_right",
+    "control": 0.8958333333333334,
+    "flower_c": 0.4166666666666667,
+    "flower_c_failures": {
+     "none": 53,
+     "push_blue_block_left": 3
+    },
+    "gap": 0.4791666666666667,
+    "grade": 0,
+    "lang": "go push the blue block right",
+    "n": 96,
+    "only_control": 47,
+    "only_flower_c": 1,
+    "role": "heldout"
+   },
+   {
+    "both": 96,
+    "cell": "push_pink_block_left",
+    "control": 1.0,
+    "flower_c": 1.0,
+    "flower_c_failures": {},
+    "gap": 0.0,
+    "grade": 1,
+    "lang": "go push the pink block left",
+    "n": 96,
+    "only_control": 0,
+    "only_flower_c": 0,
+    "role": "heldout"
+   },
+   {
+    "both": 96,
+    "cell": "rotate_pink_block_left",
+    "control": 1.0,
+    "flower_c": 1.0,
+    "flower_c_failures": {},
+    "gap": 0.0,
+    "grade": 2,
+    "lang": "take the pink block and rotate it to the left",
+    "n": 96,
+    "only_control": 0,
+    "only_flower_c": 0,
+    "role": "heldout"
+   },
+   {
+    "both": 93,
+    "cell": "rotate_pink_block_right",
+    "control": 0.9791666666666666,
+    "flower_c": 0.9895833333333334,
+    "flower_c_failures": {
+     "none": 1
+    },
+    "gap": -0.01041666666666674,
+    "grade": 1,
+    "lang": "take the pink block and rotate it to the right",
+    "n": 96,
+    "only_control": 1,
+    "only_flower_c": 2,
+    "role": "heldout"
+   },
+   {
+    "both": 96,
+    "cell": "rotate_red_block_left",
+    "control": 1.0,
+    "flower_c": 1.0,
+    "flower_c_failures": {},
+    "gap": 0.0,
+    "grade": 0,
+    "lang": "take the red block and rotate it to the left",
+    "n": 96,
+    "only_control": 0,
+    "only_flower_c": 0,
+    "role": "heldout"
+   },
+   {
+    "both": 95,
+    "cell": "push_blue_block_left",
+    "control": 0.9895833333333334,
+    "flower_c": 1.0,
+    "flower_c_failures": {},
+    "gap": -0.01041666666666663,
+    "grade": null,
+    "lang": "go push the blue block left",
+    "n": 96,
+    "only_control": 0,
+    "only_flower_c": 1,
+    "role": "train"
+   },
+   {
+    "both": 96,
+    "cell": "rotate_red_block_right",
+    "control": 1.0,
+    "flower_c": 1.0,
+    "flower_c_failures": {},
+    "gap": 0.0,
+    "grade": null,
+    "lang": "take the red block and rotate it to the right",
+    "n": 96,
+    "only_control": 0,
+    "only_flower_c": 0,
+    "role": "train"
+   },
+   {
+    "both": 66,
+    "cell": "push_pink_block_right",
+    "control": 0.8229166666666666,
+    "flower_c": 0.7604166666666666,
+    "flower_c_failures": {
+     "none": 23
+    },
+    "gap": 0.0625,
+    "grade": null,
+    "lang": "go push the pink block right",
+    "n": 96,
+    "only_control": 13,
+    "only_flower_c": 7,
+    "role": "train"
+   }
+  ],
+  "ci95": [
+   -0.010416666666666675,
+   0.29166666666666663
+  ],
+  "control_heldout_mean": 0.975,
+  "episodes_sha256": "61b3bff24b4141b5a59110e7fc9ec5c4b6698b1e6c97f4f95dcd942b7c2481fa",
+  "flower_c_heldout_mean": 0.88125,
+  "missing": {
+   "flower_abc_full": 0,
+   "flower_c_s0": 0
+  },
+  "n_episodes_per_cell": {
+   "push_blue_block_left": 96,
+   "push_blue_block_right": 96,
+   "push_pink_block_left": 96,
+   "push_pink_block_right": 96,
+   "rotate_pink_block_left": 96,
+   "rotate_pink_block_right": 96,
+   "rotate_red_block_left": 96,
+   "rotate_red_block_right": 96
+  },
+  "pooled_gap_heldout": 0.09374999999999999,
+  "scene": "D (task_ABC_D/validation env config; no ABC env config here)",
+  "sibling_gap_mean": 0.017361111111111122,
+  "split_seed": 0,
+  "verdict": "no_headroom"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "cc_headroom__calvin_c__stage_a__s0__bd1527b1",
+ "schema": 1,
+ "script": "experiments/cc_headroom.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-23T06:31:47+00:00",
+ "stream": null,
+ "tag": "stage_a"
+}
