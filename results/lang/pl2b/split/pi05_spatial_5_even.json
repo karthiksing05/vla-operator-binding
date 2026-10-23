@@ -1,0 +1,415 @@
+{
+ "key": "spatial:5",
+ "text": "put the bowl on cookie box on the cabinet",
+ "roles": {
+  "o": "bowl on cookie box",
+  "g": "on the cabinet"
+ },
+ "cands": {
+  "o": [
+   4,
+   7,
+   30,
+   35
+  ],
+  "g": [
+   8,
+   14,
+   18,
+   19,
+   31,
+   39
+  ]
+ },
+ "d0": {
+  "T": 114,
+  "c0": 52,
+  "rel": 114
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 7,
+    "g": 18
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:4": 0.29037994146347046,
+    "o:7": 0.2842167615890503,
+    "o:30": 0.3123458921909332,
+    "o:35": 0.3354596793651581,
+    "g:8": 0.43702802062034607,
+    "g:14": 0.28827834129333496,
+    "g:18": 0.23201866447925568,
+    "g:19": 0.42531058192253113,
+    "g:31": 0.43694567680358887,
+    "g:39": 0.42230260372161865
+   },
+   "span_loss": {
+    "1-17": 0.23201866447925568,
+    "1-6": 0.23532548546791077,
+    "7-12": 0.2499697059392929,
+    "13-17": 0.2877133786678314
+   }
+  },
+  "role": {
+   "src": {
+    "o": 4,
+    "g": 18
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:4": 0.2852952480316162,
+    "o:7": 0.28573060035705566,
+    "o:30": 0.2935768961906433,
+    "o:35": 0.30239003896713257,
+    "g:8": 0.3866388499736786,
+    "g:14": 0.28234413266181946,
+    "g:18": 0.2382955551147461,
+    "g:19": 0.3828062415122986,
+    "g:31": 0.39099574089050293,
+    "g:39": 0.37614545226097107
+   },
+   "span_loss": {
+    "1-17": 0.2382955551147461,
+    "1-6": 0.24717052280902863,
+    "7-12": 0.2547036111354828,
+    "13-17": 0.2893642485141754
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 7,
+    "g": 18
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:4": 0.29037994146347046,
+    "o:7": 0.2842167615890503,
+    "o:30": 0.3123458921909332,
+    "o:35": 0.3354596793651581,
+    "g:8": 0.43702802062034607,
+    "g:14": 0.28827834129333496,
+    "g:18": 0.23201866447925568,
+    "g:19": 0.42531058192253113,
+    "g:31": 0.43694567680358887,
+    "g:39": 0.42230260372161865
+   },
+   "span_loss": {
+    "1-17": 0.23201866447925568,
+    "1-6": 0.23532548546791077,
+    "7-12": 0.2499697059392929,
+    "13-17": 0.2877133786678314
+   },
+   "template": "put the {O} {G}",
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the bowl on cookie box and place it on the cabinet",
+     "with_word": 0.2938571274280548,
+     "alone": 0.3464888036251068
+    },
+    "put the {O} {G}": {
+     "prompt": "put the bowl on cookie box on the cabinet",
+     "with_word": 0.23201866447925568,
+     "alone": 0.2894725203514099
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    35,
+    18
+   ],
+   "lam": 12,
+   "pairs": {
+    "30.14": 0.27644848823547363,
+    "30.18": 0.18730710446834564,
+    "30.31": 0.2676115334033966,
+    "30.39": 0.3714960813522339,
+    "35.14": 0.2931579649448395,
+    "35.18": 0.18176448345184326,
+    "35.31": 0.2578640580177307,
+    "35.39": 0.28436627984046936
+   },
+   "lams": {
+    "24": 0.18176448345184326,
+    "12": 0.17429472506046295,
+    "36": 0.3253304660320282
+   },
+   "cands": {
+    "o": [
+     30,
+     35
+    ],
+    "g": [
+     14,
+     18,
+     31,
+     39
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.2894725203514099,
+  "null": 0.4844062626361847,
+  "tli_li": 0.17607562243938446,
+  "word": 0.23201866447925568,
+  "role": 0.2382955551147461,
+  "tmpl": 0.23201866447925568,
+  "tmpl_only": 0.2894725203514099,
+  "tli_sel": 0.17429472506046295,
+  "rand": 0.31217363476753235,
+  "pos": 0.3475298583507538,
+  "l2sel": 0.17429472506046295
+ },
+ "l1": {
+  "zs": 0.2868655323982239,
+  "null": 0.3690987229347229,
+  "tli_li": 0.17614492774009705,
+  "word": 0.24129822850227356,
+  "role": 0.24394823610782623,
+  "tmpl": 0.24129822850227356,
+  "tmpl_only": 0.2868655323982239,
+  "tli_sel": 0.17214317619800568,
+  "rand": 0.2856203317642212,
+  "pos": 0.33585819602012634,
+  "l2sel": 0.17214317619800568
+ },
+ "l2sel": "tli_sel",
+ "controls": {
+  "o": {
+   "rand": 28,
+   "pos": 14,
+   "rand_text": "pick up the tomato sauce and place it in the basket",
+   "pos_text": "put the wine bottle on top of the cabinet"
+  },
+  "g": {
+   "rand": 20,
+   "pos": 11,
+   "rand_text": "pick up the orange juice and place it in the basket",
+   "pos_text": "put the wine bottle on the rack"
+  }
+ },
+ "n_eval": 76,
+ "arms": {
+  "zs": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_li": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 35,
+    "t2": 18,
+    "lam": 14
+   }
+  },
+  "word": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 7,
+     "phrase": "box",
+     "new_pos": [
+      6
+     ],
+     "src_pos": [
+      6
+     ]
+    },
+    {
+     "role": "g",
+     "src": 18,
+     "phrase": "cabinet",
+     "new_pos": [
+      9
+     ],
+     "src_pos": [
+      8
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 4,
+     "phrase": "box",
+     "new_pos": [
+      6
+     ],
+     "src_pos": [
+      10
+     ]
+    },
+    {
+     "role": "g",
+     "src": 18,
+     "phrase": "cabinet",
+     "new_pos": [
+      9
+     ],
+     "src_pos": [
+      8
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 7,
+     "phrase": "box",
+     "new_pos": [
+      6
+     ],
+     "src_pos": [
+      6
+     ]
+    },
+    {
+     "role": "g",
+     "src": 18,
+     "phrase": "cabinet",
+     "new_pos": [
+      9
+     ],
+     "src_pos": [
+      8
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 35,
+    "t2": 18,
+    "lam": 12
+   }
+  },
+  "rand": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 28,
+    "t2": 20,
+    "lam": 12
+   }
+  },
+  "pos": {
+   "prompt": "put the bowl on cookie box on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 14,
+    "t2": 11,
+    "lam": 12
+   }
+  }
+ },
+ "split": "even",
+ "sel_frames": [
+  0,
+  2,
+  4,
+  6,
+  8,
+  10,
+  12,
+  14,
+  16,
+  18,
+  20,
+  22,
+  24,
+  26,
+  28,
+  30,
+  32,
+  34,
+  36
+ ],
+ "val_frames": [
+  1,
+  3,
+  5,
+  7,
+  9,
+  11,
+  13,
+  15,
+  17,
+  19,
+  21,
+  23,
+  25,
+  27,
+  29,
+  31,
+  33,
+  35,
+  37
+ ]
+}

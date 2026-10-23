@@ -339,3 +339,13 @@ Pre-registered tests:
   spatial:3 20 -> 7). The demo-chosen TLI pair is the strongest selected operator but stays below Li's hand pairs.
 - Next: L2b chooses a selection rule on dev only; the confirm rollouts (all 8 arms rolled on every task) then test that rule
   once, as held-out data.
+
+## L2b: which one-demo criterion predicts closed-loop success? (2026-10-23; ledger pl2b_criteria, prereg pl2b_rule)
+
+- Demo flow loss is a weak ranker: within-task Spearman with closed-loop success +0.19 (demo-0), +0.32 (even/odd split), and
+  the demo-1 loss is no better (+0.08). A minimal-edit (MDL) penalty points the wrong way (TLI moves the field most and is the
+  best family). A fitted zero-shot guard is not identified at n = 8.
+- Rule frozen on dev (even/odd split-demo validation, no constant): 135 / 320 on dev vs 130 for demo-0; on pi0.5 confirm
+  129 / 240 vs 128. Always using the demo-chosen TLI pair gets 143; Li's hand pairs 169.
+- Reading: the signal is between operator families, not within them. TLI with the right pair is the robust operator, and the
+  pair matters more than any demo criterion. Li's pairs are chosen by which training sentences hold the new sentence's parts.

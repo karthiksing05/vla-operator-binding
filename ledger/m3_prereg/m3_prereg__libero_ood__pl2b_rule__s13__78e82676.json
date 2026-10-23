@@ -1,0 +1,203 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: L2b selection rule b_inter, frozen from dev, before the confirm read",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4197178",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "78e826765b61b4a8c9749aa26e4ae49ced9e36a9",
+  "short": "78e82676"
+ },
+ "keys": {},
+ "metrics": {
+  "backbone": "pi05_libero",
+  "chosen_on": "dev only (ledger pl2b_criteria tag read, 8 dev tasks x {pi0.5, pi0})",
+  "confirm_tasks": [
+   "goal:0",
+   "goal:3",
+   "goal:8",
+   "goal:9",
+   "spatial:0",
+   "spatial:1",
+   "spatial:2",
+   "spatial:3",
+   "spatial:4",
+   "spatial:5",
+   "spatial:8",
+   "spatial:9"
+  ],
+  "constants": "none (no penalty weight, no margin)",
+  "criterion_values": {
+   "goal:0": {
+    "role": -0.10640258315259435,
+    "tli_sel": -0.0885846432925531,
+    "tmpl": -0.1958031153607873,
+    "word": -0.08148500349876327,
+    "zs": 0.0
+   },
+   "goal:3": {
+    "role": -0.05131674205441543,
+    "tli_sel": -0.007317338160769361,
+    "tmpl": -0.08080823166925384,
+    "word": -0.05868688162770491,
+    "zs": 0.0
+   },
+   "goal:8": {
+    "role": -0.303851612479157,
+    "tli_sel": -0.4109519991544073,
+    "tmpl": -0.19109852864881458,
+    "word": -0.23220306837902382,
+    "zs": 0.0
+   },
+   "goal:9": {
+    "role": -0.13441786798457744,
+    "tli_sel": -0.15795355776493417,
+    "tmpl": -0.11423735601946906,
+    "word": -0.08933984952019108,
+    "zs": 0.0
+   },
+   "spatial:0": {
+    "role": -0.037734243300515176,
+    "tli_sel": -0.04640543328181563,
+    "tmpl": -0.08876103909401696,
+    "word": -0.06362505997581376,
+    "zs": 0.0
+   },
+   "spatial:1": {
+    "role": -0.021875142717517428,
+    "tli_sel": 0.01491799818235118,
+    "tmpl": -0.026404769992358645,
+    "word": -0.026404769992358645,
+    "zs": 0.0
+   },
+   "spatial:2": {
+    "role": -0.010238178575714258,
+    "tli_sel": -0.07911516092409904,
+    "tmpl": -0.06709958009533847,
+    "word": -0.06709958009533847,
+    "zs": 0.0
+   },
+   "spatial:3": {
+    "role": -0.10151110667195629,
+    "tli_sel": -0.20007047360778585,
+    "tmpl": -0.12411229589715908,
+    "word": -0.12411229589715908,
+    "zs": 0.0
+   },
+   "spatial:4": {
+    "role": -0.2055214611618434,
+    "tli_sel": -0.32820647742727815,
+    "tmpl": -0.20065102018807873,
+    "word": -0.20065102018807873,
+    "zs": 0.0
+   },
+   "spatial:5": {
+    "role": -0.1759315131968781,
+    "tli_sel": -0.5391871018036916,
+    "tmpl": -0.17937632720557634,
+    "word": -0.17937632720557634,
+    "zs": 0.0
+   },
+   "spatial:8": {
+    "role": -0.008205414014630206,
+    "tli_sel": -0.09976835905300997,
+    "tmpl": -0.01682361194632259,
+    "word": -0.01682361194632259,
+    "zs": 0.0
+   },
+   "spatial:9": {
+    "role": -0.04299559951686577,
+    "tli_sel": -0.1269684325304609,
+    "tmpl": -0.023869916962837134,
+    "word": -0.023869916962837134,
+    "zs": 0.0
+   }
+  },
+  "dev_totals": {
+   "b_inter": 135,
+   "b_time": 68,
+   "c_mdl_loto": 130,
+   "d_guard_loto": 118,
+   "e_demo1": 110,
+   "l2sel": 130,
+   "of": 320,
+   "oracle_M": 148,
+   "tli_sel_always": 121,
+   "zs_always": 74
+  },
+  "disclosure": "the lead's message gave confirm totals (l2sel 128, tli_sel 143, tli_li 169, zs 93 of 240) and said the missing zs fallback hurt spatial:0 / spatial:3; no confirm file was opened; the guard d was NOT chosen (dev LOTO 118 < 130)",
+  "frozen_picks": {
+   "goal:0": "tmpl",
+   "goal:3": "tmpl",
+   "goal:8": "tli_sel",
+   "goal:9": "tli_sel",
+   "spatial:0": "tmpl",
+   "spatial:1": "word",
+   "spatial:2": "tli_sel",
+   "spatial:3": "tli_sel",
+   "spatial:4": "tli_sel",
+   "spatial:5": "tli_sel",
+   "spatial:8": "tli_sel",
+   "spatial:9": "tli_sel"
+  },
+  "read": "offline: sum over confirm tasks of the rolled pl2_conf success of the pick; compare zs, l2sel, tli_sel, tli_li",
+  "rule": "b_inter: 2-fold interleaved split-demo validation over M=(zs, word, tmpl, tli_sel, role); argmin of mean held-out log(loss/zs loss); ties to the first in M; deploy the operator's full-demo-0 L2 configuration",
+  "split_files_sha256": {
+   "goal:0|even": "06129b2aca546f3d4e6998c17935c69b590223747f7fdfcca838a210c8e183ac",
+   "goal:0|odd": "76c0be961a8c801705d4257d79e16187f67b1c912f8bcaee14d252b470628b34",
+   "goal:3|even": "1e2033eef520ece4fba93584f87dea03e726b84dc84ab9009a13be1a6da65dc5",
+   "goal:3|odd": "495326a8a3d96486c8396772bda1622d79667c2a05c22be15d9a17474075fd43",
+   "goal:8|even": "9045a1240dd91ee3426173362729f1bad9911e711d13cc89dec2790dd5bba352",
+   "goal:8|odd": "966685eefd53584d1a87e3ae54b5ba4bf8875a03f8011156416a9d70db8e0e8c",
+   "goal:9|even": "bac97126aeb78b67417970314a5191a532220ddf24c93156d5a16224d2bb4c31",
+   "goal:9|odd": "be91cce22063f2f39b9ec00ba678a122242dcebde8a6cde130c09795877c50be",
+   "spatial:0|even": "799a2f3e821dec3a60ae0be22579932674e65db37e3e0575fd77b7d08ddb69e4",
+   "spatial:0|odd": "a6662cce30505302a516e0659060c89d767f544d64b5f2584256d5eac52777b5",
+   "spatial:1|even": "65ba572f18434f9fd452dcbf92e585729d98b1ddd22c47a182884ca6d59dbcb0",
+   "spatial:1|odd": "2f3a34b6d009a05e1beb898631e7cc8de61ed216a45e2faf8efe19cdb65628b3",
+   "spatial:2|even": "9c8f979baeced42660288a609bc3b7a04a7163ccde7a8a198dd2356632f9d489",
+   "spatial:2|odd": "f52938ccaec350abdda5e16be372721f2a88e110f1983f19a339aa3a6e97d35e",
+   "spatial:3|even": "739011928c8d5f1702ed2b686ff94c6d9d299ac925b1ee474a98cb0498a6a5d9",
+   "spatial:3|odd": "e90f35b6a73936f5f12ab44e7d92d43527780b16c191afbd14df009dcacb08bd",
+   "spatial:4|even": "6634268a6c749928eeeb31a07cb5127f94d5a56a63057796df0f6f1a0380b5d6",
+   "spatial:4|odd": "232e9faf73f8e6a7a975680c7c9a25fbe714b5f3f31a4b2e947249110bbd85f6",
+   "spatial:5|even": "dcbdd73f26db5eb13f89ea93800fea53690229627a4946e8ac3715754beedbe0",
+   "spatial:5|odd": "b854d3067908c036817b513f92bb2511eb729d0e6f9a22d41ebeb0dfc095b35d",
+   "spatial:8|even": "cb7503c668cc7b3306163c8a6ac8aaf2856552892862e66fb124daf686d588d6",
+   "spatial:8|odd": "05a4a520981ac15799d674a19f01205438fd1a4662af2556b897a8eca23eafc1",
+   "spatial:9|even": "b2de3daf71e45243b42d6d49530690fab6c9499382f8bbcdabda9d190193f2f0",
+   "spatial:9|odd": "8f2ab9006f8c39185918905be8804b704def82b77ca33ea167df42a33a44b94b"
+  },
+  "written_before": "the L2b agent opened any confirm closed-loop result"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_ood__pl2b_rule__s13__78e82676",
+ "schema": 1,
+ "script": "experiments/prereg/pl2b_rule.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-23T03:46:38+00:00",
+ "stream": null,
+ "tag": "pl2b_rule"
+}

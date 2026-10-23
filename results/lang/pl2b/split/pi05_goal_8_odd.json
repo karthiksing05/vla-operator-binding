@@ -1,0 +1,423 @@
+{
+ "key": "goal:8",
+ "text": "put the cream cheese on the stove",
+ "roles": {
+  "o": "cream cheese",
+  "g": "on the stove"
+ },
+ "cands": {
+  "o": [
+   4,
+   7,
+   13,
+   22
+  ],
+  "g": [
+   3,
+   6,
+   15,
+   16,
+   17,
+   33
+  ]
+ },
+ "d0": {
+  "T": 100,
+  "c0": 41,
+  "rel": 93
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 22,
+    "g": 17
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:4": 0.21789361536502838,
+    "o:7": 0.2063964158296585,
+    "o:13": 0.20419810712337494,
+    "o:22": 0.19689320027828217,
+    "g:3": 0.20973074436187744,
+    "g:6": 0.195524200797081,
+    "g:15": 0.22502996027469635,
+    "g:16": 0.24071794748306274,
+    "g:17": 0.17333075404167175,
+    "g:33": 0.23402464389801025
+   },
+   "span_loss": {
+    "1-17": 0.17333075404167175,
+    "1-6": 0.18408358097076416,
+    "7-12": 0.18567387759685516,
+    "13-17": 0.19949783384799957
+   }
+  },
+  "role": {
+   "src": {
+    "o": 22,
+    "g": 16
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:4": 0.22132305800914764,
+    "o:7": 0.20554277300834656,
+    "o:13": 0.20180130004882812,
+    "o:22": 0.1993480920791626,
+    "g:3": 0.17775936424732208,
+    "g:6": 0.1987808346748352,
+    "g:15": 0.23916947841644287,
+    "g:16": 0.16285288333892822,
+    "g:17": 0.17575064301490784,
+    "g:33": 0.24018052220344543
+   },
+   "span_loss": {
+    "1-17": 0.16285288333892822,
+    "1-6": 0.18974968791007996,
+    "7-12": 0.18041330575942993,
+    "13-17": 0.1946122646331787
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 22,
+    "g": 17
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:4": 0.2210167795419693,
+    "o:7": 0.20373573899269104,
+    "o:13": 0.20144841074943542,
+    "o:22": 0.19765427708625793,
+    "g:3": 0.24824117124080658,
+    "g:6": 0.20832446217536926,
+    "g:15": 0.22638575732707977,
+    "g:16": 0.2227104753255844,
+    "g:17": 0.17289672791957855,
+    "g:33": 0.2551984488964081
+   },
+   "span_loss": {
+    "1-17": 0.17289672791957855,
+    "1-6": 0.1854790598154068,
+    "7-12": 0.1773587465286255,
+    "13-17": 0.19354572892189026
+   },
+   "template": "pick up the {O} and place it {G}",
+   "prompt": "pick up the cream cheese and place it on the stove",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the cream cheese and place it on the stove",
+     "with_word": 0.17289672791957855,
+     "alone": 0.19723941385746002
+    },
+    "put the {O} {G}": {
+     "prompt": "put the cream cheese on the stove",
+     "with_word": 0.17333075404167175,
+     "alone": 0.2016526609659195
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    13,
+    17
+   ],
+   "lam": 12,
+   "pairs": {
+    "13.17": 0.19517356157302856,
+    "13.33": 0.30003979802131653,
+    "22.17": 0.19714030623435974,
+    "22.33": 0.21565380692481995
+   },
+   "lams": {
+    "24": 0.19517356157302856,
+    "12": 0.12657830119132996,
+    "36": 0.2973017394542694
+   },
+   "cands": {
+    "o": [
+     13,
+     22
+    ],
+    "g": [
+     17,
+     33
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.2016526609659195,
+  "null": 0.28185051679611206,
+  "tli_li": 0.19517356157302856,
+  "word": 0.17333075404167175,
+  "role": 0.16285288333892822,
+  "tmpl": 0.17289672791957855,
+  "tmpl_only": 0.19723941385746002,
+  "tli_sel": 0.12657830119132996,
+  "rand": 0.26562437415122986,
+  "pos": 0.20910805463790894,
+  "l2sel": 0.12657830119132996
+ },
+ "l1": {
+  "zs": 0.18695244193077087,
+  "null": 0.24987220764160156,
+  "tli_li": 0.1870219111442566,
+  "word": 0.13667424023151398,
+  "role": 0.13572439551353455,
+  "tmpl": 0.14838486909866333,
+  "tmpl_only": 0.18081900477409363,
+  "tli_sel": 0.11036749929189682,
+  "rand": 0.23415996134281158,
+  "pos": 0.1874290555715561,
+  "l2sel": 0.11036749929189682
+ },
+ "l2sel": "tli_sel",
+ "controls": {
+  "o": {
+   "rand": 28,
+   "pos": 34,
+   "rand_text": "pick up the tomato sauce and place it in the basket",
+   "pos_text": "pick up the black bowl between the plate and the ramekin and place it on the plate"
+  },
+  "g": {
+   "rand": 22,
+   "pos": 32,
+   "rand_text": "pick up the cream cheese and place it in the basket",
+   "pos_text": "pick up the black bowl on the ramekin and place it on the plate"
+  }
+ },
+ "n_eval": 72,
+ "arms": {
+  "zs": {
+   "prompt": "put the cream cheese on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_li": {
+   "prompt": "put the cream cheese on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 13,
+    "t2": 17,
+    "lam": 24
+   }
+  },
+  "word": {
+   "prompt": "put the cream cheese on the stove",
+   "edits": [
+    {
+     "role": "o",
+     "src": 22,
+     "phrase": "cream cheese",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 17,
+     "phrase": "on the stove",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      4,
+      5,
+      6
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the cream cheese on the stove",
+   "edits": [
+    {
+     "role": "o",
+     "src": 22,
+     "phrase": "cream cheese",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 16,
+     "phrase": "on the stove",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      2,
+      3,
+      4
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "pick up the cream cheese and place it on the stove",
+   "edits": [
+    {
+     "role": "o",
+     "src": 22,
+     "phrase": "cream cheese",
+     "new_pos": [
+      4,
+      5
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 17,
+     "phrase": "on the stove",
+     "new_pos": [
+      9,
+      10,
+      11
+     ],
+     "src_pos": [
+      4,
+      5,
+      6
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "pick up the cream cheese and place it on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the cream cheese on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 13,
+    "t2": 17,
+    "lam": 12
+   }
+  },
+  "rand": {
+   "prompt": "put the cream cheese on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 28,
+    "t2": 22,
+    "lam": 12
+   }
+  },
+  "pos": {
+   "prompt": "put the cream cheese on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 34,
+    "t2": 32,
+    "lam": 12
+   }
+  }
+ },
+ "split": "odd",
+ "sel_frames": [
+  1,
+  3,
+  5,
+  7,
+  9,
+  11,
+  13,
+  15,
+  17,
+  19,
+  21,
+  23,
+  25,
+  27,
+  29,
+  31,
+  33
+ ],
+ "val_frames": [
+  0,
+  2,
+  4,
+  6,
+  8,
+  10,
+  12,
+  14,
+  16,
+  18,
+  20,
+  22,
+  24,
+  26,
+  28,
+  30,
+  32
+ ]
+}

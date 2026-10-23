@@ -1,0 +1,505 @@
+{
+ "key": "goal:9",
+ "text": "put the cream cheese on top of the cabinet",
+ "roles": {
+  "o": "cream cheese",
+  "g": "on top of the cabinet"
+ },
+ "cands": {
+  "o": [
+   4,
+   7,
+   13,
+   22
+  ],
+  "g": [
+   8,
+   14,
+   18,
+   19,
+   31,
+   39
+  ]
+ },
+ "d0": {
+  "T": 118,
+  "c0": 44,
+  "rel": 111
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 22,
+    "g": 18
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:4": 0.15511056780815125,
+    "o:7": 0.15432754158973694,
+    "o:13": 0.1495167315006256,
+    "o:22": 0.14087453484535217,
+    "g:8": 0.1672339141368866,
+    "g:14": 0.15049830079078674,
+    "g:18": 0.13503572344779968,
+    "g:19": 0.16643594205379486,
+    "g:31": 0.16639859974384308,
+    "g:39": 0.16459837555885315
+   },
+   "span_loss": {
+    "1-17": 0.13503572344779968,
+    "1-6": 0.1458892524242401,
+    "7-12": 0.14124710857868195,
+    "13-17": 0.14719286561012268
+   }
+  },
+  "role": {
+   "src": {
+    "o": 22,
+    "g": 18
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:4": 0.16555067896842957,
+    "o:7": 0.15866625308990479,
+    "o:13": 0.15009741485118866,
+    "o:22": 0.14608906209468842,
+    "g:8": 0.17891952395439148,
+    "g:14": 0.1541232168674469,
+    "g:18": 0.12953953444957733,
+    "g:19": 0.17710687220096588,
+    "g:31": 0.17702215909957886,
+    "g:39": 0.16258026659488678
+   },
+   "span_loss": {
+    "1-17": 0.12953953444957733,
+    "1-6": 0.14027675986289978,
+    "7-12": 0.1379716694355011,
+    "13-17": 0.14787837862968445
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 13,
+    "g": 18
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:4": 0.15092357993125916,
+    "o:7": 0.1459944248199463,
+    "o:13": 0.14081569015979767,
+    "o:22": 0.142676442861557,
+    "g:8": 0.16780588030815125,
+    "g:14": 0.16026577353477478,
+    "g:18": 0.13160297274589539,
+    "g:19": 0.16439062356948853,
+    "g:31": 0.16343557834625244,
+    "g:39": 0.14916428923606873
+   },
+   "span_loss": {
+    "1-17": 0.13160297274589539,
+    "1-6": 0.1365099549293518,
+    "7-12": 0.1358502209186554,
+    "13-17": 0.14032331109046936
+   },
+   "template": "pick up the {O} and place it {G}",
+   "prompt": "pick up the cream cheese and place it on top of the cabinet",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the cream cheese and place it on top of the cabinet",
+     "with_word": 0.1329241394996643,
+     "alone": 0.14506909251213074
+    },
+    "put the {O} {G}": {
+     "prompt": "put the cream cheese on top of the cabinet",
+     "with_word": 0.13503572344779968,
+     "alone": 0.15333878993988037
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    22,
+    31
+   ],
+   "lam": 12,
+   "pairs": {
+    "13.14": 0.2628001272678375,
+    "13.18": 0.160426527261734,
+    "13.31": 0.1858782023191452,
+    "13.39": 0.2700693607330322,
+    "22.14": 0.2557238042354584,
+    "22.18": 0.14685484766960144,
+    "22.31": 0.13355591893196106,
+    "22.39": 0.135186105966568
+   },
+   "lams": {
+    "24": 0.13355591893196106,
+    "12": 0.1303027868270874,
+    "36": 0.16258463263511658
+   },
+   "cands": {
+    "o": [
+     13,
+     22
+    ],
+    "g": [
+     14,
+     18,
+     31,
+     39
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.15333878993988037,
+  "null": 0.2527250051498413,
+  "tli_li": 0.160426527261734,
+  "word": 0.13503572344779968,
+  "role": 0.12953953444957733,
+  "tmpl": 0.13160297274589539,
+  "tmpl_only": 0.14506909251213074,
+  "tli_sel": 0.1303027868270874,
+  "rand": 0.4125116765499115,
+  "pos": 0.2601892352104187,
+  "l2sel": 0.12953953444957733
+ },
+ "l1": {
+  "zs": 0.16478142142295837,
+  "null": 0.27153390645980835,
+  "tli_li": 0.17543819546699524,
+  "word": 0.14929963648319244,
+  "role": 0.14354391396045685,
+  "tmpl": 0.14628030359745026,
+  "tmpl_only": 0.15922939777374268,
+  "tli_sel": 0.13973398506641388,
+  "rand": 0.35827821493148804,
+  "pos": 0.29338836669921875,
+  "l2sel": 0.14354391396045685
+ },
+ "l2sel": "role",
+ "controls": {
+  "o": {
+   "rand": 21,
+   "pos": 34,
+   "rand_text": "pick up the ketchup and place it in the basket",
+   "pos_text": "pick up the black bowl between the plate and the ramekin and place it on the plate"
+  },
+  "g": {
+   "rand": 35,
+   "pos": 11,
+   "rand_text": "pick up the black bowl on the cookie box and place it on the plate",
+   "pos_text": "put the wine bottle on the rack"
+  }
+ },
+ "n_eval": 76,
+ "arms": {
+  "zs": {
+   "prompt": "put the cream cheese on top of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_li": {
+   "prompt": "put the cream cheese on top of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 13,
+    "t2": 18,
+    "lam": 24
+   }
+  },
+  "word": {
+   "prompt": "put the cream cheese on top of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 22,
+     "phrase": "cream cheese",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 18,
+     "phrase": "on top of the cabinet",
+     "new_pos": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "src_pos": [
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the cream cheese on top of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 22,
+     "phrase": "cream cheese",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      5
+     ]
+    },
+    {
+     "role": "g",
+     "src": 18,
+     "phrase": "on top of the cabinet",
+     "new_pos": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "src_pos": [
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "pick up the cream cheese and place it on top of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 13,
+     "phrase": "cream cheese",
+     "new_pos": [
+      4,
+      5
+     ],
+     "src_pos": [
+      3,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 18,
+     "phrase": "on top of the cabinet",
+     "new_pos": [
+      9,
+      10,
+      11,
+      12,
+      13
+     ],
+     "src_pos": [
+      4,
+      5,
+      6,
+      7,
+      8
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "pick up the cream cheese and place it on top of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the cream cheese on top of the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 22,
+    "t2": 31,
+    "lam": 12
+   }
+  },
+  "rand": {
+   "prompt": "put the cream cheese on top of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 21,
+     "phrase": "cream cheese <- ketchup",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      4,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 35,
+     "phrase": "on top of the cabinet <- on the plate",
+     "new_pos": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "src_pos": [
+      13,
+      13,
+      13,
+      14,
+      15
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "pos": {
+   "prompt": "put the cream cheese on top of the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 34,
+     "phrase": "cream cheese <- black bowl between the plate and the ramekin",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      11,
+      12
+     ]
+    },
+    {
+     "role": "g",
+     "src": 11,
+     "phrase": "on top of the cabinet <- on the rack",
+     "new_pos": [
+      5,
+      6,
+      7,
+      8,
+      9
+     ],
+     "src_pos": [
+      5,
+      5,
+      5,
+      6,
+      7
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  }
+ },
+ "split": "even",
+ "sel_frames": [
+  0,
+  2,
+  4,
+  6,
+  8,
+  10,
+  12,
+  14,
+  16,
+  18,
+  20,
+  22,
+  24,
+  26,
+  28,
+  30,
+  32,
+  34,
+  36,
+  38
+ ],
+ "val_frames": [
+  1,
+  3,
+  5,
+  7,
+  9,
+  11,
+  13,
+  15,
+  17,
+  19,
+  21,
+  23,
+  25,
+  27,
+  29,
+  31,
+  33,
+  35,
+  37,
+  39
+ ]
+}

@@ -1,0 +1,332 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_ood",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/pl2b_criteria.py --read-confirm --record",
+ "config": {
+  "backbone": "pi05_libero",
+  "candidates": [
+   "zs",
+   "word",
+   "tmpl",
+   "tli_sel",
+   "role"
+  ],
+  "folds": [
+   "even",
+   "odd"
+  ],
+  "ground_truth": "ledger pl2_confirm / results/lang/pl2/confirm_read.json",
+  "prereg": "m3_prereg tag pl2b_rule (experiments/prereg/pl2b_rule.py)",
+  "rule": "b_inter"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4197179",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "pl2b_criteria",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "78e826765b61b4a8c9749aa26e4ae49ced9e36a9",
+  "short": "78e82676"
+ },
+ "keys": {},
+ "metrics": {
+  "of": 240,
+  "oracle_M": 175,
+  "per_task": {
+   "goal:0": {
+    "crit": {
+     "role": -0.10640258315259435,
+     "tli_sel": -0.0885846432925531,
+     "tmpl": -0.1958031153607873,
+     "word": -0.08148500349876327,
+     "zs": 0.0
+    },
+    "pick": "tmpl",
+    "s_l2sel": 5,
+    "s_pos": 0,
+    "s_rand": 0,
+    "s_role": 12,
+    "s_tli_li": 12,
+    "s_tli_sel": 7,
+    "s_tmpl": 5,
+    "s_word": 2,
+    "s_zs": 7,
+    "success": 5
+   },
+   "goal:3": {
+    "crit": {
+     "role": -0.05131674205441543,
+     "tli_sel": -0.007317338160769361,
+     "tmpl": -0.08080823166925384,
+     "word": -0.05868688162770491,
+     "zs": 0.0
+    },
+    "pick": "tmpl",
+    "s_l2sel": 5,
+    "s_pos": 0,
+    "s_rand": 0,
+    "s_role": 0,
+    "s_tli_li": 1,
+    "s_tli_sel": 0,
+    "s_tmpl": 5,
+    "s_word": 5,
+    "s_zs": 0,
+    "success": 5
+   },
+   "goal:8": {
+    "crit": {
+     "role": -0.303851612479157,
+     "tli_sel": -0.4109519991544073,
+     "tmpl": -0.19109852864881458,
+     "word": -0.23220306837902382,
+     "zs": 0.0
+    },
+    "pick": "tli_sel",
+    "s_l2sel": 20,
+    "s_pos": 0,
+    "s_rand": 0,
+    "s_role": 16,
+    "s_tli_li": 19,
+    "s_tli_sel": 20,
+    "s_tmpl": 19,
+    "s_word": 19,
+    "s_zs": 3,
+    "success": 20
+   },
+   "goal:9": {
+    "crit": {
+     "role": -0.13441786798457744,
+     "tli_sel": -0.15795355776493417,
+     "tmpl": -0.11423735601946906,
+     "word": -0.08933984952019108,
+     "zs": 0.0
+    },
+    "pick": "tli_sel",
+    "s_l2sel": 18,
+    "s_pos": 0,
+    "s_rand": 0,
+    "s_role": 18,
+    "s_tli_li": 20,
+    "s_tli_sel": 19,
+    "s_tmpl": 16,
+    "s_word": 8,
+    "s_zs": 13,
+    "success": 19
+   },
+   "spatial:0": {
+    "crit": {
+     "role": -0.037734243300515176,
+     "tli_sel": -0.04640543328181563,
+     "tmpl": -0.08876103909401696,
+     "word": -0.06362505997581376,
+     "zs": 0.0
+    },
+    "pick": "tmpl",
+    "s_l2sel": 0,
+    "s_pos": 3,
+    "s_rand": 4,
+    "s_role": 3,
+    "s_tli_li": 20,
+    "s_tli_sel": 19,
+    "s_tmpl": 0,
+    "s_word": 1,
+    "s_zs": 20,
+    "success": 0
+   },
+   "spatial:1": {
+    "crit": {
+     "role": -0.021875142717517428,
+     "tli_sel": 0.01491799818235118,
+     "tmpl": -0.026404769992358645,
+     "word": -0.026404769992358645,
+     "zs": 0.0
+    },
+    "pick": "word",
+    "s_l2sel": 19,
+    "s_pos": 3,
+    "s_rand": 0,
+    "s_role": 19,
+    "s_tli_li": 20,
+    "s_tli_sel": 18,
+    "s_tmpl": 19,
+    "s_word": 20,
+    "s_zs": 19,
+    "success": 20
+   },
+   "spatial:2": {
+    "crit": {
+     "role": -0.010238178575714258,
+     "tli_sel": -0.07911516092409904,
+     "tmpl": -0.06709958009533847,
+     "word": -0.06709958009533847,
+     "zs": 0.0
+    },
+    "pick": "tli_sel",
+    "s_l2sel": 5,
+    "s_pos": 0,
+    "s_rand": 0,
+    "s_role": 7,
+    "s_tli_li": 4,
+    "s_tli_sel": 4,
+    "s_tmpl": 5,
+    "s_word": 5,
+    "s_zs": 8,
+    "success": 4
+   },
+   "spatial:3": {
+    "crit": {
+     "role": -0.10151110667195629,
+     "tli_sel": -0.20007047360778585,
+     "tmpl": -0.12411229589715908,
+     "word": -0.12411229589715908,
+     "zs": 0.0
+    },
+    "pick": "tli_sel",
+    "s_l2sel": 7,
+    "s_pos": 9,
+    "s_rand": 0,
+    "s_role": 14,
+    "s_tli_li": 10,
+    "s_tli_sel": 7,
+    "s_tmpl": 7,
+    "s_word": 7,
+    "s_zs": 20,
+    "success": 7
+   },
+   "spatial:4": {
+    "crit": {
+     "role": -0.2055214611618434,
+     "tli_sel": -0.32820647742727815,
+     "tmpl": -0.20065102018807873,
+     "word": -0.20065102018807873,
+     "zs": 0.0
+    },
+    "pick": "tli_sel",
+    "s_l2sel": 9,
+    "s_pos": 0,
+    "s_rand": 0,
+    "s_role": 0,
+    "s_tli_li": 15,
+    "s_tli_sel": 9,
+    "s_tmpl": 0,
+    "s_word": 0,
+    "s_zs": 0,
+    "success": 9
+   },
+   "spatial:5": {
+    "crit": {
+     "role": -0.1759315131968781,
+     "tli_sel": -0.5391871018036916,
+     "tmpl": -0.17937632720557634,
+     "word": -0.17937632720557634,
+     "zs": 0.0
+    },
+    "pick": "tli_sel",
+    "s_l2sel": 12,
+    "s_pos": 0,
+    "s_rand": 0,
+    "s_role": 0,
+    "s_tli_li": 10,
+    "s_tli_sel": 12,
+    "s_tmpl": 1,
+    "s_word": 1,
+    "s_zs": 0,
+    "success": 12
+   },
+   "spatial:8": {
+    "crit": {
+     "role": -0.008205414014630206,
+     "tli_sel": -0.09976835905300997,
+     "tmpl": -0.01682361194632259,
+     "word": -0.01682361194632259,
+     "zs": 0.0
+    },
+    "pick": "tli_sel",
+    "s_l2sel": 9,
+    "s_pos": 2,
+    "s_rand": 0,
+    "s_role": 6,
+    "s_tli_li": 19,
+    "s_tli_sel": 9,
+    "s_tmpl": 11,
+    "s_word": 11,
+    "s_zs": 2,
+    "success": 9
+   },
+   "spatial:9": {
+    "crit": {
+     "role": -0.04299559951686577,
+     "tli_sel": -0.1269684325304609,
+     "tmpl": -0.023869916962837134,
+     "word": -0.023869916962837134,
+     "zs": 0.0
+    },
+    "pick": "tli_sel",
+    "s_l2sel": 19,
+    "s_pos": 0,
+    "s_rand": 0,
+    "s_role": 12,
+    "s_tli_li": 19,
+    "s_tli_sel": 19,
+    "s_tmpl": 4,
+    "s_word": 4,
+    "s_zs": 1,
+    "success": 19
+   }
+  },
+  "picks": {
+   "goal:0": "tmpl",
+   "goal:3": "tmpl",
+   "goal:8": "tli_sel",
+   "goal:9": "tli_sel",
+   "spatial:0": "tmpl",
+   "spatial:1": "word",
+   "spatial:2": "tli_sel",
+   "spatial:3": "tli_sel",
+   "spatial:4": "tli_sel",
+   "spatial:5": "tli_sel",
+   "spatial:8": "tli_sel",
+   "spatial:9": "tli_sel"
+  },
+  "references": {
+   "l2sel": 128,
+   "pos": 17,
+   "rand": 4,
+   "role": 107,
+   "tli_li": 169,
+   "tli_sel": 143,
+   "tmpl": 92,
+   "word": 83,
+   "zs": 93
+  },
+  "rule": "b_inter",
+  "success": 129,
+  "tasks": 12
+ },
+ "notes": "frozen L2b rule evaluated offline on the existing pi0.5 confirm rollouts; no new rollouts",
+ "retired": null,
+ "run_id": "pl2b_criteria__libero_ood__confirm_rule__s13__78e82676",
+ "schema": 1,
+ "script": "experiments/pl2b_criteria.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-23T03:47:37+00:00",
+ "stream": null,
+ "tag": "confirm_rule"
+}

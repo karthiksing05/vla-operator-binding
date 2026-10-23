@@ -1,0 +1,2902 @@
+{
+ "units": 16,
+ "complete": 16,
+ "incomplete": [],
+ "rules_note": "success of the rolled arm the rule deploys",
+ "table": {
+  "pi05": {
+   "rules": {
+    "zs (always)": {
+     "success": 63,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 4,
+     "hit_within2": 4,
+     "picks": {
+      "pi05|goal:1": "zs",
+      "pi05|goal:2": "zs",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "zs",
+      "pi05|goal:6": "zs",
+      "pi05|goal:7": "zs",
+      "pi05|spatial:6": "zs",
+      "pi05|spatial:7": "zs"
+     }
+    },
+    "tli_sel (always)": {
+     "success": 81,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 6,
+     "hit_within2": 6,
+     "picks": {
+      "pi05|goal:1": "tli_sel",
+      "pi05|goal:2": "tli_sel",
+      "pi05|goal:4": "tli_sel",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel"
+     }
+    },
+    "a: demo-0 loss (l2sel)": {
+     "success": 91,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 6,
+     "hit_within2": 6,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "tli_sel",
+      "pi05|goal:4": "tli_sel",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel"
+     }
+    },
+    "a_zs: demo-0 loss, zs allowed": {
+     "success": 91,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 6,
+     "hit_within2": 6,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "tli_sel",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel"
+     }
+    },
+    "e: demo-1 loss (2 demos, ref)": {
+     "success": 87,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 5,
+     "hit_within2": 6,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "role",
+      "pi05|goal:4": "tli_sel",
+      "pi05|goal:5": "tmpl",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel"
+     }
+    },
+    "e_ops: demo-1 loss over OPS (ref)": {
+     "success": 87,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 5,
+     "hit_within2": 6,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "role",
+      "pi05|goal:4": "tli_sel",
+      "pi05|goal:5": "tmpl",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel"
+     }
+    },
+    "oracle (best rolled in M)": {
+     "success": 100,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 8,
+     "hit_within2": 8,
+     "picks": {
+      "pi05|goal:1": "zs",
+      "pi05|goal:2": "word",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "zs",
+      "pi05|spatial:7": "zs"
+     }
+    },
+    "b_time: split-demo validation": {
+     "success": 56,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 4,
+     "hit_within2": 4,
+     "picks": {
+      "pi05|goal:1": "tli_sel",
+      "pi05|goal:2": "zs",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "zs",
+      "pi05|goal:7": "zs",
+      "pi05|spatial:6": "zs",
+      "pi05|spatial:7": "tli_sel"
+     }
+    },
+    "b_time_ops: split-demo validation over OPS": {
+     "success": 72,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 4,
+     "hit_within2": 5,
+     "picks": {
+      "pi05|goal:1": "tli_sel",
+      "pi05|goal:2": "role",
+      "pi05|goal:4": "role",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tmpl",
+      "pi05|goal:7": "role",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel"
+     }
+    },
+    "b_inter: split-demo validation": {
+     "success": 96,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 7,
+     "hit_within2": 7,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "tmpl",
+      "pi05|goal:4": "tli_sel",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel"
+     }
+    },
+    "b_inter_ops: split-demo validation over OPS": {
+     "success": 96,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 7,
+     "hit_within2": 7,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "tmpl",
+      "pi05|goal:4": "tli_sel",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel"
+     }
+    },
+    "b_cv4: split-demo validation": {
+     "success": 75,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 5,
+     "hit_within2": 5,
+     "picks": {
+      "pi05|goal:1": "tli_sel",
+      "pi05|goal:2": "zs",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tmpl",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel"
+     }
+    },
+    "b_cv4_ops: split-demo validation over OPS": {
+     "success": 78,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 6,
+     "hit_within2": 6,
+     "picks": {
+      "pi05|goal:1": "tli_sel",
+      "pi05|goal:2": "tmpl",
+      "pi05|goal:4": "role",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tmpl",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel"
+     }
+    },
+    "c: MDL l0 + w*D (LOTO w)": {
+     "success": 91,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 6,
+     "hit_within2": 6,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "tli_sel",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel"
+     }
+    },
+    "c: MDL l0 + w*D (LOTO w) [per-policy LOTO]": {
+     "success": 77,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 5,
+     "hit_within2": 5,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "tli_sel",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "role",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel"
+     }
+    },
+    "d: zs guard, margin m (LOTO m)": {
+     "success": 95,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 7,
+     "hit_within2": 7,
+     "picks": {
+      "pi05|goal:1": "zs",
+      "pi05|goal:2": "tli_sel",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel"
+     }
+    },
+    "d: zs guard, margin m (LOTO m) [per-policy LOTO]": {
+     "success": 82,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 6,
+     "hit_within2": 6,
+     "picks": {
+      "pi05|goal:1": "zs",
+      "pi05|goal:2": "zs",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "zs",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel"
+     }
+    }
+   },
+   "spearman": {
+    "a|M": {
+     "within_mean": 0.24139635882801996,
+     "within_n": 5,
+     "within_undefined": 3,
+     "within_pos": 4,
+     "pooled": 0.20826732957100805,
+     "pooled_n": 32
+    },
+    "a|M+tli_li": {
+     "within_mean": 0.40184436897161546,
+     "within_n": 5,
+     "within_undefined": 3,
+     "within_pos": 4,
+     "pooled": 0.20560388117011005,
+     "pooled_n": 40
+    },
+    "a|all8": {
+     "within_mean": 0.5859384931508663,
+     "within_n": 6,
+     "within_undefined": 2,
+     "within_pos": 6,
+     "pooled": 0.4972325927275105,
+     "pooled_n": 56
+    },
+    "b_time|M": {
+     "within_mean": -0.10735889367654275,
+     "within_n": 5,
+     "within_undefined": 3,
+     "within_pos": 2,
+     "pooled": -0.12058203911975772,
+     "pooled_n": 32
+    },
+    "b_time|M+tli_li": {
+     "within_mean": 0.04898351925580098,
+     "within_n": 5,
+     "within_undefined": 3,
+     "within_pos": 2,
+     "pooled": -0.04464777995717245,
+     "pooled_n": 40
+    },
+    "b_inter|M": {
+     "within_mean": 0.5399962100072032,
+     "within_n": 5,
+     "within_undefined": 3,
+     "within_pos": 5,
+     "pooled": 0.2841579688683612,
+     "pooled_n": 32
+    },
+    "b_inter|M+tli_li": {
+     "within_mean": 0.564352203261885,
+     "within_n": 5,
+     "within_undefined": 3,
+     "within_pos": 4,
+     "pooled": 0.22708106869310485,
+     "pooled_n": 40
+    },
+    "b_cv4|M": {
+     "within_mean": 0.2509212288204457,
+     "within_n": 5,
+     "within_undefined": 3,
+     "within_pos": 4,
+     "pooled": 0.0881840031718419,
+     "pooled_n": 32
+    },
+    "b_cv4|M+tli_li": {
+     "within_mean": 0.330078978263244,
+     "within_n": 5,
+     "within_undefined": 3,
+     "within_pos": 4,
+     "pooled": 0.10072617316377418,
+     "pooled_n": 40
+    },
+    "D|M": {
+     "within_mean": -0.2624489904069673,
+     "within_n": 5,
+     "within_undefined": 3,
+     "within_pos": 2,
+     "pooled": 0.09972284657175338,
+     "pooled_n": 32
+    },
+    "D|M+tli_li": {
+     "within_mean": -0.19893646743305476,
+     "within_n": 5,
+     "within_undefined": 3,
+     "within_pos": 2,
+     "pooled": 0.22329128729738665,
+     "pooled_n": 40
+    },
+    "D|all8": {
+     "within_mean": 0.35549937952878485,
+     "within_n": 6,
+     "within_undefined": 2,
+     "within_pos": 6,
+     "pooled": 0.2944302835670954,
+     "pooled_n": 56
+    },
+    "e|M": {
+     "within_mean": 0.18621061370961997,
+     "within_n": 5,
+     "within_undefined": 3,
+     "within_pos": 4,
+     "pooled": 0.24738936937992667,
+     "pooled_n": 32
+    },
+    "e|M+tli_li": {
+     "within_mean": 0.241074012135096,
+     "within_n": 5,
+     "within_undefined": 3,
+     "within_pos": 4,
+     "pooled": 0.20501755831506224,
+     "pooled_n": 40
+    },
+    "e|all8": {
+     "within_mean": 0.5619951154383421,
+     "within_n": 6,
+     "within_undefined": 2,
+     "within_pos": 6,
+     "pooled": 0.4985380355665736,
+     "pooled_n": 56
+    },
+    "c|M": {
+     "within_mean": 0.3045542535648621,
+     "within_n": 5,
+     "within_undefined": 3,
+     "within_pos": 4,
+     "pooled": 0.2661832904646033,
+     "pooled_n": 32
+    },
+    "c|M+tli_li": {
+     "within_mean": 0.38856434736116097,
+     "within_n": 5,
+     "within_undefined": 3,
+     "within_pos": 5,
+     "pooled": 0.2489917724436504,
+     "pooled_n": 40
+    },
+    "c|all8": {
+     "within_mean": 0.6144199178506445,
+     "within_n": 6,
+     "within_undefined": 2,
+     "within_pos": 6,
+     "pooled": 0.5211186684584779,
+     "pooled_n": 56
+    }
+   }
+  },
+  "pi0": {
+   "rules": {
+    "zs (always)": {
+     "success": 11,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 3,
+     "hit_within2": 4,
+     "picks": {
+      "pi0|goal:1": "zs",
+      "pi0|goal:2": "zs",
+      "pi0|goal:4": "zs",
+      "pi0|goal:5": "zs",
+      "pi0|goal:6": "zs",
+      "pi0|goal:7": "zs",
+      "pi0|spatial:6": "zs",
+      "pi0|spatial:7": "zs"
+     }
+    },
+    "tli_sel (always)": {
+     "success": 40,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 6,
+     "hit_within2": 7,
+     "picks": {
+      "pi0|goal:1": "tli_sel",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "tli_sel",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "a: demo-0 loss (l2sel)": {
+     "success": 39,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 5,
+     "hit_within2": 7,
+     "picks": {
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "a_zs: demo-0 loss, zs allowed": {
+     "success": 39,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 5,
+     "hit_within2": 7,
+     "picks": {
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "e: demo-1 loss (2 demos, ref)": {
+     "success": 23,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 4,
+     "hit_within2": 6,
+     "picks": {
+      "pi0|goal:1": "tmpl",
+      "pi0|goal:2": "zs",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "e_ops: demo-1 loss over OPS (ref)": {
+     "success": 23,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 4,
+     "hit_within2": 6,
+     "picks": {
+      "pi0|goal:1": "tmpl",
+      "pi0|goal:2": "word",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "oracle (best rolled in M)": {
+     "success": 48,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 8,
+     "hit_within2": 8,
+     "picks": {
+      "pi0|goal:1": "zs",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "zs",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "zs",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "role"
+     }
+    },
+    "b_time: split-demo validation": {
+     "success": 12,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 3,
+     "hit_within2": 4,
+     "picks": {
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "zs",
+      "pi0|goal:4": "zs",
+      "pi0|goal:5": "word",
+      "pi0|goal:6": "zs",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "b_time_ops: split-demo validation over OPS": {
+     "success": 11,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 2,
+     "hit_within2": 4,
+     "picks": {
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "role",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "word",
+      "pi0|goal:6": "role",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "b_inter: split-demo validation": {
+     "success": 39,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 5,
+     "hit_within2": 7,
+     "picks": {
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "b_inter_ops: split-demo validation over OPS": {
+     "success": 39,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 5,
+     "hit_within2": 7,
+     "picks": {
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "b_cv4: split-demo validation": {
+     "success": 15,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 3,
+     "hit_within2": 5,
+     "picks": {
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "zs",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "word",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "b_cv4_ops: split-demo validation over OPS": {
+     "success": 15,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 3,
+     "hit_within2": 5,
+     "picks": {
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "role",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "word",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "c: MDL l0 + w*D (LOTO w)": {
+     "success": 39,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 5,
+     "hit_within2": 7,
+     "picks": {
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "c: MDL l0 + w*D (LOTO w) [per-policy LOTO]": {
+     "success": 39,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 5,
+     "hit_within2": 7,
+     "picks": {
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "d: zs guard, margin m (LOTO m)": {
+     "success": 23,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 4,
+     "hit_within2": 6,
+     "picks": {
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "zs",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "d: zs guard, margin m (LOTO m) [per-policy LOTO]": {
+     "success": 23,
+     "of": 160,
+     "tasks": 8,
+     "missing": 0,
+     "hit_exact": 4,
+     "hit_within2": 6,
+     "picks": {
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "zs",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    }
+   },
+   "spearman": {
+    "a|M": {
+     "within_mean": 0.1528349866059362,
+     "within_n": 7,
+     "within_undefined": 1,
+     "within_pos": 4,
+     "pooled": 0.2732447879304677,
+     "pooled_n": 32
+    },
+    "a|M+tli_li": {
+     "within_mean": 0.019776042317873083,
+     "within_n": 8,
+     "within_undefined": 0,
+     "within_pos": 3,
+     "pooled": -0.034224235811947314,
+     "pooled_n": 40
+    },
+    "a|all8": {
+     "within_mean": 0.23447582688331461,
+     "within_n": 8,
+     "within_undefined": 0,
+     "within_pos": 6,
+     "pooled": 0.11771967937288344,
+     "pooled_n": 56
+    },
+    "b_time|M": {
+     "within_mean": -0.08065709364862447,
+     "within_n": 7,
+     "within_undefined": 1,
+     "within_pos": 2,
+     "pooled": -0.13866073634820214,
+     "pooled_n": 32
+    },
+    "b_time|M+tli_li": {
+     "within_mean": 0.014569739637135287,
+     "within_n": 8,
+     "within_undefined": 0,
+     "within_pos": 5,
+     "pooled": -0.05208175330087896,
+     "pooled_n": 40
+    },
+    "b_inter|M": {
+     "within_mean": 0.15677130137524994,
+     "within_n": 7,
+     "within_undefined": 1,
+     "within_pos": 4,
+     "pooled": 0.27113126125228815,
+     "pooled_n": 32
+    },
+    "b_inter|M+tli_li": {
+     "within_mean": -0.008023085388444193,
+     "within_n": 8,
+     "within_undefined": 0,
+     "within_pos": 3,
+     "pooled": -0.08088605584311485,
+     "pooled_n": 40
+    },
+    "b_cv4|M": {
+     "within_mean": 0.07086578803420715,
+     "within_n": 7,
+     "within_undefined": 1,
+     "within_pos": 3,
+     "pooled": -0.02311012272470036,
+     "pooled_n": 32
+    },
+    "b_cv4|M+tli_li": {
+     "within_mean": 0.05485476735551034,
+     "within_n": 8,
+     "within_undefined": 0,
+     "within_pos": 5,
+     "pooled": -0.08539801938159537,
+     "pooled_n": 40
+    },
+    "D|M": {
+     "within_mean": -0.20465471875665128,
+     "within_n": 7,
+     "within_undefined": 1,
+     "within_pos": 3,
+     "pooled": -0.30543979315490344,
+     "pooled_n": 32
+    },
+    "D|M+tli_li": {
+     "within_mean": -0.3866600337798925,
+     "within_n": 8,
+     "within_undefined": 0,
+     "within_pos": 2,
+     "pooled": -0.4048696987255,
+     "pooled_n": 40
+    },
+    "D|all8": {
+     "within_mean": -0.23963710873822486,
+     "within_n": 8,
+     "within_undefined": 0,
+     "within_pos": 3,
+     "pooled": -0.3217277730526219,
+     "pooled_n": 56
+    },
+    "e|M": {
+     "within_mean": -0.005283427596089629,
+     "within_n": 7,
+     "within_undefined": 1,
+     "within_pos": 4,
+     "pooled": 0.10814219703592527,
+     "pooled_n": 32
+    },
+    "e|M+tli_li": {
+     "within_mean": -0.08486645214997632,
+     "within_n": 8,
+     "within_undefined": 0,
+     "within_pos": 3,
+     "pooled": -0.09323846061378024,
+     "pooled_n": 40
+    },
+    "e|all8": {
+     "within_mean": 0.08826115850037547,
+     "within_n": 8,
+     "within_undefined": 0,
+     "within_pos": 5,
+     "pooled": 0.03526794530883002,
+     "pooled_n": 56
+    },
+    "c|M": {
+     "within_mean": 0.20199550100677086,
+     "within_n": 7,
+     "within_undefined": 1,
+     "within_pos": 5,
+     "pooled": 0.2732447879304677,
+     "pooled_n": 32
+    },
+    "c|M+tli_li": {
+     "within_mean": 0.07490129515200838,
+     "within_n": 8,
+     "within_undefined": 0,
+     "within_pos": 4,
+     "pooled": -0.05379527975133068,
+     "pooled_n": 40
+    },
+    "c|all8": {
+     "within_mean": 0.2649623244491262,
+     "within_n": 8,
+     "within_undefined": 0,
+     "within_pos": 6,
+     "pooled": 0.09949544821957589,
+     "pooled_n": 56
+    }
+   }
+  },
+  "both": {
+   "rules": {
+    "zs (always)": {
+     "success": 74,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 7,
+     "hit_within2": 8,
+     "picks": {
+      "pi05|goal:1": "zs",
+      "pi05|goal:2": "zs",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "zs",
+      "pi05|goal:6": "zs",
+      "pi05|goal:7": "zs",
+      "pi05|spatial:6": "zs",
+      "pi05|spatial:7": "zs",
+      "pi0|goal:1": "zs",
+      "pi0|goal:2": "zs",
+      "pi0|goal:4": "zs",
+      "pi0|goal:5": "zs",
+      "pi0|goal:6": "zs",
+      "pi0|goal:7": "zs",
+      "pi0|spatial:6": "zs",
+      "pi0|spatial:7": "zs"
+     }
+    },
+    "tli_sel (always)": {
+     "success": 121,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 12,
+     "hit_within2": 13,
+     "picks": {
+      "pi05|goal:1": "tli_sel",
+      "pi05|goal:2": "tli_sel",
+      "pi05|goal:4": "tli_sel",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel",
+      "pi0|goal:1": "tli_sel",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "tli_sel",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "a: demo-0 loss (l2sel)": {
+     "success": 130,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 11,
+     "hit_within2": 13,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "tli_sel",
+      "pi05|goal:4": "tli_sel",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel",
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "a_zs: demo-0 loss, zs allowed": {
+     "success": 130,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 11,
+     "hit_within2": 13,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "tli_sel",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel",
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "e: demo-1 loss (2 demos, ref)": {
+     "success": 110,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 9,
+     "hit_within2": 12,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "role",
+      "pi05|goal:4": "tli_sel",
+      "pi05|goal:5": "tmpl",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel",
+      "pi0|goal:1": "tmpl",
+      "pi0|goal:2": "zs",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "e_ops: demo-1 loss over OPS (ref)": {
+     "success": 110,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 9,
+     "hit_within2": 12,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "role",
+      "pi05|goal:4": "tli_sel",
+      "pi05|goal:5": "tmpl",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel",
+      "pi0|goal:1": "tmpl",
+      "pi0|goal:2": "word",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "oracle (best rolled in M)": {
+     "success": 148,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 16,
+     "hit_within2": 16,
+     "picks": {
+      "pi05|goal:1": "zs",
+      "pi05|goal:2": "word",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "zs",
+      "pi05|spatial:7": "zs",
+      "pi0|goal:1": "zs",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "zs",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "zs",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "role"
+     }
+    },
+    "b_time: split-demo validation": {
+     "success": 68,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 7,
+     "hit_within2": 8,
+     "picks": {
+      "pi05|goal:1": "tli_sel",
+      "pi05|goal:2": "zs",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "zs",
+      "pi05|goal:7": "zs",
+      "pi05|spatial:6": "zs",
+      "pi05|spatial:7": "tli_sel",
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "zs",
+      "pi0|goal:4": "zs",
+      "pi0|goal:5": "word",
+      "pi0|goal:6": "zs",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "b_time_ops: split-demo validation over OPS": {
+     "success": 83,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 6,
+     "hit_within2": 9,
+     "picks": {
+      "pi05|goal:1": "tli_sel",
+      "pi05|goal:2": "role",
+      "pi05|goal:4": "role",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tmpl",
+      "pi05|goal:7": "role",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel",
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "role",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "word",
+      "pi0|goal:6": "role",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "b_inter: split-demo validation": {
+     "success": 135,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 12,
+     "hit_within2": 14,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "tmpl",
+      "pi05|goal:4": "tli_sel",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel",
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "b_inter_ops: split-demo validation over OPS": {
+     "success": 135,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 12,
+     "hit_within2": 14,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "tmpl",
+      "pi05|goal:4": "tli_sel",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel",
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "b_cv4: split-demo validation": {
+     "success": 90,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 8,
+     "hit_within2": 10,
+     "picks": {
+      "pi05|goal:1": "tli_sel",
+      "pi05|goal:2": "zs",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tmpl",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel",
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "zs",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "word",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "b_cv4_ops: split-demo validation over OPS": {
+     "success": 93,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 9,
+     "hit_within2": 11,
+     "picks": {
+      "pi05|goal:1": "tli_sel",
+      "pi05|goal:2": "tmpl",
+      "pi05|goal:4": "role",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tmpl",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel",
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "role",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "word",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "c: MDL l0 + w*D (LOTO w)": {
+     "success": 130,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 11,
+     "hit_within2": 13,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "tli_sel",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel",
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "c: MDL l0 + w*D (LOTO w) [per-policy LOTO]": {
+     "success": 116,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 10,
+     "hit_within2": 12,
+     "picks": {
+      "pi05|goal:1": "role",
+      "pi05|goal:2": "tli_sel",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "role",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel",
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "tli_sel",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "d: zs guard, margin m (LOTO m)": {
+     "success": 118,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 11,
+     "hit_within2": 13,
+     "picks": {
+      "pi05|goal:1": "zs",
+      "pi05|goal:2": "tli_sel",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "tli_sel",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel",
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "zs",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    },
+    "d: zs guard, margin m (LOTO m) [per-policy LOTO]": {
+     "success": 105,
+     "of": 320,
+     "tasks": 16,
+     "missing": 0,
+     "hit_exact": 10,
+     "hit_within2": 12,
+     "picks": {
+      "pi05|goal:1": "zs",
+      "pi05|goal:2": "zs",
+      "pi05|goal:4": "zs",
+      "pi05|goal:5": "tli_sel",
+      "pi05|goal:6": "zs",
+      "pi05|goal:7": "tli_sel",
+      "pi05|spatial:6": "tli_sel",
+      "pi05|spatial:7": "tli_sel",
+      "pi0|goal:1": "role",
+      "pi0|goal:2": "zs",
+      "pi0|goal:4": "role",
+      "pi0|goal:5": "tli_sel",
+      "pi0|goal:6": "tli_sel",
+      "pi0|goal:7": "tli_sel",
+      "pi0|spatial:6": "tli_sel",
+      "pi0|spatial:7": "tli_sel"
+     }
+    }
+   },
+   "spearman": {
+    "a|M": {
+     "within_mean": 0.18973555836513775,
+     "within_n": 12,
+     "within_undefined": 4,
+     "within_pos": 8,
+     "pooled": 0.2248731710924365,
+     "pooled_n": 64
+    },
+    "a|M+tli_li": {
+     "within_mean": 0.16672539872315864,
+     "within_n": 13,
+     "within_undefined": 3,
+     "within_pos": 7,
+     "pooled": 0.08264968372215224,
+     "pooled_n": 80
+    },
+    "a|all8": {
+     "within_mean": 0.38510268385512253,
+     "within_n": 14,
+     "within_undefined": 2,
+     "within_pos": 12,
+     "pooled": 0.31997752639252314,
+     "pooled_n": 112
+    },
+    "b_time|M": {
+     "within_mean": -0.09178284366025706,
+     "within_n": 12,
+     "within_undefined": 4,
+     "within_pos": 4,
+     "pooled": -0.12806041840584015,
+     "pooled_n": 64
+    },
+    "b_time|M+tli_li": {
+     "within_mean": 0.027805808721237488,
+     "within_n": 13,
+     "within_undefined": 3,
+     "within_pos": 7,
+     "pooled": -0.03646247596829065,
+     "pooled_n": 80
+    },
+    "b_inter|M": {
+     "within_mean": 0.31644834663856375,
+     "within_n": 12,
+     "within_undefined": 4,
+     "within_pos": 9,
+     "pooled": 0.227747626298455,
+     "pooled_n": 64
+    },
+    "b_inter|M+tli_li": {
+     "within_mean": 0.21212125640014398,
+     "within_n": 13,
+     "within_undefined": 3,
+     "within_pos": 7,
+     "pooled": 0.0668000314767666,
+     "pooled_n": 80
+    },
+    "b_cv4|M": {
+     "within_mean": 0.14588888836180655,
+     "within_n": 12,
+     "within_undefined": 4,
+     "within_pos": 7,
+     "pooled": 0.019329874476353228,
+     "pooled_n": 64
+    },
+    "b_cv4|M+tli_li": {
+     "within_mean": 0.16071023308925406,
+     "within_n": 13,
+     "within_undefined": 3,
+     "within_pos": 9,
+     "pooled": 0.015229753681877498,
+     "pooled_n": 80
+    },
+    "D|M": {
+     "within_mean": -0.22873566527761635,
+     "within_n": 12,
+     "within_undefined": 4,
+     "within_pos": 5,
+     "pooled": -0.021057202643962807,
+     "pooled_n": 64
+    },
+    "D|M+tli_li": {
+     "within_mean": -0.31445866210803186,
+     "within_n": 13,
+     "within_undefined": 3,
+     "within_pos": 4,
+     "pooled": -0.03190616246515009,
+     "pooled_n": 80
+    },
+    "D|all8": {
+     "within_mean": 0.015421386233350749,
+     "within_n": 14,
+     "within_undefined": 2,
+     "within_pos": 9,
+     "pooled": 0.07504497906480082,
+     "pooled_n": 112
+    },
+    "e|M": {
+     "within_mean": 0.07450575628128936,
+     "within_n": 12,
+     "within_undefined": 4,
+     "within_pos": 8,
+     "pooled": 0.12291587257629343,
+     "pooled_n": 64
+    },
+    "e|M+tli_li": {
+     "within_mean": 0.04049526488274379,
+     "within_n": 13,
+     "within_undefined": 3,
+     "within_pos": 7,
+     "pooled": 0.020789032686352144,
+     "pooled_n": 80
+    },
+    "e|all8": {
+     "within_mean": 0.29128999718807547,
+     "within_n": 14,
+     "within_undefined": 2,
+     "within_pos": 11,
+     "pooled": 0.2568793810288637,
+     "pooled_n": 112
+    },
+    "c|M": {
+     "within_mean": 0.2447283145726422,
+     "within_n": 12,
+     "within_undefined": 4,
+     "within_pos": 9,
+     "pooled": 0.2507138600513042,
+     "pooled_n": 64
+    },
+    "c|M+tli_li": {
+     "within_mean": 0.1955409306170671,
+     "within_n": 13,
+     "within_undefined": 3,
+     "within_pos": 9,
+     "pooled": 0.09044402693373167,
+     "pooled_n": 80
+    },
+    "c|all8": {
+     "within_mean": 0.41472986447834836,
+     "within_n": 14,
+     "within_undefined": 2,
+     "within_pos": 12,
+     "pooled": 0.3229327957817528,
+     "pooled_n": 112
+    }
+   }
+  }
+ },
+ "loto": {
+  "c: MDL l0 + w*D (LOTO w)": {
+   "chosen": {
+    "pi05|goal:1": 0.05011872336272725,
+    "pi05|goal:2": 0.006309573444801929,
+    "pi05|goal:4": 0.05011872336272725,
+    "pi05|goal:5": 0.05011872336272725,
+    "pi05|goal:6": 0.05011872336272725,
+    "pi05|goal:7": 0.05011872336272725,
+    "pi05|spatial:6": 0.05011872336272725,
+    "pi05|spatial:7": 0.05011872336272725,
+    "pi0|goal:1": 0.05011872336272725,
+    "pi0|goal:2": 0.05011872336272725,
+    "pi0|goal:4": 0.05011872336272725,
+    "pi0|goal:5": 0.05011872336272725,
+    "pi0|goal:6": 0.05011872336272725,
+    "pi0|goal:7": 0.05011872336272725,
+    "pi0|spatial:6": 0.05011872336272725,
+    "pi0|spatial:7": 0.05011872336272725
+   },
+   "full_data": {
+    "value": 0.05011872336272725,
+    "range": [
+     0.039810717055349734,
+     0.05011872336272725
+    ],
+    "success": 133,
+    "curve": {
+     "0": 130,
+     "0.001": 130,
+     "0.001259": 130,
+     "0.001585": 130,
+     "0.001995": 130,
+     "0.002512": 130,
+     "0.003162": 130,
+     "0.003981": 130,
+     "0.005012": 130,
+     "0.00631": 130,
+     "0.007943": 130,
+     "0.01": 130,
+     "0.01259": 130,
+     "0.01585": 130,
+     "0.01995": 130,
+     "0.02512": 130,
+     "0.03162": 130,
+     "0.03981": 133,
+     "0.05012": 133,
+     "0.0631": 117,
+     "0.07943": 109,
+     "0.1": 108,
+     "0.1259": 108,
+     "0.1585": 108,
+     "0.1995": 108,
+     "0.2512": 103,
+     "0.3162": 103,
+     "0.3981": 86,
+     "0.5012": 86,
+     "0.631": 74,
+     "0.7943": 74,
+     "1": 74,
+     "1.259": 74,
+     "1.585": 74,
+     "1.995": 74,
+     "2.512": 74,
+     "3.162": 74,
+     "3.981": 74,
+     "5.012": 74,
+     "6.31": 74,
+     "7.943": 74,
+     "10": 74
+    }
+   }
+  },
+  "c: MDL l0 + w*D (LOTO w) [per-policy LOTO]": {
+   "chosen": {
+    "pi05|goal:1": 0.06309573444801933,
+    "pi05|goal:2": 0.012589254117941675,
+    "pi05|goal:4": 0.06309573444801933,
+    "pi05|goal:5": 0.06309573444801933,
+    "pi05|goal:6": 0.31622776601683794,
+    "pi05|goal:7": 0.06309573444801933,
+    "pi05|spatial:6": 0.06309573444801933,
+    "pi05|spatial:7": 0.06309573444801933,
+    "pi0|goal:1": 0.006309573444801929,
+    "pi0|goal:2": 0.007943282347242814,
+    "pi0|goal:4": 0.006309573444801929,
+    "pi0|goal:5": 0.006309573444801929,
+    "pi0|goal:6": 0.006309573444801929,
+    "pi0|goal:7": 0.006309573444801929,
+    "pi0|spatial:6": 0.006309573444801929,
+    "pi0|spatial:7": 0.006309573444801929
+   },
+   "full_data": {
+    "value": 0.05011872336272725,
+    "range": [
+     0.039810717055349734,
+     0.05011872336272725
+    ],
+    "success": 133,
+    "curve": {
+     "0": 130,
+     "0.001": 130,
+     "0.001259": 130,
+     "0.001585": 130,
+     "0.001995": 130,
+     "0.002512": 130,
+     "0.003162": 130,
+     "0.003981": 130,
+     "0.005012": 130,
+     "0.00631": 130,
+     "0.007943": 130,
+     "0.01": 130,
+     "0.01259": 130,
+     "0.01585": 130,
+     "0.01995": 130,
+     "0.02512": 130,
+     "0.03162": 130,
+     "0.03981": 133,
+     "0.05012": 133,
+     "0.0631": 117,
+     "0.07943": 109,
+     "0.1": 108,
+     "0.1259": 108,
+     "0.1585": 108,
+     "0.1995": 108,
+     "0.2512": 103,
+     "0.3162": 103,
+     "0.3981": 86,
+     "0.5012": 86,
+     "0.631": 74,
+     "0.7943": 74,
+     "1": 74,
+     "1.259": 74,
+     "1.585": 74,
+     "1.995": 74,
+     "2.512": 74,
+     "3.162": 74,
+     "3.981": 74,
+     "5.012": 74,
+     "6.31": 74,
+     "7.943": 74,
+     "10": 74
+    }
+   }
+  },
+  "d: zs guard, margin m (LOTO m)": {
+   "chosen": {
+    "pi05|goal:1": 0.03,
+    "pi05|goal:2": 0.04,
+    "pi05|goal:4": 0.04,
+    "pi05|goal:5": 0.04,
+    "pi05|goal:6": 0.04,
+    "pi05|goal:7": 0.04,
+    "pi05|spatial:6": 0.04,
+    "pi05|spatial:7": 0.04,
+    "pi0|goal:1": 0.04,
+    "pi0|goal:2": 0.2,
+    "pi0|goal:4": 0.04,
+    "pi0|goal:5": 0.04,
+    "pi0|goal:6": 0.04,
+    "pi0|goal:7": 0.04,
+    "pi0|spatial:6": 0.04,
+    "pi0|spatial:7": 0.04
+   },
+   "full_data": {
+    "value": 0.04,
+    "range": [
+     0.03,
+     0.05
+    ],
+    "success": 134,
+    "curve": {
+     "0": 130,
+     "0.01": 130,
+     "0.02": 130,
+     "0.03": 134,
+     "0.04": 134,
+     "0.05": 134,
+     "0.06": 118,
+     "0.07": 120,
+     "0.08": 120,
+     "0.09": 120,
+     "0.1": 120,
+     "0.11": 120,
+     "0.12": 120,
+     "0.13": 120,
+     "0.14": 120,
+     "0.15": 120,
+     "0.16": 120,
+     "0.17": 120,
+     "0.18": 121,
+     "0.19": 121,
+     "0.2": 127,
+     "0.21": 121,
+     "0.22": 121,
+     "0.23": 121,
+     "0.24": 121,
+     "0.25": 106,
+     "0.26": 106,
+     "0.27": 106,
+     "0.28": 106,
+     "0.29": 106,
+     "0.3": 106,
+     "0.31": 106,
+     "0.32": 106,
+     "0.33": 106,
+     "0.34": 106,
+     "0.35": 106,
+     "0.36": 106,
+     "0.37": 106,
+     "0.38": 102,
+     "0.39": 102,
+     "0.4": 102,
+     "0.41": 102,
+     "0.42": 102,
+     "0.43": 95,
+     "0.44": 95,
+     "0.45": 95,
+     "0.46": 95,
+     "0.47": 95,
+     "0.48": 95,
+     "0.49": 95,
+     "0.5": 95
+    }
+   }
+  },
+  "d: zs guard, margin m (LOTO m) [per-policy LOTO]": {
+   "chosen": {
+    "pi05|goal:1": 0.16,
+    "pi05|goal:2": 0.14,
+    "pi05|goal:4": 0.16,
+    "pi05|goal:5": 0.16,
+    "pi05|goal:6": 0.25,
+    "pi05|goal:7": 0.16,
+    "pi05|spatial:6": 0.16,
+    "pi05|spatial:7": 0.16,
+    "pi0|goal:1": 0.03,
+    "pi0|goal:2": 0.2,
+    "pi0|goal:4": 0.03,
+    "pi0|goal:5": 0.03,
+    "pi0|goal:6": 0.03,
+    "pi0|goal:7": 0.03,
+    "pi0|spatial:6": 0.03,
+    "pi0|spatial:7": 0.03
+   },
+   "full_data": {
+    "value": 0.04,
+    "range": [
+     0.03,
+     0.05
+    ],
+    "success": 134,
+    "curve": {
+     "0": 130,
+     "0.01": 130,
+     "0.02": 130,
+     "0.03": 134,
+     "0.04": 134,
+     "0.05": 134,
+     "0.06": 118,
+     "0.07": 120,
+     "0.08": 120,
+     "0.09": 120,
+     "0.1": 120,
+     "0.11": 120,
+     "0.12": 120,
+     "0.13": 120,
+     "0.14": 120,
+     "0.15": 120,
+     "0.16": 120,
+     "0.17": 120,
+     "0.18": 121,
+     "0.19": 121,
+     "0.2": 127,
+     "0.21": 121,
+     "0.22": 121,
+     "0.23": 121,
+     "0.24": 121,
+     "0.25": 106,
+     "0.26": 106,
+     "0.27": 106,
+     "0.28": 106,
+     "0.29": 106,
+     "0.3": 106,
+     "0.31": 106,
+     "0.32": 106,
+     "0.33": 106,
+     "0.34": 106,
+     "0.35": 106,
+     "0.36": 106,
+     "0.37": 106,
+     "0.38": 102,
+     "0.39": 102,
+     "0.4": 102,
+     "0.41": 102,
+     "0.42": 102,
+     "0.43": 95,
+     "0.44": 95,
+     "0.45": 95,
+     "0.46": 95,
+     "0.47": 95,
+     "0.48": 95,
+     "0.49": 95,
+     "0.5": 95
+    }
+   }
+  }
+ },
+ "strict_config_match": {
+  "b_time": 0.265625,
+  "b_inter": 0.6171875,
+  "b_cv4": 0.44140625
+ },
+ "l0_reproduction_max_rel_err": 0.0035350282855004522,
+ "D": {
+  "pi05|goal:1": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 1.4116545464369201,
+   "word": 0.09957722241534049,
+   "tmpl": 0.09957722241534049,
+   "tli_sel": 1.49780793504086,
+   "role": 0.09735269725118066,
+   "rand": 0.2727052888318725,
+   "pos": 0.23874578214570383
+  },
+  "pi05|goal:2": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 1.9443736134679723,
+   "word": 0.256616792337533,
+   "tmpl": 0.256616792337533,
+   "tli_sel": 1.416308107845885,
+   "role": 0.2404641771648636,
+   "rand": 1.7302812240046221,
+   "pos": 2.337703783921572
+  },
+  "pi05|goal:4": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 1.1390703847797272,
+   "word": 0.18168784106496472,
+   "tmpl": 0.18168784106496472,
+   "tli_sel": 1.1390703847797272,
+   "role": 0.2016924590424854,
+   "rand": 1.0666277404898061,
+   "pos": 1.7754645880209299
+  },
+  "pi05|goal:5": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 0.997041655015395,
+   "word": 0.3871858226038941,
+   "tmpl": 0.4589778777987039,
+   "tli_sel": 1.2883813427034796,
+   "role": 0.3267497032182769,
+   "rand": 0.9843279999171102,
+   "pos": 1.7245373911251123
+  },
+  "pi05|goal:6": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 0.7940348544716788,
+   "word": 0.0960163494452392,
+   "tmpl": 0.0960163494452392,
+   "tli_sel": 0.9122772758133508,
+   "role": 0.23504354593107457,
+   "rand": 0.815948393684289,
+   "pos": 1.3703883414256262
+  },
+  "pi05|goal:7": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 0.8203430125818081,
+   "word": 0.5392128796341509,
+   "tmpl": 0.5392128796341509,
+   "tli_sel": 1.4017933704032015,
+   "role": 0.32731985425361715,
+   "rand": 1.114607306393075,
+   "pos": 1.4596570783266019
+  },
+  "pi05|spatial:6": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 2.0358385950379105,
+   "word": 1.8277787744719156,
+   "tmpl": 1.8277787744719156,
+   "tli_sel": 2.2697857200672593,
+   "role": 1.279414611665219,
+   "rand": 2.061682308971555,
+   "pos": 2.6609968778069417
+  },
+  "pi05|spatial:7": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 2.265345309279124,
+   "word": 2.204165215043071,
+   "tmpl": 2.204165215043071,
+   "tli_sel": 2.5282172501682245,
+   "role": 1.3088153911398401,
+   "rand": 1.3538148573702535,
+   "pos": 1.719844307293086
+  },
+  "pi0|goal:1": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 1.1612233119444568,
+   "word": 0.42027794124661355,
+   "tmpl": 0.458192238387261,
+   "tli_sel": 0.5724617168834406,
+   "role": 0.36776655034405914,
+   "rand": 0.5225678348107049,
+   "pos": 0.7181349639474779
+  },
+  "pi0|goal:2": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 1.0310416941642613,
+   "word": 0.05229131838714816,
+   "tmpl": 0.05229131838714816,
+   "tli_sel": 1.0310416941642613,
+   "role": 0.004754656816403522,
+   "rand": 1.0496017720744302,
+   "pos": 1.2379589111806457
+  },
+  "pi0|goal:4": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 1.1260190831532846,
+   "word": 0.13727700971491694,
+   "tmpl": 0.13727700971491694,
+   "tli_sel": 1.2335175231404802,
+   "role": 0.6581008671292988,
+   "rand": 0.7933181798235293,
+   "pos": 0.8194698255064358
+  },
+  "pi0|goal:5": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 0.856955254880657,
+   "word": 0.6615159430730208,
+   "tmpl": 0.6615159430730208,
+   "tli_sel": 1.660948768364134,
+   "role": 0.4107315995410225,
+   "rand": 0.9069209339312918,
+   "pos": 1.319089779309682
+  },
+  "pi0|goal:6": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 1.4082058739774903,
+   "word": 0.9176069334680103,
+   "tmpl": 1.066429914802029,
+   "tli_sel": 1.5892958439249836,
+   "role": 0.4493095576236492,
+   "rand": 1.3827535535488253,
+   "pos": 0.973584496049392
+  },
+  "pi0|goal:7": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 0.5180482964860035,
+   "word": 0.8023522495534156,
+   "tmpl": 0.8023522495534156,
+   "tli_sel": 0.9786117463952679,
+   "role": 0.3766900447113699,
+   "rand": 0.7979934611899613,
+   "pos": 0.5543080377775117
+  },
+  "pi0|spatial:6": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 1.2878243222074528,
+   "word": 0.6339471055329033,
+   "tmpl": 0.6339471055329033,
+   "tli_sel": 1.8286570073836885,
+   "role": 0.4215125183955923,
+   "rand": 1.0312595538154208,
+   "pos": 1.5503746080379155
+  },
+  "pi0|spatial:7": {
+   "zs": 0.0,
+   "null": 1.0,
+   "tli_li": 1.4584349408640902,
+   "word": 1.643700044039393,
+   "tmpl": 1.643700044039393,
+   "tli_sel": 1.4068106415525816,
+   "role": 1.1456668134646435,
+   "rand": 0.8456143639858934,
+   "pos": 1.338323088100878
+  }
+ },
+ "crit": {
+  "pi05|goal:1": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": -0.32534333375100405,
+    "word": -0.0005362387617329687,
+    "tmpl": -0.0005362387617329687,
+    "tli_sel": 0.025730852444666358,
+    "role": -0.022052021643637523,
+    "rand": 0.07737661829779917,
+    "pos": 0.012179532973499371
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": -0.12402388005810155,
+    "word": 0.006891805680218911,
+    "tmpl": 0.006891805680218911,
+    "tli_sel": 0.045418538290745054,
+    "role": -0.008744383653444864,
+    "rand": 0.031340375707020654,
+    "pos": 0.008638332067240469
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": 0.21080066719052548,
+    "tmpl": 0.21080066719052548,
+    "tli_sel": -0.02882162324204752,
+    "role": 0.007290159234693136,
+    "tli_li": -0.3126298171625611
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": -0.0007951479363899161,
+    "tmpl": -0.0007951479363899161,
+    "tli_sel": 0.006035083680126105,
+    "role": -0.015659482942782278,
+    "tli_li": -0.25807356268624415
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": 0.10500275962706779,
+    "tmpl": 0.10500275962706779,
+    "tli_sel": -0.011393269780960707,
+    "role": -0.00418466185404457,
+    "tli_li": -0.28535168992440263
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 1.4116545464369201,
+    "word": 0.09957722241534049,
+    "tmpl": 0.09957722241534049,
+    "tli_sel": 1.49780793504086,
+    "role": 0.09735269725118066,
+    "rand": 0.2727052888318725,
+    "pos": 0.23874578214570383
+   }
+  },
+  "pi05|goal:2": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": 0.13787432228107105,
+    "word": -0.01242987975996069,
+    "tmpl": -0.01242987975996069,
+    "tli_sel": -0.0627968257891664,
+    "role": -0.020620034009569313,
+    "rand": 0.005473084813823181,
+    "pos": 0.24118186238601128
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": 0.16452611821651722,
+    "word": 0.0035368821985894724,
+    "tmpl": 0.0035368821985894724,
+    "tli_sel": 0.0889354708648961,
+    "role": -0.03203450574537065,
+    "rand": 0.059102890826737725,
+    "pos": 0.3148030440401453
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": 0.09198319978232655,
+    "tmpl": 0.08813217830364506,
+    "tli_sel": 0.1692761191712761,
+    "role": 0.0742211525497281,
+    "tli_li": 0.12102002464212179
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": -0.023619808029421423,
+    "tmpl": -0.02725845199766841,
+    "tli_sel": -0.02709069385369209,
+    "role": -0.005673670722164114,
+    "tli_li": 0.12885648143467843
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": 0.03418169587645257,
+    "tmpl": 0.03043686315298833,
+    "tli_sel": 0.07109271265879201,
+    "role": 0.03427374091378199,
+    "tli_li": 0.1249382530384001
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 1.9443736134679723,
+    "word": 0.256616792337533,
+    "tmpl": 0.256616792337533,
+    "tli_sel": 1.416308107845885,
+    "role": 0.2404641771648636,
+    "rand": 1.7302812240046221,
+    "pos": 2.337703783921572
+   }
+  },
+  "pi05|goal:4": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": 0.0067854102813709,
+    "word": 0.021605964383065123,
+    "tmpl": 0.021605964383065123,
+    "tli_sel": 0.0067854102813709,
+    "role": 0.012313967985673607,
+    "rand": 0.22136662350115355,
+    "pos": 0.4128493783423034
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": -0.010674083388098558,
+    "word": -0.010378413963357898,
+    "tmpl": -0.010378413963357898,
+    "tli_sel": -0.010674083388098558,
+    "role": 0.017729996350408037,
+    "rand": 0.1141160433761005,
+    "pos": 0.34672844796426205
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": 0.12670183047758182,
+    "tmpl": 0.2870306523721489,
+    "tli_sel": 0.49907276774466897,
+    "role": 0.05561050607173226,
+    "tli_li": -0.03922433514738499
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": 0.018650713634548746,
+    "tmpl": 0.018650713634548746,
+    "tli_sel": -0.040084250390892494,
+    "role": 0.002803630899594403,
+    "tli_li": -0.040084250390892494
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": 0.07267627205606528,
+    "tmpl": 0.15284068300334883,
+    "tli_sel": 0.22949425867688822,
+    "role": 0.02920706848566333,
+    "tli_li": -0.039654292769138746
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 1.1390703847797272,
+    "word": 0.18168784106496472,
+    "tmpl": 0.18168784106496472,
+    "tli_sel": 1.1390703847797272,
+    "role": 0.2016924590424854,
+    "rand": 1.0666277404898061,
+    "pos": 1.7754645880209299
+   }
+  },
+  "pi05|goal:5": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": -0.12300008662224203,
+    "word": -0.11320892265750047,
+    "tmpl": -0.14958924610469873,
+    "tli_sel": -0.4235677753700319,
+    "role": -0.09487903555914441,
+    "rand": 0.14862941393354492,
+    "pos": 0.4231335544708286
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": 0.03489428312075962,
+    "word": -0.051763817526011405,
+    "tmpl": -0.06853574101959438,
+    "tli_sel": 0.015838908585151405,
+    "role": -0.025005835136958494,
+    "rand": 0.23728300349967754,
+    "pos": 0.6700287871420318
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": -0.06155721353788147,
+    "tmpl": 0.18323018286577375,
+    "tli_sel": -0.3615871788108201,
+    "role": -0.0651598742199098,
+    "tli_li": -0.12469852315914855
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": -0.0972153287536118,
+    "tmpl": -0.1356035265906269,
+    "tli_sel": -0.3780131698330303,
+    "role": -0.05605353180906371,
+    "tli_li": -0.11013064539256662
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": -0.07938627114574663,
+    "tmpl": 0.023813328137573423,
+    "tli_sel": -0.3698001743219252,
+    "role": -0.06060670301448676,
+    "tli_li": -0.11741458427585758
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 0.997041655015395,
+    "word": 0.3871858226038941,
+    "tmpl": 0.4589778777987039,
+    "tli_sel": 1.2883813427034796,
+    "role": 0.3267497032182769,
+    "rand": 0.9843279999171102,
+    "pos": 1.7245373911251123
+   }
+  },
+  "pi05|goal:6": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": -0.24959738075730104,
+    "word": 0.013151102191812043,
+    "tmpl": 0.013151102191812043,
+    "tli_sel": -0.24828303252424294,
+    "role": -0.08419597817016397,
+    "rand": -0.18853229662322082,
+    "pos": 0.6794641972761891
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": -0.0961557313357365,
+    "word": 0.0008227618443456323,
+    "tmpl": 0.0008227618443456323,
+    "tli_sel": -0.21742791974028763,
+    "role": -0.08901508392879334,
+    "rand": -0.10675847664981856,
+    "pos": 0.49749857006143794
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": 0.04873352293443227,
+    "tmpl": 0.009761176060992444,
+    "tli_sel": 0.1646996041803715,
+    "role": 0.08636497197161332,
+    "tli_li": -0.299128935307195
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": -0.034585470730061664,
+    "tmpl": -0.08422957660744693,
+    "tli_sel": -0.22064213492613183,
+    "role": -0.030091030780196825,
+    "tli_li": -0.28554054878167956
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": 0.0070740261021853025,
+    "tmpl": -0.03723420027322724,
+    "tli_sel": -0.027971265372880166,
+    "role": 0.028136970595708244,
+    "tli_li": -0.29233474204443727
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 0.7940348544716788,
+    "word": 0.0960163494452392,
+    "tmpl": 0.0960163494452392,
+    "tli_sel": 0.9122772758133508,
+    "role": 0.23504354593107457,
+    "rand": 0.815948393684289,
+    "pos": 1.3703883414256262
+   }
+  },
+  "pi05|goal:7": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": -0.06395484229881751,
+    "word": -0.231615796627699,
+    "tmpl": -0.231615796627699,
+    "tli_sel": -0.7704360344087701,
+    "role": -0.12579005858673825,
+    "rand": -0.24787460997852445,
+    "pos": 0.35223246030217303
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": -0.09747971795060417,
+    "word": -0.17246324346788952,
+    "tmpl": -0.17246324346788952,
+    "tli_sel": -0.5959178887639268,
+    "role": -0.09269200636155746,
+    "rand": -0.1331009060997926,
+    "pos": 0.28699101525562
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": 0.3766935144394843,
+    "tmpl": 0.2957228342621725,
+    "tli_sel": 0.2175591317858006,
+    "role": 0.060561347354351314,
+    "tli_li": -0.08970785324381188
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": -0.18418810141831693,
+    "tmpl": -0.18418810141831693,
+    "tli_sel": -0.42660112975163,
+    "role": -0.08140680798258132,
+    "tli_li": 0.011958577569099602
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": 0.09625270651058368,
+    "tmpl": 0.05576736642192779,
+    "tli_sel": -0.10452099898291468,
+    "role": -0.010422730314115,
+    "tli_li": -0.03887463783735613
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 0.8203430125818081,
+    "word": 0.5392128796341509,
+    "tmpl": 0.5392128796341509,
+    "tli_sel": 1.4017933704032015,
+    "role": 0.32731985425361715,
+    "rand": 1.114607306393075,
+    "pos": 1.4596570783266019
+   }
+  },
+  "pi05|spatial:6": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": -0.7308889136418195,
+    "word": -0.7239875202507992,
+    "tmpl": -0.7239875202507992,
+    "tli_sel": -0.8036682270736768,
+    "role": -0.3344118288241466,
+    "rand": -0.5304102997680584,
+    "pos": 0.028391037862857876
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": -0.3784795842979429,
+    "word": -0.43041884159479393,
+    "tmpl": -0.43041884159479393,
+    "tli_sel": -0.45939277088893576,
+    "role": -0.2549013776164611,
+    "rand": -0.2733033006402966,
+    "pos": 0.0009012228478867385
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": 0.05647072211595927,
+    "tmpl": 0.05647072211595927,
+    "tli_sel": 0.03646306557806272,
+    "role": 0.17001032622837695,
+    "tli_li": -0.5167011090565173
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": -0.6402159005737759,
+    "tmpl": -0.6402159005737759,
+    "tli_sel": -0.7409117643355594,
+    "role": -0.2819853362756634,
+    "tli_li": -0.644679142372095
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": -0.2918725892289083,
+    "tmpl": -0.2918725892289083,
+    "tli_sel": -0.35222434937874836,
+    "role": -0.05598750502364323,
+    "tli_li": -0.5806901257143062
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 2.0358385950379105,
+    "word": 1.8277787744719156,
+    "tmpl": 1.8277787744719156,
+    "tli_sel": 2.2697857200672593,
+    "role": 1.279414611665219,
+    "rand": 2.061682308971555,
+    "pos": 2.6609968778069417
+   }
+  },
+  "pi05|spatial:7": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": -0.2144979941659122,
+    "word": -0.3831642227295101,
+    "tmpl": -0.3831642227295101,
+    "tli_sel": -0.46434565995315397,
+    "role": -0.25567635480759665,
+    "rand": -0.15658640529089418,
+    "pos": 0.006344959754740573
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": -0.10374069560343205,
+    "word": -0.27865799064907776,
+    "tmpl": -0.27865799064907776,
+    "tli_sel": -0.38385955505655067,
+    "role": -0.23814909081350707,
+    "rand": -0.16154328014948302,
+    "pos": 0.09656793847844965
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": -0.23931720039163368,
+    "tmpl": -0.23931720039163368,
+    "tli_sel": -0.3488158097053768,
+    "role": -0.06475612458435037,
+    "tli_li": -0.22231011117761612
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": -0.407766878137136,
+    "tmpl": -0.407766878137136,
+    "tli_sel": -0.5193451243555576,
+    "role": -0.2880606493125928,
+    "tli_li": -0.19285350275275892
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": -0.32354203926438485,
+    "tmpl": -0.32354203926438485,
+    "tli_sel": -0.4340804670304671,
+    "role": -0.17640838694847155,
+    "tli_li": -0.20758180696518752
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 2.265345309279124,
+    "word": 2.204165215043071,
+    "tmpl": 2.204165215043071,
+    "tli_sel": 2.5282172501682245,
+    "role": 1.3088153911398401,
+    "rand": 1.3538148573702535,
+    "pos": 1.719844307293086
+   }
+  },
+  "pi0|goal:1": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": 0.6212890243557622,
+    "word": -0.11425575047990204,
+    "tmpl": -0.12397975143322698,
+    "tli_sel": -0.012592190726374262,
+    "role": -0.1599654518518103,
+    "rand": 0.04626462144423811,
+    "pos": 0.2781476875895953
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": 0.571306477363175,
+    "word": -0.1315400177361816,
+    "tmpl": -0.16662457915404597,
+    "tli_sel": -0.009262677714756268,
+    "role": -0.10078064968276423,
+    "rand": -0.06444497987390396,
+    "pos": 0.24357716662790643
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": 0.1445983497921042,
+    "tmpl": 0.16981461722344612,
+    "tli_sel": -0.032524627389167976,
+    "role": -0.047992213526288775,
+    "tli_li": 0.720549007623268
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": -0.11826764130420286,
+    "tmpl": -0.11474760475456958,
+    "tli_sel": -0.038256444366991674,
+    "role": -0.17847590552404466,
+    "tli_li": 0.6533510609222706
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": 0.01316535424395067,
+    "tmpl": 0.027533506234438274,
+    "tli_sel": -0.035390535878079825,
+    "role": -0.11323405952516671,
+    "tli_li": 0.6869500342727693
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 1.1612233119444568,
+    "word": 0.42027794124661355,
+    "tmpl": 0.458192238387261,
+    "tli_sel": 0.5724617168834406,
+    "role": 0.36776655034405914,
+    "rand": 0.5225678348107049,
+    "pos": 0.7181349639474779
+   }
+  },
+  "pi0|goal:2": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": -0.05637217125149577,
+    "word": 0.0038915678954125304,
+    "tmpl": 0.0038915678954125304,
+    "tli_sel": -0.05637217125149577,
+    "role": -0.0006957922679059345,
+    "rand": 0.27166165520312235,
+    "pos": 0.2950820084272944
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": 0.33653936147591723,
+    "word": 0.012221563091786403,
+    "tmpl": 0.012221563091786403,
+    "tli_sel": 0.33653936147591723,
+    "role": 0.01508941152108162,
+    "rand": 0.28276995299769603,
+    "pos": -0.0459204826324792
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": 0.13424952442446805,
+    "tmpl": 0.13424952442446805,
+    "tli_sel": 0.09434021342868401,
+    "role": 0.0024743934467347183,
+    "tli_li": -0.043958529912857286
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": 0.005747424867291072,
+    "tmpl": 0.005747424867291072,
+    "tli_sel": -0.04322683604490611,
+    "role": 0.007872479370055011,
+    "tli_li": -0.04322683604490611
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": 0.06999847464587956,
+    "tmpl": 0.06999847464587956,
+    "tli_sel": 0.025556688691888946,
+    "role": 0.005173436408394865,
+    "tli_li": -0.0435926829788817
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 1.0310416941642613,
+    "word": 0.05229131838714816,
+    "tmpl": 0.05229131838714816,
+    "tli_sel": 1.0310416941642613,
+    "role": 0.004754656816403522,
+    "rand": 1.0496017720744302,
+    "pos": 1.2379589111806457
+   }
+  },
+  "pi0|goal:4": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": 0.31690613314725474,
+    "word": -0.05180982211628471,
+    "tmpl": -0.05180982211628471,
+    "tli_sel": -0.16956859176584538,
+    "role": -0.1764548326187784,
+    "rand": 0.10626178141146359,
+    "pos": 0.22165578681957815
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": 0.39116595747218874,
+    "word": -0.07371475252792169,
+    "tmpl": -0.07371475252792169,
+    "tli_sel": -0.09463474495345817,
+    "role": -0.2018540400833358,
+    "rand": 0.152014624445597,
+    "pos": 0.26203867203457026
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": 0.26214930796491537,
+    "tmpl": 0.2822531095451697,
+    "tli_sel": 0.044061870168170106,
+    "role": 0.007093314571322973,
+    "tli_li": 0.42490142293980043
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": -0.012419969185059037,
+    "tmpl": -0.07233331860393377,
+    "tli_sel": -0.19246610309478762,
+    "role": -0.19527729042046454,
+    "tli_li": 0.3430925109555274
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": 0.12486466938992817,
+    "tmpl": 0.10495989547061796,
+    "tli_sel": -0.07420211646330876,
+    "role": -0.09409198792457077,
+    "tli_li": 0.38399696694766394
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 1.1260190831532846,
+    "word": 0.13727700971491694,
+    "tmpl": 0.13727700971491694,
+    "tli_sel": 1.2335175231404802,
+    "role": 0.6581008671292988,
+    "rand": 0.7933181798235293,
+    "pos": 0.8194698255064358
+   }
+  },
+  "pi0|goal:5": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": 0.03012961002339762,
+    "word": -0.1354899531616307,
+    "tmpl": -0.1354899531616307,
+    "tli_sel": -0.20249500176474755,
+    "role": -0.06840862365232156,
+    "rand": 0.14283070596022335,
+    "pos": 0.25706781799609196
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": -0.023051326346666418,
+    "word": -0.19375912417254934,
+    "tmpl": -0.19375912417254934,
+    "tli_sel": -0.2275668646107988,
+    "role": -0.08379349815913416,
+    "rand": 0.000851838179250621,
+    "pos": 0.19087000773433196
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": -0.13051350594221295,
+    "tmpl": -0.13051350594221295,
+    "tli_sel": 0.35288367261885567,
+    "role": 0.039009204565619834,
+    "tli_li": 0.06887204627845815
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": -0.09595814531542385,
+    "tmpl": -0.09595814531542385,
+    "tli_sel": -0.2592526146545195,
+    "role": -0.033602395529328116,
+    "tli_li": 0.0796239794387601
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": -0.1132358256288184,
+    "tmpl": -0.1132358256288184,
+    "tli_sel": 0.046815528982168106,
+    "role": 0.0027034045181458573,
+    "tli_li": 0.07424801285860913
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 0.856955254880657,
+    "word": 0.6615159430730208,
+    "tmpl": 0.6615159430730208,
+    "tli_sel": 1.660948768364134,
+    "role": 0.4107315995410225,
+    "rand": 0.9069209339312918,
+    "pos": 1.319089779309682
+   }
+  },
+  "pi0|goal:6": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": -0.20858677304037015,
+    "word": -0.10610768862926098,
+    "tmpl": -0.20789592302370793,
+    "tli_sel": -0.3729013632559842,
+    "role": -0.07611341085756956,
+    "rand": -0.09354634752088033,
+    "pos": -0.03836688717487943
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": -0.2758813174174143,
+    "word": -0.03434721363767021,
+    "tmpl": -0.10055808232996385,
+    "tli_sel": -0.2577295710892545,
+    "role": -0.0465606574258711,
+    "rand": -0.09578125375086223,
+    "pos": 0.019001170716963018
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": 0.16240619096510628,
+    "tmpl": 0.11486380578359125,
+    "tli_sel": 0.192157456564144,
+    "role": 0.03865390596694053,
+    "tli_li": -0.1754374876131155
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": -0.07247065474691028,
+    "tmpl": -0.1779031209163054,
+    "tli_sel": -0.35693942332422,
+    "role": -0.044808914540149763,
+    "tli_li": -0.08589263010166817
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": 0.04496776810909801,
+    "tmpl": -0.03151965756635707,
+    "tli_sel": -0.082390983380038,
+    "role": -0.0030775042866046185,
+    "tli_li": -0.13066505885739182
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 1.4082058739774903,
+    "word": 0.9176069334680103,
+    "tmpl": 1.066429914802029,
+    "tli_sel": 1.5892958439249836,
+    "role": 0.4493095576236492,
+    "rand": 1.3827535535488253,
+    "pos": 0.973584496049392
+   }
+  },
+  "pi0|goal:7": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": -0.06278359719952775,
+    "word": -0.07021132291344812,
+    "tmpl": -0.07021132291344812,
+    "tli_sel": -0.1963564048910207,
+    "role": -0.015630019406439245,
+    "rand": 0.019760489721568363,
+    "pos": 0.11601915886662306
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": -0.15532269800625673,
+    "word": -0.05737661645000582,
+    "tmpl": -0.05737661645000582,
+    "tli_sel": -0.23353897008455715,
+    "role": 0.0021464658614275445,
+    "rand": -0.002186729159794171,
+    "pos": 0.1605058369278903
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": 0.13424526801876469,
+    "tmpl": 0.13424526801876469,
+    "tli_sel": -0.04606774185288432,
+    "role": -0.003174234886444645,
+    "tli_li": -0.054142916577961296
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": -0.08897258936592504,
+    "tmpl": -0.08897258936592504,
+    "tli_sel": -0.22205737072972057,
+    "role": -0.040372659802654726,
+    "tli_li": -0.049148705519379596
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": 0.022636339326419817,
+    "tmpl": 0.022636339326419817,
+    "tli_sel": -0.13406255629130243,
+    "role": -0.021773447344549682,
+    "tli_li": -0.05164581104867044
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 0.5180482964860035,
+    "word": 0.8023522495534156,
+    "tmpl": 0.8023522495534156,
+    "tli_sel": 0.9786117463952679,
+    "role": 0.3766900447113699,
+    "rand": 0.7979934611899613,
+    "pos": 0.5543080377775117
+   }
+  },
+  "pi0|spatial:6": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": -0.45332195772299394,
+    "word": -0.13173836107780318,
+    "tmpl": -0.13173836107780318,
+    "tli_sel": -0.7215831269083862,
+    "role": -0.09268932394526307,
+    "rand": 0.17980753764355772,
+    "pos": -0.14566402885749383
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": -0.40913226573393313,
+    "word": -0.03817612674741545,
+    "tmpl": -0.03817612674741545,
+    "tli_sel": -0.5046438065956073,
+    "role": -0.038607973544828735,
+    "rand": 0.11105726699931366,
+    "pos": -0.10009007544239665
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": 0.11188857514997626,
+    "tmpl": 0.11188857514997626,
+    "tli_sel": -0.41496623119037984,
+    "role": 0.055281736121416014,
+    "tli_li": -0.2675402839248552
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": -0.11721279424624056,
+    "tmpl": -0.11721279424624056,
+    "tli_sel": -0.6312451168183644,
+    "role": -0.05794415165073601,
+    "tli_li": -0.3603339893061112
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": -0.0026621095481321536,
+    "tmpl": -0.0026621095481321536,
+    "tli_sel": -0.523105674004372,
+    "role": -0.0013312077646599994,
+    "tli_li": -0.31393713661548317
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 1.2878243222074528,
+    "word": 0.6339471055329033,
+    "tmpl": 0.6339471055329033,
+    "tli_sel": 1.8286570073836885,
+    "role": 0.4215125183955923,
+    "rand": 1.0312595538154208,
+    "pos": 1.5503746080379155
+   }
+  },
+  "pi0|spatial:7": {
+   "a": {
+    "zs": 0.0,
+    "tli_li": 0.11341759716788434,
+    "word": -0.3544910685292257,
+    "tmpl": -0.3544910685292257,
+    "tli_sel": -0.4745413845565776,
+    "role": -0.23982978311719122,
+    "rand": -0.16300197984403023,
+    "pos": -0.10411006421990847
+   },
+   "e": {
+    "zs": 0.0,
+    "tli_li": 0.1236730005843497,
+    "word": -0.34283014351603885,
+    "tmpl": -0.34283014351603885,
+    "tli_sel": -0.3764027487229532,
+    "role": -0.2133025893631345,
+    "rand": -0.18821049643953394,
+    "pos": -0.059963619427034105
+   },
+   "b_time": {
+    "zs": 0.0,
+    "word": -0.06467763575954463,
+    "tmpl": -0.24956971973026645,
+    "tli_sel": -0.3989829030176924,
+    "role": -0.19403696649860253,
+    "tli_li": 0.10860321859416355
+   },
+   "b_inter": {
+    "zs": 0.0,
+    "word": -0.26105346834114806,
+    "tmpl": -0.3762973719201347,
+    "tli_sel": -0.5116033539804244,
+    "role": -0.2354148456551492,
+    "tli_li": 0.11576481079160794
+   },
+   "b_cv4": {
+    "zs": 0.0,
+    "word": -0.16286555205034636,
+    "tmpl": -0.31293354582520055,
+    "tli_sel": -0.4552931284990584,
+    "role": -0.21472590607687586,
+    "tli_li": 0.11218401469288575
+   },
+   "D": {
+    "zs": 0.0,
+    "tli_li": 1.4584349408640902,
+    "word": 1.643700044039393,
+    "tmpl": 1.643700044039393,
+    "tli_sel": 1.4068106415525816,
+    "role": 1.1456668134646435,
+    "rand": 0.8456143639858934,
+    "pos": 1.338323088100878
+   }
+  }
+ }
+}

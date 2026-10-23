@@ -1,0 +1,397 @@
+{
+ "key": "spatial:8",
+ "text": "put the bowl at table center on the cabinet",
+ "roles": {
+  "o": "bowl at table center",
+  "g": "on the cabinet"
+ },
+ "cands": {
+  "o": [
+   38
+  ],
+  "g": [
+   8,
+   14,
+   18,
+   19,
+   31,
+   39
+  ]
+ },
+ "d0": {
+  "T": 110,
+  "c0": 41,
+  "rel": 110
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 38,
+    "g": 18
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "o:38": 0.2587142884731293,
+    "g:8": 0.4236587584018707,
+    "g:14": 0.264850914478302,
+    "g:18": 0.2630441188812256,
+    "g:19": 0.4175003170967102,
+    "g:31": 0.4248645305633545,
+    "g:39": 0.41260185837745667
+   },
+   "span_loss": {
+    "1-17": 0.2630441188812256,
+    "1-6": 0.26629385352134705,
+    "7-12": 0.24722979962825775,
+    "13-17": 0.25229597091674805
+   }
+  },
+  "role": {
+   "src": {
+    "o": 38,
+    "g": 18
+   },
+   "span": [
+    13,
+    17
+   ],
+   "trace": {
+    "o:38": 0.2557715177536011,
+    "g:8": 0.43272313475608826,
+    "g:14": 0.28090453147888184,
+    "g:18": 0.2631189525127411,
+    "g:19": 0.42215994000434875,
+    "g:31": 0.43608877062797546,
+    "g:39": 0.43555566668510437
+   },
+   "span_loss": {
+    "1-17": 0.2631189525127411,
+    "1-6": 0.26055991649627686,
+    "7-12": 0.25195232033729553,
+    "13-17": 0.2518793046474457
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 38,
+    "g": 18
+   },
+   "span": [
+    7,
+    12
+   ],
+   "trace": {
+    "o:38": 0.2587142884731293,
+    "g:8": 0.4236587584018707,
+    "g:14": 0.264850914478302,
+    "g:18": 0.2630441188812256,
+    "g:19": 0.4175003170967102,
+    "g:31": 0.4248645305633545,
+    "g:39": 0.41260185837745667
+   },
+   "span_loss": {
+    "1-17": 0.2630441188812256,
+    "1-6": 0.26629385352134705,
+    "7-12": 0.24722979962825775,
+    "13-17": 0.25229597091674805
+   },
+   "template": "put the {O} {G}",
+   "prompt": "put the bowl at table center on the cabinet",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the bowl at table center and place it on the cabinet",
+     "with_word": 0.2632805109024048,
+     "alone": 0.2679467797279358
+    },
+    "put the {O} {G}": {
+     "prompt": "put the bowl at table center on the cabinet",
+     "with_word": 0.24722979962825775,
+     "alone": 0.2541170120239258
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    38,
+    31
+   ],
+   "lam": 12,
+   "pairs": {
+    "38.14": 0.22564375400543213,
+    "38.18": 0.22147740423679352,
+    "38.31": 0.21444611251354218,
+    "38.39": 0.22571097314357758
+   },
+   "lams": {
+    "24": 0.21444611251354218,
+    "12": 0.21113355457782745,
+    "36": 0.35794737935066223
+   },
+   "cands": {
+    "o": [
+     38
+    ],
+    "g": [
+     14,
+     18,
+     31,
+     39
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.2541170120239258,
+  "null": 0.43310317397117615,
+  "tli_li": 0.22147740423679352,
+  "word": 0.24722979962825775,
+  "role": 0.2518793046474457,
+  "tmpl": 0.24722979962825775,
+  "tmpl_only": 0.2541170120239258,
+  "tli_sel": 0.21113355457782745,
+  "rand": 0.4941694438457489,
+  "pos": 0.36610662937164307,
+  "l2sel": 0.21113355457782745
+ },
+ "l1": {
+  "zs": 0.1761828064918518,
+  "null": 0.3609500825405121,
+  "tli_li": 0.17863212525844574,
+  "word": 0.17345964908599854,
+  "role": 0.17481116950511932,
+  "tmpl": 0.17345964908599854,
+  "tmpl_only": 0.1761828064918518,
+  "tli_sel": 0.16059553623199463,
+  "rand": 0.455367773771286,
+  "pos": 0.33167433738708496,
+  "l2sel": 0.16059553623199463
+ },
+ "l2sel": "tli_sel",
+ "controls": {
+  "o": {
+   "rand": 11,
+   "pos": 14,
+   "rand_text": "put the wine bottle on the rack",
+   "pos_text": "put the wine bottle on top of the cabinet"
+  },
+  "g": {
+   "rand": 37,
+   "pos": 11,
+   "rand_text": "pick up the black bowl next to the ramekin and place it on the plate",
+   "pos_text": "put the wine bottle on the rack"
+  }
+ },
+ "n_eval": 63,
+ "arms": {
+  "zs": {
+   "prompt": "put the bowl at table center on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_li": {
+   "prompt": "put the bowl at table center on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 38,
+    "t2": 18,
+    "lam": 24
+   }
+  },
+  "word": {
+   "prompt": "put the bowl at table center on the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 38,
+     "phrase": "center",
+     "new_pos": [
+      6
+     ],
+     "src_pos": [
+      8
+     ]
+    },
+    {
+     "role": "g",
+     "src": 18,
+     "phrase": "cabinet",
+     "new_pos": [
+      9
+     ],
+     "src_pos": [
+      8
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the bowl at table center on the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 38,
+     "phrase": "center",
+     "new_pos": [
+      6
+     ],
+     "src_pos": [
+      8
+     ]
+    },
+    {
+     "role": "g",
+     "src": 18,
+     "phrase": "cabinet",
+     "new_pos": [
+      9
+     ],
+     "src_pos": [
+      8
+     ]
+    }
+   ],
+   "lo": 13,
+   "hi": 17,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "put the bowl at table center on the cabinet",
+   "edits": [
+    {
+     "role": "o",
+     "src": 38,
+     "phrase": "center",
+     "new_pos": [
+      6
+     ],
+     "src_pos": [
+      8
+     ]
+    },
+    {
+     "role": "g",
+     "src": 18,
+     "phrase": "cabinet",
+     "new_pos": [
+      9
+     ],
+     "src_pos": [
+      8
+     ]
+    }
+   ],
+   "lo": 7,
+   "hi": 12,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "put the bowl at table center on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the bowl at table center on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 38,
+    "t2": 31,
+    "lam": 12
+   }
+  },
+  "rand": {
+   "prompt": "put the bowl at table center on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 11,
+    "t2": 37,
+    "lam": 12
+   }
+  },
+  "pos": {
+   "prompt": "put the bowl at table center on the cabinet",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 14,
+    "t2": 11,
+    "lam": 12
+   }
+  }
+ },
+ "split": "even",
+ "sel_frames": [
+  0,
+  2,
+  4,
+  6,
+  8,
+  10,
+  12,
+  14,
+  16,
+  18,
+  20,
+  22,
+  24,
+  26,
+  28,
+  30,
+  32,
+  34,
+  36
+ ],
+ "val_frames": [
+  1,
+  3,
+  5,
+  7,
+  9,
+  11,
+  13,
+  15,
+  17,
+  19,
+  21,
+  23,
+  25,
+  27,
+  29,
+  31,
+  33,
+  35
+ ]
+}

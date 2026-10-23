@@ -1,0 +1,416 @@
+{
+ "key": "goal:4",
+ "text": "put the wine bottle on the stove",
+ "roles": {
+  "o": "wine bottle",
+  "g": "on the stove"
+ },
+ "cands": {
+  "o": [
+   11,
+   14
+  ],
+  "g": [
+   3,
+   6,
+   15,
+   16,
+   17,
+   33
+  ]
+ },
+ "d0": {
+  "T": 104,
+  "c0": 54,
+  "rel": 104
+ },
+ "sel": {
+  "word": {
+   "src": {
+    "o": 11,
+    "g": 3
+   },
+   "span": [
+    1,
+    6
+   ],
+   "trace": {
+    "o:11": 0.1915666162967682,
+    "o:14": 0.19442054629325867,
+    "g:3": 0.18691948056221008,
+    "g:6": 0.19388075172901154,
+    "g:15": 0.18764732778072357,
+    "g:16": 0.21050582826137543,
+    "g:17": 0.21034669876098633,
+    "g:33": 0.2191535383462906
+   },
+   "span_loss": {
+    "1-17": 0.18691948056221008,
+    "1-6": 0.18588177859783173,
+    "7-12": 0.19159597158432007,
+    "13-17": 0.19068314135074615
+   }
+  },
+  "role": {
+   "src": {
+    "o": 11,
+    "g": 3
+   },
+   "span": [
+    1,
+    6
+   ],
+   "trace": {
+    "o:11": 0.1915666162967682,
+    "o:14": 0.19442054629325867,
+    "g:3": 0.1915666162967682,
+    "g:6": 0.1915666162967682,
+    "g:15": 0.1915666162967682,
+    "g:16": 0.1915666162967682,
+    "g:17": 0.1915666162967682,
+    "g:33": 0.1915666162967682
+   },
+   "span_loss": {
+    "1-17": 0.1915666162967682,
+    "1-6": 0.1869443953037262,
+    "7-12": 0.19114606082439423,
+    "13-17": 0.18775244057178497
+   }
+  },
+  "tmpl": {
+   "src": {
+    "o": 11,
+    "g": 3
+   },
+   "span": [
+    1,
+    17
+   ],
+   "trace": {
+    "o:11": 0.19921833276748657,
+    "o:14": 0.19973306357860565,
+    "g:3": 0.18238483369350433,
+    "g:6": 0.18732862174510956,
+    "g:15": 0.19571182131767273,
+    "g:16": 0.20634590089321136,
+    "g:17": 0.22435882687568665,
+    "g:33": 0.24660825729370117
+   },
+   "span_loss": {
+    "1-17": 0.18238483369350433,
+    "1-6": 0.1836957037448883,
+    "7-12": 0.1928112953901291,
+    "13-17": 0.19379080832004547
+   },
+   "template": "pick up the {O} and place it {G}",
+   "prompt": "pick up the wine bottle and place it on the stove",
+   "templates": {
+    "pick up the {O} and place it {G}": {
+     "prompt": "pick up the wine bottle and place it on the stove",
+     "with_word": 0.1836957037448883,
+     "alone": 0.19891774654388428
+    },
+    "put the {O} {G}": {
+     "prompt": "put the wine bottle on the stove",
+     "with_word": 0.18588177859783173,
+     "alone": 0.18709295988082886
+    }
+   }
+  },
+  "tli_sel": {
+   "pair": [
+    14,
+    17
+   ],
+   "lam": 36,
+   "pairs": {
+    "11.17": 0.22501933574676514,
+    "11.33": 0.2637370228767395,
+    "14.17": 0.1783187836408615,
+    "14.33": 0.18049626052379608
+   },
+   "lams": {
+    "24": 0.1783187836408615,
+    "12": 0.1840873658657074,
+    "36": 0.1778525859117508
+   },
+   "cands": {
+    "o": [
+     11,
+     14
+    ],
+    "g": [
+     17,
+     33
+    ]
+   }
+  }
+ },
+ "l0": {
+  "zs": 0.18709295988082886,
+  "null": 0.22922208905220032,
+  "tli_li": 0.1783187836408615,
+  "word": 0.18588177859783173,
+  "role": 0.1869443953037262,
+  "tmpl": 0.18238483369350433,
+  "tmpl_only": 0.19891774654388428,
+  "tli_sel": 0.1778525859117508,
+  "rand": 0.2533617615699768,
+  "pos": 0.34390756487846375,
+  "l2sel": 0.1778525859117508
+ },
+ "l1": {
+  "zs": 0.1920652538537979,
+  "null": 0.2809000015258789,
+  "tli_li": 0.19318728148937225,
+  "word": 0.22260896861553192,
+  "role": 0.21079407632350922,
+  "tmpl": 0.3067626655101776,
+  "tmpl_only": 0.22639982402324677,
+  "tli_sel": 0.4354768395423889,
+  "rand": 0.23334582149982452,
+  "pos": 0.2445095181465149,
+  "l2sel": 0.4354768395423889
+ },
+ "l2sel": "tli_sel",
+ "controls": {
+  "o": {
+   "rand": 21,
+   "pos": 33,
+   "rand_text": "pick up the ketchup and place it in the basket",
+   "pos_text": "pick up the black bowl on the stove and place it on the plate"
+  },
+  "g": {
+   "rand": 28,
+   "pos": 13,
+   "rand_text": "pick up the tomato sauce and place it in the basket",
+   "pos_text": "put the cream cheese in the bowl"
+  }
+ },
+ "n_eval": 66,
+ "arms": {
+  "zs": {
+   "prompt": "put the wine bottle on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "null": {
+   "prompt": "",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_li": {
+   "prompt": "put the wine bottle on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 14,
+    "t2": 17,
+    "lam": 24
+   }
+  },
+  "word": {
+   "prompt": "put the wine bottle on the stove",
+   "edits": [
+    {
+     "role": "o",
+     "src": 11,
+     "phrase": "wine bottle",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      3,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 3,
+     "phrase": "on the stove",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      2,
+      3,
+      4
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "og",
+   "tli": null
+  },
+  "role": {
+   "prompt": "put the wine bottle on the stove",
+   "edits": [
+    {
+     "role": "o",
+     "src": 11,
+     "phrase": "wine bottle",
+     "new_pos": [
+      3,
+      4
+     ],
+     "src_pos": [
+      3,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 3,
+     "phrase": "on the stove",
+     "new_pos": [
+      5,
+      6,
+      7
+     ],
+     "src_pos": [
+      2,
+      3,
+      4
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 6,
+   "sched": "ph",
+   "tli": null
+  },
+  "tmpl": {
+   "prompt": "pick up the wine bottle and place it on the stove",
+   "edits": [
+    {
+     "role": "o",
+     "src": 11,
+     "phrase": "wine bottle",
+     "new_pos": [
+      4,
+      5
+     ],
+     "src_pos": [
+      3,
+      4
+     ]
+    },
+    {
+     "role": "g",
+     "src": 3,
+     "phrase": "on the stove",
+     "new_pos": [
+      9,
+      10,
+      11
+     ],
+     "src_pos": [
+      2,
+      3,
+      4
+     ]
+    }
+   ],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tmpl_only": {
+   "prompt": "pick up the wine bottle and place it on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": null
+  },
+  "tli_sel": {
+   "prompt": "put the wine bottle on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 14,
+    "t2": 17,
+    "lam": 36
+   }
+  },
+  "rand": {
+   "prompt": "put the wine bottle on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 21,
+    "t2": 28,
+    "lam": 36
+   }
+  },
+  "pos": {
+   "prompt": "put the wine bottle on the stove",
+   "edits": [],
+   "lo": 1,
+   "hi": 17,
+   "sched": "og",
+   "tli": {
+    "t1": 33,
+    "t2": 13,
+    "lam": 36
+   }
+  }
+ },
+ "split": "early",
+ "sel_frames": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16
+ ],
+ "val_frames": [
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34
+ ]
+}
