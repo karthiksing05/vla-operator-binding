@@ -1,0 +1,489 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: M1 compose / create / fine-tune, design frozen, before any fit or rollout",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "kipp.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4216505",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5e65bc83a53f51a199030270bd88667bbf23a806",
+  "short": "5e65bc83"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": "compose_sel > zs: more successes and exact two-sided sign test on discordant pairs",
+  "H2": "create - lora1000 non-inferior at margin 0.05 (one-sided cluster-bootstrap p, B 10000) AND token bytes <= lora/100",
+  "H3": "cc - create non-inferior at margin 0.05 (one-sided cluster-bootstrap p)",
+  "H4": "routed damage (mean change over the 10 cells vs parity base) >= -0.01 for compose_sel and create; estimate gate",
+  "arms": [
+   "zs",
+   "compose_cov",
+   "compose_sel",
+   "create",
+   "cc",
+   "lora50",
+   "lora200",
+   "lora1000"
+  ],
+  "damage_cells": [
+   {
+    "cell": "libero_90:28",
+    "pair": "libero_90:0",
+    "routed": true
+   },
+   {
+    "cell": "libero_90:46",
+    "pair": "libero_90:50",
+    "routed": true
+   },
+   {
+    "cell": "libero_90:17",
+    "pair": "libero_90:14",
+    "routed": false
+   },
+   {
+    "cell": "libero_90:52",
+    "pair": "libero_90:50",
+    "routed": false
+   },
+   {
+    "cell": "libero_90:41",
+    "pair": "libero_90:45",
+    "routed": false
+   },
+   {
+    "cell": "libero_90:37",
+    "pair": "libero_90:36",
+    "routed": false
+   },
+   {
+    "cell": "libero_90:6",
+    "pair": "libero_90:7",
+    "routed": false
+   },
+   {
+    "cell": "libero_90:4",
+    "pair": "libero_90:0",
+    "routed": false
+   },
+   {
+    "cell": "libero_90:23",
+    "pair": "libero_90:22",
+    "routed": false
+   },
+   {
+    "cell": "libero_90:62",
+    "pair": "libero_90:61",
+    "routed": false
+   }
+  ],
+  "disclosure": "no pi05_l90c dev rollout before M1; P2/P3 offline observations of 14 dev tasks; serving smoke on stored init states excluded; qualifiers kept as content words",
+  "family": "Holm over H1-H3 at alpha 0.05",
+  "files_sha256": {
+   "doc": "4b7c8b4fce19f4a573efefe41c121242c1b802bf5dbe45abee232e39a130e7d9",
+   "plan.json": "383635c998509167b1c1226164ea343da94e1665075d0929924ba752c423f653",
+   "script": "8a1707273f5a652f4bb434f9edfbdf1fee301b74b56b153e665538c748085335"
+  },
+  "frozen_tasks": {
+   "libero_90:0": {
+    "bin": "0.1",
+    "blind": [
+     11,
+     28
+    ],
+    "demo_episode": 3872,
+    "scene": [
+     28,
+     15
+    ],
+    "text": "close the top drawer of the cabinet"
+   },
+   "libero_90:1": {
+    "bin": "0.3",
+    "blind": [
+     28,
+     5
+    ],
+    "demo_episode": 1238,
+    "scene": [
+     28,
+     15
+    ],
+    "text": "close the top drawer of the cabinet and put the black bowl on top of it"
+   },
+   "libero_90:11": {
+    "bin": "0.5",
+    "blind": [
+     11,
+     33
+    ],
+    "demo_episode": 3137,
+    "scene": [
+     7,
+     8
+    ],
+    "text": "open the top drawer of the cabinet"
+   },
+   "libero_90:14": {
+    "bin": "0.1",
+    "blind": [
+     7,
+     6
+    ],
+    "demo_episode": 224,
+    "scene": [
+     7,
+     6
+    ],
+    "text": "put the middle black bowl on the plate"
+   },
+   "libero_90:16": {
+    "bin": "0.1",
+    "blind": [
+     6,
+     8
+    ],
+    "demo_episode": 3506,
+    "scene": [
+     6,
+     8
+    ],
+    "text": "stack the black bowl at the front on the black bowl in the middle"
+   },
+   "libero_90:22": {
+    "bin": "0.1",
+    "blind": [
+     11,
+     14
+    ],
+    "demo_episode": 1942,
+    "scene": [
+     11,
+     12
+    ],
+    "text": "close the bottom drawer of the cabinet"
+   },
+   "libero_90:29": {
+    "bin": "0.3",
+    "blind": [
+     5,
+     28
+    ],
+    "demo_episode": 873,
+    "scene": [
+     5,
+     14
+    ],
+    "text": "put the black bowl in the top drawer of the cabinet"
+   },
+   "libero_90:32": {
+    "bin": "part",
+    "blind": [
+     28,
+     15
+    ],
+    "demo_episode": 1510,
+    "scene": [
+     14,
+     5
+    ],
+    "text": "put the ketchup in the top drawer of the cabinet"
+   },
+   "libero_90:36": {
+    "bin": "0.5",
+    "blind": [
+     19,
+     52
+    ],
+    "demo_episode": 455,
+    "scene": [
+     19,
+     18
+    ],
+    "text": "put the white bowl on the plate"
+   },
+   "libero_90:38": {
+    "bin": "part",
+    "blind": [
+     10,
+     47
+    ],
+    "demo_episode": 596,
+    "scene": null,
+    "text": "put the right moka pot on the stove"
+   },
+   "libero_90:40": {
+    "bin": "0.5",
+    "blind": [
+     22,
+     23
+    ],
+    "demo_episode": 1400,
+    "scene": [
+     22,
+     23
+    ],
+    "text": "put the frying pan on the cabinet shelf"
+   },
+   "libero_90:44": {
+    "bin": "part",
+    "blind": [
+     20,
+     47
+    ],
+    "demo_episode": 2747,
+    "scene": [
+     22,
+     24
+    ],
+    "text": "turn on the stove"
+   },
+   "libero_90:45": {
+    "bin": "part",
+    "blind": [
+     9,
+     20
+    ],
+    "demo_episode": 527,
+    "scene": [
+     22,
+     23
+    ],
+    "text": "turn on the stove and put the frying pan on it"
+   },
+   "libero_90:50": {
+    "bin": "0.3",
+    "blind": [
+     54,
+     3
+    ],
+    "demo_episode": 1436,
+    "scene": [
+     29,
+     27
+    ],
+    "text": "pick up the alphabet soup and put it in the basket"
+   },
+   "libero_90:58": {
+    "bin": "part",
+    "blind": [
+     31,
+     32
+    ],
+    "demo_episode": 2701,
+    "scene": [
+     31,
+     32
+    ],
+    "text": "pick up the ketchup and put it in the tray"
+   },
+   "libero_90:59": {
+    "bin": "0.5",
+    "blind": [
+     27,
+     31
+    ],
+    "demo_episode": 2338,
+    "scene": [
+     31,
+     32
+    ],
+    "text": "pick up the tomato sauce and put it in the tray"
+   },
+   "libero_90:60": {
+    "bin": "0.1",
+    "blind": [
+     68,
+     31
+    ],
+    "demo_episode": 3411,
+    "scene": [
+     35,
+     34
+    ],
+    "text": "pick up the black bowl on the left and put it in the tray"
+   },
+   "libero_90:61": {
+    "bin": "0.5",
+    "blind": [
+     61,
+     31
+    ],
+    "demo_episode": 1600,
+    "scene": [
+     34,
+     35
+    ],
+    "text": "pick up the chocolate pudding and put it in the tray"
+   },
+   "libero_90:7": {
+    "bin": "0.3",
+    "blind": [
+     11,
+     33
+    ],
+    "demo_episode": 3783,
+    "scene": [
+     33,
+     5
+    ],
+    "text": "open the top drawer of the cabinet"
+   },
+   "libero_90:73": {
+    "bin": "part",
+    "blind": [
+     43,
+     17
+    ],
+    "demo_episode": 1691,
+    "scene": null,
+    "text": "pick up the book and place it in the front compartment of the caddy"
+   },
+   "libero_90:75": {
+    "bin": "part",
+    "blind": [
+     44,
+     2
+    ],
+    "demo_episode": 497,
+    "scene": null,
+    "text": "pick up the book and place it in the right compartment of the caddy"
+   },
+   "libero_90:76": {
+    "bin": "part",
+    "blind": [
+     38,
+     1
+    ],
+    "demo_episode": 1003,
+    "scene": null,
+    "text": "pick up the yellow and white mug and place it to the right of the caddy"
+   },
+   "libero_90:77": {
+    "bin": "part",
+    "blind": [
+     43,
+     8
+    ],
+    "demo_episode": 1858,
+    "scene": null,
+    "text": "pick up the book and place it in the back compartment of the caddy"
+   },
+   "libero_90:78": {
+    "bin": "part",
+    "blind": [
+     43,
+     17
+    ],
+    "demo_episode": 3063,
+    "scene": null,
+    "text": "pick up the book and place it in the front compartment of the caddy"
+   },
+   "libero_90:79": {
+    "bin": "part",
+    "blind": [
+     43,
+     39
+    ],
+    "demo_episode": 1725,
+    "scene": null,
+    "text": "pick up the book and place it in the left compartment of the caddy"
+   },
+   "libero_90:80": {
+    "bin": "part",
+    "blind": [
+     44,
+     2
+    ],
+    "demo_episode": 0,
+    "scene": null,
+    "text": "pick up the book and place it in the right compartment of the caddy"
+   },
+   "libero_90:82": {
+    "bin": "part",
+    "blind": [
+     43,
+     39
+    ],
+    "demo_episode": 3272,
+    "scene": null,
+    "text": "pick up the book and place it in the left compartment of the caddy"
+   },
+   "libero_90:83": {
+    "bin": "part",
+    "blind": [
+     44,
+     2
+    ],
+    "demo_episode": 1478,
+    "scene": null,
+    "text": "pick up the book and place it in the right compartment of the caddy"
+   },
+   "libero_90:9": {
+    "bin": "0.3",
+    "blind": [
+     6,
+     68
+    ],
+    "demo_episode": 3460,
+    "scene": [
+     5,
+     33
+    ],
+    "text": "put the black bowl on the plate"
+   }
+  },
+  "secondary": "compose_cov vs zs; every arm vs zs; cc vs create/lora1000; LoRA curve + budget-to-threshold; unrouted damage; GPU-s; bytes; by bin",
+  "settings": {
+   "batch": 32,
+   "lam_cov": 24,
+   "lams": [
+    24,
+    12,
+    36
+   ],
+   "lora_lr": 0.0001,
+   "lora_rank": 16,
+   "lora_snaps": [
+    50,
+    200,
+    1000
+   ],
+   "scorer": "pl2 DemoScorer K 4 seed 1 36 frames",
+   "tok_lr": 0.01,
+   "tok_n": 4,
+   "tok_steps": 1000
+  },
+  "states": "fresh_m1 (BASE 5700000, 20 per task), noise seed 13, paired; damage on stored init states 0-19, seed 0",
+  "written_before": "any M1 fit, rollout or read"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pm1_compose_create__s13__5e65bc83",
+ "schema": 1,
+ "script": "experiments/prereg/pm1_compose_create.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-24T13:36:42+00:00",
+ "stream": null,
+ "tag": "pm1_compose_create"
+}

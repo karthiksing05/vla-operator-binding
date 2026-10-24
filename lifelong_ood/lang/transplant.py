@@ -262,10 +262,23 @@ class ComposeHooks(Composer):
             from lifelong_ood.policy.held_ops import _Grasp
             self.g = _Grasp(bk)
         self.nq = 0
+        self.token = None                       # plan M1 (experiments/m1_compose_create.py): an optional KV token appended to the
+        if kw.get("token"):                     # prompt's cache (policy/token_fold.py), fitted on the one demo; absent = unchanged
+            import torch
+            from lifelong_ood.policy.token_fold import KVToken
+            d = torch.load(kw["token"], map_location=bk.device)["token"]
+            self.token = KVToken(d["k"].float(), d["v"].float()).to(bk.device)
         self.attach()
         logging.info(f"lt: prompt '{self.prompt}', {len(self.edits)} edits "
                      f"({', '.join(e['role'] + ':' + str(e['src']) + ' ' + e['phrase'] for e in edits)}), layers {self.lo}-{self.hi}, "
-                     f"schedule {self.schedule}, tli {None if self.tli is None else len(self.tli[1]) - 2}")
+                     f"schedule {self.schedule}, tli {None if self.tli is None else len(self.tli[1]) - 2}, "
+                     f"token {kw.get('token') or None}")
+
+    def transform_prefix(self, pre):
+        if self.token is None:
+            return pre
+        from lifelong_ood.policy.token_fold import attach
+        return attach(pre, self.token)
 
     def reset(self, meta):
         self.nq = 0
@@ -292,8 +305,9 @@ class ComposeHooks(Composer):
 
 
 # ── specs ────────────────────────────────────────────────────────────────────────────────────────────────────────
-def save_spec(path, edits, prompt, lo=1, hi=None, schedule="og", tli=None, meta=None):
-    """json (everything but arrays) + npz (the shifts, float16; TLI's d) next to it."""
+def save_spec(path, edits, prompt, lo=1, hi=None, schedule="og", tli=None, meta=None, token=None):
+    """json (everything but arrays) + npz (the shifts, float16; TLI's d) next to it.  token: an optional path to a KV token
+    (token_fold format) the served hooks append to the prompt's cache (plan M1); omitted from the json when None."""
     os.makedirs(os.path.dirname(path), exist_ok=True)
     arr = {f"v{j}": e["v"].astype(np.float16) for j, e in enumerate(edits)}
     if tli is not None:
@@ -301,6 +315,8 @@ def save_spec(path, edits, prompt, lo=1, hi=None, schedule="og", tli=None, meta=
     np.savez_compressed(path[:-5] + ".npz", **arr)
     js = dict(prompt=prompt, lo=lo, hi=hi, schedule=schedule, tli=None if tli is None else dict(lam=int(tli["lam"]),
               t1=tli.get("t1"), t2=tli.get("t2")), edits=[{k: v for k, v in e.items() if k != "v"} for e in edits], meta=meta or {})
+    if token is not None:
+        js["token"] = token
     tmp = path + f".{os.getpid()}.tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(js, f, indent=1)
@@ -312,7 +328,7 @@ def load_spec(path):
     z = np.load(path[:-5] + ".npz")
     edits = [dict(e, v=z[f"v{j}"].astype(np.float32)) for j, e in enumerate(js["edits"])]
     tli = None if js.get("tli") is None else dict(js["tli"], d=z["tli_d"].astype(np.float32))
-    return edits, dict(prompt=js["prompt"], lo=js["lo"], hi=js["hi"], schedule=js["schedule"], tli=tli)
+    return edits, dict(prompt=js["prompt"], lo=js["lo"], hi=js["hi"], schedule=js["schedule"], tli=tli, token=js.get("token"))
 
 
 # ── scoring ──────────────────────────────────────────────────────────────────────────────────────────────────────

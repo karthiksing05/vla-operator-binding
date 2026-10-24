@@ -50,7 +50,7 @@ def paired(table, a, b, tasks):
     return pairs
 
 
-def bootstrap_diff(pairs, B=10000, seed=0):
+def bootstrap_diff(pairs, B=10000, seed=0, return_samples=False):
     """Pooled rate difference (A - B) over tasks, with the two-level paired cluster bootstrap.
     -> dict(diff, lo, hi (95% two-sided), lo90 (the 5th percentile: one-sided 95% lower bound), samples)."""
     rng = np.random.default_rng(seed)
@@ -69,8 +69,11 @@ def bootstrap_diff(pairs, B=10000, seed=0):
             num += xa[j][e].sum() - xb[j][e].sum()
             den += m
         sa[i] = num / den
-    return dict(diff=float(diff), lo=float(np.percentile(sa, 2.5)), hi=float(np.percentile(sa, 97.5)),
-                lo90=float(np.percentile(sa, 5)), hi90=float(np.percentile(sa, 95)), n_pairs=int(n), n_tasks=len(ts))
+    out = dict(diff=float(diff), lo=float(np.percentile(sa, 2.5)), hi=float(np.percentile(sa, 97.5)),
+               lo90=float(np.percentile(sa, 5)), hi90=float(np.percentile(sa, 95)), n_pairs=int(n), n_tasks=len(ts))
+    if return_samples:
+        out["samples"] = sa
+    return out
 
 
 def bootstrap_rate(table, arm, tasks, B=10000, seed=0):

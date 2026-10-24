@@ -1,0 +1,4915 @@
+{
+ "tasks": {
+  "libero_90:0": {
+   "text": "close the top drawer of the cabinet",
+   "scene": "KITCHEN_SCENE10",
+   "bin": "0.1",
+   "demo_episode": 3872,
+   "blind": {
+    "t1": 11,
+    "t2": 28,
+    "t1_text": "close the bottom drawer of the cabinet and open the top drawer",
+    "t2_text": "put the chocolate pudding in the top drawer of the cabinet and close it",
+    "trace": [
+     {
+      "pick": 11,
+      "key": [
+       4,
+       4,
+       false,
+       0.666667,
+       -11
+      ],
+      "runner_up": 28
+     },
+     {
+      "pick": 28,
+      "key": [
+       0,
+       4,
+       false,
+       0.5,
+       -28
+      ],
+      "runner_up": 15
+     }
+    ],
+    "pairs": [
+     [
+      "O",
+      "cabinet"
+     ],
+     [
+      "O",
+      "drawer"
+     ],
+     [
+      "O",
+      "top"
+     ],
+     [
+      "V",
+      "close"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "close",
+      "head": "the top drawer of the cabinet",
+      "landmark": "",
+      "goal": ""
+     }
+    ],
+    "covered_by": {
+     "11": [
+      [
+       "O",
+       "cabinet"
+      ],
+      [
+       "O",
+       "drawer"
+      ],
+      [
+       "O",
+       "top"
+      ],
+      [
+       "V",
+       "close"
+      ]
+     ],
+     "28": [
+      [
+       "O",
+       "cabinet"
+      ],
+      [
+       "O",
+       "drawer"
+      ],
+      [
+       "O",
+       "top"
+      ],
+      [
+       "V",
+       "close"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 28,
+    "t2": 15,
+    "t1_text": "put the chocolate pudding in the top drawer of the cabinet and close it",
+    "t2_text": "put the butter at the back in the top drawer of the cabinet and close it",
+    "trace": [
+     {
+      "pick": 28,
+      "key": [
+       4,
+       4,
+       false,
+       0.5,
+       -28
+      ],
+      "runner_up": 15
+     },
+     {
+      "pick": 15,
+      "key": [
+       0,
+       4,
+       false,
+       0.461538,
+       -15
+      ],
+      "runner_up": 21
+     }
+    ],
+    "pairs": [
+     [
+      "O",
+      "cabinet"
+     ],
+     [
+      "O",
+      "drawer"
+     ],
+     [
+      "O",
+      "top"
+     ],
+     [
+      "V",
+      "close"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "close",
+      "head": "the top drawer of the cabinet",
+      "landmark": "",
+      "goal": ""
+     }
+    ],
+    "covered_by": {
+     "28": [
+      [
+       "O",
+       "cabinet"
+      ],
+      [
+       "O",
+       "drawer"
+      ],
+      [
+       "O",
+       "top"
+      ],
+      [
+       "V",
+       "close"
+      ]
+     ],
+     "15": [
+      [
+       "O",
+       "cabinet"
+      ],
+      [
+       "O",
+       "drawer"
+      ],
+      [
+       "O",
+       "top"
+      ],
+      [
+       "V",
+       "close"
+      ]
+     ]
+    }
+   },
+   "scene_pool": [
+    15,
+    21,
+    28
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:14": {
+   "text": "put the middle black bowl on the plate",
+   "scene": "KITCHEN_SCENE2",
+   "bin": "0.1",
+   "demo_episode": 224,
+   "blind": {
+    "t1": 7,
+    "t2": 6,
+    "t1_text": "put the middle black bowl on top of the cabinet",
+    "t2_text": "put the black bowl at the front on the plate",
+    "trace": [
+     {
+      "pick": 6,
+      "key": [
+       4,
+       4,
+       true,
+       0.666667,
+       -6
+      ],
+      "runner_up": 68
+     },
+     {
+      "pick": 7,
+      "key": [
+       1,
+       4,
+       false,
+       0.6,
+       -7
+      ],
+      "runner_up": 8
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "O",
+      "middle"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the middle black bowl",
+      "landmark": "",
+      "goal": "on the plate"
+     }
+    ],
+    "covered_by": {
+     "6": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "7": [
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "O",
+       "middle"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 7,
+    "t2": 6,
+    "t1_text": "put the middle black bowl on top of the cabinet",
+    "t2_text": "put the black bowl at the front on the plate",
+    "trace": [
+     {
+      "pick": 6,
+      "key": [
+       4,
+       4,
+       true,
+       0.666667,
+       -6
+      ],
+      "runner_up": 7
+     },
+     {
+      "pick": 7,
+      "key": [
+       1,
+       4,
+       false,
+       0.6,
+       -7
+      ],
+      "runner_up": 8
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "O",
+      "middle"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the middle black bowl",
+      "landmark": "",
+      "goal": "on the plate"
+     }
+    ],
+    "covered_by": {
+     "6": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "7": [
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "O",
+       "middle"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_pool": [
+    6,
+    7,
+    8
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:16": {
+   "text": "stack the black bowl at the front on the black bowl in the middle",
+   "scene": "KITCHEN_SCENE2",
+   "bin": "0.1",
+   "demo_episode": 3506,
+   "blind": {
+    "t1": 6,
+    "t2": 8,
+    "t1_text": "put the black bowl at the front on the plate",
+    "t2_text": "stack the middle black bowl on the back black bowl",
+    "trace": [
+     {
+      "pick": 8,
+      "key": [
+       3,
+       3,
+       false,
+       0.6,
+       -8
+      ],
+      "runner_up": 6
+     },
+     {
+      "pick": 6,
+      "key": [
+       1,
+       3,
+       false,
+       0.545455,
+       -6
+      ],
+      "runner_up": 21
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "middle"
+     ],
+     [
+      "L",
+      "black"
+     ],
+     [
+      "L",
+      "bowl"
+     ],
+     [
+      "L",
+      "front"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "stack"
+     ]
+    ],
+    "uncovered": [
+     [
+      "G",
+      "middle"
+     ],
+     [
+      "L",
+      "black"
+     ],
+     [
+      "L",
+      "bowl"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "stack",
+      "head": "the black bowl",
+      "landmark": "the front on the black bowl",
+      "goal": "in the middle"
+     }
+    ],
+    "covered_by": {
+     "8": [
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "stack"
+      ]
+     ],
+     "6": [
+      [
+       "L",
+       "front"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 6,
+    "t2": 8,
+    "t1_text": "put the black bowl at the front on the plate",
+    "t2_text": "stack the middle black bowl on the back black bowl",
+    "trace": [
+     {
+      "pick": 8,
+      "key": [
+       3,
+       3,
+       false,
+       0.6,
+       -8
+      ],
+      "runner_up": 6
+     },
+     {
+      "pick": 6,
+      "key": [
+       1,
+       3,
+       false,
+       0.545455,
+       -6
+      ],
+      "runner_up": 7
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "middle"
+     ],
+     [
+      "L",
+      "black"
+     ],
+     [
+      "L",
+      "bowl"
+     ],
+     [
+      "L",
+      "front"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "stack"
+     ]
+    ],
+    "uncovered": [
+     [
+      "G",
+      "middle"
+     ],
+     [
+      "L",
+      "black"
+     ],
+     [
+      "L",
+      "bowl"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "stack",
+      "head": "the black bowl",
+      "landmark": "the front on the black bowl",
+      "goal": "in the middle"
+     }
+    ],
+    "covered_by": {
+     "8": [
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "stack"
+      ]
+     ],
+     "6": [
+      [
+       "L",
+       "front"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ]
+     ]
+    }
+   },
+   "scene_pool": [
+    6,
+    7,
+    8
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:22": {
+   "text": "close the bottom drawer of the cabinet",
+   "scene": "KITCHEN_SCENE4",
+   "bin": "0.1",
+   "demo_episode": 1942,
+   "blind": {
+    "t1": 11,
+    "t2": 14,
+    "t1_text": "close the bottom drawer of the cabinet and open the top drawer",
+    "t2_text": "close the top drawer of the cabinet",
+    "trace": [
+     {
+      "pick": 11,
+      "key": [
+       4,
+       4,
+       false,
+       0.666667,
+       -11
+      ],
+      "runner_up": 14
+     },
+     {
+      "pick": 14,
+      "key": [
+       0,
+       3,
+       true,
+       0.714286,
+       -14
+      ],
+      "runner_up": 33
+     }
+    ],
+    "pairs": [
+     [
+      "O",
+      "bottom"
+     ],
+     [
+      "O",
+      "cabinet"
+     ],
+     [
+      "O",
+      "drawer"
+     ],
+     [
+      "V",
+      "close"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "close",
+      "head": "the bottom drawer of the cabinet",
+      "landmark": "",
+      "goal": ""
+     }
+    ],
+    "covered_by": {
+     "11": [
+      [
+       "O",
+       "bottom"
+      ],
+      [
+       "O",
+       "cabinet"
+      ],
+      [
+       "O",
+       "drawer"
+      ],
+      [
+       "V",
+       "close"
+      ]
+     ],
+     "14": [
+      [
+       "O",
+       "cabinet"
+      ],
+      [
+       "O",
+       "drawer"
+      ],
+      [
+       "V",
+       "close"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 11,
+    "t2": 12,
+    "t1_text": "close the bottom drawer of the cabinet and open the top drawer",
+    "t2_text": "put the wine bottle in the bottom drawer of the cabinet",
+    "trace": [
+     {
+      "pick": 11,
+      "key": [
+       4,
+       4,
+       false,
+       0.666667,
+       -11
+      ],
+      "runner_up": 12
+     },
+     {
+      "pick": 12,
+      "key": [
+       0,
+       0,
+       false,
+       0.5,
+       -12
+      ],
+      "runner_up": 5
+     }
+    ],
+    "pairs": [
+     [
+      "O",
+      "bottom"
+     ],
+     [
+      "O",
+      "cabinet"
+     ],
+     [
+      "O",
+      "drawer"
+     ],
+     [
+      "V",
+      "close"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "close",
+      "head": "the bottom drawer of the cabinet",
+      "landmark": "",
+      "goal": ""
+     }
+    ],
+    "covered_by": {
+     "11": [
+      [
+       "O",
+       "bottom"
+      ],
+      [
+       "O",
+       "cabinet"
+      ],
+      [
+       "O",
+       "drawer"
+      ],
+      [
+       "V",
+       "close"
+      ]
+     ],
+     "12": []
+    }
+   },
+   "scene_pool": [
+    5,
+    11,
+    12,
+    13
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:60": {
+   "text": "pick up the black bowl on the left and put it in the tray",
+   "scene": "LIVING_ROOM_SCENE4",
+   "bin": "0.1",
+   "demo_episode": 3411,
+   "blind": {
+    "t1": 68,
+    "t2": 31,
+    "t1_text": "pick up the black bowl on the ramekin and place it on the plate",
+    "t2_text": "pick up the alphabet soup and put it in the tray",
+    "trace": [
+     {
+      "pick": 68,
+      "key": [
+       3,
+       3,
+       false,
+       0.533333,
+       -68
+      ],
+      "runner_up": 70
+     },
+     {
+      "pick": 31,
+      "key": [
+       1,
+       2,
+       true,
+       0.571429,
+       -31
+      ],
+      "runner_up": 32
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "tray"
+     ],
+     [
+      "L",
+      "left"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "L",
+      "left"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the black bowl",
+      "landmark": "the left",
+      "goal": "in the tray"
+     }
+    ],
+    "covered_by": {
+     "68": [
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "31": [
+      [
+       "G",
+       "tray"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 35,
+    "t2": 34,
+    "t1_text": "stack the left bowl on the right bowl and place them in the tray",
+    "t2_text": "pick up the salad dressing and put it in the tray",
+    "trace": [
+     {
+      "pick": 34,
+      "key": [
+       2,
+       2,
+       true,
+       0.571429,
+       -34
+      ],
+      "runner_up": 35
+     },
+     {
+      "pick": 35,
+      "key": [
+       1,
+       2,
+       false,
+       0.4375,
+       -35
+      ],
+      "runner_up": null
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "tray"
+     ],
+     [
+      "L",
+      "left"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "L",
+      "left"
+     ],
+     [
+      "O",
+      "black"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the black bowl",
+      "landmark": "the left",
+      "goal": "in the tray"
+     }
+    ],
+    "covered_by": {
+     "34": [
+      [
+       "G",
+       "tray"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "35": [
+      [
+       "G",
+       "tray"
+      ],
+      [
+       "O",
+       "bowl"
+      ]
+     ]
+    }
+   },
+   "scene_pool": [
+    34,
+    35
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:1": {
+   "text": "close the top drawer of the cabinet and put the black bowl on top of it",
+   "scene": "KITCHEN_SCENE10",
+   "bin": "0.3",
+   "demo_episode": 1238,
+   "blind": {
+    "t1": 28,
+    "t2": 5,
+    "t1_text": "put the chocolate pudding in the top drawer of the cabinet and close it",
+    "t2_text": "put the black bowl on top of the cabinet",
+    "trace": [
+     {
+      "pick": 28,
+      "key": [
+       8,
+       8,
+       false,
+       0.6,
+       -28
+      ],
+      "runner_up": 15
+     },
+     {
+      "pick": 5,
+      "key": [
+       2,
+       5,
+       false,
+       0.666667,
+       -5
+      ],
+      "runner_up": 7
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "cabinet"
+     ],
+     [
+      "G",
+      "drawer"
+     ],
+     [
+      "G",
+      "top"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "O",
+      "cabinet"
+     ],
+     [
+      "O",
+      "drawer"
+     ],
+     [
+      "O",
+      "top"
+     ],
+     [
+      "V",
+      "close"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "close",
+      "head": "the top drawer of the cabinet",
+      "landmark": "",
+      "goal": ""
+     },
+     {
+      "verb": "put",
+      "head": "the black bowl",
+      "landmark": "",
+      "goal": "on top of the top drawer of the cabinet"
+     }
+    ],
+    "covered_by": {
+     "28": [
+      [
+       "G",
+       "cabinet"
+      ],
+      [
+       "G",
+       "drawer"
+      ],
+      [
+       "G",
+       "top"
+      ],
+      [
+       "O",
+       "cabinet"
+      ],
+      [
+       "O",
+       "drawer"
+      ],
+      [
+       "O",
+       "top"
+      ],
+      [
+       "V",
+       "close"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "5": [
+      [
+       "G",
+       "cabinet"
+      ],
+      [
+       "G",
+       "top"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 28,
+    "t2": 15,
+    "t1_text": "put the chocolate pudding in the top drawer of the cabinet and close it",
+    "t2_text": "put the butter at the back in the top drawer of the cabinet and close it",
+    "trace": [
+     {
+      "pick": 28,
+      "key": [
+       8,
+       8,
+       false,
+       0.6,
+       -28
+      ],
+      "runner_up": 15
+     },
+     {
+      "pick": 15,
+      "key": [
+       0,
+       8,
+       false,
+       0.5625,
+       -15
+      ],
+      "runner_up": 21
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "cabinet"
+     ],
+     [
+      "G",
+      "drawer"
+     ],
+     [
+      "G",
+      "top"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "O",
+      "cabinet"
+     ],
+     [
+      "O",
+      "drawer"
+     ],
+     [
+      "O",
+      "top"
+     ],
+     [
+      "V",
+      "close"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "close",
+      "head": "the top drawer of the cabinet",
+      "landmark": "",
+      "goal": ""
+     },
+     {
+      "verb": "put",
+      "head": "the black bowl",
+      "landmark": "",
+      "goal": "on top of the top drawer of the cabinet"
+     }
+    ],
+    "covered_by": {
+     "28": [
+      [
+       "G",
+       "cabinet"
+      ],
+      [
+       "G",
+       "drawer"
+      ],
+      [
+       "G",
+       "top"
+      ],
+      [
+       "O",
+       "cabinet"
+      ],
+      [
+       "O",
+       "drawer"
+      ],
+      [
+       "O",
+       "top"
+      ],
+      [
+       "V",
+       "close"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "15": [
+      [
+       "G",
+       "cabinet"
+      ],
+      [
+       "G",
+       "drawer"
+      ],
+      [
+       "G",
+       "top"
+      ],
+      [
+       "O",
+       "cabinet"
+      ],
+      [
+       "O",
+       "drawer"
+      ],
+      [
+       "O",
+       "top"
+      ],
+      [
+       "V",
+       "close"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_pool": [
+    15,
+    21,
+    28
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:29": {
+   "text": "put the black bowl in the top drawer of the cabinet",
+   "scene": "KITCHEN_SCENE5",
+   "bin": "0.3",
+   "demo_episode": 873,
+   "blind": {
+    "t1": 5,
+    "t2": 28,
+    "t1_text": "put the black bowl on top of the cabinet",
+    "t2_text": "put the chocolate pudding in the top drawer of the cabinet and close it",
+    "trace": [
+     {
+      "pick": 5,
+      "key": [
+       5,
+       5,
+       false,
+       0.7,
+       -5
+      ],
+      "runner_up": 7
+     },
+     {
+      "pick": 28,
+      "key": [
+       1,
+       4,
+       false,
+       0.5,
+       -28
+      ],
+      "runner_up": 15
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "cabinet"
+     ],
+     [
+      "G",
+      "drawer"
+     ],
+     [
+      "G",
+      "top"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the black bowl",
+      "landmark": "",
+      "goal": "in the top drawer of the cabinet"
+     }
+    ],
+    "covered_by": {
+     "5": [
+      [
+       "G",
+       "cabinet"
+      ],
+      [
+       "G",
+       "top"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "28": [
+      [
+       "G",
+       "cabinet"
+      ],
+      [
+       "G",
+       "drawer"
+      ],
+      [
+       "G",
+       "top"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 5,
+    "t2": 14,
+    "t1_text": "put the black bowl on top of the cabinet",
+    "t2_text": "close the top drawer of the cabinet",
+    "trace": [
+     {
+      "pick": 5,
+      "key": [
+       5,
+       5,
+       false,
+       0.7,
+       -5
+      ],
+      "runner_up": 14
+     },
+     {
+      "pick": 14,
+      "key": [
+       0,
+       0,
+       false,
+       0.5,
+       -14
+      ],
+      "runner_up": null
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "cabinet"
+     ],
+     [
+      "G",
+      "drawer"
+     ],
+     [
+      "G",
+      "top"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "G",
+      "drawer"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the black bowl",
+      "landmark": "",
+      "goal": "in the top drawer of the cabinet"
+     }
+    ],
+    "covered_by": {
+     "5": [
+      [
+       "G",
+       "cabinet"
+      ],
+      [
+       "G",
+       "top"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "14": []
+    }
+   },
+   "scene_pool": [
+    5,
+    14
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:50": {
+   "text": "pick up the alphabet soup and put it in the basket",
+   "scene": "LIVING_ROOM_SCENE2",
+   "bin": "0.3",
+   "demo_episode": 1436,
+   "blind": {
+    "t1": 54,
+    "t2": 3,
+    "t1_text": "pick up the alphabet soup and place it in the basket",
+    "t2_text": "put both the alphabet soup and the cream cheese box in the basket",
+    "trace": [
+     {
+      "pick": 54,
+      "key": [
+       4,
+       4,
+       true,
+       0.818182,
+       -54
+      ],
+      "runner_up": 3
+     },
+     {
+      "pick": 3,
+      "key": [
+       0,
+       4,
+       true,
+       0.5,
+       -3
+      ],
+      "runner_up": 31
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "alphabet"
+     ],
+     [
+      "O",
+      "soup"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the alphabet soup",
+      "landmark": "",
+      "goal": "in the basket"
+     }
+    ],
+    "covered_by": {
+     "54": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "alphabet"
+      ],
+      [
+       "O",
+       "soup"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "3": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "O",
+       "alphabet"
+      ],
+      [
+       "O",
+       "soup"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 29,
+    "t2": 27,
+    "t1_text": "pick up the milk and put it in the basket",
+    "t2_text": "pick up the tomato sauce and put it in the basket",
+    "trace": [
+     {
+      "pick": 29,
+      "key": [
+       2,
+       2,
+       true,
+       0.727273,
+       -29
+      ],
+      "runner_up": 27
+     },
+     {
+      "pick": 27,
+      "key": [
+       0,
+       2,
+       true,
+       0.666667,
+       -27
+      ],
+      "runner_up": 30
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "basket"
+     ],
+     [
+      "O",
+      "alphabet"
+     ],
+     [
+      "O",
+      "soup"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "O",
+      "alphabet"
+     ],
+     [
+      "O",
+      "soup"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the alphabet soup",
+      "landmark": "",
+      "goal": "in the basket"
+     }
+    ],
+    "covered_by": {
+     "29": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "27": [
+      [
+       "G",
+       "basket"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_pool": [
+    0,
+    27,
+    29,
+    30
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:7": {
+   "text": "open the top drawer of the cabinet",
+   "scene": "KITCHEN_SCENE1",
+   "bin": "0.3",
+   "demo_episode": 3783,
+   "blind": {
+    "t1": 11,
+    "t2": 33,
+    "t1_text": "close the bottom drawer of the cabinet and open the top drawer",
+    "t2_text": "open the bottom drawer of the cabinet",
+    "trace": [
+     {
+      "pick": 11,
+      "key": [
+       4,
+       4,
+       false,
+       0.666667,
+       -11
+      ],
+      "runner_up": 33
+     },
+     {
+      "pick": 33,
+      "key": [
+       0,
+       3,
+       true,
+       0.714286,
+       -33
+      ],
+      "runner_up": 46
+     }
+    ],
+    "pairs": [
+     [
+      "O",
+      "cabinet"
+     ],
+     [
+      "O",
+      "drawer"
+     ],
+     [
+      "O",
+      "top"
+     ],
+     [
+      "V",
+      "open"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "open",
+      "head": "the top drawer of the cabinet",
+      "landmark": "",
+      "goal": ""
+     }
+    ],
+    "covered_by": {
+     "11": [
+      [
+       "O",
+       "cabinet"
+      ],
+      [
+       "O",
+       "drawer"
+      ],
+      [
+       "O",
+       "top"
+      ],
+      [
+       "V",
+       "open"
+      ]
+     ],
+     "33": [
+      [
+       "O",
+       "cabinet"
+      ],
+      [
+       "O",
+       "drawer"
+      ],
+      [
+       "V",
+       "open"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 33,
+    "t2": 5,
+    "t1_text": "open the bottom drawer of the cabinet",
+    "t2_text": "put the black bowl on top of the cabinet",
+    "trace": [
+     {
+      "pick": 33,
+      "key": [
+       3,
+       3,
+       true,
+       0.714286,
+       -33
+      ],
+      "runner_up": 5
+     },
+     {
+      "pick": 5,
+      "key": [
+       0,
+       0,
+       false,
+       0.4,
+       -5
+      ],
+      "runner_up": null
+     }
+    ],
+    "pairs": [
+     [
+      "O",
+      "cabinet"
+     ],
+     [
+      "O",
+      "drawer"
+     ],
+     [
+      "O",
+      "top"
+     ],
+     [
+      "V",
+      "open"
+     ]
+    ],
+    "uncovered": [
+     [
+      "O",
+      "top"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "open",
+      "head": "the top drawer of the cabinet",
+      "landmark": "",
+      "goal": ""
+     }
+    ],
+    "covered_by": {
+     "33": [
+      [
+       "O",
+       "cabinet"
+      ],
+      [
+       "O",
+       "drawer"
+      ],
+      [
+       "V",
+       "open"
+      ]
+     ],
+     "5": []
+    }
+   },
+   "scene_pool": [
+    5,
+    33
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:9": {
+   "text": "put the black bowl on the plate",
+   "scene": "KITCHEN_SCENE1",
+   "bin": "0.3",
+   "demo_episode": 3460,
+   "blind": {
+    "t1": 6,
+    "t2": 68,
+    "t1_text": "put the black bowl at the front on the plate",
+    "t2_text": "pick up the black bowl on the ramekin and place it on the plate",
+    "trace": [
+     {
+      "pick": 6,
+      "key": [
+       4,
+       4,
+       true,
+       0.75,
+       -6
+      ],
+      "runner_up": 68
+     },
+     {
+      "pick": 68,
+      "key": [
+       0,
+       4,
+       true,
+       0.416667,
+       -68
+      ],
+      "runner_up": 70
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the black bowl",
+      "landmark": "",
+      "goal": "on the plate"
+     }
+    ],
+    "covered_by": {
+     "6": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "68": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 5,
+    "t2": 33,
+    "t1_text": "put the black bowl on top of the cabinet",
+    "t2_text": "open the bottom drawer of the cabinet",
+    "trace": [
+     {
+      "pick": 5,
+      "key": [
+       3,
+       3,
+       false,
+       0.555556,
+       -5
+      ],
+      "runner_up": 33
+     },
+     {
+      "pick": 33,
+      "key": [
+       0,
+       0,
+       false,
+       0.090909,
+       -33
+      ],
+      "runner_up": null
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "O",
+      "black"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "G",
+      "plate"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the black bowl",
+      "landmark": "",
+      "goal": "on the plate"
+     }
+    ],
+    "covered_by": {
+     "5": [
+      [
+       "O",
+       "black"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "33": []
+    }
+   },
+   "scene_pool": [
+    5,
+    33
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:11": {
+   "text": "open the top drawer of the cabinet",
+   "scene": "KITCHEN_SCENE2",
+   "bin": "0.5",
+   "demo_episode": 3137,
+   "blind": {
+    "t1": 11,
+    "t2": 33,
+    "t1_text": "close the bottom drawer of the cabinet and open the top drawer",
+    "t2_text": "open the bottom drawer of the cabinet",
+    "trace": [
+     {
+      "pick": 11,
+      "key": [
+       4,
+       4,
+       false,
+       0.666667,
+       -11
+      ],
+      "runner_up": 33
+     },
+     {
+      "pick": 33,
+      "key": [
+       0,
+       3,
+       true,
+       0.714286,
+       -33
+      ],
+      "runner_up": 46
+     }
+    ],
+    "pairs": [
+     [
+      "O",
+      "cabinet"
+     ],
+     [
+      "O",
+      "drawer"
+     ],
+     [
+      "O",
+      "top"
+     ],
+     [
+      "V",
+      "open"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "open",
+      "head": "the top drawer of the cabinet",
+      "landmark": "",
+      "goal": ""
+     }
+    ],
+    "covered_by": {
+     "11": [
+      [
+       "O",
+       "cabinet"
+      ],
+      [
+       "O",
+       "drawer"
+      ],
+      [
+       "O",
+       "top"
+      ],
+      [
+       "V",
+       "open"
+      ]
+     ],
+     "33": [
+      [
+       "O",
+       "cabinet"
+      ],
+      [
+       "O",
+       "drawer"
+      ],
+      [
+       "V",
+       "open"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 7,
+    "t2": 8,
+    "t1_text": "put the middle black bowl on top of the cabinet",
+    "t2_text": "stack the middle black bowl on the back black bowl",
+    "trace": [
+     {
+      "pick": 7,
+      "key": [
+       0,
+       0,
+       false,
+       0.363636,
+       -7
+      ],
+      "runner_up": 8
+     },
+     {
+      "pick": 8,
+      "key": [
+       0,
+       0,
+       false,
+       0.083333,
+       -8
+      ],
+      "runner_up": 6
+     }
+    ],
+    "pairs": [
+     [
+      "O",
+      "cabinet"
+     ],
+     [
+      "O",
+      "drawer"
+     ],
+     [
+      "O",
+      "top"
+     ],
+     [
+      "V",
+      "open"
+     ]
+    ],
+    "uncovered": [
+     [
+      "O",
+      "cabinet"
+     ],
+     [
+      "O",
+      "drawer"
+     ],
+     [
+      "O",
+      "top"
+     ],
+     [
+      "V",
+      "open"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "open",
+      "head": "the top drawer of the cabinet",
+      "landmark": "",
+      "goal": ""
+     }
+    ],
+    "covered_by": {
+     "7": [],
+     "8": []
+    }
+   },
+   "scene_pool": [
+    6,
+    7,
+    8
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:36": {
+   "text": "put the white bowl on the plate",
+   "scene": "KITCHEN_SCENE7",
+   "bin": "0.5",
+   "demo_episode": 455,
+   "blind": {
+    "t1": 19,
+    "t2": 52,
+    "t1_text": "put the white bowl to the right of the plate",
+    "t2_text": "put the bowl on the plate",
+    "trace": [
+     {
+      "pick": 19,
+      "key": [
+       4,
+       4,
+       false,
+       0.555556,
+       -19
+      ],
+      "runner_up": 52
+     },
+     {
+      "pick": 52,
+      "key": [
+       0,
+       3,
+       true,
+       0.833333,
+       -52
+      ],
+      "runner_up": 42
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "O",
+      "white"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the white bowl",
+      "landmark": "",
+      "goal": "on the plate"
+     }
+    ],
+    "covered_by": {
+     "19": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "O",
+       "white"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "52": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 19,
+    "t2": 18,
+    "t1_text": "put the white bowl to the right of the plate",
+    "t2_text": "open the microwave",
+    "trace": [
+     {
+      "pick": 19,
+      "key": [
+       4,
+       4,
+       false,
+       0.555556,
+       -19
+      ],
+      "runner_up": 18
+     },
+     {
+      "pick": 18,
+      "key": [
+       0,
+       0,
+       false,
+       0.125,
+       -18
+      ],
+      "runner_up": null
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "plate"
+     ],
+     [
+      "O",
+      "bowl"
+     ],
+     [
+      "O",
+      "white"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the white bowl",
+      "landmark": "",
+      "goal": "on the plate"
+     }
+    ],
+    "covered_by": {
+     "19": [
+      [
+       "G",
+       "plate"
+      ],
+      [
+       "O",
+       "bowl"
+      ],
+      [
+       "O",
+       "white"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "18": []
+    }
+   },
+   "scene_pool": [
+    18,
+    19
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:40": {
+   "text": "put the frying pan on the cabinet shelf",
+   "scene": "KITCHEN_SCENE9",
+   "bin": "0.5",
+   "demo_episode": 1400,
+   "blind": {
+    "t1": 22,
+    "t2": 23,
+    "t1_text": "put the frying pan on top of the cabinet",
+    "t2_text": "put the frying pan under the cabinet shelf",
+    "trace": [
+     {
+      "pick": 23,
+      "key": [
+       5,
+       5,
+       false,
+       0.75,
+       -23
+      ],
+      "runner_up": 22
+     },
+     {
+      "pick": 22,
+      "key": [
+       0,
+       4,
+       false,
+       0.666667,
+       -22
+      ],
+      "runner_up": 9
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "cabinet"
+     ],
+     [
+      "G",
+      "shelf"
+     ],
+     [
+      "O",
+      "frying"
+     ],
+     [
+      "O",
+      "pan"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the frying pan",
+      "landmark": "",
+      "goal": "on the cabinet shelf"
+     }
+    ],
+    "covered_by": {
+     "23": [
+      [
+       "G",
+       "cabinet"
+      ],
+      [
+       "G",
+       "shelf"
+      ],
+      [
+       "O",
+       "frying"
+      ],
+      [
+       "O",
+       "pan"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "22": [
+      [
+       "G",
+       "cabinet"
+      ],
+      [
+       "O",
+       "frying"
+      ],
+      [
+       "O",
+       "pan"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 22,
+    "t2": 23,
+    "t1_text": "put the frying pan on top of the cabinet",
+    "t2_text": "put the frying pan under the cabinet shelf",
+    "trace": [
+     {
+      "pick": 23,
+      "key": [
+       5,
+       5,
+       false,
+       0.75,
+       -23
+      ],
+      "runner_up": 22
+     },
+     {
+      "pick": 22,
+      "key": [
+       0,
+       4,
+       false,
+       0.666667,
+       -22
+      ],
+      "runner_up": 24
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "cabinet"
+     ],
+     [
+      "G",
+      "shelf"
+     ],
+     [
+      "O",
+      "frying"
+     ],
+     [
+      "O",
+      "pan"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the frying pan",
+      "landmark": "",
+      "goal": "on the cabinet shelf"
+     }
+    ],
+    "covered_by": {
+     "23": [
+      [
+       "G",
+       "cabinet"
+      ],
+      [
+       "G",
+       "shelf"
+      ],
+      [
+       "O",
+       "frying"
+      ],
+      [
+       "O",
+       "pan"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "22": [
+      [
+       "G",
+       "cabinet"
+      ],
+      [
+       "O",
+       "frying"
+      ],
+      [
+       "O",
+       "pan"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_pool": [
+    22,
+    23,
+    24
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:59": {
+   "text": "pick up the tomato sauce and put it in the tray",
+   "scene": "LIVING_ROOM_SCENE3",
+   "bin": "0.5",
+   "demo_episode": 2338,
+   "blind": {
+    "t1": 27,
+    "t2": 31,
+    "t1_text": "pick up the tomato sauce and put it in the basket",
+    "t2_text": "pick up the alphabet soup and put it in the tray",
+    "trace": [
+     {
+      "pick": 27,
+      "key": [
+       3,
+       3,
+       true,
+       0.818182,
+       -27
+      ],
+      "runner_up": 58
+     },
+     {
+      "pick": 31,
+      "key": [
+       1,
+       2,
+       true,
+       0.666667,
+       -31
+      ],
+      "runner_up": 32
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "tray"
+     ],
+     [
+      "O",
+      "sauce"
+     ],
+     [
+      "O",
+      "tomato"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the tomato sauce",
+      "landmark": "",
+      "goal": "in the tray"
+     }
+    ],
+    "covered_by": {
+     "27": [
+      [
+       "O",
+       "sauce"
+      ],
+      [
+       "O",
+       "tomato"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "31": [
+      [
+       "G",
+       "tray"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 31,
+    "t2": 32,
+    "t1_text": "pick up the alphabet soup and put it in the tray",
+    "t2_text": "pick up the cream cheese and put it in the tray",
+    "trace": [
+     {
+      "pick": 31,
+      "key": [
+       2,
+       2,
+       true,
+       0.666667,
+       -31
+      ],
+      "runner_up": 32
+     },
+     {
+      "pick": 32,
+      "key": [
+       0,
+       2,
+       true,
+       0.666667,
+       -32
+      ],
+      "runner_up": null
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "tray"
+     ],
+     [
+      "O",
+      "sauce"
+     ],
+     [
+      "O",
+      "tomato"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "O",
+      "sauce"
+     ],
+     [
+      "O",
+      "tomato"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the tomato sauce",
+      "landmark": "",
+      "goal": "in the tray"
+     }
+    ],
+    "covered_by": {
+     "31": [
+      [
+       "G",
+       "tray"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "32": [
+      [
+       "G",
+       "tray"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_pool": [
+    31,
+    32
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:61": {
+   "text": "pick up the chocolate pudding and put it in the tray",
+   "scene": "LIVING_ROOM_SCENE4",
+   "bin": "0.5",
+   "demo_episode": 1600,
+   "blind": {
+    "t1": 61,
+    "t2": 31,
+    "t1_text": "pick up the chocolate pudding and place it in the basket",
+    "t2_text": "pick up the alphabet soup and put it in the tray",
+    "trace": [
+     {
+      "pick": 61,
+      "key": [
+       3,
+       3,
+       true,
+       0.666667,
+       -61
+      ],
+      "runner_up": 28
+     },
+     {
+      "pick": 31,
+      "key": [
+       1,
+       2,
+       true,
+       0.666667,
+       -31
+      ],
+      "runner_up": 32
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "tray"
+     ],
+     [
+      "O",
+      "chocolate"
+     ],
+     [
+      "O",
+      "pudding"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the chocolate pudding",
+      "landmark": "",
+      "goal": "in the tray"
+     }
+    ],
+    "covered_by": {
+     "61": [
+      [
+       "O",
+       "chocolate"
+      ],
+      [
+       "O",
+       "pudding"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "31": [
+      [
+       "G",
+       "tray"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 34,
+    "t2": 35,
+    "t1_text": "pick up the salad dressing and put it in the tray",
+    "t2_text": "stack the left bowl on the right bowl and place them in the tray",
+    "trace": [
+     {
+      "pick": 34,
+      "key": [
+       2,
+       2,
+       true,
+       0.666667,
+       -34
+      ],
+      "runner_up": 35
+     },
+     {
+      "pick": 35,
+      "key": [
+       0,
+       1,
+       false,
+       0.235294,
+       -35
+      ],
+      "runner_up": null
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "tray"
+     ],
+     [
+      "O",
+      "chocolate"
+     ],
+     [
+      "O",
+      "pudding"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "O",
+      "chocolate"
+     ],
+     [
+      "O",
+      "pudding"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the chocolate pudding",
+      "landmark": "",
+      "goal": "in the tray"
+     }
+    ],
+    "covered_by": {
+     "34": [
+      [
+       "G",
+       "tray"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "35": [
+      [
+       "G",
+       "tray"
+      ]
+     ]
+    }
+   },
+   "scene_pool": [
+    34,
+    35
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:32": {
+   "text": "put the ketchup in the top drawer of the cabinet",
+   "scene": "KITCHEN_SCENE5",
+   "bin": "part",
+   "demo_episode": 1510,
+   "blind": {
+    "t1": 28,
+    "t2": 15,
+    "t1_text": "put the chocolate pudding in the top drawer of the cabinet and close it",
+    "t2_text": "put the butter at the back in the top drawer of the cabinet and close it",
+    "trace": [
+     {
+      "pick": 28,
+      "key": [
+       4,
+       4,
+       false,
+       0.538462,
+       -28
+      ],
+      "runner_up": 15
+     },
+     {
+      "pick": 15,
+      "key": [
+       0,
+       4,
+       false,
+       0.5,
+       -15
+      ],
+      "runner_up": 21
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "cabinet"
+     ],
+     [
+      "G",
+      "drawer"
+     ],
+     [
+      "G",
+      "top"
+     ],
+     [
+      "O",
+      "ketchup"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "O",
+      "ketchup"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the ketchup",
+      "landmark": "",
+      "goal": "in the top drawer of the cabinet"
+     }
+    ],
+    "covered_by": {
+     "28": [
+      [
+       "G",
+       "cabinet"
+      ],
+      [
+       "G",
+       "drawer"
+      ],
+      [
+       "G",
+       "top"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "15": [
+      [
+       "G",
+       "cabinet"
+      ],
+      [
+       "G",
+       "drawer"
+      ],
+      [
+       "G",
+       "top"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 14,
+    "t2": 5,
+    "t1_text": "close the top drawer of the cabinet",
+    "t2_text": "put the black bowl on top of the cabinet",
+    "trace": [
+     {
+      "pick": 5,
+      "key": [
+       3,
+       3,
+       false,
+       0.454545,
+       -5
+      ],
+      "runner_up": 14
+     },
+     {
+      "pick": 14,
+      "key": [
+       0,
+       0,
+       false,
+       0.555556,
+       -14
+      ],
+      "runner_up": null
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "cabinet"
+     ],
+     [
+      "G",
+      "drawer"
+     ],
+     [
+      "G",
+      "top"
+     ],
+     [
+      "O",
+      "ketchup"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "G",
+      "drawer"
+     ],
+     [
+      "O",
+      "ketchup"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the ketchup",
+      "landmark": "",
+      "goal": "in the top drawer of the cabinet"
+     }
+    ],
+    "covered_by": {
+     "5": [
+      [
+       "G",
+       "cabinet"
+      ],
+      [
+       "G",
+       "top"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "14": []
+    }
+   },
+   "scene_pool": [
+    5,
+    14
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:58": {
+   "text": "pick up the ketchup and put it in the tray",
+   "scene": "LIVING_ROOM_SCENE3",
+   "bin": "part",
+   "demo_episode": 2701,
+   "blind": {
+    "t1": 31,
+    "t2": 32,
+    "t1_text": "pick up the alphabet soup and put it in the tray",
+    "t2_text": "pick up the cream cheese and put it in the tray",
+    "trace": [
+     {
+      "pick": 31,
+      "key": [
+       2,
+       2,
+       true,
+       0.727273,
+       -31
+      ],
+      "runner_up": 32
+     },
+     {
+      "pick": 32,
+      "key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -32
+      ],
+      "runner_up": 34
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "tray"
+     ],
+     [
+      "O",
+      "ketchup"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "O",
+      "ketchup"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the ketchup",
+      "landmark": "",
+      "goal": "in the tray"
+     }
+    ],
+    "covered_by": {
+     "31": [
+      [
+       "G",
+       "tray"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "32": [
+      [
+       "G",
+       "tray"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 31,
+    "t2": 32,
+    "t1_text": "pick up the alphabet soup and put it in the tray",
+    "t2_text": "pick up the cream cheese and put it in the tray",
+    "trace": [
+     {
+      "pick": 31,
+      "key": [
+       2,
+       2,
+       true,
+       0.727273,
+       -31
+      ],
+      "runner_up": 32
+     },
+     {
+      "pick": 32,
+      "key": [
+       0,
+       2,
+       true,
+       0.727273,
+       -32
+      ],
+      "runner_up": null
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "tray"
+     ],
+     [
+      "O",
+      "ketchup"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "O",
+      "ketchup"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the ketchup",
+      "landmark": "",
+      "goal": "in the tray"
+     }
+    ],
+    "covered_by": {
+     "31": [
+      [
+       "G",
+       "tray"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "32": [
+      [
+       "G",
+       "tray"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_pool": [
+    31,
+    32
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:73": {
+   "text": "pick up the book and place it in the front compartment of the caddy",
+   "scene": "STUDY_SCENE1",
+   "bin": "part",
+   "demo_episode": 1691,
+   "blind": {
+    "t1": 43,
+    "t2": 17,
+    "t1_text": "pick up the book in the middle and place it on the cabinet shelf",
+    "t2_text": "put the yellow and white mug to the front of the white mug",
+    "trace": [
+     {
+      "pick": 43,
+      "key": [
+       2,
+       2,
+       false,
+       0.5,
+       -43
+      ],
+      "runner_up": 44
+     },
+     {
+      "pick": 17,
+      "key": [
+       1,
+       2,
+       false,
+       0.235294,
+       -17
+      ],
+      "runner_up": 50
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ],
+     [
+      "G",
+      "front"
+     ],
+     [
+      "O",
+      "book"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the book",
+      "landmark": "",
+      "goal": "in the front compartment of the caddy"
+     }
+    ],
+    "covered_by": {
+     "43": [
+      [
+       "O",
+       "book"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "17": [
+      [
+       "G",
+       "front"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": null,
+   "scene_pool": [],
+   "scene_fallback": true
+  },
+  "libero_90:75": {
+   "text": "pick up the book and place it in the right compartment of the caddy",
+   "scene": "STUDY_SCENE1",
+   "bin": "part",
+   "demo_episode": 497,
+   "blind": {
+    "t1": 44,
+    "t2": 2,
+    "t1_text": "pick up the book on the right and place it on the cabinet shelf",
+    "t2_text": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+    "trace": [
+     {
+      "pick": 44,
+      "key": [
+       2,
+       2,
+       false,
+       0.533333,
+       -44
+      ],
+      "runner_up": 43
+     },
+     {
+      "pick": 2,
+      "key": [
+       1,
+       2,
+       false,
+       0.2,
+       -2
+      ],
+      "runner_up": 19
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ],
+     [
+      "G",
+      "right"
+     ],
+     [
+      "O",
+      "book"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the book",
+      "landmark": "",
+      "goal": "in the right compartment of the caddy"
+     }
+    ],
+    "covered_by": {
+     "44": [
+      [
+       "O",
+       "book"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "2": [
+      [
+       "G",
+       "right"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": null,
+   "scene_pool": [],
+   "scene_fallback": true
+  },
+  "libero_90:76": {
+   "text": "pick up the yellow and white mug and place it to the right of the caddy",
+   "scene": "STUDY_SCENE1",
+   "bin": "part",
+   "demo_episode": 1003,
+   "blind": {
+    "t1": 38,
+    "t2": 1,
+    "t1_text": "put the yellow and white mug on the right plate",
+    "t2_text": "put the white mug on the left plate and put the yellow and white mug on the right plate",
+    "trace": [
+     {
+      "pick": 38,
+      "key": [
+       5,
+       5,
+       false,
+       0.375,
+       -38
+      ],
+      "runner_up": 1
+     },
+     {
+      "pick": 1,
+      "key": [
+       0,
+       5,
+       false,
+       0.352941,
+       -1
+      ],
+      "runner_up": 17
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "right"
+     ],
+     [
+      "O",
+      "mug"
+     ],
+     [
+      "O",
+      "white"
+     ],
+     [
+      "O",
+      "yellow"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the yellow and white mug",
+      "landmark": "",
+      "goal": "to the right of the caddy"
+     }
+    ],
+    "covered_by": {
+     "38": [
+      [
+       "G",
+       "right"
+      ],
+      [
+       "O",
+       "mug"
+      ],
+      [
+       "O",
+       "white"
+      ],
+      [
+       "O",
+       "yellow"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "1": [
+      [
+       "G",
+       "right"
+      ],
+      [
+       "O",
+       "mug"
+      ],
+      [
+       "O",
+       "white"
+      ],
+      [
+       "O",
+       "yellow"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": null,
+   "scene_pool": [],
+   "scene_fallback": true
+  },
+  "libero_90:77": {
+   "text": "pick up the book and place it in the back compartment of the caddy",
+   "scene": "STUDY_SCENE2",
+   "bin": "part",
+   "demo_episode": 1858,
+   "blind": {
+    "t1": 43,
+    "t2": 8,
+    "t1_text": "pick up the book in the middle and place it on the cabinet shelf",
+    "t2_text": "stack the middle black bowl on the back black bowl",
+    "trace": [
+     {
+      "pick": 43,
+      "key": [
+       2,
+       2,
+       false,
+       0.5,
+       -43
+      ],
+      "runner_up": 44
+     },
+     {
+      "pick": 8,
+      "key": [
+       1,
+       1,
+       false,
+       0.117647,
+       -8
+      ],
+      "runner_up": 44
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "back"
+     ],
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ],
+     [
+      "O",
+      "book"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the book",
+      "landmark": "",
+      "goal": "in the back compartment of the caddy"
+     }
+    ],
+    "covered_by": {
+     "43": [
+      [
+       "O",
+       "book"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "8": [
+      [
+       "G",
+       "back"
+      ]
+     ]
+    }
+   },
+   "scene_cover": null,
+   "scene_pool": [],
+   "scene_fallback": true
+  },
+  "libero_90:78": {
+   "text": "pick up the book and place it in the front compartment of the caddy",
+   "scene": "STUDY_SCENE2",
+   "bin": "part",
+   "demo_episode": 3063,
+   "blind": {
+    "t1": 43,
+    "t2": 17,
+    "t1_text": "pick up the book in the middle and place it on the cabinet shelf",
+    "t2_text": "put the yellow and white mug to the front of the white mug",
+    "trace": [
+     {
+      "pick": 43,
+      "key": [
+       2,
+       2,
+       false,
+       0.5,
+       -43
+      ],
+      "runner_up": 44
+     },
+     {
+      "pick": 17,
+      "key": [
+       1,
+       2,
+       false,
+       0.235294,
+       -17
+      ],
+      "runner_up": 50
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ],
+     [
+      "G",
+      "front"
+     ],
+     [
+      "O",
+      "book"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the book",
+      "landmark": "",
+      "goal": "in the front compartment of the caddy"
+     }
+    ],
+    "covered_by": {
+     "43": [
+      [
+       "O",
+       "book"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "17": [
+      [
+       "G",
+       "front"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": null,
+   "scene_pool": [],
+   "scene_fallback": true
+  },
+  "libero_90:79": {
+   "text": "pick up the book and place it in the left compartment of the caddy",
+   "scene": "STUDY_SCENE2",
+   "bin": "part",
+   "demo_episode": 1725,
+   "blind": {
+    "t1": 43,
+    "t2": 39,
+    "t1_text": "pick up the book in the middle and place it on the cabinet shelf",
+    "t2_text": "put the chocolate pudding to the left of the plate",
+    "trace": [
+     {
+      "pick": 43,
+      "key": [
+       2,
+       2,
+       false,
+       0.5,
+       -43
+      ],
+      "runner_up": 44
+     },
+     {
+      "pick": 39,
+      "key": [
+       1,
+       2,
+       false,
+       0.176471,
+       -39
+      ],
+      "runner_up": 1
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ],
+     [
+      "G",
+      "left"
+     ],
+     [
+      "O",
+      "book"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the book",
+      "landmark": "",
+      "goal": "in the left compartment of the caddy"
+     }
+    ],
+    "covered_by": {
+     "43": [
+      [
+       "O",
+       "book"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "39": [
+      [
+       "G",
+       "left"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": null,
+   "scene_pool": [],
+   "scene_fallback": true
+  },
+  "libero_90:80": {
+   "text": "pick up the book and place it in the right compartment of the caddy",
+   "scene": "STUDY_SCENE2",
+   "bin": "part",
+   "demo_episode": 0,
+   "blind": {
+    "t1": 44,
+    "t2": 2,
+    "t1_text": "pick up the book on the right and place it on the cabinet shelf",
+    "t2_text": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+    "trace": [
+     {
+      "pick": 44,
+      "key": [
+       2,
+       2,
+       false,
+       0.533333,
+       -44
+      ],
+      "runner_up": 43
+     },
+     {
+      "pick": 2,
+      "key": [
+       1,
+       2,
+       false,
+       0.2,
+       -2
+      ],
+      "runner_up": 19
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ],
+     [
+      "G",
+      "right"
+     ],
+     [
+      "O",
+      "book"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the book",
+      "landmark": "",
+      "goal": "in the right compartment of the caddy"
+     }
+    ],
+    "covered_by": {
+     "44": [
+      [
+       "O",
+       "book"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "2": [
+      [
+       "G",
+       "right"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": null,
+   "scene_pool": [],
+   "scene_fallback": true
+  },
+  "libero_90:82": {
+   "text": "pick up the book and place it in the left compartment of the caddy",
+   "scene": "STUDY_SCENE3",
+   "bin": "part",
+   "demo_episode": 3272,
+   "blind": {
+    "t1": 43,
+    "t2": 39,
+    "t1_text": "pick up the book in the middle and place it on the cabinet shelf",
+    "t2_text": "put the chocolate pudding to the left of the plate",
+    "trace": [
+     {
+      "pick": 43,
+      "key": [
+       2,
+       2,
+       false,
+       0.5,
+       -43
+      ],
+      "runner_up": 44
+     },
+     {
+      "pick": 39,
+      "key": [
+       1,
+       2,
+       false,
+       0.176471,
+       -39
+      ],
+      "runner_up": 1
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ],
+     [
+      "G",
+      "left"
+     ],
+     [
+      "O",
+      "book"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the book",
+      "landmark": "",
+      "goal": "in the left compartment of the caddy"
+     }
+    ],
+    "covered_by": {
+     "43": [
+      [
+       "O",
+       "book"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "39": [
+      [
+       "G",
+       "left"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": null,
+   "scene_pool": [],
+   "scene_fallback": true
+  },
+  "libero_90:83": {
+   "text": "pick up the book and place it in the right compartment of the caddy",
+   "scene": "STUDY_SCENE3",
+   "bin": "part",
+   "demo_episode": 1478,
+   "blind": {
+    "t1": 44,
+    "t2": 2,
+    "t1_text": "pick up the book on the right and place it on the cabinet shelf",
+    "t2_text": "put the white mug on the plate and put the chocolate pudding to the right of the plate",
+    "trace": [
+     {
+      "pick": 44,
+      "key": [
+       2,
+       2,
+       false,
+       0.533333,
+       -44
+      ],
+      "runner_up": 43
+     },
+     {
+      "pick": 2,
+      "key": [
+       1,
+       2,
+       false,
+       0.2,
+       -2
+      ],
+      "runner_up": 19
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ],
+     [
+      "G",
+      "right"
+     ],
+     [
+      "O",
+      "book"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the book",
+      "landmark": "",
+      "goal": "in the right compartment of the caddy"
+     }
+    ],
+    "covered_by": {
+     "44": [
+      [
+       "O",
+       "book"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "2": [
+      [
+       "G",
+       "right"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": null,
+   "scene_pool": [],
+   "scene_fallback": true
+  },
+  "libero_90:38": {
+   "text": "put the right moka pot on the stove",
+   "scene": "KITCHEN_SCENE8",
+   "bin": "part",
+   "demo_episode": 596,
+   "blind": {
+    "t1": 10,
+    "t2": 47,
+    "t1_text": "put the moka pot on the stove",
+    "t2_text": "put the bowl on the stove",
+    "trace": [
+     {
+      "pick": 10,
+      "key": [
+       4,
+       4,
+       true,
+       0.857143,
+       -10
+      ],
+      "runner_up": 47
+     },
+     {
+      "pick": 47,
+      "key": [
+       0,
+       2,
+       true,
+       0.5,
+       -47
+      ],
+      "runner_up": 9
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "stove"
+     ],
+     [
+      "O",
+      "moka"
+     ],
+     [
+      "O",
+      "pot"
+     ],
+     [
+      "O",
+      "right"
+     ],
+     [
+      "V",
+      "put"
+     ]
+    ],
+    "uncovered": [
+     [
+      "O",
+      "right"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "put",
+      "head": "the right moka pot",
+      "landmark": "",
+      "goal": "on the stove"
+     }
+    ],
+    "covered_by": {
+     "10": [
+      [
+       "G",
+       "stove"
+      ],
+      [
+       "O",
+       "moka"
+      ],
+      [
+       "O",
+       "pot"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "47": [
+      [
+       "G",
+       "stove"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_cover": null,
+   "scene_pool": [
+    20
+   ],
+   "scene_fallback": true
+  },
+  "libero_90:44": {
+   "text": "turn on the stove",
+   "scene": "KITCHEN_SCENE9",
+   "bin": "part",
+   "demo_episode": 2747,
+   "blind": {
+    "t1": 20,
+    "t2": 47,
+    "t1_text": "turn off the stove",
+    "t2_text": "put the bowl on the stove",
+    "trace": [
+     {
+      "pick": 20,
+      "key": [
+       1,
+       1,
+       false,
+       0.6,
+       -20
+      ],
+      "runner_up": 47
+     },
+     {
+      "pick": 47,
+      "key": [
+       0,
+       0,
+       false,
+       0.5,
+       -47
+      ],
+      "runner_up": 9
+     }
+    ],
+    "pairs": [
+     [
+      "O",
+      "stove"
+     ],
+     [
+      "V",
+      "turn on"
+     ]
+    ],
+    "uncovered": [
+     [
+      "V",
+      "turn on"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "turn on",
+      "head": "the stove",
+      "landmark": "",
+      "goal": ""
+     }
+    ],
+    "covered_by": {
+     "20": [
+      [
+       "O",
+       "stove"
+      ]
+     ],
+     "47": []
+    }
+   },
+   "scene_cover": {
+    "t1": 22,
+    "t2": 24,
+    "t1_text": "put the frying pan on top of the cabinet",
+    "t2_text": "put the white bowl on top of the cabinet",
+    "trace": [
+     {
+      "pick": 22,
+      "key": [
+       0,
+       0,
+       false,
+       0.2,
+       -22
+      ],
+      "runner_up": 24
+     },
+     {
+      "pick": 24,
+      "key": [
+       0,
+       0,
+       false,
+       0.2,
+       -24
+      ],
+      "runner_up": 23
+     }
+    ],
+    "pairs": [
+     [
+      "O",
+      "stove"
+     ],
+     [
+      "V",
+      "turn on"
+     ]
+    ],
+    "uncovered": [
+     [
+      "O",
+      "stove"
+     ],
+     [
+      "V",
+      "turn on"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "turn on",
+      "head": "the stove",
+      "landmark": "",
+      "goal": ""
+     }
+    ],
+    "covered_by": {
+     "22": [],
+     "24": []
+    }
+   },
+   "scene_pool": [
+    22,
+    23,
+    24
+   ],
+   "scene_fallback": false
+  },
+  "libero_90:45": {
+   "text": "turn on the stove and put the frying pan on it",
+   "scene": "KITCHEN_SCENE9",
+   "bin": "part",
+   "demo_episode": 527,
+   "blind": {
+    "t1": 9,
+    "t2": 20,
+    "t1_text": "put the frying pan on the stove",
+    "t2_text": "turn off the stove",
+    "trace": [
+     {
+      "pick": 9,
+      "key": [
+       4,
+       4,
+       false,
+       0.666667,
+       -9
+      ],
+      "runner_up": 22
+     },
+     {
+      "pick": 20,
+      "key": [
+       1,
+       1,
+       false,
+       0.3,
+       -20
+      ],
+      "runner_up": 22
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "stove"
+     ],
+     [
+      "O",
+      "frying"
+     ],
+     [
+      "O",
+      "pan"
+     ],
+     [
+      "O",
+      "stove"
+     ],
+     [
+      "V",
+      "put"
+     ],
+     [
+      "V",
+      "turn on"
+     ]
+    ],
+    "uncovered": [
+     [
+      "V",
+      "turn on"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "turn on",
+      "head": "the stove",
+      "landmark": "",
+      "goal": ""
+     },
+     {
+      "verb": "put",
+      "head": "the frying pan",
+      "landmark": "",
+      "goal": "on the stove"
+     }
+    ],
+    "covered_by": {
+     "9": [
+      [
+       "G",
+       "stove"
+      ],
+      [
+       "O",
+       "frying"
+      ],
+      [
+       "O",
+       "pan"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "20": [
+      [
+       "O",
+       "stove"
+      ]
+     ]
+    }
+   },
+   "scene_cover": {
+    "t1": 22,
+    "t2": 23,
+    "t1_text": "put the frying pan on top of the cabinet",
+    "t2_text": "put the frying pan under the cabinet shelf",
+    "trace": [
+     {
+      "pick": 22,
+      "key": [
+       3,
+       3,
+       false,
+       0.416667,
+       -22
+      ],
+      "runner_up": 23
+     },
+     {
+      "pick": 23,
+      "key": [
+       0,
+       3,
+       false,
+       0.333333,
+       -23
+      ],
+      "runner_up": 24
+     }
+    ],
+    "pairs": [
+     [
+      "G",
+      "stove"
+     ],
+     [
+      "O",
+      "frying"
+     ],
+     [
+      "O",
+      "pan"
+     ],
+     [
+      "O",
+      "stove"
+     ],
+     [
+      "V",
+      "put"
+     ],
+     [
+      "V",
+      "turn on"
+     ]
+    ],
+    "uncovered": [
+     [
+      "G",
+      "stove"
+     ],
+     [
+      "O",
+      "stove"
+     ],
+     [
+      "V",
+      "turn on"
+     ]
+    ],
+    "steps": [
+     {
+      "verb": "turn on",
+      "head": "the stove",
+      "landmark": "",
+      "goal": ""
+     },
+     {
+      "verb": "put",
+      "head": "the frying pan",
+      "landmark": "",
+      "goal": "on the stove"
+     }
+    ],
+    "covered_by": {
+     "22": [
+      [
+       "O",
+       "frying"
+      ],
+      [
+       "O",
+       "pan"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ],
+     "23": [
+      [
+       "O",
+       "frying"
+      ],
+      [
+       "O",
+       "pan"
+      ],
+      [
+       "V",
+       "put"
+      ]
+     ]
+    }
+   },
+   "scene_pool": [
+    22,
+    23,
+    24
+   ],
+   "scene_fallback": false
+  }
+ },
+ "damage": [
+  {
+   "cell": "libero_90:28",
+   "pair": "libero_90:0",
+   "routed": true
+  },
+  {
+   "cell": "libero_90:46",
+   "pair": "libero_90:50",
+   "routed": true
+  },
+  {
+   "cell": "libero_90:17",
+   "pair": "libero_90:14",
+   "routed": false
+  },
+  {
+   "cell": "libero_90:52",
+   "pair": "libero_90:50",
+   "routed": false
+  },
+  {
+   "cell": "libero_90:41",
+   "pair": "libero_90:45",
+   "routed": false
+  },
+  {
+   "cell": "libero_90:37",
+   "pair": "libero_90:36",
+   "routed": false
+  },
+  {
+   "cell": "libero_90:6",
+   "pair": "libero_90:7",
+   "routed": false
+  },
+  {
+   "cell": "libero_90:4",
+   "pair": "libero_90:0",
+   "routed": false
+  },
+  {
+   "cell": "libero_90:23",
+   "pair": "libero_90:22",
+   "routed": false
+  },
+  {
+   "cell": "libero_90:62",
+   "pair": "libero_90:61",
+   "routed": false
+  }
+ ],
+ "arms": [
+  "zs",
+  "compose_cov",
+  "compose_sel",
+  "create",
+  "cc",
+  "lora50",
+  "lora200",
+  "lora1000"
+ ],
+ "lams": [
+  24,
+  12,
+  36
+ ],
+ "lam_cov": 24,
+ "fresh": {
+  "dir": "fresh_m1",
+  "base": 5700000,
+  "n": 20
+ },
+ "seed": 13,
+ "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000"
+}

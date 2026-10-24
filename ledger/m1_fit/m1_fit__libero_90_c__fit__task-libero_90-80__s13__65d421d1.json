@@ -1,0 +1,118 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/m1/fits/libero_90_80/fit.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 147456,
+  "experts": 18710528,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 18857984,
+  "tree": 0
+ },
+ "command": "experiments/m1_compose_create.py --fit --task libero_90:80",
+ "config": {
+  "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "lams": [
+   24,
+   12,
+   36
+  ],
+  "lora": {
+   "batch": 32,
+   "lr": 0.0001,
+   "rank": 16,
+   "snaps": [
+    50,
+    200,
+    1000
+   ],
+   "steps": 1000
+  },
+  "tok": {
+   "batch": 32,
+   "lr": 0.01,
+   "n": 4,
+   "steps": 1000
+  }
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "megabot.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4216534",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m1_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "65d421d1ecb375f1c92323d1029391e00cf521af",
+  "short": "65d421d1"
+ },
+ "keys": {
+  "task": "libero_90:80"
+ },
+ "metrics": {
+  "T": 161,
+  "bin": "part",
+  "final_loss": {
+   "cc": 0.00868687778711319,
+   "create": 0.007119119167327881,
+   "lora": 0.003542772028595209
+  },
+  "seconds": {
+   "bank": 10.274385452270508,
+   "cc": 134.21810746192932,
+   "cc_bank": 10.301011085510254,
+   "compose_cov": 0.04405498504638672,
+   "compose_sel": 12.515948295593262,
+   "create": 122.19906973838806,
+   "demo": 0.40926218032836914,
+   "lora1000": 148.76145339012146,
+   "lora200": 38.60152816772461,
+   "lora50": 17.680357456207275
+  },
+  "selection": {
+   "best": "blind@36",
+   "cands": {
+    "blind@12": {
+     "lam": 12,
+     "t1": 44,
+     "t2": 2
+    },
+    "blind@24": {
+     "lam": 24,
+     "t1": 44,
+     "t2": 2
+    },
+    "blind@36": {
+     "lam": 36,
+     "t1": 44,
+     "t2": 2
+    },
+    "zs": null
+   },
+   "losses": {
+    "blind@12": 0.1786102056503296,
+    "blind@24": 0.16409462690353394,
+    "blind@36": 0.14390958845615387,
+    "zs": 0.14863674342632294
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m1_fit__libero_90_c__fit__task-libero_90-80__s13__65d421d1",
+ "schema": 1,
+ "script": "experiments/m1_compose_create.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-24T14:32:34+00:00",
+ "stream": null,
+ "tag": "fit"
+}

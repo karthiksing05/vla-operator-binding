@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/m1/roll/m1_damage_libero_90_28_8f7b226f9c.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/m1/fits/libero_90_0/create_unrouted.json SUITE=libero_90 TASKS=28 TRIALS=20 (job 4217234)",
+ "config": {
+  "client": {
+   "all_objects": true,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": true,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": true,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/m1/roll/m1_damage_libero_90_28_8f7b226f9c.json",
+   "port": 9163,
+   "record": true,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "28",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4217234",
+  "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/m1/fits/libero_90_0/create_unrouted.json"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "heistotron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4217234",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m1_damage",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "65d421d1ecb375f1c92323d1029391e00cf521af",
+  "short": "65d421d1"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/m1/fits/libero_90_0/create_unrouted.json",
+  "tasks": "28",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 220.6589319705963,
+  "success_rate": 1.0,
+  "tasks": {
+   "28": {
+    "errors": 0,
+    "language": "close the top drawer of the cabinet",
+    "mean_steps": 65.75,
+    "n": 20,
+    "success_rate": 1.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m1_damage__libero_90__create_unrouted__first_trial-0__mode8f7b226f9c1b__tasks-28__trials-20__s7__65d421d1",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-24T14:43:16+00:00",
+ "stream": null,
+ "tag": "create_unrouted"
+}

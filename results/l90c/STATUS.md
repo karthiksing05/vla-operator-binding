@@ -181,3 +181,7 @@ NEXT: at the first kept checkpoint (5000): export (c_train_pi05.py --exp main --
   VERDICT: factored conditioning keeps parity but does not make part prompts readable (attribution flat 1.74 -> 1.81 -> 1.80,
   transfer 0, R0 below the unfactored checkpoint). The pre-agreed fallback fails => action-space prototypes under part prompts
   are not viable on these VLAs; plan v4 P4-P5 stop. index_l90c_fac_*.json are byte copies of index_l90c.json (not committed).
+- 10-24 12:35  M1 READ (ledger m1_read__libero_90_c__read__s13__65d421d1; docs/PLAN_M1.md section 6): 29 dev tasks x 20.
+  zs 180, compose_sel 150, create 351, cc 350, lora1000 387 / 580. H1-H4 all FAIL. On the 15 combination tasks create 234 =
+  lora 238 at 1/254 bytes; on the 14 part tasks create 117 vs lora1000 149, zs/compose 0. Routed damage create -0.075 on the
+  instruction-collision cells (key by scene). Read fix: stats.bootstrap_diff return_samples (opt-in).

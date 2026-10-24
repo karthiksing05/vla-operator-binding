@@ -1,0 +1,70 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 12609920,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 12609920,
+  "tree": 0
+ },
+ "command": "experiments/m1_compose_create.py --store --shard 0/4",
+ "config": {
+  "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "data": "/coc/flash10/ksingara3/robot/data/hf/lerobot/lol/libero_l90c"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "megabot.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4216354",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m1_store",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "65d421d1ecb375f1c92323d1029391e00cf521af",
+  "short": "65d421d1"
+ },
+ "keys": {},
+ "metrics": {
+  "frames_per_text": 2400,
+  "seconds": {
+   "0": 153.46056580543518,
+   "12": 148.42275500297546,
+   "16": 152.32140684127808,
+   "20": 150.84668898582458,
+   "24": 152.14872431755066,
+   "28": 152.20167088508606,
+   "32": 152.2679624557495,
+   "36": 152.3081088066101,
+   "4": 153.11744022369385,
+   "40": 112.87283134460449,
+   "44": 127.3684241771698,
+   "48": 128.783353805542,
+   "52": 120.9537467956543,
+   "56": 152.31519222259521,
+   "60": 152.63065147399902,
+   "64": 151.0024118423462,
+   "68": 138.8022985458374,
+   "72": 152.3577470779419,
+   "8": 144.47870707511902
+  },
+  "texts": 19
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m1_store__libero_90_c__shard0of4__s0__65d421d1",
+ "schema": 1,
+ "script": "experiments/m1_compose_create.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-24T14:05:51+00:00",
+ "stream": null,
+ "tag": "shard0of4"
+}
