@@ -1,0 +1,1379 @@
+{
+ "tasks": {
+  "libero_90:0": {
+   "text": "close the top drawer of the cabinet",
+   "scene": "KITCHEN_SCENE10",
+   "bin": "0.1",
+   "demo_episode": 3872,
+   "roles": {
+    "O": [
+     "O|close|cabinet drawer top"
+    ],
+    "G": [
+     "G|manip:close|cabinet drawer top"
+    ]
+   },
+   "frames": {
+    "O": 70,
+    "G": 0
+   },
+   "m1_zs": 19,
+   "fit_roles": [
+    "O"
+   ]
+  },
+  "libero_90:14": {
+   "text": "put the middle black bowl on the plate",
+   "scene": "KITCHEN_SCENE2",
+   "bin": "0.1",
+   "demo_episode": 224,
+   "roles": {
+    "O": [
+     "O|put|black bowl middle"
+    ],
+    "G": [
+     "G|on|plate"
+    ]
+   },
+   "frames": {
+    "O": 58,
+    "G": 50
+   },
+   "m1_zs": 20,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:16": {
+   "text": "stack the black bowl at the front on the black bowl in the middle",
+   "scene": "KITCHEN_SCENE2",
+   "bin": "0.1",
+   "demo_episode": 3506,
+   "roles": {
+    "O": [
+     "O|stack|black bowl front"
+    ],
+    "G": [
+     "G|in|middle"
+    ]
+   },
+   "frames": {
+    "O": 69,
+    "G": 50
+   },
+   "m1_zs": 2,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:22": {
+   "text": "close the bottom drawer of the cabinet",
+   "scene": "KITCHEN_SCENE4",
+   "bin": "0.1",
+   "demo_episode": 1942,
+   "roles": {
+    "O": [
+     "O|close|bottom cabinet drawer"
+    ],
+    "G": [
+     "G|manip:close|bottom cabinet drawer"
+    ]
+   },
+   "frames": {
+    "O": 132,
+    "G": 0
+   },
+   "m1_zs": 20,
+   "fit_roles": [
+    "O"
+   ]
+  },
+  "libero_90:60": {
+   "text": "pick up the black bowl on the left and put it in the tray",
+   "scene": "LIVING_ROOM_SCENE4",
+   "bin": "0.1",
+   "demo_episode": 3411,
+   "roles": {
+    "O": [
+     "O|put|black bowl left"
+    ],
+    "G": [
+     "G|in|tray"
+    ]
+   },
+   "frames": {
+    "O": 50,
+    "G": 60
+   },
+   "m1_zs": 19,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:1": {
+   "text": "close the top drawer of the cabinet and put the black bowl on top of it",
+   "scene": "KITCHEN_SCENE10",
+   "bin": "0.3",
+   "demo_episode": 1238,
+   "roles": {
+    "O": [
+     "O|close|cabinet drawer top",
+     "O|put|black bowl"
+    ],
+    "G": [
+     "G|manip:close|cabinet drawer top",
+     "G|on top of|cabinet drawer top"
+    ]
+   },
+   "frames": {
+    "O": 137,
+    "G": 60
+   },
+   "m1_zs": 5,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:29": {
+   "text": "put the black bowl in the top drawer of the cabinet",
+   "scene": "KITCHEN_SCENE5",
+   "bin": "0.3",
+   "demo_episode": 873,
+   "roles": {
+    "O": [
+     "O|put|black bowl"
+    ],
+    "G": [
+     "G|in|cabinet drawer top"
+    ]
+   },
+   "frames": {
+    "O": 67,
+    "G": 55
+   },
+   "m1_zs": 1,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:50": {
+   "text": "pick up the alphabet soup and put it in the basket",
+   "scene": "LIVING_ROOM_SCENE2",
+   "bin": "0.3",
+   "demo_episode": 1436,
+   "roles": {
+    "O": [
+     "O|put|alphabet soup"
+    ],
+    "G": [
+     "G|in|basket"
+    ]
+   },
+   "frames": {
+    "O": 70,
+    "G": 60
+   },
+   "m1_zs": 18,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:7": {
+   "text": "open the top drawer of the cabinet",
+   "scene": "KITCHEN_SCENE1",
+   "bin": "0.3",
+   "demo_episode": 3783,
+   "roles": {
+    "O": [
+     "O|open|cabinet drawer top"
+    ],
+    "G": [
+     "G|manip:open|cabinet drawer top"
+    ]
+   },
+   "frames": {
+    "O": 177,
+    "G": 0
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O"
+   ]
+  },
+  "libero_90:9": {
+   "text": "put the black bowl on the plate",
+   "scene": "KITCHEN_SCENE1",
+   "bin": "0.3",
+   "demo_episode": 3460,
+   "roles": {
+    "O": [
+     "O|put|black bowl"
+    ],
+    "G": [
+     "G|on|plate"
+    ]
+   },
+   "frames": {
+    "O": 82,
+    "G": 55
+   },
+   "m1_zs": 19,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:11": {
+   "text": "open the top drawer of the cabinet",
+   "scene": "KITCHEN_SCENE2",
+   "bin": "0.5",
+   "demo_episode": 3137,
+   "roles": {
+    "O": [
+     "O|open|cabinet drawer top"
+    ],
+    "G": [
+     "G|manip:open|cabinet drawer top"
+    ]
+   },
+   "frames": {
+    "O": 64,
+    "G": 0
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O"
+   ]
+  },
+  "libero_90:36": {
+   "text": "put the white bowl on the plate",
+   "scene": "KITCHEN_SCENE7",
+   "bin": "0.5",
+   "demo_episode": 455,
+   "roles": {
+    "O": [
+     "O|put|bowl white"
+    ],
+    "G": [
+     "G|on|plate"
+    ]
+   },
+   "frames": {
+    "O": 113,
+    "G": 105
+   },
+   "m1_zs": 17,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:40": {
+   "text": "put the frying pan on the cabinet shelf",
+   "scene": "KITCHEN_SCENE9",
+   "bin": "0.5",
+   "demo_episode": 1400,
+   "roles": {
+    "O": [
+     "O|put|frying pan"
+    ],
+    "G": [
+     "G|on|cabinet shelf"
+    ]
+   },
+   "frames": {
+    "O": 115,
+    "G": 62
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:59": {
+   "text": "pick up the tomato sauce and put it in the tray",
+   "scene": "LIVING_ROOM_SCENE3",
+   "bin": "0.5",
+   "demo_episode": 2338,
+   "roles": {
+    "O": [
+     "O|put|sauce tomato"
+    ],
+    "G": [
+     "G|in|tray"
+    ]
+   },
+   "frames": {
+    "O": 88,
+    "G": 40
+   },
+   "m1_zs": 20,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:61": {
+   "text": "pick up the chocolate pudding and put it in the tray",
+   "scene": "LIVING_ROOM_SCENE4",
+   "bin": "0.5",
+   "demo_episode": 1600,
+   "roles": {
+    "O": [
+     "O|put|chocolate pudding"
+    ],
+    "G": [
+     "G|in|tray"
+    ]
+   },
+   "frames": {
+    "O": 86,
+    "G": 65
+   },
+   "m1_zs": 20,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:32": {
+   "text": "put the ketchup in the top drawer of the cabinet",
+   "scene": "KITCHEN_SCENE5",
+   "bin": "part",
+   "demo_episode": 1510,
+   "roles": {
+    "O": [
+     "O|put|ketchup"
+    ],
+    "G": [
+     "G|in|cabinet drawer top"
+    ]
+   },
+   "frames": {
+    "O": 120,
+    "G": 80
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:58": {
+   "text": "pick up the ketchup and put it in the tray",
+   "scene": "LIVING_ROOM_SCENE3",
+   "bin": "part",
+   "demo_episode": 2701,
+   "roles": {
+    "O": [
+     "O|put|ketchup"
+    ],
+    "G": [
+     "G|in|tray"
+    ]
+   },
+   "frames": {
+    "O": 78,
+    "G": 65
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:73": {
+   "text": "pick up the book and place it in the front compartment of the caddy",
+   "scene": "STUDY_SCENE1",
+   "bin": "part",
+   "demo_episode": 1691,
+   "roles": {
+    "O": [
+     "O|put|book"
+    ],
+    "G": [
+     "G|in|caddy compartment front"
+    ]
+   },
+   "frames": {
+    "O": 70,
+    "G": 95
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:75": {
+   "text": "pick up the book and place it in the right compartment of the caddy",
+   "scene": "STUDY_SCENE1",
+   "bin": "part",
+   "demo_episode": 497,
+   "roles": {
+    "O": [
+     "O|put|book"
+    ],
+    "G": [
+     "G|in|caddy compartment right"
+    ]
+   },
+   "frames": {
+    "O": 76,
+    "G": 80
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:76": {
+   "text": "pick up the yellow and white mug and place it to the right of the caddy",
+   "scene": "STUDY_SCENE1",
+   "bin": "part",
+   "demo_episode": 1003,
+   "roles": {
+    "O": [
+     "O|put|mug white yellow"
+    ],
+    "G": [
+     "G|to the right of|caddy"
+    ]
+   },
+   "frames": {
+    "O": 65,
+    "G": 64
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:77": {
+   "text": "pick up the book and place it in the back compartment of the caddy",
+   "scene": "STUDY_SCENE2",
+   "bin": "part",
+   "demo_episode": 1858,
+   "roles": {
+    "O": [
+     "O|put|book"
+    ],
+    "G": [
+     "G|in|back caddy compartment"
+    ]
+   },
+   "frames": {
+    "O": 45,
+    "G": 152
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:78": {
+   "text": "pick up the book and place it in the front compartment of the caddy",
+   "scene": "STUDY_SCENE2",
+   "bin": "part",
+   "demo_episode": 3063,
+   "roles": {
+    "O": [
+     "O|put|book"
+    ],
+    "G": [
+     "G|in|caddy compartment front"
+    ]
+   },
+   "frames": {
+    "O": 70,
+    "G": 63
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:79": {
+   "text": "pick up the book and place it in the left compartment of the caddy",
+   "scene": "STUDY_SCENE2",
+   "bin": "part",
+   "demo_episode": 1725,
+   "roles": {
+    "O": [
+     "O|put|book"
+    ],
+    "G": [
+     "G|in|caddy compartment left"
+    ]
+   },
+   "frames": {
+    "O": 55,
+    "G": 53
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:80": {
+   "text": "pick up the book and place it in the right compartment of the caddy",
+   "scene": "STUDY_SCENE2",
+   "bin": "part",
+   "demo_episode": 0,
+   "roles": {
+    "O": [
+     "O|put|book"
+    ],
+    "G": [
+     "G|in|caddy compartment right"
+    ]
+   },
+   "frames": {
+    "O": 61,
+    "G": 100
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:82": {
+   "text": "pick up the book and place it in the left compartment of the caddy",
+   "scene": "STUDY_SCENE3",
+   "bin": "part",
+   "demo_episode": 3272,
+   "roles": {
+    "O": [
+     "O|put|book"
+    ],
+    "G": [
+     "G|in|caddy compartment left"
+    ]
+   },
+   "frames": {
+    "O": 60,
+    "G": 99
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:83": {
+   "text": "pick up the book and place it in the right compartment of the caddy",
+   "scene": "STUDY_SCENE3",
+   "bin": "part",
+   "demo_episode": 1478,
+   "roles": {
+    "O": [
+     "O|put|book"
+    ],
+    "G": [
+     "G|in|caddy compartment right"
+    ]
+   },
+   "frames": {
+    "O": 66,
+    "G": 55
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:38": {
+   "text": "put the right moka pot on the stove",
+   "scene": "KITCHEN_SCENE8",
+   "bin": "part",
+   "demo_episode": 596,
+   "roles": {
+    "O": [
+     "O|put|moka pot right"
+    ],
+    "G": [
+     "G|on|stove"
+    ]
+   },
+   "frames": {
+    "O": 118,
+    "G": 70
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:44": {
+   "text": "turn on the stove",
+   "scene": "KITCHEN_SCENE9",
+   "bin": "part",
+   "demo_episode": 2747,
+   "roles": {
+    "O": [
+     "O|turn on|stove"
+    ],
+    "G": [
+     "G|manip:turn on|stove"
+    ]
+   },
+   "frames": {
+    "O": 85,
+    "G": 30
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  },
+  "libero_90:45": {
+   "text": "turn on the stove and put the frying pan on it",
+   "scene": "KITCHEN_SCENE9",
+   "bin": "part",
+   "demo_episode": 527,
+   "roles": {
+    "O": [
+     "O|put|frying pan",
+     "O|turn on|stove"
+    ],
+    "G": [
+     "G|manip:turn on|stove",
+     "G|on|stove"
+    ]
+   },
+   "frames": {
+    "O": 173,
+    "G": 80
+   },
+   "m1_zs": 0,
+   "fit_roles": [
+    "O",
+    "G"
+   ]
+  }
+ },
+ "pairs": [
+  {
+   "src": "libero_90:0",
+   "dst": "libero_90:1",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:60",
+   "dst": "libero_90:61",
+   "roles": [
+    "G"
+   ],
+   "shared": 1,
+   "headroom": false
+  },
+  {
+   "src": "libero_90:29",
+   "dst": "libero_90:32",
+   "roles": [
+    "G"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:40",
+   "dst": "libero_90:45",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:59",
+   "dst": "libero_90:58",
+   "roles": [
+    "G"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:61",
+   "dst": "libero_90:60",
+   "roles": [
+    "G"
+   ],
+   "shared": 1,
+   "headroom": false
+  },
+  {
+   "src": "libero_90:32",
+   "dst": "libero_90:29",
+   "roles": [
+    "G"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:58",
+   "dst": "libero_90:59",
+   "roles": [
+    "G"
+   ],
+   "shared": 1,
+   "headroom": false
+  },
+  {
+   "src": "libero_90:73",
+   "dst": "libero_90:75",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:75",
+   "dst": "libero_90:73",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:77",
+   "dst": "libero_90:78",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:77",
+   "dst": "libero_90:79",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:77",
+   "dst": "libero_90:80",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:78",
+   "dst": "libero_90:77",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:78",
+   "dst": "libero_90:79",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:78",
+   "dst": "libero_90:80",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:79",
+   "dst": "libero_90:77",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:79",
+   "dst": "libero_90:78",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:79",
+   "dst": "libero_90:80",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:80",
+   "dst": "libero_90:77",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:80",
+   "dst": "libero_90:78",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:80",
+   "dst": "libero_90:79",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:82",
+   "dst": "libero_90:83",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:83",
+   "dst": "libero_90:82",
+   "roles": [
+    "O"
+   ],
+   "shared": 1,
+   "headroom": true
+  },
+  {
+   "src": "libero_90:44",
+   "dst": "libero_90:45",
+   "roles": [
+    "O",
+    "G"
+   ],
+   "shared": 2,
+   "headroom": true
+  }
+ ],
+ "canonical": {
+  "libero_90:1": "libero_90:0",
+  "libero_90:29": "libero_90:32",
+  "libero_90:32": "libero_90:29",
+  "libero_90:58": "libero_90:59",
+  "libero_90:73": "libero_90:75",
+  "libero_90:75": "libero_90:73",
+  "libero_90:77": "libero_90:80",
+  "libero_90:78": "libero_90:79",
+  "libero_90:79": "libero_90:78",
+  "libero_90:80": "libero_90:77",
+  "libero_90:82": "libero_90:83",
+  "libero_90:83": "libero_90:82",
+  "libero_90:45": "libero_90:44"
+ },
+ "cross": [
+  {
+   "src": "libero_90:7",
+   "dst": "libero_90:11"
+  },
+  {
+   "src": "libero_90:11",
+   "dst": "libero_90:7"
+  },
+  {
+   "src": "libero_90:73",
+   "dst": "libero_90:78"
+  },
+  {
+   "src": "libero_90:75",
+   "dst": "libero_90:80"
+  },
+  {
+   "src": "libero_90:75",
+   "dst": "libero_90:83"
+  },
+  {
+   "src": "libero_90:78",
+   "dst": "libero_90:73"
+  },
+  {
+   "src": "libero_90:79",
+   "dst": "libero_90:82"
+  },
+  {
+   "src": "libero_90:80",
+   "dst": "libero_90:75"
+  },
+  {
+   "src": "libero_90:80",
+   "dst": "libero_90:83"
+  },
+  {
+   "src": "libero_90:82",
+   "dst": "libero_90:79"
+  },
+  {
+   "src": "libero_90:83",
+   "dst": "libero_90:75"
+  },
+  {
+   "src": "libero_90:83",
+   "dst": "libero_90:80"
+  }
+ ],
+ "orders": {
+  "A": [
+   "libero_90:80",
+   "libero_90:61",
+   "libero_90:44",
+   "libero_90:1",
+   "libero_90:40",
+   "libero_90:75",
+   "libero_90:82",
+   "libero_90:36",
+   "libero_90:58",
+   "libero_90:11",
+   "libero_90:83",
+   "libero_90:79",
+   "libero_90:50",
+   "libero_90:60",
+   "libero_90:38",
+   "libero_90:45",
+   "libero_90:59",
+   "libero_90:76",
+   "libero_90:7",
+   "libero_90:9",
+   "libero_90:16",
+   "libero_90:77",
+   "libero_90:14",
+   "libero_90:29",
+   "libero_90:32",
+   "libero_90:22",
+   "libero_90:73",
+   "libero_90:78",
+   "libero_90:0"
+  ],
+  "B": [
+   "libero_90:0",
+   "libero_90:78",
+   "libero_90:73",
+   "libero_90:22",
+   "libero_90:32",
+   "libero_90:29",
+   "libero_90:14",
+   "libero_90:77",
+   "libero_90:16",
+   "libero_90:9",
+   "libero_90:7",
+   "libero_90:76",
+   "libero_90:59",
+   "libero_90:45",
+   "libero_90:38",
+   "libero_90:60",
+   "libero_90:50",
+   "libero_90:79",
+   "libero_90:83",
+   "libero_90:11",
+   "libero_90:58",
+   "libero_90:36",
+   "libero_90:82",
+   "libero_90:75",
+   "libero_90:40",
+   "libero_90:1",
+   "libero_90:44",
+   "libero_90:61",
+   "libero_90:80"
+  ]
+ },
+ "partners": {
+  "libero_90:0": [],
+  "libero_90:14": [],
+  "libero_90:16": [],
+  "libero_90:22": [],
+  "libero_90:60": [
+   "libero_90:61"
+  ],
+  "libero_90:1": [
+   "libero_90:0"
+  ],
+  "libero_90:29": [
+   "libero_90:32"
+  ],
+  "libero_90:50": [],
+  "libero_90:7": [],
+  "libero_90:9": [],
+  "libero_90:11": [],
+  "libero_90:36": [],
+  "libero_90:40": [],
+  "libero_90:59": [
+   "libero_90:58"
+  ],
+  "libero_90:61": [
+   "libero_90:60"
+  ],
+  "libero_90:32": [
+   "libero_90:29"
+  ],
+  "libero_90:58": [
+   "libero_90:59"
+  ],
+  "libero_90:73": [
+   "libero_90:75"
+  ],
+  "libero_90:75": [
+   "libero_90:73"
+  ],
+  "libero_90:76": [],
+  "libero_90:77": [
+   "libero_90:78",
+   "libero_90:79",
+   "libero_90:80"
+  ],
+  "libero_90:78": [
+   "libero_90:77",
+   "libero_90:79",
+   "libero_90:80"
+  ],
+  "libero_90:79": [
+   "libero_90:77",
+   "libero_90:78",
+   "libero_90:80"
+  ],
+  "libero_90:80": [
+   "libero_90:77",
+   "libero_90:78",
+   "libero_90:79"
+  ],
+  "libero_90:82": [
+   "libero_90:83"
+  ],
+  "libero_90:83": [
+   "libero_90:82"
+  ],
+  "libero_90:38": [],
+  "libero_90:44": [],
+  "libero_90:45": [
+   "libero_90:40",
+   "libero_90:44"
+  ]
+ },
+ "fwt": {
+  "libero_90:60": {
+   "late": "A",
+   "before": {
+    "A": 1,
+    "B": 0
+   }
+  },
+  "libero_90:1": {
+   "late": "B",
+   "before": {
+    "A": 0,
+    "B": 1
+   }
+  },
+  "libero_90:29": {
+   "late": "B",
+   "before": {
+    "A": 0,
+    "B": 1
+   }
+  },
+  "libero_90:59": {
+   "late": "A",
+   "before": {
+    "A": 1,
+    "B": 0
+   }
+  },
+  "libero_90:61": {
+   "late": "B",
+   "before": {
+    "A": 0,
+    "B": 1
+   }
+  },
+  "libero_90:32": {
+   "late": "A",
+   "before": {
+    "A": 1,
+    "B": 0
+   }
+  },
+  "libero_90:58": {
+   "late": "B",
+   "before": {
+    "A": 0,
+    "B": 1
+   }
+  },
+  "libero_90:73": {
+   "late": "A",
+   "before": {
+    "A": 1,
+    "B": 0
+   }
+  },
+  "libero_90:75": {
+   "late": "B",
+   "before": {
+    "A": 0,
+    "B": 1
+   }
+  },
+  "libero_90:77": {
+   "late": "A",
+   "before": {
+    "A": 2,
+    "B": 1
+   }
+  },
+  "libero_90:78": {
+   "late": "A",
+   "before": {
+    "A": 3,
+    "B": 0
+   }
+  },
+  "libero_90:79": {
+   "late": "B",
+   "before": {
+    "A": 1,
+    "B": 2
+   }
+  },
+  "libero_90:80": {
+   "late": "B",
+   "before": {
+    "A": 0,
+    "B": 3
+   }
+  },
+  "libero_90:82": {
+   "late": "B",
+   "before": {
+    "A": 0,
+    "B": 1
+   }
+  },
+  "libero_90:83": {
+   "late": "A",
+   "before": {
+    "A": 1,
+    "B": 0
+   }
+  },
+  "libero_90:45": {
+   "late": "A",
+   "before": {
+    "A": 2,
+    "B": 0
+   }
+  }
+ },
+ "cells": [
+  {
+   "cell": "libero_90:28",
+   "text": "close the top drawer of the cabinet",
+   "scene": "KITCHEN_SCENE5",
+   "roles": {
+    "O": [
+     "O|close|cabinet drawer top"
+    ],
+    "G": [
+     "G|manip:close|cabinet drawer top"
+    ]
+   }
+  },
+  {
+   "cell": "libero_90:46",
+   "text": "pick up the alphabet soup and put it in the basket",
+   "scene": "LIVING_ROOM_SCENE1",
+   "roles": {
+    "O": [
+     "O|put|alphabet soup"
+    ],
+    "G": [
+     "G|in|basket"
+    ]
+   }
+  },
+  {
+   "cell": "libero_90:17",
+   "text": "stack the middle black bowl on the back black bowl",
+   "scene": "KITCHEN_SCENE2",
+   "roles": {
+    "O": [
+     "O|stack|black bowl middle"
+    ],
+    "G": [
+     "G|on|back black bowl"
+    ]
+   }
+  },
+  {
+   "cell": "libero_90:52",
+   "text": "pick up the milk and put it in the basket",
+   "scene": "LIVING_ROOM_SCENE2",
+   "roles": {
+    "O": [
+     "O|put|milk"
+    ],
+    "G": [
+     "G|in|basket"
+    ]
+   }
+  },
+  {
+   "cell": "libero_90:41",
+   "text": "put the frying pan on top of the cabinet",
+   "scene": "KITCHEN_SCENE9",
+   "roles": {
+    "O": [
+     "O|put|frying pan"
+    ],
+    "G": [
+     "G|on top of|cabinet"
+    ]
+   }
+  },
+  {
+   "cell": "libero_90:37",
+   "text": "put the white bowl to the right of the plate",
+   "scene": "KITCHEN_SCENE7",
+   "roles": {
+    "O": [
+     "O|put|bowl white"
+    ],
+    "G": [
+     "G|to the right of|plate"
+    ]
+   }
+  },
+  {
+   "cell": "libero_90:6",
+   "text": "open the bottom drawer of the cabinet",
+   "scene": "KITCHEN_SCENE1",
+   "roles": {
+    "O": [
+     "O|open|bottom cabinet drawer"
+    ],
+    "G": [
+     "G|manip:open|bottom cabinet drawer"
+    ]
+   }
+  },
+  {
+   "cell": "libero_90:4",
+   "text": "put the butter at the front in the top drawer of the cabinet and close it",
+   "scene": "KITCHEN_SCENE10",
+   "roles": {
+    "O": [
+     "O|close|cabinet drawer top",
+     "O|put|butter front"
+    ],
+    "G": [
+     "G|in|cabinet drawer top",
+     "G|manip:close|cabinet drawer top"
+    ]
+   }
+  },
+  {
+   "cell": "libero_90:23",
+   "text": "close the bottom drawer of the cabinet and open the top drawer",
+   "scene": "KITCHEN_SCENE4",
+   "roles": {
+    "O": [
+     "O|close|bottom cabinet drawer",
+     "O|open|drawer top"
+    ],
+    "G": [
+     "G|manip:close|bottom cabinet drawer",
+     "G|manip:open|drawer top"
+    ]
+   }
+  },
+  {
+   "cell": "libero_90:62",
+   "text": "pick up the salad dressing and put it in the tray",
+   "scene": "LIVING_ROOM_SCENE4",
+   "roles": {
+    "O": [
+     "O|put|dressing salad"
+    ],
+    "G": [
+     "G|in|tray"
+    ]
+   }
+  }
+ ],
+ "settings": {
+  "n_role": 2,
+  "steps": 1000,
+  "snaps": [
+   50,
+   200
+  ],
+  "init_steps": 200,
+  "init_snaps": [
+   50
+  ],
+  "lr": 0.01,
+  "batch": 32,
+  "min_frames": 10,
+  "tau": 3,
+  "n_prac": 5,
+  "headroom": 15,
+  "seed": 13,
+  "eval": {
+   "dir": "fresh_l4",
+   "base": 6100000,
+   "n": 20
+  },
+  "practice": {
+   "dir": "fresh_l4p",
+   "base": 6300000,
+   "n": 5
+  }
+ }
+}

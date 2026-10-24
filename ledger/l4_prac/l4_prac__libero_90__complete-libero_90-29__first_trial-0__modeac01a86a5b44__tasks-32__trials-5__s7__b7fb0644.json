@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/l4/roll/l4_prac_libero_90_32_ac01a86a5b.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/l4/specs/libero_90_32_75bbd2bd0060.json SUITE=libero_90 TASKS=32 TRIALS=5 (job 4221408)",
+ "config": {
+  "client": {
+   "all_objects": true,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_l4p",
+   "host": "127.0.0.1",
+   "light": true,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": true,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/l4/roll/l4_prac_libero_90_32_ac01a86a5b.json",
+   "port": 9504,
+   "record": true,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "32",
+   "trials": 5,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4221408",
+  "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/l4/specs/libero_90_32_75bbd2bd0060.json"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "major.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4221408",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "l4_prac",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "b7fb0644f6d71ad582d7a17f0650c226cc29bef6",
+  "short": "b7fb0644"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/l4/specs/libero_90_32_75bbd2bd0060.json",
+  "tasks": "32",
+  "trials": 5
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 5,
+  "secs": 268.41578102111816,
+  "success_rate": 0.0,
+  "tasks": {
+   "32": {
+    "errors": 0,
+    "language": "put the ketchup in the top drawer of the cabinet",
+    "mean_steps": 400.0,
+    "n": 5,
+    "success_rate": 0.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "l4_prac__libero_90__complete-libero_90-29__first_trial-0__modeac01a86a5b44__tasks-32__trials-5__s7__b7fb0644",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-24T19:44:10+00:00",
+ "stream": null,
+ "tag": "complete@libero_90:29"
+}

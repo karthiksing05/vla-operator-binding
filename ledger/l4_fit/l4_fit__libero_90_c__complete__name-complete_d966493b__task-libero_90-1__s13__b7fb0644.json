@@ -1,0 +1,66 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 73728,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 73728,
+  "tree": 0
+ },
+ "command": "experiments/l4_store.py --fit-request /coc/flash10/ksingara3/lifelong-ood-learner/results/l4/requests/complete_d966493b__libero_90_1.json",
+ "config": {
+  "batch": 32,
+  "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "init_steps": 200,
+  "lr": 0.01,
+  "n_role": 2,
+  "steps": 1000
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "voltron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4221169",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "l4_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "b7fb0644f6d71ad582d7a17f0650c226cc29bef6",
+  "short": "b7fb0644"
+ },
+ "keys": {
+  "name": "complete_d966493b",
+  "task": "libero_90:1"
+ },
+ "metrics": {
+  "T": 197,
+  "final_loss": 0.006963343825191259,
+  "seconds": {
+   "bank": 13.035419464111328,
+   "demo": 0.3710050582885742,
+   "fit1000": 135.93933272361755,
+   "fit200": 27.50566291809082,
+   "fit50": 6.9687113761901855,
+   "total1000": 149.34575724601746,
+   "total200": 40.91208744049072,
+   "total50": 20.375135898590088
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "l4_fit__libero_90_c__complete__name-complete_d966493b__task-libero_90-1__s13__b7fb0644",
+ "schema": 1,
+ "script": "experiments/l4_store.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-24T19:37:20+00:00",
+ "stream": null,
+ "tag": "complete"
+}

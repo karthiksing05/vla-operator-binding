@@ -268,6 +268,20 @@ class ComposeHooks(Composer):
             from lifelong_ood.policy.token_fold import KVToken
             d = torch.load(kw["token"], map_location=bk.device)["token"]
             self.token = KVToken(d["k"].float(), d["v"].float()).to(bk.device)
+        self.role_tokens = None                 # plan L4 (experiments/l4_store.py): ROLE tokens {"O": [paths], "G": [paths]}, the O list
+        if kw.get("role_tokens"):               # appended while the policy's own gripper is open, the G list while it carries (held_ops
+            import torch                        # ._Grasp: carrying after 3 closed queries, until it opens); absent = unchanged
+            from lifelong_ood.policy.token_fold import KVToken
+            self.role_tokens = {}
+            for r in ("O", "G"):
+                self.role_tokens[r] = []
+                for p in kw["role_tokens"].get(r, []):
+                    d = torch.load(p, map_location=bk.device)["token"]
+                    self.role_tokens[r].append(KVToken(d["k"].float(), d["v"].float()).to(bk.device))
+            if self.g is None:
+                from lifelong_ood.policy.held_ops import _Grasp
+                self.g = _Grasp(bk)
+            logging.info(f"lt: role tokens O {kw['role_tokens'].get('O', [])} G {kw['role_tokens'].get('G', [])}")
         self.attach()
         logging.info(f"lt: prompt '{self.prompt}', {len(self.edits)} edits "
                      f"({', '.join(e['role'] + ':' + str(e['src']) + ' ' + e['phrase'] for e in edits)}), layers {self.lo}-{self.hi}, "
@@ -275,10 +289,15 @@ class ComposeHooks(Composer):
                      f"token {kw.get('token') or None}")
 
     def transform_prefix(self, pre):
-        if self.token is None:
+        if self.token is None and self.role_tokens is None:
             return pre
         from lifelong_ood.policy.token_fold import attach
-        return attach(pre, self.token)
+        if self.token is not None:
+            pre = attach(pre, self.token)
+        if self.role_tokens is not None:
+            for tok in self.role_tokens["G" if self.g.carrying else "O"]:
+                pre = attach(pre, tok)
+        return pre
 
     def reset(self, meta):
         self.nq = 0
@@ -305,7 +324,7 @@ class ComposeHooks(Composer):
 
 
 # ── specs ────────────────────────────────────────────────────────────────────────────────────────────────────────
-def save_spec(path, edits, prompt, lo=1, hi=None, schedule="og", tli=None, meta=None, token=None):
+def save_spec(path, edits, prompt, lo=1, hi=None, schedule="og", tli=None, meta=None, token=None, role_tokens=None):
     """json (everything but arrays) + npz (the shifts, float16; TLI's d) next to it.  token: an optional path to a KV token
     (token_fold format) the served hooks append to the prompt's cache (plan M1); omitted from the json when None."""
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -317,6 +336,8 @@ def save_spec(path, edits, prompt, lo=1, hi=None, schedule="og", tli=None, meta=
               t1=tli.get("t1"), t2=tli.get("t2")), edits=[{k: v for k, v in e.items() if k != "v"} for e in edits], meta=meta or {})
     if token is not None:
         js["token"] = token
+    if role_tokens is not None:                                         # plan L4: {"O": [paths], "G": [paths]} (ComposeHooks)
+        js["role_tokens"] = {r: list(role_tokens.get(r, [])) for r in ("O", "G")}
     tmp = path + f".{os.getpid()}.tmp"
     with open(tmp, "w", encoding="utf-8") as f:
         json.dump(js, f, indent=1)
@@ -328,7 +349,8 @@ def load_spec(path):
     z = np.load(path[:-5] + ".npz")
     edits = [dict(e, v=z[f"v{j}"].astype(np.float32)) for j, e in enumerate(js["edits"])]
     tli = None if js.get("tli") is None else dict(js["tli"], d=z["tli_d"].astype(np.float32))
-    return edits, dict(prompt=js["prompt"], lo=js["lo"], hi=js["hi"], schedule=js["schedule"], tli=tli, token=js.get("token"))
+    return edits, dict(prompt=js["prompt"], lo=js["lo"], hi=js["hi"], schedule=js["schedule"], tli=tli, token=js.get("token"),
+                       role_tokens=js.get("role_tokens"))
 
 
 # ── scoring ──────────────────────────────────────────────────────────────────────────────────────────────────────

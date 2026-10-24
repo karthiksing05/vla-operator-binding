@@ -1,0 +1,66 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 36864,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 36864,
+  "tree": 0
+ },
+ "command": "experiments/l4_store.py --fit-scratch --task libero_90:0",
+ "config": {
+  "batch": 32,
+  "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "init_steps": 200,
+  "lr": 0.01,
+  "n_role": 2,
+  "steps": 1000
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "voltron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4221100",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "l4_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "b7fb0644f6d71ad582d7a17f0650c226cc29bef6",
+  "short": "b7fb0644"
+ },
+ "keys": {
+  "name": "scratch",
+  "task": "libero_90:0"
+ },
+ "metrics": {
+  "T": 70,
+  "final_loss": 0.004532304592430592,
+  "seconds": {
+   "bank": 14.788820028305054,
+   "demo": 1.4962787628173828,
+   "fit1000": 112.11218500137329,
+   "fit200": 22.58333158493042,
+   "fit50": 5.842631101608276,
+   "total1000": 128.39728379249573,
+   "total200": 38.868430376052856,
+   "total50": 22.127729892730713
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "l4_fit__libero_90_c__scratch__name-scratch__task-libero_90-0__s13__b7fb0644",
+ "schema": 1,
+ "script": "experiments/l4_store.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-24T19:33:13+00:00",
+ "stream": null,
+ "tag": "scratch"
+}

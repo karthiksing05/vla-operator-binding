@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/l4/roll/l4_damage_libero_90_41_14f0e11086.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/l4/specs/libero_90_41_7964091c7cf4.json SUITE=libero_90 TASKS=41 TRIALS=20 (job 4222617)",
+ "config": {
+  "client": {
+   "all_objects": true,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": true,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": true,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/l4/roll/l4_damage_libero_90_41_14f0e11086.json",
+   "port": 9651,
+   "record": true,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "41",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4222617",
+  "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/l4/specs/libero_90_41_7964091c7cf4.json"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "ig-88.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4222617",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "l4_damage",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "7e4bcb683f4e582106beec304f03b1746045ee7f",
+  "short": "7e4bcb68"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/l4/specs/libero_90_41_7964091c7cf4.json",
+  "tasks": "41",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 516.2144026756287,
+  "success_rate": 0.55,
+  "tasks": {
+   "41": {
+    "errors": 0,
+    "language": "put the frying pan on top of the cabinet",
+    "mean_steps": 285.75,
+    "n": 20,
+    "success_rate": 0.55
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "l4_damage__libero_90__cell_routed__first_trial-0__mode14f0e11086c8__tasks-41__trials-20__s7__7e4bcb68",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-24T21:20:34+00:00",
+ "stream": null,
+ "tag": "cell_routed"
+}

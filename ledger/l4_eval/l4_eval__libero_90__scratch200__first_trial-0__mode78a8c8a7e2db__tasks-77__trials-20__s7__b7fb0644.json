@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/l4/roll/l4_eval_libero_90_77_78a8c8a7e2.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/l4/specs/libero_90_77_8298f7fea975.json SUITE=libero_90 TASKS=77 TRIALS=20 (job 4221217)",
+ "config": {
+  "client": {
+   "all_objects": true,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_l4",
+   "host": "127.0.0.1",
+   "light": true,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": true,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/l4/roll/l4_eval_libero_90_77_78a8c8a7e2.json",
+   "port": 9804,
+   "record": true,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "77",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4221217",
+  "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/l4/specs/libero_90_77_8298f7fea975.json"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "baymax.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4221217",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "l4_eval",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "b7fb0644f6d71ad582d7a17f0650c226cc29bef6",
+  "short": "b7fb0644"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/l4/specs/libero_90_77_8298f7fea975.json",
+  "tasks": "77",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 936.443131685257,
+  "success_rate": 0.1,
+  "tasks": {
+   "77": {
+    "errors": 0,
+    "language": "pick up the book and place it in the back compartment of the caddy",
+    "mean_steps": 380.35,
+    "n": 20,
+    "success_rate": 0.1
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "l4_eval__libero_90__scratch200__first_trial-0__mode78a8c8a7e2db__tasks-77__trials-20__s7__b7fb0644",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-24T20:10:41+00:00",
+ "stream": null,
+ "tag": "scratch200"
+}
