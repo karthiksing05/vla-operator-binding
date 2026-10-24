@@ -110,3 +110,22 @@ sense:
 
 L4 (running) tests role tokens and stored-token reuse with one demo per arrival: a first read on whether part tokens are
 reusable at all.
+
+## 8. Corrections after R0 (docs/RELATED_R.md, ec7b776b)
+
+- **ReGuide (2609.38616) already closes the frozen-pi0.5 loop with a training-demo bank.** Its bank is external and geometric:
+  pose statistics, a grounding module and scripted motion. Our open ground is:
+  - a bank from the model's own prefix K/V / action modes, composed inside its conditioning, with no grounding module;
+  - verified, gated search;
+  - the composition-space comparison.
+  ReGuide is a MANDATORY baseline: perception variant headline, oracle variant marked privileged. Its pi0.5 numbers are
+  39.0 -> 94.5 (oracle) and 87.5 (perception).
+- **CRAFT's benchmarks and code are not released.** R5 instead authors a CRAFT-style colour-factorial cell (DESIGN 3.1 ii).
+  CRAFT's undemonstrated order is pi0.5 / pi0 / GR00T = 84.2 / 64.3 / 72.1. CAG-VA in their table is 66.5 / 6.8 / 4.9.
+- **CAG-VA:** Fang et al. 2602.17659, code at github.com/yuffish/LIBERO-CF (LIBERO-CF).
+  - Its training-free variant drops the language to the same VLA; run it first.
+  - The VA variant trains a language-free policy.
+- **Verifiers:** VGAS's critic needs 5 target demos, so it is not free. REFACTOR-VLA's return gate is inert on LIBERO.
+  Our gate is task success of the training tasks, which LIBERO provides.
+- **Dropped or corrected:** LatentSkill is an LLM-agent paper. TTT-VLA retrains pi0.5. The SAE "hooking costs success"
+  finding holds for OpenVLA, not pi0.5.
