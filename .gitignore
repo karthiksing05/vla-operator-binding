@@ -67,3 +67,9 @@ results/m1/fits/**/*.npz
 results/m1/smoke/
 results/m1/roll/
 results/m1/packs/
+# failure map (experiments/fm_types.py, fm_fewshot.py): few-shot adapters/tokens, rollouts + records, packs, scratch probes
+results/fm/fits/**/*.pt
+results/fm/fits/**/*.npz
+results/fm/roll/
+results/fm/packs/
+results/fm/scratch/

@@ -1,0 +1,73 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: failure map F1-F5, before typing aggregates and stage-B fits/rollouts",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "neo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4217673",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "bdb324b1e1ad10109d4c090fa22fd086a593f04a",
+  "short": "bdb324b1"
+ },
+ "keys": {},
+ "metrics": {
+  "F1": "zs binding-error rate rises with task CD (11 combination pick-and-place tasks): Spearman rho > 0, one-sided permutation p (100000)",
+  "F2": "(a) lora1000 k=1 wrong-object episodes start farther from the demo grasp point (within-task label permutation, 20000, one-sided) AND (b) lora1000 wrong-object k=1 > k=10 (paired one-sided exact sign test); p = max",
+  "F3": "zs typed failures on instance tasks 14/16/60/38: instance-role binding errors > 0.5 (cluster bootstrap); < 10 failures -> not testable",
+  "F4": "13 part pick-and-place tasks: motion share of typed failures > 0.5 for create AND lora1000 (cluster bootstrap; p = max)",
+  "F5": "compose_sel induced failures (zs success -> compose_sel failure, composed pick-and-place tasks): binding-error share > 0.5 (cluster bootstrap); < 10 -> not testable",
+  "disclosure": "M1 per-task success read before; 16 hand-checked episodes' types seen (listed in the script docstring); one python3 --version on the login node",
+  "family": "Holm over F1-F5 at alpha 0.05",
+  "files_sha256": {
+   "demo_grasp": "4acfd52890aa0eec00cce965a386add495e373fe776fc603ea520e5122befbb5",
+   "doc": "b8487051a5a3b72fb7ac88360d11b4acf061bec2173f0668b56038ecca9b6a67",
+   "fewshot": "39042cc446697af240b8aa5b6b58a6d865bc700a129af3a6ba9f4b55e93a1571",
+   "m1_plan": "383635c998509167b1c1226164ea343da94e1665075d0929924ba752c423f653",
+   "typer": "0a9958913a98f21d5745199e1a0f9cadcc9397f8f39ddb3a57fe03601968820a"
+  },
+  "secondary": "type shares by arm x axis (bin, kind, scene_familiar, instance); success-vs-k curve; create_k5 vs lora_k5_1000; logistic slope of success on CD per arm; composition cards",
+  "stage_b": {
+   "arms": [
+    "lora_k5_200",
+    "lora_k5_1000",
+    "lora_k10_200",
+    "lora_k10_1000",
+    "create_k5"
+   ],
+   "demos": "own-scene IPEC episodes 0..k-1 (nesting M1's episode 0)",
+   "settings": "M1's (r16, lr 1e-4, batch 32; token n4 lr 1e-2 1000 steps)",
+   "states": "fresh_m1, 20 per task, noise seed 13, paired with M1"
+  },
+  "types": "fixture / no_commit / wrong_object (wrong_instance) / wrong_goal (other_region | carried_elsewhere) / motion (toward_target | not_carried | in_region); settle 10 steps, carried >= 0.10 m, half way 0.5",
+  "written_before": "any typed aggregate, stage-B fit or rollout"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pfm_failure_map__s13__bdb324b1",
+ "schema": 1,
+ "script": "experiments/prereg/pfm_failure_map.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-24T17:04:47+00:00",
+ "stream": null,
+ "tag": "pfm_failure_map"
+}
