@@ -1,0 +1,112 @@
+# Plan R: test-time recovery of compositional failures on a frozen VLA (reframe, 2026-10-24)
+
+**Claim.** A frozen, off-the-shelf flow VLA that fails an undemonstrated combination can be recovered at test time:
+- with no new demonstrations and no weight change;
+- by retrieving parts from a bank extracted post hoc from the same frozen model, and composing them at the prefix K/V;
+- with candidates searched and verified, and the corrector gated on predicted failure.
+
+The prototype bank is the mechanism. The claim is test-time recovery.
+
+**Why the gap exists** (user's novelty review, 2026-10-24; competitor details to be verified, section 7):
+- Structure built in at training time is taken: AtomicVLA, SkillNet, OrthoSkillVLA, SkillMemo, HiMoE-VLA.
+- REFACTOR-VLA extracts a library but retrains the decoder.
+- CRAFT trains skill queries with a contrastive loss.
+- The SAE line extracts from frozen models but loses closed-loop success when hooked.
+- Nobody closes the loop: frozen pi0.5 -> extracted bank -> composition -> task success.
+- Velocity-space composition is standard (RL²-VLA, CAG-VA), so composing is not the novelty; extraction plus search is.
+
+## 1. What our evidence already says
+
+| finding | source | consequence for R |
+|---|---|---|
+| zs failures are mostly binding, scene-driven, flat in CD | FM, b7fb0644 | the primitives exist; the instruction does not bind (the vision shortcut). Recovery by conditioning is plausible |
+| action-space part modes are not readable | P2/P3, 5e65bc83 | compose at K/V conditioning, not at velocity |
+| binding leaves the word positions by layer 2 | L0b | K/V tokens must be early-layer or full-prefix |
+| a 74 KB K/V token from one demo removes binding errors, = LoRA on recombinations | M1, FM | the K/V level can carry the fix; the task is to get it WITHOUT the target demo |
+| recombining stored sentences hurts (imports source objects) | M1, FM F5 | naive composition must be gated and verified |
+| always-on composition hurts tasks zs already solves | G0, FM F5 | gate on a failure detector (matches RL²-VLA) |
+| practice-selected sources beat hand-picked pairs | G10 | verified search works; R replaces practice with a cheaper verifier |
+
+## 2. The method (frozen policy, no target demo)
+
+1. **Bank extraction, post hoc, training demos only.**
+   - Segment each training demo at gripper events: approach/grasp is the object role, carry/release the goal role.
+   - Fit role K/V tokens, each shared across every training demo with that part, through the frozen VLA. No VLA weight
+     changes.
+   - Gate entry with REFACTOR-VLA's template: an MDL gain AND return preservation. A part token must keep the success of the
+     training tasks it came from when served in place of their instruction.
+   - Junk check: reject tokens whose effect is episode-specific (high variance across the demos that share the part).
+2. **Hierarchical store.** Task > role (object / goal) > instance (qualifier), keyed by scene + words. Bytes grow with
+   parts.
+3. **Failure gate.** Run zs. Invoke recovery only when a failure detector fires. Candidates:
+   - the policy's own flow-loss novelty (I6: AUC 1.0 on new concepts);
+   - action-chunk variance;
+   - a SAFE-style probe.
+4. **Search over compositions, verified.**
+   - Enumerate bank candidates for each role of the parsed instruction, plus composition coefficients and the slot
+     (prefix / role position / pre- vs post-grasp schedule).
+   - Score each candidate with a verifier, choosing the cheapest that works:
+     - the frozen VLA's own consistency;
+     - a VGAS-style value / geometric critic on action chunks;
+     - a few practice rollouts (charged).
+   - Execute the best candidate.
+5. **Create only when nothing in the bank passes.** That is the demonstrated case, labelled as such: one demo yields one new
+   part token, which joins the bank.
+
+## 3. Composition-space comparison (de-risks 2)
+
+The same bank and the same tasks, composed at three levels:
+- **prefix K/V:** tokens / role slots;
+- **velocity:** CFG-style or weighted, as in RL²-VLA and CAG-VA;
+- **weight space:** task-vector or LoRA arithmetic (heed "Suppression sticks, locality is fragile").
+
+Head to head on success, damage and bytes. Prediction from P2/P3 and M1: K/V wins.
+
+## 4. Benchmarks
+
+- **CRAFT's PICK-PLACE and PICK-PLACE-PRESS** (LIBERO-derived, demonstrated / undemonstrated splits; if released). Bar:
+  CRAFT's 84.2 / 64.3 / 72.1 undemonstrated on pi0 / pi0.5 / GR00T, which needs training. A frozen, no-demo method near it
+  is the headline.
+- **LIBERO-90-C held-out recombinations** (ours; dev now, sealed once at the end).
+- **Li's OOD suites; LIBERO-PRO's task split.**
+- **Policies:** pi0.5 first, then pi0 / SmolVLA / X-VLA / GR00T for the "base model matters" axis.
+
+## 5. Baselines
+
+| baseline | role |
+|---|---|
+| zs | floor |
+| **CAG-VA** (vision-only policy + CFG on language) | MANDATORY: the cheapest fix for a vision shortcut. If it gets most of the gain, that is the paper's biggest problem |
+| Li TLI / our L2 composition | sentence-level composition |
+| ReGuide | training-free frozen-pi0.5 rebinding |
+| RL²-VLA-style gated velocity steering | composition with a trained second policy |
+| CRAFT (their table; rerun on our split if needed) | training-time compositional SOTA |
+| per-task token / per-task LoRA (one demo) | demonstrated ceilings, not competitors |
+
+## 6. Failure atlas (the diagnosis half of the paper)
+
+FM's typing, plus:
+- the empty-instruction probe;
+- "which demonstrated task did it execute instead" (does the episode complete a training combination that shares the object
+  or the target).
+
+Run across the policies, with the mechanism (L0b binding map, P2/P3) as the explanation. Systematicity tests in Fodor's
+sense:
+- X-on-W from X-on-Y + Z-on-W;
+- the swap;
+- substitutivity;
+- productivity.
+
+## 7. Probes, cheapest decisive first
+
+| | question | go / kill |
+|---|---|---|
+| R0 | verify the competitor claims in this plan (REFACTOR-VLA, CRAFT benchmark release, CAG-VA, TTT-VLA, the task-vector audit, VGAS, RL²-VLA) | the related-work table is checked against sources |
+| R1 | CAG-VA on pi05_l90c, on the 15 LIBERO-90-C recombination dev tasks + empty-instruction probe | measures the cheap-fix bar |
+| R2 | bank from training demos only; oracle retrieval (correct object + goal tokens) zero-shot on the same 15 tasks | composed tokens close >= 50% of the zs (180) -> demo-token (234) gap; else kill R |
+| R3 | + failure gate + verified search (unsupervised retrieval) | beats zs and CAG-VA, no damage on zs successes |
+| R4 | composition-space comparison | K/V vs velocity vs weight |
+| R5 | CRAFT benchmark + more policies; sealed read | pre-registered |
+
+L4 (running) tests role tokens and stored-token reuse with one demo per arrival: a first read on whether part tokens are
+reusable at all.
