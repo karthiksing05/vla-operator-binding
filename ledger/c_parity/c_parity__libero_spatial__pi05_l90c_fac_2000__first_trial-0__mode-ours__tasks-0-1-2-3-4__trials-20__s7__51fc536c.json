@@ -1,0 +1,124 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/l90c/parity_pi05_l90c_fac_2000_libero_spatial_0-4.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_spatial",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=ours SUITE=libero_spatial TASKS=0,1,2,3,4 TRIALS=20 (job 4212784)",
+ "config": {
+  "client": {
+   "all_objects": false,
+   "bind": "",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": false,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": false,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/l90c/parity_pi05_l90c_fac_2000_libero_spatial_0-4.json",
+   "port": 9732,
+   "record": false,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_spatial",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "0,1,2,3,4",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4212784",
+  "mode": "ours"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "omgwth.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4212784",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c_parity",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "51fc536cb1b37e9ef4cb6919599d6024f22edfd0",
+  "short": "51fc536c"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "ours",
+  "tasks": "0,1,2,3,4",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 100,
+  "secs": 1319.491376876831,
+  "success_rate": 0.96,
+  "tasks": {
+   "0": {
+    "errors": 0,
+    "language": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+    "mean_steps": 85.35,
+    "n": 20,
+    "success_rate": 0.95
+   },
+   "1": {
+    "errors": 0,
+    "language": "pick up the black bowl next to the ramekin and place it on the plate",
+    "mean_steps": 117.2,
+    "n": 20,
+    "success_rate": 0.95
+   },
+   "2": {
+    "errors": 0,
+    "language": "pick up the black bowl from table center and place it on the plate",
+    "mean_steps": 99.35,
+    "n": 20,
+    "success_rate": 1.0
+   },
+   "3": {
+    "errors": 0,
+    "language": "pick up the black bowl on the cookie box and place it on the plate",
+    "mean_steps": 90.55,
+    "n": 20,
+    "success_rate": 0.95
+   },
+   "4": {
+    "errors": 0,
+    "language": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+    "mean_steps": 140.0,
+    "n": 20,
+    "success_rate": 0.95
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c_parity__libero_spatial__pi05_l90c_fac_2000__first_trial-0__mode-ours__tasks-0-1-2-3-4__trials-20__s7__51fc536c",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-24T06:43:42+00:00",
+ "stream": null,
+ "tag": "pi05_l90c_fac_2000"
+}

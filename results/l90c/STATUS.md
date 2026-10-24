@@ -125,3 +125,59 @@ NEXT: at the first kept checkpoint (5000): export (c_train_pi05.py --exp main --
   P3 (best variant plain): R0 0.604 (base 0.513) vs Comp-3 0.356 (base 0.588), equal 0.317, R1 0.602, ceiling 0.954; R0 beats Comp-3
      now (base did not). Stability plain 0.967 / tmpl 0.921 (base 0.857 plain). R0 NO GO (< 0.70); stability GO. By suite (plain R0):
      libero_90 0.71, goal 0.79, object 0.79, libero_10 0.47, spatial 0.29. 62 tasks / 310 obs (base 40 / 200).
+- 10-23 13:53  FAC SUPERVISOR (pi05_l90c_fac from pi05_l90c@5000): c_train_pi05.py gains --init PARAMS_DIR (additive; default
+  unchanged: a NEW run's weight loader becomes CheckpointWeightLoader(<dir>), i.e. main/5000/params = the EMA weights; fresh
+  optimizer/EMA/step; a resume ignores it). experiments/c_fac_check.py (pre-check, ledger c_fac_check) job 4206079; 20-step smoke
+  of --fac --init job 4206080 (exp fac_smoke; deleted after). Reads of fac checkpoints use --config/BACKBONE_CONFIG pi05_l90c
+  (pi05_l90c_fac's data config would put FactoredPrompt into the inference input transforms).
+- 10-23 13:54  PRE-CHECK PASS (job 4206079; ledger c_fac_check/c_fac_check__libero_90_c__pi05_l90c_fac__s0__51fc536c.json,
+  results/l90c/c_fac_check.json): fac_prompts.json = exactly the 73 training instructions (212 part prompts, 54 distinct, all
+  built from their own instruction's words, none names ketchup / caddy / turn on); lol/libero_l90c holds the 76 training tasks
+  only (3359 episodes, every dataset text hits the table), so part prompts pair only with training-cell demos; 0 of 62 held-out
+  compounds in any training task's compounds, 0 of 69 (object part, goal part) pairs held out; 0 sealed tasks in train /
+  manifest / table texts; split_sealed.json not opened (mtime 2026-10-22 02:32:21, unchanged since the freeze). Inherited
+  overlap (same as pi05_l90c): 2 full training texts equal a dev task's text ("close the top drawer of the cabinet" = dev
+  libero_90:0; "pick up the alphabet soup and put it in the basket" = dev libero_90:50; other scenes, their demos absent).
+- 10-23 14:02  SMOKE OK (job 4206080, hk47, 20 steps): init from main/5000/params works: step-0 loss 0.0198, param_norm 1805.80
+  (from pi05_base the main run's step 0 was 0.0862 / 1802.39; main at 5100: 0.0218). 8.3 s/step on hk47. fac_smoke deleted.
+- 10-23 14:03  FAC CHAIN LAUNCHED: exp `fac` (jax/pi05_l90c_fac/fac; main/5000 untouched): 4206175 -> 76 -> 77 -> 78 -> 79
+  (afterany, overcap --requeue, 4 x A40). Command: experiments/c_train_pi05.py --fac --exp fac --steps 2001 --batch 64
+  --save-interval 100 --keep-period 1000 --init .../jax/pi05_l90c/main/5000/params  (2001 so the final save is step 2000; the
+  config's 1k warmup and constant 5e-5 are unchanged, so the +1000 read has seen the warmup ramp only).
+- 10-23 18:10  4206175 TIMEOUT (heistotron, 13.1-13.3 s/step when stepping) with only ckpts 100 and 200 kept: orbax's
+  checkpointer blocked 9348 s on the step-100 save and 1955 s on step 200 (the main run's 100-step saves took 5-15 s,
+  156 s at 5000). Filesystem stall on /coc/flash10 (or heistotron), not the code. 4206176 resumed from 200 (heistotron again).
+- 10-23 18:35  LEAD rule (save > 300 s on heistotron -> exclude it from the pending chain): 4206176's step-300 save on
+  heistotron blocked 44 s (14.1-14.4 s/step) -> under the bar; heistotron NOT excluded, chain unchanged. The 4206175 stall
+  looks transient.
+- 10-23 19:36  4206176 (heistotron) at step 500 (ckpt 500 kept); saves 300/400/500 blocked 44 / 308 / 54 s (400 marginal, not repeated; chain unchanged). Step 1000 expected ~21:45.
+- 10-23 21:31  FAC +1000 KEPT (jax/pi05_l90c_fac/fac/1000; 4206176 on heistotron, saves 600-1000 5-33 s; loss 0.022, as at
+  step 0). Reads submitted: export 4208904 (-> pytorch/pi05_l90c_fac_1000) -> parity launcher 4208905 (c_parity --model
+  pi05_l90c --ckpt <that> --tag pi05_l90c_fac_1000); pp_fields --config pi05_l90c --checkpoint <that> --tag l90c_fac_1000:
+  binds 4208906 -> shards 4208907-10 -> pp2_dev 4208911 / pp3_dev 4208912 (--tag=l90c_fac_1000 --record). The pp scripts read
+  results/protos/index_l90c_fac_<step>.json = byte copies of index_l90c.json (else they fall back to pi05_libero's index.json).
+- 10-23 21:35  export 4208904 OK (pytorch/pi05_l90c_fac_1000). Parity packs 4208922-29 (8 x 2 instances, 76 tasks x 20 eps, tag pi05_l90c_fac_1000) -> read 4208932 (c_parity --read --record --l90c-tag pi05_l90c_fac_1000). Binds 4208906 running.
+- 10-23 22:17  PARITY @fac+1000 (packs 4208922-29, read 4208932; ledger c_parity/c_parity__libero_90_c__read_pi05_l90c_fac_1000__s7__51fc536c.json): 0.955 over 76 tasks x 20 eps (1520), CI95 [0.940, 0.968], median 1.0, min 0.70; libero_90 0.963, spatial 0.93, object 0.978, goal 0.938, libero_10 0.92; same 32 suite tasks 0.944 vs 0.977. Below level-0.2: libero_90:23, :65. vs pi05_l90c@5000 0.959. Bar >= 0.872: PASS (full instructions intact).
+- 10-23 23:09  P2 @fac+1000 (binds 4208906, shards 4208907-10, 478 obs as at 5000 [8 libero_90:48 transfer obs skipped];
+  pp2 4208911 -> ledger pp2_dev/pp2_dev__libero__l90c_fac_1000__s0__51fc536c.json) vs pi05_l90c@5000 (ledger
+  pp2_dev__libero__l90c__s0__e9b02fe8): separation frac>2 at best u<=0.35 0.667 (5000: 0.678; flag true) but distinct
+  core-mode clusters at tol 0.05 2.09-2.32 by level (5000: 2.26-2.56): NOT above 2.3. Attribution named 1.81x (1.74),
+  null->named 1.66x (1.52), own goal 2.61x (2.43) vs null->goal 2.58x (2.36): NO GO (named < 2x; goal still at null level).
+  Transfer r best -0.005 (0.026): NO GO. Not the < 1.5x stop case. P3 4208912 running.
+- 10-23 23:10  P3 @fac+1000 (pp3 4208912 -> ledger pp3_dev/pp3_dev__libero__l90c_fac_1000__s0__51fc536c.json; 310 obs / 62
+  tasks): best variant plain R0 0.496 (pi05_l90c@5000: 0.604) vs equal 0.194 (0.317), Comp-3 -0.070 (0.356), R1 0.496, ceiling
+  0.920 (0.954); stability plain 0.961 (0.967), tmpl 0.879. R0 NO GO (< 0.70, and below 5000); stability GO. By suite (plain R0):
+  libero_90 0.63, goal 0.72, object 0.64, libero_10 0.49, spatial 0.07. => +1000 fails P2 and P3; parity passes. Chain continues to 2000.
+- 10-24 02:15  FAC +2000 KEPT: 4206177 (heistotron) resumed from 1100 and finished step 2000 (save 32 s; loss 0.0218,
+  param_norm 1807.47); 4206178 / 4206179 started after it and exited in ~3 min each (nothing left to train). CHAIN DONE: kept
+  jax/pi05_l90c_fac/fac/{1000,2000}. Reads of 2000: export 4212747 -> parity launcher 4212748; binds 4212749 -> shards
+  4212750-53 -> pp2 4212755 / pp3 4212756 (tag l90c_fac_2000).
+- 10-24 02:19  export 4212747 OK (pytorch/pi05_l90c_fac_2000). Parity packs 4212777-84 (tag pi05_l90c_fac_2000) -> read 4212793.
+- 10-24 03:06  PARITY @fac+2000 (packs 4212777-84, read 4212793; ledger c_parity/c_parity__libero_90_c__read_pi05_l90c_fac_2000__s7__51fc536c.json): 0.967 over 76 tasks x 20 eps (1520), CI95 [0.955, 0.979], median 1.0, min 0.80; libero_90 0.970, spatial 0.96, object 0.972, goal 0.956, libero_10 0.96; same 32 suite tasks 0.962 vs 0.977; none below level-0.2. Bar >= 0.872: PASS (above pi05_l90c@5000 0.959). P2/P3 shards 4212750-53 running.
+- 10-24 08:55  P2 @fac+2000 (pp2 4212755 -> ledger pp2_dev__libero__l90c_fac_2000__s0__51fc536c): separation 0.680 (GO);
+  attribution named 1.80x (null->named 1.72x), own goal 2.58x vs null->goal 2.49x: NO GO; transfer r <= 0.003: NO GO; clusters
+  ~2.04-2.06. P3 @fac+2000 (pp3 4212756 -> ledger pp3_dev__libero__l90c_fac_2000__s0__51fc536c): plain R0 0.520 (5000: 0.604;
+  +1000: 0.496), equal 0.045, Comp-3 -0.364, ceiling 0.888; stability 0.959 (GO); spatial R0 0.04. Parity 0.967 (PASS).
+  VERDICT: factored conditioning keeps parity but does not make part prompts readable (attribution flat 1.74 -> 1.81 -> 1.80,
+  transfer 0, R0 below the unfactored checkpoint). The pre-agreed fallback fails => action-space prototypes under part prompts
+  are not viable on these VLAs; plan v4 P4-P5 stop. index_l90c_fac_*.json are byte copies of index_l90c.json (not committed).

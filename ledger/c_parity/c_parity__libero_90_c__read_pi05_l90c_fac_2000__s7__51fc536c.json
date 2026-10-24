@@ -1,0 +1,88 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c_parity.py --read --record --l90c-tag pi05_l90c_fac_2000",
+ "config": {
+  "trials": 20
+ },
+ "env": {
+  "device": "cpu",
+  "host": "siri.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4212793",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c_parity",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "51fc536cb1b37e9ef4cb6919599d6024f22edfd0",
+  "short": "51fc536c"
+ },
+ "keys": {},
+ "metrics": {
+  "parity": {
+   "l90c_ci95": [
+    0.9546052631578948,
+    0.9789473684210526
+   ],
+   "l90c_mean": 0.9671052631578947,
+   "level_40": 0.96875,
+   "reached": false,
+   "same_tasks": {
+    "l90c": 0.9624999999999999,
+    "libero": 0.9765625,
+    "n": 32
+   },
+   "tasks_below_level_minus_0p2": []
+  },
+  "pi05_l90c": {
+   "by_suite": {
+    "libero_10": 0.96,
+    "libero_90": 0.9704545454545456,
+    "libero_goal": 0.95625,
+    "libero_object": 0.9722222222222222,
+    "libero_spatial": 0.96
+   },
+   "episodes": 1520,
+   "mean": 0.9671052631578947,
+   "median": 1.0,
+   "min": 0.8,
+   "tasks": 76
+  },
+  "pi05_libero": {
+   "by_suite": {
+    "libero_10": 0.93,
+    "libero_goal": 0.9700000000000001,
+    "libero_object": 0.99,
+    "libero_spatial": 0.985
+   },
+   "episodes": 800,
+   "mean": 0.96875,
+   "median": 1.0,
+   "min": 0.55,
+   "tasks": 40
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c_parity__libero_90_c__read_pi05_l90c_fac_2000__s7__51fc536c",
+ "schema": 1,
+ "script": "experiments/c_parity.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-24T07:05:26+00:00",
+ "stream": null,
+ "tag": "read_pi05_l90c_fac_2000"
+}

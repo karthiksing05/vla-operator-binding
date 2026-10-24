@@ -4,7 +4,10 @@ openpi's own JAX trainer (scripts/train.py: FSDP over the job's GPUs, AdamW, EMA
 lifelong_ood/policy/l90c_config.py (pi05_libero's recipe; data lol/libero_l90c from experiments/c_data.py).  Resumable: a run
 whose checkpoint dir already holds a step resumes from it (openpi --resume), so the same command is resubmitted every 4 h.
 
-    --exp NAME --steps N --batch B [--lora] [--save-interval K]
+    --exp NAME --steps N --batch B [--lora] [--save-interval K] [--init PARAMS_DIR]
+    --init       initialise a NEW run from an existing JAX checkpoint's params (e.g. .../jax/pi05_l90c/main/5000/params: the
+                 EMA weights) instead of the config's weight loader (pi05_base); fresh optimizer, EMA and step counter.  Only
+                 used when the run starts (a resume restores its own state).  Default: unset (unchanged behaviour)
     --timing     a timing run: N steps, then report seconds per step (excluding compilation) and the peak memory
     --export     convert the newest (or --step) JAX checkpoint to PyTorch for PolicyBackbone (l90c_config.pytorch_dir)
 
@@ -35,6 +38,10 @@ def config(a):
     cfg = LC.train_config(name, exp_name=a.exp, batch_size=a.batch, num_train_steps=a.steps,
                           save_interval=a.save_interval, keep_period=a.keep_period,
                           fsdp_devices=1 if a.lora else n)
+    if a.init:                                             # additive: a continued fine-tune from an existing checkpoint
+        from openpi.training import weight_loaders as W
+        assert os.path.isdir(a.init), a.init
+        cfg = dataclasses.replace(cfg, weight_loader=W.CheckpointWeightLoader(a.init))
     ck = cfg.checkpoint_dir
     steps = [int(p) for p in os.listdir(ck) if p.isdigit()] if os.path.isdir(ck) else []
     cfg = dataclasses.replace(cfg, resume=bool(steps), overwrite=False)
@@ -59,9 +66,10 @@ def train(a):
     import train as T                                       # openpi/scripts/train.py
     cfg, steps = config(a)
     print(f"[c_train] {cfg.name}/{cfg.exp_name}: {jax.device_count()} x {jax.devices()[0].device_kind}, batch {cfg.batch_size}, "
-          f"steps {cfg.num_train_steps}, fsdp {cfg.fsdp_devices}, resume {cfg.resume} (have {sorted(steps)[-3:]})", flush=True)
+          f"steps {cfg.num_train_steps}, fsdp {cfg.fsdp_devices}, resume {cfg.resume} (have {sorted(steps)[-3:]}), "
+          f"init {a.init or 'config weight loader'}", flush=True)
     log(event="start", exp=a.exp, name=cfg.name, batch=cfg.batch_size, steps=cfg.num_train_steps, resume=cfg.resume,
-        have=sorted(steps), devices=jax.device_count())
+        have=sorted(steps), devices=jax.device_count(), **({"init": a.init} if a.init else {}))
     t0 = time.time()
     stamps = []                                             # wall time at each training step (openpi's tqdm loop)
     base_bar = T.tqdm.tqdm
@@ -127,6 +135,7 @@ if __name__ == "__main__":
     ap.add_argument("--fac", action="store_true", help="pi05_l90c_fac: factored conditioning (docs/L90C.md 3.1)")
     ap.add_argument("--save-interval", type=int, default=1000)
     ap.add_argument("--keep-period", type=int, default=5000)
+    ap.add_argument("--init", default=None, help="a NEW run starts from this JAX params dir (default: the config's loader)")
     ap.add_argument("--export", action="store_true")
     ap.add_argument("--step", type=int, default=None)
     ap.add_argument("--tag", default=None)

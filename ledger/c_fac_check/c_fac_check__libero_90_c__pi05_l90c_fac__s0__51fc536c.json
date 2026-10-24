@@ -1,0 +1,110 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/l90c/c_fac_check.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/c_fac_check.py --record",
+ "config": {
+  "p_null": 0.1,
+  "p_part": 0.3,
+  "table": "results/l90c/fac_prompts.json"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "megabot.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4206079",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "c_fac_check",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "51fc536cb1b37e9ef4cb6919599d6024f22edfd0",
+  "short": "51fc536c"
+ },
+ "keys": {},
+ "metrics": {
+  "A": {
+   "keys_not_training": [],
+   "table_entries": 73,
+   "texts_shared_with_heldout": {
+    "close the top drawer of the cabinet": [
+     "libero_90:0"
+    ],
+    "pick up the alphabet soup and put it in the basket": [
+     "libero_90:50"
+    ]
+   },
+   "train_texts": 73,
+   "training_without_entry": []
+  },
+  "B": {
+   "dataset_texts": 73,
+   "dataset_texts_not_training": [],
+   "dataset_texts_without_parts": [],
+   "episode_texts_not_training": [],
+   "episodes": 3359,
+   "manifest_episodes": 3359,
+   "manifest_not_train": [],
+   "manifest_tasks": 76,
+   "manifest_text_mismatch": [],
+   "train_not_in_manifest": []
+  },
+  "C": {
+   "distinct_part_prompts": 54,
+   "entries_by_len": {
+    "1": 0,
+    "2": 7,
+    "3": 66
+   },
+   "instruction_names_part_atom": [],
+   "names_part_atom": {},
+   "part_prompts": 212,
+   "words_not_in_own_instruction": {}
+  },
+  "D": {
+   "held_compounds": 62,
+   "held_compounds_in_training_tasks": [],
+   "heldout_cell_demos_in_data": [],
+   "heldout_task_compounds_exposed": [],
+   "object_x_goal_pairs": 69,
+   "object_x_goal_pairs_held": []
+  },
+  "E": {
+   "n_sealed": 16,
+   "sealed_file": {
+    "exists": true,
+    "mtime": "2026-10-22 02:32:21",
+    "size": 496
+   },
+   "sealed_file_opened": false,
+   "sealed_in_manifest": [],
+   "sealed_in_train": [],
+   "table_texts_shared_with_a_sealed_task": 0
+  },
+  "failed": [],
+  "pass": true
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "c_fac_check__libero_90_c__pi05_l90c_fac__s0__51fc536c",
+ "schema": 1,
+ "script": "experiments/c_fac_check.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-23T17:54:02+00:00",
+ "stream": null,
+ "tag": "pi05_l90c_fac"
+}
