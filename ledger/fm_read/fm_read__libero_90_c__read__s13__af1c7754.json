@@ -1,0 +1,3800 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/fm_fewshot.py --read --record",
+ "config": {
+  "arms": [
+   "zs",
+   "compose_cov",
+   "compose_sel",
+   "create",
+   "cc",
+   "lora50",
+   "lora200",
+   "lora1000",
+   "create_k5",
+   "lora_k5_200",
+   "lora_k5_1000",
+   "lora_k10_200",
+   "lora_k10_1000"
+  ],
+  "carry_min": 0.1,
+  "half": 0.5,
+  "prereg": "m3_prereg tag pfm_failure_map",
+  "settle": 10,
+  "typer": "experiments/fm_types.py"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4219400",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "fm_read",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "af1c7754939ae772d792696d78017c6148f4dd15",
+  "short": "af1c7754"
+ },
+ "keys": {},
+ "metrics": {
+  "F": {
+   "F1": {
+    "holm": {
+     "p": 0.6615633843661564,
+     "reject": false,
+     "threshold": 0.05
+    },
+    "p": 0.6615633843661564,
+    "passes": false,
+    "per_task": {
+     "libero_90:1": {
+      "cd": 0.3779,
+      "rate": 0.2
+     },
+     "libero_90:14": {
+      "cd": 0.264,
+      "rate": 0.0
+     },
+     "libero_90:16": {
+      "cd": 0.2518,
+      "rate": 0.75
+     },
+     "libero_90:29": {
+      "cd": 0.4902,
+      "rate": 0.95
+     },
+     "libero_90:36": {
+      "cd": 0.6479,
+      "rate": 0.0
+     },
+     "libero_90:40": {
+      "cd": 0.6479,
+      "rate": 0.8
+     },
+     "libero_90:50": {
+      "cd": 0.4583,
+      "rate": 0.0
+     },
+     "libero_90:59": {
+      "cd": 0.6357,
+      "rate": 0.0
+     },
+     "libero_90:60": {
+      "cd": 0.2959,
+      "rate": 0.05
+     },
+     "libero_90:61": {
+      "cd": 0.6479,
+      "rate": 0.0
+     },
+     "libero_90:9": {
+      "cd": 0.4537,
+      "rate": 0.0
+     }
+    },
+    "repair": {
+     "cc": {
+      "by_bin": {
+       "0.1": 0.06666666666666667,
+       "0.3": 0.075,
+       "0.5": 0.075
+      },
+      "rho": -0.11206852468923151
+     },
+     "compose_cov": {
+      "by_bin": {
+       "0.1": 0.3666666666666667,
+       "0.3": 0.25,
+       "0.5": 0.0875
+      },
+      "rho": -0.5475652789498762
+     },
+     "compose_sel": {
+      "by_bin": {
+       "0.1": 0.45,
+       "0.3": 0.28750000000000003,
+       "0.5": 0.2
+      },
+      "rho": -0.37527767497325676
+     },
+     "create": {
+      "by_bin": {
+       "0.1": 0.0,
+       "0.3": 0.05,
+       "0.5": 0.0375
+      },
+      "rho": 0.1756820922315766
+     },
+     "create_k5": {
+      "by_bin": {
+       "0.1": 0.0,
+       "0.3": 0.05,
+       "0.5": 0.0125
+      },
+      "rho": 0.10886621079036346
+     },
+     "lora1000": {
+      "by_bin": {
+       "0.1": 0.0,
+       "0.3": 0.0875,
+       "0.5": 0.025
+      },
+      "rho": 0.11712139482105106
+     },
+     "lora_k10_1000": {
+      "by_bin": {
+       "0.1": 0.0,
+       "0.3": 0.0375,
+       "0.5": 0.0
+      },
+      "rho": -0.20184335693983277
+     },
+     "zs": {
+      "by_bin": {
+       "0.1": 0.26666666666666666,
+       "0.3": 0.2875,
+       "0.5": 0.2
+      },
+      "rho": -0.13506755066722445
+     }
+    },
+    "rho": -0.13506755066722445,
+    "test": "Spearman rho(task CD, zs binding-error rate) > 0 on the combination pick-and-place tasks; one-sided permutation p (100,000)"
+   },
+   "F2": {
+    "a": {
+     "S": 0.1941962869052165,
+     "episodes": 480,
+     "mean_dlay_other": 0.04420964574301877,
+     "mean_dlay_wrong": 0.0627597016185722,
+     "p": 0.00119994000299985,
+     "test": "lora1000 (k = 1): wrong-object episodes start farther from the demo's grasp point (named object start xy); within-task permutation of the wrong-object labels (20,000), one-sided",
+     "wrong_object": 9
+    },
+    "b": {
+     "k10_only": 0,
+     "k1_only": 7,
+     "p": 0.0078125,
+     "test": "lora1000 wrong-object episodes at k = 1 > at k = 10 (paired over task x start state, pick-and-place tasks): one-sided exact sign test"
+    },
+    "holm": {
+     "p": 0.0078125,
+     "reject": true,
+     "threshold": 0.01
+    },
+    "nearer_demo_grasp": {
+     "k": 1,
+     "n": 9
+    },
+    "p": 0.0078125,
+    "passes": true,
+    "repair": {
+     "compose_sel": 123,
+     "create": 5,
+     "create_k5": 5,
+     "lora1000": 9,
+     "lora200": 3,
+     "lora_k10_1000": 2,
+     "lora_k10_200": 2,
+     "lora_k5_1000": 1,
+     "lora_k5_200": 2,
+     "zs": 63
+    }
+   },
+   "F3": {
+    "hi": 1.0,
+    "holm": {
+     "p": 0.0972,
+     "reject": false,
+     "threshold": 0.0125
+    },
+    "k": 31,
+    "lo": 0.0,
+    "n": 39,
+    "p": 0.0972,
+    "passes": false,
+    "per_task": {
+     "libero_90:14": {
+      "fail": 0,
+      "inst": 0
+     },
+     "libero_90:16": {
+      "fail": 18,
+      "inst": 11
+     },
+     "libero_90:38": {
+      "fail": 20,
+      "inst": 20
+     },
+     "libero_90:60": {
+      "fail": 1,
+      "inst": 0
+     }
+    },
+    "repair": {
+     "cc": {
+      "arm_only": 2,
+      "inst_errors": 2,
+      "sign_p_two_sided": 1.3085082173347473e-07,
+      "success": 52,
+      "zs_only": 31
+     },
+     "compose_sel": {
+      "arm_only": 5,
+      "inst_errors": 31,
+      "sign_p_two_sided": 1.0,
+      "success": 29,
+      "zs_only": 5
+     },
+     "create": {
+      "arm_only": 0,
+      "inst_errors": 1,
+      "sign_p_two_sided": 1.862645149230957e-09,
+      "success": 54,
+      "zs_only": 30
+     },
+     "create_k5": {
+      "arm_only": 0,
+      "inst_errors": 1,
+      "sign_p_two_sided": 1.862645149230957e-09,
+      "success": 63,
+      "zs_only": 30
+     },
+     "lora1000": {
+      "arm_only": 0,
+      "inst_errors": 3,
+      "sign_p_two_sided": 7.450580596923828e-09,
+      "success": 62,
+      "zs_only": 28
+     },
+     "lora_k10_1000": {
+      "arm_only": 0,
+      "inst_errors": 0,
+      "sign_p_two_sided": 9.313225746154785e-10,
+      "success": 73,
+      "zs_only": 31
+     },
+     "zs": {
+      "inst_errors": 31,
+      "success": 41
+     }
+    },
+    "share": 0.7948717948717948,
+    "test": "zs typed failures on the instance tasks: share of instance-role binding errors > 0.5 (cluster bootstrap)"
+   },
+   "F4": {
+    "create": {
+     "hi": 0.7328767123287672,
+     "k": 83,
+     "lo": 0.30188400133973425,
+     "n": 163,
+     "p": 0.4711,
+     "share": 0.50920245398773
+    },
+    "holm": {
+     "p": 0.4711,
+     "reject": false,
+     "threshold": 0.025
+    },
+    "lora1000": {
+     "hi": 0.8130928302413166,
+     "k": 77,
+     "lo": 0.36305623418549865,
+     "n": 131,
+     "p": 0.2314,
+     "share": 0.5877862595419847
+    },
+    "p": 0.4711,
+    "passes": false,
+    "repair": {
+     "cc": {
+      "success": 118
+     },
+     "compose_cov": {
+      "success": 0
+     },
+     "compose_sel": {
+      "success": 0
+     },
+     "create": {
+      "success": 117
+     },
+     "create_k5": {
+      "success": 163
+     },
+     "lora1000": {
+      "success": 149
+     },
+     "lora200": {
+      "success": 135
+     },
+     "lora50": {
+      "success": 38
+     },
+     "lora_k10_1000": {
+      "success": 201
+     },
+     "lora_k10_200": {
+      "success": 146
+     },
+     "lora_k5_1000": {
+      "success": 204
+     },
+     "lora_k5_200": {
+      "success": 149
+     },
+     "zs": {
+      "success": 0
+     }
+    },
+    "test": "part pick-and-place tasks: motion share of typed failures > 0.5 for create AND for lora1000 (cluster bootstrap; p = max)",
+    "zs_types": {
+     "episodes": 260,
+     "fixture": 0,
+     "motion": 98,
+     "no_commit": 2,
+     "shares_of_failures": {
+      "fixture": 0.0,
+      "motion": 0.3769230769230769,
+      "no_commit": 0.007692307692307693,
+      "wrong_goal": 0.38461538461538464,
+      "wrong_object": 0.23076923076923078
+     },
+     "success": 0,
+     "untyped": 0,
+     "wrong_goal": 100,
+     "wrong_object": 60
+    }
+   },
+   "F5": {
+    "composed_tasks": [
+     "libero_90:16",
+     "libero_90:60",
+     "libero_90:1",
+     "libero_90:29",
+     "libero_90:50",
+     "libero_90:9",
+     "libero_90:59",
+     "libero_90:32",
+     "libero_90:73",
+     "libero_90:77",
+     "libero_90:78",
+     "libero_90:79",
+     "libero_90:80",
+     "libero_90:83",
+     "libero_90:38"
+    ],
+    "guard": {
+     "compose_sel": 150,
+     "note": "M1: the zs guard did not remove it",
+     "zs": 180
+    },
+    "hi": 0.9166666666666666,
+    "holm": {
+     "p": 0.4111,
+     "reject": false,
+     "threshold": 0.016666666666666666
+    },
+    "induced_types": {
+     "motion": 13,
+     "no_commit": 0,
+     "wrong_goal": 3,
+     "wrong_object": 13
+    },
+    "k": 16,
+    "lo": 0.08695652173913043,
+    "n": 29,
+    "p": 0.4111,
+    "passes": false,
+    "share": 0.5517241379310345,
+    "test": "compose_sel's induced failures (zs success -> compose_sel failure, composed pick-and-place tasks): share of binding errors (wrong object / wrong goal) > 0.5 (cluster bootstrap)",
+    "wrong_object_named_by_a_source": {
+     "k": 11,
+     "n": 13
+    }
+   }
+  },
+  "arms": [
+   "zs",
+   "compose_cov",
+   "compose_sel",
+   "create",
+   "cc",
+   "lora50",
+   "lora200",
+   "lora1000",
+   "create_k5",
+   "lora_k5_200",
+   "lora_k5_1000",
+   "lora_k10_200",
+   "lora_k10_1000"
+  ],
+  "cards": {
+   "libero_90:1": {
+    "bin": "0.3",
+    "bound_create": {
+     "None": 2,
+     "akita_black_bowl_1": 17,
+     "chocolate_pudding_1": 1
+    },
+    "bound_zs": {
+     "None": 5,
+     "akita_black_bowl_1": 13,
+     "chocolate_pudding_1": 2
+    },
+    "create": 15,
+    "named": [
+     "akita_black_bowl_1"
+    ],
+    "selection": "scene@24",
+    "sources": [
+     "put the chocolate pudding in the top drawer of the cabinet and close it",
+     "put the black bowl on top of the cabinet"
+    ],
+    "text": "close the top drawer of the cabinet and put the black bowl on top of it",
+    "token": "74 KB KV token",
+    "uncovered": [],
+    "zs": 5,
+    "zs_types": {
+     "fixture": 0.0,
+     "motion": 0.4,
+     "no_commit": 0.3333333333333333,
+     "wrong_goal": 0.13333333333333333,
+     "wrong_object": 0.13333333333333333
+    }
+   },
+   "libero_90:11": {
+    "bin": "0.5",
+    "bound_create": {
+     "None": 20
+    },
+    "bound_zs": {
+     "None": 19,
+     "akita_black_bowl_2": 1
+    },
+    "create": 15,
+    "named": [],
+    "selection": "scene@12",
+    "sources": [
+     "close the bottom drawer of the cabinet and open the top drawer",
+     "open the bottom drawer of the cabinet"
+    ],
+    "text": "open the top drawer of the cabinet",
+    "token": "74 KB KV token",
+    "uncovered": [],
+    "zs": 0,
+    "zs_types": {
+     "fixture": 1.0,
+     "motion": 0.0,
+     "no_commit": 0.0,
+     "wrong_goal": 0.0,
+     "wrong_object": 0.0
+    }
+   },
+   "libero_90:16": {
+    "bin": "0.1",
+    "bound_create": {
+     "akita_black_bowl_1": 20
+    },
+    "bound_zs": {
+     "akita_black_bowl_1": 20
+    },
+    "create": 9,
+    "named": [
+     "akita_black_bowl_1"
+    ],
+    "selection": "blind@12",
+    "sources": [
+     "put the black bowl at the front on the plate",
+     "stack the middle black bowl on the back black bowl"
+    ],
+    "text": "stack the black bowl at the front on the black bowl in the middle",
+    "token": "74 KB KV token",
+    "uncovered": [
+     [
+      "G",
+      "middle"
+     ],
+     [
+      "L",
+      "black"
+     ],
+     [
+      "L",
+      "bowl"
+     ]
+    ],
+    "zs": 2,
+    "zs_types": {
+     "fixture": 0.0,
+     "motion": 0.16666666666666666,
+     "no_commit": 0.0,
+     "wrong_goal": 0.8333333333333334,
+     "wrong_object": 0.0
+    }
+   },
+   "libero_90:29": {
+    "bin": "0.3",
+    "bound_create": {
+     "akita_black_bowl_1": 20
+    },
+    "bound_zs": {
+     "akita_black_bowl_1": 19,
+     "ketchup_1": 1
+    },
+    "create": 20,
+    "named": [
+     "akita_black_bowl_1"
+    ],
+    "selection": "blind@24",
+    "sources": [
+     "put the black bowl on top of the cabinet",
+     "put the chocolate pudding in the top drawer of the cabinet and close it"
+    ],
+    "text": "put the black bowl in the top drawer of the cabinet",
+    "token": "74 KB KV token",
+    "uncovered": [],
+    "zs": 1,
+    "zs_types": {
+     "fixture": 0.0,
+     "motion": 0.0,
+     "no_commit": 0.0,
+     "wrong_goal": 0.9473684210526315,
+     "wrong_object": 0.05263157894736842
+    }
+   },
+   "libero_90:38": {
+    "bin": "part",
+    "bound_create": {
+     "None": 14,
+     "moka_pot_1": 5,
+     "moka_pot_2": 1
+    },
+    "bound_zs": {
+     "moka_pot_2": 20
+    },
+    "create": 5,
+    "named": [
+     "moka_pot_1"
+    ],
+    "selection": "blind@36",
+    "sources": [
+     "put the moka pot on the stove",
+     "put the bowl on the stove"
+    ],
+    "text": "put the right moka pot on the stove",
+    "token": "74 KB KV token",
+    "uncovered": [
+     [
+      "O",
+      "right"
+     ]
+    ],
+    "zs": 0,
+    "zs_types": {
+     "fixture": 0.0,
+     "motion": 0.0,
+     "no_commit": 0.0,
+     "wrong_goal": 0.0,
+     "wrong_object": 1.0
+    }
+   },
+   "libero_90:44": {
+    "bin": "part",
+    "bound_create": {
+     "None": 20
+    },
+    "bound_zs": {
+     "chefmate_8_frypan_1": 20
+    },
+    "create": 20,
+    "named": [],
+    "selection": "zs",
+    "sources": [
+     "turn off the stove",
+     "put the bowl on the stove"
+    ],
+    "text": "turn on the stove",
+    "token": "74 KB KV token",
+    "uncovered": [
+     [
+      "V",
+      "turn on"
+     ]
+    ],
+    "zs": 0,
+    "zs_types": {
+     "fixture": 1.0,
+     "motion": 0.0,
+     "no_commit": 0.0,
+     "wrong_goal": 0.0,
+     "wrong_object": 0.0
+    }
+   },
+   "libero_90:45": {
+    "bin": "part",
+    "bound_create": {
+     "None": 10,
+     "chefmate_8_frypan_1": 10
+    },
+    "bound_zs": {
+     "chefmate_8_frypan_1": 20
+    },
+    "create": 8,
+    "named": [
+     "chefmate_8_frypan_1"
+    ],
+    "selection": "zs",
+    "sources": [
+     "put the frying pan on the stove",
+     "turn off the stove"
+    ],
+    "text": "turn on the stove and put the frying pan on it",
+    "token": "74 KB KV token",
+    "uncovered": [
+     [
+      "V",
+      "turn on"
+     ]
+    ],
+    "zs": 0,
+    "zs_types": {
+     "fixture": 0.0,
+     "motion": 1.0,
+     "no_commit": 0.0,
+     "wrong_goal": 0.0,
+     "wrong_object": 0.0
+    }
+   },
+   "libero_90:58": {
+    "bin": "part",
+    "bound_create": {
+     "None": 4,
+     "ketchup_1": 16
+    },
+    "bound_zs": {
+     "alphabet_soup_1": 1,
+     "tomato_sauce_1": 19
+    },
+    "create": 13,
+    "named": [
+     "ketchup_1"
+    ],
+    "selection": "zs",
+    "sources": [
+     "pick up the alphabet soup and put it in the tray",
+     "pick up the cream cheese and put it in the tray"
+    ],
+    "text": "pick up the ketchup and put it in the tray",
+    "token": "74 KB KV token",
+    "uncovered": [
+     [
+      "O",
+      "ketchup"
+     ]
+    ],
+    "zs": 0,
+    "zs_types": {
+     "fixture": 0.0,
+     "motion": 0.0,
+     "no_commit": 0.0,
+     "wrong_goal": 0.0,
+     "wrong_object": 1.0
+    }
+   },
+   "libero_90:7": {
+    "bin": "0.3",
+    "bound_create": {
+     "None": 19,
+     "akita_black_bowl_1": 1
+    },
+    "bound_zs": {
+     "None": 18,
+     "akita_black_bowl_1": 2
+    },
+    "create": 6,
+    "named": [],
+    "selection": "zs",
+    "sources": [
+     "close the bottom drawer of the cabinet and open the top drawer",
+     "open the bottom drawer of the cabinet"
+    ],
+    "text": "open the top drawer of the cabinet",
+    "token": "74 KB KV token",
+    "uncovered": [],
+    "zs": 0,
+    "zs_types": {
+     "fixture": 1.0,
+     "motion": 0.0,
+     "no_commit": 0.0,
+     "wrong_goal": 0.0,
+     "wrong_object": 0.0
+    }
+   },
+   "libero_90:73": {
+    "bin": "part",
+    "bound_create": {
+     "black_book_1": 20
+    },
+    "bound_zs": {
+     "None": 1,
+     "black_book_1": 19
+    },
+    "create": 9,
+    "named": [
+     "black_book_1"
+    ],
+    "selection": "blind@36",
+    "sources": [
+     "pick up the book in the middle and place it on the cabinet shelf",
+     "put the yellow and white mug to the front of the white mug"
+    ],
+    "text": "pick up the book and place it in the front compartment of the caddy",
+    "token": "74 KB KV token",
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ]
+    ],
+    "zs": 0,
+    "zs_types": {
+     "fixture": 0.0,
+     "motion": 0.75,
+     "no_commit": 0.05,
+     "wrong_goal": 0.2,
+     "wrong_object": 0.0
+    }
+   },
+   "libero_90:75": {
+    "bin": "part",
+    "bound_create": {
+     "black_book_1": 20
+    },
+    "bound_zs": {
+     "black_book_1": 20
+    },
+    "create": 15,
+    "named": [
+     "black_book_1"
+    ],
+    "selection": "zs",
+    "sources": [
+     "pick up the book on the right and place it on the cabinet shelf",
+     "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+    ],
+    "text": "pick up the book and place it in the right compartment of the caddy",
+    "token": "74 KB KV token",
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ]
+    ],
+    "zs": 0,
+    "zs_types": {
+     "fixture": 0.0,
+     "motion": 0.3,
+     "no_commit": 0.0,
+     "wrong_goal": 0.7,
+     "wrong_object": 0.0
+    }
+   },
+   "libero_90:76": {
+    "bin": "part",
+    "bound_create": {
+     "white_yellow_mug_1": 20
+    },
+    "bound_zs": {
+     "black_book_1": 1,
+     "white_yellow_mug_1": 19
+    },
+    "create": 7,
+    "named": [
+     "white_yellow_mug_1"
+    ],
+    "selection": "zs",
+    "sources": [
+     "put the yellow and white mug on the right plate",
+     "put the white mug on the left plate and put the yellow and white mug on the right plate"
+    ],
+    "text": "pick up the yellow and white mug and place it to the right of the caddy",
+    "token": "74 KB KV token",
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ]
+    ],
+    "zs": 0,
+    "zs_types": {
+     "fixture": 0.0,
+     "motion": 0.8,
+     "no_commit": 0.0,
+     "wrong_goal": 0.15,
+     "wrong_object": 0.05
+    }
+   },
+   "libero_90:78": {
+    "bin": "part",
+    "bound_create": {
+     "black_book_1": 20
+    },
+    "bound_zs": {
+     "black_book_1": 20
+    },
+    "create": 8,
+    "named": [
+     "black_book_1"
+    ],
+    "selection": "blind@24",
+    "sources": [
+     "pick up the book in the middle and place it on the cabinet shelf",
+     "put the yellow and white mug to the front of the white mug"
+    ],
+    "text": "pick up the book and place it in the front compartment of the caddy",
+    "token": "74 KB KV token",
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ]
+    ],
+    "zs": 0,
+    "zs_types": {
+     "fixture": 0.0,
+     "motion": 0.35,
+     "no_commit": 0.0,
+     "wrong_goal": 0.65,
+     "wrong_object": 0.0
+    }
+   },
+   "libero_90:79": {
+    "bin": "part",
+    "bound_create": {
+     "black_book_1": 20
+    },
+    "bound_zs": {
+     "black_book_1": 20
+    },
+    "create": 9,
+    "named": [
+     "black_book_1"
+    ],
+    "selection": "blind@12",
+    "sources": [
+     "pick up the book in the middle and place it on the cabinet shelf",
+     "put the chocolate pudding to the left of the plate"
+    ],
+    "text": "pick up the book and place it in the left compartment of the caddy",
+    "token": "74 KB KV token",
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ]
+    ],
+    "zs": 0,
+    "zs_types": {
+     "fixture": 0.0,
+     "motion": 0.25,
+     "no_commit": 0.0,
+     "wrong_goal": 0.75,
+     "wrong_object": 0.0
+    }
+   },
+   "libero_90:80": {
+    "bin": "part",
+    "bound_create": {
+     "None": 2,
+     "black_book_1": 18
+    },
+    "bound_zs": {
+     "black_book_1": 19,
+     "red_coffee_mug_1": 1
+    },
+    "create": 7,
+    "named": [
+     "black_book_1"
+    ],
+    "selection": "blind@36",
+    "sources": [
+     "pick up the book on the right and place it on the cabinet shelf",
+     "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+    ],
+    "text": "pick up the book and place it in the right compartment of the caddy",
+    "token": "74 KB KV token",
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ]
+    ],
+    "zs": 0,
+    "zs_types": {
+     "fixture": 0.0,
+     "motion": 0.1,
+     "no_commit": 0.0,
+     "wrong_goal": 0.85,
+     "wrong_object": 0.05
+    }
+   },
+   "libero_90:83": {
+    "bin": "part",
+    "bound_create": {
+     "black_book_1": 20
+    },
+    "bound_zs": {
+     "black_book_1": 2,
+     "porcelain_mug_1": 18
+    },
+    "create": 7,
+    "named": [
+     "black_book_1"
+    ],
+    "selection": "blind@36",
+    "sources": [
+     "pick up the book on the right and place it on the cabinet shelf",
+     "put the white mug on the plate and put the chocolate pudding to the right of the plate"
+    ],
+    "text": "pick up the book and place it in the right compartment of the caddy",
+    "token": "74 KB KV token",
+    "uncovered": [
+     [
+      "G",
+      "caddy"
+     ],
+     [
+      "G",
+      "compartment"
+     ]
+    ],
+    "zs": 0,
+    "zs_types": {
+     "fixture": 0.0,
+     "motion": 0.1,
+     "no_commit": 0.0,
+     "wrong_goal": 0.0,
+     "wrong_object": 0.9
+    }
+   }
+  },
+  "create_k5_vs_lora_k5_1000": {
+   "diff": {
+    "diff": -0.06724137931034482,
+    "hi": 0.0034482758620689655,
+    "hi90": -0.006896551724137931,
+    "lo": -0.14310344827586208,
+    "lo90": -0.1310344827586207,
+    "n_pairs": 580,
+    "n_tasks": 29
+   },
+   "discordant": [
+    53,
+    92
+   ]
+  },
+  "curve": {
+   "compose_sel": {
+    "1": {
+     "all": 150,
+     "arm": "compose_sel",
+     "combination": 150,
+     "motion": 95,
+     "no_commit": 24,
+     "part": 0,
+     "wrong_goal": 120,
+     "wrong_object": 123
+    }
+   },
+   "create": {
+    "1": {
+     "all": 351,
+     "arm": "create",
+     "combination": 234,
+     "motion": 105,
+     "no_commit": 68,
+     "part": 117,
+     "wrong_goal": 29,
+     "wrong_object": 5
+    },
+    "5": {
+     "all": 446,
+     "arm": "create_k5",
+     "combination": 283,
+     "motion": 96,
+     "no_commit": 25,
+     "part": 163,
+     "vs_k1": {
+      "diff": 0.16379310344827586,
+      "discordant": [
+       145,
+       50
+      ],
+      "hi": 0.2655172413793103,
+      "hi90": 0.25,
+      "lo": 0.06379310344827586,
+      "lo90": 0.07931034482758621,
+      "n_pairs": 580,
+      "n_tasks": 29
+     },
+     "wrong_goal": 4,
+     "wrong_object": 5
+    }
+   },
+   "lora1000": {
+    "1": {
+     "all": 387,
+     "arm": "lora1000",
+     "combination": 238,
+     "motion": 102,
+     "no_commit": 51,
+     "part": 149,
+     "wrong_goal": 15,
+     "wrong_object": 9
+    },
+    "10": {
+     "all": 483,
+     "arm": "lora_k10_1000",
+     "combination": 282,
+     "motion": 67,
+     "no_commit": 6,
+     "part": 201,
+     "vs_k1": {
+      "diff": 0.16551724137931034,
+      "discordant": [
+       134,
+       38
+      ],
+      "hi": 0.2517241379310345,
+      "hi90": 0.23793103448275862,
+      "lo": 0.08275862068965517,
+      "lo90": 0.09646551724137939,
+      "n_pairs": 580,
+      "n_tasks": 29
+     },
+     "wrong_goal": 12,
+     "wrong_object": 2
+    },
+    "5": {
+     "all": 485,
+     "arm": "lora_k5_1000",
+     "combination": 281,
+     "motion": 57,
+     "no_commit": 20,
+     "part": 204,
+     "vs_k1": {
+      "diff": 0.16896551724137931,
+      "discordant": [
+       132,
+       34
+      ],
+      "hi": 0.25862068965517243,
+      "hi90": 0.24482758620689654,
+      "lo": 0.08275862068965517,
+      "lo90": 0.09655172413793103,
+      "n_pairs": 580,
+      "n_tasks": 29
+     },
+     "wrong_goal": 9,
+     "wrong_object": 1
+    }
+   },
+   "lora200": {
+    "1": {
+     "all": 369,
+     "arm": "lora200",
+     "combination": 234,
+     "motion": 104,
+     "no_commit": 53,
+     "part": 135,
+     "wrong_goal": 25,
+     "wrong_object": 3
+    },
+    "10": {
+     "all": 430,
+     "arm": "lora_k10_200",
+     "combination": 284,
+     "motion": 112,
+     "no_commit": 21,
+     "part": 146,
+     "vs_k1": {
+      "diff": 0.10517241379310345,
+      "discordant": [
+       121,
+       60
+      ],
+      "hi": 0.2,
+      "hi90": 0.18620689655172415,
+      "lo": 0.006896551724137931,
+      "lo90": 0.02413793103448276,
+      "n_pairs": 580,
+      "n_tasks": 29
+     },
+     "wrong_goal": 10,
+     "wrong_object": 2
+    },
+    "5": {
+     "all": 436,
+     "arm": "lora_k5_200",
+     "combination": 287,
+     "motion": 107,
+     "no_commit": 21,
+     "part": 149,
+     "vs_k1": {
+      "diff": 0.11551724137931034,
+      "discordant": [
+       127,
+       60
+      ],
+      "hi": 0.21724137931034482,
+      "hi90": 0.2,
+      "lo": 0.013793103448275862,
+      "lo90": 0.03103448275862069,
+      "n_pairs": 580,
+      "n_tasks": 29
+     },
+     "wrong_goal": 10,
+     "wrong_object": 2
+    }
+   },
+   "zs": {
+    "1": {
+     "all": 180,
+     "arm": "zs",
+     "combination": 180,
+     "motion": 117,
+     "no_commit": 7,
+     "part": 0,
+     "wrong_goal": 152,
+     "wrong_object": 63
+    }
+   }
+  },
+  "missing_arms": [],
+  "sets": {
+   "combination_pp": [
+    "libero_90:14",
+    "libero_90:16",
+    "libero_90:60",
+    "libero_90:1",
+    "libero_90:29",
+    "libero_90:50",
+    "libero_90:9",
+    "libero_90:36",
+    "libero_90:40",
+    "libero_90:59",
+    "libero_90:61"
+   ],
+   "instance": [
+    "libero_90:14",
+    "libero_90:16",
+    "libero_90:60",
+    "libero_90:38"
+   ],
+   "part_pp": [
+    "libero_90:32",
+    "libero_90:58",
+    "libero_90:73",
+    "libero_90:75",
+    "libero_90:76",
+    "libero_90:77",
+    "libero_90:78",
+    "libero_90:79",
+    "libero_90:80",
+    "libero_90:82",
+    "libero_90:83",
+    "libero_90:38",
+    "libero_90:45"
+   ],
+   "pickplace": [
+    "libero_90:14",
+    "libero_90:16",
+    "libero_90:60",
+    "libero_90:1",
+    "libero_90:29",
+    "libero_90:50",
+    "libero_90:9",
+    "libero_90:36",
+    "libero_90:40",
+    "libero_90:59",
+    "libero_90:61",
+    "libero_90:32",
+    "libero_90:58",
+    "libero_90:73",
+    "libero_90:75",
+    "libero_90:76",
+    "libero_90:77",
+    "libero_90:78",
+    "libero_90:79",
+    "libero_90:80",
+    "libero_90:82",
+    "libero_90:83",
+    "libero_90:38",
+    "libero_90:45"
+   ]
+  },
+  "systematicity": {
+   "compose_sel": {
+    "hi": 6.720659320023017,
+    "lo": -7.869981748078483,
+    "slope": 0.056485972250757355
+   },
+   "create": {
+    "hi": 3.7192134361976734,
+    "lo": -8.729441908873177,
+    "slope": -1.7242390473363134
+   },
+   "create_k5": {
+    "hi": 9.17743939592073,
+    "lo": -3.206656559704062,
+    "slope": 3.4189352468663414
+   },
+   "lora1000": {
+    "hi": 1.9944089696155232,
+    "lo": -16.082776422962002,
+    "slope": -4.782078566231603
+   },
+   "lora_k10_1000": {
+    "hi": 7.525866176882,
+    "lo": -22.379401109315413,
+    "slope": -3.6832593881159092
+   },
+   "zs": {
+    "hi": 4.357576014094553,
+    "lo": -11.71459981865607,
+    "slope": -2.394705794850807
+   }
+  },
+  "tasks": 29,
+  "totals": {
+   "cc": 350,
+   "compose_cov": 132,
+   "compose_sel": 150,
+   "create": 351,
+   "create_k5": 446,
+   "lora1000": 387,
+   "lora200": 369,
+   "lora50": 226,
+   "lora_k10_1000": 483,
+   "lora_k10_200": 430,
+   "lora_k5_1000": 485,
+   "lora_k5_200": 436,
+   "zs": 180
+  },
+  "types": {
+   "all": {
+    "all": {
+     "cc": {
+      "episodes": 580,
+      "fixture": 14,
+      "motion": 114,
+      "no_commit": 64,
+      "shares_of_failures": {
+       "fixture": 0.06086956521739131,
+       "motion": 0.4956521739130435,
+       "no_commit": 0.2782608695652174,
+       "wrong_goal": 0.11739130434782609,
+       "wrong_object": 0.04782608695652174
+      },
+      "success": 350,
+      "untyped": 0,
+      "wrong_goal": 27,
+      "wrong_object": 11
+     },
+     "compose_cov": {
+      "episodes": 580,
+      "fixture": 67,
+      "motion": 113,
+      "no_commit": 38,
+      "shares_of_failures": {
+       "fixture": 0.14955357142857142,
+       "motion": 0.25223214285714285,
+       "no_commit": 0.08482142857142858,
+       "wrong_goal": 0.3125,
+       "wrong_object": 0.20089285714285715
+      },
+      "success": 132,
+      "untyped": 0,
+      "wrong_goal": 140,
+      "wrong_object": 90
+     },
+     "compose_sel": {
+      "episodes": 580,
+      "fixture": 68,
+      "motion": 95,
+      "no_commit": 24,
+      "shares_of_failures": {
+       "fixture": 0.15813953488372093,
+       "motion": 0.22093023255813954,
+       "no_commit": 0.05581395348837209,
+       "wrong_goal": 0.27906976744186046,
+       "wrong_object": 0.28604651162790695
+      },
+      "success": 150,
+      "untyped": 0,
+      "wrong_goal": 120,
+      "wrong_object": 123
+     },
+     "create": {
+      "episodes": 580,
+      "fixture": 22,
+      "motion": 105,
+      "no_commit": 68,
+      "shares_of_failures": {
+       "fixture": 0.09606986899563319,
+       "motion": 0.4585152838427948,
+       "no_commit": 0.29694323144104806,
+       "wrong_goal": 0.12663755458515283,
+       "wrong_object": 0.021834061135371178
+      },
+      "success": 351,
+      "untyped": 0,
+      "wrong_goal": 29,
+      "wrong_object": 5
+     },
+     "create_k5": {
+      "episodes": 580,
+      "fixture": 4,
+      "motion": 96,
+      "no_commit": 25,
+      "shares_of_failures": {
+       "fixture": 0.029850746268656716,
+       "motion": 0.7164179104477612,
+       "no_commit": 0.1865671641791045,
+       "wrong_goal": 0.029850746268656716,
+       "wrong_object": 0.03731343283582089
+      },
+      "success": 446,
+      "untyped": 0,
+      "wrong_goal": 4,
+      "wrong_object": 5
+     },
+     "lora1000": {
+      "episodes": 580,
+      "fixture": 16,
+      "motion": 102,
+      "no_commit": 51,
+      "shares_of_failures": {
+       "fixture": 0.08290155440414508,
+       "motion": 0.5284974093264249,
+       "no_commit": 0.26424870466321243,
+       "wrong_goal": 0.07772020725388601,
+       "wrong_object": 0.046632124352331605
+      },
+      "success": 387,
+      "untyped": 0,
+      "wrong_goal": 15,
+      "wrong_object": 9
+     },
+     "lora200": {
+      "episodes": 580,
+      "fixture": 26,
+      "motion": 104,
+      "no_commit": 53,
+      "shares_of_failures": {
+       "fixture": 0.12322274881516587,
+       "motion": 0.4928909952606635,
+       "no_commit": 0.25118483412322273,
+       "wrong_goal": 0.11848341232227488,
+       "wrong_object": 0.014218009478672985
+      },
+      "success": 369,
+      "untyped": 0,
+      "wrong_goal": 25,
+      "wrong_object": 3
+     },
+     "lora50": {
+      "episodes": 580,
+      "fixture": 55,
+      "motion": 170,
+      "no_commit": 53,
+      "shares_of_failures": {
+       "fixture": 0.1553672316384181,
+       "motion": 0.480225988700565,
+       "no_commit": 0.1497175141242938,
+       "wrong_goal": 0.11299435028248588,
+       "wrong_object": 0.1016949152542373
+      },
+      "success": 226,
+      "untyped": 0,
+      "wrong_goal": 40,
+      "wrong_object": 36
+     },
+     "lora_k10_1000": {
+      "episodes": 580,
+      "fixture": 10,
+      "motion": 67,
+      "no_commit": 6,
+      "shares_of_failures": {
+       "fixture": 0.10309278350515463,
+       "motion": 0.6907216494845361,
+       "no_commit": 0.061855670103092786,
+       "wrong_goal": 0.12371134020618557,
+       "wrong_object": 0.020618556701030927
+      },
+      "success": 483,
+      "untyped": 0,
+      "wrong_goal": 12,
+      "wrong_object": 2
+     },
+     "lora_k10_200": {
+      "episodes": 580,
+      "fixture": 5,
+      "motion": 112,
+      "no_commit": 21,
+      "shares_of_failures": {
+       "fixture": 0.03333333333333333,
+       "motion": 0.7466666666666667,
+       "no_commit": 0.14,
+       "wrong_goal": 0.06666666666666667,
+       "wrong_object": 0.013333333333333334
+      },
+      "success": 430,
+      "untyped": 0,
+      "wrong_goal": 10,
+      "wrong_object": 2
+     },
+     "lora_k5_1000": {
+      "episodes": 580,
+      "fixture": 8,
+      "motion": 57,
+      "no_commit": 20,
+      "shares_of_failures": {
+       "fixture": 0.08421052631578947,
+       "motion": 0.6,
+       "no_commit": 0.21052631578947367,
+       "wrong_goal": 0.09473684210526316,
+       "wrong_object": 0.010526315789473684
+      },
+      "success": 485,
+      "untyped": 0,
+      "wrong_goal": 9,
+      "wrong_object": 1
+     },
+     "lora_k5_200": {
+      "episodes": 580,
+      "fixture": 4,
+      "motion": 107,
+      "no_commit": 21,
+      "shares_of_failures": {
+       "fixture": 0.027777777777777776,
+       "motion": 0.7430555555555556,
+       "no_commit": 0.14583333333333334,
+       "wrong_goal": 0.06944444444444445,
+       "wrong_object": 0.013888888888888888
+      },
+      "success": 436,
+      "untyped": 0,
+      "wrong_goal": 10,
+      "wrong_object": 2
+     },
+     "zs": {
+      "episodes": 580,
+      "fixture": 61,
+      "motion": 117,
+      "no_commit": 7,
+      "shares_of_failures": {
+       "fixture": 0.1525,
+       "motion": 0.2925,
+       "no_commit": 0.0175,
+       "wrong_goal": 0.38,
+       "wrong_object": 0.1575
+      },
+      "success": 180,
+      "untyped": 0,
+      "wrong_goal": 152,
+      "wrong_object": 63
+     }
+    }
+   },
+   "bin": {
+    "0.1": {
+     "cc": {
+      "episodes": 100,
+      "fixture": 0,
+      "motion": 14,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.7777777777777778,
+       "no_commit": 0.0,
+       "wrong_goal": 0.1111111111111111,
+       "wrong_object": 0.1111111111111111
+      },
+      "success": 82,
+      "untyped": 0,
+      "wrong_goal": 2,
+      "wrong_object": 2
+     },
+     "compose_cov": {
+      "episodes": 100,
+      "fixture": 7,
+      "motion": 14,
+      "no_commit": 1,
+      "shares_of_failures": {
+       "fixture": 0.1590909090909091,
+       "motion": 0.3181818181818182,
+       "no_commit": 0.022727272727272728,
+       "wrong_goal": 0.4318181818181818,
+       "wrong_object": 0.06818181818181818
+      },
+      "success": 56,
+      "untyped": 0,
+      "wrong_goal": 19,
+      "wrong_object": 3
+     },
+     "compose_sel": {
+      "episodes": 100,
+      "fixture": 9,
+      "motion": 4,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.225,
+       "motion": 0.1,
+       "no_commit": 0.0,
+       "wrong_goal": 0.175,
+       "wrong_object": 0.5
+      },
+      "success": 60,
+      "untyped": 0,
+      "wrong_goal": 7,
+      "wrong_object": 20
+     },
+     "create": {
+      "episodes": 100,
+      "fixture": 3,
+      "motion": 11,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.21428571428571427,
+       "motion": 0.7857142857142857,
+       "no_commit": 0.0,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.0
+      },
+      "success": 86,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 0
+     },
+     "create_k5": {
+      "episodes": 100,
+      "fixture": 0,
+      "motion": 5,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 1.0,
+       "no_commit": 0.0,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.0
+      },
+      "success": 95,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 0
+     },
+     "lora1000": {
+      "episodes": 100,
+      "fixture": 1,
+      "motion": 6,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.14285714285714285,
+       "motion": 0.8571428571428571,
+       "no_commit": 0.0,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.0
+      },
+      "success": 93,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 0
+     },
+     "lora200": {
+      "episodes": 100,
+      "fixture": 5,
+      "motion": 12,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.29411764705882354,
+       "motion": 0.7058823529411765,
+       "no_commit": 0.0,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.0
+      },
+      "success": 83,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 0
+     },
+     "lora50": {
+      "episodes": 100,
+      "fixture": 8,
+      "motion": 16,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.32,
+       "motion": 0.64,
+       "no_commit": 0.0,
+       "wrong_goal": 0.04,
+       "wrong_object": 0.0
+      },
+      "success": 75,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 0
+     },
+     "lora_k10_1000": {
+      "episodes": 100,
+      "fixture": 0,
+      "motion": 3,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 1.0,
+       "no_commit": 0.0,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.0
+      },
+      "success": 97,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 0
+     },
+     "lora_k10_200": {
+      "episodes": 100,
+      "fixture": 1,
+      "motion": 3,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.2,
+       "motion": 0.6,
+       "no_commit": 0.0,
+       "wrong_goal": 0.2,
+       "wrong_object": 0.0
+      },
+      "success": 95,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 0
+     },
+     "lora_k5_1000": {
+      "episodes": 100,
+      "fixture": 1,
+      "motion": 2,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.3333333333333333,
+       "motion": 0.6666666666666666,
+       "no_commit": 0.0,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.0
+      },
+      "success": 97,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 0
+     },
+     "lora_k5_200": {
+      "episodes": 100,
+      "fixture": 0,
+      "motion": 2,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 1.0,
+       "no_commit": 0.0,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.0
+      },
+      "success": 98,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 0
+     },
+     "zs": {
+      "episodes": 100,
+      "fixture": 1,
+      "motion": 3,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.05,
+       "motion": 0.15,
+       "no_commit": 0.0,
+       "wrong_goal": 0.8,
+       "wrong_object": 0.0
+      },
+      "success": 80,
+      "untyped": 0,
+      "wrong_goal": 16,
+      "wrong_object": 0
+     }
+    },
+    "0.3": {
+     "cc": {
+      "episodes": 100,
+      "fixture": 14,
+      "motion": 7,
+      "no_commit": 2,
+      "shares_of_failures": {
+       "fixture": 0.4827586206896552,
+       "motion": 0.2413793103448276,
+       "no_commit": 0.06896551724137931,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.20689655172413793
+      },
+      "success": 71,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 6
+     },
+     "compose_cov": {
+      "episodes": 100,
+      "fixture": 20,
+      "motion": 24,
+      "no_commit": 2,
+      "shares_of_failures": {
+       "fixture": 0.30303030303030304,
+       "motion": 0.36363636363636365,
+       "no_commit": 0.030303030303030304,
+       "wrong_goal": 0.030303030303030304,
+       "wrong_object": 0.2727272727272727
+      },
+      "success": 34,
+      "untyped": 0,
+      "wrong_goal": 2,
+      "wrong_object": 18
+     },
+     "compose_sel": {
+      "episodes": 100,
+      "fixture": 20,
+      "motion": 23,
+      "no_commit": 2,
+      "shares_of_failures": {
+       "fixture": 0.29411764705882354,
+       "motion": 0.3382352941176471,
+       "no_commit": 0.029411764705882353,
+       "wrong_goal": 0.014705882352941176,
+       "wrong_object": 0.3235294117647059
+      },
+      "success": 32,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 22
+     },
+     "create": {
+      "episodes": 100,
+      "fixture": 14,
+      "motion": 4,
+      "no_commit": 3,
+      "shares_of_failures": {
+       "fixture": 0.56,
+       "motion": 0.16,
+       "no_commit": 0.12,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.16
+      },
+      "success": 75,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 4
+     },
+     "create_k5": {
+      "episodes": 100,
+      "fixture": 3,
+      "motion": 3,
+      "no_commit": 1,
+      "shares_of_failures": {
+       "fixture": 0.2727272727272727,
+       "motion": 0.2727272727272727,
+       "no_commit": 0.09090909090909091,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.36363636363636365
+      },
+      "success": 89,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 4
+     },
+     "lora1000": {
+      "episodes": 100,
+      "fixture": 0,
+      "motion": 8,
+      "no_commit": 1,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.5,
+       "no_commit": 0.0625,
+       "wrong_goal": 0.0625,
+       "wrong_object": 0.375
+      },
+      "success": 84,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 6
+     },
+     "lora200": {
+      "episodes": 100,
+      "fixture": 13,
+      "motion": 6,
+      "no_commit": 4,
+      "shares_of_failures": {
+       "fixture": 0.52,
+       "motion": 0.24,
+       "no_commit": 0.16,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.08
+      },
+      "success": 75,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 2
+     },
+     "lora50": {
+      "episodes": 100,
+      "fixture": 19,
+      "motion": 4,
+      "no_commit": 2,
+      "shares_of_failures": {
+       "fixture": 0.3958333333333333,
+       "motion": 0.08333333333333333,
+       "no_commit": 0.041666666666666664,
+       "wrong_goal": 0.20833333333333334,
+       "wrong_object": 0.2708333333333333
+      },
+      "success": 52,
+      "untyped": 0,
+      "wrong_goal": 10,
+      "wrong_object": 13
+     },
+     "lora_k10_1000": {
+      "episodes": 100,
+      "fixture": 0,
+      "motion": 0,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.0,
+       "no_commit": 0.0,
+       "wrong_goal": 0.3333333333333333,
+       "wrong_object": 0.6666666666666666
+      },
+      "success": 97,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 2
+     },
+     "lora_k10_200": {
+      "episodes": 100,
+      "fixture": 3,
+      "motion": 1,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.375,
+       "motion": 0.125,
+       "no_commit": 0.0,
+       "wrong_goal": 0.25,
+       "wrong_object": 0.25
+      },
+      "success": 92,
+      "untyped": 0,
+      "wrong_goal": 2,
+      "wrong_object": 2
+     },
+     "lora_k5_1000": {
+      "episodes": 100,
+      "fixture": 4,
+      "motion": 0,
+      "no_commit": 2,
+      "shares_of_failures": {
+       "fixture": 0.5714285714285714,
+       "motion": 0.0,
+       "no_commit": 0.2857142857142857,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.14285714285714285
+      },
+      "success": 93,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 1
+     },
+     "lora_k5_200": {
+      "episodes": 100,
+      "fixture": 2,
+      "motion": 3,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.25,
+       "motion": 0.375,
+       "no_commit": 0.0,
+       "wrong_goal": 0.125,
+       "wrong_object": 0.25
+      },
+      "success": 92,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 2
+     },
+     "zs": {
+      "episodes": 100,
+      "fixture": 20,
+      "motion": 9,
+      "no_commit": 5,
+      "shares_of_failures": {
+       "fixture": 0.3508771929824561,
+       "motion": 0.15789473684210525,
+       "no_commit": 0.08771929824561403,
+       "wrong_goal": 0.3508771929824561,
+       "wrong_object": 0.05263157894736842
+      },
+      "success": 43,
+      "untyped": 0,
+      "wrong_goal": 20,
+      "wrong_object": 3
+     }
+    },
+    "0.5": {
+     "cc": {
+      "episodes": 100,
+      "fixture": 0,
+      "motion": 7,
+      "no_commit": 8,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.3333333333333333,
+       "no_commit": 0.38095238095238093,
+       "wrong_goal": 0.14285714285714285,
+       "wrong_object": 0.14285714285714285
+      },
+      "success": 79,
+      "untyped": 0,
+      "wrong_goal": 3,
+      "wrong_object": 3
+     },
+     "compose_cov": {
+      "episodes": 100,
+      "fixture": 20,
+      "motion": 31,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.3448275862068966,
+       "motion": 0.5344827586206896,
+       "no_commit": 0.0,
+       "wrong_goal": 0.1206896551724138,
+       "wrong_object": 0.0
+      },
+      "success": 42,
+      "untyped": 0,
+      "wrong_goal": 7,
+      "wrong_object": 0
+     },
+     "compose_sel": {
+      "episodes": 100,
+      "fixture": 19,
+      "motion": 7,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.4523809523809524,
+       "motion": 0.16666666666666666,
+       "no_commit": 0.0,
+       "wrong_goal": 0.38095238095238093,
+       "wrong_object": 0.0
+      },
+      "success": 58,
+      "untyped": 0,
+      "wrong_goal": 16,
+      "wrong_object": 0
+     },
+     "create": {
+      "episodes": 100,
+      "fixture": 5,
+      "motion": 7,
+      "no_commit": 12,
+      "shares_of_failures": {
+       "fixture": 0.18518518518518517,
+       "motion": 0.25925925925925924,
+       "no_commit": 0.4444444444444444,
+       "wrong_goal": 0.1111111111111111,
+       "wrong_object": 0.0
+      },
+      "success": 73,
+      "untyped": 0,
+      "wrong_goal": 3,
+      "wrong_object": 0
+     },
+     "create_k5": {
+      "episodes": 100,
+      "fixture": 0,
+      "motion": 0,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.0,
+       "no_commit": 0.0,
+       "wrong_goal": 1.0,
+       "wrong_object": 0.0
+      },
+      "success": 99,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 0
+     },
+     "lora1000": {
+      "episodes": 100,
+      "fixture": 15,
+      "motion": 11,
+      "no_commit": 11,
+      "shares_of_failures": {
+       "fixture": 0.38461538461538464,
+       "motion": 0.28205128205128205,
+       "no_commit": 0.28205128205128205,
+       "wrong_goal": 0.05128205128205128,
+       "wrong_object": 0.0
+      },
+      "success": 61,
+      "untyped": 0,
+      "wrong_goal": 2,
+      "wrong_object": 0
+     },
+     "lora200": {
+      "episodes": 100,
+      "fixture": 8,
+      "motion": 6,
+      "no_commit": 7,
+      "shares_of_failures": {
+       "fixture": 0.3333333333333333,
+       "motion": 0.25,
+       "no_commit": 0.2916666666666667,
+       "wrong_goal": 0.125,
+       "wrong_object": 0.0
+      },
+      "success": 76,
+      "untyped": 0,
+      "wrong_goal": 3,
+      "wrong_object": 0
+     },
+     "lora50": {
+      "episodes": 100,
+      "fixture": 13,
+      "motion": 13,
+      "no_commit": 2,
+      "shares_of_failures": {
+       "fixture": 0.3333333333333333,
+       "motion": 0.3333333333333333,
+       "no_commit": 0.05128205128205128,
+       "wrong_goal": 0.28205128205128205,
+       "wrong_object": 0.0
+      },
+      "success": 61,
+      "untyped": 0,
+      "wrong_goal": 11,
+      "wrong_object": 0
+     },
+     "lora_k10_1000": {
+      "episodes": 100,
+      "fixture": 10,
+      "motion": 2,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.8333333333333334,
+       "motion": 0.16666666666666666,
+       "no_commit": 0.0,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.0
+      },
+      "success": 88,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 0
+     },
+     "lora_k10_200": {
+      "episodes": 100,
+      "fixture": 1,
+      "motion": 2,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.3333333333333333,
+       "motion": 0.6666666666666666,
+       "no_commit": 0.0,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.0
+      },
+      "success": 97,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 0
+     },
+     "lora_k5_1000": {
+      "episodes": 100,
+      "fixture": 1,
+      "motion": 3,
+      "no_commit": 3,
+      "shares_of_failures": {
+       "fixture": 0.1111111111111111,
+       "motion": 0.3333333333333333,
+       "no_commit": 0.3333333333333333,
+       "wrong_goal": 0.2222222222222222,
+       "wrong_object": 0.0
+      },
+      "success": 91,
+      "untyped": 0,
+      "wrong_goal": 2,
+      "wrong_object": 0
+     },
+     "lora_k5_200": {
+      "episodes": 100,
+      "fixture": 1,
+      "motion": 2,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.3333333333333333,
+       "motion": 0.6666666666666666,
+       "no_commit": 0.0,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.0
+      },
+      "success": 97,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 0
+     },
+     "zs": {
+      "episodes": 100,
+      "fixture": 20,
+      "motion": 7,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.46511627906976744,
+       "motion": 0.16279069767441862,
+       "no_commit": 0.0,
+       "wrong_goal": 0.37209302325581395,
+       "wrong_object": 0.0
+      },
+      "success": 57,
+      "untyped": 0,
+      "wrong_goal": 16,
+      "wrong_object": 0
+     }
+    },
+    "part": {
+     "cc": {
+      "episodes": 280,
+      "fixture": 0,
+      "motion": 86,
+      "no_commit": 54,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.5308641975308642,
+       "no_commit": 0.3333333333333333,
+       "wrong_goal": 0.13580246913580246,
+       "wrong_object": 0.0
+      },
+      "success": 118,
+      "untyped": 0,
+      "wrong_goal": 22,
+      "wrong_object": 0
+     },
+     "compose_cov": {
+      "episodes": 280,
+      "fixture": 20,
+      "motion": 44,
+      "no_commit": 35,
+      "shares_of_failures": {
+       "fixture": 0.07142857142857142,
+       "motion": 0.15714285714285714,
+       "no_commit": 0.125,
+       "wrong_goal": 0.4,
+       "wrong_object": 0.24642857142857144
+      },
+      "success": 0,
+      "untyped": 0,
+      "wrong_goal": 112,
+      "wrong_object": 69
+     },
+     "compose_sel": {
+      "episodes": 280,
+      "fixture": 20,
+      "motion": 61,
+      "no_commit": 22,
+      "shares_of_failures": {
+       "fixture": 0.07142857142857142,
+       "motion": 0.21785714285714286,
+       "no_commit": 0.07857142857142857,
+       "wrong_goal": 0.34285714285714286,
+       "wrong_object": 0.2892857142857143
+      },
+      "success": 0,
+      "untyped": 0,
+      "wrong_goal": 96,
+      "wrong_object": 81
+     },
+     "create": {
+      "episodes": 280,
+      "fixture": 0,
+      "motion": 83,
+      "no_commit": 53,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.50920245398773,
+       "no_commit": 0.32515337423312884,
+       "wrong_goal": 0.15950920245398773,
+       "wrong_object": 0.006134969325153374
+      },
+      "success": 117,
+      "untyped": 0,
+      "wrong_goal": 26,
+      "wrong_object": 1
+     },
+     "create_k5": {
+      "episodes": 280,
+      "fixture": 1,
+      "motion": 88,
+      "no_commit": 24,
+      "shares_of_failures": {
+       "fixture": 0.008547008547008548,
+       "motion": 0.7521367521367521,
+       "no_commit": 0.20512820512820512,
+       "wrong_goal": 0.02564102564102564,
+       "wrong_object": 0.008547008547008548
+      },
+      "success": 163,
+      "untyped": 0,
+      "wrong_goal": 3,
+      "wrong_object": 1
+     },
+     "lora1000": {
+      "episodes": 280,
+      "fixture": 0,
+      "motion": 77,
+      "no_commit": 39,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.5877862595419847,
+       "no_commit": 0.29770992366412213,
+       "wrong_goal": 0.0916030534351145,
+       "wrong_object": 0.022900763358778626
+      },
+      "success": 149,
+      "untyped": 0,
+      "wrong_goal": 12,
+      "wrong_object": 3
+     },
+     "lora200": {
+      "episodes": 280,
+      "fixture": 0,
+      "motion": 80,
+      "no_commit": 42,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.5517241379310345,
+       "no_commit": 0.2896551724137931,
+       "wrong_goal": 0.15172413793103448,
+       "wrong_object": 0.006896551724137931
+      },
+      "success": 135,
+      "untyped": 0,
+      "wrong_goal": 22,
+      "wrong_object": 1
+     },
+     "lora50": {
+      "episodes": 280,
+      "fixture": 15,
+      "motion": 137,
+      "no_commit": 49,
+      "shares_of_failures": {
+       "fixture": 0.06198347107438017,
+       "motion": 0.5661157024793388,
+       "no_commit": 0.2024793388429752,
+       "wrong_goal": 0.0743801652892562,
+       "wrong_object": 0.09504132231404959
+      },
+      "success": 38,
+      "untyped": 0,
+      "wrong_goal": 18,
+      "wrong_object": 23
+     },
+     "lora_k10_1000": {
+      "episodes": 280,
+      "fixture": 0,
+      "motion": 62,
+      "no_commit": 6,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.7848101265822784,
+       "no_commit": 0.0759493670886076,
+       "wrong_goal": 0.13924050632911392,
+       "wrong_object": 0.0
+      },
+      "success": 201,
+      "untyped": 0,
+      "wrong_goal": 11,
+      "wrong_object": 0
+     },
+     "lora_k10_200": {
+      "episodes": 280,
+      "fixture": 0,
+      "motion": 106,
+      "no_commit": 21,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.7910447761194029,
+       "no_commit": 0.15671641791044777,
+       "wrong_goal": 0.05223880597014925,
+       "wrong_object": 0.0
+      },
+      "success": 146,
+      "untyped": 0,
+      "wrong_goal": 7,
+      "wrong_object": 0
+     },
+     "lora_k5_1000": {
+      "episodes": 280,
+      "fixture": 2,
+      "motion": 52,
+      "no_commit": 15,
+      "shares_of_failures": {
+       "fixture": 0.02631578947368421,
+       "motion": 0.6842105263157895,
+       "no_commit": 0.19736842105263158,
+       "wrong_goal": 0.09210526315789473,
+       "wrong_object": 0.0
+      },
+      "success": 204,
+      "untyped": 0,
+      "wrong_goal": 7,
+      "wrong_object": 0
+     },
+     "lora_k5_200": {
+      "episodes": 280,
+      "fixture": 1,
+      "motion": 100,
+      "no_commit": 21,
+      "shares_of_failures": {
+       "fixture": 0.007633587786259542,
+       "motion": 0.7633587786259542,
+       "no_commit": 0.16030534351145037,
+       "wrong_goal": 0.06870229007633588,
+       "wrong_object": 0.0
+      },
+      "success": 149,
+      "untyped": 0,
+      "wrong_goal": 9,
+      "wrong_object": 0
+     },
+     "zs": {
+      "episodes": 280,
+      "fixture": 20,
+      "motion": 98,
+      "no_commit": 2,
+      "shares_of_failures": {
+       "fixture": 0.07142857142857142,
+       "motion": 0.35,
+       "no_commit": 0.007142857142857143,
+       "wrong_goal": 0.35714285714285715,
+       "wrong_object": 0.21428571428571427
+      },
+      "success": 0,
+      "untyped": 0,
+      "wrong_goal": 100,
+      "wrong_object": 60
+     }
+    }
+   },
+   "instance": {
+    "False": {
+     "cc": {
+      "episodes": 500,
+      "fixture": 14,
+      "motion": 95,
+      "no_commit": 59,
+      "shares_of_failures": {
+       "fixture": 0.06930693069306931,
+       "motion": 0.47029702970297027,
+       "no_commit": 0.29207920792079206,
+       "wrong_goal": 0.12376237623762376,
+       "wrong_object": 0.04455445544554455
+      },
+      "success": 298,
+      "untyped": 0,
+      "wrong_goal": 25,
+      "wrong_object": 9
+     },
+     "compose_cov": {
+      "episodes": 500,
+      "fixture": 67,
+      "motion": 99,
+      "no_commit": 24,
+      "shares_of_failures": {
+       "fixture": 0.17135549872122763,
+       "motion": 0.2531969309462916,
+       "no_commit": 0.061381074168797956,
+       "wrong_goal": 0.309462915601023,
+       "wrong_object": 0.20460358056265984
+      },
+      "success": 109,
+      "untyped": 0,
+      "wrong_goal": 121,
+      "wrong_object": 80
+     },
+     "compose_sel": {
+      "episodes": 500,
+      "fixture": 68,
+      "motion": 91,
+      "no_commit": 21,
+      "shares_of_failures": {
+       "fixture": 0.17941952506596306,
+       "motion": 0.24010554089709762,
+       "no_commit": 0.055408970976253295,
+       "wrong_goal": 0.29815303430079154,
+       "wrong_object": 0.22691292875989447
+      },
+      "success": 121,
+      "untyped": 0,
+      "wrong_goal": 113,
+      "wrong_object": 86
+     },
+     "create": {
+      "episodes": 500,
+      "fixture": 22,
+      "motion": 94,
+      "no_commit": 54,
+      "shares_of_failures": {
+       "fixture": 0.10837438423645321,
+       "motion": 0.4630541871921182,
+       "no_commit": 0.2660098522167488,
+       "wrong_goal": 0.14285714285714285,
+       "wrong_object": 0.019704433497536946
+      },
+      "success": 297,
+      "untyped": 0,
+      "wrong_goal": 29,
+      "wrong_object": 4
+     },
+     "create_k5": {
+      "episodes": 500,
+      "fixture": 4,
+      "motion": 91,
+      "no_commit": 14,
+      "shares_of_failures": {
+       "fixture": 0.03418803418803419,
+       "motion": 0.7777777777777778,
+       "no_commit": 0.11965811965811966,
+       "wrong_goal": 0.03418803418803419,
+       "wrong_object": 0.03418803418803419
+      },
+      "success": 383,
+      "untyped": 0,
+      "wrong_goal": 4,
+      "wrong_object": 4
+     },
+     "lora1000": {
+      "episodes": 500,
+      "fixture": 16,
+      "motion": 93,
+      "no_commit": 46,
+      "shares_of_failures": {
+       "fixture": 0.09142857142857143,
+       "motion": 0.5314285714285715,
+       "no_commit": 0.26285714285714284,
+       "wrong_goal": 0.08,
+       "wrong_object": 0.03428571428571429
+      },
+      "success": 325,
+      "untyped": 0,
+      "wrong_goal": 14,
+      "wrong_object": 6
+     },
+     "lora200": {
+      "episodes": 500,
+      "fixture": 26,
+      "motion": 90,
+      "no_commit": 47,
+      "shares_of_failures": {
+       "fixture": 0.1368421052631579,
+       "motion": 0.47368421052631576,
+       "no_commit": 0.24736842105263157,
+       "wrong_goal": 0.12631578947368421,
+       "wrong_object": 0.015789473684210527
+      },
+      "success": 310,
+      "untyped": 0,
+      "wrong_goal": 24,
+      "wrong_object": 3
+     },
+     "lora50": {
+      "episodes": 500,
+      "fixture": 55,
+      "motion": 154,
+      "no_commit": 38,
+      "shares_of_failures": {
+       "fixture": 0.17295597484276728,
+       "motion": 0.48427672955974843,
+       "no_commit": 0.11949685534591195,
+       "wrong_goal": 0.12264150943396226,
+       "wrong_object": 0.10062893081761007
+      },
+      "success": 182,
+      "untyped": 0,
+      "wrong_goal": 39,
+      "wrong_object": 32
+     },
+     "lora_k10_1000": {
+      "episodes": 500,
+      "fixture": 10,
+      "motion": 64,
+      "no_commit": 3,
+      "shares_of_failures": {
+       "fixture": 0.1111111111111111,
+       "motion": 0.7111111111111111,
+       "no_commit": 0.03333333333333333,
+       "wrong_goal": 0.12222222222222222,
+       "wrong_object": 0.022222222222222223
+      },
+      "success": 410,
+      "untyped": 0,
+      "wrong_goal": 11,
+      "wrong_object": 2
+     },
+     "lora_k10_200": {
+      "episodes": 500,
+      "fixture": 5,
+      "motion": 108,
+      "no_commit": 16,
+      "shares_of_failures": {
+       "fixture": 0.03597122302158273,
+       "motion": 0.7769784172661871,
+       "no_commit": 0.11510791366906475,
+       "wrong_goal": 0.05755395683453238,
+       "wrong_object": 0.014388489208633094
+      },
+      "success": 361,
+      "untyped": 0,
+      "wrong_goal": 8,
+      "wrong_object": 2
+     },
+     "lora_k5_1000": {
+      "episodes": 500,
+      "fixture": 8,
+      "motion": 53,
+      "no_commit": 14,
+      "shares_of_failures": {
+       "fixture": 0.09411764705882353,
+       "motion": 0.6235294117647059,
+       "no_commit": 0.16470588235294117,
+       "wrong_goal": 0.10588235294117647,
+       "wrong_object": 0.011764705882352941
+      },
+      "success": 415,
+      "untyped": 0,
+      "wrong_goal": 9,
+      "wrong_object": 1
+     },
+     "lora_k5_200": {
+      "episodes": 500,
+      "fixture": 4,
+      "motion": 104,
+      "no_commit": 13,
+      "shares_of_failures": {
+       "fixture": 0.030303030303030304,
+       "motion": 0.7878787878787878,
+       "no_commit": 0.09848484848484848,
+       "wrong_goal": 0.06818181818181818,
+       "wrong_object": 0.015151515151515152
+      },
+      "success": 368,
+      "untyped": 0,
+      "wrong_goal": 9,
+      "wrong_object": 2
+     },
+     "zs": {
+      "episodes": 500,
+      "fixture": 61,
+      "motion": 114,
+      "no_commit": 7,
+      "shares_of_failures": {
+       "fixture": 0.16897506925207756,
+       "motion": 0.3157894736842105,
+       "no_commit": 0.019390581717451522,
+       "wrong_goal": 0.3767313019390582,
+       "wrong_object": 0.11911357340720222
+      },
+      "success": 139,
+      "untyped": 0,
+      "wrong_goal": 136,
+      "wrong_object": 43
+     }
+    },
+    "True": {
+     "cc": {
+      "episodes": 80,
+      "fixture": 0,
+      "motion": 19,
+      "no_commit": 5,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.6785714285714286,
+       "no_commit": 0.17857142857142858,
+       "wrong_goal": 0.07142857142857142,
+       "wrong_object": 0.07142857142857142
+      },
+      "success": 52,
+      "untyped": 0,
+      "wrong_goal": 2,
+      "wrong_object": 2
+     },
+     "compose_cov": {
+      "episodes": 80,
+      "fixture": 0,
+      "motion": 14,
+      "no_commit": 14,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.24561403508771928,
+       "no_commit": 0.24561403508771928,
+       "wrong_goal": 0.3333333333333333,
+       "wrong_object": 0.17543859649122806
+      },
+      "success": 23,
+      "untyped": 0,
+      "wrong_goal": 19,
+      "wrong_object": 10
+     },
+     "compose_sel": {
+      "episodes": 80,
+      "fixture": 0,
+      "motion": 4,
+      "no_commit": 3,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.0784313725490196,
+       "no_commit": 0.058823529411764705,
+       "wrong_goal": 0.13725490196078433,
+       "wrong_object": 0.7254901960784313
+      },
+      "success": 29,
+      "untyped": 0,
+      "wrong_goal": 7,
+      "wrong_object": 37
+     },
+     "create": {
+      "episodes": 80,
+      "fixture": 0,
+      "motion": 11,
+      "no_commit": 14,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.4230769230769231,
+       "no_commit": 0.5384615384615384,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.038461538461538464
+      },
+      "success": 54,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 1
+     },
+     "create_k5": {
+      "episodes": 80,
+      "fixture": 0,
+      "motion": 5,
+      "no_commit": 11,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.29411764705882354,
+       "no_commit": 0.6470588235294118,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.058823529411764705
+      },
+      "success": 63,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 1
+     },
+     "lora1000": {
+      "episodes": 80,
+      "fixture": 0,
+      "motion": 9,
+      "no_commit": 5,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.5,
+       "no_commit": 0.2777777777777778,
+       "wrong_goal": 0.05555555555555555,
+       "wrong_object": 0.16666666666666666
+      },
+      "success": 62,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 3
+     },
+     "lora200": {
+      "episodes": 80,
+      "fixture": 0,
+      "motion": 14,
+      "no_commit": 6,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.6666666666666666,
+       "no_commit": 0.2857142857142857,
+       "wrong_goal": 0.047619047619047616,
+       "wrong_object": 0.0
+      },
+      "success": 59,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 0
+     },
+     "lora50": {
+      "episodes": 80,
+      "fixture": 0,
+      "motion": 16,
+      "no_commit": 15,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.4444444444444444,
+       "no_commit": 0.4166666666666667,
+       "wrong_goal": 0.027777777777777776,
+       "wrong_object": 0.1111111111111111
+      },
+      "success": 44,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 4
+     },
+     "lora_k10_1000": {
+      "episodes": 80,
+      "fixture": 0,
+      "motion": 3,
+      "no_commit": 3,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.42857142857142855,
+       "no_commit": 0.42857142857142855,
+       "wrong_goal": 0.14285714285714285,
+       "wrong_object": 0.0
+      },
+      "success": 73,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 0
+     },
+     "lora_k10_200": {
+      "episodes": 80,
+      "fixture": 0,
+      "motion": 4,
+      "no_commit": 5,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.36363636363636365,
+       "no_commit": 0.45454545454545453,
+       "wrong_goal": 0.18181818181818182,
+       "wrong_object": 0.0
+      },
+      "success": 69,
+      "untyped": 0,
+      "wrong_goal": 2,
+      "wrong_object": 0
+     },
+     "lora_k5_1000": {
+      "episodes": 80,
+      "fixture": 0,
+      "motion": 4,
+      "no_commit": 6,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.4,
+       "no_commit": 0.6,
+       "wrong_goal": 0.0,
+       "wrong_object": 0.0
+      },
+      "success": 70,
+      "untyped": 0,
+      "wrong_goal": 0,
+      "wrong_object": 0
+     },
+     "lora_k5_200": {
+      "episodes": 80,
+      "fixture": 0,
+      "motion": 3,
+      "no_commit": 8,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.25,
+       "no_commit": 0.6666666666666666,
+       "wrong_goal": 0.08333333333333333,
+       "wrong_object": 0.0
+      },
+      "success": 68,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 0
+     },
+     "zs": {
+      "episodes": 80,
+      "fixture": 0,
+      "motion": 3,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.07692307692307693,
+       "no_commit": 0.0,
+       "wrong_goal": 0.41025641025641024,
+       "wrong_object": 0.5128205128205128
+      },
+      "success": 41,
+      "untyped": 0,
+      "wrong_goal": 16,
+      "wrong_object": 20
+     }
+    }
+   },
+   "kind": {
+    "combination": {
+     "cc": {
+      "episodes": 300,
+      "fixture": 14,
+      "motion": 28,
+      "no_commit": 10,
+      "shares_of_failures": {
+       "fixture": 0.20588235294117646,
+       "motion": 0.4117647058823529,
+       "no_commit": 0.14705882352941177,
+       "wrong_goal": 0.07352941176470588,
+       "wrong_object": 0.16176470588235295
+      },
+      "success": 232,
+      "untyped": 0,
+      "wrong_goal": 5,
+      "wrong_object": 11
+     },
+     "compose_cov": {
+      "episodes": 300,
+      "fixture": 47,
+      "motion": 69,
+      "no_commit": 3,
+      "shares_of_failures": {
+       "fixture": 0.27976190476190477,
+       "motion": 0.4107142857142857,
+       "no_commit": 0.017857142857142856,
+       "wrong_goal": 0.16666666666666666,
+       "wrong_object": 0.125
+      },
+      "success": 132,
+      "untyped": 0,
+      "wrong_goal": 28,
+      "wrong_object": 21
+     },
+     "compose_sel": {
+      "episodes": 300,
+      "fixture": 48,
+      "motion": 34,
+      "no_commit": 2,
+      "shares_of_failures": {
+       "fixture": 0.32,
+       "motion": 0.22666666666666666,
+       "no_commit": 0.013333333333333334,
+       "wrong_goal": 0.16,
+       "wrong_object": 0.28
+      },
+      "success": 150,
+      "untyped": 0,
+      "wrong_goal": 24,
+      "wrong_object": 42
+     },
+     "create": {
+      "episodes": 300,
+      "fixture": 22,
+      "motion": 22,
+      "no_commit": 15,
+      "shares_of_failures": {
+       "fixture": 0.3333333333333333,
+       "motion": 0.3333333333333333,
+       "no_commit": 0.22727272727272727,
+       "wrong_goal": 0.045454545454545456,
+       "wrong_object": 0.06060606060606061
+      },
+      "success": 234,
+      "untyped": 0,
+      "wrong_goal": 3,
+      "wrong_object": 4
+     },
+     "create_k5": {
+      "episodes": 300,
+      "fixture": 3,
+      "motion": 8,
+      "no_commit": 1,
+      "shares_of_failures": {
+       "fixture": 0.17647058823529413,
+       "motion": 0.47058823529411764,
+       "no_commit": 0.058823529411764705,
+       "wrong_goal": 0.058823529411764705,
+       "wrong_object": 0.23529411764705882
+      },
+      "success": 283,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 4
+     },
+     "lora1000": {
+      "episodes": 300,
+      "fixture": 16,
+      "motion": 25,
+      "no_commit": 12,
+      "shares_of_failures": {
+       "fixture": 0.25806451612903225,
+       "motion": 0.4032258064516129,
+       "no_commit": 0.1935483870967742,
+       "wrong_goal": 0.04838709677419355,
+       "wrong_object": 0.0967741935483871
+      },
+      "success": 238,
+      "untyped": 0,
+      "wrong_goal": 3,
+      "wrong_object": 6
+     },
+     "lora200": {
+      "episodes": 300,
+      "fixture": 26,
+      "motion": 24,
+      "no_commit": 11,
+      "shares_of_failures": {
+       "fixture": 0.3939393939393939,
+       "motion": 0.36363636363636365,
+       "no_commit": 0.16666666666666666,
+       "wrong_goal": 0.045454545454545456,
+       "wrong_object": 0.030303030303030304
+      },
+      "success": 234,
+      "untyped": 0,
+      "wrong_goal": 3,
+      "wrong_object": 2
+     },
+     "lora50": {
+      "episodes": 300,
+      "fixture": 40,
+      "motion": 33,
+      "no_commit": 4,
+      "shares_of_failures": {
+       "fixture": 0.35714285714285715,
+       "motion": 0.29464285714285715,
+       "no_commit": 0.03571428571428571,
+       "wrong_goal": 0.19642857142857142,
+       "wrong_object": 0.11607142857142858
+      },
+      "success": 188,
+      "untyped": 0,
+      "wrong_goal": 22,
+      "wrong_object": 13
+     },
+     "lora_k10_1000": {
+      "episodes": 300,
+      "fixture": 10,
+      "motion": 5,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.5555555555555556,
+       "motion": 0.2777777777777778,
+       "no_commit": 0.0,
+       "wrong_goal": 0.05555555555555555,
+       "wrong_object": 0.1111111111111111
+      },
+      "success": 282,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 2
+     },
+     "lora_k10_200": {
+      "episodes": 300,
+      "fixture": 5,
+      "motion": 6,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.3125,
+       "motion": 0.375,
+       "no_commit": 0.0,
+       "wrong_goal": 0.1875,
+       "wrong_object": 0.125
+      },
+      "success": 284,
+      "untyped": 0,
+      "wrong_goal": 3,
+      "wrong_object": 2
+     },
+     "lora_k5_1000": {
+      "episodes": 300,
+      "fixture": 6,
+      "motion": 5,
+      "no_commit": 5,
+      "shares_of_failures": {
+       "fixture": 0.3157894736842105,
+       "motion": 0.2631578947368421,
+       "no_commit": 0.2631578947368421,
+       "wrong_goal": 0.10526315789473684,
+       "wrong_object": 0.05263157894736842
+      },
+      "success": 281,
+      "untyped": 0,
+      "wrong_goal": 2,
+      "wrong_object": 1
+     },
+     "lora_k5_200": {
+      "episodes": 300,
+      "fixture": 3,
+      "motion": 7,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.23076923076923078,
+       "motion": 0.5384615384615384,
+       "no_commit": 0.0,
+       "wrong_goal": 0.07692307692307693,
+       "wrong_object": 0.15384615384615385
+      },
+      "success": 287,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 2
+     },
+     "zs": {
+      "episodes": 300,
+      "fixture": 41,
+      "motion": 19,
+      "no_commit": 5,
+      "shares_of_failures": {
+       "fixture": 0.3416666666666667,
+       "motion": 0.15833333333333333,
+       "no_commit": 0.041666666666666664,
+       "wrong_goal": 0.43333333333333335,
+       "wrong_object": 0.025
+      },
+      "success": 180,
+      "untyped": 0,
+      "wrong_goal": 52,
+      "wrong_object": 3
+     }
+    },
+    "part": {
+     "cc": {
+      "episodes": 280,
+      "fixture": 0,
+      "motion": 86,
+      "no_commit": 54,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.5308641975308642,
+       "no_commit": 0.3333333333333333,
+       "wrong_goal": 0.13580246913580246,
+       "wrong_object": 0.0
+      },
+      "success": 118,
+      "untyped": 0,
+      "wrong_goal": 22,
+      "wrong_object": 0
+     },
+     "compose_cov": {
+      "episodes": 280,
+      "fixture": 20,
+      "motion": 44,
+      "no_commit": 35,
+      "shares_of_failures": {
+       "fixture": 0.07142857142857142,
+       "motion": 0.15714285714285714,
+       "no_commit": 0.125,
+       "wrong_goal": 0.4,
+       "wrong_object": 0.24642857142857144
+      },
+      "success": 0,
+      "untyped": 0,
+      "wrong_goal": 112,
+      "wrong_object": 69
+     },
+     "compose_sel": {
+      "episodes": 280,
+      "fixture": 20,
+      "motion": 61,
+      "no_commit": 22,
+      "shares_of_failures": {
+       "fixture": 0.07142857142857142,
+       "motion": 0.21785714285714286,
+       "no_commit": 0.07857142857142857,
+       "wrong_goal": 0.34285714285714286,
+       "wrong_object": 0.2892857142857143
+      },
+      "success": 0,
+      "untyped": 0,
+      "wrong_goal": 96,
+      "wrong_object": 81
+     },
+     "create": {
+      "episodes": 280,
+      "fixture": 0,
+      "motion": 83,
+      "no_commit": 53,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.50920245398773,
+       "no_commit": 0.32515337423312884,
+       "wrong_goal": 0.15950920245398773,
+       "wrong_object": 0.006134969325153374
+      },
+      "success": 117,
+      "untyped": 0,
+      "wrong_goal": 26,
+      "wrong_object": 1
+     },
+     "create_k5": {
+      "episodes": 280,
+      "fixture": 1,
+      "motion": 88,
+      "no_commit": 24,
+      "shares_of_failures": {
+       "fixture": 0.008547008547008548,
+       "motion": 0.7521367521367521,
+       "no_commit": 0.20512820512820512,
+       "wrong_goal": 0.02564102564102564,
+       "wrong_object": 0.008547008547008548
+      },
+      "success": 163,
+      "untyped": 0,
+      "wrong_goal": 3,
+      "wrong_object": 1
+     },
+     "lora1000": {
+      "episodes": 280,
+      "fixture": 0,
+      "motion": 77,
+      "no_commit": 39,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.5877862595419847,
+       "no_commit": 0.29770992366412213,
+       "wrong_goal": 0.0916030534351145,
+       "wrong_object": 0.022900763358778626
+      },
+      "success": 149,
+      "untyped": 0,
+      "wrong_goal": 12,
+      "wrong_object": 3
+     },
+     "lora200": {
+      "episodes": 280,
+      "fixture": 0,
+      "motion": 80,
+      "no_commit": 42,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.5517241379310345,
+       "no_commit": 0.2896551724137931,
+       "wrong_goal": 0.15172413793103448,
+       "wrong_object": 0.006896551724137931
+      },
+      "success": 135,
+      "untyped": 0,
+      "wrong_goal": 22,
+      "wrong_object": 1
+     },
+     "lora50": {
+      "episodes": 280,
+      "fixture": 15,
+      "motion": 137,
+      "no_commit": 49,
+      "shares_of_failures": {
+       "fixture": 0.06198347107438017,
+       "motion": 0.5661157024793388,
+       "no_commit": 0.2024793388429752,
+       "wrong_goal": 0.0743801652892562,
+       "wrong_object": 0.09504132231404959
+      },
+      "success": 38,
+      "untyped": 0,
+      "wrong_goal": 18,
+      "wrong_object": 23
+     },
+     "lora_k10_1000": {
+      "episodes": 280,
+      "fixture": 0,
+      "motion": 62,
+      "no_commit": 6,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.7848101265822784,
+       "no_commit": 0.0759493670886076,
+       "wrong_goal": 0.13924050632911392,
+       "wrong_object": 0.0
+      },
+      "success": 201,
+      "untyped": 0,
+      "wrong_goal": 11,
+      "wrong_object": 0
+     },
+     "lora_k10_200": {
+      "episodes": 280,
+      "fixture": 0,
+      "motion": 106,
+      "no_commit": 21,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.7910447761194029,
+       "no_commit": 0.15671641791044777,
+       "wrong_goal": 0.05223880597014925,
+       "wrong_object": 0.0
+      },
+      "success": 146,
+      "untyped": 0,
+      "wrong_goal": 7,
+      "wrong_object": 0
+     },
+     "lora_k5_1000": {
+      "episodes": 280,
+      "fixture": 2,
+      "motion": 52,
+      "no_commit": 15,
+      "shares_of_failures": {
+       "fixture": 0.02631578947368421,
+       "motion": 0.6842105263157895,
+       "no_commit": 0.19736842105263158,
+       "wrong_goal": 0.09210526315789473,
+       "wrong_object": 0.0
+      },
+      "success": 204,
+      "untyped": 0,
+      "wrong_goal": 7,
+      "wrong_object": 0
+     },
+     "lora_k5_200": {
+      "episodes": 280,
+      "fixture": 1,
+      "motion": 100,
+      "no_commit": 21,
+      "shares_of_failures": {
+       "fixture": 0.007633587786259542,
+       "motion": 0.7633587786259542,
+       "no_commit": 0.16030534351145037,
+       "wrong_goal": 0.06870229007633588,
+       "wrong_object": 0.0
+      },
+      "success": 149,
+      "untyped": 0,
+      "wrong_goal": 9,
+      "wrong_object": 0
+     },
+     "zs": {
+      "episodes": 280,
+      "fixture": 20,
+      "motion": 98,
+      "no_commit": 2,
+      "shares_of_failures": {
+       "fixture": 0.07142857142857142,
+       "motion": 0.35,
+       "no_commit": 0.007142857142857143,
+       "wrong_goal": 0.35714285714285715,
+       "wrong_object": 0.21428571428571427
+      },
+      "success": 0,
+      "untyped": 0,
+      "wrong_goal": 100,
+      "wrong_object": 60
+     }
+    }
+   },
+   "scene_familiar": {
+    "False": {
+     "cc": {
+      "episodes": 180,
+      "fixture": 0,
+      "motion": 76,
+      "no_commit": 19,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.6551724137931034,
+       "no_commit": 0.16379310344827586,
+       "wrong_goal": 0.1810344827586207,
+       "wrong_object": 0.0
+      },
+      "success": 64,
+      "untyped": 0,
+      "wrong_goal": 21,
+      "wrong_object": 0
+     },
+     "compose_cov": {
+      "episodes": 180,
+      "fixture": 0,
+      "motion": 40,
+      "no_commit": 5,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.2222222222222222,
+       "no_commit": 0.027777777777777776,
+       "wrong_goal": 0.5166666666666667,
+       "wrong_object": 0.23333333333333334
+      },
+      "success": 0,
+      "untyped": 0,
+      "wrong_goal": 93,
+      "wrong_object": 42
+     },
+     "compose_sel": {
+      "episodes": 180,
+      "fixture": 0,
+      "motion": 40,
+      "no_commit": 2,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.2222222222222222,
+       "no_commit": 0.011111111111111112,
+       "wrong_goal": 0.5222222222222223,
+       "wrong_object": 0.24444444444444444
+      },
+      "success": 0,
+      "untyped": 0,
+      "wrong_goal": 94,
+      "wrong_object": 44
+     },
+     "create": {
+      "episodes": 180,
+      "fixture": 0,
+      "motion": 76,
+      "no_commit": 12,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.672566371681416,
+       "no_commit": 0.10619469026548672,
+       "wrong_goal": 0.22123893805309736,
+       "wrong_object": 0.0
+      },
+      "success": 67,
+      "untyped": 0,
+      "wrong_goal": 25,
+      "wrong_object": 0
+     },
+     "create_k5": {
+      "episodes": 180,
+      "fixture": 0,
+      "motion": 78,
+      "no_commit": 1,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.9512195121951219,
+       "no_commit": 0.012195121951219513,
+       "wrong_goal": 0.036585365853658534,
+       "wrong_object": 0.0
+      },
+      "success": 98,
+      "untyped": 0,
+      "wrong_goal": 3,
+      "wrong_object": 0
+     },
+     "lora1000": {
+      "episodes": 180,
+      "fixture": 0,
+      "motion": 66,
+      "no_commit": 13,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.7333333333333333,
+       "no_commit": 0.14444444444444443,
+       "wrong_goal": 0.12222222222222222,
+       "wrong_object": 0.0
+      },
+      "success": 90,
+      "untyped": 0,
+      "wrong_goal": 11,
+      "wrong_object": 0
+     },
+     "lora200": {
+      "episodes": 180,
+      "fixture": 0,
+      "motion": 71,
+      "no_commit": 6,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.7244897959183674,
+       "no_commit": 0.061224489795918366,
+       "wrong_goal": 0.20408163265306123,
+       "wrong_object": 0.01020408163265306
+      },
+      "success": 82,
+      "untyped": 0,
+      "wrong_goal": 20,
+      "wrong_object": 1
+     },
+     "lora50": {
+      "episodes": 180,
+      "fixture": 0,
+      "motion": 104,
+      "no_commit": 23,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.697986577181208,
+       "no_commit": 0.15436241610738255,
+       "wrong_goal": 0.10067114093959731,
+       "wrong_object": 0.04697986577181208
+      },
+      "success": 31,
+      "untyped": 0,
+      "wrong_goal": 15,
+      "wrong_object": 7
+     },
+     "lora_k10_1000": {
+      "episodes": 180,
+      "fixture": 0,
+      "motion": 56,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.8484848484848485,
+       "no_commit": 0.0,
+       "wrong_goal": 0.15151515151515152,
+       "wrong_object": 0.0
+      },
+      "success": 114,
+      "untyped": 0,
+      "wrong_goal": 10,
+      "wrong_object": 0
+     },
+     "lora_k10_200": {
+      "episodes": 180,
+      "fixture": 0,
+      "motion": 94,
+      "no_commit": 2,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.9306930693069307,
+       "no_commit": 0.019801980198019802,
+       "wrong_goal": 0.04950495049504951,
+       "wrong_object": 0.0
+      },
+      "success": 79,
+      "untyped": 0,
+      "wrong_goal": 5,
+      "wrong_object": 0
+     },
+     "lora_k5_1000": {
+      "episodes": 180,
+      "fixture": 0,
+      "motion": 43,
+      "no_commit": 0,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.9347826086956522,
+       "no_commit": 0.0,
+       "wrong_goal": 0.06521739130434782,
+       "wrong_object": 0.0
+      },
+      "success": 134,
+      "untyped": 0,
+      "wrong_goal": 3,
+      "wrong_object": 0
+     },
+     "lora_k5_200": {
+      "episodes": 180,
+      "fixture": 0,
+      "motion": 79,
+      "no_commit": 6,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.8586956521739131,
+       "no_commit": 0.06521739130434782,
+       "wrong_goal": 0.07608695652173914,
+       "wrong_object": 0.0
+      },
+      "success": 88,
+      "untyped": 0,
+      "wrong_goal": 7,
+      "wrong_object": 0
+     },
+     "zs": {
+      "episodes": 180,
+      "fixture": 0,
+      "motion": 58,
+      "no_commit": 2,
+      "shares_of_failures": {
+       "fixture": 0.0,
+       "motion": 0.32222222222222224,
+       "no_commit": 0.011111111111111112,
+       "wrong_goal": 0.5555555555555556,
+       "wrong_object": 0.1111111111111111
+      },
+      "success": 0,
+      "untyped": 0,
+      "wrong_goal": 100,
+      "wrong_object": 20
+     }
+    },
+    "True": {
+     "cc": {
+      "episodes": 400,
+      "fixture": 14,
+      "motion": 38,
+      "no_commit": 45,
+      "shares_of_failures": {
+       "fixture": 0.12280701754385964,
+       "motion": 0.3333333333333333,
+       "no_commit": 0.39473684210526316,
+       "wrong_goal": 0.05263157894736842,
+       "wrong_object": 0.09649122807017543
+      },
+      "success": 286,
+      "untyped": 0,
+      "wrong_goal": 6,
+      "wrong_object": 11
+     },
+     "compose_cov": {
+      "episodes": 400,
+      "fixture": 67,
+      "motion": 73,
+      "no_commit": 33,
+      "shares_of_failures": {
+       "fixture": 0.25,
+       "motion": 0.27238805970149255,
+       "no_commit": 0.12313432835820895,
+       "wrong_goal": 0.17537313432835822,
+       "wrong_object": 0.1791044776119403
+      },
+      "success": 132,
+      "untyped": 0,
+      "wrong_goal": 47,
+      "wrong_object": 48
+     },
+     "compose_sel": {
+      "episodes": 400,
+      "fixture": 68,
+      "motion": 55,
+      "no_commit": 22,
+      "shares_of_failures": {
+       "fixture": 0.272,
+       "motion": 0.22,
+       "no_commit": 0.088,
+       "wrong_goal": 0.104,
+       "wrong_object": 0.316
+      },
+      "success": 150,
+      "untyped": 0,
+      "wrong_goal": 26,
+      "wrong_object": 79
+     },
+     "create": {
+      "episodes": 400,
+      "fixture": 22,
+      "motion": 29,
+      "no_commit": 56,
+      "shares_of_failures": {
+       "fixture": 0.1896551724137931,
+       "motion": 0.25,
+       "no_commit": 0.4827586206896552,
+       "wrong_goal": 0.034482758620689655,
+       "wrong_object": 0.04310344827586207
+      },
+      "success": 284,
+      "untyped": 0,
+      "wrong_goal": 4,
+      "wrong_object": 5
+     },
+     "create_k5": {
+      "episodes": 400,
+      "fixture": 4,
+      "motion": 18,
+      "no_commit": 24,
+      "shares_of_failures": {
+       "fixture": 0.07692307692307693,
+       "motion": 0.34615384615384615,
+       "no_commit": 0.46153846153846156,
+       "wrong_goal": 0.019230769230769232,
+       "wrong_object": 0.09615384615384616
+      },
+      "success": 348,
+      "untyped": 0,
+      "wrong_goal": 1,
+      "wrong_object": 5
+     },
+     "lora1000": {
+      "episodes": 400,
+      "fixture": 16,
+      "motion": 36,
+      "no_commit": 38,
+      "shares_of_failures": {
+       "fixture": 0.1553398058252427,
+       "motion": 0.34951456310679613,
+       "no_commit": 0.36893203883495146,
+       "wrong_goal": 0.038834951456310676,
+       "wrong_object": 0.08737864077669903
+      },
+      "success": 297,
+      "untyped": 0,
+      "wrong_goal": 4,
+      "wrong_object": 9
+     },
+     "lora200": {
+      "episodes": 400,
+      "fixture": 26,
+      "motion": 33,
+      "no_commit": 47,
+      "shares_of_failures": {
+       "fixture": 0.23008849557522124,
+       "motion": 0.2920353982300885,
+       "no_commit": 0.415929203539823,
+       "wrong_goal": 0.04424778761061947,
+       "wrong_object": 0.017699115044247787
+      },
+      "success": 287,
+      "untyped": 0,
+      "wrong_goal": 5,
+      "wrong_object": 2
+     },
+     "lora50": {
+      "episodes": 400,
+      "fixture": 55,
+      "motion": 66,
+      "no_commit": 30,
+      "shares_of_failures": {
+       "fixture": 0.2682926829268293,
+       "motion": 0.32195121951219513,
+       "no_commit": 0.14634146341463414,
+       "wrong_goal": 0.12195121951219512,
+       "wrong_object": 0.14146341463414633
+      },
+      "success": 195,
+      "untyped": 0,
+      "wrong_goal": 25,
+      "wrong_object": 29
+     },
+     "lora_k10_1000": {
+      "episodes": 400,
+      "fixture": 10,
+      "motion": 11,
+      "no_commit": 6,
+      "shares_of_failures": {
+       "fixture": 0.3225806451612903,
+       "motion": 0.3548387096774194,
+       "no_commit": 0.1935483870967742,
+       "wrong_goal": 0.06451612903225806,
+       "wrong_object": 0.06451612903225806
+      },
+      "success": 369,
+      "untyped": 0,
+      "wrong_goal": 2,
+      "wrong_object": 2
+     },
+     "lora_k10_200": {
+      "episodes": 400,
+      "fixture": 5,
+      "motion": 18,
+      "no_commit": 19,
+      "shares_of_failures": {
+       "fixture": 0.10204081632653061,
+       "motion": 0.3673469387755102,
+       "no_commit": 0.3877551020408163,
+       "wrong_goal": 0.10204081632653061,
+       "wrong_object": 0.04081632653061224
+      },
+      "success": 351,
+      "untyped": 0,
+      "wrong_goal": 5,
+      "wrong_object": 2
+     },
+     "lora_k5_1000": {
+      "episodes": 400,
+      "fixture": 8,
+      "motion": 14,
+      "no_commit": 20,
+      "shares_of_failures": {
+       "fixture": 0.16326530612244897,
+       "motion": 0.2857142857142857,
+       "no_commit": 0.40816326530612246,
+       "wrong_goal": 0.12244897959183673,
+       "wrong_object": 0.02040816326530612
+      },
+      "success": 351,
+      "untyped": 0,
+      "wrong_goal": 6,
+      "wrong_object": 1
+     },
+     "lora_k5_200": {
+      "episodes": 400,
+      "fixture": 4,
+      "motion": 28,
+      "no_commit": 15,
+      "shares_of_failures": {
+       "fixture": 0.07692307692307693,
+       "motion": 0.5384615384615384,
+       "no_commit": 0.28846153846153844,
+       "wrong_goal": 0.057692307692307696,
+       "wrong_object": 0.038461538461538464
+      },
+      "success": 348,
+      "untyped": 0,
+      "wrong_goal": 3,
+      "wrong_object": 2
+     },
+     "zs": {
+      "episodes": 400,
+      "fixture": 61,
+      "motion": 59,
+      "no_commit": 5,
+      "shares_of_failures": {
+       "fixture": 0.2772727272727273,
+       "motion": 0.2681818181818182,
+       "no_commit": 0.022727272727272728,
+       "wrong_goal": 0.23636363636363636,
+       "wrong_object": 0.19545454545454546
+      },
+      "success": 180,
+      "untyped": 0,
+      "wrong_goal": 52,
+      "wrong_object": 43
+     }
+    }
+   }
+  },
+  "validation": {
+   "own_atom_holds": 3075,
+   "share": 0.8823529411764706,
+   "successes": 3485
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "fm_read__libero_90_c__read__s13__af1c7754",
+ "schema": 1,
+ "script": "experiments/fm_fewshot.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-24T18:45:29+00:00",
+ "stream": null,
+ "tag": "read"
+}

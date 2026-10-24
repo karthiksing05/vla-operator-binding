@@ -185,3 +185,4 @@ NEXT: at the first kept checkpoint (5000): export (c_train_pi05.py --exp main --
   zs 180, compose_sel 150, create 351, cc 350, lora1000 387 / 580. H1-H4 all FAIL. On the 15 combination tasks create 234 =
   lora 238 at 1/254 bytes; on the 14 part tasks create 117 vs lora1000 149, zs/compose 0. Routed damage create -0.075 on the
   instruction-collision cells (key by scene). Read fix: stats.bootstrap_diff return_samples (opt-in).
+- 10-24 14:50  FAILURE MAP READ (ledger fm_read__libero_90_c__read__s13__af1c7754; docs/PLAN_FM.md section 4): typed 7,540 episodes. zs fails by binding (215 of 339 typed: wrong object 63, wrong goal 152), flat in CD (F1 FAIL, rho -0.14); the token cuts binding errors to 34 (9 at k5); compose adds wrong-object (123). Few-shot: LoRA1000 k1/5/10 387/485/483, token k1/5 351/446 of 580 (k5 saturates; parts token 163 vs LoRA 204). Holm: F2 (demo layout) PASSES p 0.0078 but small (9 wrong-object eps); F1, F3 (p 0.097), F4, F5 FAIL.

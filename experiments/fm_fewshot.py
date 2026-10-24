@@ -169,6 +169,8 @@ def arm_modes(tid):
 
 
 def launch_fits(dry):
+    for k_ in [k_ for k_ in os.environ if k_.startswith("SLURM_")]:   # launched from a job: srun in the child failed on cpu bind
+        del os.environ[k_]
     import launch_pack as LP
     plan = M1.load_plan()
     jobs = []
@@ -245,6 +247,8 @@ def submit(lines, lanes=10, per=4, dry=False):
 
 
 def launch(dry):
+    for k_ in [k_ for k_ in os.environ if k_.startswith("SLURM_")]:   # launched from a job: its step binding must not leak
+        del os.environ[k_]
     plan = M1.load_plan()
     lines, missing = [], []
     for tid in plan["tasks"]:
@@ -652,9 +656,9 @@ def figures(res, by):
     axs[0, 0].set_ylabel("share of episodes")
     axs[1, 0].set_ylabel("share of episodes")
     h, l = axs[0, 0].get_legend_handles_labels()
-    fig.legend(h, l, loc="upper center", ncol=6, frameon=False, fontsize=9)
-    fig.suptitle("Failure types by arm and axis (pi05_l90c@5000, 29 LIBERO-90-C dev tasks x 20 fresh states)", y=1.0, fontsize=11)
-    fig.tight_layout(rect=(0, 0, 1, 0.95))
+    fig.legend(h, l, loc="upper center", bbox_to_anchor=(0.5, 0.955), ncol=6, frameon=False, fontsize=9)
+    fig.suptitle("Failure types by arm and axis (pi05_l90c@5000, 29 LIBERO-90-C dev tasks x 20 fresh states)", y=0.995, fontsize=11)
+    fig.tight_layout(rect=(0, 0, 1, 0.92))
     os.makedirs(os.path.join(ROOT, "figures", "robot"), exist_ok=True)
     fig.savefig(os.path.join(ROOT, "figures", "robot", "fm_types.png"), dpi=130, facecolor="#fcfcfb")
     plt.close(fig)
@@ -668,11 +672,14 @@ def figures(res, by):
             ks = sorted(int(k) for k in res["curve"][fam])
             ys = [res["curve"][fam][str(k)][col_] / n for k in ks]
             p.plot(ks, ys, marker="o", lw=2, ms=7, color=cs[fam], label=lb[fam])
-            p.annotate(lb[fam], (ks[-1], ys[-1]), xytext=(6, 0), textcoords="offset points", fontsize=8, color="#52514e", va="center")
+            if col_ == "all":
+                p.annotate(lb[fam], (ks[-1], ys[-1]), xytext=(6, 0), textcoords="offset points", fontsize=8, color="#52514e", va="center")
         for fam, ls in (("zs", ":"), ("compose_sel", "--")):
             y = res["curve"][fam]["1"][col_] / n
             p.axhline(y, color="#52514e", ls=ls, lw=1)
-            p.annotate("zero-shot" if fam == "zs" else "compose", (10.3, y), fontsize=8, color="#52514e", va="bottom", ha="right")
+            if col_ != "part" or fam == "zs":
+                p.annotate(("zero-shot" if fam == "zs" else "compose") if col_ != "part" else "zero-shot = compose = 0", (10.3, y),
+                           fontsize=8, color="#52514e", va="bottom", ha="right")
         p.set_xticks([1, 5, 10])
         p.set_xlim(0.5, 12.5)
         p.set_ylim(0, 1)

@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/fm/roll/fm_main_libero_90_45_86647599ce.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/fm/fits/libero_90_45/k10/lora1000.pt SUITE=libero_90 TASKS=45 TRIALS=20 (job 4218427)",
+ "config": {
+  "client": {
+   "all_objects": true,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_m1",
+   "host": "127.0.0.1",
+   "light": true,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": true,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/fm/roll/fm_main_libero_90_45_86647599ce.json",
+   "port": 9261,
+   "record": true,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "45",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4218427",
+  "mode": "lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/fm/fits/libero_90_45/k10/lora1000.pt"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "megabot.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4218427",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "fm_main",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "af1c7754939ae772d792696d78017c6148f4dd15",
+  "short": "af1c7754"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/fm/fits/libero_90_45/k10/lora1000.pt",
+  "tasks": "45",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 644.4886085987091,
+  "success_rate": 0.95,
+  "tasks": {
+   "45": {
+    "errors": 0,
+    "language": "turn on the stove and put the frying pan on it",
+    "mean_steps": 250.8,
+    "n": 20,
+    "success_rate": 0.95
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "fm_main__libero_90__lora_k10_1000__first_trial-0__mode86647599ceca__tasks-45__trials-20__s7__af1c7754",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-24T18:30:08+00:00",
+ "stream": null,
+ "tag": "lora_k10_1000"
+}

@@ -1,0 +1,95 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/fm/fits/libero_90_83/k5/fit.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 73728,
+  "experts": 18710528,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 18784256,
+  "tree": 0
+ },
+ "command": "experiments/fm_fewshot.py --fit --task libero_90:83 --k 5",
+ "config": {
+  "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "demos": [
+   1478,
+   1479,
+   1480,
+   1481,
+   1482
+  ],
+  "k": 5,
+  "lora": {
+   "batch": 32,
+   "lr": 0.0001,
+   "rank": 16,
+   "snaps": [
+    200,
+    1000
+   ],
+   "steps": 1000
+  },
+  "tok": {
+   "batch": 32,
+   "lr": 0.01,
+   "n": 4,
+   "steps": 1000
+  }
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "uniblab.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4217877",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "fm_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "af1c7754939ae772d792696d78017c6148f4dd15",
+  "short": "af1c7754"
+ },
+ "keys": {
+  "k": 5,
+  "task": "libero_90:83"
+ },
+ "metrics": {
+  "T": [
+   121,
+   145,
+   169,
+   143,
+   142
+  ],
+  "bin": "part",
+  "final_loss": {
+   "create": 0.016122786328196526,
+   "lora": 0.010350064374506474
+  },
+  "frames": 720,
+  "seconds": {
+   "bank": 56.281593561172485,
+   "create_k5": 286.2753973007202,
+   "demo": 3.911118745803833,
+   "lora_k5_1000": 287.6682434082031,
+   "lora_k5_200": 108.27320218086243
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "fm_fit__libero_90_c__k5__k-5__task-libero_90-83__s13__af1c7754",
+ "schema": 1,
+ "script": "experiments/fm_fewshot.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-24T17:23:47+00:00",
+ "stream": null,
+ "tag": "k5"
+}

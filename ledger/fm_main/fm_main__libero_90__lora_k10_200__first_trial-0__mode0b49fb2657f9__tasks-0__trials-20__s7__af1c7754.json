@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/fm/roll/fm_main_libero_90_0_0b49fb2657.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/fm/fits/libero_90_0/k10/lora200.pt SUITE=libero_90 TASKS=0 TRIALS=20 (job 4218391)",
+ "config": {
+  "client": {
+   "all_objects": true,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_m1",
+   "host": "127.0.0.1",
+   "light": true,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": true,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/fm/roll/fm_main_libero_90_0_0b49fb2657.json",
+   "port": 9156,
+   "record": true,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "0",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4218391",
+  "mode": "lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/fm/fits/libero_90_0/k10/lora200.pt"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "ig-88.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4218391",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "fm_main",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "af1c7754939ae772d792696d78017c6148f4dd15",
+  "short": "af1c7754"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "lora:/coc/flash10/ksingara3/lifelong-ood-learner/results/fm/fits/libero_90_0/k10/lora200.pt",
+  "tasks": "0",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 219.543940782547,
+  "success_rate": 1.0,
+  "tasks": {
+   "0": {
+    "errors": 0,
+    "language": "close the top drawer of the cabinet",
+    "mean_steps": 61.4,
+    "n": 20,
+    "success_rate": 1.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "fm_main__libero_90__lora_k10_200__first_trial-0__mode0b49fb2657f9__tasks-0__trials-20__s7__af1c7754",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-24T17:37:21+00:00",
+ "stream": null,
+ "tag": "lora_k10_200"
+}
