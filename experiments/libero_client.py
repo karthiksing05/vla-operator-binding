@@ -462,6 +462,8 @@ def main():
                     rec_act.append(act)
                     if rec is not None:
                         rec["state"].append(np.asarray(st8, np.float32)); rec["action"].append(act)
+                        if os.environ.get("REC_SIM") == "1":    # opt-in (probe D4): the full MjSimState at this step, before it
+                            rec.setdefault("sim", []).append(env.env.sim.get_state().flatten())
                         if not a.light:
                             if a.swap and a.swap_mode == "render" and swapped:
                                 # the REAL scene for the recording (a fold learns real image + own instruction -> these actions):
@@ -506,7 +508,8 @@ def main():
                     if (a.objects and rec["obj_pos"]) else {}
                 np.savez_compressed(str(rec_dir / (f"task{tid}_trial{k}" + ("" if br is None else f"_{br['id']}") + ".npz")), state=np.stack(rec["state"]), action=np.stack(rec["action"]),
                                     **({} if a.light else dict(image=np.stack(rec["image"]), wrist=np.stack(rec["wrist"]))),
-                                    success=bool(done), trial=k, task=tid, **extra)
+                                    success=bool(done), trial=k, task=tid, **extra,
+                                    **({"sim": np.stack(rec["sim"])} if rec.get("sim") else {}))
             if frames:
                 import imageio
                 imageio.mimwrite(str(vid_dir / f"task{tid}_trial{k}_{'success' if done else 'failure'}.mp4"), frames, fps=10)

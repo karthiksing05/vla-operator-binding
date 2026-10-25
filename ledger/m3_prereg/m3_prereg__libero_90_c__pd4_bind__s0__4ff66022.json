@@ -1,0 +1,76 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: probe D4 (binding operators: H1 readout validity, H2 systematicity, H3a/b diagnosis; H4 descriptive)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4232411",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "4ff66022f01918383d4c3959642535ef3a042ffe",
+  "short": "4ff66022"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": "l90c training obs, approach + place: filler == argmax ||J||_F body in >= 0.8 and CI lo > chance, each role; p = max over roles of P*(hit - chance <= 0), two-level task-cluster bootstrap B 10000",
+  "H2": "l90c training obs, each role: leave-type-out R^2 (through origin, pooled) of the filler's 4 endpoint responses from the other types' mean filler operator >= 0.5 and > filler-shuffled control; p = max over roles of task-cluster bootstrap P*(R^2 - R^2_ctrl <= 0), B 2000",
+  "H3a": "l90c zs dev wrong-object episodes (pre-grasp): bound body == grasped object in >= 0.7 (episode means); p = P*(rate_grasped - rate_named <= 0), two-level bootstrap",
+  "H3b": "l90c zs dev wrong-goal other_region episodes (post-grasp): bound body == the alt body placed on / in, as H3a",
+  "descriptive": "H4 nested sums of squares (category > type > instance > observation) of the filler J; per-type operator table; bank bytes (16 B / operator: J 3x2 + offset 2 float16, plus keys); pi05_libero H1/H2; noise floor share; dev success readout; composition read (bank operator + oracle pose -> e_hat)",
+  "disclosure": "seen before this row: OF D1-D3, R2a, R3b, R3c, R4, R4b published results (docs/ATLAS.md); R2a's episode types per dev task (used to choose the dev task subset: R2a has no wrong-object episode on the 15 recombination tasks, so H3a runs on the 7 part tasks where R2a saw them); the training index logs (task lists, frame counts, target bodies); a 2-observation render smoke (all 32 perturbations valid; a self-test that drops one object onto another is caught by the penetration rule, 16.6 mm) and a 2-observation GPU smoke (6-7 s per observation; batched vs single-observation sampler parity max |diff| 1.6e-3 to 2.1e-3 in action units); no endpoint, operator, bound body or hypothesis statistic was computed.  The validity rule and every threshold were fixed before the smoke.  At the time of this row the training renders may be complete and the dev rollouts may be running; their counts are recorded above.  The brief's type-shuffled control is implemented as a filler-shuffled control (docs/PLAN_D4.md section 4); the type-label shuffle is reported as a descriptive reference.  No yaw step (OF D1: yaw adds nothing).  During development one python heredoc was issued on the login node; the harness blocked it before it ran.",
+  "family": "Holm over H1, H2, H3a, H3b at 0.05",
+  "files_sha256": {
+   "client": "bc39897df6313ba97edc74fb4205941a9f71417d8697d8ed0226ef3f99f3ae62",
+   "doc": "731e254b891845de78997626b1c141682e6d3fdb4b28d3b10afe8c459df67764",
+   "index_l90c": "cf3c1cbd00721fc8e14c705a78fb61042fc2e3967da3865286683eabba160fd1",
+   "index_libero": "b633ec2aa0a4f766273d63f01c60b2a1f328d1c40421939f6b07ebb9000a4f89",
+   "read": "6c9220cb74756363750fabd2dbea22533f28bc5aa111706684eac67248424bfd",
+   "script": "65aa60ef99306985b5c5e5a2a67c2b12c56dadb8cb652a93eb68db2a2d435409"
+  },
+  "n": {
+   "dev_renders": 0,
+   "l90c": {
+    "carry_candidates": 1081,
+    "pre": 318,
+    "renders": 474,
+    "tasks": 55
+   },
+   "libero": {
+    "carry_candidates": 736,
+    "pre": 195,
+    "renders": 307,
+    "tasks": 34
+   }
+  },
+  "readout": "delta 0.02 m, perts +-x +-y; validity pen growth <= 2 mm, 50-step pinned settle within 5 mm; K 8 noises seed 11, floor pair seed 21; endpoint = h + scale * sum xyz actions, mean over noises; J central differences",
+  "written_before": "any D4 policy output beyond the 2-observation smoke, any operator / bound body / hypothesis statistic"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pd4_bind__s0__4ff66022",
+ "schema": 1,
+ "script": "experiments/prereg/pd4_bind.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-25T18:24:02+00:00",
+ "stream": null,
+ "tag": "pd4_bind"
+}
