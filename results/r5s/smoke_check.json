@@ -1,0 +1,172 @@
+{
+ "smoke_ours": {
+  "episodes": [
+   {
+    "trial": 0,
+    "len": 400,
+    "len_d4": 400,
+    "exact": true,
+    "max_abs": 0.0,
+    "first_diff": null,
+    "success": false,
+    "bound": "black_book_1"
+   },
+   {
+    "trial": 1,
+    "len": 400,
+    "len_d4": 400,
+    "exact": true,
+    "max_abs": 0.0,
+    "first_diff": null,
+    "success": false,
+    "bound": "black_book_1"
+   }
+  ],
+  "queries": 0,
+  "guided": 0,
+  "ms_mean": null,
+  "hits": []
+ },
+ "smoke_off": {
+  "episodes": [
+   {
+    "trial": 0,
+    "len": 400,
+    "len_d4": 400,
+    "exact": true,
+    "max_abs": 0.0,
+    "first_diff": null,
+    "success": false,
+    "bound": "black_book_1"
+   },
+   {
+    "trial": 1,
+    "len": 400,
+    "len_d4": 400,
+    "exact": true,
+    "max_abs": 0.0,
+    "first_diff": null,
+    "success": false,
+    "bound": "black_book_1"
+   }
+  ],
+  "queries": 160,
+  "guided": 0,
+  "ms_mean": 488.43,
+  "hits": []
+ },
+ "smoke_vis": {
+  "episodes": [
+   {
+    "trial": 0,
+    "len": 400,
+    "len_d4": 400,
+    "exact": false,
+    "max_abs": 2.0028722286224365,
+    "first_diff": 0,
+    "success": false,
+    "bound": "white_yellow_mug_1"
+   },
+   {
+    "trial": 1,
+    "len": 400,
+    "len_d4": 400,
+    "exact": false,
+    "max_abs": 2.001478672027588,
+    "first_diff": 0,
+    "success": false,
+    "bound": "black_book_1"
+   }
+  ],
+  "queries": 160,
+  "guided": 22,
+  "ms_mean": 497.325,
+  "hits": [
+   false,
+   false,
+   true,
+   true,
+   true,
+   true,
+   false,
+   false,
+   false,
+   false,
+   false,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   false
+  ]
+ },
+ "smoke_orc": {
+  "episodes": [
+   {
+    "trial": 0,
+    "len": 400,
+    "len_d4": 400,
+    "exact": false,
+    "max_abs": 1.9978156089782715,
+    "first_diff": 0,
+    "success": false,
+    "bound": "black_book_1"
+   },
+   {
+    "trial": 1,
+    "len": 400,
+    "len_d4": 400,
+    "exact": false,
+    "max_abs": 1.9980677366256714,
+    "first_diff": 0,
+    "success": false,
+    "bound": "black_book_1"
+   }
+  ],
+  "queries": 160,
+  "guided": 22,
+  "ms_mean": 447.40500000000003,
+  "hits": [
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null,
+   null
+  ]
+ },
+ "d4": [
+  {
+   "trial": 0,
+   "success": false,
+   "bound": "black_book_1"
+  },
+  {
+   "trial": 1,
+   "success": false,
+   "bound": "black_book_1"
+  }
+ ],
+ "reproduces": {
+  "smoke_ours": true,
+  "smoke_off": true
+ }
+}

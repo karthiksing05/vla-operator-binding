@@ -1,0 +1,85 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration row (EXPLORATORY): probe R5s closed-loop smoke of vision-anchored D4-bank guidance",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "eva.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4234328",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1ec377e36f1c7c21b12fefdfff4b6ad7218e4b77",
+  "short": "1ec377e3"
+ },
+ "keys": {},
+ "metrics": {
+  "arms": "zs (D4 rows, paired by trial on fresh_d4; re-rolled on fresh_r5s for the 2 cells); vis_e1 PRIMARY (SigLIP anchor + live depth, x0-projection first 5 Euler steps w 1); vis_a025 (all steps w 0.25); orc_e1 (sim pose)",
+  "decision_rule": "confirmatory read worth running iff wo-set vis_e1 success diff >= +0.10 AND named-grasp diff > 0 AND harm diff >= -0.05 AND damage diff >= -0.05 (points)",
+  "disclosure": "EXPLORATORY smoke approved by the user 2026-10-25.  Seen before this row: D4's published results incl. its zs dev types (the wrong-object tasks), R2's per-task zs on fresh_rb2 (the harm-set rule), R2's damage order (cells rule), R4-bind / R4b stage-0 tables (the two configs), the 2-episode serving smoke on libero_90:73 (parity of unguided serving with D4's zs actions; plus a vis / orc code-path check whose outcomes are excluded).  One empty python3 heredoc ran on the login node during development (rule breach, no computation).",
+  "files_sha256": {
+   "bank": "28dfb10d7cccd3af46cd0b81bca39ae77d646ea950c1e79b8afa2b94dcf9e567",
+   "client": "fc620aa08521c75052cde2217bf90291c450ba65c2245844d05a433f156b5650",
+   "doc": "cba78965b45a440d681feb7ea7f9272a0741bb39ad6c27c700e4f3ba33110df1",
+   "fresh_check": "b2444ef95f8f2dc16c70a83d3c794f47394c073f1407283a27a2bb23e6f46353",
+   "guide": "00072097683d2a9f2fa0b57c04f21f979b9d69fb11b2573180af82c3430b443a",
+   "plan": "f378f07b662640475c11f4e73a6af4cc0f4e0346f50079eddcbfea48ac27b733",
+   "script": "bb20bac66487d5c50c209e8d551ad8f9513c0e1514111d84c871155b2efdecae"
+  },
+  "guidance": "only open-gripper queries before the first grasp (_Grasp rule); d* = J (c - h) + b, D4 bank (type > category > role)",
+  "readouts": "success, named grasp, fm_types failure types, paired arm - zs differences with two-level task-cluster bootstrap 95% intervals (B 10000 seed 0), harm (4 zs-success recombination tasks), damage (2 training cells), anchor localisation (5 cm), guidance bookkeeping, A40-h",
+  "sets": {
+   "cell": [
+    "libero_spatial:6",
+    "libero_90:70"
+   ],
+   "harm": [
+    "libero_90:61",
+    "libero_90:59",
+    "libero_90:9",
+    "libero_90:50"
+   ],
+   "wo": [
+    "libero_90:38",
+    "libero_90:58",
+    "libero_90:73",
+    "libero_90:77",
+    "libero_90:79",
+    "libero_90:80",
+    "libero_90:83"
+   ]
+  },
+  "smoke": {
+   "smoke_off": true,
+   "smoke_ours": true
+  },
+  "status": "EXPLORATORY (closed-loop smoke; decides whether a pre-registered read is worth running)",
+  "written_before": "any R5s rollout beyond the 2-episode serving smoke"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pr5s_smoke__s0__1ec377e3",
+ "schema": 1,
+ "script": "experiments/prereg/pr5s_smoke.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-25T22:15:18+00:00",
+ "stream": null,
+ "tag": "pr5s_smoke"
+}

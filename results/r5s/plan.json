@@ -1,0 +1,404 @@
+{
+ "tasks": [
+  "libero_90:38",
+  "libero_90:58",
+  "libero_90:73",
+  "libero_90:77",
+  "libero_90:79",
+  "libero_90:80",
+  "libero_90:83",
+  "libero_90:61",
+  "libero_90:59",
+  "libero_90:9",
+  "libero_90:50",
+  "libero_spatial:6",
+  "libero_90:70"
+ ],
+ "groups": {
+  "wo": [
+   "libero_90:38",
+   "libero_90:58",
+   "libero_90:73",
+   "libero_90:77",
+   "libero_90:79",
+   "libero_90:80",
+   "libero_90:83"
+  ],
+  "harm": [
+   "libero_90:61",
+   "libero_90:59",
+   "libero_90:9",
+   "libero_90:50"
+  ],
+  "cell": [
+   "libero_spatial:6",
+   "libero_90:70"
+  ]
+ },
+ "d4_tasks": [
+  "libero_90:14",
+  "libero_90:16",
+  "libero_90:60",
+  "libero_90:1",
+  "libero_90:29",
+  "libero_90:50",
+  "libero_90:9",
+  "libero_90:36",
+  "libero_90:40",
+  "libero_90:59",
+  "libero_90:61",
+  "libero_90:58",
+  "libero_90:73",
+  "libero_90:77",
+  "libero_90:79",
+  "libero_90:80",
+  "libero_90:83",
+  "libero_90:38"
+ ],
+ "r2_zs_recombination": {
+  "libero_90:14": 19,
+  "libero_90:16": 0,
+  "libero_90:60": 19,
+  "libero_90:1": 4,
+  "libero_90:29": 1,
+  "libero_90:50": 19,
+  "libero_90:9": 19,
+  "libero_90:36": 10,
+  "libero_90:40": 0,
+  "libero_90:59": 20,
+  "libero_90:61": 20
+ },
+ "r2_damage_order": [
+  "libero_spatial:6",
+  "libero_90:70",
+  "libero_90:72",
+  "libero_spatial:7",
+  "libero_goal:8",
+  "libero_90:52",
+  "libero_object:7",
+  "libero_90:42"
+ ],
+ "cells_rule": "first 2 of R2's damage order with an In/On goal on a movable object",
+ "harm_rule": "top 4 R2 zs (fresh_rb2) among D4's 11 recombination tasks, ties sha1",
+ "pairing": {
+  "libero_90:38": {
+   "seed": 7,
+   "replan": 5,
+   "wait": 10,
+   "trials": 20,
+   "first": 0,
+   "fresh": "fresh_d4",
+   "objects": true,
+   "all_objects": true,
+   "bind": "track",
+   "mode": "ours",
+   "serve_seed": "13",
+   "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+   "n_eps": 20,
+   "n_rec": 20
+  },
+  "libero_90:58": {
+   "seed": 7,
+   "replan": 5,
+   "wait": 10,
+   "trials": 20,
+   "first": 0,
+   "fresh": "fresh_d4",
+   "objects": true,
+   "all_objects": true,
+   "bind": "track",
+   "mode": "ours",
+   "serve_seed": "13",
+   "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+   "n_eps": 20,
+   "n_rec": 20
+  },
+  "libero_90:73": {
+   "seed": 7,
+   "replan": 5,
+   "wait": 10,
+   "trials": 20,
+   "first": 0,
+   "fresh": "fresh_d4",
+   "objects": true,
+   "all_objects": true,
+   "bind": "track",
+   "mode": "ours",
+   "serve_seed": "13",
+   "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+   "n_eps": 20,
+   "n_rec": 20
+  },
+  "libero_90:77": {
+   "seed": 7,
+   "replan": 5,
+   "wait": 10,
+   "trials": 20,
+   "first": 0,
+   "fresh": "fresh_d4",
+   "objects": true,
+   "all_objects": true,
+   "bind": "track",
+   "mode": "ours",
+   "serve_seed": "13",
+   "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+   "n_eps": 20,
+   "n_rec": 20
+  },
+  "libero_90:79": {
+   "seed": 7,
+   "replan": 5,
+   "wait": 10,
+   "trials": 20,
+   "first": 0,
+   "fresh": "fresh_d4",
+   "objects": true,
+   "all_objects": true,
+   "bind": "track",
+   "mode": "ours",
+   "serve_seed": "13",
+   "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+   "n_eps": 20,
+   "n_rec": 20
+  },
+  "libero_90:80": {
+   "seed": 7,
+   "replan": 5,
+   "wait": 10,
+   "trials": 20,
+   "first": 0,
+   "fresh": "fresh_d4",
+   "objects": true,
+   "all_objects": true,
+   "bind": "track",
+   "mode": "ours",
+   "serve_seed": "13",
+   "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+   "n_eps": 20,
+   "n_rec": 20
+  },
+  "libero_90:83": {
+   "seed": 7,
+   "replan": 5,
+   "wait": 10,
+   "trials": 20,
+   "first": 0,
+   "fresh": "fresh_d4",
+   "objects": true,
+   "all_objects": true,
+   "bind": "track",
+   "mode": "ours",
+   "serve_seed": "13",
+   "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+   "n_eps": 20,
+   "n_rec": 20
+  },
+  "libero_90:61": {
+   "seed": 7,
+   "replan": 5,
+   "wait": 10,
+   "trials": 20,
+   "first": 0,
+   "fresh": "fresh_d4",
+   "objects": true,
+   "all_objects": true,
+   "bind": "track",
+   "mode": "ours",
+   "serve_seed": "13",
+   "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+   "n_eps": 20,
+   "n_rec": 20
+  },
+  "libero_90:59": {
+   "seed": 7,
+   "replan": 5,
+   "wait": 10,
+   "trials": 20,
+   "first": 0,
+   "fresh": "fresh_d4",
+   "objects": true,
+   "all_objects": true,
+   "bind": "track",
+   "mode": "ours",
+   "serve_seed": "13",
+   "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+   "n_eps": 20,
+   "n_rec": 20
+  },
+  "libero_90:9": {
+   "seed": 7,
+   "replan": 5,
+   "wait": 10,
+   "trials": 20,
+   "first": 0,
+   "fresh": "fresh_d4",
+   "objects": true,
+   "all_objects": true,
+   "bind": "track",
+   "mode": "ours",
+   "serve_seed": "13",
+   "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+   "n_eps": 20,
+   "n_rec": 20
+  },
+  "libero_90:50": {
+   "seed": 7,
+   "replan": 5,
+   "wait": 10,
+   "trials": 20,
+   "first": 0,
+   "fresh": "fresh_d4",
+   "objects": true,
+   "all_objects": true,
+   "bind": "track",
+   "mode": "ours",
+   "serve_seed": "13",
+   "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+   "n_eps": 20,
+   "n_rec": 20
+  }
+ },
+ "scale_d4": [
+  0.01052401745032942,
+  0.011963828742732078,
+  0.011237455538931119
+ ],
+ "scale_r2a": [
+  0.01052401745032942,
+  0.011963828742732078,
+  0.011237455538931119
+ ],
+ "scale_of": [
+  0.01052401745032942,
+  0.011963828742732078,
+  0.011237455538931119
+ ],
+ "arms": {
+  "vis_e1": [
+   "vis",
+   "early",
+   1.0
+  ],
+  "vis_a025": [
+   "vis",
+   "all",
+   0.25
+  ],
+  "orc_e1": [
+   "orc",
+   "early",
+   1.0
+  ]
+ },
+ "fresh": {
+  "dir": "fresh_r5s",
+  "base": 8600000,
+  "n": 20
+ },
+ "levels": {
+  "libero_90:38": [
+   [
+    "moka_pot_1",
+    "moka_pot",
+    "category",
+    15
+   ]
+  ],
+  "libero_90:58": [
+   [
+    "ketchup_1",
+    "ketchup",
+    "category",
+    12
+   ]
+  ],
+  "libero_90:73": [
+   [
+    "black_book_1",
+    "black_book",
+    "type",
+    4
+   ]
+  ],
+  "libero_90:77": [
+   [
+    "black_book_1",
+    "black_book",
+    "type",
+    4
+   ]
+  ],
+  "libero_90:79": [
+   [
+    "black_book_1",
+    "black_book",
+    "type",
+    4
+   ]
+  ],
+  "libero_90:80": [
+   [
+    "black_book_1",
+    "black_book",
+    "type",
+    4
+   ]
+  ],
+  "libero_90:83": [
+   [
+    "black_book_1",
+    "black_book",
+    "type",
+    4
+   ]
+  ],
+  "libero_90:61": [
+   [
+    "chocolate_pudding_1",
+    "chocolate_pudding",
+    "type",
+    7
+   ]
+  ],
+  "libero_90:59": [
+   [
+    "tomato_sauce_1",
+    "tomato_sauce",
+    "type",
+    22
+   ]
+  ],
+  "libero_90:9": [
+   [
+    "akita_black_bowl_1",
+    "akita_black_bowl",
+    "type",
+    0
+   ]
+  ],
+  "libero_90:50": [
+   [
+    "alphabet_soup_1",
+    "alphabet_soup",
+    "type",
+    1
+   ]
+  ],
+  "libero_spatial:6": [
+   [
+    "akita_black_bowl_1",
+    "akita_black_bowl",
+    "type",
+    0
+   ]
+  ],
+  "libero_90:70": [
+   [
+    "chocolate_pudding_1",
+    "chocolate_pudding",
+    "type",
+    7
+   ]
+  ]
+ }
+}

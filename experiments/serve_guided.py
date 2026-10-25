@@ -83,6 +83,16 @@ def main():
     else:
         bk = PolicyBackbone(cfg, checkpoint_dir=ck, device="cuda")
     logging.info(bk.describe())
+    if a.mode.startswith("r5s:"):
+        # r5s:<spec.json>?arm=<off|vis|orc>&sched=<early|all>&w=<w>&log=<jsonl> -- probe R5s (docs/PLAN_R5S.md; opt-in, EXPLORATORY):
+        # zs on every query except the open-gripper pre-grasp ones, which follow R4-bind's x0-projection toward D4's bank operator
+        # aimed at the vision anchor (vis) or the oracle pose (orc); `off` never guides (experiments/r5s_guide.py)
+        sys.path.insert(0, os.path.join(ROOT, "experiments"))
+        import r5s_guide as R5S
+        policy = R5S.make_policy(bk, a.mode, num_steps=a.num_steps, seed=a.seed)
+        warm(policy)
+        serve(policy, a.port)
+        return
     if a.mode.startswith("pirl:"):
         # pirl:<task>?lora=<one-demo LoRA>&save=<final.pt>&matched=<matched.pt>&ckpt=<ckpt.pt>&budget=577&episodes=100 -- plan D2
         # (ledger m3_prereg g30_rl): pi_RL's Flow-Noise PPO with a LoRA on the action expert, trained online on the client's

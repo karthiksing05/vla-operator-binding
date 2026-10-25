@@ -85,6 +85,18 @@ def seg_depth(sim, cam):
     return _flip(ids), _flip(near / (1.0 - d * (1.0 - near / far)))
 
 
+def r5s_tok_xyz(sim):
+    """Probe R5s (opt-in R5S_GEOM=1): the agentview's metric depth at 256 (robot visible: a real depth camera), in the client
+    orientation, back-projected and reduced per 16 x 16 token exactly as R4-bind's geometry (rb4_bind.backproject 'rs3' +
+    token_points) -> [256 * 3] float32.  A depth-only render: it reads the simulator and changes no state."""
+    import rb4_bind as RB
+    _, d = sim.render(camera_name="agentview", width=256, height=256, depth=True)
+    ext = sim.model.stat.extent
+    far, near = sim.model.vis.map.zfar * ext, sim.model.vis.map.znear * ext
+    depth = _flip(near / (1.0 - d * (1.0 - near / far)))
+    return RB.token_points(RB.backproject(depth, sim, "agentview", "rs3"), depth).astype(np.float32).reshape(-1)
+
+
 def background(sim, cam, geoms):
     """The camera's render with the given geoms hidden (moved to an unrendered geom group for one render)."""
     g = sim.model.geom_group
@@ -450,6 +462,8 @@ def main():
                         if a.objects:
                             on_, op_, oq_ = objects(obs)
                             el.update({"meta/obj_names": on_, "meta/obj_pos": op_.reshape(-1).tolist(), "meta/obj_quat": oq_.reshape(-1).tolist()})
+                        if os.environ.get("R5S_GEOM") == "1":    # opt-in (probe R5s): per-token 3D points of the live agentview depth
+                            el["meta/tok_xyz"] = r5s_tok_xyz(env.env.sim)
                         ff = prefix is not None and calls < int(br["at"]) and a.replan * (calls + 1) <= len(prefix)
                         if ff:
                             el["meta/ff"] = True
