@@ -138,3 +138,130 @@ anchor, not a confirmatory read. If neither passes, the guidance mechanism is th
   - Minimum within-set distance: 0.0113 and 0.0171.
 - Rollout instances also write the usual per-instance ledger rows through roll.sh / roll_record.py (experiments r5s_<arm>,
   r5s_smoke_*).
+
+## 8. Result (2026-10-25; ledger `r5s_read` tag smoke, results/r5s/read.json; design row m3_prereg `pr5s_smoke`, commit a35fb7a9)
+
+EXPLORATORY. The intervals are two-level task-cluster bootstrap 95% intervals (descriptive). 41 instances ran, all 20 episodes
+each, with no crash and no requeue. The zs rows re-typed from D4's recordings equal D4's types (0 mismatches). Every open
+pre-grasp query was guided: 0 fallbacks, since every named type has a prototype and every anchor point is finite.
+
+**Serving smoke.** On libero_90:73, trials 0-1, the executed actions of MODE ours and of r5s arm=off with R5S_GEOM=1 equal
+D4's zs actions exactly: 400 / 400 steps per episode, max |diff| 0. The opt-in depth render and the mode leave unguided serving
+bit-identical.
+
+### 8.1 Success and named grasp (of 20 per task; named grasp = the bound object is the named one)
+
+| task (set) | zs | vis_e1 | vis_a025 | orc_e1 | named grasp zs / vis_e1 / vis_a025 / orc_e1 |
+|---|---|---|---|---|---|
+| libero_90:38 moka pot (wo) | 0 | 0 | 0 | 0 | 0 / 0 / 0 / 0 |
+| libero_90:58 ketchup (wo) | 1 | 0 | 0 | 2 | 1 / 0 / 2 / 3 |
+| libero_90:73 black book (wo) | 0 | 0 | 0 | 0 | 20 / 12 / 3 / 17 |
+| libero_90:77 black book (wo) | 1 | 0 | 0 | 1 | 18 / 15 / 18 / 20 |
+| libero_90:79 black book (wo) | 0 | 0 | 0 | 0 | 20 / 17 / 16 / 20 |
+| libero_90:80 black book (wo) | 0 | 0 | 0 | 0 | 18 / 16 / 18 / 20 |
+| libero_90:83 black book (wo) | 0 | 0 | 0 | 0 | 1 / 16 / 17 / 15 |
+| libero_90:61 (harm) | 20 | 20 | 20 | 20 | 20 / 20 / 20 / 20 |
+| libero_90:59 (harm) | 20 | 19 | 18 | 20 | 20 / 20 / 18 / 20 |
+| libero_90:9 (harm) | 20 | 20 | 19 | 17 | 20 / 20 / 20 / 20 |
+| libero_90:50 (harm) | 15 | 13 | 8 | 15 | 18 / 15 / 8 / 16 |
+| libero_spatial:6 (cell) | 20 | 20 | 20 | 20 | 18 / 18 / 20 / 20 |
+| libero_90:70 (cell) | 20 | 19 | 16 | 20 | 20 / 19 / 16 / 20 |
+
+### 8.2 Pooled per set, paired differences against zs
+
+| set | arm | success | diff vs zs [95%] | named grasp | diff [95%] | wrong-object diff [95%] |
+|---|---|---|---|---|---|---|
+| wrong-object (140) | zs | 0.014 | | 0.557 | | |
+| | vis_e1 | 0.000 | -0.014 [-0.043, +0.000] | 0.543 | -0.014 [-0.229, +0.271] | -0.043 [-0.314, +0.171] |
+| | vis_a025 | 0.000 | -0.014 [-0.043, +0.000] | 0.529 | -0.029 [-0.364, +0.314] | -0.007 [-0.350, +0.336] |
+| | orc_e1 | 0.021 | +0.007 [-0.021, +0.043] | 0.679 | +0.121 [-0.036, +0.343] | -0.136 [-0.364, +0.007] |
+| harm (80) | zs | 0.938 | | 0.975 | | |
+| | vis_e1 | 0.900 | -0.037 [-0.125, +0.025] | 0.938 | -0.037 [-0.125, +0.000] | +0.037 [+0.000, +0.125] |
+| | vis_a025 | 0.812 | -0.125 [-0.312, -0.013] | 0.825 | -0.150 [-0.400, +0.000] | +0.125 [+0.000, +0.388] |
+| | orc_e1 | 0.900 | -0.037 [-0.138, +0.050] | 0.950 | -0.025 [-0.087, +0.000] | +0.025 [+0.000, +0.087] |
+| damage (40) | zs | 1.000 | | 0.950 | | |
+| | vis_e1 | 0.975 | -0.025 [-0.100, +0.000] | 0.925 | -0.025 [-0.125, +0.075] | +0.025 [+0.000, +0.100] |
+| | vis_a025 | 0.900 | -0.100 [-0.275, +0.000] | 0.900 | -0.050 [-0.275, +0.150] | +0.050 [+0.000, +0.175] |
+| | orc_e1 | 1.000 | +0.000 [+0.000, +0.000] | 1.000 | +0.050 [+0.000, +0.175] | +0.000 [+0.000, +0.000] |
+
+Discordant episodes (won from zs failures / lost from zs successes):
+- wrong-object set: vis_e1 0 / 2, vis_a025 0 / 2, orc_e1 3 / 2;
+- harm set: vis_e1 2 / 5, vis_a025 3 / 13, orc_e1 3 / 6;
+- damage set: vis_e1 0 / 1, vis_a025 0 / 4, orc_e1 0 / 0.
+
+**Failure types, wrong-object set (zs -> vis_e1 -> orc_e1):**
+
+| failure type | zs | vis_e1 | orc_e1 |
+|---|---|---|---|
+| wrong_object | 57 (other type 38, wrong instance 19) | 51 | 38 |
+| wrong_goal carried_elsewhere | 47 | 54 | 64 |
+| motion | 28 | 20 | 27 |
+| no_commit | 5 | 13 | 7 |
+
+Guidance moves failures out of wrong_object and into wrong_goal. It does not move them into success.
+
+### 8.3 Anchor localisation in closed loop
+
+A hit means the anchor's xy is within 5 cm of the named object's simulator position; the rate is an episode mean.
+
+| arm | wrong-object set | harm set | damage set | all |
+|---|---|---|---|---|
+| vis_e1 | 0.409 [0.264, 0.537] | 0.465 [0.231, 0.698] | 0.697 [0.597, 0.787] | 0.471 [0.351, 0.582] |
+| vis_a025 | 0.407 | 0.453 | 0.667 | 0.461 |
+
+- Median anchor error per task (vis_e1): 3.9-4.7 cm on :61, :9, :6 and :70; 6.5-12 cm on the black-book tasks; 14-23 cm on
+  :38, :58, :59 and :50. These are not the same criterion as D3's offline token-in-region 0.62.
+- Guided queries per episode: about 8-27. The median |D - d*| after guidance is 1.6-5.5 cm.
+- Guided queries took about 0.45-0.84 s on 4 instances per A40, against about 0.49 s for unguided serving in the smoke.
+
+### 8.4 Decision (pre-declared rule, section 5): a confirmatory read is NOT warranted
+
+| criterion | value | holds |
+|---|---|---|
+| wo success gain >= +0.10 | -0.014 | no |
+| wo named-grasp gain > 0 | -0.014 | no |
+| harm >= -0.05 | -0.037 | yes |
+| damage >= -0.05 | -0.025 | yes |
+
+### 8.5 Reading (exploratory)
+
+1. **Approach guidance can fix the grasp where the anchor or the pose is right, but the part tasks then fail at the goal.**
+   - On :83, the named grasp rises from 1 / 20 (zs) to 16 (vis_e1), 17 (vis_a025) and 15 (oracle), and wrong-object falls
+     from 18 to 3.
+   - Success stays 0: those episodes then fail later (wrong goal, motion or no commit). The new part also breaks the goal role,
+     and D4 found no place operator there.
+2. **Where zs already grasps the named object, a wrong anchor makes it worse.**
+   - On :73 the named grasp falls from 20 to 12 (vis_e1) and to 3 (vis_a025). The anchor misses there (median 12 cm), and the
+     type-level prototype cannot separate the instance from look-alikes.
+   - Pooled over the set, :83's gain and :73's loss cancel (-0.014).
+3. **On the never-seen-type tasks (:38 moka pot, :58 ketchup), nothing moves, oracle included (0-3 named grasps).** The
+   category-level operator and early guidance do not pull the approach off the misbound object. The policy's late Euler steps
+   restore its own choice (R4-bind's "pull-back").
+4. **The oracle is a weak upper bound:**
+   - named grasp +0.121 [-0.036, +0.343] on the wrong-object set;
+   - success +0.007;
+   - harm -0.037 (:9 drops 20 -> 17).
+   The guidance mechanism itself, not only the anchor, is the bottleneck.
+5. **Harm and damage are small for the primary config** (-0.037 and -0.025). The all-step w 0.25 config hurts: harm -0.125, and
+   :50 drops from 15 to 8, mostly through wrong-object grasps. This is the off-manifold cost R4-bind measured offline, now visible
+   in closed loop.
+
+**Recommendation.** Do not run a pre-registered confirmatory read of this guidance. Both the vision and the oracle arms fail
+the gain criteria. The grasp-level effect is real on one task (:83), but it does not reach success, because the place role is
+also unbound. Better candidates:
+- an object-AND-goal intervention for new parts;
+- a better instance-level anchor (hit 0.41 on the wrong-object set);
+- and only after those, a closed-loop read.
+
+**Cost.** 3.41 A40-h of rollout packs (11 packs 3.34 h + smoke 0.07 h), plus about 10 short CPU jobs.
+
+**Disclosures.**
+- The empty `python3 -` heredoc on the login node (section 7) ran before any rollout. It computed nothing, but it breaks the
+  hard rule.
+- Two extra background waiters were started by mistake and stopped at once; one waiter was kept.
+- The read was run once with `--record`. The per-task named-grasp and type numbers above were printed from its log.
+- Localisation uses the 5 cm xy criterion against the simulator position (R4's corridor), not D3's segmentation-region hit.
+- The training-cell zs is a re-roll on fresh_r5s; the 18 D4 tasks reuse D4's zs rows (paired by trial, exact serving parity
+  shown).
+- Per-instance ledger rows (r5s_<arm>, r5s_smoke_*) were written by roll.sh, as for every rollout.
+- Audits after the read: audit_numbers 0 discrepancies over 2,064 checks; audit_coverage 0 uncovered numerals.

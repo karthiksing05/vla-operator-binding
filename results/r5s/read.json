@@ -1,0 +1,2644 @@
+{
+ "plan": {
+  "tasks": [
+   "libero_90:38",
+   "libero_90:58",
+   "libero_90:73",
+   "libero_90:77",
+   "libero_90:79",
+   "libero_90:80",
+   "libero_90:83",
+   "libero_90:61",
+   "libero_90:59",
+   "libero_90:9",
+   "libero_90:50",
+   "libero_spatial:6",
+   "libero_90:70"
+  ],
+  "groups": {
+   "wo": [
+    "libero_90:38",
+    "libero_90:58",
+    "libero_90:73",
+    "libero_90:77",
+    "libero_90:79",
+    "libero_90:80",
+    "libero_90:83"
+   ],
+   "harm": [
+    "libero_90:61",
+    "libero_90:59",
+    "libero_90:9",
+    "libero_90:50"
+   ],
+   "cell": [
+    "libero_spatial:6",
+    "libero_90:70"
+   ]
+  },
+  "r2_zs_recombination": {
+   "libero_90:14": 19,
+   "libero_90:16": 0,
+   "libero_90:60": 19,
+   "libero_90:1": 4,
+   "libero_90:29": 1,
+   "libero_90:50": 19,
+   "libero_90:9": 19,
+   "libero_90:36": 10,
+   "libero_90:40": 0,
+   "libero_90:59": 20,
+   "libero_90:61": 20
+  },
+  "arms": {
+   "vis_e1": [
+    "vis",
+    "early",
+    1.0
+   ],
+   "vis_a025": [
+    "vis",
+    "all",
+    0.25
+   ],
+   "orc_e1": [
+    "orc",
+    "early",
+    1.0
+   ]
+  }
+ },
+ "zs_retype_mismatch": [],
+ "per_task": {
+  "libero_90:38": {
+   "zs": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 0,
+    "any_grasp": 19,
+    "wrong_object": 19,
+    "types": {
+     "wrong_object/wrong_instance": 19,
+     "no_commit": 1
+    }
+   },
+   "vis_e1": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 0,
+    "any_grasp": 19,
+    "wrong_object": 19,
+    "types": {
+     "wrong_object/wrong_instance": 19,
+     "no_commit": 1
+    }
+   },
+   "vis_a025": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 0,
+    "any_grasp": 18,
+    "wrong_object": 18,
+    "types": {
+     "no_commit": 2,
+     "wrong_object/wrong_instance": 18
+    }
+   },
+   "orc_e1": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 0,
+    "any_grasp": 17,
+    "wrong_object": 17,
+    "types": {
+     "no_commit": 3,
+     "wrong_object/wrong_instance": 17
+    }
+   }
+  },
+  "libero_90:58": {
+   "zs": {
+    "n": 20,
+    "success": 1,
+    "named_grasp": 1,
+    "any_grasp": 20,
+    "wrong_object": 19,
+    "types": {
+     "wrong_object/other_type": 19
+    }
+   },
+   "vis_e1": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 0,
+    "any_grasp": 18,
+    "wrong_object": 18,
+    "types": {
+     "wrong_object/other_type": 18,
+     "no_commit": 2
+    }
+   },
+   "vis_a025": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 2,
+    "any_grasp": 17,
+    "wrong_object": 15,
+    "types": {
+     "no_commit": 3,
+     "wrong_object/other_type": 15,
+     "motion/not_carried": 2
+    }
+   },
+   "orc_e1": {
+    "n": 20,
+    "success": 2,
+    "named_grasp": 3,
+    "any_grasp": 20,
+    "wrong_object": 17,
+    "types": {
+     "wrong_object/other_type": 17,
+     "motion/not_carried": 1
+    }
+   }
+  },
+  "libero_90:73": {
+   "zs": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {
+     "motion/toward_target": 14,
+     "wrong_goal/carried_elsewhere": 6
+    }
+   },
+   "vis_e1": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 12,
+    "any_grasp": 20,
+    "wrong_object": 8,
+    "types": {
+     "wrong_object/other_type": 8,
+     "wrong_goal/carried_elsewhere": 4,
+     "motion/toward_target": 8
+    }
+   },
+   "vis_a025": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 3,
+    "any_grasp": 20,
+    "wrong_object": 17,
+    "types": {
+     "wrong_object/other_type": 17,
+     "motion/not_carried": 1,
+     "motion/toward_target": 1,
+     "wrong_goal/carried_elsewhere": 1
+    }
+   },
+   "orc_e1": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 17,
+    "any_grasp": 18,
+    "wrong_object": 1,
+    "types": {
+     "motion/toward_target": 13,
+     "wrong_goal/carried_elsewhere": 3,
+     "wrong_object/other_type": 1,
+     "no_commit": 2,
+     "wrong_goal/other_region": 1
+    }
+   }
+  },
+  "libero_90:77": {
+   "zs": {
+    "n": 20,
+    "success": 1,
+    "named_grasp": 18,
+    "any_grasp": 18,
+    "wrong_object": 0,
+    "types": {
+     "motion/toward_target": 3,
+     "wrong_goal/carried_elsewhere": 12,
+     "no_commit": 2,
+     "motion/not_carried": 2
+    }
+   },
+   "vis_e1": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 15,
+    "any_grasp": 16,
+    "wrong_object": 1,
+    "types": {
+     "no_commit": 4,
+     "wrong_goal/carried_elsewhere": 10,
+     "motion/not_carried": 2,
+     "wrong_object/other_type": 1,
+     "motion/toward_target": 3
+    }
+   },
+   "vis_a025": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 18,
+    "any_grasp": 19,
+    "wrong_object": 1,
+    "types": {
+     "motion/toward_target": 7,
+     "wrong_goal/carried_elsewhere": 9,
+     "motion/not_carried": 2,
+     "wrong_object/other_type": 1,
+     "no_commit": 1
+    }
+   },
+   "orc_e1": {
+    "n": 20,
+    "success": 1,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {
+     "wrong_goal/carried_elsewhere": 12,
+     "motion/toward_target": 6,
+     "motion/not_carried": 1
+    }
+   }
+  },
+  "libero_90:79": {
+   "zs": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {
+     "wrong_goal/carried_elsewhere": 13,
+     "motion/not_carried": 5,
+     "motion/toward_target": 2
+    }
+   },
+   "vis_e1": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 17,
+    "any_grasp": 18,
+    "wrong_object": 1,
+    "types": {
+     "no_commit": 2,
+     "wrong_goal/carried_elsewhere": 13,
+     "motion/toward_target": 2,
+     "wrong_object/other_type": 1,
+     "motion/not_carried": 2
+    }
+   },
+   "vis_a025": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 16,
+    "any_grasp": 17,
+    "wrong_object": 1,
+    "types": {
+     "wrong_goal/carried_elsewhere": 16,
+     "no_commit": 3,
+     "wrong_object/other_type": 1
+    }
+   },
+   "orc_e1": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {
+     "wrong_goal/carried_elsewhere": 19,
+     "motion/not_carried": 1
+    }
+   }
+  },
+  "libero_90:80": {
+   "zs": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 18,
+    "any_grasp": 19,
+    "wrong_object": 1,
+    "types": {
+     "wrong_goal/carried_elsewhere": 15,
+     "wrong_goal/other_region": 1,
+     "no_commit": 1,
+     "motion/toward_target": 2,
+     "wrong_object/other_type": 1
+    }
+   },
+   "vis_e1": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 16,
+    "any_grasp": 17,
+    "wrong_object": 1,
+    "types": {
+     "no_commit": 3,
+     "wrong_goal/carried_elsewhere": 15,
+     "wrong_object/other_type": 1,
+     "motion/not_carried": 1
+    }
+   },
+   "vis_a025": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 18,
+    "any_grasp": 20,
+    "wrong_object": 2,
+    "types": {
+     "wrong_goal/carried_elsewhere": 15,
+     "wrong_object/other_type": 2,
+     "motion/not_carried": 1,
+     "motion/toward_target": 2
+    }
+   },
+   "orc_e1": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {
+     "wrong_goal/carried_elsewhere": 20
+    }
+   }
+  },
+  "libero_90:83": {
+   "zs": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 1,
+    "any_grasp": 19,
+    "wrong_object": 18,
+    "types": {
+     "wrong_object/other_type": 18,
+     "no_commit": 1,
+     "wrong_goal/carried_elsewhere": 1
+    }
+   },
+   "vis_e1": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 16,
+    "any_grasp": 19,
+    "wrong_object": 3,
+    "types": {
+     "wrong_goal/carried_elsewhere": 12,
+     "wrong_goal/other_region": 2,
+     "wrong_object/other_type": 3,
+     "no_commit": 1,
+     "motion/toward_target": 2
+    }
+   },
+   "vis_a025": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 17,
+    "any_grasp": 19,
+    "wrong_object": 2,
+    "types": {
+     "wrong_goal/carried_elsewhere": 14,
+     "wrong_goal/other_region": 1,
+     "wrong_object/other_type": 2,
+     "motion/toward_target": 2,
+     "no_commit": 1
+    }
+   },
+   "orc_e1": {
+    "n": 20,
+    "success": 0,
+    "named_grasp": 15,
+    "any_grasp": 18,
+    "wrong_object": 3,
+    "types": {
+     "motion/toward_target": 3,
+     "wrong_goal/carried_elsewhere": 10,
+     "no_commit": 2,
+     "motion/not_carried": 2,
+     "wrong_object/other_type": 3
+    }
+   }
+  },
+  "libero_90:61": {
+   "zs": {
+    "n": 20,
+    "success": 20,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {}
+   },
+   "vis_e1": {
+    "n": 20,
+    "success": 20,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {}
+   },
+   "vis_a025": {
+    "n": 20,
+    "success": 20,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {}
+   },
+   "orc_e1": {
+    "n": 20,
+    "success": 20,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {}
+   }
+  },
+  "libero_90:59": {
+   "zs": {
+    "n": 20,
+    "success": 20,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {}
+   },
+   "vis_e1": {
+    "n": 20,
+    "success": 19,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {
+     "motion/not_carried": 1
+    }
+   },
+   "vis_a025": {
+    "n": 20,
+    "success": 18,
+    "named_grasp": 18,
+    "any_grasp": 18,
+    "wrong_object": 0,
+    "types": {
+     "no_commit": 2
+    }
+   },
+   "orc_e1": {
+    "n": 20,
+    "success": 20,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {}
+   }
+  },
+  "libero_90:9": {
+   "zs": {
+    "n": 20,
+    "success": 20,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {}
+   },
+   "vis_e1": {
+    "n": 20,
+    "success": 20,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {}
+   },
+   "vis_a025": {
+    "n": 20,
+    "success": 19,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {
+     "motion/toward_target": 1
+    }
+   },
+   "orc_e1": {
+    "n": 20,
+    "success": 17,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {
+     "motion/toward_target": 3
+    }
+   }
+  },
+  "libero_90:50": {
+   "zs": {
+    "n": 20,
+    "success": 15,
+    "named_grasp": 18,
+    "any_grasp": 20,
+    "wrong_object": 2,
+    "types": {
+     "motion/not_carried": 2,
+     "wrong_object/other_type": 2,
+     "motion/toward_target": 1
+    }
+   },
+   "vis_e1": {
+    "n": 20,
+    "success": 13,
+    "named_grasp": 15,
+    "any_grasp": 20,
+    "wrong_object": 5,
+    "types": {
+     "motion/toward_target": 2,
+     "wrong_object/other_type": 5
+    }
+   },
+   "vis_a025": {
+    "n": 20,
+    "success": 8,
+    "named_grasp": 8,
+    "any_grasp": 20,
+    "wrong_object": 12,
+    "types": {
+     "wrong_object/other_type": 12
+    }
+   },
+   "orc_e1": {
+    "n": 20,
+    "success": 15,
+    "named_grasp": 16,
+    "any_grasp": 20,
+    "wrong_object": 4,
+    "types": {
+     "wrong_object/other_type": 4,
+     "wrong_goal/other_region": 1
+    }
+   }
+  },
+  "libero_spatial:6": {
+   "zs": {
+    "n": 20,
+    "success": 20,
+    "named_grasp": 18,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {}
+   },
+   "vis_e1": {
+    "n": 20,
+    "success": 20,
+    "named_grasp": 18,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {}
+   },
+   "vis_a025": {
+    "n": 20,
+    "success": 20,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {}
+   },
+   "orc_e1": {
+    "n": 20,
+    "success": 20,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {}
+   }
+  },
+  "libero_90:70": {
+   "zs": {
+    "n": 20,
+    "success": 20,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {}
+   },
+   "vis_e1": {
+    "n": 20,
+    "success": 19,
+    "named_grasp": 19,
+    "any_grasp": 20,
+    "wrong_object": 1,
+    "types": {
+     "wrong_object/other_type": 1
+    }
+   },
+   "vis_a025": {
+    "n": 20,
+    "success": 16,
+    "named_grasp": 16,
+    "any_grasp": 18,
+    "wrong_object": 2,
+    "types": {
+     "wrong_object/other_type": 2,
+     "no_commit": 2
+    }
+   },
+   "orc_e1": {
+    "n": 20,
+    "success": 20,
+    "named_grasp": 20,
+    "any_grasp": 20,
+    "wrong_object": 0,
+    "types": {}
+   }
+  }
+ },
+ "groups": {
+  "wo": {
+   "zs": {
+    "success": {
+     "mean": 0.014285714285714285,
+     "lo": 0.0,
+     "hi": 0.04285714285714286,
+     "n": 140,
+     "tasks": 7
+    },
+    "named_grasp": {
+     "mean": 0.5571428571428572,
+     "lo": 0.19285714285714287,
+     "hi": 0.8571428571428571,
+     "n": 140,
+     "tasks": 7
+    },
+    "wrong_object": {
+     "mean": 0.40714285714285714,
+     "lo": 0.12857142857142856,
+     "hi": 0.7714285714285715,
+     "n": 140,
+     "tasks": 7
+    },
+    "types": {
+     "wrong_object/wrong_instance": 19,
+     "no_commit": 5,
+     "wrong_object/other_type": 38,
+     "motion/toward_target": 21,
+     "wrong_goal/carried_elsewhere": 47,
+     "motion/not_carried": 7,
+     "wrong_goal/other_region": 1
+    }
+   },
+   "vis_e1": {
+    "success": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 140,
+     "tasks": 7
+    },
+    "named_grasp": {
+     "mean": 0.5428571428571428,
+     "lo": 0.2714285714285714,
+     "hi": 0.7928571428571428,
+     "n": 140,
+     "tasks": 7
+    },
+    "wrong_object": {
+     "mean": 0.36428571428571427,
+     "lo": 0.1,
+     "hi": 0.6571428571428571,
+     "n": 140,
+     "tasks": 7
+    },
+    "types": {
+     "wrong_object/wrong_instance": 19,
+     "no_commit": 13,
+     "wrong_object/other_type": 32,
+     "wrong_goal/carried_elsewhere": 54,
+     "motion/toward_target": 15,
+     "motion/not_carried": 5,
+     "wrong_goal/other_region": 2
+    },
+    "diff_vs_zs": {
+     "success": {
+      "mean": -0.014285714285714285,
+      "lo": -0.04285714285714286,
+      "hi": 0.0,
+      "n": 140,
+      "tasks": 7
+     },
+     "named_grasp": {
+      "mean": -0.014285714285714285,
+      "lo": -0.22857142857142856,
+      "hi": 0.2714285714285714,
+      "n": 140,
+      "tasks": 7
+     },
+     "wrong_object": {
+      "mean": -0.04285714285714286,
+      "lo": -0.3142857142857143,
+      "hi": 0.17142857142857143,
+      "n": 140,
+      "tasks": 7
+     }
+    },
+    "lost_of_zs_successes": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 2,
+     "tasks": 2
+    },
+    "won_of_zs_failures": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 138,
+     "tasks": 7
+    },
+    "discordant": [
+     0,
+     2
+    ]
+   },
+   "vis_a025": {
+    "success": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 140,
+     "tasks": 7
+    },
+    "named_grasp": {
+     "mean": 0.5285714285714286,
+     "lo": 0.24285714285714285,
+     "hi": 0.8071428571428572,
+     "n": 140,
+     "tasks": 7
+    },
+    "wrong_object": {
+     "mean": 0.4,
+     "lo": 0.1357142857142857,
+     "hi": 0.6785714285714286,
+     "n": 140,
+     "tasks": 7
+    },
+    "types": {
+     "no_commit": 10,
+     "wrong_object/wrong_instance": 18,
+     "wrong_object/other_type": 38,
+     "motion/not_carried": 6,
+     "motion/toward_target": 12,
+     "wrong_goal/carried_elsewhere": 55,
+     "wrong_goal/other_region": 1
+    },
+    "diff_vs_zs": {
+     "success": {
+      "mean": -0.014285714285714285,
+      "lo": -0.04285714285714286,
+      "hi": 0.0,
+      "n": 140,
+      "tasks": 7
+     },
+     "named_grasp": {
+      "mean": -0.02857142857142857,
+      "lo": -0.36428571428571427,
+      "hi": 0.3142857142857143,
+      "n": 140,
+      "tasks": 7
+     },
+     "wrong_object": {
+      "mean": -0.007142857142857143,
+      "lo": -0.35,
+      "hi": 0.3357142857142857,
+      "n": 140,
+      "tasks": 7
+     }
+    },
+    "lost_of_zs_successes": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 2,
+     "tasks": 2
+    },
+    "won_of_zs_failures": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 138,
+     "tasks": 7
+    },
+    "discordant": [
+     0,
+     2
+    ]
+   },
+   "orc_e1": {
+    "success": {
+     "mean": 0.02142857142857143,
+     "lo": 0.0,
+     "hi": 0.06428571428571428,
+     "n": 140,
+     "tasks": 7
+    },
+    "named_grasp": {
+     "mean": 0.6785714285714286,
+     "lo": 0.3783928571428573,
+     "hi": 0.95,
+     "n": 140,
+     "tasks": 7
+    },
+    "wrong_object": {
+     "mean": 0.2714285714285714,
+     "lo": 0.02142857142857143,
+     "hi": 0.55,
+     "n": 140,
+     "tasks": 7
+    },
+    "types": {
+     "no_commit": 7,
+     "wrong_object/wrong_instance": 17,
+     "wrong_object/other_type": 21,
+     "motion/not_carried": 5,
+     "motion/toward_target": 22,
+     "wrong_goal/carried_elsewhere": 64,
+     "wrong_goal/other_region": 1
+    },
+    "diff_vs_zs": {
+     "success": {
+      "mean": 0.007142857142857143,
+      "lo": -0.02142857142857143,
+      "hi": 0.04285714285714286,
+      "n": 140,
+      "tasks": 7
+     },
+     "named_grasp": {
+      "mean": 0.12142857142857143,
+      "lo": -0.03571428571428571,
+      "hi": 0.34285714285714286,
+      "n": 140,
+      "tasks": 7
+     },
+     "wrong_object": {
+      "mean": -0.1357142857142857,
+      "lo": -0.36428571428571427,
+      "hi": 0.007142857142857143,
+      "n": 140,
+      "tasks": 7
+     }
+    },
+    "lost_of_zs_successes": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 2,
+     "tasks": 2
+    },
+    "won_of_zs_failures": {
+     "mean": 0.021739130434782608,
+     "lo": 0.0,
+     "hi": 0.0661764705882353,
+     "n": 138,
+     "tasks": 7
+    },
+    "discordant": [
+     3,
+     2
+    ]
+   }
+  },
+  "harm": {
+   "zs": {
+    "success": {
+     "mean": 0.9375,
+     "lo": 0.8,
+     "hi": 1.0,
+     "n": 80,
+     "tasks": 4
+    },
+    "named_grasp": {
+     "mean": 0.975,
+     "lo": 0.9125,
+     "hi": 1.0,
+     "n": 80,
+     "tasks": 4
+    },
+    "wrong_object": {
+     "mean": 0.025,
+     "lo": 0.0,
+     "hi": 0.0875,
+     "n": 80,
+     "tasks": 4
+    },
+    "types": {
+     "motion/not_carried": 2,
+     "wrong_object/other_type": 2,
+     "motion/toward_target": 1
+    }
+   },
+   "vis_e1": {
+    "success": {
+     "mean": 0.9,
+     "lo": 0.725,
+     "hi": 1.0,
+     "n": 80,
+     "tasks": 4
+    },
+    "named_grasp": {
+     "mean": 0.9375,
+     "lo": 0.8,
+     "hi": 1.0,
+     "n": 80,
+     "tasks": 4
+    },
+    "wrong_object": {
+     "mean": 0.0625,
+     "lo": 0.0,
+     "hi": 0.2,
+     "n": 80,
+     "tasks": 4
+    },
+    "types": {
+     "motion/not_carried": 1,
+     "motion/toward_target": 2,
+     "wrong_object/other_type": 5
+    },
+    "diff_vs_zs": {
+     "success": {
+      "mean": -0.0375,
+      "lo": -0.125,
+      "hi": 0.025,
+      "n": 80,
+      "tasks": 4
+     },
+     "named_grasp": {
+      "mean": -0.0375,
+      "lo": -0.125,
+      "hi": 0.0,
+      "n": 80,
+      "tasks": 4
+     },
+     "wrong_object": {
+      "mean": 0.0375,
+      "lo": 0.0,
+      "hi": 0.125,
+      "n": 80,
+      "tasks": 4
+     }
+    },
+    "lost_of_zs_successes": {
+     "mean": 0.06666666666666667,
+     "lo": 0.0,
+     "hi": 0.2,
+     "n": 75,
+     "tasks": 4
+    },
+    "won_of_zs_failures": {
+     "mean": 0.4,
+     "lo": 0.0,
+     "hi": 0.8,
+     "n": 5,
+     "tasks": 1
+    },
+    "discordant": [
+     2,
+     5
+    ]
+   },
+   "vis_a025": {
+    "success": {
+     "mean": 0.8125,
+     "lo": 0.525,
+     "hi": 0.9875,
+     "n": 80,
+     "tasks": 4
+    },
+    "named_grasp": {
+     "mean": 0.825,
+     "lo": 0.525,
+     "hi": 1.0,
+     "n": 80,
+     "tasks": 4
+    },
+    "wrong_object": {
+     "mean": 0.15,
+     "lo": 0.0,
+     "hi": 0.4625,
+     "n": 80,
+     "tasks": 4
+    },
+    "types": {
+     "no_commit": 2,
+     "motion/toward_target": 1,
+     "wrong_object/other_type": 12
+    },
+    "diff_vs_zs": {
+     "success": {
+      "mean": -0.125,
+      "lo": -0.3125,
+      "hi": -0.0125,
+      "n": 80,
+      "tasks": 4
+     },
+     "named_grasp": {
+      "mean": -0.15,
+      "lo": -0.4,
+      "hi": 0.0,
+      "n": 80,
+      "tasks": 4
+     },
+     "wrong_object": {
+      "mean": 0.125,
+      "lo": 0.0,
+      "hi": 0.3875,
+      "n": 80,
+      "tasks": 4
+     }
+    },
+    "lost_of_zs_successes": {
+     "mean": 0.17333333333333334,
+     "lo": 0.0125,
+     "hi": 0.47692307692307695,
+     "n": 75,
+     "tasks": 4
+    },
+    "won_of_zs_failures": {
+     "mean": 0.6,
+     "lo": 0.2,
+     "hi": 1.0,
+     "n": 5,
+     "tasks": 1
+    },
+    "discordant": [
+     3,
+     13
+    ]
+   },
+   "orc_e1": {
+    "success": {
+     "mean": 0.9,
+     "lo": 0.7625,
+     "hi": 1.0,
+     "n": 80,
+     "tasks": 4
+    },
+    "named_grasp": {
+     "mean": 0.95,
+     "lo": 0.8375,
+     "hi": 1.0,
+     "n": 80,
+     "tasks": 4
+    },
+    "wrong_object": {
+     "mean": 0.05,
+     "lo": 0.0,
+     "hi": 0.1625,
+     "n": 80,
+     "tasks": 4
+    },
+    "types": {
+     "motion/toward_target": 3,
+     "wrong_object/other_type": 4,
+     "wrong_goal/other_region": 1
+    },
+    "diff_vs_zs": {
+     "success": {
+      "mean": -0.0375,
+      "lo": -0.1375,
+      "hi": 0.05,
+      "n": 80,
+      "tasks": 4
+     },
+     "named_grasp": {
+      "mean": -0.025,
+      "lo": -0.0875,
+      "hi": 0.0,
+      "n": 80,
+      "tasks": 4
+     },
+     "wrong_object": {
+      "mean": 0.025,
+      "lo": 0.0,
+      "hi": 0.0875,
+      "n": 80,
+      "tasks": 4
+     }
+    },
+    "lost_of_zs_successes": {
+     "mean": 0.08,
+     "lo": 0.0,
+     "hi": 0.2,
+     "n": 75,
+     "tasks": 4
+    },
+    "won_of_zs_failures": {
+     "mean": 0.6,
+     "lo": 0.2,
+     "hi": 1.0,
+     "n": 5,
+     "tasks": 1
+    },
+    "discordant": [
+     3,
+     6
+    ]
+   }
+  },
+  "cell": {
+   "zs": {
+    "success": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 40,
+     "tasks": 2
+    },
+    "named_grasp": {
+     "mean": 0.95,
+     "lo": 0.825,
+     "hi": 1.0,
+     "n": 40,
+     "tasks": 2
+    },
+    "wrong_object": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 40,
+     "tasks": 2
+    },
+    "types": {}
+   },
+   "vis_e1": {
+    "success": {
+     "mean": 0.975,
+     "lo": 0.9,
+     "hi": 1.0,
+     "n": 40,
+     "tasks": 2
+    },
+    "named_grasp": {
+     "mean": 0.925,
+     "lo": 0.825,
+     "hi": 1.0,
+     "n": 40,
+     "tasks": 2
+    },
+    "wrong_object": {
+     "mean": 0.025,
+     "lo": 0.0,
+     "hi": 0.1,
+     "n": 40,
+     "tasks": 2
+    },
+    "types": {
+     "wrong_object/other_type": 1
+    },
+    "diff_vs_zs": {
+     "success": {
+      "mean": -0.025,
+      "lo": -0.1,
+      "hi": 0.0,
+      "n": 40,
+      "tasks": 2
+     },
+     "named_grasp": {
+      "mean": -0.025,
+      "lo": -0.125,
+      "hi": 0.075,
+      "n": 40,
+      "tasks": 2
+     },
+     "wrong_object": {
+      "mean": 0.025,
+      "lo": 0.0,
+      "hi": 0.1,
+      "n": 40,
+      "tasks": 2
+     }
+    },
+    "lost_of_zs_successes": {
+     "mean": 0.025,
+     "lo": 0.0,
+     "hi": 0.1,
+     "n": 40,
+     "tasks": 2
+    },
+    "won_of_zs_failures": {
+     "mean": null,
+     "lo": null,
+     "hi": null,
+     "n": 0,
+     "tasks": 0
+    },
+    "discordant": [
+     0,
+     1
+    ]
+   },
+   "vis_a025": {
+    "success": {
+     "mean": 0.9,
+     "lo": 0.725,
+     "hi": 1.0,
+     "n": 40,
+     "tasks": 2
+    },
+    "named_grasp": {
+     "mean": 0.9,
+     "lo": 0.725,
+     "hi": 1.0,
+     "n": 40,
+     "tasks": 2
+    },
+    "wrong_object": {
+     "mean": 0.05,
+     "lo": 0.0,
+     "hi": 0.175,
+     "n": 40,
+     "tasks": 2
+    },
+    "types": {
+     "wrong_object/other_type": 2,
+     "no_commit": 2
+    },
+    "diff_vs_zs": {
+     "success": {
+      "mean": -0.1,
+      "lo": -0.275,
+      "hi": 0.0,
+      "n": 40,
+      "tasks": 2
+     },
+     "named_grasp": {
+      "mean": -0.05,
+      "lo": -0.275,
+      "hi": 0.15,
+      "n": 40,
+      "tasks": 2
+     },
+     "wrong_object": {
+      "mean": 0.05,
+      "lo": 0.0,
+      "hi": 0.175,
+      "n": 40,
+      "tasks": 2
+     }
+    },
+    "lost_of_zs_successes": {
+     "mean": 0.1,
+     "lo": 0.0,
+     "hi": 0.275,
+     "n": 40,
+     "tasks": 2
+    },
+    "won_of_zs_failures": {
+     "mean": null,
+     "lo": null,
+     "hi": null,
+     "n": 0,
+     "tasks": 0
+    },
+    "discordant": [
+     0,
+     4
+    ]
+   },
+   "orc_e1": {
+    "success": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 40,
+     "tasks": 2
+    },
+    "named_grasp": {
+     "mean": 1.0,
+     "lo": 1.0,
+     "hi": 1.0,
+     "n": 40,
+     "tasks": 2
+    },
+    "wrong_object": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 40,
+     "tasks": 2
+    },
+    "types": {},
+    "diff_vs_zs": {
+     "success": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 40,
+      "tasks": 2
+     },
+     "named_grasp": {
+      "mean": 0.05,
+      "lo": 0.0,
+      "hi": 0.175,
+      "n": 40,
+      "tasks": 2
+     },
+     "wrong_object": {
+      "mean": 0.0,
+      "lo": 0.0,
+      "hi": 0.0,
+      "n": 40,
+      "tasks": 2
+     }
+    },
+    "lost_of_zs_successes": {
+     "mean": 0.0,
+     "lo": 0.0,
+     "hi": 0.0,
+     "n": 40,
+     "tasks": 2
+    },
+    "won_of_zs_failures": {
+     "mean": null,
+     "lo": null,
+     "hi": null,
+     "n": 0,
+     "tasks": 0
+    },
+    "discordant": [
+     0,
+     0
+    ]
+   }
+  }
+ },
+ "guidance": {
+  "vis_e1": {
+   "libero_90:38": {
+    "queries": 1600,
+    "open_pre_grasp": 374,
+    "guided": 374,
+    "fallback": 0,
+    "guided_per_ep": 18.7,
+    "levels": {
+     "type": 0,
+     "category": 374,
+     "role": 0
+    },
+    "hit_ep": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.17647058823529413,
+     0.0,
+     0.45454545454545453,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.19444444444444445,
+     0.07692307692307693
+    ],
+    "err_median": 0.22799999999999998,
+    "resid_median": 0.023335695069853758,
+    "ms_guided": 678.1604278074866
+   },
+   "libero_90:58": {
+    "queries": 1600,
+    "open_pre_grasp": 402,
+    "guided": 402,
+    "fallback": 0,
+    "guided_per_ep": 20.1,
+    "levels": {
+     "type": 0,
+     "category": 402,
+     "role": 0
+    },
+    "hit_ep": [
+     0.4,
+     0.5833333333333334,
+     0.0,
+     0.1,
+     0.0,
+     0.5714285714285714,
+     0.0,
+     0.8837209302325582,
+     0.5384615384615384,
+     0.23529411764705882,
+     0.1111111111111111,
+     0.0,
+     0.4117647058823529,
+     0.7352941176470589,
+     0.5384615384615384,
+     0.06666666666666667,
+     0.0,
+     0.11320754716981132,
+     1.0,
+     0.4146341463414634
+    ],
+    "err_median": 0.1383,
+    "resid_median": 0.05307781388178742,
+    "ms_guided": 642.8512437810946
+   },
+   "libero_90:73": {
+    "queries": 1600,
+    "open_pre_grasp": 240,
+    "guided": 240,
+    "fallback": 0,
+    "guided_per_ep": 12.0,
+    "levels": {
+     "type": 240,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.36363636363636365,
+     0.7272727272727273,
+     0.0,
+     0.7,
+     0.6363636363636364,
+     0.0,
+     0.0,
+     0.5,
+     0.5833333333333334,
+     0.7142857142857143,
+     0.6363636363636364,
+     0.0,
+     0.0,
+     0.2631578947368421,
+     0.0,
+     0.8,
+     0.0,
+     0.46153846153846156,
+     0.5555555555555556,
+     0.0
+    ],
+    "err_median": 0.12325,
+    "resid_median": 0.04346375243111288,
+    "ms_guided": 711.8479166666667
+   },
+   "libero_90:77": {
+    "queries": 1600,
+    "open_pre_grasp": 209,
+    "guided": 209,
+    "fallback": 0,
+    "guided_per_ep": 10.45,
+    "levels": {
+     "type": 209,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.03571428571428571,
+     0.75,
+     0.0,
+     0.75,
+     0.7777777777777778,
+     0.0,
+     0.0,
+     0.875,
+     0.08,
+     0.8,
+     1.0,
+     0.75,
+     0.625,
+     1.0,
+     0.5,
+     0.875,
+     0.0,
+     0.875,
+     0.4444444444444444,
+     0.7777777777777778
+    ],
+    "err_median": 0.1073,
+    "resid_median": 0.035223003846918,
+    "ms_guided": 766.9980861244018
+   },
+   "libero_90:79": {
+    "queries": 1600,
+    "open_pre_grasp": 199,
+    "guided": 199,
+    "fallback": 0,
+    "guided_per_ep": 9.95,
+    "levels": {
+     "type": 199,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.0,
+     0.75,
+     0.2222222222222222,
+     0.75,
+     0.7777777777777778,
+     0.0,
+     0.0,
+     0.7777777777777778,
+     0.0,
+     0.8333333333333334,
+     0.7777777777777778,
+     0.6666666666666666,
+     0.5555555555555556,
+     1.0,
+     0.6,
+     0.875,
+     0.0,
+     0.875,
+     0.3333333333333333,
+     0.7777777777777778
+    ],
+    "err_median": 0.0661,
+    "resid_median": 0.03401249770305027,
+    "ms_guided": 672.5623115577889
+   },
+   "libero_90:80": {
+    "queries": 1600,
+    "open_pre_grasp": 189,
+    "guided": 189,
+    "fallback": 0,
+    "guided_per_ep": 9.45,
+    "levels": {
+     "type": 189,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.0,
+     1.0,
+     0.2222222222222222,
+     0.75,
+     0.7777777777777778,
+     0.0,
+     0.0,
+     0.875,
+     0.21428571428571427,
+     0.8888888888888888,
+     1.0,
+     0.75,
+     0.625,
+     0.8571428571428571,
+     0.5,
+     1.0,
+     0.0,
+     0.875,
+     0.4444444444444444,
+     0.6666666666666666
+    ],
+    "err_median": 0.0653,
+    "resid_median": 0.03492420364160076,
+    "ms_guided": 705.4264550264552
+   },
+   "libero_90:83": {
+    "queries": 1600,
+    "open_pre_grasp": 200,
+    "guided": 200,
+    "fallback": 0,
+    "guided_per_ep": 10.0,
+    "levels": {
+     "type": 200,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.8,
+     0.125,
+     0.0,
+     0.0,
+     0.8888888888888888,
+     0.0,
+     0.0,
+     0.9,
+     0.7,
+     0.25,
+     1.0,
+     0.6,
+     0.5454545454545454,
+     0.875,
+     0.6666666666666666,
+     0.5833333333333334,
+     0.0,
+     0.6666666666666666,
+     1.0,
+     0.18181818181818182
+    ],
+    "err_median": 0.0841,
+    "resid_median": 0.041220918600634884,
+    "ms_guided": 650.8875
+   },
+   "libero_90:61": {
+    "queries": 582,
+    "open_pre_grasp": 236,
+    "guided": 236,
+    "fallback": 0,
+    "guided_per_ep": 11.8,
+    "levels": {
+     "type": 236,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.9166666666666666,
+     0.8461538461538461,
+     0.75,
+     0.16666666666666666,
+     0.8333333333333334,
+     0.0,
+     0.2727272727272727,
+     0.8461538461538461,
+     0.9090909090909091,
+     0.8571428571428571,
+     0.9166666666666666,
+     0.8181818181818182,
+     0.9090909090909091,
+     0.9090909090909091,
+     0.7272727272727273,
+     0.36363636363636365,
+     0.9166666666666666,
+     0.8333333333333334,
+     0.9090909090909091,
+     0.9090909090909091
+    ],
+    "err_median": 0.038650000000000004,
+    "resid_median": 0.0243986024454151,
+    "ms_guided": 760.068220338983
+   },
+   "libero_90:59": {
+    "queries": 556,
+    "open_pre_grasp": 219,
+    "guided": 219,
+    "fallback": 0,
+    "guided_per_ep": 10.95,
+    "levels": {
+     "type": 219,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.2222222222222222,
+     0.0,
+     0.5555555555555556,
+     0.4444444444444444,
+     0.0,
+     0.0,
+     0.625,
+     0.6,
+     0.0,
+     0.0,
+     0.5,
+     0.625,
+     0.0,
+     0.625,
+     0.5555555555555556,
+     0.45454545454545453,
+     0.7777777777777778,
+     0.2222222222222222,
+     0.0,
+     0.5
+    ],
+    "err_median": 0.2303,
+    "resid_median": 0.05030357840154117,
+    "ms_guided": 730.7995433789953
+   },
+   "libero_90:9": {
+    "queries": 578,
+    "open_pre_grasp": 221,
+    "guided": 221,
+    "fallback": 0,
+    "guided_per_ep": 11.05,
+    "levels": {
+     "type": 221,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.9090909090909091,
+     0.36363636363636365,
+     0.9090909090909091,
+     0.9166666666666666,
+     0.5833333333333334,
+     0.9090909090909091,
+     0.9090909090909091,
+     0.6,
+     0.7,
+     0.8181818181818182,
+     0.36363636363636365,
+     0.8333333333333334,
+     0.0,
+     0.6923076923076923,
+     0.7,
+     0.8333333333333334,
+     0.8181818181818182,
+     0.0,
+     0.0,
+     0.8333333333333334
+    ],
+    "err_median": 0.0464,
+    "resid_median": 0.022705505940189927,
+    "ms_guided": 728.5036199095022
+   },
+   "libero_90:50": {
+    "queries": 1056,
+    "open_pre_grasp": 283,
+    "guided": 283,
+    "fallback": 0,
+    "guided_per_ep": 14.15,
+    "levels": {
+     "type": 283,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.8,
+     0.0,
+     0.1111111111111111,
+     0.0,
+     0.6666666666666666,
+     0.5454545454545454,
+     0.0,
+     0.0,
+     0.7,
+     0.029411764705882353,
+     0.0,
+     0.0,
+     0.0,
+     0.23529411764705882,
+     0.1111111111111111,
+     0.0
+    ],
+    "err_median": 0.1711,
+    "resid_median": 0.034677081768799405,
+    "ms_guided": 535.955477031802
+   },
+   "libero_spatial:6": {
+    "queries": 432,
+    "open_pre_grasp": 205,
+    "guided": 205,
+    "fallback": 0,
+    "guided_per_ep": 10.25,
+    "levels": {
+     "type": 205,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.8,
+     0.9090909090909091,
+     0.7,
+     0.9,
+     0.8888888888888888,
+     0.6,
+     0.6,
+     0.3333333333333333,
+     0.8181818181818182,
+     0.8181818181818182,
+     0.8181818181818182,
+     0.9,
+     0.09090909090909091,
+     0.0,
+     0.9,
+     0.9,
+     0.8181818181818182,
+     0.9,
+     1.0,
+     0.7777777777777778
+    ],
+    "err_median": 0.0466,
+    "resid_median": 0.028314837100008188,
+    "ms_guided": 725.5370731707318
+   },
+   "libero_90:70": {
+    "queries": 477,
+    "open_pre_grasp": 179,
+    "guided": 179,
+    "fallback": 0,
+    "guided_per_ep": 8.95,
+    "levels": {
+     "type": 179,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.7777777777777778,
+     0.875,
+     0.2222222222222222,
+     0.875,
+     0.3,
+     0.8888888888888888,
+     0.4,
+     0.8888888888888888,
+     0.75,
+     0.7777777777777778,
+     0.875,
+     0.0,
+     0.45454545454545453,
+     0.8,
+     0.8888888888888888,
+     0.8888888888888888,
+     0.8888888888888888,
+     0.875,
+     0.1,
+     0.875
+    ],
+    "err_median": 0.043,
+    "resid_median": 0.025373411280314673,
+    "ms_guided": 523.968156424581
+   }
+  },
+  "vis_a025": {
+   "libero_90:38": {
+    "queries": 1600,
+    "open_pre_grasp": 449,
+    "guided": 449,
+    "fallback": 0,
+    "guided_per_ep": 22.45,
+    "levels": {
+     "type": 0,
+     "category": 449,
+     "role": 0
+    },
+    "hit_ep": [
+     0.08695652173913043,
+     0.07692307692307693,
+     0.391304347826087,
+     0.4,
+     0.11764705882352941,
+     0.3181818181818182,
+     0.2962962962962963,
+     0.0,
+     0.24,
+     0.0,
+     0.19444444444444445,
+     0.0,
+     0.0,
+     0.06666666666666667,
+     0.3181818181818182,
+     0.0625,
+     0.25,
+     0.0625,
+     0.43478260869565216,
+     0.3611111111111111
+    ],
+    "err_median": 0.2207,
+    "resid_median": 0.01632482771731451,
+    "ms_guided": 735.1902004454344
+   },
+   "libero_90:58": {
+    "queries": 1600,
+    "open_pre_grasp": 498,
+    "guided": 498,
+    "fallback": 0,
+    "guided_per_ep": 24.9,
+    "levels": {
+     "type": 0,
+     "category": 498,
+     "role": 0
+    },
+    "hit_ep": [
+     0.11267605633802817,
+     0.6153846153846154,
+     0.0,
+     0.0,
+     0.18181818181818182,
+     0.5714285714285714,
+     0.0,
+     0.14084507042253522,
+     0.2916666666666667,
+     0.16666666666666666,
+     0.0,
+     0.04,
+     0.3076923076923077,
+     0.022727272727272728,
+     0.35714285714285715,
+     0.13333333333333333,
+     0.0,
+     0.4375,
+     0.5652173913043478,
+     0.23076923076923078
+    ],
+    "err_median": 0.2131,
+    "resid_median": 0.027806289951390048,
+    "ms_guided": 715.10421686747
+   },
+   "libero_90:73": {
+    "queries": 1600,
+    "open_pre_grasp": 242,
+    "guided": 242,
+    "fallback": 0,
+    "guided_per_ep": 12.1,
+    "levels": {
+     "type": 242,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.45454545454545453,
+     0.7272727272727273,
+     0.07692307692307693,
+     0.5,
+     0.7272727272727273,
+     0.18181818181818182,
+     0.0,
+     0.5833333333333334,
+     0.5833333333333334,
+     0.6666666666666666,
+     0.7272727272727273,
+     0.0,
+     0.0,
+     0.35714285714285715,
+     0.0,
+     0.6666666666666666,
+     0.0,
+     0.5833333333333334,
+     0.5384615384615384,
+     0.0
+    ],
+    "err_median": 0.1234,
+    "resid_median": 0.029169718356581956,
+    "ms_guided": 759.8132231404958
+   },
+   "libero_90:77": {
+    "queries": 1600,
+    "open_pre_grasp": 188,
+    "guided": 188,
+    "fallback": 0,
+    "guided_per_ep": 9.4,
+    "levels": {
+     "type": 188,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.05,
+     0.75,
+     0.1111111111111111,
+     0.75,
+     0.7777777777777778,
+     0.0,
+     0.0,
+     0.875,
+     0.16666666666666666,
+     0.8,
+     1.0,
+     0.75,
+     0.625,
+     0.8571428571428571,
+     0.5,
+     1.0,
+     0.0,
+     0.875,
+     0.3333333333333333,
+     0.6666666666666666
+    ],
+    "err_median": 0.0653,
+    "resid_median": 0.0237721048457932,
+    "ms_guided": 838.7196808510638
+   },
+   "libero_90:79": {
+    "queries": 1600,
+    "open_pre_grasp": 197,
+    "guided": 197,
+    "fallback": 0,
+    "guided_per_ep": 9.85,
+    "levels": {
+     "type": 197,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.0,
+     0.875,
+     0.2222222222222222,
+     0.75,
+     0.7777777777777778,
+     0.0,
+     0.0,
+     0.7777777777777778,
+     0.16666666666666666,
+     0.75,
+     0.875,
+     0.75,
+     0.5555555555555556,
+     1.0,
+     0.6,
+     0.875,
+     0.0,
+     0.875,
+     0.3333333333333333,
+     0.7777777777777778
+    ],
+    "err_median": 0.0653,
+    "resid_median": 0.023928226010300053,
+    "ms_guided": 765.3918781725886
+   },
+   "libero_90:80": {
+    "queries": 1600,
+    "open_pre_grasp": 173,
+    "guided": 173,
+    "fallback": 0,
+    "guided_per_ep": 8.65,
+    "levels": {
+     "type": 173,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.05555555555555555,
+     1.0,
+     0.2222222222222222,
+     0.75,
+     0.6666666666666666,
+     0.0,
+     0.0,
+     0.75,
+     0.1,
+     0.7777777777777778,
+     0.8571428571428571,
+     0.625,
+     0.625,
+     0.8571428571428571,
+     0.5555555555555556,
+     1.0,
+     0.0,
+     0.875,
+     0.25,
+     0.6666666666666666
+    ],
+    "err_median": 0.0653,
+    "resid_median": 0.024300205760445736,
+    "ms_guided": 728.2132947976878
+   },
+   "libero_90:83": {
+    "queries": 1600,
+    "open_pre_grasp": 187,
+    "guided": 187,
+    "fallback": 0,
+    "guided_per_ep": 9.35,
+    "levels": {
+     "type": 187,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.7777777777777778,
+     0.125,
+     0.0,
+     0.0,
+     0.7777777777777778,
+     0.0,
+     0.0,
+     0.8888888888888888,
+     0.7,
+     0.2,
+     0.875,
+     0.625,
+     0.5454545454545454,
+     0.75,
+     0.7,
+     0.3333333333333333,
+     0.0,
+     0.8,
+     1.0,
+     0.2
+    ],
+    "err_median": 0.0841,
+    "resid_median": 0.02802159881234474,
+    "ms_guided": 744.2272727272727
+   },
+   "libero_90:61": {
+    "queries": 603,
+    "open_pre_grasp": 243,
+    "guided": 243,
+    "fallback": 0,
+    "guided_per_ep": 12.15,
+    "levels": {
+     "type": 243,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.9166666666666666,
+     0.8333333333333334,
+     0.8333333333333334,
+     0.2727272727272727,
+     0.8333333333333334,
+     0.0,
+     0.2727272727272727,
+     0.9166666666666666,
+     0.8461538461538461,
+     0.7857142857142857,
+     0.9166666666666666,
+     0.8181818181818182,
+     0.9090909090909091,
+     0.8461538461538461,
+     0.6153846153846154,
+     0.46153846153846156,
+     0.8333333333333334,
+     0.7142857142857143,
+     0.75,
+     0.9090909090909091
+    ],
+    "err_median": 0.0386,
+    "resid_median": 0.016983815825661792,
+    "ms_guided": 795.6893004115225
+   },
+   "libero_90:59": {
+    "queries": 835,
+    "open_pre_grasp": 369,
+    "guided": 369,
+    "fallback": 0,
+    "guided_per_ep": 18.45,
+    "levels": {
+     "type": 369,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.1,
+     0.0,
+     0.5,
+     0.5,
+     0.0,
+     0.0,
+     0.6,
+     0.4666666666666667,
+     0.0,
+     0.0,
+     0.45454545454545453,
+     0.5,
+     0.0,
+     0.5555555555555556,
+     0.5,
+     0.20588235294117646,
+     0.7777777777777778,
+     0.27586206896551724,
+     0.0,
+     0.1095890410958904
+    ],
+    "err_median": 0.2303,
+    "resid_median": 0.03164806471176397,
+    "ms_guided": 644.5737127371274
+   },
+   "libero_90:9": {
+    "queries": 553,
+    "open_pre_grasp": 220,
+    "guided": 220,
+    "fallback": 0,
+    "guided_per_ep": 11.0,
+    "levels": {
+     "type": 220,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.9090909090909091,
+     0.45454545454545453,
+     0.8181818181818182,
+     0.8333333333333334,
+     0.36363636363636365,
+     0.9,
+     0.9166666666666666,
+     0.5454545454545454,
+     0.7272727272727273,
+     0.8,
+     0.45454545454545453,
+     0.8181818181818182,
+     0.0,
+     0.8181818181818182,
+     0.6666666666666666,
+     0.9090909090909091,
+     0.9090909090909091,
+     0.0,
+     0.0,
+     0.9090909090909091
+    ],
+    "err_median": 0.0464,
+    "resid_median": 0.015912101970328153,
+    "ms_guided": 677.3199999999999
+   },
+   "libero_90:50": {
+    "queries": 1328,
+    "open_pre_grasp": 318,
+    "guided": 318,
+    "fallback": 0,
+    "guided_per_ep": 15.9,
+    "levels": {
+     "type": 318,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.0,
+     0.0,
+     0.0,
+     0.0,
+     0.875,
+     0.0,
+     0.125,
+     0.0,
+     0.7692307692307693,
+     0.26666666666666666,
+     0.0,
+     0.0,
+     0.8888888888888888,
+     0.05555555555555555,
+     0.0,
+     0.038461538461538464,
+     0.045454545454545456,
+     0.46153846153846156,
+     0.13636363636363635,
+     0.0
+    ],
+    "err_median": 0.1887,
+    "resid_median": 0.020596605996001265,
+    "ms_guided": 544.7836477987422
+   },
+   "libero_spatial:6": {
+    "queries": 436,
+    "open_pre_grasp": 209,
+    "guided": 209,
+    "fallback": 0,
+    "guided_per_ep": 10.45,
+    "levels": {
+     "type": 209,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.7272727272727273,
+     0.8181818181818182,
+     0.7,
+     0.9,
+     0.8,
+     0.7,
+     0.7,
+     0.23076923076923078,
+     0.9,
+     0.9,
+     0.9090909090909091,
+     0.9090909090909091,
+     0.0,
+     0.0,
+     0.9,
+     0.9,
+     0.9090909090909091,
+     0.9090909090909091,
+     0.9,
+     0.8
+    ],
+    "err_median": 0.0466,
+    "resid_median": 0.01952562418976663,
+    "ms_guided": 773.4717703349284
+   },
+   "libero_90:70": {
+    "queries": 807,
+    "open_pre_grasp": 187,
+    "guided": 187,
+    "fallback": 0,
+    "guided_per_ep": 9.35,
+    "levels": {
+     "type": 187,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [
+     0.7777777777777778,
+     0.6,
+     0.25,
+     0.7777777777777778,
+     0.2222222222222222,
+     0.6666666666666666,
+     0.5,
+     0.7272727272727273,
+     0.7777777777777778,
+     0.6666666666666666,
+     0.875,
+     0.125,
+     0.3333333333333333,
+     0.6153846153846154,
+     0.875,
+     0.875,
+     0.8,
+     0.875,
+     0.2,
+     0.6363636363636364
+    ],
+    "err_median": 0.0431,
+    "resid_median": 0.017608236708995025,
+    "ms_guided": 452.4459893048128
+   }
+  },
+  "orc_e1": {
+   "libero_90:38": {
+    "queries": 1600,
+    "open_pre_grasp": 546,
+    "guided": 546,
+    "fallback": 0,
+    "guided_per_ep": 27.3,
+    "levels": {
+     "type": 0,
+     "category": 546,
+     "role": 0
+    },
+    "hit_ep": [],
+    "err_median": null,
+    "resid_median": 0.036511639093419125,
+    "ms_guided": 604.231684981685
+   },
+   "libero_90:58": {
+    "queries": 1562,
+    "open_pre_grasp": 362,
+    "guided": 362,
+    "fallback": 0,
+    "guided_per_ep": 18.1,
+    "levels": {
+     "type": 0,
+     "category": 362,
+     "role": 0
+    },
+    "hit_ep": [],
+    "err_median": null,
+    "resid_median": 0.05473033174929551,
+    "ms_guided": 635.4632596685083
+   },
+   "libero_90:73": {
+    "queries": 1600,
+    "open_pre_grasp": 235,
+    "guided": 235,
+    "fallback": 0,
+    "guided_per_ep": 11.75,
+    "levels": {
+     "type": 235,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [],
+    "err_median": null,
+    "resid_median": 0.0336590255355083,
+    "ms_guided": 710.2514893617022
+   },
+   "libero_90:77": {
+    "queries": 1571,
+    "open_pre_grasp": 167,
+    "guided": 167,
+    "fallback": 0,
+    "guided_per_ep": 8.35,
+    "levels": {
+     "type": 167,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [],
+    "err_median": null,
+    "resid_median": 0.033577373333838964,
+    "ms_guided": 749.9053892215569
+   },
+   "libero_90:79": {
+    "queries": 1600,
+    "open_pre_grasp": 176,
+    "guided": 176,
+    "fallback": 0,
+    "guided_per_ep": 8.8,
+    "levels": {
+     "type": 176,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [],
+    "err_median": null,
+    "resid_median": 0.03232213198317301,
+    "ms_guided": 649.3272727272728
+   },
+   "libero_90:80": {
+    "queries": 1600,
+    "open_pre_grasp": 164,
+    "guided": 164,
+    "fallback": 0,
+    "guided_per_ep": 8.2,
+    "levels": {
+     "type": 164,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [],
+    "err_median": null,
+    "resid_median": 0.033893804704795166,
+    "ms_guided": 633.6140243902439
+   },
+   "libero_90:83": {
+    "queries": 1600,
+    "open_pre_grasp": 207,
+    "guided": 207,
+    "fallback": 0,
+    "guided_per_ep": 10.35,
+    "levels": {
+     "type": 207,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [],
+    "err_median": null,
+    "resid_median": 0.039143454114321595,
+    "ms_guided": 537.1444444444445
+   },
+   "libero_90:61": {
+    "queries": 581,
+    "open_pre_grasp": 236,
+    "guided": 236,
+    "fallback": 0,
+    "guided_per_ep": 11.8,
+    "levels": {
+     "type": 236,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [],
+    "err_median": null,
+    "resid_median": 0.023312738046850783,
+    "ms_guided": 665.8110169491525
+   },
+   "libero_90:59": {
+    "queries": 480,
+    "open_pre_grasp": 186,
+    "guided": 186,
+    "fallback": 0,
+    "guided_per_ep": 9.3,
+    "levels": {
+     "type": 186,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [],
+    "err_median": null,
+    "resid_median": 0.024181397211457085,
+    "ms_guided": 669.8537634408601
+   },
+   "libero_90:9": {
+    "queries": 653,
+    "open_pre_grasp": 223,
+    "guided": 223,
+    "fallback": 0,
+    "guided_per_ep": 11.15,
+    "levels": {
+     "type": 223,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [],
+    "err_median": null,
+    "resid_median": 0.017967192323788378,
+    "ms_guided": 582.3865470852018
+   },
+   "libero_90:50": {
+    "queries": 1016,
+    "open_pre_grasp": 252,
+    "guided": 252,
+    "fallback": 0,
+    "guided_per_ep": 12.6,
+    "levels": {
+     "type": 252,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [],
+    "err_median": null,
+    "resid_median": 0.023134177335182825,
+    "ms_guided": 551.9349206349207
+   },
+   "libero_spatial:6": {
+    "queries": 436,
+    "open_pre_grasp": 205,
+    "guided": 205,
+    "fallback": 0,
+    "guided_per_ep": 10.25,
+    "levels": {
+     "type": 205,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [],
+    "err_median": null,
+    "resid_median": 0.02551587740995791,
+    "ms_guided": 509.98195121951227
+   },
+   "libero_90:70": {
+    "queries": 383,
+    "open_pre_grasp": 181,
+    "guided": 181,
+    "fallback": 0,
+    "guided_per_ep": 9.05,
+    "levels": {
+     "type": 181,
+     "category": 0,
+     "role": 0
+    },
+    "hit_ep": [],
+    "err_median": null,
+    "resid_median": 0.022437914341578182,
+    "ms_guided": 311.10718232044206
+   }
+  }
+ },
+ "localisation": {
+  "vis_e1": {
+   "wo": {
+    "mean": 0.40903187552722114,
+    "lo": 0.26395952620095137,
+    "hi": 0.5365481511600326,
+    "n": 140,
+    "tasks": 7
+   },
+   "harm": {
+    "mean": 0.4651092106422989,
+    "lo": 0.2307400661021985,
+    "hi": 0.6984737137862136,
+    "n": 80,
+    "tasks": 4
+   },
+   "cell": {
+    "mean": 0.6968623737373738,
+    "lo": 0.5972506313131315,
+    "hi": 0.7868311237373738,
+    "n": 40,
+    "tasks": 2
+   },
+   "all": {
+    "mean": 0.47056805528726847,
+    "lo": 0.35116911176528776,
+    "hi": 0.5820876571964062,
+    "n": 260,
+    "tasks": 13
+   }
+  },
+  "vis_a025": {
+   "wo": {
+    "mean": 0.4071941330028491,
+    "lo": 0.290614173975399,
+    "hi": 0.5235383391410178,
+    "n": 140,
+    "tasks": 7
+   },
+   "harm": {
+    "mean": 0.4530681445890086,
+    "lo": 0.21891811680604653,
+    "hi": 0.6900203546453547,
+    "n": 80,
+    "tasks": 4
+   },
+   "cell": {
+    "mean": 0.6672207653457654,
+    "lo": 0.5566040574009323,
+    "hi": 0.7828181818181817,
+    "n": 40,
+    "tasks": 2
+   },
+   "all": {
+    "mean": 0.46131331077442367,
+    "lo": 0.3552356266638333,
+    "hi": 0.5652603847457845,
+    "n": 260,
+    "tasks": 13
+   }
+  }
+ },
+ "cost": {
+  "packs": {
+   "r5s_roll_000_4234331.out": 0.38416666666666666,
+   "r5s_roll_001_4234332.out": 0.38472222222222224,
+   "r5s_roll_002_4234333.out": 0.46305555555555555,
+   "r5s_roll_003_4234334.out": 0.3347222222222222,
+   "r5s_roll_004_4234335.out": 0.3611111111111111,
+   "r5s_roll_005_4234336.out": 0.3552777777777778,
+   "r5s_roll_006_4234337.out": 0.2425,
+   "r5s_roll_007_4234338.out": 0.28444444444444444,
+   "r5s_roll_008_4234339.out": 0.2613888888888889,
+   "r5s_roll_009_4234340.out": 0.19333333333333333,
+   "r5s_roll_010_4234341.out": 0.07305555555555555,
+   "r5s_smoke_000_4234305.out": 0.07388888888888889
+  },
+  "a40_h": 3.4116666666666666
+ },
+ "decision": {
+  "criteria": {
+   "gain": false,
+   "named": false,
+   "harm": true,
+   "damage": true
+  },
+  "confirmatory_warranted": false
+ }
+}

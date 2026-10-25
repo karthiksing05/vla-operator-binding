@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/roll/r5s_orc_e1_libero_90_9.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=r5s:/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/specs/libero_90_9.json?arm=orc&sched=early&w=1&log=/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/qlog/orc_e1_libero_90_9.jsonl SUITE=libero_90 TASKS=9 TRIALS=20 (job 4234338)",
+ "config": {
+  "client": {
+   "all_objects": true,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_d4",
+   "host": "127.0.0.1",
+   "light": true,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": true,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/roll/r5s_orc_e1_libero_90_9.json",
+   "port": 9145,
+   "record": true,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "9",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4234338",
+  "mode": "r5s:/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/specs/libero_90_9.json?arm=orc&sched=early&w=1&log=/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/qlog/orc_e1_libero_90_9.jsonl"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "crushinator.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4234338",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r5s_orc_e1",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a35fb7a92fba6ef5ad1d3ae0c07a19bbe1402083",
+  "short": "a35fb7a9"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "r5s:/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/specs/libero_90_9.json?arm=orc&sched=early&w=1&log=/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/qlog/orc_e1_libero_90_9.jsonl",
+  "tasks": "9",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 522.5114166736603,
+  "success_rate": 0.85,
+  "tasks": {
+   "9": {
+    "errors": 0,
+    "language": "put the black bowl on the plate",
+    "mean_steps": 161.2,
+    "n": 20,
+    "success_rate": 0.85
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r5s_orc_e1__libero_90__orc_e1__first_trial-0__mode059d754ed50a__tasks-9__trials-20__s7__a35fb7a9",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-25T22:29:47+00:00",
+ "stream": null,
+ "tag": "orc_e1"
+}

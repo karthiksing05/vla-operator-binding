@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/roll/r5s_vis_e1_libero_90_38.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=r5s:/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/specs/libero_90_38.json?arm=vis&sched=early&w=1&log=/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/qlog/vis_e1_libero_90_38.jsonl SUITE=libero_90 TASKS=38 TRIALS=20 (job 4234331)",
+ "config": {
+  "client": {
+   "all_objects": true,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_d4",
+   "host": "127.0.0.1",
+   "light": true,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": true,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/roll/r5s_vis_e1_libero_90_38.json",
+   "port": 9123,
+   "record": true,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "38",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4234331",
+  "mode": "r5s:/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/specs/libero_90_38.json?arm=vis&sched=early&w=1&log=/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/qlog/vis_e1_libero_90_38.jsonl"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "brainiac.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4234331",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r5s_vis_e1",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "a35fb7a92fba6ef5ad1d3ae0c07a19bbe1402083",
+  "short": "a35fb7a9"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "r5s:/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/specs/libero_90_38.json?arm=vis&sched=early&w=1&log=/coc/flash10/ksingara3/lifelong-ood-learner/results/r5s/qlog/vis_e1_libero_90_38.jsonl",
+  "tasks": "38",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 1207.3918974399567,
+  "success_rate": 0.0,
+  "tasks": {
+   "38": {
+    "errors": 0,
+    "language": "put the right moka pot on the stove",
+    "mean_steps": 400.0,
+    "n": 20,
+    "success_rate": 0.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r5s_vis_e1__libero_90__vis_e1__first_trial-0__mode658b87f04ef7__tasks-38__trials-20__s7__a35fb7a9",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-25T22:37:51+00:00",
+ "stream": null,
+ "tag": "vis_e1"
+}
