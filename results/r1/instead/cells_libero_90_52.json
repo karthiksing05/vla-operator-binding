@@ -1,0 +1,6208 @@
+{
+ "set": "cells",
+ "task": "libero_90:52",
+ "arms": {
+  "empty": {
+   "roll": "results/r1/roll/r1cag_cells_libero_90_52_84bf337718.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 56,
+     "steps": 110,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1223,
+       -0.1699
+      ],
+      "cream_cheese_1": [
+       0.0801,
+       -0.2213
+      ],
+      "tomato_sauce_1": [
+       -0.0963,
+       0.0607
+      ],
+      "ketchup_1": [
+       -0.2727,
+       -0.17
+      ],
+      "orange_juice_1": [
+       -0.0094,
+       -0.2321
+      ],
+      "milk_1": [
+       0.0353,
+       -0.1022
+      ],
+      "butter_1": [
+       0.055,
+       0.0254
+      ],
+      "basket_1": [
+       -0.0085,
+       0.2609
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "bound": "alphabet_soup_1",
+     "bound_step": 62,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0864,
+       -0.1648
+      ],
+      "cream_cheese_1": [
+       0.087,
+       -0.1868
+      ],
+      "tomato_sauce_1": [
+       -0.1083,
+       0.0315
+      ],
+      "ketchup_1": [
+       -0.2635,
+       -0.1674
+      ],
+      "orange_juice_1": [
+       0.0164,
+       -0.2583
+      ],
+      "milk_1": [
+       0.072,
+       -0.1213
+      ],
+      "butter_1": [
+       0.0515,
+       0.0424
+      ],
+      "basket_1": [
+       -0.0028,
+       0.2682
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 53,
+     "steps": 99,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1034,
+       -0.1673
+      ],
+      "cream_cheese_1": [
+       0.0924,
+       -0.2018
+      ],
+      "tomato_sauce_1": [
+       -0.1209,
+       0.0285
+      ],
+      "ketchup_1": [
+       -0.2566,
+       -0.1297
+      ],
+      "orange_juice_1": [
+       0.0184,
+       -0.2479
+      ],
+      "milk_1": [
+       0.0536,
+       -0.0835
+      ],
+      "butter_1": [
+       0.0456,
+       0.0481
+      ],
+      "basket_1": [
+       0.0006,
+       0.2505
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 75,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1012,
+       -0.1449
+      ],
+      "cream_cheese_1": [
+       0.1113,
+       -0.2211
+      ],
+      "tomato_sauce_1": [
+       -0.102,
+       0.0646
+      ],
+      "ketchup_1": [
+       -0.2317,
+       -0.164
+      ],
+      "orange_juice_1": [
+       -0.0169,
+       -0.2656
+      ],
+      "milk_1": [
+       0.0633,
+       -0.0873
+      ],
+      "butter_1": [
+       0.0382,
+       0.0706
+      ],
+      "basket_1": [
+       -0.0053,
+       0.2555
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.016,
+     "carried": 0.086,
+     "d_bind": 0.359,
+     "d_min": 0.353,
+     "d_final": 0.404,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "not_carried",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 69,
+     "steps": 133,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.121,
+       -0.131
+      ],
+      "cream_cheese_1": [
+       0.1003,
+       -0.1902
+      ],
+      "tomato_sauce_1": [
+       -0.0764,
+       0.0642
+      ],
+      "ketchup_1": [
+       -0.2519,
+       -0.1469
+      ],
+      "orange_juice_1": [
+       -0.0013,
+       -0.2502
+      ],
+      "milk_1": [
+       0.0671,
+       -0.1008
+      ],
+      "butter_1": [
+       0.0449,
+       0.037
+      ],
+      "basket_1": [
+       -0.0048,
+       0.2544
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 55,
+     "steps": 119,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1164,
+       -0.1629
+      ],
+      "cream_cheese_1": [
+       0.0919,
+       -0.2152
+      ],
+      "tomato_sauce_1": [
+       -0.1205,
+       0.0351
+      ],
+      "ketchup_1": [
+       -0.2323,
+       -0.1434
+      ],
+      "orange_juice_1": [
+       0.0211,
+       -0.2374
+      ],
+      "milk_1": [
+       0.0439,
+       -0.0835
+      ],
+      "butter_1": [
+       0.0644,
+       0.0659
+      ],
+      "basket_1": [
+       -0.0004,
+       0.2513
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 53,
+     "steps": 106,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0952,
+       -0.1649
+      ],
+      "cream_cheese_1": [
+       0.1061,
+       -0.2119
+      ],
+      "tomato_sauce_1": [
+       -0.0829,
+       0.047
+      ],
+      "ketchup_1": [
+       -0.2408,
+       -0.173
+      ],
+      "orange_juice_1": [
+       0.0023,
+       -0.2735
+      ],
+      "milk_1": [
+       0.025,
+       -0.1133
+      ],
+      "butter_1": [
+       0.053,
+       0.052
+      ],
+      "basket_1": [
+       -0.0094,
+       0.2626
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 59,
+     "steps": 112,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1037,
+       -0.1504
+      ],
+      "cream_cheese_1": [
+       0.1053,
+       -0.1773
+      ],
+      "tomato_sauce_1": [
+       -0.0854,
+       0.0701
+      ],
+      "ketchup_1": [
+       -0.2279,
+       -0.1722
+      ],
+      "orange_juice_1": [
+       0.0203,
+       -0.2489
+      ],
+      "milk_1": [
+       0.0414,
+       -0.1184
+      ],
+      "butter_1": [
+       0.0268,
+       0.0361
+      ],
+      "basket_1": [
+       -0.0046,
+       0.2627
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 59,
+     "steps": 115,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0859,
+       -0.1707
+      ],
+      "cream_cheese_1": [
+       0.1013,
+       -0.1854
+      ],
+      "tomato_sauce_1": [
+       -0.1096,
+       0.0386
+      ],
+      "ketchup_1": [
+       -0.2471,
+       -0.1519
+      ],
+      "orange_juice_1": [
+       -0.02,
+       -0.2303
+      ],
+      "milk_1": [
+       0.0423,
+       -0.1051
+      ],
+      "butter_1": [
+       0.0604,
+       0.056
+      ],
+      "basket_1": [
+       0.0081,
+       0.2534
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 50,
+     "steps": 108,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0903,
+       -0.1577
+      ],
+      "cream_cheese_1": [
+       0.0933,
+       -0.2006
+      ],
+      "tomato_sauce_1": [
+       -0.116,
+       0.0653
+      ],
+      "ketchup_1": [
+       -0.2613,
+       -0.1425
+      ],
+      "orange_juice_1": [
+       -0.0098,
+       -0.2401
+      ],
+      "milk_1": [
+       0.0695,
+       -0.1245
+      ],
+      "butter_1": [
+       0.0508,
+       0.0406
+      ],
+      "basket_1": [
+       0.0068,
+       0.2653
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 48,
+     "steps": 107,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.099,
+       -0.141
+      ],
+      "cream_cheese_1": [
+       0.1182,
+       -0.1944
+      ],
+      "tomato_sauce_1": [
+       -0.0759,
+       0.0422
+      ],
+      "ketchup_1": [
+       -0.2694,
+       -0.1554
+      ],
+      "orange_juice_1": [
+       -0.0005,
+       -0.2339
+      ],
+      "milk_1": [
+       0.0391,
+       -0.095
+      ],
+      "butter_1": [
+       0.0401,
+       0.0722
+      ],
+      "basket_1": [
+       0.0011,
+       0.2674
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 49,
+     "steps": 103,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0971,
+       -0.1328
+      ],
+      "cream_cheese_1": [
+       0.0795,
+       -0.1936
+      ],
+      "tomato_sauce_1": [
+       -0.1102,
+       0.0597
+      ],
+      "ketchup_1": [
+       -0.2429,
+       -0.1297
+      ],
+      "orange_juice_1": [
+       -0.0182,
+       -0.2362
+      ],
+      "milk_1": [
+       0.0427,
+       -0.1189
+      ],
+      "butter_1": [
+       0.067,
+       0.0629
+      ],
+      "basket_1": [
+       -0.0092,
+       0.2642
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 53,
+     "steps": 107,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.082,
+       -0.1643
+      ],
+      "cream_cheese_1": [
+       0.0895,
+       -0.2177
+      ],
+      "tomato_sauce_1": [
+       -0.1162,
+       0.0616
+      ],
+      "ketchup_1": [
+       -0.2624,
+       -0.1471
+      ],
+      "orange_juice_1": [
+       0.016,
+       -0.2635
+      ],
+      "milk_1": [
+       0.0501,
+       -0.1103
+      ],
+      "butter_1": [
+       0.0547,
+       0.041
+      ],
+      "basket_1": [
+       -0.0092,
+       0.2591
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 55,
+     "steps": 111,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0782,
+       -0.1297
+      ],
+      "cream_cheese_1": [
+       0.1204,
+       -0.1841
+      ],
+      "tomato_sauce_1": [
+       -0.1104,
+       0.0648
+      ],
+      "ketchup_1": [
+       -0.2626,
+       -0.1503
+      ],
+      "orange_juice_1": [
+       0.0165,
+       -0.2624
+      ],
+      "milk_1": [
+       0.05,
+       -0.0869
+      ],
+      "butter_1": [
+       0.0257,
+       0.0708
+      ],
+      "basket_1": [
+       0.0014,
+       0.2666
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "bound": "alphabet_soup_1",
+     "bound_step": 100,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1106,
+       -0.1246
+      ],
+      "cream_cheese_1": [
+       0.1197,
+       -0.2249
+      ],
+      "tomato_sauce_1": [
+       -0.0989,
+       0.069
+      ],
+      "ketchup_1": [
+       -0.2702,
+       -0.1626
+      ],
+      "orange_juice_1": [
+       0.0196,
+       -0.2424
+      ],
+      "milk_1": [
+       0.0733,
+       -0.1179
+      ],
+      "butter_1": [
+       0.0426,
+       0.0541
+      ],
+      "basket_1": [
+       -0.0077,
+       0.2629
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 48,
+     "steps": 121,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1212,
+       -0.1416
+      ],
+      "cream_cheese_1": [
+       0.0982,
+       -0.1801
+      ],
+      "tomato_sauce_1": [
+       -0.1136,
+       0.0333
+      ],
+      "ketchup_1": [
+       -0.2628,
+       -0.1565
+      ],
+      "orange_juice_1": [
+       -0.0041,
+       -0.2465
+      ],
+      "milk_1": [
+       0.0447,
+       -0.1066
+      ],
+      "butter_1": [
+       0.0429,
+       0.058
+      ],
+      "basket_1": [
+       -0.0019,
+       0.2511
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 55,
+     "steps": 135,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1134,
+       -0.1744
+      ],
+      "cream_cheese_1": [
+       0.1184,
+       -0.191
+      ],
+      "tomato_sauce_1": [
+       -0.0967,
+       0.0404
+      ],
+      "ketchup_1": [
+       -0.2257,
+       -0.1537
+      ],
+      "orange_juice_1": [
+       -0.0065,
+       -0.262
+      ],
+      "milk_1": [
+       0.0383,
+       -0.0786
+      ],
+      "butter_1": [
+       0.0703,
+       0.0439
+      ],
+      "basket_1": [
+       0.0067,
+       0.2526
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 71,
+     "steps": 125,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0801,
+       -0.127
+      ],
+      "cream_cheese_1": [
+       0.0948,
+       -0.1858
+      ],
+      "tomato_sauce_1": [
+       -0.0872,
+       0.043
+      ],
+      "ketchup_1": [
+       -0.2514,
+       -0.1709
+      ],
+      "orange_juice_1": [
+       0.011,
+       -0.2414
+      ],
+      "milk_1": [
+       0.0497,
+       -0.1245
+      ],
+      "butter_1": [
+       0.0334,
+       0.0338
+      ],
+      "basket_1": [
+       -0.004,
+       0.2532
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "bound": "alphabet_soup_1",
+     "bound_step": 50,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1128,
+       -0.1512
+      ],
+      "cream_cheese_1": [
+       0.0956,
+       -0.1972
+      ],
+      "tomato_sauce_1": [
+       -0.1169,
+       0.0354
+      ],
+      "ketchup_1": [
+       -0.2718,
+       -0.1317
+      ],
+      "orange_juice_1": [
+       0.0056,
+       -0.231
+      ],
+      "milk_1": [
+       0.075,
+       -0.0778
+      ],
+      "butter_1": [
+       0.0477,
+       0.0605
+      ],
+      "basket_1": [
+       0.0074,
+       0.2671
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 54,
+     "steps": 119,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0806,
+       -0.1576
+      ],
+      "cream_cheese_1": [
+       0.0773,
+       -0.1987
+      ],
+      "tomato_sauce_1": [
+       -0.107,
+       0.0257
+      ],
+      "ketchup_1": [
+       -0.2475,
+       -0.1574
+      ],
+      "orange_juice_1": [
+       0.0178,
+       -0.2567
+      ],
+      "milk_1": [
+       0.0387,
+       -0.1198
+      ],
+      "butter_1": [
+       0.0535,
+       0.0443
+      ],
+      "basket_1": [
+       -0.0001,
+       0.2586
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag1.5": {
+   "roll": "results/r1/roll/r1cag_cells_libero_90_52_4a4327f70b.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 54,
+     "steps": 102,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1223,
+       -0.1699
+      ],
+      "cream_cheese_1": [
+       0.0801,
+       -0.2213
+      ],
+      "tomato_sauce_1": [
+       -0.0963,
+       0.0607
+      ],
+      "ketchup_1": [
+       -0.2727,
+       -0.17
+      ],
+      "orange_juice_1": [
+       -0.0094,
+       -0.2321
+      ],
+      "milk_1": [
+       0.0353,
+       -0.1022
+      ],
+      "butter_1": [
+       0.055,
+       0.0254
+      ],
+      "basket_1": [
+       -0.0085,
+       0.2609
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 55,
+     "steps": 125,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0864,
+       -0.1648
+      ],
+      "cream_cheese_1": [
+       0.087,
+       -0.1868
+      ],
+      "tomato_sauce_1": [
+       -0.1083,
+       0.0315
+      ],
+      "ketchup_1": [
+       -0.2635,
+       -0.1674
+      ],
+      "orange_juice_1": [
+       0.0164,
+       -0.2583
+      ],
+      "milk_1": [
+       0.072,
+       -0.1213
+      ],
+      "butter_1": [
+       0.0515,
+       0.0424
+      ],
+      "basket_1": [
+       -0.0028,
+       0.2682
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 59,
+     "steps": 109,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1034,
+       -0.1673
+      ],
+      "cream_cheese_1": [
+       0.0924,
+       -0.2018
+      ],
+      "tomato_sauce_1": [
+       -0.1209,
+       0.0285
+      ],
+      "ketchup_1": [
+       -0.2566,
+       -0.1297
+      ],
+      "orange_juice_1": [
+       0.0184,
+       -0.2479
+      ],
+      "milk_1": [
+       0.0536,
+       -0.0835
+      ],
+      "butter_1": [
+       0.0456,
+       0.0481
+      ],
+      "basket_1": [
+       0.0006,
+       0.2505
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 50,
+     "steps": 100,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1012,
+       -0.1449
+      ],
+      "cream_cheese_1": [
+       0.1113,
+       -0.2211
+      ],
+      "tomato_sauce_1": [
+       -0.102,
+       0.0646
+      ],
+      "ketchup_1": [
+       -0.2317,
+       -0.164
+      ],
+      "orange_juice_1": [
+       -0.0169,
+       -0.2656
+      ],
+      "milk_1": [
+       0.0633,
+       -0.0873
+      ],
+      "butter_1": [
+       0.0382,
+       0.0706
+      ],
+      "basket_1": [
+       -0.0053,
+       0.2555
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 45,
+     "steps": 102,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.121,
+       -0.131
+      ],
+      "cream_cheese_1": [
+       0.1003,
+       -0.1902
+      ],
+      "tomato_sauce_1": [
+       -0.0764,
+       0.0642
+      ],
+      "ketchup_1": [
+       -0.2519,
+       -0.1469
+      ],
+      "orange_juice_1": [
+       -0.0013,
+       -0.2502
+      ],
+      "milk_1": [
+       0.0671,
+       -0.1008
+      ],
+      "butter_1": [
+       0.0449,
+       0.037
+      ],
+      "basket_1": [
+       -0.0048,
+       0.2544
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 49,
+     "steps": 97,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1164,
+       -0.1629
+      ],
+      "cream_cheese_1": [
+       0.0919,
+       -0.2152
+      ],
+      "tomato_sauce_1": [
+       -0.1205,
+       0.0351
+      ],
+      "ketchup_1": [
+       -0.2323,
+       -0.1434
+      ],
+      "orange_juice_1": [
+       0.0211,
+       -0.2374
+      ],
+      "milk_1": [
+       0.0439,
+       -0.0835
+      ],
+      "butter_1": [
+       0.0644,
+       0.0659
+      ],
+      "basket_1": [
+       -0.0004,
+       0.2513
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 50,
+     "steps": 111,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0952,
+       -0.1649
+      ],
+      "cream_cheese_1": [
+       0.1061,
+       -0.2119
+      ],
+      "tomato_sauce_1": [
+       -0.0829,
+       0.047
+      ],
+      "ketchup_1": [
+       -0.2408,
+       -0.173
+      ],
+      "orange_juice_1": [
+       0.0023,
+       -0.2735
+      ],
+      "milk_1": [
+       0.025,
+       -0.1133
+      ],
+      "butter_1": [
+       0.053,
+       0.052
+      ],
+      "basket_1": [
+       -0.0094,
+       0.2626
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 117,
+     "steps": 172,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1037,
+       -0.1504
+      ],
+      "cream_cheese_1": [
+       0.1053,
+       -0.1773
+      ],
+      "tomato_sauce_1": [
+       -0.0854,
+       0.0701
+      ],
+      "ketchup_1": [
+       -0.2279,
+       -0.1722
+      ],
+      "orange_juice_1": [
+       0.0203,
+       -0.2489
+      ],
+      "milk_1": [
+       0.0414,
+       -0.1184
+      ],
+      "butter_1": [
+       0.0268,
+       0.0361
+      ],
+      "basket_1": [
+       -0.0046,
+       0.2627
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 45,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0859,
+       -0.1707
+      ],
+      "cream_cheese_1": [
+       0.1013,
+       -0.1854
+      ],
+      "tomato_sauce_1": [
+       -0.1096,
+       0.0386
+      ],
+      "ketchup_1": [
+       -0.2471,
+       -0.1519
+      ],
+      "orange_juice_1": [
+       -0.02,
+       -0.2303
+      ],
+      "milk_1": [
+       0.0423,
+       -0.1051
+      ],
+      "butter_1": [
+       0.0604,
+       0.056
+      ],
+      "basket_1": [
+       0.0081,
+       0.2534
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.989,
+     "carried": 0.439,
+     "d_bind": 0.43,
+     "d_min": 0.005,
+     "d_final": 0.008,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 55,
+     "steps": 116,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0903,
+       -0.1577
+      ],
+      "cream_cheese_1": [
+       0.0933,
+       -0.2006
+      ],
+      "tomato_sauce_1": [
+       -0.116,
+       0.0653
+      ],
+      "ketchup_1": [
+       -0.2613,
+       -0.1425
+      ],
+      "orange_juice_1": [
+       -0.0098,
+       -0.2401
+      ],
+      "milk_1": [
+       0.0695,
+       -0.1245
+      ],
+      "butter_1": [
+       0.0508,
+       0.0406
+      ],
+      "basket_1": [
+       0.0068,
+       0.2653
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 42,
+     "steps": 95,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.099,
+       -0.141
+      ],
+      "cream_cheese_1": [
+       0.1182,
+       -0.1944
+      ],
+      "tomato_sauce_1": [
+       -0.0759,
+       0.0422
+      ],
+      "ketchup_1": [
+       -0.2694,
+       -0.1554
+      ],
+      "orange_juice_1": [
+       -0.0005,
+       -0.2339
+      ],
+      "milk_1": [
+       0.0391,
+       -0.095
+      ],
+      "butter_1": [
+       0.0401,
+       0.0722
+      ],
+      "basket_1": [
+       0.0011,
+       0.2674
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 51,
+     "steps": 114,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0971,
+       -0.1328
+      ],
+      "cream_cheese_1": [
+       0.0795,
+       -0.1936
+      ],
+      "tomato_sauce_1": [
+       -0.1102,
+       0.0597
+      ],
+      "ketchup_1": [
+       -0.2429,
+       -0.1297
+      ],
+      "orange_juice_1": [
+       -0.0182,
+       -0.2362
+      ],
+      "milk_1": [
+       0.0427,
+       -0.1189
+      ],
+      "butter_1": [
+       0.067,
+       0.0629
+      ],
+      "basket_1": [
+       -0.0092,
+       0.2642
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 49,
+     "steps": 112,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.082,
+       -0.1643
+      ],
+      "cream_cheese_1": [
+       0.0895,
+       -0.2177
+      ],
+      "tomato_sauce_1": [
+       -0.1162,
+       0.0616
+      ],
+      "ketchup_1": [
+       -0.2624,
+       -0.1471
+      ],
+      "orange_juice_1": [
+       0.016,
+       -0.2635
+      ],
+      "milk_1": [
+       0.0501,
+       -0.1103
+      ],
+      "butter_1": [
+       0.0547,
+       0.041
+      ],
+      "basket_1": [
+       -0.0092,
+       0.2591
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 50,
+     "steps": 104,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0782,
+       -0.1297
+      ],
+      "cream_cheese_1": [
+       0.1204,
+       -0.1841
+      ],
+      "tomato_sauce_1": [
+       -0.1104,
+       0.0648
+      ],
+      "ketchup_1": [
+       -0.2626,
+       -0.1503
+      ],
+      "orange_juice_1": [
+       0.0165,
+       -0.2624
+      ],
+      "milk_1": [
+       0.05,
+       -0.0869
+      ],
+      "butter_1": [
+       0.0257,
+       0.0708
+      ],
+      "basket_1": [
+       0.0014,
+       0.2666
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 48,
+     "steps": 106,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1106,
+       -0.1246
+      ],
+      "cream_cheese_1": [
+       0.1197,
+       -0.2249
+      ],
+      "tomato_sauce_1": [
+       -0.0989,
+       0.069
+      ],
+      "ketchup_1": [
+       -0.2702,
+       -0.1626
+      ],
+      "orange_juice_1": [
+       0.0196,
+       -0.2424
+      ],
+      "milk_1": [
+       0.0733,
+       -0.1179
+      ],
+      "butter_1": [
+       0.0426,
+       0.0541
+      ],
+      "basket_1": [
+       -0.0077,
+       0.2629
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 47,
+     "steps": 104,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1212,
+       -0.1416
+      ],
+      "cream_cheese_1": [
+       0.0982,
+       -0.1801
+      ],
+      "tomato_sauce_1": [
+       -0.1136,
+       0.0333
+      ],
+      "ketchup_1": [
+       -0.2628,
+       -0.1565
+      ],
+      "orange_juice_1": [
+       -0.0041,
+       -0.2465
+      ],
+      "milk_1": [
+       0.0447,
+       -0.1066
+      ],
+      "butter_1": [
+       0.0429,
+       0.058
+      ],
+      "basket_1": [
+       -0.0019,
+       0.2511
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 48,
+     "steps": 103,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1134,
+       -0.1744
+      ],
+      "cream_cheese_1": [
+       0.1184,
+       -0.191
+      ],
+      "tomato_sauce_1": [
+       -0.0967,
+       0.0404
+      ],
+      "ketchup_1": [
+       -0.2257,
+       -0.1537
+      ],
+      "orange_juice_1": [
+       -0.0065,
+       -0.262
+      ],
+      "milk_1": [
+       0.0383,
+       -0.0786
+      ],
+      "butter_1": [
+       0.0703,
+       0.0439
+      ],
+      "basket_1": [
+       0.0067,
+       0.2526
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 49,
+     "steps": 104,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0801,
+       -0.127
+      ],
+      "cream_cheese_1": [
+       0.0948,
+       -0.1858
+      ],
+      "tomato_sauce_1": [
+       -0.0872,
+       0.043
+      ],
+      "ketchup_1": [
+       -0.2514,
+       -0.1709
+      ],
+      "orange_juice_1": [
+       0.011,
+       -0.2414
+      ],
+      "milk_1": [
+       0.0497,
+       -0.1245
+      ],
+      "butter_1": [
+       0.0334,
+       0.0338
+      ],
+      "basket_1": [
+       -0.004,
+       0.2532
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 57,
+     "steps": 121,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1128,
+       -0.1512
+      ],
+      "cream_cheese_1": [
+       0.0956,
+       -0.1972
+      ],
+      "tomato_sauce_1": [
+       -0.1169,
+       0.0354
+      ],
+      "ketchup_1": [
+       -0.2718,
+       -0.1317
+      ],
+      "orange_juice_1": [
+       0.0056,
+       -0.231
+      ],
+      "milk_1": [
+       0.075,
+       -0.0778
+      ],
+      "butter_1": [
+       0.0477,
+       0.0605
+      ],
+      "basket_1": [
+       0.0074,
+       0.2671
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 48,
+     "steps": 94,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0806,
+       -0.1576
+      ],
+      "cream_cheese_1": [
+       0.0773,
+       -0.1987
+      ],
+      "tomato_sauce_1": [
+       -0.107,
+       0.0257
+      ],
+      "ketchup_1": [
+       -0.2475,
+       -0.1574
+      ],
+      "orange_juice_1": [
+       0.0178,
+       -0.2567
+      ],
+      "milk_1": [
+       0.0387,
+       -0.1198
+      ],
+      "butter_1": [
+       0.0535,
+       0.0443
+      ],
+      "basket_1": [
+       -0.0001,
+       0.2586
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag2": {
+   "roll": "results/r1/roll/r1cag_cells_libero_90_52_da193eed41.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 54,
+     "steps": 101,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1223,
+       -0.1699
+      ],
+      "cream_cheese_1": [
+       0.0801,
+       -0.2213
+      ],
+      "tomato_sauce_1": [
+       -0.0963,
+       0.0607
+      ],
+      "ketchup_1": [
+       -0.2727,
+       -0.17
+      ],
+      "orange_juice_1": [
+       -0.0094,
+       -0.2321
+      ],
+      "milk_1": [
+       0.0353,
+       -0.1022
+      ],
+      "butter_1": [
+       0.055,
+       0.0254
+      ],
+      "basket_1": [
+       -0.0085,
+       0.2609
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 55,
+     "steps": 123,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0864,
+       -0.1648
+      ],
+      "cream_cheese_1": [
+       0.087,
+       -0.1868
+      ],
+      "tomato_sauce_1": [
+       -0.1083,
+       0.0315
+      ],
+      "ketchup_1": [
+       -0.2635,
+       -0.1674
+      ],
+      "orange_juice_1": [
+       0.0164,
+       -0.2583
+      ],
+      "milk_1": [
+       0.072,
+       -0.1213
+      ],
+      "butter_1": [
+       0.0515,
+       0.0424
+      ],
+      "basket_1": [
+       -0.0028,
+       0.2682
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 50,
+     "steps": 97,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1034,
+       -0.1673
+      ],
+      "cream_cheese_1": [
+       0.0924,
+       -0.2018
+      ],
+      "tomato_sauce_1": [
+       -0.1209,
+       0.0285
+      ],
+      "ketchup_1": [
+       -0.2566,
+       -0.1297
+      ],
+      "orange_juice_1": [
+       0.0184,
+       -0.2479
+      ],
+      "milk_1": [
+       0.0536,
+       -0.0835
+      ],
+      "butter_1": [
+       0.0456,
+       0.0481
+      ],
+      "basket_1": [
+       0.0006,
+       0.2505
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 54,
+     "steps": 103,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1012,
+       -0.1449
+      ],
+      "cream_cheese_1": [
+       0.1113,
+       -0.2211
+      ],
+      "tomato_sauce_1": [
+       -0.102,
+       0.0646
+      ],
+      "ketchup_1": [
+       -0.2317,
+       -0.164
+      ],
+      "orange_juice_1": [
+       -0.0169,
+       -0.2656
+      ],
+      "milk_1": [
+       0.0633,
+       -0.0873
+      ],
+      "butter_1": [
+       0.0382,
+       0.0706
+      ],
+      "basket_1": [
+       -0.0053,
+       0.2555
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 50,
+     "steps": 104,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.121,
+       -0.131
+      ],
+      "cream_cheese_1": [
+       0.1003,
+       -0.1902
+      ],
+      "tomato_sauce_1": [
+       -0.0764,
+       0.0642
+      ],
+      "ketchup_1": [
+       -0.2519,
+       -0.1469
+      ],
+      "orange_juice_1": [
+       -0.0013,
+       -0.2502
+      ],
+      "milk_1": [
+       0.0671,
+       -0.1008
+      ],
+      "butter_1": [
+       0.0449,
+       0.037
+      ],
+      "basket_1": [
+       -0.0048,
+       0.2544
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 46,
+     "steps": 92,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1164,
+       -0.1629
+      ],
+      "cream_cheese_1": [
+       0.0919,
+       -0.2152
+      ],
+      "tomato_sauce_1": [
+       -0.1205,
+       0.0351
+      ],
+      "ketchup_1": [
+       -0.2323,
+       -0.1434
+      ],
+      "orange_juice_1": [
+       0.0211,
+       -0.2374
+      ],
+      "milk_1": [
+       0.0439,
+       -0.0835
+      ],
+      "butter_1": [
+       0.0644,
+       0.0659
+      ],
+      "basket_1": [
+       -0.0004,
+       0.2513
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 46,
+     "steps": 94,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0952,
+       -0.1649
+      ],
+      "cream_cheese_1": [
+       0.1061,
+       -0.2119
+      ],
+      "tomato_sauce_1": [
+       -0.0829,
+       0.047
+      ],
+      "ketchup_1": [
+       -0.2408,
+       -0.173
+      ],
+      "orange_juice_1": [
+       0.0023,
+       -0.2735
+      ],
+      "milk_1": [
+       0.025,
+       -0.1133
+      ],
+      "butter_1": [
+       0.053,
+       0.052
+      ],
+      "basket_1": [
+       -0.0094,
+       0.2626
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 47,
+     "steps": 95,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1037,
+       -0.1504
+      ],
+      "cream_cheese_1": [
+       0.1053,
+       -0.1773
+      ],
+      "tomato_sauce_1": [
+       -0.0854,
+       0.0701
+      ],
+      "ketchup_1": [
+       -0.2279,
+       -0.1722
+      ],
+      "orange_juice_1": [
+       0.0203,
+       -0.2489
+      ],
+      "milk_1": [
+       0.0414,
+       -0.1184
+      ],
+      "butter_1": [
+       0.0268,
+       0.0361
+      ],
+      "basket_1": [
+       -0.0046,
+       0.2627
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 58,
+     "steps": 111,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0859,
+       -0.1707
+      ],
+      "cream_cheese_1": [
+       0.1013,
+       -0.1854
+      ],
+      "tomato_sauce_1": [
+       -0.1096,
+       0.0386
+      ],
+      "ketchup_1": [
+       -0.2471,
+       -0.1519
+      ],
+      "orange_juice_1": [
+       -0.02,
+       -0.2303
+      ],
+      "milk_1": [
+       0.0423,
+       -0.1051
+      ],
+      "butter_1": [
+       0.0604,
+       0.056
+      ],
+      "basket_1": [
+       0.0081,
+       0.2534
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 53,
+     "steps": 113,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0903,
+       -0.1577
+      ],
+      "cream_cheese_1": [
+       0.0933,
+       -0.2006
+      ],
+      "tomato_sauce_1": [
+       -0.116,
+       0.0653
+      ],
+      "ketchup_1": [
+       -0.2613,
+       -0.1425
+      ],
+      "orange_juice_1": [
+       -0.0098,
+       -0.2401
+      ],
+      "milk_1": [
+       0.0695,
+       -0.1245
+      ],
+      "butter_1": [
+       0.0508,
+       0.0406
+      ],
+      "basket_1": [
+       0.0068,
+       0.2653
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 44,
+     "steps": 95,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.099,
+       -0.141
+      ],
+      "cream_cheese_1": [
+       0.1182,
+       -0.1944
+      ],
+      "tomato_sauce_1": [
+       -0.0759,
+       0.0422
+      ],
+      "ketchup_1": [
+       -0.2694,
+       -0.1554
+      ],
+      "orange_juice_1": [
+       -0.0005,
+       -0.2339
+      ],
+      "milk_1": [
+       0.0391,
+       -0.095
+      ],
+      "butter_1": [
+       0.0401,
+       0.0722
+      ],
+      "basket_1": [
+       0.0011,
+       0.2674
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 50,
+     "steps": 110,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0971,
+       -0.1328
+      ],
+      "cream_cheese_1": [
+       0.0795,
+       -0.1936
+      ],
+      "tomato_sauce_1": [
+       -0.1102,
+       0.0597
+      ],
+      "ketchup_1": [
+       -0.2429,
+       -0.1297
+      ],
+      "orange_juice_1": [
+       -0.0182,
+       -0.2362
+      ],
+      "milk_1": [
+       0.0427,
+       -0.1189
+      ],
+      "butter_1": [
+       0.067,
+       0.0629
+      ],
+      "basket_1": [
+       -0.0092,
+       0.2642
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 48,
+     "steps": 99,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.082,
+       -0.1643
+      ],
+      "cream_cheese_1": [
+       0.0895,
+       -0.2177
+      ],
+      "tomato_sauce_1": [
+       -0.1162,
+       0.0616
+      ],
+      "ketchup_1": [
+       -0.2624,
+       -0.1471
+      ],
+      "orange_juice_1": [
+       0.016,
+       -0.2635
+      ],
+      "milk_1": [
+       0.0501,
+       -0.1103
+      ],
+      "butter_1": [
+       0.0547,
+       0.041
+      ],
+      "basket_1": [
+       -0.0092,
+       0.2591
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 50,
+     "steps": 99,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0782,
+       -0.1297
+      ],
+      "cream_cheese_1": [
+       0.1204,
+       -0.1841
+      ],
+      "tomato_sauce_1": [
+       -0.1104,
+       0.0648
+      ],
+      "ketchup_1": [
+       -0.2626,
+       -0.1503
+      ],
+      "orange_juice_1": [
+       0.0165,
+       -0.2624
+      ],
+      "milk_1": [
+       0.05,
+       -0.0869
+      ],
+      "butter_1": [
+       0.0257,
+       0.0708
+      ],
+      "basket_1": [
+       0.0014,
+       0.2666
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 90,
+     "steps": 213,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1106,
+       -0.1246
+      ],
+      "cream_cheese_1": [
+       0.1197,
+       -0.2249
+      ],
+      "tomato_sauce_1": [
+       -0.0989,
+       0.069
+      ],
+      "ketchup_1": [
+       -0.2702,
+       -0.1626
+      ],
+      "orange_juice_1": [
+       0.0196,
+       -0.2424
+      ],
+      "milk_1": [
+       0.0733,
+       -0.1179
+      ],
+      "butter_1": [
+       0.0426,
+       0.0541
+      ],
+      "basket_1": [
+       -0.0077,
+       0.2629
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 45,
+     "steps": 95,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1212,
+       -0.1416
+      ],
+      "cream_cheese_1": [
+       0.0982,
+       -0.1801
+      ],
+      "tomato_sauce_1": [
+       -0.1136,
+       0.0333
+      ],
+      "ketchup_1": [
+       -0.2628,
+       -0.1565
+      ],
+      "orange_juice_1": [
+       -0.0041,
+       -0.2465
+      ],
+      "milk_1": [
+       0.0447,
+       -0.1066
+      ],
+      "butter_1": [
+       0.0429,
+       0.058
+      ],
+      "basket_1": [
+       -0.0019,
+       0.2511
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 48,
+     "steps": 100,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1134,
+       -0.1744
+      ],
+      "cream_cheese_1": [
+       0.1184,
+       -0.191
+      ],
+      "tomato_sauce_1": [
+       -0.0967,
+       0.0404
+      ],
+      "ketchup_1": [
+       -0.2257,
+       -0.1537
+      ],
+      "orange_juice_1": [
+       -0.0065,
+       -0.262
+      ],
+      "milk_1": [
+       0.0383,
+       -0.0786
+      ],
+      "butter_1": [
+       0.0703,
+       0.0439
+      ],
+      "basket_1": [
+       0.0067,
+       0.2526
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 49,
+     "steps": 107,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0801,
+       -0.127
+      ],
+      "cream_cheese_1": [
+       0.0948,
+       -0.1858
+      ],
+      "tomato_sauce_1": [
+       -0.0872,
+       0.043
+      ],
+      "ketchup_1": [
+       -0.2514,
+       -0.1709
+      ],
+      "orange_juice_1": [
+       0.011,
+       -0.2414
+      ],
+      "milk_1": [
+       0.0497,
+       -0.1245
+      ],
+      "butter_1": [
+       0.0334,
+       0.0338
+      ],
+      "basket_1": [
+       -0.004,
+       0.2532
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 50,
+     "steps": 113,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1128,
+       -0.1512
+      ],
+      "cream_cheese_1": [
+       0.0956,
+       -0.1972
+      ],
+      "tomato_sauce_1": [
+       -0.1169,
+       0.0354
+      ],
+      "ketchup_1": [
+       -0.2718,
+       -0.1317
+      ],
+      "orange_juice_1": [
+       0.0056,
+       -0.231
+      ],
+      "milk_1": [
+       0.075,
+       -0.0778
+      ],
+      "butter_1": [
+       0.0477,
+       0.0605
+      ],
+      "basket_1": [
+       0.0074,
+       0.2671
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 54,
+     "steps": 113,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0806,
+       -0.1576
+      ],
+      "cream_cheese_1": [
+       0.0773,
+       -0.1987
+      ],
+      "tomato_sauce_1": [
+       -0.107,
+       0.0257
+      ],
+      "ketchup_1": [
+       -0.2475,
+       -0.1574
+      ],
+      "orange_juice_1": [
+       0.0178,
+       -0.2567
+      ],
+      "milk_1": [
+       0.0387,
+       -0.1198
+      ],
+      "butter_1": [
+       0.0535,
+       0.0443
+      ],
+      "basket_1": [
+       -0.0001,
+       0.2586
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag3": {
+   "roll": "results/r1/roll/r1cag_cells_libero_90_52_7af7df9862.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 55,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1223,
+       -0.1699
+      ],
+      "cream_cheese_1": [
+       0.0801,
+       -0.2213
+      ],
+      "tomato_sauce_1": [
+       -0.0963,
+       0.0607
+      ],
+      "ketchup_1": [
+       -0.2727,
+       -0.17
+      ],
+      "orange_juice_1": [
+       -0.0094,
+       -0.2321
+      ],
+      "milk_1": [
+       0.0353,
+       -0.1022
+      ],
+      "butter_1": [
+       0.055,
+       0.0254
+      ],
+      "basket_1": [
+       -0.0085,
+       0.2609
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.926,
+     "carried": 0.466,
+     "d_bind": 0.349,
+     "d_min": 0.026,
+     "d_final": 0.026,
+     "alt": [
+      "basket_1"
+     ],
+     "target": "basket_1_contain_region",
+     "type": "wrong_goal",
+     "sub": "other_region",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 46,
+     "steps": 95,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0864,
+       -0.1648
+      ],
+      "cream_cheese_1": [
+       0.087,
+       -0.1868
+      ],
+      "tomato_sauce_1": [
+       -0.1083,
+       0.0315
+      ],
+      "ketchup_1": [
+       -0.2635,
+       -0.1674
+      ],
+      "orange_juice_1": [
+       0.0164,
+       -0.2583
+      ],
+      "milk_1": [
+       0.072,
+       -0.1213
+      ],
+      "butter_1": [
+       0.0515,
+       0.0424
+      ],
+      "basket_1": [
+       -0.0028,
+       0.2682
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 39,
+     "steps": 85,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1034,
+       -0.1673
+      ],
+      "cream_cheese_1": [
+       0.0924,
+       -0.2018
+      ],
+      "tomato_sauce_1": [
+       -0.1209,
+       0.0285
+      ],
+      "ketchup_1": [
+       -0.2566,
+       -0.1297
+      ],
+      "orange_juice_1": [
+       0.0184,
+       -0.2479
+      ],
+      "milk_1": [
+       0.0536,
+       -0.0835
+      ],
+      "butter_1": [
+       0.0456,
+       0.0481
+      ],
+      "basket_1": [
+       0.0006,
+       0.2505
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 47,
+     "steps": 216,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1012,
+       -0.1449
+      ],
+      "cream_cheese_1": [
+       0.1113,
+       -0.2211
+      ],
+      "tomato_sauce_1": [
+       -0.102,
+       0.0646
+      ],
+      "ketchup_1": [
+       -0.2317,
+       -0.164
+      ],
+      "orange_juice_1": [
+       -0.0169,
+       -0.2656
+      ],
+      "milk_1": [
+       0.0633,
+       -0.0873
+      ],
+      "butter_1": [
+       0.0382,
+       0.0706
+      ],
+      "basket_1": [
+       -0.0053,
+       0.2555
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 43,
+     "steps": 144,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.121,
+       -0.131
+      ],
+      "cream_cheese_1": [
+       0.1003,
+       -0.1902
+      ],
+      "tomato_sauce_1": [
+       -0.0764,
+       0.0642
+      ],
+      "ketchup_1": [
+       -0.2519,
+       -0.1469
+      ],
+      "orange_juice_1": [
+       -0.0013,
+       -0.2502
+      ],
+      "milk_1": [
+       0.0671,
+       -0.1008
+      ],
+      "butter_1": [
+       0.0449,
+       0.037
+      ],
+      "basket_1": [
+       -0.0048,
+       0.2544
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 50,
+     "steps": 100,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1164,
+       -0.1629
+      ],
+      "cream_cheese_1": [
+       0.0919,
+       -0.2152
+      ],
+      "tomato_sauce_1": [
+       -0.1205,
+       0.0351
+      ],
+      "ketchup_1": [
+       -0.2323,
+       -0.1434
+      ],
+      "orange_juice_1": [
+       0.0211,
+       -0.2374
+      ],
+      "milk_1": [
+       0.0439,
+       -0.0835
+      ],
+      "butter_1": [
+       0.0644,
+       0.0659
+      ],
+      "basket_1": [
+       -0.0004,
+       0.2513
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 48,
+     "steps": 290,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0952,
+       -0.1649
+      ],
+      "cream_cheese_1": [
+       0.1061,
+       -0.2119
+      ],
+      "tomato_sauce_1": [
+       -0.0829,
+       0.047
+      ],
+      "ketchup_1": [
+       -0.2408,
+       -0.173
+      ],
+      "orange_juice_1": [
+       0.0023,
+       -0.2735
+      ],
+      "milk_1": [
+       0.025,
+       -0.1133
+      ],
+      "butter_1": [
+       0.053,
+       0.052
+      ],
+      "basket_1": [
+       -0.0094,
+       0.2626
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 54,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1037,
+       -0.1504
+      ],
+      "cream_cheese_1": [
+       0.1053,
+       -0.1773
+      ],
+      "tomato_sauce_1": [
+       -0.0854,
+       0.0701
+      ],
+      "ketchup_1": [
+       -0.2279,
+       -0.1722
+      ],
+      "orange_juice_1": [
+       0.0203,
+       -0.2489
+      ],
+      "milk_1": [
+       0.0414,
+       -0.1184
+      ],
+      "butter_1": [
+       0.0268,
+       0.0361
+      ],
+      "basket_1": [
+       -0.0046,
+       0.2627
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.928,
+     "carried": 1.004,
+     "d_bind": 0.358,
+     "d_min": 0.026,
+     "d_final": 0.405,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 53,
+     "steps": 154,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0859,
+       -0.1707
+      ],
+      "cream_cheese_1": [
+       0.1013,
+       -0.1854
+      ],
+      "tomato_sauce_1": [
+       -0.1096,
+       0.0386
+      ],
+      "ketchup_1": [
+       -0.2471,
+       -0.1519
+      ],
+      "orange_juice_1": [
+       -0.02,
+       -0.2303
+      ],
+      "milk_1": [
+       0.0423,
+       -0.1051
+      ],
+      "butter_1": [
+       0.0604,
+       0.056
+      ],
+      "basket_1": [
+       0.0081,
+       0.2534
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 48,
+     "steps": 116,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0903,
+       -0.1577
+      ],
+      "cream_cheese_1": [
+       0.0933,
+       -0.2006
+      ],
+      "tomato_sauce_1": [
+       -0.116,
+       0.0653
+      ],
+      "ketchup_1": [
+       -0.2613,
+       -0.1425
+      ],
+      "orange_juice_1": [
+       -0.0098,
+       -0.2401
+      ],
+      "milk_1": [
+       0.0695,
+       -0.1245
+      ],
+      "butter_1": [
+       0.0508,
+       0.0406
+      ],
+      "basket_1": [
+       0.0068,
+       0.2653
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 44,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.099,
+       -0.141
+      ],
+      "cream_cheese_1": [
+       0.1182,
+       -0.1944
+      ],
+      "tomato_sauce_1": [
+       -0.0759,
+       0.0422
+      ],
+      "ketchup_1": [
+       -0.2694,
+       -0.1554
+      ],
+      "orange_juice_1": [
+       -0.0005,
+       -0.2339
+      ],
+      "milk_1": [
+       0.0391,
+       -0.095
+      ],
+      "butter_1": [
+       0.0401,
+       0.0722
+      ],
+      "basket_1": [
+       0.0011,
+       0.2674
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.994,
+     "carried": 0.457,
+     "d_bind": 0.42,
+     "d_min": 0.003,
+     "d_final": 0.113,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 41,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0971,
+       -0.1328
+      ],
+      "cream_cheese_1": [
+       0.0795,
+       -0.1936
+      ],
+      "tomato_sauce_1": [
+       -0.1102,
+       0.0597
+      ],
+      "ketchup_1": [
+       -0.2429,
+       -0.1297
+      ],
+      "orange_juice_1": [
+       -0.0182,
+       -0.2362
+      ],
+      "milk_1": [
+       0.0427,
+       -0.1189
+      ],
+      "butter_1": [
+       0.067,
+       0.0629
+      ],
+      "basket_1": [
+       -0.0092,
+       0.2642
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.878,
+     "carried": 1.155,
+     "d_bind": 0.393,
+     "d_min": 0.048,
+     "d_final": 0.778,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 38,
+     "steps": 132,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.082,
+       -0.1643
+      ],
+      "cream_cheese_1": [
+       0.0895,
+       -0.2177
+      ],
+      "tomato_sauce_1": [
+       -0.1162,
+       0.0616
+      ],
+      "ketchup_1": [
+       -0.2624,
+       -0.1471
+      ],
+      "orange_juice_1": [
+       0.016,
+       -0.2635
+      ],
+      "milk_1": [
+       0.0501,
+       -0.1103
+      ],
+      "butter_1": [
+       0.0547,
+       0.041
+      ],
+      "basket_1": [
+       -0.0092,
+       0.2591
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 45,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0782,
+       -0.1297
+      ],
+      "cream_cheese_1": [
+       0.1204,
+       -0.1841
+      ],
+      "tomato_sauce_1": [
+       -0.1104,
+       0.0648
+      ],
+      "ketchup_1": [
+       -0.2626,
+       -0.1503
+      ],
+      "orange_juice_1": [
+       0.0165,
+       -0.2624
+      ],
+      "milk_1": [
+       0.05,
+       -0.0869
+      ],
+      "butter_1": [
+       0.0257,
+       0.0708
+      ],
+      "basket_1": [
+       0.0014,
+       0.2666
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.833,
+     "carried": 1.168,
+     "d_bind": 0.363,
+     "d_min": 0.061,
+     "d_final": 0.811,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 49,
+     "steps": 112,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1106,
+       -0.1246
+      ],
+      "cream_cheese_1": [
+       0.1197,
+       -0.2249
+      ],
+      "tomato_sauce_1": [
+       -0.0989,
+       0.069
+      ],
+      "ketchup_1": [
+       -0.2702,
+       -0.1626
+      ],
+      "orange_juice_1": [
+       0.0196,
+       -0.2424
+      ],
+      "milk_1": [
+       0.0733,
+       -0.1179
+      ],
+      "butter_1": [
+       0.0426,
+       0.0541
+      ],
+      "basket_1": [
+       -0.0077,
+       0.2629
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 55,
+     "steps": 107,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1212,
+       -0.1416
+      ],
+      "cream_cheese_1": [
+       0.0982,
+       -0.1801
+      ],
+      "tomato_sauce_1": [
+       -0.1136,
+       0.0333
+      ],
+      "ketchup_1": [
+       -0.2628,
+       -0.1565
+      ],
+      "orange_juice_1": [
+       -0.0041,
+       -0.2465
+      ],
+      "milk_1": [
+       0.0447,
+       -0.1066
+      ],
+      "butter_1": [
+       0.0429,
+       0.058
+      ],
+      "basket_1": [
+       -0.0019,
+       0.2511
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 52,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1134,
+       -0.1744
+      ],
+      "cream_cheese_1": [
+       0.1184,
+       -0.191
+      ],
+      "tomato_sauce_1": [
+       -0.0967,
+       0.0404
+      ],
+      "ketchup_1": [
+       -0.2257,
+       -0.1537
+      ],
+      "orange_juice_1": [
+       -0.0065,
+       -0.262
+      ],
+      "milk_1": [
+       0.0383,
+       -0.0786
+      ],
+      "butter_1": [
+       0.0703,
+       0.0439
+      ],
+      "basket_1": [
+       0.0067,
+       0.2526
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.873,
+     "carried": 0.425,
+     "d_bind": 0.325,
+     "d_min": 0.041,
+     "d_final": 0.043,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 46,
+     "steps": 166,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0801,
+       -0.127
+      ],
+      "cream_cheese_1": [
+       0.0948,
+       -0.1858
+      ],
+      "tomato_sauce_1": [
+       -0.0872,
+       0.043
+      ],
+      "ketchup_1": [
+       -0.2514,
+       -0.1709
+      ],
+      "orange_juice_1": [
+       0.011,
+       -0.2414
+      ],
+      "milk_1": [
+       0.0497,
+       -0.1245
+      ],
+      "butter_1": [
+       0.0334,
+       0.0338
+      ],
+      "basket_1": [
+       -0.004,
+       0.2532
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 45,
+     "steps": 94,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1128,
+       -0.1512
+      ],
+      "cream_cheese_1": [
+       0.0956,
+       -0.1972
+      ],
+      "tomato_sauce_1": [
+       -0.1169,
+       0.0354
+      ],
+      "ketchup_1": [
+       -0.2718,
+       -0.1317
+      ],
+      "orange_juice_1": [
+       0.0056,
+       -0.231
+      ],
+      "milk_1": [
+       0.075,
+       -0.0778
+      ],
+      "butter_1": [
+       0.0477,
+       0.0605
+      ],
+      "basket_1": [
+       0.0074,
+       0.2671
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 43,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0806,
+       -0.1576
+      ],
+      "cream_cheese_1": [
+       0.0773,
+       -0.1987
+      ],
+      "tomato_sauce_1": [
+       -0.107,
+       0.0257
+      ],
+      "ketchup_1": [
+       -0.2475,
+       -0.1574
+      ],
+      "orange_juice_1": [
+       0.0178,
+       -0.2567
+      ],
+      "milk_1": [
+       0.0387,
+       -0.1198
+      ],
+      "butter_1": [
+       0.0535,
+       0.0443
+      ],
+      "basket_1": [
+       -0.0001,
+       0.2586
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.978,
+     "carried": 0.515,
+     "d_bind": 0.36,
+     "d_min": 0.008,
+     "d_final": 0.156,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag5": {
+   "roll": "results/r1/roll/r1cag_cells_libero_90_52_578dad0ee5.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 50,
+     "steps": 217,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1223,
+       -0.1699
+      ],
+      "cream_cheese_1": [
+       0.0801,
+       -0.2213
+      ],
+      "tomato_sauce_1": [
+       -0.0963,
+       0.0607
+      ],
+      "ketchup_1": [
+       -0.2727,
+       -0.17
+      ],
+      "orange_juice_1": [
+       -0.0094,
+       -0.2321
+      ],
+      "milk_1": [
+       0.0353,
+       -0.1022
+      ],
+      "butter_1": [
+       0.055,
+       0.0254
+      ],
+      "basket_1": [
+       -0.0085,
+       0.2609
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 40,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0864,
+       -0.1648
+      ],
+      "cream_cheese_1": [
+       0.087,
+       -0.1868
+      ],
+      "tomato_sauce_1": [
+       -0.1083,
+       0.0315
+      ],
+      "ketchup_1": [
+       -0.2635,
+       -0.1674
+      ],
+      "orange_juice_1": [
+       0.0164,
+       -0.2583
+      ],
+      "milk_1": [
+       0.072,
+       -0.1213
+      ],
+      "butter_1": [
+       0.0515,
+       0.0424
+      ],
+      "basket_1": [
+       -0.0028,
+       0.2682
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.832,
+     "carried": 0.983,
+     "d_bind": 0.398,
+     "d_min": 0.067,
+     "d_final": 0.544,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 39,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1034,
+       -0.1673
+      ],
+      "cream_cheese_1": [
+       0.0924,
+       -0.2018
+      ],
+      "tomato_sauce_1": [
+       -0.1209,
+       0.0285
+      ],
+      "ketchup_1": [
+       -0.2566,
+       -0.1297
+      ],
+      "orange_juice_1": [
+       0.0184,
+       -0.2479
+      ],
+      "milk_1": [
+       0.0536,
+       -0.0835
+      ],
+      "butter_1": [
+       0.0456,
+       0.0481
+      ],
+      "basket_1": [
+       0.0006,
+       0.2505
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.72,
+     "carried": 0.474,
+     "d_bind": 0.356,
+     "d_min": 0.1,
+     "d_final": 0.135,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 53,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1012,
+       -0.1449
+      ],
+      "cream_cheese_1": [
+       0.1113,
+       -0.2211
+      ],
+      "tomato_sauce_1": [
+       -0.102,
+       0.0646
+      ],
+      "ketchup_1": [
+       -0.2317,
+       -0.164
+      ],
+      "orange_juice_1": [
+       -0.0169,
+       -0.2656
+      ],
+      "milk_1": [
+       0.0633,
+       -0.0873
+      ],
+      "butter_1": [
+       0.0382,
+       0.0706
+      ],
+      "basket_1": [
+       -0.0053,
+       0.2555
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.0,
+     "carried": 0.065,
+     "d_bind": 0.396,
+     "d_min": 0.396,
+     "d_final": 0.46,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "not_carried",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 47,
+     "steps": 149,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.121,
+       -0.131
+      ],
+      "cream_cheese_1": [
+       0.1003,
+       -0.1902
+      ],
+      "tomato_sauce_1": [
+       -0.0764,
+       0.0642
+      ],
+      "ketchup_1": [
+       -0.2519,
+       -0.1469
+      ],
+      "orange_juice_1": [
+       -0.0013,
+       -0.2502
+      ],
+      "milk_1": [
+       0.0671,
+       -0.1008
+      ],
+      "butter_1": [
+       0.0449,
+       0.037
+      ],
+      "basket_1": [
+       -0.0048,
+       0.2544
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 48,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1164,
+       -0.1629
+      ],
+      "cream_cheese_1": [
+       0.0919,
+       -0.2152
+      ],
+      "tomato_sauce_1": [
+       -0.1205,
+       0.0351
+      ],
+      "ketchup_1": [
+       -0.2323,
+       -0.1434
+      ],
+      "orange_juice_1": [
+       0.0211,
+       -0.2374
+      ],
+      "milk_1": [
+       0.0439,
+       -0.0835
+      ],
+      "butter_1": [
+       0.0644,
+       0.0659
+      ],
+      "basket_1": [
+       -0.0004,
+       0.2513
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.839,
+     "carried": 0.989,
+     "d_bind": 0.33,
+     "d_min": 0.053,
+     "d_final": 0.403,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 43,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0952,
+       -0.1649
+      ],
+      "cream_cheese_1": [
+       0.1061,
+       -0.2119
+      ],
+      "tomato_sauce_1": [
+       -0.0829,
+       0.047
+      ],
+      "ketchup_1": [
+       -0.2408,
+       -0.173
+      ],
+      "orange_juice_1": [
+       0.0023,
+       -0.2735
+      ],
+      "milk_1": [
+       0.025,
+       -0.1133
+      ],
+      "butter_1": [
+       0.053,
+       0.052
+      ],
+      "basket_1": [
+       -0.0094,
+       0.2626
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.763,
+     "carried": 1.004,
+     "d_bind": 0.386,
+     "d_min": 0.091,
+     "d_final": 0.519,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 38,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1037,
+       -0.1504
+      ],
+      "cream_cheese_1": [
+       0.1053,
+       -0.1773
+      ],
+      "tomato_sauce_1": [
+       -0.0854,
+       0.0701
+      ],
+      "ketchup_1": [
+       -0.2279,
+       -0.1722
+      ],
+      "orange_juice_1": [
+       0.0203,
+       -0.2489
+      ],
+      "milk_1": [
+       0.0414,
+       -0.1184
+      ],
+      "butter_1": [
+       0.0268,
+       0.0361
+      ],
+      "basket_1": [
+       -0.0046,
+       0.2627
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.763,
+     "carried": 1.094,
+     "d_bind": 0.382,
+     "d_min": 0.091,
+     "d_final": 0.661,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 49,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0859,
+       -0.1707
+      ],
+      "cream_cheese_1": [
+       0.1013,
+       -0.1854
+      ],
+      "tomato_sauce_1": [
+       -0.1096,
+       0.0386
+      ],
+      "ketchup_1": [
+       -0.2471,
+       -0.1519
+      ],
+      "orange_juice_1": [
+       -0.02,
+       -0.2303
+      ],
+      "milk_1": [
+       0.0423,
+       -0.1051
+      ],
+      "butter_1": [
+       0.0604,
+       0.056
+      ],
+      "basket_1": [
+       0.0081,
+       0.2534
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.805,
+     "carried": 1.024,
+     "d_bind": 0.324,
+     "d_min": 0.063,
+     "d_final": 0.326,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 57,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0903,
+       -0.1577
+      ],
+      "cream_cheese_1": [
+       0.0933,
+       -0.2006
+      ],
+      "tomato_sauce_1": [
+       -0.116,
+       0.0653
+      ],
+      "ketchup_1": [
+       -0.2613,
+       -0.1425
+      ],
+      "orange_juice_1": [
+       -0.0098,
+       -0.2401
+      ],
+      "milk_1": [
+       0.0695,
+       -0.1245
+      ],
+      "butter_1": [
+       0.0508,
+       0.0406
+      ],
+      "basket_1": [
+       0.0068,
+       0.2653
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.858,
+     "carried": 1.011,
+     "d_bind": 0.388,
+     "d_min": 0.055,
+     "d_final": 0.417,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 40,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.099,
+       -0.141
+      ],
+      "cream_cheese_1": [
+       0.1182,
+       -0.1944
+      ],
+      "tomato_sauce_1": [
+       -0.0759,
+       0.0422
+      ],
+      "ketchup_1": [
+       -0.2694,
+       -0.1554
+      ],
+      "orange_juice_1": [
+       -0.0005,
+       -0.2339
+      ],
+      "milk_1": [
+       0.0391,
+       -0.095
+      ],
+      "butter_1": [
+       0.0401,
+       0.0722
+      ],
+      "basket_1": [
+       0.0011,
+       0.2674
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.522,
+     "carried": 0.486,
+     "d_bind": 0.318,
+     "d_min": 0.152,
+     "d_final": 0.196,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 41,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0971,
+       -0.1328
+      ],
+      "cream_cheese_1": [
+       0.0795,
+       -0.1936
+      ],
+      "tomato_sauce_1": [
+       -0.1102,
+       0.0597
+      ],
+      "ketchup_1": [
+       -0.2429,
+       -0.1297
+      ],
+      "orange_juice_1": [
+       -0.0182,
+       -0.2362
+      ],
+      "milk_1": [
+       0.0427,
+       -0.1189
+      ],
+      "butter_1": [
+       0.067,
+       0.0629
+      ],
+      "basket_1": [
+       -0.0092,
+       0.2642
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.802,
+     "carried": 1.027,
+     "d_bind": 0.335,
+     "d_min": 0.066,
+     "d_final": 0.495,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 77,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.082,
+       -0.1643
+      ],
+      "cream_cheese_1": [
+       0.0895,
+       -0.2177
+      ],
+      "tomato_sauce_1": [
+       -0.1162,
+       0.0616
+      ],
+      "ketchup_1": [
+       -0.2624,
+       -0.1471
+      ],
+      "orange_juice_1": [
+       0.016,
+       -0.2635
+      ],
+      "milk_1": [
+       0.0501,
+       -0.1103
+      ],
+      "butter_1": [
+       0.0547,
+       0.041
+      ],
+      "basket_1": [
+       -0.0092,
+       0.2591
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.877,
+     "carried": 0.962,
+     "d_bind": 0.376,
+     "d_min": 0.046,
+     "d_final": 0.486,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 42,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0782,
+       -0.1297
+      ],
+      "cream_cheese_1": [
+       0.1204,
+       -0.1841
+      ],
+      "tomato_sauce_1": [
+       -0.1104,
+       0.0648
+      ],
+      "ketchup_1": [
+       -0.2626,
+       -0.1503
+      ],
+      "orange_juice_1": [
+       0.0165,
+       -0.2624
+      ],
+      "milk_1": [
+       0.05,
+       -0.0869
+      ],
+      "butter_1": [
+       0.0257,
+       0.0708
+      ],
+      "basket_1": [
+       0.0014,
+       0.2666
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.789,
+     "carried": 1.06,
+     "d_bind": 0.363,
+     "d_min": 0.077,
+     "d_final": 0.558,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 52,
+     "steps": 131,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1106,
+       -0.1246
+      ],
+      "cream_cheese_1": [
+       0.1197,
+       -0.2249
+      ],
+      "tomato_sauce_1": [
+       -0.0989,
+       0.069
+      ],
+      "ketchup_1": [
+       -0.2702,
+       -0.1626
+      ],
+      "orange_juice_1": [
+       0.0196,
+       -0.2424
+      ],
+      "milk_1": [
+       0.0733,
+       -0.1179
+      ],
+      "butter_1": [
+       0.0426,
+       0.0541
+      ],
+      "basket_1": [
+       -0.0077,
+       0.2629
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 45,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1212,
+       -0.1416
+      ],
+      "cream_cheese_1": [
+       0.0982,
+       -0.1801
+      ],
+      "tomato_sauce_1": [
+       -0.1136,
+       0.0333
+      ],
+      "ketchup_1": [
+       -0.2628,
+       -0.1565
+      ],
+      "orange_juice_1": [
+       -0.0041,
+       -0.2465
+      ],
+      "milk_1": [
+       0.0447,
+       -0.1066
+      ],
+      "butter_1": [
+       0.0429,
+       0.058
+      ],
+      "basket_1": [
+       -0.0019,
+       0.2511
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.715,
+     "carried": 1.007,
+     "d_bind": 0.36,
+     "d_min": 0.103,
+     "d_final": 0.456,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 43,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1134,
+       -0.1744
+      ],
+      "cream_cheese_1": [
+       0.1184,
+       -0.191
+      ],
+      "tomato_sauce_1": [
+       -0.0967,
+       0.0404
+      ],
+      "ketchup_1": [
+       -0.2257,
+       -0.1537
+      ],
+      "orange_juice_1": [
+       -0.0065,
+       -0.262
+      ],
+      "milk_1": [
+       0.0383,
+       -0.0786
+      ],
+      "butter_1": [
+       0.0703,
+       0.0439
+      ],
+      "basket_1": [
+       0.0067,
+       0.2526
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.904,
+     "carried": 0.957,
+     "d_bind": 0.367,
+     "d_min": 0.035,
+     "d_final": 0.478,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "bound": "milk_1",
+     "bound_step": 46,
+     "steps": 146,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0801,
+       -0.127
+      ],
+      "cream_cheese_1": [
+       0.0948,
+       -0.1858
+      ],
+      "tomato_sauce_1": [
+       -0.0872,
+       0.043
+      ],
+      "ketchup_1": [
+       -0.2514,
+       -0.1709
+      ],
+      "orange_juice_1": [
+       0.011,
+       -0.2414
+      ],
+      "milk_1": [
+       0.0497,
+       -0.1245
+      ],
+      "butter_1": [
+       0.0334,
+       0.0338
+      ],
+      "basket_1": [
+       -0.004,
+       0.2532
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": true,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 45,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.1128,
+       -0.1512
+      ],
+      "cream_cheese_1": [
+       0.0956,
+       -0.1972
+      ],
+      "tomato_sauce_1": [
+       -0.1169,
+       0.0354
+      ],
+      "ketchup_1": [
+       -0.2718,
+       -0.1317
+      ],
+      "orange_juice_1": [
+       0.0056,
+       -0.231
+      ],
+      "milk_1": [
+       0.075,
+       -0.0778
+      ],
+      "butter_1": [
+       0.0477,
+       0.0605
+      ],
+      "basket_1": [
+       0.0074,
+       0.2671
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.811,
+     "carried": 0.533,
+     "d_bind": 0.355,
+     "d_min": 0.067,
+     "d_final": 0.212,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "bound": "milk_1",
+     "bound_step": 47,
+     "steps": 400,
+     "start_xy": {
+      "alphabet_soup_1": [
+       -0.0806,
+       -0.1576
+      ],
+      "cream_cheese_1": [
+       0.0773,
+       -0.1987
+      ],
+      "tomato_sauce_1": [
+       -0.107,
+       0.0257
+      ],
+      "ketchup_1": [
+       -0.2475,
+       -0.1574
+      ],
+      "orange_juice_1": [
+       0.0178,
+       -0.2567
+      ],
+      "milk_1": [
+       0.0387,
+       -0.1198
+      ],
+      "butter_1": [
+       0.0535,
+       0.0443
+      ],
+      "basket_1": [
+       -0.0001,
+       0.2586
+      ]
+     },
+     "own_atoms_final": {
+      "milk_1>basket_1_contain_region": false
+     },
+     "success_settled": false,
+     "progress": 0.756,
+     "carried": 1.027,
+     "d_bind": 0.354,
+     "d_min": 0.086,
+     "d_final": 0.398,
+     "alt": [],
+     "target": "basket_1_contain_region",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "start": {
+      "libero_10:1": false,
+      "libero_90:52": false,
+      "libero_90:53": false,
+      "libero_90:54": false
+     },
+     "instead": []
+    }
+   ]
+  }
+ }
+}

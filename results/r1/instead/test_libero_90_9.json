@@ -1,0 +1,3748 @@
+{
+ "set": "test",
+ "task": "libero_90:9",
+ "arms": {
+  "zs": {
+   "roll": "results/m1/roll/m1_main_libero_90_9_48537f613a.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 66,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.005,
+       0.014
+      ],
+      "plate_1": [
+       -0.0171,
+       0.234
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.86,
+     "carried": 0.19,
+     "d_bind": 0.218,
+     "d_min": 0.031,
+     "d_final": 0.031,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 69,
+     "steps": 112,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0145,
+       0.0119
+      ],
+      "plate_1": [
+       -0.0033,
+       0.253
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 67,
+     "steps": 108,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0088,
+       0.0224
+      ],
+      "plate_1": [
+       -0.0215,
+       0.2353
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 74,
+     "steps": 118,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0202,
+       0.0217
+      ],
+      "plate_1": [
+       0.0156,
+       0.2423
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 80,
+     "steps": 137,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0204,
+       0.0157
+      ],
+      "plate_1": [
+       -0.0187,
+       0.2283
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 69,
+     "steps": 111,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0118,
+       -0.0179
+      ],
+      "plate_1": [
+       -0.005,
+       0.2294
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 68,
+     "steps": 121,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0052,
+       -0.0166
+      ],
+      "plate_1": [
+       -0.003,
+       0.2734
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 79,
+     "steps": 137,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0194,
+       -0.0225
+      ],
+      "plate_1": [
+       0.0214,
+       0.2619
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 61,
+     "steps": 100,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0214,
+       0.0247
+      ],
+      "plate_1": [
+       -0.0039,
+       0.2381
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 68,
+     "steps": 111,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0229,
+       -0.0042
+      ],
+      "plate_1": [
+       0.0131,
+       0.2451
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 70,
+     "steps": 124,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0102,
+       0.0244
+      ],
+      "plate_1": [
+       -0.007,
+       0.2616
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 66,
+     "steps": 112,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0113,
+       0.0194
+      ],
+      "plate_1": [
+       -0.0032,
+       0.2454
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 76,
+     "steps": 115,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0079,
+       0.0217
+      ],
+      "plate_1": [
+       0.0034,
+       0.2408
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 64,
+     "steps": 111,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0211,
+       -0.0245
+      ],
+      "plate_1": [
+       -0.0038,
+       0.2547
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 68,
+     "steps": 110,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0068,
+       -0.0224
+      ],
+      "plate_1": [
+       0.0093,
+       0.2336
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 69,
+     "steps": 113,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0208,
+       -0.0103
+      ],
+      "plate_1": [
+       0.0031,
+       0.2735
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 83,
+     "steps": 124,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0138,
+       0.0132
+      ],
+      "plate_1": [
+       -0.0141,
+       0.2431
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 72,
+     "steps": 115,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0088,
+       0.0141
+      ],
+      "plate_1": [
+       -0.0188,
+       0.2582
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 84,
+     "steps": 134,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0139,
+       -0.0053
+      ],
+      "plate_1": [
+       0.0089,
+       0.2661
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 70,
+     "steps": 115,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0108,
+       0.0197
+      ],
+      "plate_1": [
+       0.0052,
+       0.2303
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "empty": {
+   "roll": "results/r1/roll/r1cag_test_libero_90_9_84bf337718.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 62,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.005,
+       0.014
+      ],
+      "plate_1": [
+       -0.0171,
+       0.234
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.854,
+     "carried": 0.193,
+     "d_bind": 0.226,
+     "d_min": 0.033,
+     "d_final": 0.039,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 68,
+     "steps": 116,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0145,
+       0.0119
+      ],
+      "plate_1": [
+       -0.0033,
+       0.253
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 74,
+     "steps": 117,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0088,
+       0.0224
+      ],
+      "plate_1": [
+       -0.0215,
+       0.2353
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 124,
+     "steps": 177,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0202,
+       0.0217
+      ],
+      "plate_1": [
+       0.0156,
+       0.2423
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 57,
+     "steps": 98,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0204,
+       0.0157
+      ],
+      "plate_1": [
+       -0.0187,
+       0.2283
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 60,
+     "steps": 108,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0118,
+       -0.0179
+      ],
+      "plate_1": [
+       -0.005,
+       0.2294
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 70,
+     "steps": 122,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0052,
+       -0.0166
+      ],
+      "plate_1": [
+       -0.003,
+       0.2734
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 69,
+     "steps": 121,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0194,
+       -0.0225
+      ],
+      "plate_1": [
+       0.0214,
+       0.2619
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 70,
+     "steps": 118,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0214,
+       0.0247
+      ],
+      "plate_1": [
+       -0.0039,
+       0.2381
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 60,
+     "steps": 103,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0229,
+       -0.0042
+      ],
+      "plate_1": [
+       0.0131,
+       0.2451
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 59,
+     "steps": 103,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0102,
+       0.0244
+      ],
+      "plate_1": [
+       -0.007,
+       0.2616
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 61,
+     "steps": 113,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0113,
+       0.0194
+      ],
+      "plate_1": [
+       -0.0032,
+       0.2454
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 66,
+     "steps": 106,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0079,
+       0.0217
+      ],
+      "plate_1": [
+       0.0034,
+       0.2408
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 57,
+     "steps": 113,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0211,
+       -0.0245
+      ],
+      "plate_1": [
+       -0.0038,
+       0.2547
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 66,
+     "steps": 118,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0068,
+       -0.0224
+      ],
+      "plate_1": [
+       0.0093,
+       0.2336
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 68,
+     "steps": 163,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0208,
+       -0.0103
+      ],
+      "plate_1": [
+       0.0031,
+       0.2735
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 68,
+     "steps": 394,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0138,
+       0.0132
+      ],
+      "plate_1": [
+       -0.0141,
+       0.2431
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 68,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0088,
+       0.0141
+      ],
+      "plate_1": [
+       -0.0188,
+       0.2582
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.843,
+     "carried": 0.226,
+     "d_bind": 0.252,
+     "d_min": 0.039,
+     "d_final": 0.041,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 76,
+     "steps": 121,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0139,
+       -0.0053
+      ],
+      "plate_1": [
+       0.0089,
+       0.2661
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 68,
+     "steps": 110,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0108,
+       0.0197
+      ],
+      "plate_1": [
+       0.0052,
+       0.2303
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag1.5": {
+   "roll": "results/r1/roll/r1cag_test_libero_90_9_af979411fa.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 67,
+     "steps": 103,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.005,
+       0.014
+      ],
+      "plate_1": [
+       -0.0171,
+       0.234
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 75,
+     "steps": 122,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0145,
+       0.0119
+      ],
+      "plate_1": [
+       -0.0033,
+       0.253
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 71,
+     "steps": 105,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0088,
+       0.0224
+      ],
+      "plate_1": [
+       -0.0215,
+       0.2353
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 82,
+     "steps": 118,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0202,
+       0.0217
+      ],
+      "plate_1": [
+       0.0156,
+       0.2423
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 87,
+     "steps": 132,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0204,
+       0.0157
+      ],
+      "plate_1": [
+       -0.0187,
+       0.2283
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 67,
+     "steps": 116,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0118,
+       -0.0179
+      ],
+      "plate_1": [
+       -0.005,
+       0.2294
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 72,
+     "steps": 127,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0052,
+       -0.0166
+      ],
+      "plate_1": [
+       -0.003,
+       0.2734
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 79,
+     "steps": 126,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0194,
+       -0.0225
+      ],
+      "plate_1": [
+       0.0214,
+       0.2619
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 66,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0214,
+       0.0247
+      ],
+      "plate_1": [
+       -0.0039,
+       0.2381
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.859,
+     "carried": 0.197,
+     "d_bind": 0.227,
+     "d_min": 0.032,
+     "d_final": 0.036,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 71,
+     "steps": 117,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0229,
+       -0.0042
+      ],
+      "plate_1": [
+       0.0131,
+       0.2451
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 70,
+     "steps": 115,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0102,
+       0.0244
+      ],
+      "plate_1": [
+       -0.007,
+       0.2616
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 72,
+     "steps": 118,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0113,
+       0.0194
+      ],
+      "plate_1": [
+       -0.0032,
+       0.2454
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 82,
+     "steps": 116,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0079,
+       0.0217
+      ],
+      "plate_1": [
+       0.0034,
+       0.2408
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 73,
+     "steps": 119,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0211,
+       -0.0245
+      ],
+      "plate_1": [
+       -0.0038,
+       0.2547
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 71,
+     "steps": 112,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0068,
+       -0.0224
+      ],
+      "plate_1": [
+       0.0093,
+       0.2336
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 77,
+     "steps": 122,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0208,
+       -0.0103
+      ],
+      "plate_1": [
+       0.0031,
+       0.2735
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 68,
+     "steps": 108,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0138,
+       0.0132
+      ],
+      "plate_1": [
+       -0.0141,
+       0.2431
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 81,
+     "steps": 142,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0088,
+       0.0141
+      ],
+      "plate_1": [
+       -0.0188,
+       0.2582
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 86,
+     "steps": 148,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0139,
+       -0.0053
+      ],
+      "plate_1": [
+       0.0089,
+       0.2661
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 70,
+     "steps": 109,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0108,
+       0.0197
+      ],
+      "plate_1": [
+       0.0052,
+       0.2303
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag2": {
+   "roll": "results/r1/roll/r1cag_test_libero_90_9_aded390d46.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 70,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.005,
+       0.014
+      ],
+      "plate_1": [
+       -0.0171,
+       0.234
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.855,
+     "carried": 0.195,
+     "d_bind": 0.224,
+     "d_min": 0.032,
+     "d_final": 0.033,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 78,
+     "steps": 120,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0145,
+       0.0119
+      ],
+      "plate_1": [
+       -0.0033,
+       0.253
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 72,
+     "steps": 106,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0088,
+       0.0224
+      ],
+      "plate_1": [
+       -0.0215,
+       0.2353
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 147,
+     "steps": 225,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0202,
+       0.0217
+      ],
+      "plate_1": [
+       0.0156,
+       0.2423
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 78,
+     "steps": 117,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0204,
+       0.0157
+      ],
+      "plate_1": [
+       -0.0187,
+       0.2283
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 69,
+     "steps": 116,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0118,
+       -0.0179
+      ],
+      "plate_1": [
+       -0.005,
+       0.2294
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 85,
+     "steps": 136,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0052,
+       -0.0166
+      ],
+      "plate_1": [
+       -0.003,
+       0.2734
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 69,
+     "steps": 116,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0194,
+       -0.0225
+      ],
+      "plate_1": [
+       0.0214,
+       0.2619
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 73,
+     "steps": 106,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0214,
+       0.0247
+      ],
+      "plate_1": [
+       -0.0039,
+       0.2381
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 80,
+     "steps": 133,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0229,
+       -0.0042
+      ],
+      "plate_1": [
+       0.0131,
+       0.2451
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 70,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0102,
+       0.0244
+      ],
+      "plate_1": [
+       -0.007,
+       0.2616
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.674,
+     "carried": 0.151,
+     "d_bind": 0.223,
+     "d_min": 0.073,
+     "d_final": 0.073,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 82,
+     "steps": 128,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0113,
+       0.0194
+      ],
+      "plate_1": [
+       -0.0032,
+       0.2454
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 74,
+     "steps": 108,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0079,
+       0.0217
+      ],
+      "plate_1": [
+       0.0034,
+       0.2408
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 79,
+     "steps": 134,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0211,
+       -0.0245
+      ],
+      "plate_1": [
+       -0.0038,
+       0.2547
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 66,
+     "steps": 336,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0068,
+       -0.0224
+      ],
+      "plate_1": [
+       0.0093,
+       0.2336
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 77,
+     "steps": 125,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0208,
+       -0.0103
+      ],
+      "plate_1": [
+       0.0031,
+       0.2735
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 110,
+     "steps": 146,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0138,
+       0.0132
+      ],
+      "plate_1": [
+       -0.0141,
+       0.2431
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 110,
+     "steps": 155,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0088,
+       0.0141
+      ],
+      "plate_1": [
+       -0.0188,
+       0.2582
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 82,
+     "steps": 179,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0139,
+       -0.0053
+      ],
+      "plate_1": [
+       0.0089,
+       0.2661
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 75,
+     "steps": 117,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0108,
+       0.0197
+      ],
+      "plate_1": [
+       0.0052,
+       0.2303
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag3": {
+   "roll": "results/r1/roll/r1cag_test_libero_90_9_d8ec8b57d4.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 80,
+     "steps": 127,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.005,
+       0.014
+      ],
+      "plate_1": [
+       -0.0171,
+       0.234
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 117,
+     "steps": 162,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0145,
+       0.0119
+      ],
+      "plate_1": [
+       -0.0033,
+       0.253
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 77,
+     "steps": 112,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0088,
+       0.0224
+      ],
+      "plate_1": [
+       -0.0215,
+       0.2353
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 77,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0202,
+       0.0217
+      ],
+      "plate_1": [
+       0.0156,
+       0.2423
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.912,
+     "carried": 0.192,
+     "d_bind": 0.203,
+     "d_min": 0.018,
+     "d_final": 0.031,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 208,
+     "steps": 255,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0204,
+       0.0157
+      ],
+      "plate_1": [
+       -0.0187,
+       0.2283
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 130,
+     "steps": 184,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0118,
+       -0.0179
+      ],
+      "plate_1": [
+       -0.005,
+       0.2294
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 78,
+     "steps": 299,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0052,
+       -0.0166
+      ],
+      "plate_1": [
+       -0.003,
+       0.2734
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 84,
+     "steps": 137,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0194,
+       -0.0225
+      ],
+      "plate_1": [
+       0.0214,
+       0.2619
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 120,
+     "steps": 151,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0214,
+       0.0247
+      ],
+      "plate_1": [
+       -0.0039,
+       0.2381
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 113,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0229,
+       -0.0042
+      ],
+      "plate_1": [
+       0.0131,
+       0.2451
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.827,
+     "carried": 0.207,
+     "d_bind": 0.236,
+     "d_min": 0.041,
+     "d_final": 0.041,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 79,
+     "steps": 134,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0102,
+       0.0244
+      ],
+      "plate_1": [
+       -0.007,
+       0.2616
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 110,
+     "steps": 149,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0113,
+       0.0194
+      ],
+      "plate_1": [
+       -0.0032,
+       0.2454
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 116,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0079,
+       0.0217
+      ],
+      "plate_1": [
+       0.0034,
+       0.2408
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.866,
+     "carried": 0.203,
+     "d_bind": 0.201,
+     "d_min": 0.027,
+     "d_final": 0.033,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 112,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0211,
+       -0.0245
+      ],
+      "plate_1": [
+       -0.0038,
+       0.2547
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.904,
+     "carried": 0.279,
+     "d_bind": 0.274,
+     "d_min": 0.026,
+     "d_final": 0.032,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 88,
+     "steps": 137,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0068,
+       -0.0224
+      ],
+      "plate_1": [
+       0.0093,
+       0.2336
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 125,
+     "steps": 181,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0208,
+       -0.0103
+      ],
+      "plate_1": [
+       0.0031,
+       0.2735
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 132,
+     "steps": 172,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0138,
+       0.0132
+      ],
+      "plate_1": [
+       -0.0141,
+       0.2431
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 82,
+     "steps": 126,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0088,
+       0.0141
+      ],
+      "plate_1": [
+       -0.0188,
+       0.2582
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 77,
+     "steps": 129,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0139,
+       -0.0053
+      ],
+      "plate_1": [
+       0.0089,
+       0.2661
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 84,
+     "steps": 132,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0108,
+       0.0197
+      ],
+      "plate_1": [
+       0.0052,
+       0.2303
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag5": {
+   "roll": "results/r1/roll/r1cag_test_libero_90_9_a3bf476f52.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 174,
+     "steps": 219,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.005,
+       0.014
+      ],
+      "plate_1": [
+       -0.0171,
+       0.234
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0145,
+       0.0119
+      ],
+      "plate_1": [
+       -0.0033,
+       0.253
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 175,
+     "steps": 214,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0088,
+       0.0224
+      ],
+      "plate_1": [
+       -0.0215,
+       0.2353
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 192,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0202,
+       0.0217
+      ],
+      "plate_1": [
+       0.0156,
+       0.2423
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.114,
+     "carried": 0.027,
+     "d_bind": 0.209,
+     "d_min": 0.185,
+     "d_final": 0.185,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "not_carried",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0204,
+       0.0157
+      ],
+      "plate_1": [
+       -0.0187,
+       0.2283
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 215,
+     "steps": 285,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0118,
+       -0.0179
+      ],
+      "plate_1": [
+       -0.005,
+       0.2294
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 320,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0052,
+       -0.0166
+      ],
+      "plate_1": [
+       -0.003,
+       0.2734
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.898,
+     "carried": 0.247,
+     "d_bind": 0.273,
+     "d_min": 0.028,
+     "d_final": 0.038,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 328,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0194,
+       -0.0225
+      ],
+      "plate_1": [
+       0.0214,
+       0.2619
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.828,
+     "carried": 0.263,
+     "d_bind": 0.267,
+     "d_min": 0.046,
+     "d_final": 0.046,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 221,
+     "steps": 303,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0214,
+       0.0247
+      ],
+      "plate_1": [
+       -0.0039,
+       0.2381
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 150,
+     "steps": 201,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0229,
+       -0.0042
+      ],
+      "plate_1": [
+       0.0131,
+       0.2451
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 236,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0102,
+       0.0244
+      ],
+      "plate_1": [
+       -0.007,
+       0.2616
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.785,
+     "carried": 0.231,
+     "d_bind": 0.216,
+     "d_min": 0.046,
+     "d_final": 0.058,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 157,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0113,
+       0.0194
+      ],
+      "plate_1": [
+       -0.0032,
+       0.2454
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.835,
+     "carried": 0.211,
+     "d_bind": 0.197,
+     "d_min": 0.032,
+     "d_final": 0.038,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 256,
+     "steps": 306,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0079,
+       0.0217
+      ],
+      "plate_1": [
+       0.0034,
+       0.2408
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 137,
+     "steps": 198,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0211,
+       -0.0245
+      ],
+      "plate_1": [
+       -0.0038,
+       0.2547
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0068,
+       -0.0224
+      ],
+      "plate_1": [
+       0.0093,
+       0.2336
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 158,
+     "steps": 219,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0208,
+       -0.0103
+      ],
+      "plate_1": [
+       0.0031,
+       0.2735
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 161,
+     "steps": 211,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0138,
+       0.0132
+      ],
+      "plate_1": [
+       -0.0141,
+       0.2431
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0088,
+       0.0141
+      ],
+      "plate_1": [
+       -0.0188,
+       0.2582
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 189,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0139,
+       -0.0053
+      ],
+      "plate_1": [
+       0.0089,
+       0.2661
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": false
+     },
+     "success_settled": false,
+     "progress": 0.919,
+     "carried": 0.279,
+     "d_bind": 0.262,
+     "d_min": 0.021,
+     "d_final": 0.031,
+     "alt": [],
+     "target": "plate_1",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 94,
+     "steps": 303,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0108,
+       0.0197
+      ],
+      "plate_1": [
+       0.0052,
+       0.2303
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>plate_1": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:10": false
+     },
+     "start": {
+      "libero_90:10": false
+     },
+     "instead": []
+    }
+   ]
+  }
+ }
+}

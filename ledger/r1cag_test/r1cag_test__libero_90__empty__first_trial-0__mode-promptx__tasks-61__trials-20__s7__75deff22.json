@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/r1/roll/r1cag_test_libero_90_61_84bf337718.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=promptx: SUITE=libero_90 TASKS=61 TRIALS=20 (job 4223165)",
+ "config": {
+  "client": {
+   "all_objects": true,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_m1",
+   "host": "127.0.0.1",
+   "light": true,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": true,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/r1/roll/r1cag_test_libero_90_61_84bf337718.json",
+   "port": 9558,
+   "record": true,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "61",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4223165",
+  "mode": "promptx:"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "chappie.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4223165",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r1cag_test",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75deff220f3e614dd3d22da5cad97b66fac15822",
+  "short": "75deff22"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "promptx:",
+  "tasks": "61",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 1025.0932207107544,
+  "success_rate": 0.0,
+  "tasks": {
+   "61": {
+    "errors": 0,
+    "language": "pick up the chocolate pudding and put it in the tray",
+    "mean_steps": 400.0,
+    "n": 20,
+    "success_rate": 0.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r1cag_test__libero_90__empty__first_trial-0__mode-promptx__tasks-61__trials-20__s7__75deff22",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-24T23:44:49+00:00",
+ "stream": null,
+ "tag": "empty"
+}

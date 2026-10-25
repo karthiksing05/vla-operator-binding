@@ -1,0 +1,3072 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/r1_cag.py --read --record",
+ "config": {
+  "cells": {
+   "arms": [
+    "cag1.5",
+    "cag2",
+    "cag3",
+    "cag5",
+    "empty"
+   ],
+   "base": "parity_pi05_l90c_5000",
+   "seed": 0,
+   "states": "stored init states 0-19"
+  },
+  "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "dev": {
+   "arms": [
+    "zs",
+    "cag1.5",
+    "cag2",
+    "cag3",
+    "cag5"
+   ],
+   "base": 6700000,
+   "dir": "fresh_r1",
+   "n": 20,
+   "seed": 13
+  },
+  "omegas": [
+   1.5,
+   2.0,
+   3.0,
+   5.0
+  ],
+  "prereg": "m3_prereg tag pr1_cag",
+  "test": {
+   "arms": [
+    "cag1.5",
+    "cag2",
+    "cag3",
+    "cag5",
+    "empty"
+   ],
+   "base": 5700000,
+   "dir": "fresh_m1",
+   "n": 20,
+   "seed": 13,
+   "zs": "M1 m1_main zs rollouts"
+  }
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4227426",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r1cag_read",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "42822d0872af58163d5e869b509c061f12fa9e62",
+  "short": "42822d08"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": {
+   "arm": "cag1.5",
+   "diff": {
+    "diff": -0.023333333333333334,
+    "hi": 0.03333333333333333,
+    "hi90": 0.02,
+    "lo": -0.07333333333333333,
+    "lo90": -0.06666666666666667,
+    "n_pairs": 300,
+    "n_tasks": 15
+   },
+   "discordant": [
+    14,
+    21
+   ],
+   "p_used": 1.0,
+   "passes": false,
+   "sign_p": 0.31050465907901525,
+   "w": 1.5,
+   "x": 173,
+   "y": 180
+  },
+  "H2": {
+   "hi": 0.6263157894736842,
+   "k": 177,
+   "lo": 0.3131578947368421,
+   "n": 380,
+   "p": 0.0023,
+   "passes": true,
+   "rate": 0.46578947368421053,
+   "tasks": 19,
+   "test": "share of empty-instruction episodes on the dev tasks with >= 1 evaluable same-scene training placement goal that complete a demonstrated task > 0.25 (one-sided two-level cluster bootstrap, B 10000)"
+  },
+  "H3": {
+   "arm": "cag1.5",
+   "mean_change": -0.06,
+   "passes": false
+  },
+  "cells": {
+   "base": {
+    "rate": {
+     "hi": 0.995,
+     "k": 188,
+     "lo": 0.86,
+     "n": 200,
+     "rate": 0.94,
+     "tasks": 10
+    },
+    "successes": 188
+   },
+   "cag1.5": {
+    "discordant": [
+     6,
+     18
+    ],
+    "mean_change": -0.06,
+    "per_cell": {
+     "libero_90:17": -0.04999999999999993,
+     "libero_90:23": -0.29999999999999993,
+     "libero_90:28": 0.0,
+     "libero_90:37": 0.0,
+     "libero_90:4": -0.050000000000000044,
+     "libero_90:41": 0.0,
+     "libero_90:46": 0.0,
+     "libero_90:52": -0.050000000000000044,
+     "libero_90:6": 0.04999999999999993,
+     "libero_90:62": -0.19999999999999996
+    },
+    "rate": {
+     "hi": 0.97,
+     "k": 176,
+     "lo": 0.75,
+     "n": 200,
+     "rate": 0.88,
+     "tasks": 10
+    },
+    "sign_p": 0.022655844688415527,
+    "successes": 176
+   },
+   "cag2": {
+    "discordant": [
+     7,
+     22
+    ],
+    "mean_change": -0.075,
+    "per_cell": {
+     "libero_90:17": 0.050000000000000044,
+     "libero_90:23": -0.35,
+     "libero_90:28": -0.050000000000000044,
+     "libero_90:37": 0.0,
+     "libero_90:4": -0.15000000000000002,
+     "libero_90:41": 0.0,
+     "libero_90:46": 0.0,
+     "libero_90:52": 0.0,
+     "libero_90:6": 0.0,
+     "libero_90:62": -0.25
+    },
+    "rate": {
+     "hi": 0.97,
+     "k": 173,
+     "lo": 0.725,
+     "n": 200,
+     "rate": 0.865,
+     "tasks": 10
+    },
+    "sign_p": 0.008130058646202087,
+    "successes": 173
+   },
+   "cag3": {
+    "discordant": [
+     8,
+     49
+    ],
+    "mean_change": -0.205,
+    "per_cell": {
+     "libero_90:17": -0.25,
+     "libero_90:23": -0.35,
+     "libero_90:28": -0.09999999999999998,
+     "libero_90:37": -0.3999999999999999,
+     "libero_90:4": -0.35,
+     "libero_90:41": -0.19999999999999996,
+     "libero_90:46": 0.0,
+     "libero_90:52": -0.35,
+     "libero_90:6": 0.19999999999999996,
+     "libero_90:62": -0.25
+    },
+    "rate": {
+     "hi": 0.86,
+     "k": 147,
+     "lo": 0.6,
+     "n": 200,
+     "rate": 0.735,
+     "tasks": 10
+    },
+    "sign_p": 2.7168525665310916e-08,
+    "successes": 147
+   },
+   "cag5": {
+    "discordant": [
+     3,
+     113
+    ],
+    "mean_change": -0.55,
+    "per_cell": {
+     "libero_90:17": -0.8999999999999999,
+     "libero_90:23": -0.7,
+     "libero_90:28": -0.30000000000000004,
+     "libero_90:37": -0.6,
+     "libero_90:4": -0.7,
+     "libero_90:41": -0.55,
+     "libero_90:46": -0.09999999999999998,
+     "libero_90:52": -0.8,
+     "libero_90:6": -0.050000000000000044,
+     "libero_90:62": -0.8
+    },
+    "rate": {
+     "hi": 0.585,
+     "k": 78,
+     "lo": 0.21,
+     "n": 200,
+     "rate": 0.39,
+     "tasks": 10
+    },
+    "sign_p": 6.265218627961812e-30,
+    "successes": 78
+   },
+   "empty": {
+    "discordant": [
+     2,
+     91
+    ],
+    "mean_change": -0.445,
+    "per_cell": {
+     "libero_90:17": -0.09999999999999998,
+     "libero_90:23": -0.7,
+     "libero_90:28": -0.19999999999999996,
+     "libero_90:37": -0.3999999999999999,
+     "libero_90:4": -0.44999999999999996,
+     "libero_90:41": -0.55,
+     "libero_90:46": -0.050000000000000044,
+     "libero_90:52": -0.19999999999999996,
+     "libero_90:6": -0.8,
+     "libero_90:62": -1.0
+    },
+    "rate": {
+     "hi": 0.715,
+     "k": 99,
+     "lo": 0.265,
+     "n": 200,
+     "rate": 0.495,
+     "tasks": 10
+    },
+    "sign_p": 8.829183686723235e-25,
+    "successes": 99
+   }
+  },
+  "cells_missing": [],
+  "holm": {
+   "H1": {
+    "p": 1.0,
+    "reject": false,
+    "threshold": 0.05
+   },
+   "H2": {
+    "p": 0.0023,
+    "reject": true,
+    "threshold": 0.025
+   }
+  },
+  "instead": {
+   "cells:cag1.5": {
+    "all_instead": 0,
+    "all_instead_either": 0,
+    "by_task": {
+     "libero_90:17": {
+      "all_instead": 0,
+      "fail": 2,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 18
+     },
+     "libero_90:23": {
+      "all_instead": 0,
+      "fail": 12,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 8
+     },
+     "libero_90:28": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:37": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     },
+     "libero_90:4": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     },
+     "libero_90:41": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:46": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:52": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     },
+     "libero_90:6": {
+      "all_instead": 0,
+      "fail": 3,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 17
+     },
+     "libero_90:62": {
+      "all_instead": 0,
+      "fail": 4,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 16
+     }
+    },
+    "episodes": 200,
+    "evaluable_tasks": 0,
+    "fail_instead": 0,
+    "fail_instead_either": 0,
+    "fail_instead_obj": 0,
+    "fail_instead_tgt": 0,
+    "failures": 24,
+    "fam": {
+     "all_instead": 0,
+     "episodes": 0,
+     "fail_instead": 0,
+     "failures": 0,
+     "tasks": 0
+    },
+    "success": 176,
+    "success_settled_of_success": 109,
+    "types": {
+     "fixture": 15,
+     "motion": 5,
+     "wrong_goal": 4
+    }
+   },
+   "cells:cag2": {
+    "all_instead": 0,
+    "all_instead_either": 0,
+    "by_task": {
+     "libero_90:17": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:23": {
+      "all_instead": 0,
+      "fail": 13,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 7
+     },
+     "libero_90:28": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     },
+     "libero_90:37": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     },
+     "libero_90:4": {
+      "all_instead": 0,
+      "fail": 3,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 17
+     },
+     "libero_90:41": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:46": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:52": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:6": {
+      "all_instead": 0,
+      "fail": 4,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 16
+     },
+     "libero_90:62": {
+      "all_instead": 0,
+      "fail": 5,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 15
+     }
+    },
+    "episodes": 200,
+    "evaluable_tasks": 0,
+    "fail_instead": 0,
+    "fail_instead_either": 0,
+    "fail_instead_obj": 0,
+    "fail_instead_tgt": 0,
+    "failures": 27,
+    "fam": {
+     "all_instead": 0,
+     "episodes": 0,
+     "fail_instead": 0,
+     "failures": 0,
+     "tasks": 0
+    },
+    "success": 173,
+    "success_settled_of_success": 107,
+    "types": {
+     "fixture": 18,
+     "motion": 6,
+     "wrong_goal": 2,
+     "wrong_object": 1
+    }
+   },
+   "cells:cag3": {
+    "all_instead": 0,
+    "all_instead_either": 0,
+    "by_task": {
+     "libero_90:17": {
+      "all_instead": 0,
+      "fail": 6,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 14
+     },
+     "libero_90:23": {
+      "all_instead": 0,
+      "fail": 13,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 7
+     },
+     "libero_90:28": {
+      "all_instead": 0,
+      "fail": 2,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 18
+     },
+     "libero_90:37": {
+      "all_instead": 0,
+      "fail": 9,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 11
+     },
+     "libero_90:4": {
+      "all_instead": 0,
+      "fail": 7,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 13
+     },
+     "libero_90:41": {
+      "all_instead": 0,
+      "fail": 4,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 16
+     },
+     "libero_90:46": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:52": {
+      "all_instead": 0,
+      "fail": 7,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 13
+     },
+     "libero_90:6": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:62": {
+      "all_instead": 0,
+      "fail": 5,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 15
+     }
+    },
+    "episodes": 200,
+    "evaluable_tasks": 0,
+    "fail_instead": 0,
+    "fail_instead_either": 0,
+    "fail_instead_obj": 0,
+    "fail_instead_tgt": 0,
+    "failures": 53,
+    "fam": {
+     "all_instead": 0,
+     "episodes": 0,
+     "fail_instead": 0,
+     "failures": 0,
+     "tasks": 0
+    },
+    "success": 147,
+    "success_settled_of_success": 85,
+    "types": {
+     "fixture": 15,
+     "motion": 18,
+     "no_commit": 12,
+     "wrong_goal": 5,
+     "wrong_object": 3
+    }
+   },
+   "cells:cag5": {
+    "all_instead": 0,
+    "all_instead_either": 0,
+    "by_task": {
+     "libero_90:17": {
+      "all_instead": 0,
+      "fail": 19,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 1
+     },
+     "libero_90:23": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:28": {
+      "all_instead": 0,
+      "fail": 6,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 14
+     },
+     "libero_90:37": {
+      "all_instead": 0,
+      "fail": 13,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 7
+     },
+     "libero_90:4": {
+      "all_instead": 0,
+      "fail": 14,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 6
+     },
+     "libero_90:41": {
+      "all_instead": 0,
+      "fail": 11,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 9
+     },
+     "libero_90:46": {
+      "all_instead": 0,
+      "fail": 2,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 18
+     },
+     "libero_90:52": {
+      "all_instead": 0,
+      "fail": 16,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 4
+     },
+     "libero_90:6": {
+      "all_instead": 0,
+      "fail": 5,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 15
+     },
+     "libero_90:62": {
+      "all_instead": 0,
+      "fail": 16,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 4
+     }
+    },
+    "episodes": 200,
+    "evaluable_tasks": 0,
+    "fail_instead": 0,
+    "fail_instead_either": 0,
+    "fail_instead_obj": 0,
+    "fail_instead_tgt": 0,
+    "failures": 122,
+    "fam": {
+     "all_instead": 0,
+     "episodes": 0,
+     "fail_instead": 0,
+     "failures": 0,
+     "tasks": 0
+    },
+    "success": 78,
+    "success_settled_of_success": 41,
+    "types": {
+     "fixture": 31,
+     "motion": 46,
+     "no_commit": 39,
+     "wrong_goal": 2,
+     "wrong_object": 4
+    }
+   },
+   "cells:empty": {
+    "all_instead": 36,
+    "all_instead_either": 19,
+    "by_task": {
+     "libero_90:17": {
+      "all_instead": 0,
+      "fail": 3,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 17
+     },
+     "libero_90:23": {
+      "all_instead": 16,
+      "fail": 20,
+      "fail_instead": 16,
+      "matched": {
+       "libero_90:25": 2,
+       "libero_90:26": 14
+      },
+      "success": 0
+     },
+     "libero_90:28": {
+      "all_instead": 1,
+      "fail": 4,
+      "fail_instead": 0,
+      "matched": {
+       "libero_90:31": 1
+      },
+      "success": 16
+     },
+     "libero_90:37": {
+      "all_instead": 0,
+      "fail": 9,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 11
+     },
+     "libero_90:4": {
+      "all_instead": 1,
+      "fail": 9,
+      "fail_instead": 1,
+      "matched": {
+       "libero_90:3": 1
+      },
+      "success": 11
+     },
+     "libero_90:41": {
+      "all_instead": 0,
+      "fail": 11,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 9
+     },
+     "libero_90:46": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     },
+     "libero_90:52": {
+      "all_instead": 0,
+      "fail": 4,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 16
+     },
+     "libero_90:6": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:62": {
+      "all_instead": 18,
+      "fail": 20,
+      "fail_instead": 18,
+      "matched": {
+       "libero_90:63": 18
+      },
+      "success": 0
+     }
+    },
+    "episodes": 200,
+    "evaluable_tasks": 0,
+    "fail_instead": 35,
+    "fail_instead_either": 19,
+    "fail_instead_obj": 0,
+    "fail_instead_tgt": 19,
+    "failures": 101,
+    "fam": {
+     "all_instead": 0,
+     "episodes": 0,
+     "fail_instead": 0,
+     "failures": 0,
+     "tasks": 0
+    },
+    "success": 99,
+    "success_settled_of_success": 67,
+    "types": {
+     "fixture": 44,
+     "motion": 9,
+     "no_commit": 3,
+     "wrong_goal": 12,
+     "wrong_object": 33
+    }
+   },
+   "test:cag1.5": {
+    "all_instead": 57,
+    "all_instead_either": 55,
+    "by_task": {
+     "libero_90:0": {
+      "all_instead": 0,
+      "fail": 3,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 17
+     },
+     "libero_90:1": {
+      "all_instead": 0,
+      "fail": 11,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 9
+     },
+     "libero_90:11": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:14": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     },
+     "libero_90:16": {
+      "all_instead": 6,
+      "fail": 20,
+      "fail_instead": 6,
+      "matched": {
+       "libero_90:13": 4,
+       "libero_90:17": 5
+      },
+      "success": 0
+     },
+     "libero_90:22": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     },
+     "libero_90:29": {
+      "all_instead": 18,
+      "fail": 20,
+      "fail_instead": 18,
+      "matched": {
+       "libero_90:31": 18
+      },
+      "success": 0
+     },
+     "libero_90:32": {
+      "all_instead": 0,
+      "fail": 19,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 1
+     },
+     "libero_90:36": {
+      "all_instead": 0,
+      "fail": 6,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 14
+     },
+     "libero_90:38": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:40": {
+      "all_instead": 17,
+      "fail": 20,
+      "fail_instead": 17,
+      "matched": {
+       "libero_90:41": 8,
+       "libero_90:42": 9
+      },
+      "success": 0
+     },
+     "libero_90:44": {
+      "all_instead": 0,
+      "fail": 19,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 1
+     },
+     "libero_90:45": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:50": {
+      "all_instead": 0,
+      "fail": 2,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 18
+     },
+     "libero_90:58": {
+      "all_instead": 1,
+      "fail": 20,
+      "fail_instead": 1,
+      "matched": {
+       "libero_90:55": 1
+      },
+      "success": 0
+     },
+     "libero_90:59": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:60": {
+      "all_instead": 15,
+      "fail": 2,
+      "fail_instead": 0,
+      "matched": {
+       "libero_90:63": 15
+      },
+      "success": 18
+     },
+     "libero_90:61": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:7": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:73": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:75": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:76": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:77": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:78": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:79": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:80": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:82": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:83": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:9": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     }
+    },
+    "episodes": 580,
+    "evaluable_tasks": 19,
+    "fail_instead": 42,
+    "fail_instead_either": 40,
+    "fail_instead_obj": 39,
+    "fail_instead_tgt": 1,
+    "failures": 405,
+    "fam": {
+     "all_instead": 57,
+     "episodes": 380,
+     "fail_instead": 42,
+     "failures": 205,
+     "tasks": 19
+    },
+    "success": 175,
+    "success_settled_of_success": 128,
+    "types": {
+     "fixture": 63,
+     "motion": 125,
+     "no_commit": 13,
+     "wrong_goal": 146,
+     "wrong_object": 58
+    }
+   },
+   "test:cag2": {
+    "all_instead": 48,
+    "all_instead_either": 48,
+    "by_task": {
+     "libero_90:0": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     },
+     "libero_90:1": {
+      "all_instead": 0,
+      "fail": 11,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 9
+     },
+     "libero_90:11": {
+      "all_instead": 0,
+      "fail": 19,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 1
+     },
+     "libero_90:14": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:16": {
+      "all_instead": 8,
+      "fail": 20,
+      "fail_instead": 8,
+      "matched": {
+       "libero_90:13": 8,
+       "libero_90:17": 3
+      },
+      "success": 0
+     },
+     "libero_90:22": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:29": {
+      "all_instead": 8,
+      "fail": 18,
+      "fail_instead": 8,
+      "matched": {
+       "libero_90:31": 8
+      },
+      "success": 2
+     },
+     "libero_90:32": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:36": {
+      "all_instead": 0,
+      "fail": 6,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 14
+     },
+     "libero_90:38": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:40": {
+      "all_instead": 18,
+      "fail": 19,
+      "fail_instead": 18,
+      "matched": {
+       "libero_90:41": 12,
+       "libero_90:42": 6
+      },
+      "success": 1
+     },
+     "libero_90:44": {
+      "all_instead": 0,
+      "fail": 19,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 1
+     },
+     "libero_90:45": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:50": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     },
+     "libero_90:58": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:59": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:60": {
+      "all_instead": 14,
+      "fail": 4,
+      "fail_instead": 0,
+      "matched": {
+       "libero_90:63": 14
+      },
+      "success": 16
+     },
+     "libero_90:61": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:7": {
+      "all_instead": 0,
+      "fail": 17,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 3
+     },
+     "libero_90:73": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:75": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:76": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:77": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:78": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:79": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:80": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:82": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:83": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:9": {
+      "all_instead": 0,
+      "fail": 2,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 18
+     }
+    },
+    "episodes": 580,
+    "evaluable_tasks": 19,
+    "fail_instead": 34,
+    "fail_instead_either": 34,
+    "fail_instead_obj": 34,
+    "fail_instead_tgt": 0,
+    "failures": 397,
+    "fam": {
+     "all_instead": 48,
+     "episodes": 380,
+     "fail_instead": 34,
+     "failures": 197,
+     "tasks": 19
+    },
+    "success": 183,
+    "success_settled_of_success": 125,
+    "types": {
+     "fixture": 56,
+     "motion": 112,
+     "no_commit": 29,
+     "wrong_goal": 147,
+     "wrong_object": 53
+    }
+   },
+   "test:cag3": {
+    "all_instead": 34,
+    "all_instead_either": 34,
+    "by_task": {
+     "libero_90:0": {
+      "all_instead": 0,
+      "fail": 12,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 8
+     },
+     "libero_90:1": {
+      "all_instead": 0,
+      "fail": 16,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 4
+     },
+     "libero_90:11": {
+      "all_instead": 0,
+      "fail": 15,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 5
+     },
+     "libero_90:14": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     },
+     "libero_90:16": {
+      "all_instead": 5,
+      "fail": 17,
+      "fail_instead": 5,
+      "matched": {
+       "libero_90:13": 5
+      },
+      "success": 3
+     },
+     "libero_90:22": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:29": {
+      "all_instead": 1,
+      "fail": 17,
+      "fail_instead": 1,
+      "matched": {
+       "libero_90:31": 1
+      },
+      "success": 3
+     },
+     "libero_90:32": {
+      "all_instead": 0,
+      "fail": 19,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 1
+     },
+     "libero_90:36": {
+      "all_instead": 0,
+      "fail": 7,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 13
+     },
+     "libero_90:38": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:40": {
+      "all_instead": 17,
+      "fail": 20,
+      "fail_instead": 17,
+      "matched": {
+       "libero_90:41": 13,
+       "libero_90:42": 4
+      },
+      "success": 0
+     },
+     "libero_90:44": {
+      "all_instead": 0,
+      "fail": 17,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 3
+     },
+     "libero_90:45": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:50": {
+      "all_instead": 0,
+      "fail": 2,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 18
+     },
+     "libero_90:58": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:59": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:60": {
+      "all_instead": 11,
+      "fail": 3,
+      "fail_instead": 1,
+      "matched": {
+       "libero_90:63": 11
+      },
+      "success": 17
+     },
+     "libero_90:61": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     },
+     "libero_90:7": {
+      "all_instead": 0,
+      "fail": 17,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 3
+     },
+     "libero_90:73": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:75": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:76": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:77": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:78": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:79": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:80": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:82": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:83": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:9": {
+      "all_instead": 0,
+      "fail": 4,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 16
+     }
+    },
+    "episodes": 580,
+    "evaluable_tasks": 19,
+    "fail_instead": 24,
+    "fail_instead_either": 24,
+    "fail_instead_obj": 24,
+    "fail_instead_tgt": 1,
+    "failures": 408,
+    "fam": {
+     "all_instead": 34,
+     "episodes": 380,
+     "fail_instead": 24,
+     "failures": 208,
+     "tasks": 19
+    },
+    "success": 172,
+    "success_settled_of_success": 124,
+    "types": {
+     "fixture": 61,
+     "motion": 128,
+     "no_commit": 62,
+     "wrong_goal": 110,
+     "wrong_object": 47
+    }
+   },
+   "test:cag5": {
+    "all_instead": 10,
+    "all_instead_either": 10,
+    "by_task": {
+     "libero_90:0": {
+      "all_instead": 0,
+      "fail": 15,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 5
+     },
+     "libero_90:1": {
+      "all_instead": 0,
+      "fail": 15,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 5
+     },
+     "libero_90:11": {
+      "all_instead": 0,
+      "fail": 17,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 3
+     },
+     "libero_90:14": {
+      "all_instead": 0,
+      "fail": 15,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 5
+     },
+     "libero_90:16": {
+      "all_instead": 0,
+      "fail": 19,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 1
+     },
+     "libero_90:22": {
+      "all_instead": 0,
+      "fail": 2,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 18
+     },
+     "libero_90:29": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:32": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:36": {
+      "all_instead": 0,
+      "fail": 13,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 7
+     },
+     "libero_90:38": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:40": {
+      "all_instead": 9,
+      "fail": 20,
+      "fail_instead": 9,
+      "matched": {
+       "libero_90:41": 9
+      },
+      "success": 0
+     },
+     "libero_90:44": {
+      "all_instead": 0,
+      "fail": 16,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 4
+     },
+     "libero_90:45": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:50": {
+      "all_instead": 0,
+      "fail": 7,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 13
+     },
+     "libero_90:58": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:59": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     },
+     "libero_90:60": {
+      "all_instead": 1,
+      "fail": 17,
+      "fail_instead": 0,
+      "matched": {
+       "libero_90:63": 1
+      },
+      "success": 3
+     },
+     "libero_90:61": {
+      "all_instead": 0,
+      "fail": 3,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 17
+     },
+     "libero_90:7": {
+      "all_instead": 0,
+      "fail": 16,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 4
+     },
+     "libero_90:73": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:75": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:76": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:77": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:78": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:79": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:80": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:82": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:83": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:9": {
+      "all_instead": 0,
+      "fail": 10,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 10
+     }
+    },
+    "episodes": 580,
+    "evaluable_tasks": 19,
+    "fail_instead": 9,
+    "fail_instead_either": 9,
+    "fail_instead_obj": 9,
+    "fail_instead_tgt": 0,
+    "failures": 466,
+    "fam": {
+     "all_instead": 10,
+     "episodes": 380,
+     "fail_instead": 9,
+     "failures": 266,
+     "tasks": 19
+    },
+    "success": 114,
+    "success_settled_of_success": 73,
+    "types": {
+     "fixture": 66,
+     "motion": 132,
+     "no_commit": 124,
+     "wrong_goal": 85,
+     "wrong_object": 59
+    }
+   },
+   "test:empty": {
+    "all_instead": 177,
+    "all_instead_either": 128,
+    "by_task": {
+     "libero_90:0": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:1": {
+      "all_instead": 1,
+      "fail": 20,
+      "fail_instead": 1,
+      "matched": {
+       "libero_90:3": 1
+      },
+      "success": 0
+     },
+     "libero_90:11": {
+      "all_instead": 15,
+      "fail": 20,
+      "fail_instead": 15,
+      "matched": {
+       "libero_90:13": 6,
+       "libero_90:17": 14
+      },
+      "success": 0
+     },
+     "libero_90:14": {
+      "all_instead": 15,
+      "fail": 20,
+      "fail_instead": 15,
+      "matched": {
+       "libero_90:13": 6,
+       "libero_90:17": 14
+      },
+      "success": 0
+     },
+     "libero_90:16": {
+      "all_instead": 15,
+      "fail": 19,
+      "fail_instead": 15,
+      "matched": {
+       "libero_90:13": 4,
+       "libero_90:17": 15
+      },
+      "success": 1
+     },
+     "libero_90:22": {
+      "all_instead": 12,
+      "fail": 17,
+      "fail_instead": 12,
+      "matched": {
+       "libero_90:26": 11,
+       "libero_90:27": 1
+      },
+      "success": 3
+     },
+     "libero_90:29": {
+      "all_instead": 1,
+      "fail": 20,
+      "fail_instead": 1,
+      "matched": {
+       "libero_90:31": 1
+      },
+      "success": 0
+     },
+     "libero_90:32": {
+      "all_instead": 1,
+      "fail": 20,
+      "fail_instead": 1,
+      "matched": {
+       "libero_90:31": 1
+      },
+      "success": 0
+     },
+     "libero_90:36": {
+      "all_instead": 6,
+      "fail": 16,
+      "fail_instead": 6,
+      "matched": {
+       "libero_90:37": 6
+      },
+      "success": 4
+     },
+     "libero_90:38": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:40": {
+      "all_instead": 9,
+      "fail": 20,
+      "fail_instead": 9,
+      "matched": {
+       "libero_90:41": 9
+      },
+      "success": 0
+     },
+     "libero_90:44": {
+      "all_instead": 9,
+      "fail": 20,
+      "fail_instead": 9,
+      "matched": {
+       "libero_90:41": 9
+      },
+      "success": 0
+     },
+     "libero_90:45": {
+      "all_instead": 9,
+      "fail": 20,
+      "fail_instead": 9,
+      "matched": {
+       "libero_90:41": 9
+      },
+      "success": 0
+     },
+     "libero_90:50": {
+      "all_instead": 14,
+      "fail": 17,
+      "fail_instead": 14,
+      "matched": {
+       "libero_90:52": 13,
+       "libero_90:54": 1
+      },
+      "success": 3
+     },
+     "libero_90:58": {
+      "all_instead": 19,
+      "fail": 20,
+      "fail_instead": 19,
+      "matched": {
+       "libero_90:55": 19
+      },
+      "success": 0
+     },
+     "libero_90:59": {
+      "all_instead": 20,
+      "fail": 19,
+      "fail_instead": 19,
+      "matched": {
+       "libero_90:55": 19,
+       "libero_90:57": 1
+      },
+      "success": 1
+     },
+     "libero_90:60": {
+      "all_instead": 16,
+      "fail": 2,
+      "fail_instead": 0,
+      "matched": {
+       "libero_90:63": 16
+      },
+      "success": 18
+     },
+     "libero_90:61": {
+      "all_instead": 15,
+      "fail": 20,
+      "fail_instead": 15,
+      "matched": {
+       "libero_90:63": 15
+      },
+      "success": 0
+     },
+     "libero_90:7": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:73": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:75": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:76": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:77": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:78": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:79": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:80": {
+      "all_instead": 0,
+      "fail": 19,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 1
+     },
+     "libero_90:82": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:83": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:9": {
+      "all_instead": 0,
+      "fail": 2,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 18
+     }
+    },
+    "episodes": 580,
+    "evaluable_tasks": 19,
+    "fail_instead": 160,
+    "fail_instead_either": 111,
+    "fail_instead_obj": 43,
+    "fail_instead_tgt": 73,
+    "failures": 511,
+    "fam": {
+     "all_instead": 177,
+     "episodes": 380,
+     "fail_instead": 160,
+     "failures": 312,
+     "tasks": 19
+    },
+    "success": 69,
+    "success_settled_of_success": 43,
+    "types": {
+     "fixture": 77,
+     "motion": 77,
+     "no_commit": 27,
+     "wrong_goal": 147,
+     "wrong_object": 183
+    }
+   },
+   "test:zs": {
+    "all_instead": 54,
+    "all_instead_either": 54,
+    "by_task": {
+     "libero_90:0": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     },
+     "libero_90:1": {
+      "all_instead": 0,
+      "fail": 15,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 5
+     },
+     "libero_90:11": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:14": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:16": {
+      "all_instead": 3,
+      "fail": 18,
+      "fail_instead": 3,
+      "matched": {
+       "libero_90:13": 3,
+       "libero_90:17": 1
+      },
+      "success": 2
+     },
+     "libero_90:22": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:29": {
+      "all_instead": 18,
+      "fail": 19,
+      "fail_instead": 18,
+      "matched": {
+       "libero_90:31": 18
+      },
+      "success": 1
+     },
+     "libero_90:32": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:36": {
+      "all_instead": 0,
+      "fail": 3,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 17
+     },
+     "libero_90:38": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:40": {
+      "all_instead": 16,
+      "fail": 20,
+      "fail_instead": 16,
+      "matched": {
+       "libero_90:41": 9,
+       "libero_90:42": 7
+      },
+      "success": 0
+     },
+     "libero_90:44": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:45": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:50": {
+      "all_instead": 0,
+      "fail": 2,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 18
+     },
+     "libero_90:58": {
+      "all_instead": 1,
+      "fail": 20,
+      "fail_instead": 1,
+      "matched": {
+       "libero_90:55": 1
+      },
+      "success": 0
+     },
+     "libero_90:59": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:60": {
+      "all_instead": 16,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {
+       "libero_90:63": 16
+      },
+      "success": 19
+     },
+     "libero_90:61": {
+      "all_instead": 0,
+      "fail": 0,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 20
+     },
+     "libero_90:7": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:73": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:75": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:76": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:77": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:78": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:79": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:80": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:82": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:83": {
+      "all_instead": 0,
+      "fail": 20,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 0
+     },
+     "libero_90:9": {
+      "all_instead": 0,
+      "fail": 1,
+      "fail_instead": 0,
+      "matched": {},
+      "success": 19
+     }
+    },
+    "episodes": 580,
+    "evaluable_tasks": 19,
+    "fail_instead": 38,
+    "fail_instead_either": 38,
+    "fail_instead_obj": 37,
+    "fail_instead_tgt": 1,
+    "failures": 400,
+    "fam": {
+     "all_instead": 54,
+     "episodes": 380,
+     "fail_instead": 38,
+     "failures": 200,
+     "tasks": 19
+    },
+    "success": 180,
+    "success_settled_of_success": 133,
+    "types": {
+     "fixture": 61,
+     "motion": 117,
+     "no_commit": 7,
+     "wrong_goal": 152,
+     "wrong_object": 63
+    }
+   }
+  },
+  "select": {
+   "arm_star": "cag1.5",
+   "per_task": {
+    "libero_90:0": {
+     "cag1.5": 20,
+     "cag2": 19,
+     "cag3": 6,
+     "cag5": 4,
+     "zs": 20
+    },
+    "libero_90:1": {
+     "cag1.5": 9,
+     "cag2": 9,
+     "cag3": 8,
+     "cag5": 5,
+     "zs": 6
+    },
+    "libero_90:11": {
+     "cag1.5": 0,
+     "cag2": 3,
+     "cag3": 6,
+     "cag5": 1,
+     "zs": 0
+    },
+    "libero_90:14": {
+     "cag1.5": 20,
+     "cag2": 19,
+     "cag3": 18,
+     "cag5": 10,
+     "zs": 19
+    },
+    "libero_90:16": {
+     "cag1.5": 2,
+     "cag2": 0,
+     "cag3": 0,
+     "cag5": 2,
+     "zs": 4
+    },
+    "libero_90:22": {
+     "cag1.5": 19,
+     "cag2": 20,
+     "cag3": 20,
+     "cag5": 20,
+     "zs": 20
+    },
+    "libero_90:29": {
+     "cag1.5": 2,
+     "cag2": 1,
+     "cag3": 1,
+     "cag5": 0,
+     "zs": 1
+    },
+    "libero_90:32": {
+     "cag1.5": 0,
+     "cag2": 0,
+     "cag3": 1,
+     "cag5": 0,
+     "zs": 0
+    },
+    "libero_90:36": {
+     "cag1.5": 16,
+     "cag2": 15,
+     "cag3": 7,
+     "cag5": 6,
+     "zs": 14
+    },
+    "libero_90:38": {
+     "cag1.5": 0,
+     "cag2": 0,
+     "cag3": 0,
+     "cag5": 0,
+     "zs": 0
+    },
+    "libero_90:40": {
+     "cag1.5": 2,
+     "cag2": 2,
+     "cag3": 0,
+     "cag5": 0,
+     "zs": 1
+    },
+    "libero_90:44": {
+     "cag1.5": 0,
+     "cag2": 0,
+     "cag3": 2,
+     "cag5": 3,
+     "zs": 0
+    },
+    "libero_90:45": {
+     "cag1.5": 0,
+     "cag2": 0,
+     "cag3": 1,
+     "cag5": 0,
+     "zs": 0
+    },
+    "libero_90:50": {
+     "cag1.5": 19,
+     "cag2": 19,
+     "cag3": 15,
+     "cag5": 13,
+     "zs": 18
+    },
+    "libero_90:58": {
+     "cag1.5": 0,
+     "cag2": 0,
+     "cag3": 0,
+     "cag5": 0,
+     "zs": 0
+    },
+    "libero_90:59": {
+     "cag1.5": 20,
+     "cag2": 20,
+     "cag3": 20,
+     "cag5": 20,
+     "zs": 19
+    },
+    "libero_90:60": {
+     "cag1.5": 18,
+     "cag2": 15,
+     "cag3": 12,
+     "cag5": 3,
+     "zs": 18
+    },
+    "libero_90:61": {
+     "cag1.5": 20,
+     "cag2": 20,
+     "cag3": 20,
+     "cag5": 19,
+     "zs": 20
+    },
+    "libero_90:7": {
+     "cag1.5": 0,
+     "cag2": 0,
+     "cag3": 1,
+     "cag5": 3,
+     "zs": 0
+    },
+    "libero_90:73": {
+     "cag1.5": 0,
+     "cag2": 0,
+     "cag3": 0,
+     "cag5": 0,
+     "zs": 0
+    },
+    "libero_90:75": {
+     "cag1.5": 0,
+     "cag2": 0,
+     "cag3": 0,
+     "cag5": 0,
+     "zs": 0
+    },
+    "libero_90:76": {
+     "cag1.5": 0,
+     "cag2": 0,
+     "cag3": 0,
+     "cag5": 0,
+     "zs": 0
+    },
+    "libero_90:77": {
+     "cag1.5": 0,
+     "cag2": 0,
+     "cag3": 0,
+     "cag5": 0,
+     "zs": 0
+    },
+    "libero_90:78": {
+     "cag1.5": 0,
+     "cag2": 0,
+     "cag3": 0,
+     "cag5": 0,
+     "zs": 0
+    },
+    "libero_90:79": {
+     "cag1.5": 0,
+     "cag2": 0,
+     "cag3": 0,
+     "cag5": 0,
+     "zs": 0
+    },
+    "libero_90:80": {
+     "cag1.5": 0,
+     "cag2": 0,
+     "cag3": 0,
+     "cag5": 0,
+     "zs": 0
+    },
+    "libero_90:82": {
+     "cag1.5": 0,
+     "cag2": 0,
+     "cag3": 0,
+     "cag5": 0,
+     "zs": 0
+    },
+    "libero_90:83": {
+     "cag1.5": 0,
+     "cag2": 0,
+     "cag3": 0,
+     "cag5": 0,
+     "zs": 0
+    },
+    "libero_90:9": {
+     "cag1.5": 20,
+     "cag2": 18,
+     "cag3": 18,
+     "cag5": 9,
+     "zs": 18
+    }
+   },
+   "totals": {
+    "cag1.5": {
+     "all": 187,
+     "part": 0,
+     "recombination": 187
+    },
+    "cag2": {
+     "all": 180,
+     "part": 0,
+     "recombination": 180
+    },
+    "cag3": {
+     "all": 156,
+     "part": 4,
+     "recombination": 152
+    },
+    "cag5": {
+     "all": 118,
+     "part": 3,
+     "recombination": 115
+    },
+    "zs": {
+     "all": 178,
+     "part": 0,
+     "recombination": 178
+    }
+   },
+   "w_star": 1.5
+  },
+  "test_by_bin": {
+   "0.1": {
+    "cag1.5": 73,
+    "cag2": 75,
+    "cag3": 67,
+    "cag5": 32,
+    "empty": 42,
+    "star": 73,
+    "tasks": 5,
+    "zs": 80
+   },
+   "0.3": {
+    "cag1.5": 46,
+    "cag2": 51,
+    "cag3": 44,
+    "cag5": 32,
+    "empty": 21,
+    "star": 46,
+    "tasks": 5,
+    "zs": 43
+   },
+   "0.5": {
+    "cag1.5": 54,
+    "cag2": 56,
+    "cag3": 57,
+    "cag5": 46,
+    "empty": 5,
+    "star": 54,
+    "tasks": 5,
+    "zs": 57
+   },
+   "part": {
+    "cag1.5": 2,
+    "cag2": 1,
+    "cag3": 4,
+    "cag5": 4,
+    "empty": 1,
+    "star": 2,
+    "tasks": 14,
+    "zs": 0
+   }
+  },
+  "test_missing": [],
+  "test_rate": {
+   "all": {
+    "cag1.5": {
+     "hi": 0.46206896551724136,
+     "k": 175,
+     "lo": 0.15,
+     "n": 580,
+     "rate": 0.3017241379310345,
+     "tasks": 29
+    },
+    "cag2": {
+     "hi": 0.47586206896551725,
+     "k": 183,
+     "lo": 0.16547413793103452,
+     "n": 580,
+     "rate": 0.31551724137931036,
+     "tasks": 29
+    },
+    "cag3": {
+     "hi": 0.44655172413793104,
+     "k": 172,
+     "lo": 0.16034482758620688,
+     "n": 580,
+     "rate": 0.296551724137931,
+     "tasks": 29
+    },
+    "cag5": {
+     "hi": 0.3120689655172414,
+     "k": 114,
+     "lo": 0.09482758620689655,
+     "n": 580,
+     "rate": 0.19655172413793104,
+     "tasks": 29
+    },
+    "empty": {
+     "hi": 0.23103448275862068,
+     "k": 69,
+     "lo": 0.02586206896551724,
+     "n": 580,
+     "rate": 0.11896551724137931,
+     "tasks": 29
+    },
+    "star": {
+     "hi": 0.46206896551724136,
+     "k": 175,
+     "lo": 0.15,
+     "n": 580,
+     "rate": 0.3017241379310345,
+     "tasks": 29
+    },
+    "zs": {
+     "hi": 0.47586206896551725,
+     "k": 180,
+     "lo": 0.15172413793103448,
+     "n": 580,
+     "rate": 0.3103448275862069,
+     "tasks": 29
+    }
+   },
+   "part": {
+    "cag1.5": {
+     "hi": 0.025,
+     "k": 2,
+     "lo": 0.0,
+     "n": 280,
+     "rate": 0.007142857142857143,
+     "tasks": 14
+    },
+    "cag2": {
+     "hi": 0.017857142857142856,
+     "k": 1,
+     "lo": 0.0,
+     "n": 280,
+     "rate": 0.0035714285714285713,
+     "tasks": 14
+    },
+    "cag3": {
+     "hi": 0.04285714285714286,
+     "k": 4,
+     "lo": 0.0,
+     "n": 280,
+     "rate": 0.014285714285714285,
+     "tasks": 14
+    },
+    "cag5": {
+     "hi": 0.05,
+     "k": 4,
+     "lo": 0.0,
+     "n": 280,
+     "rate": 0.014285714285714285,
+     "tasks": 14
+    },
+    "empty": {
+     "hi": 0.0143749999999987,
+     "k": 1,
+     "lo": 0.0,
+     "n": 280,
+     "rate": 0.0035714285714285713,
+     "tasks": 14
+    },
+    "star": {
+     "hi": 0.025,
+     "k": 2,
+     "lo": 0.0,
+     "n": 280,
+     "rate": 0.007142857142857143,
+     "tasks": 14
+    },
+    "zs": {
+     "hi": 0.0,
+     "k": 0,
+     "lo": 0.0,
+     "n": 280,
+     "rate": 0.0,
+     "tasks": 14
+    }
+   },
+   "recombination": {
+    "cag1.5": {
+     "hi": 0.79,
+     "k": 173,
+     "lo": 0.35,
+     "n": 300,
+     "rate": 0.5766666666666667,
+     "tasks": 15
+    },
+    "cag2": {
+     "hi": 0.8066666666666666,
+     "k": 182,
+     "lo": 0.39666666666666667,
+     "n": 300,
+     "rate": 0.6066666666666667,
+     "tasks": 15
+    },
+    "cag3": {
+     "hi": 0.7467499999999988,
+     "k": 168,
+     "lo": 0.37333333333333335,
+     "n": 300,
+     "rate": 0.56,
+     "tasks": 15
+    },
+    "cag5": {
+     "hi": 0.5366666666666666,
+     "k": 110,
+     "lo": 0.21,
+     "n": 300,
+     "rate": 0.36666666666666664,
+     "tasks": 15
+    },
+    "empty": {
+     "hi": 0.42,
+     "k": 68,
+     "lo": 0.06,
+     "n": 300,
+     "rate": 0.22666666666666666,
+     "tasks": 15
+    },
+    "star": {
+     "hi": 0.79,
+     "k": 173,
+     "lo": 0.35,
+     "n": 300,
+     "rate": 0.5766666666666667,
+     "tasks": 15
+    },
+    "zs": {
+     "hi": 0.8166666666666667,
+     "k": 180,
+     "lo": 0.36666666666666664,
+     "n": 300,
+     "rate": 0.6,
+     "tasks": 15
+    }
+   }
+  },
+  "vs_zs": {
+   "all": {
+    "cag1.5": {
+     "diff": {
+      "diff": -0.008620689655172414,
+      "hi": 0.022413793103448276,
+      "hi90": 0.015517241379310345,
+      "lo": -0.03620689655172414,
+      "lo90": -0.032758620689655175,
+      "n_pairs": 580,
+      "n_tasks": 29
+     },
+     "discordant": [
+      16,
+      21
+     ],
+     "sign_p": 0.5113757815852296,
+     "x": 175,
+     "y": 180
+    },
+    "cag2": {
+     "diff": {
+      "diff": 0.005172413793103448,
+      "hi": 0.039655172413793106,
+      "hi90": 0.032758620689655175,
+      "lo": -0.027586206896551724,
+      "lo90": -0.022413793103448276,
+      "n_pairs": 580,
+      "n_tasks": 29
+     },
+     "discordant": [
+      23,
+      20
+     ],
+     "sign_p": 0.7607916425613439,
+     "x": 183,
+     "y": 180
+    },
+    "cag3": {
+     "diff": {
+      "diff": -0.013793103448275862,
+      "hi": 0.03620689655172414,
+      "hi90": 0.029310344827586206,
+      "lo": -0.07241379310344828,
+      "lo90": -0.06206896551724138,
+      "n_pairs": 580,
+      "n_tasks": 29
+     },
+     "discordant": [
+      27,
+      35
+     ],
+     "sign_p": 0.3741517124047949,
+     "x": 172,
+     "y": 180
+    },
+    "cag5": {
+     "diff": {
+      "diff": -0.11379310344827587,
+      "hi": -0.020689655172413793,
+      "hi90": -0.034482758620689655,
+      "lo": -0.21724137931034482,
+      "lo90": -0.2,
+      "n_pairs": 580,
+      "n_tasks": 29
+     },
+     "discordant": [
+      21,
+      87
+     ],
+     "sign_p": 9.903173446450252e-11,
+     "x": 114,
+     "y": 180
+    },
+    "empty": {
+     "diff": {
+      "diff": -0.19137931034482758,
+      "hi": -0.06896551724137931,
+      "hi90": -0.08793103448275862,
+      "lo": -0.3275862068965517,
+      "lo90": -0.30517241379310345,
+      "n_pairs": 580,
+      "n_tasks": 29
+     },
+     "discordant": [
+      6,
+      117
+     ],
+     "sign_p": 8.41628443011684e-28,
+     "x": 69,
+     "y": 180
+    },
+    "star": {
+     "diff": {
+      "diff": -0.008620689655172414,
+      "hi": 0.022413793103448276,
+      "hi90": 0.015517241379310345,
+      "lo": -0.03620689655172414,
+      "lo90": -0.032758620689655175,
+      "n_pairs": 580,
+      "n_tasks": 29
+     },
+     "discordant": [
+      16,
+      21
+     ],
+     "sign_p": 0.5113757815852296,
+     "x": 175,
+     "y": 180
+    }
+   },
+   "part": {
+    "cag1.5": {
+     "diff": {
+      "diff": 0.007142857142857143,
+      "hi": 0.025,
+      "hi90": 0.02142857142857143,
+      "lo": 0.0,
+      "lo90": 0.0,
+      "n_pairs": 280,
+      "n_tasks": 14
+     },
+     "discordant": [
+      2,
+      0
+     ],
+     "sign_p": 0.5,
+     "x": 2,
+     "y": 0
+    },
+    "cag2": {
+     "diff": {
+      "diff": 0.0035714285714285713,
+      "hi": 0.017857142857142856,
+      "hi90": 0.014285714285714285,
+      "lo": 0.0,
+      "lo90": 0.0,
+      "n_pairs": 280,
+      "n_tasks": 14
+     },
+     "discordant": [
+      1,
+      0
+     ],
+     "sign_p": 1.0,
+     "x": 1,
+     "y": 0
+    },
+    "cag3": {
+     "diff": {
+      "diff": 0.014285714285714285,
+      "hi": 0.04285714285714286,
+      "hi90": 0.039285714285714285,
+      "lo": 0.0,
+      "lo90": 0.0,
+      "n_pairs": 280,
+      "n_tasks": 14
+     },
+     "discordant": [
+      4,
+      0
+     ],
+     "sign_p": 0.125,
+     "x": 4,
+     "y": 0
+    },
+    "cag5": {
+     "diff": {
+      "diff": 0.014285714285714285,
+      "hi": 0.05,
+      "hi90": 0.04285714285714286,
+      "lo": 0.0,
+      "lo90": 0.0,
+      "n_pairs": 280,
+      "n_tasks": 14
+     },
+     "discordant": [
+      4,
+      0
+     ],
+     "sign_p": 0.125,
+     "x": 4,
+     "y": 0
+    },
+    "empty": {
+     "diff": {
+      "diff": 0.0035714285714285713,
+      "hi": 0.0143749999999987,
+      "hi90": 0.014285714285714285,
+      "lo": 0.0,
+      "lo90": 0.0,
+      "n_pairs": 280,
+      "n_tasks": 14
+     },
+     "discordant": [
+      1,
+      0
+     ],
+     "sign_p": 1.0,
+     "x": 1,
+     "y": 0
+    },
+    "star": {
+     "diff": {
+      "diff": 0.007142857142857143,
+      "hi": 0.025,
+      "hi90": 0.02142857142857143,
+      "lo": 0.0,
+      "lo90": 0.0,
+      "n_pairs": 280,
+      "n_tasks": 14
+     },
+     "discordant": [
+      2,
+      0
+     ],
+     "sign_p": 0.5,
+     "x": 2,
+     "y": 0
+    }
+   },
+   "recombination": {
+    "cag1.5": {
+     "diff": {
+      "diff": -0.023333333333333334,
+      "hi": 0.03333333333333333,
+      "hi90": 0.02,
+      "lo": -0.07333333333333333,
+      "lo90": -0.06666666666666667,
+      "n_pairs": 300,
+      "n_tasks": 15
+     },
+     "discordant": [
+      14,
+      21
+     ],
+     "sign_p": 0.31050465907901525,
+     "x": 173,
+     "y": 180
+    },
+    "cag2": {
+     "diff": {
+      "diff": 0.006666666666666667,
+      "hi": 0.07,
+      "hi90": 0.06,
+      "lo": -0.056666666666666664,
+      "lo90": -0.04666666666666667,
+      "n_pairs": 300,
+      "n_tasks": 15
+     },
+     "discordant": [
+      22,
+      20
+     ],
+     "sign_p": 0.8776143287523155,
+     "x": 182,
+     "y": 180
+    },
+    "cag3": {
+     "diff": {
+      "diff": -0.04,
+      "hi": 0.05333333333333334,
+      "hi90": 0.04,
+      "lo": -0.14333333333333334,
+      "lo90": -0.12666666666666668,
+      "n_pairs": 300,
+      "n_tasks": 15
+     },
+     "discordant": [
+      23,
+      35
+     ],
+     "sign_p": 0.14800580076020597,
+     "x": 168,
+     "y": 180
+    },
+    "cag5": {
+     "diff": {
+      "diff": -0.23333333333333334,
+      "hi": -0.07333333333333333,
+      "hi90": -0.09666666666666666,
+      "lo": -0.4033333333333333,
+      "lo90": -0.37666666666666665,
+      "n_pairs": 300,
+      "n_tasks": 15
+     },
+     "discordant": [
+      17,
+      87
+     ],
+     "sign_p": 1.6725939198413861e-12,
+     "x": 110,
+     "y": 180
+    },
+    "empty": {
+     "diff": {
+      "diff": -0.37333333333333335,
+      "hi": -0.16666666666666666,
+      "hi90": -0.2,
+      "lo": -0.59,
+      "lo90": -0.5566666666666666,
+      "n_pairs": 300,
+      "n_tasks": 15
+     },
+     "discordant": [
+      5,
+      117
+     ],
+     "sign_p": 8.139090460257346e-29,
+     "x": 68,
+     "y": 180
+    },
+    "star": {
+     "diff": {
+      "diff": -0.023333333333333334,
+      "hi": 0.03333333333333333,
+      "hi90": 0.02,
+      "lo": -0.07333333333333333,
+      "lo90": -0.06666666666666667,
+      "n_pairs": 300,
+      "n_tasks": 15
+     },
+     "discordant": [
+      14,
+      21
+     ],
+     "sign_p": 0.31050465907901525,
+     "x": 173,
+     "y": 180
+    }
+   }
+  },
+  "zs_type_agreement": {
+   "agree": 580,
+   "total": 580
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r1cag_read__libero_90_c__read__s13__42822d08",
+ "schema": 1,
+ "script": "experiments/r1_cag.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-25T02:55:07+00:00",
+ "stream": null,
+ "tag": "read"
+}

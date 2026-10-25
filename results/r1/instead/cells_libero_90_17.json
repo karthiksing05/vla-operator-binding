@@ -1,0 +1,4317 @@
+{
+ "set": "cells",
+ "task": "libero_90:17",
+ "arms": {
+  "empty": {
+   "roll": "results/r1/roll/r1cag_cells_libero_90_17_84bf337718.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 107,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1019,
+       0.1448
+      ],
+      "akita_black_bowl_2": [
+       -0.046,
+       0.2215
+      ],
+      "akita_black_bowl_3": [
+       -0.1646,
+       0.0317
+      ],
+      "plate_1": [
+       -0.0046,
+       -0.0012
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "progress": 0.843,
+     "carried": 0.297,
+     "d_bind": 0.223,
+     "d_min": 0.035,
+     "d_final": 0.053,
+     "alt": [],
+     "target": "akita_black_bowl_3",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 57,
+     "steps": 78,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1034,
+       0.1548
+      ],
+      "akita_black_bowl_2": [
+       -0.0641,
+       0.2189
+      ],
+      "akita_black_bowl_3": [
+       -0.1414,
+       0.0555
+      ],
+      "plate_1": [
+       -0.0171,
+       0.02
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 68,
+     "steps": 100,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1,
+       0.1542
+      ],
+      "akita_black_bowl_2": [
+       -0.0544,
+       0.201
+      ],
+      "akita_black_bowl_3": [
+       -0.1651,
+       0.0718
+      ],
+      "plate_1": [
+       0.0032,
+       0.0071
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 61,
+     "steps": 82,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1061,
+       0.1713
+      ],
+      "akita_black_bowl_2": [
+       -0.0577,
+       0.1892
+      ],
+      "akita_black_bowl_3": [
+       -0.1682,
+       0.0684
+      ],
+      "plate_1": [
+       0.0101,
+       0.0183
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 61,
+     "steps": 99,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0915,
+       0.1515
+      ],
+      "akita_black_bowl_2": [
+       -0.0255,
+       0.1869
+      ],
+      "akita_black_bowl_3": [
+       -0.1581,
+       0.0518
+      ],
+      "plate_1": [
+       0.0067,
+       -0.0206
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 116,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0939,
+       0.1678
+      ],
+      "akita_black_bowl_2": [
+       -0.0469,
+       0.2103
+      ],
+      "akita_black_bowl_3": [
+       -0.1713,
+       0.0659
+      ],
+      "plate_1": [
+       0.0029,
+       0.0135
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "progress": 0.336,
+     "carried": 0.225,
+     "d_bind": 0.17,
+     "d_min": 0.113,
+     "d_final": 0.203,
+     "alt": [
+      "plate_1"
+     ],
+     "target": "akita_black_bowl_3",
+     "type": "wrong_goal",
+     "sub": "other_region",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 62,
+     "steps": 101,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0787,
+       0.1649
+      ],
+      "akita_black_bowl_2": [
+       -0.0267,
+       0.1926
+      ],
+      "akita_black_bowl_3": [
+       -0.1472,
+       0.0706
+      ],
+      "plate_1": [
+       -0.0146,
+       0.0077
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 74,
+     "steps": 114,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0796,
+       0.1391
+      ],
+      "akita_black_bowl_2": [
+       -0.0266,
+       0.2002
+      ],
+      "akita_black_bowl_3": [
+       -0.1299,
+       0.0292
+      ],
+      "plate_1": [
+       0.0224,
+       0.0087
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 73,
+     "steps": 164,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0822,
+       0.1251
+      ],
+      "akita_black_bowl_2": [
+       -0.0565,
+       0.2167
+      ],
+      "akita_black_bowl_3": [
+       -0.1653,
+       0.07
+      ],
+      "plate_1": [
+       -0.0136,
+       0.0228
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 63,
+     "steps": 104,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0774,
+       0.1347
+      ],
+      "akita_black_bowl_2": [
+       -0.0698,
+       0.1958
+      ],
+      "akita_black_bowl_3": [
+       -0.1273,
+       0.06
+      ],
+      "plate_1": [
+       0.0197,
+       0.0108
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 107,
+     "steps": 146,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0774,
+       0.1574
+      ],
+      "akita_black_bowl_2": [
+       -0.07,
+       0.2192
+      ],
+      "akita_black_bowl_3": [
+       -0.163,
+       0.047
+      ],
+      "plate_1": [
+       0.0205,
+       0.0175
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 67,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1131,
+       0.1718
+      ],
+      "akita_black_bowl_2": [
+       -0.0602,
+       0.1799
+      ],
+      "akita_black_bowl_3": [
+       -0.1676,
+       0.0443
+      ],
+      "plate_1": [
+       -0.0126,
+       0.0243
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "progress": 0.796,
+     "carried": 0.193,
+     "d_bind": 0.199,
+     "d_min": 0.041,
+     "d_final": 0.042,
+     "alt": [],
+     "target": "akita_black_bowl_3",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 64,
+     "steps": 101,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0979,
+       0.1288
+      ],
+      "akita_black_bowl_2": [
+       -0.049,
+       0.219
+      ],
+      "akita_black_bowl_3": [
+       -0.1251,
+       0.0543
+      ],
+      "plate_1": [
+       -0.0077,
+       -0.0058
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 110,
+     "steps": 149,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1163,
+       0.1581
+      ],
+      "akita_black_bowl_2": [
+       -0.0356,
+       0.1803
+      ],
+      "akita_black_bowl_3": [
+       -0.1491,
+       0.052
+      ],
+      "plate_1": [
+       0.016,
+       -0.0039
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 57,
+     "steps": 89,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1179,
+       0.1636
+      ],
+      "akita_black_bowl_2": [
+       -0.0392,
+       0.2077
+      ],
+      "akita_black_bowl_3": [
+       -0.14,
+       0.0685
+      ],
+      "plate_1": [
+       -0.0228,
+       -0.0173
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 59,
+     "steps": 132,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1238,
+       0.1536
+      ],
+      "akita_black_bowl_2": [
+       -0.047,
+       0.1948
+      ],
+      "akita_black_bowl_3": [
+       -0.1686,
+       0.0582
+      ],
+      "plate_1": [
+       -0.0049,
+       -0.0067
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 66,
+     "steps": 97,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1049,
+       0.1266
+      ],
+      "akita_black_bowl_2": [
+       -0.0688,
+       0.2228
+      ],
+      "akita_black_bowl_3": [
+       -0.1391,
+       0.0474
+      ],
+      "plate_1": [
+       0.0119,
+       -0.0019
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 66,
+     "steps": 102,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1078,
+       0.1332
+      ],
+      "akita_black_bowl_2": [
+       -0.0498,
+       0.2239
+      ],
+      "akita_black_bowl_3": [
+       -0.1256,
+       0.0307
+      ],
+      "plate_1": [
+       -0.0,
+       0.0202
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 62,
+     "steps": 245,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0803,
+       0.1582
+      ],
+      "akita_black_bowl_2": [
+       -0.0633,
+       0.1896
+      ],
+      "akita_black_bowl_3": [
+       -0.156,
+       0.0493
+      ],
+      "plate_1": [
+       -0.0018,
+       0.0177
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 64,
+     "steps": 90,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1063,
+       0.1585
+      ],
+      "akita_black_bowl_2": [
+       -0.047,
+       0.1802
+      ],
+      "akita_black_bowl_3": [
+       -0.1448,
+       0.0736
+      ],
+      "plate_1": [
+       0.0045,
+       0.0142
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag1.5": {
+   "roll": "results/r1/roll/r1cag_cells_libero_90_17_6762bd90da.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 60,
+     "steps": 113,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1019,
+       0.1448
+      ],
+      "akita_black_bowl_2": [
+       -0.046,
+       0.2215
+      ],
+      "akita_black_bowl_3": [
+       -0.1646,
+       0.0317
+      ],
+      "plate_1": [
+       -0.0046,
+       -0.0012
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 60,
+     "steps": 93,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1034,
+       0.1548
+      ],
+      "akita_black_bowl_2": [
+       -0.0641,
+       0.2189
+      ],
+      "akita_black_bowl_3": [
+       -0.1414,
+       0.0555
+      ],
+      "plate_1": [
+       -0.0171,
+       0.02
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 94,
+     "steps": 137,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1,
+       0.1542
+      ],
+      "akita_black_bowl_2": [
+       -0.0544,
+       0.201
+      ],
+      "akita_black_bowl_3": [
+       -0.1651,
+       0.0718
+      ],
+      "plate_1": [
+       0.0032,
+       0.0071
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 55,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1061,
+       0.1713
+      ],
+      "akita_black_bowl_2": [
+       -0.0577,
+       0.1892
+      ],
+      "akita_black_bowl_3": [
+       -0.1682,
+       0.0684
+      ],
+      "plate_1": [
+       0.0101,
+       0.0183
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "progress": 0.977,
+     "carried": 0.205,
+     "d_bind": 0.162,
+     "d_min": 0.004,
+     "d_final": 0.049,
+     "alt": [],
+     "target": "akita_black_bowl_3",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 53,
+     "steps": 89,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0915,
+       0.1515
+      ],
+      "akita_black_bowl_2": [
+       -0.0255,
+       0.1869
+      ],
+      "akita_black_bowl_3": [
+       -0.1581,
+       0.0518
+      ],
+      "plate_1": [
+       0.0067,
+       -0.0206
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 61,
+     "steps": 95,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0939,
+       0.1678
+      ],
+      "akita_black_bowl_2": [
+       -0.0469,
+       0.2103
+      ],
+      "akita_black_bowl_3": [
+       -0.1713,
+       0.0659
+      ],
+      "plate_1": [
+       0.0029,
+       0.0135
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 60,
+     "steps": 97,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0787,
+       0.1649
+      ],
+      "akita_black_bowl_2": [
+       -0.0267,
+       0.1926
+      ],
+      "akita_black_bowl_3": [
+       -0.1472,
+       0.0706
+      ],
+      "plate_1": [
+       -0.0146,
+       0.0077
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 56,
+     "steps": 98,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0796,
+       0.1391
+      ],
+      "akita_black_bowl_2": [
+       -0.0266,
+       0.2002
+      ],
+      "akita_black_bowl_3": [
+       -0.1299,
+       0.0292
+      ],
+      "plate_1": [
+       0.0224,
+       0.0087
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 118,
+     "steps": 151,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0822,
+       0.1251
+      ],
+      "akita_black_bowl_2": [
+       -0.0565,
+       0.2167
+      ],
+      "akita_black_bowl_3": [
+       -0.1653,
+       0.07
+      ],
+      "plate_1": [
+       -0.0136,
+       0.0228
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 63,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0774,
+       0.1347
+      ],
+      "akita_black_bowl_2": [
+       -0.0698,
+       0.1958
+      ],
+      "akita_black_bowl_3": [
+       -0.1273,
+       0.06
+      ],
+      "plate_1": [
+       0.0197,
+       0.0108
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "progress": 0.768,
+     "carried": 0.175,
+     "d_bind": 0.162,
+     "d_min": 0.038,
+     "d_final": 0.053,
+     "alt": [],
+     "target": "akita_black_bowl_3",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 58,
+     "steps": 94,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0774,
+       0.1574
+      ],
+      "akita_black_bowl_2": [
+       -0.07,
+       0.2192
+      ],
+      "akita_black_bowl_3": [
+       -0.163,
+       0.047
+      ],
+      "plate_1": [
+       0.0205,
+       0.0175
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 57,
+     "steps": 90,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1131,
+       0.1718
+      ],
+      "akita_black_bowl_2": [
+       -0.0602,
+       0.1799
+      ],
+      "akita_black_bowl_3": [
+       -0.1676,
+       0.0443
+      ],
+      "plate_1": [
+       -0.0126,
+       0.0243
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 53,
+     "steps": 83,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0979,
+       0.1288
+      ],
+      "akita_black_bowl_2": [
+       -0.049,
+       0.219
+      ],
+      "akita_black_bowl_3": [
+       -0.1251,
+       0.0543
+      ],
+      "plate_1": [
+       -0.0077,
+       -0.0058
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 55,
+     "steps": 86,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1163,
+       0.1581
+      ],
+      "akita_black_bowl_2": [
+       -0.0356,
+       0.1803
+      ],
+      "akita_black_bowl_3": [
+       -0.1491,
+       0.052
+      ],
+      "plate_1": [
+       0.016,
+       -0.0039
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 58,
+     "steps": 96,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1179,
+       0.1636
+      ],
+      "akita_black_bowl_2": [
+       -0.0392,
+       0.2077
+      ],
+      "akita_black_bowl_3": [
+       -0.14,
+       0.0685
+      ],
+      "plate_1": [
+       -0.0228,
+       -0.0173
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 55,
+     "steps": 92,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1238,
+       0.1536
+      ],
+      "akita_black_bowl_2": [
+       -0.047,
+       0.1948
+      ],
+      "akita_black_bowl_3": [
+       -0.1686,
+       0.0582
+      ],
+      "plate_1": [
+       -0.0049,
+       -0.0067
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 64,
+     "steps": 102,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1049,
+       0.1266
+      ],
+      "akita_black_bowl_2": [
+       -0.0688,
+       0.2228
+      ],
+      "akita_black_bowl_3": [
+       -0.1391,
+       0.0474
+      ],
+      "plate_1": [
+       0.0119,
+       -0.0019
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 54,
+     "steps": 102,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1078,
+       0.1332
+      ],
+      "akita_black_bowl_2": [
+       -0.0498,
+       0.2239
+      ],
+      "akita_black_bowl_3": [
+       -0.1256,
+       0.0307
+      ],
+      "plate_1": [
+       -0.0,
+       0.0202
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 49,
+     "steps": 79,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0803,
+       0.1582
+      ],
+      "akita_black_bowl_2": [
+       -0.0633,
+       0.1896
+      ],
+      "akita_black_bowl_3": [
+       -0.156,
+       0.0493
+      ],
+      "plate_1": [
+       -0.0018,
+       0.0177
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 58,
+     "steps": 78,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1063,
+       0.1585
+      ],
+      "akita_black_bowl_2": [
+       -0.047,
+       0.1802
+      ],
+      "akita_black_bowl_3": [
+       -0.1448,
+       0.0736
+      ],
+      "plate_1": [
+       0.0045,
+       0.0142
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag2": {
+   "roll": "results/r1/roll/r1cag_cells_libero_90_17_6c3cad3d2b.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 61,
+     "steps": 112,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1019,
+       0.1448
+      ],
+      "akita_black_bowl_2": [
+       -0.046,
+       0.2215
+      ],
+      "akita_black_bowl_3": [
+       -0.1646,
+       0.0317
+      ],
+      "plate_1": [
+       -0.0046,
+       -0.0012
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 61,
+     "steps": 91,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1034,
+       0.1548
+      ],
+      "akita_black_bowl_2": [
+       -0.0641,
+       0.2189
+      ],
+      "akita_black_bowl_3": [
+       -0.1414,
+       0.0555
+      ],
+      "plate_1": [
+       -0.0171,
+       0.02
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 48,
+     "steps": 79,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1,
+       0.1542
+      ],
+      "akita_black_bowl_2": [
+       -0.0544,
+       0.201
+      ],
+      "akita_black_bowl_3": [
+       -0.1651,
+       0.0718
+      ],
+      "plate_1": [
+       0.0032,
+       0.0071
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 51,
+     "steps": 94,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1061,
+       0.1713
+      ],
+      "akita_black_bowl_2": [
+       -0.0577,
+       0.1892
+      ],
+      "akita_black_bowl_3": [
+       -0.1682,
+       0.0684
+      ],
+      "plate_1": [
+       0.0101,
+       0.0183
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 46,
+     "steps": 75,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0915,
+       0.1515
+      ],
+      "akita_black_bowl_2": [
+       -0.0255,
+       0.1869
+      ],
+      "akita_black_bowl_3": [
+       -0.1581,
+       0.0518
+      ],
+      "plate_1": [
+       0.0067,
+       -0.0206
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 59,
+     "steps": 85,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0939,
+       0.1678
+      ],
+      "akita_black_bowl_2": [
+       -0.0469,
+       0.2103
+      ],
+      "akita_black_bowl_3": [
+       -0.1713,
+       0.0659
+      ],
+      "plate_1": [
+       0.0029,
+       0.0135
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 54,
+     "steps": 84,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0787,
+       0.1649
+      ],
+      "akita_black_bowl_2": [
+       -0.0267,
+       0.1926
+      ],
+      "akita_black_bowl_3": [
+       -0.1472,
+       0.0706
+      ],
+      "plate_1": [
+       -0.0146,
+       0.0077
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 62,
+     "steps": 105,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0796,
+       0.1391
+      ],
+      "akita_black_bowl_2": [
+       -0.0266,
+       0.2002
+      ],
+      "akita_black_bowl_3": [
+       -0.1299,
+       0.0292
+      ],
+      "plate_1": [
+       0.0224,
+       0.0087
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 50,
+     "steps": 92,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0822,
+       0.1251
+      ],
+      "akita_black_bowl_2": [
+       -0.0565,
+       0.2167
+      ],
+      "akita_black_bowl_3": [
+       -0.1653,
+       0.07
+      ],
+      "plate_1": [
+       -0.0136,
+       0.0228
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 50,
+     "steps": 87,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0774,
+       0.1347
+      ],
+      "akita_black_bowl_2": [
+       -0.0698,
+       0.1958
+      ],
+      "akita_black_bowl_3": [
+       -0.1273,
+       0.06
+      ],
+      "plate_1": [
+       0.0197,
+       0.0108
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 63,
+     "steps": 98,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0774,
+       0.1574
+      ],
+      "akita_black_bowl_2": [
+       -0.07,
+       0.2192
+      ],
+      "akita_black_bowl_3": [
+       -0.163,
+       0.047
+      ],
+      "plate_1": [
+       0.0205,
+       0.0175
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 57,
+     "steps": 104,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1131,
+       0.1718
+      ],
+      "akita_black_bowl_2": [
+       -0.0602,
+       0.1799
+      ],
+      "akita_black_bowl_3": [
+       -0.1676,
+       0.0443
+      ],
+      "plate_1": [
+       -0.0126,
+       0.0243
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 68,
+     "steps": 97,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0979,
+       0.1288
+      ],
+      "akita_black_bowl_2": [
+       -0.049,
+       0.219
+      ],
+      "akita_black_bowl_3": [
+       -0.1251,
+       0.0543
+      ],
+      "plate_1": [
+       -0.0077,
+       -0.0058
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 53,
+     "steps": 93,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1163,
+       0.1581
+      ],
+      "akita_black_bowl_2": [
+       -0.0356,
+       0.1803
+      ],
+      "akita_black_bowl_3": [
+       -0.1491,
+       0.052
+      ],
+      "plate_1": [
+       0.016,
+       -0.0039
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 49,
+     "steps": 103,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1179,
+       0.1636
+      ],
+      "akita_black_bowl_2": [
+       -0.0392,
+       0.2077
+      ],
+      "akita_black_bowl_3": [
+       -0.14,
+       0.0685
+      ],
+      "plate_1": [
+       -0.0228,
+       -0.0173
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 59,
+     "steps": 118,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1238,
+       0.1536
+      ],
+      "akita_black_bowl_2": [
+       -0.047,
+       0.1948
+      ],
+      "akita_black_bowl_3": [
+       -0.1686,
+       0.0582
+      ],
+      "plate_1": [
+       -0.0049,
+       -0.0067
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 64,
+     "steps": 114,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1049,
+       0.1266
+      ],
+      "akita_black_bowl_2": [
+       -0.0688,
+       0.2228
+      ],
+      "akita_black_bowl_3": [
+       -0.1391,
+       0.0474
+      ],
+      "plate_1": [
+       0.0119,
+       -0.0019
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 58,
+     "steps": 89,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1078,
+       0.1332
+      ],
+      "akita_black_bowl_2": [
+       -0.0498,
+       0.2239
+      ],
+      "akita_black_bowl_3": [
+       -0.1256,
+       0.0307
+      ],
+      "plate_1": [
+       -0.0,
+       0.0202
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 55,
+     "steps": 95,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0803,
+       0.1582
+      ],
+      "akita_black_bowl_2": [
+       -0.0633,
+       0.1896
+      ],
+      "akita_black_bowl_3": [
+       -0.156,
+       0.0493
+      ],
+      "plate_1": [
+       -0.0018,
+       0.0177
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 55,
+     "steps": 104,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1063,
+       0.1585
+      ],
+      "akita_black_bowl_2": [
+       -0.047,
+       0.1802
+      ],
+      "akita_black_bowl_3": [
+       -0.1448,
+       0.0736
+      ],
+      "plate_1": [
+       0.0045,
+       0.0142
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag3": {
+   "roll": "results/r1/roll/r1cag_cells_libero_90_17_efc98ac992.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 53,
+     "steps": 126,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1019,
+       0.1448
+      ],
+      "akita_black_bowl_2": [
+       -0.046,
+       0.2215
+      ],
+      "akita_black_bowl_3": [
+       -0.1646,
+       0.0317
+      ],
+      "plate_1": [
+       -0.0046,
+       -0.0012
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 109,
+     "steps": 332,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1034,
+       0.1548
+      ],
+      "akita_black_bowl_2": [
+       -0.0641,
+       0.2189
+      ],
+      "akita_black_bowl_3": [
+       -0.1414,
+       0.0555
+      ],
+      "plate_1": [
+       -0.0171,
+       0.02
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 113,
+     "steps": 146,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1,
+       0.1542
+      ],
+      "akita_black_bowl_2": [
+       -0.0544,
+       0.201
+      ],
+      "akita_black_bowl_3": [
+       -0.1651,
+       0.0718
+      ],
+      "plate_1": [
+       0.0032,
+       0.0071
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 223,
+     "steps": 369,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1061,
+       0.1713
+      ],
+      "akita_black_bowl_2": [
+       -0.0577,
+       0.1892
+      ],
+      "akita_black_bowl_3": [
+       -0.1682,
+       0.0684
+      ],
+      "plate_1": [
+       0.0101,
+       0.0183
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 50,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0915,
+       0.1515
+      ],
+      "akita_black_bowl_2": [
+       -0.0255,
+       0.1869
+      ],
+      "akita_black_bowl_3": [
+       -0.1581,
+       0.0518
+      ],
+      "plate_1": [
+       0.0067,
+       -0.0206
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "progress": 0.721,
+     "carried": 0.175,
+     "d_bind": 0.161,
+     "d_min": 0.045,
+     "d_final": 0.045,
+     "alt": [],
+     "target": "akita_black_bowl_3",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 57,
+     "steps": 100,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0939,
+       0.1678
+      ],
+      "akita_black_bowl_2": [
+       -0.0469,
+       0.2103
+      ],
+      "akita_black_bowl_3": [
+       -0.1713,
+       0.0659
+      ],
+      "plate_1": [
+       0.0029,
+       0.0135
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 53,
+     "steps": 84,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0787,
+       0.1649
+      ],
+      "akita_black_bowl_2": [
+       -0.0267,
+       0.1926
+      ],
+      "akita_black_bowl_3": [
+       -0.1472,
+       0.0706
+      ],
+      "plate_1": [
+       -0.0146,
+       0.0077
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "bound": "akita_black_bowl_3",
+     "bound_step": 37,
+     "steps": 230,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0796,
+       0.1391
+      ],
+      "akita_black_bowl_2": [
+       -0.0266,
+       0.2002
+      ],
+      "akita_black_bowl_3": [
+       -0.1299,
+       0.0292
+      ],
+      "plate_1": [
+       0.0224,
+       0.0087
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 142,
+     "steps": 173,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0822,
+       0.1251
+      ],
+      "akita_black_bowl_2": [
+       -0.0565,
+       0.2167
+      ],
+      "akita_black_bowl_3": [
+       -0.1653,
+       0.07
+      ],
+      "plate_1": [
+       -0.0136,
+       0.0228
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "bound": "akita_black_bowl_3",
+     "bound_step": 39,
+     "steps": 103,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0774,
+       0.1347
+      ],
+      "akita_black_bowl_2": [
+       -0.0698,
+       0.1958
+      ],
+      "akita_black_bowl_3": [
+       -0.1273,
+       0.06
+      ],
+      "plate_1": [
+       0.0197,
+       0.0108
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 55,
+     "steps": 100,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0774,
+       0.1574
+      ],
+      "akita_black_bowl_2": [
+       -0.07,
+       0.2192
+      ],
+      "akita_black_bowl_3": [
+       -0.163,
+       0.047
+      ],
+      "plate_1": [
+       0.0205,
+       0.0175
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 379,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1131,
+       0.1718
+      ],
+      "akita_black_bowl_2": [
+       -0.0602,
+       0.1799
+      ],
+      "akita_black_bowl_3": [
+       -0.1676,
+       0.0443
+      ],
+      "plate_1": [
+       -0.0126,
+       0.0243
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "progress": 0.651,
+     "carried": 0.152,
+     "d_bind": 0.182,
+     "d_min": 0.063,
+     "d_final": 0.063,
+     "alt": [],
+     "target": "akita_black_bowl_3",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 55,
+     "steps": 105,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0979,
+       0.1288
+      ],
+      "akita_black_bowl_2": [
+       -0.049,
+       0.219
+      ],
+      "akita_black_bowl_3": [
+       -0.1251,
+       0.0543
+      ],
+      "plate_1": [
+       -0.0077,
+       -0.0058
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 155,
+     "steps": 183,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1163,
+       0.1581
+      ],
+      "akita_black_bowl_2": [
+       -0.0356,
+       0.1803
+      ],
+      "akita_black_bowl_3": [
+       -0.1491,
+       0.052
+      ],
+      "plate_1": [
+       0.016,
+       -0.0039
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 48,
+     "steps": 94,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1179,
+       0.1636
+      ],
+      "akita_black_bowl_2": [
+       -0.0392,
+       0.2077
+      ],
+      "akita_black_bowl_3": [
+       -0.14,
+       0.0685
+      ],
+      "plate_1": [
+       -0.0228,
+       -0.0173
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "bound": "akita_black_bowl_3",
+     "bound_step": 185,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1238,
+       0.1536
+      ],
+      "akita_black_bowl_2": [
+       -0.047,
+       0.1948
+      ],
+      "akita_black_bowl_3": [
+       -0.1686,
+       0.0582
+      ],
+      "plate_1": [
+       -0.0049,
+       -0.0067
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "wrong_instance",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "bound": "akita_black_bowl_3",
+     "bound_step": 185,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1049,
+       0.1266
+      ],
+      "akita_black_bowl_2": [
+       -0.0688,
+       0.2228
+      ],
+      "akita_black_bowl_3": [
+       -0.1391,
+       0.0474
+      ],
+      "plate_1": [
+       0.0119,
+       -0.0019
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "wrong_instance",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "bound": "akita_black_bowl_3",
+     "bound_step": 44,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1078,
+       0.1332
+      ],
+      "akita_black_bowl_2": [
+       -0.0498,
+       0.2239
+      ],
+      "akita_black_bowl_3": [
+       -0.1256,
+       0.0307
+      ],
+      "plate_1": [
+       -0.0,
+       0.0202
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "wrong_instance",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 57,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0803,
+       0.1582
+      ],
+      "akita_black_bowl_2": [
+       -0.0633,
+       0.1896
+      ],
+      "akita_black_bowl_3": [
+       -0.156,
+       0.0493
+      ],
+      "plate_1": [
+       -0.0018,
+       0.0177
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "progress": 0.774,
+     "carried": 0.123,
+     "d_bind": 0.155,
+     "d_min": 0.035,
+     "d_final": 0.058,
+     "alt": [],
+     "target": "akita_black_bowl_3",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 166,
+     "steps": 214,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1063,
+       0.1585
+      ],
+      "akita_black_bowl_2": [
+       -0.047,
+       0.1802
+      ],
+      "akita_black_bowl_3": [
+       -0.1448,
+       0.0736
+      ],
+      "plate_1": [
+       0.0045,
+       0.0142
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag5": {
+   "roll": "results/r1/roll/r1cag_cells_libero_90_17_50c2f4f0a5.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1019,
+       0.1448
+      ],
+      "akita_black_bowl_2": [
+       -0.046,
+       0.2215
+      ],
+      "akita_black_bowl_3": [
+       -0.1646,
+       0.0317
+      ],
+      "plate_1": [
+       -0.0046,
+       -0.0012
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "bound": "akita_black_bowl_3",
+     "bound_step": 240,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1034,
+       0.1548
+      ],
+      "akita_black_bowl_2": [
+       -0.0641,
+       0.2189
+      ],
+      "akita_black_bowl_3": [
+       -0.1414,
+       0.0555
+      ],
+      "plate_1": [
+       -0.0171,
+       0.02
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "wrong_instance",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 188,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1,
+       0.1542
+      ],
+      "akita_black_bowl_2": [
+       -0.0544,
+       0.201
+      ],
+      "akita_black_bowl_3": [
+       -0.1651,
+       0.0718
+      ],
+      "plate_1": [
+       0.0032,
+       0.0071
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "progress": 0.0,
+     "carried": 0.002,
+     "d_bind": 0.175,
+     "d_min": 0.175,
+     "d_final": 0.176,
+     "alt": [],
+     "target": "akita_black_bowl_3",
+     "type": "motion",
+     "sub": "not_carried",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 48,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1061,
+       0.1713
+      ],
+      "akita_black_bowl_2": [
+       -0.0577,
+       0.1892
+      ],
+      "akita_black_bowl_3": [
+       -0.1682,
+       0.0684
+      ],
+      "plate_1": [
+       0.0101,
+       0.0183
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "progress": 0.008,
+     "carried": 0.033,
+     "d_bind": 0.185,
+     "d_min": 0.184,
+     "d_final": 0.186,
+     "alt": [],
+     "target": "akita_black_bowl_3",
+     "type": "motion",
+     "sub": "not_carried",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0915,
+       0.1515
+      ],
+      "akita_black_bowl_2": [
+       -0.0255,
+       0.1869
+      ],
+      "akita_black_bowl_3": [
+       -0.1581,
+       0.0518
+      ],
+      "plate_1": [
+       0.0067,
+       -0.0206
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0939,
+       0.1678
+      ],
+      "akita_black_bowl_2": [
+       -0.0469,
+       0.2103
+      ],
+      "akita_black_bowl_3": [
+       -0.1713,
+       0.0659
+      ],
+      "plate_1": [
+       0.0029,
+       0.0135
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "bound": "akita_black_bowl_3",
+     "bound_step": 176,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0787,
+       0.1649
+      ],
+      "akita_black_bowl_2": [
+       -0.0267,
+       0.1926
+      ],
+      "akita_black_bowl_3": [
+       -0.1472,
+       0.0706
+      ],
+      "plate_1": [
+       -0.0146,
+       0.0077
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "wrong_instance",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0796,
+       0.1391
+      ],
+      "akita_black_bowl_2": [
+       -0.0266,
+       0.2002
+      ],
+      "akita_black_bowl_3": [
+       -0.1299,
+       0.0292
+      ],
+      "plate_1": [
+       0.0224,
+       0.0087
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0822,
+       0.1251
+      ],
+      "akita_black_bowl_2": [
+       -0.0565,
+       0.2167
+      ],
+      "akita_black_bowl_3": [
+       -0.1653,
+       0.07
+      ],
+      "plate_1": [
+       -0.0136,
+       0.0228
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0774,
+       0.1347
+      ],
+      "akita_black_bowl_2": [
+       -0.0698,
+       0.1958
+      ],
+      "akita_black_bowl_3": [
+       -0.1273,
+       0.06
+      ],
+      "plate_1": [
+       0.0197,
+       0.0108
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0774,
+       0.1574
+      ],
+      "akita_black_bowl_2": [
+       -0.07,
+       0.2192
+      ],
+      "akita_black_bowl_3": [
+       -0.163,
+       0.047
+      ],
+      "plate_1": [
+       0.0205,
+       0.0175
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 222,
+     "steps": 253,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1131,
+       0.1718
+      ],
+      "akita_black_bowl_2": [
+       -0.0602,
+       0.1799
+      ],
+      "akita_black_bowl_3": [
+       -0.1676,
+       0.0443
+      ],
+      "plate_1": [
+       -0.0126,
+       0.0243
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": true
+     },
+     "success_settled": true,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": true
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0979,
+       0.1288
+      ],
+      "akita_black_bowl_2": [
+       -0.049,
+       0.219
+      ],
+      "akita_black_bowl_3": [
+       -0.1251,
+       0.0543
+      ],
+      "plate_1": [
+       -0.0077,
+       -0.0058
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 42,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1163,
+       0.1581
+      ],
+      "akita_black_bowl_2": [
+       -0.0356,
+       0.1803
+      ],
+      "akita_black_bowl_3": [
+       -0.1491,
+       0.052
+      ],
+      "plate_1": [
+       0.016,
+       -0.0039
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "progress": 0.249,
+     "carried": 0.049,
+     "d_bind": 0.195,
+     "d_min": 0.146,
+     "d_final": 0.154,
+     "alt": [],
+     "target": "akita_black_bowl_3",
+     "type": "motion",
+     "sub": "not_carried",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1179,
+       0.1636
+      ],
+      "akita_black_bowl_2": [
+       -0.0392,
+       0.2077
+      ],
+      "akita_black_bowl_3": [
+       -0.14,
+       0.0685
+      ],
+      "plate_1": [
+       -0.0228,
+       -0.0173
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1238,
+       0.1536
+      ],
+      "akita_black_bowl_2": [
+       -0.047,
+       0.1948
+      ],
+      "akita_black_bowl_3": [
+       -0.1686,
+       0.0582
+      ],
+      "plate_1": [
+       -0.0049,
+       -0.0067
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1049,
+       0.1266
+      ],
+      "akita_black_bowl_2": [
+       -0.0688,
+       0.2228
+      ],
+      "akita_black_bowl_3": [
+       -0.1391,
+       0.0474
+      ],
+      "plate_1": [
+       0.0119,
+       -0.0019
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1078,
+       0.1332
+      ],
+      "akita_black_bowl_2": [
+       -0.0498,
+       0.2239
+      ],
+      "akita_black_bowl_3": [
+       -0.1256,
+       0.0307
+      ],
+      "plate_1": [
+       -0.0,
+       0.0202
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "bound": "akita_black_bowl_2",
+     "bound_step": 245,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.0803,
+       0.1582
+      ],
+      "akita_black_bowl_2": [
+       -0.0633,
+       0.1896
+      ],
+      "akita_black_bowl_3": [
+       -0.156,
+       0.0493
+      ],
+      "plate_1": [
+       -0.0018,
+       0.0177
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "progress": 0.0,
+     "carried": 0.013,
+     "d_bind": 0.205,
+     "d_min": 0.205,
+     "d_final": 0.215,
+     "alt": [],
+     "target": "akita_black_bowl_3",
+     "type": "motion",
+     "sub": "not_carried",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       0.1063,
+       0.1585
+      ],
+      "akita_black_bowl_2": [
+       -0.047,
+       0.1802
+      ],
+      "akita_black_bowl_3": [
+       -0.1448,
+       0.0736
+      ],
+      "plate_1": [
+       0.0045,
+       0.0142
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_2>akita_black_bowl_3": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "start": {
+      "libero_90:13": false,
+      "libero_90:15": false,
+      "libero_90:17": false
+     },
+     "instead": []
+    }
+   ]
+  }
+ }
+}

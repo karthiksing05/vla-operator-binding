@@ -1,0 +1,5224 @@
+{
+ "set": "test",
+ "task": "libero_90:1",
+ "arms": {
+  "zs": {
+   "roll": "results/m1/roll/m1_main_libero_90_1_48537f613a.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 64,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1211,
+       -0.0171
+      ],
+      "butter_1": [
+       0.0055,
+       0.2125
+      ],
+      "butter_2": [
+       -0.0832,
+       0.1845
+      ],
+      "chocolate_pudding_1": [
+       0.0097,
+       0.0744
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.454,
+     "carried": 0.149,
+     "d_bind": 0.306,
+     "d_min": 0.167,
+     "d_final": 0.223,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "wrong_goal",
+     "sub": "carried_elsewhere",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 66,
+     "steps": 295,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1033,
+       0.003
+      ],
+      "butter_1": [
+       -0.0229,
+       0.1779
+      ],
+      "butter_2": [
+       -0.1171,
+       0.218
+      ],
+      "chocolate_pudding_1": [
+       -0.0058,
+       0.0676
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 52,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1147,
+       -0.0011
+      ],
+      "butter_1": [
+       0.0228,
+       0.2155
+      ],
+      "butter_2": [
+       -0.0961,
+       0.2078
+      ],
+      "chocolate_pudding_1": [
+       -0.0123,
+       0.0568
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.65,
+     "carried": 0.316,
+     "d_bind": 0.344,
+     "d_min": 0.12,
+     "d_final": 0.161,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1205,
+       0.0056
+      ],
+      "butter_1": [
+       -0.0084,
+       0.1964
+      ],
+      "butter_2": [
+       -0.1097,
+       0.2016
+      ],
+      "chocolate_pudding_1": [
+       -0.0011,
+       0.0515
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 57,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.2261,
+       -0.069
+      ],
+      "butter_1": [
+       0.0126,
+       0.2041
+      ],
+      "butter_2": [
+       -0.1011,
+       0.1898
+      ],
+      "chocolate_pudding_1": [
+       -0.0033,
+       0.0716
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0868,
+       0.0128
+      ],
+      "butter_1": [
+       -0.0163,
+       0.1886
+      ],
+      "butter_2": [
+       -0.0979,
+       0.2193
+      ],
+      "chocolate_pudding_1": [
+       0.0006,
+       0.0509
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1024,
+       0.0032
+      ],
+      "butter_1": [
+       0.0062,
+       0.1759
+      ],
+      "butter_2": [
+       -0.1226,
+       0.2022
+      ],
+      "chocolate_pudding_1": [
+       0.0018,
+       0.0271
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 65,
+     "steps": 376,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.093,
+       0.0054
+      ],
+      "butter_1": [
+       0.0237,
+       0.2228
+      ],
+      "butter_2": [
+       -0.1051,
+       0.1815
+      ],
+      "chocolate_pudding_1": [
+       0.0245,
+       0.0497
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 64,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0952,
+       0.0047
+      ],
+      "butter_1": [
+       0.0148,
+       0.2023
+      ],
+      "butter_2": [
+       -0.0872,
+       0.2172
+      ],
+      "chocolate_pudding_1": [
+       0.0038,
+       0.0277
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.535,
+     "carried": 0.191,
+     "d_bind": 0.354,
+     "d_min": 0.165,
+     "d_final": 0.215,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 54,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1124,
+       0.0115
+      ],
+      "butter_1": [
+       -0.0204,
+       0.1879
+      ],
+      "butter_2": [
+       -0.1004,
+       0.2056
+      ],
+      "chocolate_pudding_1": [
+       0.0018,
+       0.0298
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.472,
+     "carried": 0.176,
+     "d_bind": 0.347,
+     "d_min": 0.183,
+     "d_final": 0.226,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "wrong_goal",
+     "sub": "carried_elsewhere",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 296,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1151,
+       -0.0214
+      ],
+      "butter_1": [
+       0.0065,
+       0.2127
+      ],
+      "butter_2": [
+       -0.092,
+       0.2142
+      ],
+      "chocolate_pudding_1": [
+       -0.0114,
+       0.0725
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.0,
+     "carried": 0.034,
+     "d_bind": 0.339,
+     "d_min": 0.339,
+     "d_final": 0.372,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "motion",
+     "sub": "not_carried",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 60,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0819,
+       0.0234
+      ],
+      "butter_1": [
+       0.0098,
+       0.1819
+      ],
+      "butter_2": [
+       -0.0903,
+       0.1999
+      ],
+      "chocolate_pudding_1": [
+       0.0037,
+       0.044
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.864,
+     "carried": 0.338,
+     "d_bind": 0.346,
+     "d_min": 0.047,
+     "d_final": 0.047,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 61,
+     "steps": 169,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1241,
+       0.0217
+      ],
+      "butter_1": [
+       -0.0219,
+       0.221
+      ],
+      "butter_2": [
+       -0.0897,
+       0.1812
+      ],
+      "chocolate_pudding_1": [
+       0.0199,
+       0.0333
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 59,
+     "steps": 271,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.113,
+       0.0183
+      ],
+      "butter_1": [
+       -0.0142,
+       0.1981
+      ],
+      "butter_2": [
+       -0.1034,
+       0.1899
+      ],
+      "chocolate_pudding_1": [
+       0.002,
+       0.0611
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 65,
+     "steps": 241,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.111,
+       0.0081
+      ],
+      "butter_1": [
+       0.0159,
+       0.1984
+      ],
+      "butter_2": [
+       -0.1066,
+       0.1816
+      ],
+      "chocolate_pudding_1": [
+       -0.0062,
+       0.0253
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 67,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1212,
+       0.0012
+      ],
+      "butter_1": [
+       0.0207,
+       0.2202
+      ],
+      "butter_2": [
+       -0.075,
+       0.18
+      ],
+      "chocolate_pudding_1": [
+       -0.0,
+       0.0414
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.527,
+     "carried": 0.185,
+     "d_bind": 0.347,
+     "d_min": 0.164,
+     "d_final": 0.225,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.095,
+       0.0069
+      ],
+      "butter_1": [
+       0.0129,
+       0.2142
+      ],
+      "butter_2": [
+       -0.0907,
+       0.2157
+      ],
+      "chocolate_pudding_1": [
+       0.0118,
+       0.0591
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1078,
+       -0.0059
+      ],
+      "butter_1": [
+       -0.0121,
+       0.185
+      ],
+      "butter_2": [
+       -0.1208,
+       0.2124
+      ],
+      "chocolate_pudding_1": [
+       -0.021,
+       0.0306
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 66,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1195,
+       -0.0232
+      ],
+      "butter_1": [
+       -0.0005,
+       0.1969
+      ],
+      "butter_2": [
+       -0.0873,
+       0.1886
+      ],
+      "chocolate_pudding_1": [
+       -0.007,
+       0.0426
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 65,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0867,
+       0.0001
+      ],
+      "butter_1": [
+       0.0052,
+       0.1901
+      ],
+      "butter_2": [
+       -0.1153,
+       0.2228
+      ],
+      "chocolate_pudding_1": [
+       0.022,
+       0.0736
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.542,
+     "carried": 0.182,
+     "d_bind": 0.333,
+     "d_min": 0.152,
+     "d_final": 0.224,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "empty": {
+   "roll": "results/r1/roll/r1cag_test_libero_90_1_84bf337718.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "bound": "butter_2",
+     "bound_step": 61,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1211,
+       -0.0171
+      ],
+      "butter_1": [
+       0.0055,
+       0.2125
+      ],
+      "butter_2": [
+       -0.0832,
+       0.1845
+      ],
+      "chocolate_pudding_1": [
+       0.0097,
+       0.0744
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "bound": "butter_1",
+     "bound_step": 68,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1033,
+       0.003
+      ],
+      "butter_1": [
+       -0.0229,
+       0.1779
+      ],
+      "butter_2": [
+       -0.1171,
+       0.218
+      ],
+      "chocolate_pudding_1": [
+       -0.0058,
+       0.0676
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "bound": "butter_1",
+     "bound_step": 69,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1147,
+       -0.0011
+      ],
+      "butter_1": [
+       0.0228,
+       0.2155
+      ],
+      "butter_2": [
+       -0.0961,
+       0.2078
+      ],
+      "chocolate_pudding_1": [
+       -0.0123,
+       0.0568
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "bound": "butter_1",
+     "bound_step": 67,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1205,
+       0.0056
+      ],
+      "butter_1": [
+       -0.0084,
+       0.1964
+      ],
+      "butter_2": [
+       -0.1097,
+       0.2016
+      ],
+      "chocolate_pudding_1": [
+       -0.0011,
+       0.0515
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "bound": "butter_1",
+     "bound_step": 64,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.2261,
+       -0.069
+      ],
+      "butter_1": [
+       0.0126,
+       0.2041
+      ],
+      "butter_2": [
+       -0.1011,
+       0.1898
+      ],
+      "chocolate_pudding_1": [
+       -0.0033,
+       0.0716
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "bound": "butter_1",
+     "bound_step": 69,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0868,
+       0.0128
+      ],
+      "butter_1": [
+       -0.0163,
+       0.1886
+      ],
+      "butter_2": [
+       -0.0979,
+       0.2193
+      ],
+      "chocolate_pudding_1": [
+       0.0006,
+       0.0509
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "bound": "butter_1",
+     "bound_step": 63,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1024,
+       0.0032
+      ],
+      "butter_1": [
+       0.0062,
+       0.1759
+      ],
+      "butter_2": [
+       -0.1226,
+       0.2022
+      ],
+      "chocolate_pudding_1": [
+       0.0018,
+       0.0271
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "bound": "butter_2",
+     "bound_step": 60,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.093,
+       0.0054
+      ],
+      "butter_1": [
+       0.0237,
+       0.2228
+      ],
+      "butter_2": [
+       -0.1051,
+       0.1815
+      ],
+      "chocolate_pudding_1": [
+       0.0245,
+       0.0497
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "bound": "butter_1",
+     "bound_step": 70,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0952,
+       0.0047
+      ],
+      "butter_1": [
+       0.0148,
+       0.2023
+      ],
+      "butter_2": [
+       -0.0872,
+       0.2172
+      ],
+      "chocolate_pudding_1": [
+       0.0038,
+       0.0277
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "bound": "butter_1",
+     "bound_step": 72,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1124,
+       0.0115
+      ],
+      "butter_1": [
+       -0.0204,
+       0.1879
+      ],
+      "butter_2": [
+       -0.1004,
+       0.2056
+      ],
+      "chocolate_pudding_1": [
+       0.0018,
+       0.0298
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "bound": "butter_1",
+     "bound_step": 64,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1151,
+       -0.0214
+      ],
+      "butter_1": [
+       0.0065,
+       0.2127
+      ],
+      "butter_2": [
+       -0.092,
+       0.2142
+      ],
+      "chocolate_pudding_1": [
+       -0.0114,
+       0.0725
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "bound": "butter_2",
+     "bound_step": 59,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0819,
+       0.0234
+      ],
+      "butter_1": [
+       0.0098,
+       0.1819
+      ],
+      "butter_2": [
+       -0.0903,
+       0.1999
+      ],
+      "chocolate_pudding_1": [
+       0.0037,
+       0.044
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "bound": "butter_2",
+     "bound_step": 69,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1241,
+       0.0217
+      ],
+      "butter_1": [
+       -0.0219,
+       0.221
+      ],
+      "butter_2": [
+       -0.0897,
+       0.1812
+      ],
+      "chocolate_pudding_1": [
+       0.0199,
+       0.0333
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "bound": "butter_2",
+     "bound_step": 77,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.113,
+       0.0183
+      ],
+      "butter_1": [
+       -0.0142,
+       0.1981
+      ],
+      "butter_2": [
+       -0.1034,
+       0.1899
+      ],
+      "chocolate_pudding_1": [
+       0.002,
+       0.0611
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": true,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": [
+      {
+       "tid": "libero_90:3",
+       "shares_object": false,
+       "shares_target": false
+      }
+     ]
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "bound": "butter_2",
+     "bound_step": 66,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.111,
+       0.0081
+      ],
+      "butter_1": [
+       0.0159,
+       0.1984
+      ],
+      "butter_2": [
+       -0.1066,
+       0.1816
+      ],
+      "chocolate_pudding_1": [
+       -0.0062,
+       0.0253
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "bound": "butter_2",
+     "bound_step": 57,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1212,
+       0.0012
+      ],
+      "butter_1": [
+       0.0207,
+       0.2202
+      ],
+      "butter_2": [
+       -0.075,
+       0.18
+      ],
+      "chocolate_pudding_1": [
+       -0.0,
+       0.0414
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "bound": "butter_1",
+     "bound_step": 78,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.095,
+       0.0069
+      ],
+      "butter_1": [
+       0.0129,
+       0.2142
+      ],
+      "butter_2": [
+       -0.0907,
+       0.2157
+      ],
+      "chocolate_pudding_1": [
+       0.0118,
+       0.0591
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "bound": "butter_1",
+     "bound_step": 68,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1078,
+       -0.0059
+      ],
+      "butter_1": [
+       -0.0121,
+       0.185
+      ],
+      "butter_2": [
+       -0.1208,
+       0.2124
+      ],
+      "chocolate_pudding_1": [
+       -0.021,
+       0.0306
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "bound": "butter_1",
+     "bound_step": 64,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1195,
+       -0.0232
+      ],
+      "butter_1": [
+       -0.0005,
+       0.1969
+      ],
+      "butter_2": [
+       -0.0873,
+       0.1886
+      ],
+      "chocolate_pudding_1": [
+       -0.007,
+       0.0426
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "bound": "butter_1",
+     "bound_step": 64,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0867,
+       0.0001
+      ],
+      "butter_1": [
+       0.0052,
+       0.1901
+      ],
+      "butter_2": [
+       -0.1153,
+       0.2228
+      ],
+      "chocolate_pudding_1": [
+       0.022,
+       0.0736
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag1.5": {
+   "roll": "results/r1/roll/r1cag_test_libero_90_1_1de31de1a5.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 278,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1211,
+       -0.0171
+      ],
+      "butter_1": [
+       0.0055,
+       0.2125
+      ],
+      "butter_2": [
+       -0.0832,
+       0.1845
+      ],
+      "chocolate_pudding_1": [
+       0.0097,
+       0.0744
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.52,
+     "carried": 0.28,
+     "d_bind": 0.328,
+     "d_min": 0.158,
+     "d_final": 0.16,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 393,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1033,
+       0.003
+      ],
+      "butter_1": [
+       -0.0229,
+       0.1779
+      ],
+      "butter_2": [
+       -0.1171,
+       0.218
+      ],
+      "chocolate_pudding_1": [
+       -0.0058,
+       0.0676
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.0,
+     "carried": 0.013,
+     "d_bind": 0.334,
+     "d_min": 0.334,
+     "d_final": 0.346,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "motion",
+     "sub": "not_carried",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 239,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1147,
+       -0.0011
+      ],
+      "butter_1": [
+       0.0228,
+       0.2155
+      ],
+      "butter_2": [
+       -0.0961,
+       0.2078
+      ],
+      "chocolate_pudding_1": [
+       -0.0123,
+       0.0568
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.002,
+     "carried": 0.004,
+     "d_bind": 0.358,
+     "d_min": 0.358,
+     "d_final": 0.358,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "motion",
+     "sub": "not_carried",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 319,
+     "steps": 356,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1205,
+       0.0056
+      ],
+      "butter_1": [
+       -0.0084,
+       0.1964
+      ],
+      "butter_2": [
+       -0.1097,
+       0.2016
+      ],
+      "chocolate_pudding_1": [
+       -0.0011,
+       0.0515
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "bound": "chocolate_pudding_1",
+     "bound_step": 67,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.2261,
+       -0.069
+      ],
+      "butter_1": [
+       0.0126,
+       0.2041
+      ],
+      "butter_2": [
+       -0.1011,
+       0.1898
+      ],
+      "chocolate_pudding_1": [
+       -0.0033,
+       0.0716
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 358,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0868,
+       0.0128
+      ],
+      "butter_1": [
+       -0.0163,
+       0.1886
+      ],
+      "butter_2": [
+       -0.0979,
+       0.2193
+      ],
+      "chocolate_pudding_1": [
+       0.0006,
+       0.0509
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.65,
+     "carried": 0.215,
+     "d_bind": 0.329,
+     "d_min": 0.115,
+     "d_final": 0.115,
+     "alt": [
+      "wooden_cabinet_1_top_region"
+     ],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "wrong_goal",
+     "sub": "other_region",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 119,
+     "steps": 151,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1024,
+       0.0032
+      ],
+      "butter_1": [
+       0.0062,
+       0.1759
+      ],
+      "butter_2": [
+       -0.1226,
+       0.2022
+      ],
+      "chocolate_pudding_1": [
+       0.0018,
+       0.0271
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.093,
+       0.0054
+      ],
+      "butter_1": [
+       0.0237,
+       0.2228
+      ],
+      "butter_2": [
+       -0.1051,
+       0.1815
+      ],
+      "chocolate_pudding_1": [
+       0.0245,
+       0.0497
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 268,
+     "steps": 314,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0952,
+       0.0047
+      ],
+      "butter_1": [
+       0.0148,
+       0.2023
+      ],
+      "butter_2": [
+       -0.0872,
+       0.2172
+      ],
+      "chocolate_pudding_1": [
+       0.0038,
+       0.0277
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1124,
+       0.0115
+      ],
+      "butter_1": [
+       -0.0204,
+       0.1879
+      ],
+      "butter_2": [
+       -0.1004,
+       0.2056
+      ],
+      "chocolate_pudding_1": [
+       0.0018,
+       0.0298
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 193,
+     "steps": 232,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1151,
+       -0.0214
+      ],
+      "butter_1": [
+       0.0065,
+       0.2127
+      ],
+      "butter_2": [
+       -0.092,
+       0.2142
+      ],
+      "chocolate_pudding_1": [
+       -0.0114,
+       0.0725
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 54,
+     "steps": 151,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0819,
+       0.0234
+      ],
+      "butter_1": [
+       0.0098,
+       0.1819
+      ],
+      "butter_2": [
+       -0.0903,
+       0.1999
+      ],
+      "chocolate_pudding_1": [
+       0.0037,
+       0.044
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 239,
+     "steps": 279,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1241,
+       0.0217
+      ],
+      "butter_1": [
+       -0.0219,
+       0.221
+      ],
+      "butter_2": [
+       -0.0897,
+       0.1812
+      ],
+      "chocolate_pudding_1": [
+       0.0199,
+       0.0333
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.113,
+       0.0183
+      ],
+      "butter_1": [
+       -0.0142,
+       0.1981
+      ],
+      "butter_2": [
+       -0.1034,
+       0.1899
+      ],
+      "chocolate_pudding_1": [
+       0.002,
+       0.0611
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 301,
+     "steps": 348,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.111,
+       0.0081
+      ],
+      "butter_1": [
+       0.0159,
+       0.1984
+      ],
+      "butter_2": [
+       -0.1066,
+       0.1816
+      ],
+      "chocolate_pudding_1": [
+       -0.0062,
+       0.0253
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 383,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1212,
+       0.0012
+      ],
+      "butter_1": [
+       0.0207,
+       0.2202
+      ],
+      "butter_2": [
+       -0.075,
+       0.18
+      ],
+      "chocolate_pudding_1": [
+       -0.0,
+       0.0414
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.154,
+     "carried": 0.05,
+     "d_bind": 0.325,
+     "d_min": 0.274,
+     "d_final": 0.274,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "motion",
+     "sub": "not_carried",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 272,
+     "steps": 318,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.095,
+       0.0069
+      ],
+      "butter_1": [
+       0.0129,
+       0.2142
+      ],
+      "butter_2": [
+       -0.0907,
+       0.2157
+      ],
+      "chocolate_pudding_1": [
+       0.0118,
+       0.0591
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1078,
+       -0.0059
+      ],
+      "butter_1": [
+       -0.0121,
+       0.185
+      ],
+      "butter_2": [
+       -0.1208,
+       0.2124
+      ],
+      "chocolate_pudding_1": [
+       -0.021,
+       0.0306
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 248,
+     "steps": 280,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1195,
+       -0.0232
+      ],
+      "butter_1": [
+       -0.0005,
+       0.1969
+      ],
+      "butter_2": [
+       -0.0873,
+       0.1886
+      ],
+      "chocolate_pudding_1": [
+       -0.007,
+       0.0426
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 253,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0867,
+       0.0001
+      ],
+      "butter_1": [
+       0.0052,
+       0.1901
+      ],
+      "butter_2": [
+       -0.1153,
+       0.2228
+      ],
+      "chocolate_pudding_1": [
+       0.022,
+       0.0736
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.562,
+     "carried": 0.261,
+     "d_bind": 0.316,
+     "d_min": 0.138,
+     "d_final": 0.155,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag2": {
+   "roll": "results/r1/roll/r1cag_test_libero_90_1_2b10a6f772.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 314,
+     "steps": 387,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1211,
+       -0.0171
+      ],
+      "butter_1": [
+       0.0055,
+       0.2125
+      ],
+      "butter_2": [
+       -0.0832,
+       0.1845
+      ],
+      "chocolate_pudding_1": [
+       0.0097,
+       0.0744
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1033,
+       0.003
+      ],
+      "butter_1": [
+       -0.0229,
+       0.1779
+      ],
+      "butter_2": [
+       -0.1171,
+       0.218
+      ],
+      "chocolate_pudding_1": [
+       -0.0058,
+       0.0676
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 214,
+     "steps": 253,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1147,
+       -0.0011
+      ],
+      "butter_1": [
+       0.0228,
+       0.2155
+      ],
+      "butter_2": [
+       -0.0961,
+       0.2078
+      ],
+      "chocolate_pudding_1": [
+       -0.0123,
+       0.0568
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 263,
+     "steps": 316,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1205,
+       0.0056
+      ],
+      "butter_1": [
+       -0.0084,
+       0.1964
+      ],
+      "butter_2": [
+       -0.1097,
+       0.2016
+      ],
+      "chocolate_pudding_1": [
+       -0.0011,
+       0.0515
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.2261,
+       -0.069
+      ],
+      "butter_1": [
+       0.0126,
+       0.2041
+      ],
+      "butter_2": [
+       -0.1011,
+       0.1898
+      ],
+      "chocolate_pudding_1": [
+       -0.0033,
+       0.0716
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0868,
+       0.0128
+      ],
+      "butter_1": [
+       -0.0163,
+       0.1886
+      ],
+      "butter_2": [
+       -0.0979,
+       0.2193
+      ],
+      "chocolate_pudding_1": [
+       0.0006,
+       0.0509
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 159,
+     "steps": 208,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1024,
+       0.0032
+      ],
+      "butter_1": [
+       0.0062,
+       0.1759
+      ],
+      "butter_2": [
+       -0.1226,
+       0.2022
+      ],
+      "chocolate_pudding_1": [
+       0.0018,
+       0.0271
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.093,
+       0.0054
+      ],
+      "butter_1": [
+       0.0237,
+       0.2228
+      ],
+      "butter_2": [
+       -0.1051,
+       0.1815
+      ],
+      "chocolate_pudding_1": [
+       0.0245,
+       0.0497
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 129,
+     "steps": 172,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0952,
+       0.0047
+      ],
+      "butter_1": [
+       0.0148,
+       0.2023
+      ],
+      "butter_2": [
+       -0.0872,
+       0.2172
+      ],
+      "chocolate_pudding_1": [
+       0.0038,
+       0.0277
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 49,
+     "steps": 156,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1124,
+       0.0115
+      ],
+      "butter_1": [
+       -0.0204,
+       0.1879
+      ],
+      "butter_2": [
+       -0.1004,
+       0.2056
+      ],
+      "chocolate_pudding_1": [
+       0.0018,
+       0.0298
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1151,
+       -0.0214
+      ],
+      "butter_1": [
+       0.0065,
+       0.2127
+      ],
+      "butter_2": [
+       -0.092,
+       0.2142
+      ],
+      "chocolate_pudding_1": [
+       -0.0114,
+       0.0725
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 274,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0819,
+       0.0234
+      ],
+      "butter_1": [
+       0.0098,
+       0.1819
+      ],
+      "butter_2": [
+       -0.0903,
+       0.1999
+      ],
+      "chocolate_pudding_1": [
+       0.0037,
+       0.044
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "motion",
+     "sub": "in_region",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 190,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1241,
+       0.0217
+      ],
+      "butter_1": [
+       -0.0219,
+       0.221
+      ],
+      "butter_2": [
+       -0.0897,
+       0.1812
+      ],
+      "chocolate_pudding_1": [
+       0.0199,
+       0.0333
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "motion",
+     "sub": "in_region",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 144,
+     "steps": 189,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.113,
+       0.0183
+      ],
+      "butter_1": [
+       -0.0142,
+       0.1981
+      ],
+      "butter_2": [
+       -0.1034,
+       0.1899
+      ],
+      "chocolate_pudding_1": [
+       0.002,
+       0.0611
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.111,
+       0.0081
+      ],
+      "butter_1": [
+       0.0159,
+       0.1984
+      ],
+      "butter_2": [
+       -0.1066,
+       0.1816
+      ],
+      "chocolate_pudding_1": [
+       -0.0062,
+       0.0253
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 200,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1212,
+       0.0012
+      ],
+      "butter_1": [
+       0.0207,
+       0.2202
+      ],
+      "butter_2": [
+       -0.075,
+       0.18
+      ],
+      "chocolate_pudding_1": [
+       -0.0,
+       0.0414
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "motion",
+     "sub": "in_region",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.095,
+       0.0069
+      ],
+      "butter_1": [
+       0.0129,
+       0.2142
+      ],
+      "butter_2": [
+       -0.0907,
+       0.2157
+      ],
+      "chocolate_pudding_1": [
+       0.0118,
+       0.0591
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1078,
+       -0.0059
+      ],
+      "butter_1": [
+       -0.0121,
+       0.185
+      ],
+      "butter_2": [
+       -0.1208,
+       0.2124
+      ],
+      "chocolate_pudding_1": [
+       -0.021,
+       0.0306
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 270,
+     "steps": 309,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1195,
+       -0.0232
+      ],
+      "butter_1": [
+       -0.0005,
+       0.1969
+      ],
+      "butter_2": [
+       -0.0873,
+       0.1886
+      ],
+      "chocolate_pudding_1": [
+       -0.007,
+       0.0426
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 263,
+     "steps": 307,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0867,
+       0.0001
+      ],
+      "butter_1": [
+       0.0052,
+       0.1901
+      ],
+      "butter_2": [
+       -0.1153,
+       0.2228
+      ],
+      "chocolate_pudding_1": [
+       0.022,
+       0.0736
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag3": {
+   "roll": "results/r1/roll/r1cag_test_libero_90_1_eba8e76f87.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1211,
+       -0.0171
+      ],
+      "butter_1": [
+       0.0055,
+       0.2125
+      ],
+      "butter_2": [
+       -0.0832,
+       0.1845
+      ],
+      "chocolate_pudding_1": [
+       0.0097,
+       0.0744
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 139,
+     "steps": 183,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1033,
+       0.003
+      ],
+      "butter_1": [
+       -0.0229,
+       0.1779
+      ],
+      "butter_2": [
+       -0.1171,
+       0.218
+      ],
+      "chocolate_pudding_1": [
+       -0.0058,
+       0.0676
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 166,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1147,
+       -0.0011
+      ],
+      "butter_1": [
+       0.0228,
+       0.2155
+      ],
+      "butter_2": [
+       -0.0961,
+       0.2078
+      ],
+      "chocolate_pudding_1": [
+       -0.0123,
+       0.0568
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.611,
+     "carried": 0.283,
+     "d_bind": 0.34,
+     "d_min": 0.132,
+     "d_final": 0.132,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 214,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1205,
+       0.0056
+      ],
+      "butter_1": [
+       -0.0084,
+       0.1964
+      ],
+      "butter_2": [
+       -0.1097,
+       0.2016
+      ],
+      "chocolate_pudding_1": [
+       -0.0011,
+       0.0515
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.609,
+     "carried": 0.342,
+     "d_bind": 0.351,
+     "d_min": 0.137,
+     "d_final": 0.149,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.2261,
+       -0.069
+      ],
+      "butter_1": [
+       0.0126,
+       0.2041
+      ],
+      "butter_2": [
+       -0.1011,
+       0.1898
+      ],
+      "chocolate_pudding_1": [
+       -0.0033,
+       0.0716
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0868,
+       0.0128
+      ],
+      "butter_1": [
+       -0.0163,
+       0.1886
+      ],
+      "butter_2": [
+       -0.0979,
+       0.2193
+      ],
+      "chocolate_pudding_1": [
+       0.0006,
+       0.0509
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1024,
+       0.0032
+      ],
+      "butter_1": [
+       0.0062,
+       0.1759
+      ],
+      "butter_2": [
+       -0.1226,
+       0.2022
+      ],
+      "chocolate_pudding_1": [
+       0.0018,
+       0.0271
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 222,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.093,
+       0.0054
+      ],
+      "butter_1": [
+       0.0237,
+       0.2228
+      ],
+      "butter_2": [
+       -0.1051,
+       0.1815
+      ],
+      "chocolate_pudding_1": [
+       0.0245,
+       0.0497
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.269,
+     "carried": 0.108,
+     "d_bind": 0.346,
+     "d_min": 0.252,
+     "d_final": 0.253,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "wrong_goal",
+     "sub": "carried_elsewhere",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 145,
+     "steps": 184,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0952,
+       0.0047
+      ],
+      "butter_1": [
+       0.0148,
+       0.2023
+      ],
+      "butter_2": [
+       -0.0872,
+       0.2172
+      ],
+      "chocolate_pudding_1": [
+       0.0038,
+       0.0277
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1124,
+       0.0115
+      ],
+      "butter_1": [
+       -0.0204,
+       0.1879
+      ],
+      "butter_2": [
+       -0.1004,
+       0.2056
+      ],
+      "chocolate_pudding_1": [
+       0.0018,
+       0.0298
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 165,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1151,
+       -0.0214
+      ],
+      "butter_1": [
+       0.0065,
+       0.2127
+      ],
+      "butter_2": [
+       -0.092,
+       0.2142
+      ],
+      "chocolate_pudding_1": [
+       -0.0114,
+       0.0725
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "motion",
+     "sub": "in_region",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0819,
+       0.0234
+      ],
+      "butter_1": [
+       0.0098,
+       0.1819
+      ],
+      "butter_2": [
+       -0.0903,
+       0.1999
+      ],
+      "chocolate_pudding_1": [
+       0.0037,
+       0.044
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1241,
+       0.0217
+      ],
+      "butter_1": [
+       -0.0219,
+       0.221
+      ],
+      "butter_2": [
+       -0.0897,
+       0.1812
+      ],
+      "chocolate_pudding_1": [
+       0.0199,
+       0.0333
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 100,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.113,
+       0.0183
+      ],
+      "butter_1": [
+       -0.0142,
+       0.1981
+      ],
+      "butter_2": [
+       -0.1034,
+       0.1899
+      ],
+      "chocolate_pudding_1": [
+       0.002,
+       0.0611
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "motion",
+     "sub": "in_region",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 191,
+     "steps": 229,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.111,
+       0.0081
+      ],
+      "butter_1": [
+       0.0159,
+       0.1984
+      ],
+      "butter_2": [
+       -0.1066,
+       0.1816
+      ],
+      "chocolate_pudding_1": [
+       -0.0062,
+       0.0253
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 163,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1212,
+       0.0012
+      ],
+      "butter_1": [
+       0.0207,
+       0.2202
+      ],
+      "butter_2": [
+       -0.075,
+       0.18
+      ],
+      "chocolate_pudding_1": [
+       -0.0,
+       0.0414
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "motion",
+     "sub": "in_region",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 183,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.095,
+       0.0069
+      ],
+      "butter_1": [
+       0.0129,
+       0.2142
+      ],
+      "butter_2": [
+       -0.0907,
+       0.2157
+      ],
+      "chocolate_pudding_1": [
+       0.0118,
+       0.0591
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.697,
+     "carried": 0.237,
+     "d_bind": 0.338,
+     "d_min": 0.102,
+     "d_final": 0.141,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "motion",
+     "sub": "toward_target",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1078,
+       -0.0059
+      ],
+      "butter_1": [
+       -0.0121,
+       0.185
+      ],
+      "butter_2": [
+       -0.1208,
+       0.2124
+      ],
+      "chocolate_pudding_1": [
+       -0.021,
+       0.0306
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1195,
+       -0.0232
+      ],
+      "butter_1": [
+       -0.0005,
+       0.1969
+      ],
+      "butter_2": [
+       -0.0873,
+       0.1886
+      ],
+      "chocolate_pudding_1": [
+       -0.007,
+       0.0426
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 125,
+     "steps": 161,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0867,
+       0.0001
+      ],
+      "butter_1": [
+       0.0052,
+       0.1901
+      ],
+      "butter_2": [
+       -0.1153,
+       0.2228
+      ],
+      "chocolate_pudding_1": [
+       0.022,
+       0.0736
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    }
+   ]
+  },
+  "cag5": {
+   "roll": "results/r1/roll/r1cag_test_libero_90_1_ab57bd5560.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 149,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1211,
+       -0.0171
+      ],
+      "butter_1": [
+       0.0055,
+       0.2125
+      ],
+      "butter_2": [
+       -0.0832,
+       0.1845
+      ],
+      "chocolate_pudding_1": [
+       0.0097,
+       0.0744
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "motion",
+     "sub": "in_region",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1033,
+       0.003
+      ],
+      "butter_1": [
+       -0.0229,
+       0.1779
+      ],
+      "butter_2": [
+       -0.1171,
+       0.218
+      ],
+      "chocolate_pudding_1": [
+       -0.0058,
+       0.0676
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1147,
+       -0.0011
+      ],
+      "butter_1": [
+       0.0228,
+       0.2155
+      ],
+      "butter_2": [
+       -0.0961,
+       0.2078
+      ],
+      "chocolate_pudding_1": [
+       -0.0123,
+       0.0568
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1205,
+       0.0056
+      ],
+      "butter_1": [
+       -0.0084,
+       0.1964
+      ],
+      "butter_2": [
+       -0.1097,
+       0.2016
+      ],
+      "chocolate_pudding_1": [
+       -0.0011,
+       0.0515
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 214,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.2261,
+       -0.069
+      ],
+      "butter_1": [
+       0.0126,
+       0.2041
+      ],
+      "butter_2": [
+       -0.1011,
+       0.1898
+      ],
+      "chocolate_pudding_1": [
+       -0.0033,
+       0.0716
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.426,
+     "carried": 0.24,
+     "d_bind": 0.322,
+     "d_min": 0.185,
+     "d_final": 0.19,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "wrong_goal",
+     "sub": "carried_elsewhere",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0868,
+       0.0128
+      ],
+      "butter_1": [
+       -0.0163,
+       0.1886
+      ],
+      "butter_2": [
+       -0.0979,
+       0.2193
+      ],
+      "chocolate_pudding_1": [
+       0.0006,
+       0.0509
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 96,
+     "steps": 148,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1024,
+       0.0032
+      ],
+      "butter_1": [
+       0.0062,
+       0.1759
+      ],
+      "butter_2": [
+       -0.1226,
+       0.2022
+      ],
+      "chocolate_pudding_1": [
+       0.0018,
+       0.0271
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.093,
+       0.0054
+      ],
+      "butter_1": [
+       0.0237,
+       0.2228
+      ],
+      "butter_2": [
+       -0.1051,
+       0.1815
+      ],
+      "chocolate_pudding_1": [
+       0.0245,
+       0.0497
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0952,
+       0.0047
+      ],
+      "butter_1": [
+       0.0148,
+       0.2023
+      ],
+      "butter_2": [
+       -0.0872,
+       0.2172
+      ],
+      "chocolate_pudding_1": [
+       0.0038,
+       0.0277
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1124,
+       0.0115
+      ],
+      "butter_1": [
+       -0.0204,
+       0.1879
+      ],
+      "butter_2": [
+       -0.1004,
+       0.2056
+      ],
+      "chocolate_pudding_1": [
+       0.0018,
+       0.0298
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 135,
+     "steps": 173,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1151,
+       -0.0214
+      ],
+      "butter_1": [
+       0.0065,
+       0.2127
+      ],
+      "butter_2": [
+       -0.092,
+       0.2142
+      ],
+      "chocolate_pudding_1": [
+       -0.0114,
+       0.0725
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0819,
+       0.0234
+      ],
+      "butter_1": [
+       0.0098,
+       0.1819
+      ],
+      "butter_2": [
+       -0.0903,
+       0.1999
+      ],
+      "chocolate_pudding_1": [
+       0.0037,
+       0.044
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1241,
+       0.0217
+      ],
+      "butter_1": [
+       -0.0219,
+       0.221
+      ],
+      "butter_2": [
+       -0.0897,
+       0.1812
+      ],
+      "chocolate_pudding_1": [
+       0.0199,
+       0.0333
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.113,
+       0.0183
+      ],
+      "butter_1": [
+       -0.0142,
+       0.1981
+      ],
+      "butter_2": [
+       -0.1034,
+       0.1899
+      ],
+      "chocolate_pudding_1": [
+       0.002,
+       0.0611
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.111,
+       0.0081
+      ],
+      "butter_1": [
+       0.0159,
+       0.1984
+      ],
+      "butter_2": [
+       -0.1066,
+       0.1816
+      ],
+      "chocolate_pudding_1": [
+       -0.0062,
+       0.0253
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 162,
+     "steps": 194,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1212,
+       0.0012
+      ],
+      "butter_1": [
+       0.0207,
+       0.2202
+      ],
+      "butter_2": [
+       -0.075,
+       0.18
+      ],
+      "chocolate_pudding_1": [
+       -0.0,
+       0.0414
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 123,
+     "steps": 164,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.095,
+       0.0069
+      ],
+      "butter_1": [
+       0.0129,
+       0.2142
+      ],
+      "butter_2": [
+       -0.0907,
+       0.2157
+      ],
+      "chocolate_pudding_1": [
+       0.0118,
+       0.0591
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "bound": null,
+     "bound_step": null,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1078,
+       -0.0059
+      ],
+      "butter_1": [
+       -0.0121,
+       0.185
+      ],
+      "butter_2": [
+       -0.1208,
+       0.2124
+      ],
+      "chocolate_pudding_1": [
+       -0.021,
+       0.0306
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "type": "no_commit",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 131,
+     "steps": 400,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.1195,
+       -0.0232
+      ],
+      "butter_1": [
+       -0.0005,
+       0.1969
+      ],
+      "butter_2": [
+       -0.0873,
+       0.1886
+      ],
+      "chocolate_pudding_1": [
+       -0.007,
+       0.0426
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": false
+     },
+     "success_settled": false,
+     "progress": 0.366,
+     "carried": 0.13,
+     "d_bind": 0.309,
+     "d_min": 0.196,
+     "d_final": 0.217,
+     "alt": [],
+     "target": "wooden_cabinet_1_top_side",
+     "type": "wrong_goal",
+     "sub": "carried_elsewhere",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "bound": "akita_black_bowl_1",
+     "bound_step": 133,
+     "steps": 183,
+     "start_xy": {
+      "akita_black_bowl_1": [
+       -0.0867,
+       0.0001
+      ],
+      "butter_1": [
+       0.0052,
+       0.1901
+      ],
+      "butter_2": [
+       -0.1153,
+       0.2228
+      ],
+      "chocolate_pudding_1": [
+       0.022,
+       0.0736
+      ]
+     },
+     "own_atoms_final": {
+      "akita_black_bowl_1>wooden_cabinet_1_top_side": true
+     },
+     "success_settled": false,
+     "type": "success",
+     "sub": "",
+     "final": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "start": {
+      "libero_90:3": false,
+      "libero_90:4": false,
+      "libero_90:5": false
+     },
+     "instead": []
+    }
+   ]
+  }
+ }
+}

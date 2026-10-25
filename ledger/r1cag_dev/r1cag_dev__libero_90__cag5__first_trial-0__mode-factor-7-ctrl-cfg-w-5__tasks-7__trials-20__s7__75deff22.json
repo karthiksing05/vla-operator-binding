@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/r1/roll/r1cag_dev_libero_90_7_a2f0f796a7.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=factor:7?ctrl=cfg&w=5 SUITE=libero_90 TASKS=7 TRIALS=20 (job 4223122)",
+ "config": {
+  "client": {
+   "all_objects": true,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_r1",
+   "host": "127.0.0.1",
+   "light": true,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": true,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/r1/roll/r1cag_dev_libero_90_7_a2f0f796a7.json",
+   "port": 9426,
+   "record": true,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "7",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4223122",
+  "mode": "factor:7?ctrl=cfg&w=5"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "conroy.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4223122",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r1cag_dev",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75deff220f3e614dd3d22da5cad97b66fac15822",
+  "short": "75deff22"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "factor:7?ctrl=cfg&w=5",
+  "tasks": "7",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 1007.6220223903656,
+  "success_rate": 0.15,
+  "tasks": {
+   "7": {
+    "errors": 0,
+    "language": "open the top drawer of the cabinet",
+    "mean_steps": 384.75,
+    "n": 20,
+    "success_rate": 0.15
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r1cag_dev__libero_90__cag5__first_trial-0__mode-factor-7-ctrl-cfg-w-5__tasks-7__trials-20__s7__75deff22",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-24T22:07:17+00:00",
+ "stream": null,
+ "tag": "cag5"
+}

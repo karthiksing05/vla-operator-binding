@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/r1/roll/r1cag_cells_libero_90_4_a401934957.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=factor:4?ctrl=cfg&w=2 SUITE=libero_90 TASKS=4 TRIALS=20 (job 4223192)",
+ "config": {
+  "client": {
+   "all_objects": true,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "",
+   "host": "127.0.0.1",
+   "light": true,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": true,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/r1/roll/r1cag_cells_libero_90_4_a401934957.json",
+   "port": 9638,
+   "record": true,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "4",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4223192",
+  "mode": "factor:4?ctrl=cfg&w=2"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "chappie.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4223192",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r1cag_cells",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "42822d0872af58163d5e869b509c061f12fa9e62",
+  "short": "42822d08"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "factor:4?ctrl=cfg&w=2",
+  "tasks": "4",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 735.1463418006897,
+  "success_rate": 0.85,
+  "tasks": {
+   "4": {
+    "errors": 0,
+    "language": "put the butter at the front in the top drawer of the cabinet and close it",
+    "mean_steps": 185.15,
+    "n": 20,
+    "success_rate": 0.85
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r1cag_cells__libero_90__cag2__first_trial-0__mode-factor-4-ctrl-cfg-w-2__tasks-4__trials-20__s7__42822d08",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-25T00:52:23+00:00",
+ "stream": null,
+ "tag": "cag2"
+}
