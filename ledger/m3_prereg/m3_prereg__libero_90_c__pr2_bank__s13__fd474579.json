@@ -1,0 +1,355 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: R2 training-demo bank of role tokens, oracle retrieval, H1-H4, before any fit / rollout / read",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "voltron.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4225877",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "fd474579d142d1341a213a2639daaa687089979a",
+  "short": "fd474579"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": "GO: D = bank - 0.5 zs - 0.5 ceiling > 0 (300 paired episodes, 15 recombination tasks x 20 fresh_rb2 states); one-sided two-level cluster bootstrap p = share of D* <= 0 (B 10000, seed 0); not testable (fails) if ceiling <= zs",
+  "H2": "bank > zs: more successes + exact two-sided sign test on discordant pairs",
+  "H3": "binding errors (wrong_object + wrong_goal, fm_types) fewer under bank than zs: exact two-sided sign test on discordant pairs",
+  "H4": "8 damage cells, admitted bank routed by parts vs parity (stored init 0-19, seed 0): non-inferior at margin 0.05, one-sided cluster-bootstrap p",
+  "arms": "zs, bank (oracle O + G), bank_O, bank_G, ceiling (M1 create token, the demonstrated ceiling)",
+  "bank": {
+   "G|in|basket": {
+    "demos": 48,
+    "frames": 1024,
+    "role": "G",
+    "sources": 16
+   },
+   "G|in|cabinet drawer top": {
+    "demos": 42,
+    "frames": 1024,
+    "role": "G",
+    "sources": 3
+   },
+   "G|in|tray": {
+    "demos": 40,
+    "frames": 1024,
+    "role": "G",
+    "sources": 4
+   },
+   "G|manip:close|cabinet drawer top": {
+    "demos": 40,
+    "frames": 1024,
+    "role": "G",
+    "sources": 4
+   },
+   "G|on|cabinet shelf": {
+    "demos": 40,
+    "frames": 1024,
+    "role": "G",
+    "sources": 2
+   },
+   "G|on|plate": {
+    "demos": 45,
+    "frames": 1024,
+    "role": "G",
+    "sources": 15
+   },
+   "O|alphabet soup": {
+    "demos": 42,
+    "frames": 1024,
+    "role": "O",
+    "sources": 3
+   },
+   "O|black bowl": {
+    "demos": 40,
+    "frames": 1024,
+    "role": "O",
+    "sources": 1
+   },
+   "O|black bowl front": {
+    "demos": 40,
+    "frames": 1024,
+    "role": "O",
+    "sources": 1
+   },
+   "O|black bowl middle": {
+    "demos": 40,
+    "frames": 1024,
+    "role": "O",
+    "sources": 2
+   },
+   "O|bottom cabinet drawer": {
+    "demos": 40,
+    "frames": 1024,
+    "role": "O",
+    "sources": 2
+   },
+   "O|bowl white": {
+    "demos": 40,
+    "frames": 1024,
+    "role": "O",
+    "sources": 2
+   },
+   "O|cabinet drawer top": {
+    "demos": 40,
+    "frames": 1024,
+    "role": "O",
+    "sources": 4
+   },
+   "O|chocolate pudding": {
+    "demos": 40,
+    "frames": 1024,
+    "role": "O",
+    "sources": 5
+   },
+   "O|frying pan": {
+    "demos": 42,
+    "frames": 1024,
+    "role": "O",
+    "sources": 3
+   },
+   "O|sauce tomato": {
+    "demos": 40,
+    "frames": 1024,
+    "role": "O",
+    "sources": 2
+   }
+  },
+  "damage_cells": [
+   "libero_spatial:6",
+   "libero_90:70",
+   "libero_90:72",
+   "libero_spatial:7",
+   "libero_goal:8",
+   "libero_90:52",
+   "libero_object:7",
+   "libero_90:42"
+  ],
+  "disclosure": "seen before this row: M1's 15-task totals (zs 180, create 234; they define the go criterion) and the M1 / FM / L4 / R2a results in their docs; --inspect (the parse of the 15 tasks and which training texts hold each item: it set the key rule, verb dropped for O and prepositions classed for G, because L4's verb-keyed items left 5 of 15 object roles uncovered); --plan (bank, gate, damage tables); a fit smoke (RB2_SMOKE=1, 20 steps on G|in|tray, results/rb2/smoke, no ledger row, no rollout) to check the pipeline, excluded from every number; the fit job takes --kid (a key hash) because the GPU sbatch splits SCRIPT on spaces (pipeline only).  No R2 rollout exists and no pi05_l90c rollout on fresh_rb2 exists.",
+  "family": "Holm over H1-H4 at alpha 0.05; GO = H1 passes",
+  "files_sha256": {
+   "code": "c77a74024b9f8b1a3a16b70c4bf288a25e262a8a111f053c5f84f4804283060f",
+   "doc": "f0bb6eac4d2fb4bc5ba804f27504825d8eb43275e37d21a4f66ce1dc9ece0828",
+   "fresh_check": "9e55faada71eadc28d91540969fe914a0f37f7026c58cc17c41346c4a85dbeca",
+   "l4": "c12d1b6f155953f08801e833b4aad842f2c93e544261288b85e9c08d5395032f",
+   "plan": "31b4af3d0a9028bc631385427a61fd41f0ad4f05094aa2e2c0595d96eaaa786e",
+   "serve": "b7b9aa7b55557cc07062201f7ce9b7ce5e48bc9548ae21b0b6cb4dab6a1b29bd",
+   "typer": "0a9958913a98f21d5745199e1a0f9cadcc9397f8f39ddb3a57fe03601968820a"
+  },
+  "gate": "10 gate cells (set cover), served with instruction + their keys' bank tokens; pass if success >= parity - 0.15; keys of failing cells leave the admitted bank (used by bank / bank_O / bank_G and the damage read)",
+  "gate_cells": {
+   "libero_90:13": [
+    "G|on|plate",
+    "O|black bowl front"
+   ],
+   "libero_90:15": [
+    "O|black bowl middle"
+   ],
+   "libero_90:25": [
+    "O|black bowl"
+   ],
+   "libero_90:37": [
+    "O|bowl white"
+   ],
+   "libero_90:41": [
+    "O|frying pan"
+   ],
+   "libero_90:5": [
+    "G|in|cabinet drawer top",
+    "G|manip:close|cabinet drawer top",
+    "O|cabinet drawer top",
+    "O|chocolate pudding"
+   ],
+   "libero_90:55": [
+    "G|in|tray",
+    "O|alphabet soup"
+   ],
+   "libero_90:6": [
+    "O|bottom cabinet drawer"
+   ],
+   "libero_90:88": [
+    "G|on|cabinet shelf"
+   ],
+   "libero_object:5": [
+    "G|in|basket",
+    "O|sauce tomato"
+   ]
+  },
+  "junk": "per-demo flow-loss gain (without - with token) on fit demos and held-out demos; flag if held-out positive share < 0.5; descriptive only",
+  "oracle": {
+   "libero_90:0": {
+    "G": [
+     "G|manip:close|cabinet drawer top"
+    ],
+    "O": [
+     "O|cabinet drawer top"
+    ]
+   },
+   "libero_90:1": {
+    "G": [
+     "G|manip:close|cabinet drawer top"
+    ],
+    "O": [
+     "O|black bowl",
+     "O|cabinet drawer top"
+    ]
+   },
+   "libero_90:11": {
+    "G": [],
+    "O": [
+     "O|cabinet drawer top"
+    ]
+   },
+   "libero_90:14": {
+    "G": [
+     "G|on|plate"
+    ],
+    "O": [
+     "O|black bowl middle"
+    ]
+   },
+   "libero_90:16": {
+    "G": [],
+    "O": [
+     "O|black bowl front"
+    ]
+   },
+   "libero_90:22": {
+    "G": [],
+    "O": [
+     "O|bottom cabinet drawer"
+    ]
+   },
+   "libero_90:29": {
+    "G": [
+     "G|in|cabinet drawer top"
+    ],
+    "O": [
+     "O|black bowl"
+    ]
+   },
+   "libero_90:36": {
+    "G": [
+     "G|on|plate"
+    ],
+    "O": [
+     "O|bowl white"
+    ]
+   },
+   "libero_90:40": {
+    "G": [
+     "G|on|cabinet shelf"
+    ],
+    "O": [
+     "O|frying pan"
+    ]
+   },
+   "libero_90:50": {
+    "G": [
+     "G|in|basket"
+    ],
+    "O": [
+     "O|alphabet soup"
+    ]
+   },
+   "libero_90:59": {
+    "G": [
+     "G|in|tray"
+    ],
+    "O": [
+     "O|sauce tomato"
+    ]
+   },
+   "libero_90:60": {
+    "G": [
+     "G|in|tray"
+    ],
+    "O": []
+   },
+   "libero_90:61": {
+    "G": [
+     "G|in|tray"
+    ],
+    "O": [
+     "O|chocolate pudding"
+    ]
+   },
+   "libero_90:7": {
+    "G": [],
+    "O": [
+     "O|cabinet drawer top"
+    ]
+   },
+   "libero_90:9": {
+    "G": [
+     "G|on|plate"
+    ],
+    "O": [
+     "O|black bowl"
+    ]
+   }
+  },
+  "secondary": "per-arm success overall / by bin; bank_O and bank_G vs zs; bank vs ceiling; failure-type counts per arm; gate table; junk statistics; bytes; fit A40-s",
+  "settings": {
+   "batch": 32,
+   "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+   "d_min": 3,
+   "d_tot": 40,
+   "data": "/coc/flash10/ksingara3/robot/data/hf/lerobot/lol/libero_l90c",
+   "f_hold": 24,
+   "f_max": 1024,
+   "fresh": {
+    "base": 7500000,
+    "dir": "fresh_rb2",
+    "n": 20
+   },
+   "gate_tol": 0.15,
+   "hold_max": 8,
+   "hold_per": 2,
+   "k_draws": 2,
+   "lr": 0.01,
+   "min_frames": 50,
+   "n_damage": 8,
+   "n_role": 2,
+   "prep_class": {
+    "in": "in",
+    "inside": "in",
+    "into": "in",
+    "on": "on",
+    "on top of": "on",
+    "onto": "on"
+   },
+   "seed": 13,
+   "steps": 1000
+  },
+  "written_before": "any R2 fit, rollout or read"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pr2_bank__s13__fd474579",
+ "schema": 1,
+ "script": "experiments/prereg/pr2_bank.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-25T00:44:13+00:00",
+ "stream": null,
+ "tag": "pr2_bank"
+}
