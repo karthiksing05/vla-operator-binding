@@ -1,0 +1,86 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 36864,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 36864,
+  "tree": 0
+ },
+ "command": "experiments/rb2_bank.py --fit --kid 36b54277409a",
+ "config": {
+  "batch": 32,
+  "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "data": "/coc/flash10/ksingara3/robot/data/hf/lerobot/lol/libero_l90c",
+  "lr": 0.01,
+  "n_role": 2,
+  "steps": 1000
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "samantha.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4225983",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "rb2_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "42822d0872af58163d5e869b509c061f12fa9e62",
+  "short": "42822d08"
+ },
+ "keys": {
+  "key": "O|chocolate pudding"
+ },
+ "metrics": {
+  "final_loss": 0.01376319583505392,
+  "junk": {
+   "fit": {
+    "cv": 1.7462583509982899,
+    "demos": 40,
+    "mean": 0.0006654080287339641,
+    "positive_share": 0.775,
+    "rel_mean": 0.037857344770425856,
+    "sd": 0.001161974326997995
+   },
+   "held_out": {
+    "cv": 2.8808610474050114,
+    "demos": 8,
+    "mean": -0.0006850509836719232,
+    "positive_share": 0.375,
+    "rel_mean": -0.026550052185088387,
+    "sd": 0.00197353669434693
+   }
+  },
+  "n_demos": 40,
+  "n_frames": 1024,
+  "seconds": {
+   "bank": 88.25736451148987,
+   "fit": 223.01757860183716,
+   "junk": 28.839528560638428
+  },
+  "sources": [
+   "2",
+   "28",
+   "39",
+   "40",
+   "61"
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "rb2_fit__libero_90_c__bank__key-O-chocolate-pudding__s13__42822d08",
+ "schema": 1,
+ "script": "experiments/rb2_bank.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-25T00:58:58+00:00",
+ "stream": null,
+ "tag": "bank"
+}

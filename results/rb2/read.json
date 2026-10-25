@@ -1,0 +1,1209 @@
+{
+ "missing": [],
+ "gate": {
+  "cells": {
+   "libero_90:5": {
+    "keys": [
+     "G|in|cabinet drawer top",
+     "G|manip:close|cabinet drawer top",
+     "O|cabinet drawer top",
+     "O|chocolate pudding"
+    ],
+    "served": 20,
+    "parity": 20,
+    "change": 0.0,
+    "passes": true
+   },
+   "libero_90:13": {
+    "keys": [
+     "G|on|plate",
+     "O|black bowl front"
+    ],
+    "served": 19,
+    "parity": 20,
+    "change": -0.05,
+    "passes": true
+   },
+   "libero_object:5": {
+    "keys": [
+     "G|in|basket",
+     "O|sauce tomato"
+    ],
+    "served": 18,
+    "parity": 17,
+    "change": 0.05,
+    "passes": true
+   },
+   "libero_90:55": {
+    "keys": [
+     "G|in|tray",
+     "O|alphabet soup"
+    ],
+    "served": 20,
+    "parity": 20,
+    "change": 0.0,
+    "passes": true
+   },
+   "libero_90:41": {
+    "keys": [
+     "O|frying pan"
+    ],
+    "served": 20,
+    "parity": 20,
+    "change": 0.0,
+    "passes": true
+   },
+   "libero_90:25": {
+    "keys": [
+     "O|black bowl"
+    ],
+    "served": 20,
+    "parity": 20,
+    "change": 0.0,
+    "passes": true
+   },
+   "libero_90:88": {
+    "keys": [
+     "G|on|cabinet shelf"
+    ],
+    "served": 20,
+    "parity": 20,
+    "change": 0.0,
+    "passes": true
+   },
+   "libero_90:37": {
+    "keys": [
+     "O|bowl white"
+    ],
+    "served": 20,
+    "parity": 19,
+    "change": 0.05,
+    "passes": true
+   },
+   "libero_90:15": {
+    "keys": [
+     "O|black bowl middle"
+    ],
+    "served": 20,
+    "parity": 20,
+    "change": 0.0,
+    "passes": true
+   },
+   "libero_90:6": {
+    "keys": [
+     "O|bottom cabinet drawer"
+    ],
+    "served": 17,
+    "parity": 16,
+    "change": 0.05,
+    "passes": true
+   }
+  },
+  "admitted": [
+   "G|in|basket",
+   "G|in|cabinet drawer top",
+   "G|in|tray",
+   "G|manip:close|cabinet drawer top",
+   "G|on|cabinet shelf",
+   "G|on|plate",
+   "O|alphabet soup",
+   "O|black bowl",
+   "O|black bowl front",
+   "O|black bowl middle",
+   "O|bottom cabinet drawer",
+   "O|bowl white",
+   "O|cabinet drawer top",
+   "O|chocolate pudding",
+   "O|frying pan",
+   "O|sauce tomato"
+  ],
+  "rejected": []
+ },
+ "totals": {
+  "zs": 170,
+  "bank": 181,
+  "bank_O": 173,
+  "bank_G": 179,
+  "ceiling": 223
+ },
+ "rate_ci": {
+  "zs": {
+   "rate": 0.5666666666666667,
+   "lo": 0.33666666666666667,
+   "hi": 0.79,
+   "k": 170,
+   "n": 300,
+   "tasks": 15
+  },
+  "bank": {
+   "rate": 0.6033333333333334,
+   "lo": 0.37666666666666665,
+   "hi": 0.82,
+   "k": 181,
+   "n": 300,
+   "tasks": 15
+  },
+  "bank_O": {
+   "rate": 0.5766666666666667,
+   "lo": 0.35333333333333333,
+   "hi": 0.79,
+   "k": 173,
+   "n": 300,
+   "tasks": 15
+  },
+  "bank_G": {
+   "rate": 0.5966666666666667,
+   "lo": 0.36333333333333334,
+   "hi": 0.8134166666666655,
+   "k": 179,
+   "n": 300,
+   "tasks": 15
+  },
+  "ceiling": {
+   "rate": 0.7433333333333333,
+   "lo": 0.5833333333333334,
+   "hi": 0.89,
+   "k": 223,
+   "n": 300,
+   "tasks": 15
+  }
+ },
+ "per_task": {
+  "libero_90:0": {
+   "zs": 19,
+   "ceiling": 14,
+   "bank": 19,
+   "bank_O": 19,
+   "bank_G": 19,
+   "oracle": {
+    "O": [
+     "O|cabinet drawer top"
+    ],
+    "G": [
+     "G|manip:close|cabinet drawer top"
+    ]
+   }
+  },
+  "libero_90:14": {
+   "zs": 19,
+   "ceiling": 20,
+   "bank": 20,
+   "bank_O": 19,
+   "bank_G": 20,
+   "oracle": {
+    "O": [
+     "O|black bowl middle"
+    ],
+    "G": [
+     "G|on|plate"
+    ]
+   }
+  },
+  "libero_90:16": {
+   "zs": 0,
+   "ceiling": 7,
+   "bank": 0,
+   "bank_O": 0,
+   "bank_G": 0,
+   "oracle": {
+    "O": [
+     "O|black bowl front"
+    ],
+    "G": []
+   }
+  },
+  "libero_90:22": {
+   "zs": 20,
+   "ceiling": 20,
+   "bank": 20,
+   "bank_O": 20,
+   "bank_G": 20,
+   "oracle": {
+    "O": [
+     "O|bottom cabinet drawer"
+    ],
+    "G": []
+   }
+  },
+  "libero_90:60": {
+   "zs": 19,
+   "ceiling": 20,
+   "bank": 19,
+   "bank_O": 19,
+   "bank_G": 19,
+   "oracle": {
+    "O": [],
+    "G": [
+     "G|in|tray"
+    ]
+   }
+  },
+  "libero_90:1": {
+   "zs": 4,
+   "ceiling": 10,
+   "bank": 6,
+   "bank_O": 3,
+   "bank_G": 3,
+   "oracle": {
+    "O": [
+     "O|black bowl",
+     "O|cabinet drawer top"
+    ],
+    "G": [
+     "G|manip:close|cabinet drawer top"
+    ]
+   }
+  },
+  "libero_90:29": {
+   "zs": 1,
+   "ceiling": 20,
+   "bank": 1,
+   "bank_O": 1,
+   "bank_G": 1,
+   "oracle": {
+    "O": [
+     "O|black bowl"
+    ],
+    "G": [
+     "G|in|cabinet drawer top"
+    ]
+   }
+  },
+  "libero_90:50": {
+   "zs": 19,
+   "ceiling": 16,
+   "bank": 19,
+   "bank_O": 18,
+   "bank_G": 18,
+   "oracle": {
+    "O": [
+     "O|alphabet soup"
+    ],
+    "G": [
+     "G|in|basket"
+    ]
+   }
+  },
+  "libero_90:7": {
+   "zs": 0,
+   "ceiling": 7,
+   "bank": 0,
+   "bank_O": 0,
+   "bank_G": 0,
+   "oracle": {
+    "O": [
+     "O|cabinet drawer top"
+    ],
+    "G": []
+   }
+  },
+  "libero_90:9": {
+   "zs": 19,
+   "ceiling": 20,
+   "bank": 20,
+   "bank_O": 18,
+   "bank_G": 19,
+   "oracle": {
+    "O": [
+     "O|black bowl"
+    ],
+    "G": [
+     "G|on|plate"
+    ]
+   }
+  },
+  "libero_90:11": {
+   "zs": 0,
+   "ceiling": 15,
+   "bank": 0,
+   "bank_O": 0,
+   "bank_G": 0,
+   "oracle": {
+    "O": [
+     "O|cabinet drawer top"
+    ],
+    "G": []
+   }
+  },
+  "libero_90:36": {
+   "zs": 10,
+   "ceiling": 20,
+   "bank": 14,
+   "bank_O": 12,
+   "bank_G": 17,
+   "oracle": {
+    "O": [
+     "O|bowl white"
+    ],
+    "G": [
+     "G|on|plate"
+    ]
+   }
+  },
+  "libero_90:40": {
+   "zs": 0,
+   "ceiling": 1,
+   "bank": 3,
+   "bank_O": 4,
+   "bank_G": 3,
+   "oracle": {
+    "O": [
+     "O|frying pan"
+    ],
+    "G": [
+     "G|on|cabinet shelf"
+    ]
+   }
+  },
+  "libero_90:59": {
+   "zs": 20,
+   "ceiling": 13,
+   "bank": 20,
+   "bank_O": 20,
+   "bank_G": 20,
+   "oracle": {
+    "O": [
+     "O|sauce tomato"
+    ],
+    "G": [
+     "G|in|tray"
+    ]
+   }
+  },
+  "libero_90:61": {
+   "zs": 20,
+   "ceiling": 20,
+   "bank": 20,
+   "bank_O": 20,
+   "bank_G": 20,
+   "oracle": {
+    "O": [
+     "O|chocolate pudding"
+    ],
+    "G": [
+     "G|in|tray"
+    ]
+   }
+  }
+ },
+ "by_bin": {
+  "0.1": {
+   "zs": 77,
+   "bank": 78,
+   "bank_O": 77,
+   "bank_G": 78,
+   "ceiling": 81
+  },
+  "0.3": {
+   "zs": 43,
+   "bank": 46,
+   "bank_O": 40,
+   "bank_G": 41,
+   "ceiling": 73
+  },
+  "0.5": {
+   "zs": 50,
+   "bank": 57,
+   "bank_O": 56,
+   "bank_G": 60,
+   "ceiling": 69
+  }
+ },
+ "types": {
+  "zs": {
+   "success": 170,
+   "no_commit": 4,
+   "wrong_object": 4,
+   "wrong_goal": 56,
+   "motion": 25,
+   "fixture": 41
+  },
+  "bank": {
+   "success": 181,
+   "no_commit": 4,
+   "wrong_object": 3,
+   "wrong_goal": 48,
+   "motion": 23,
+   "fixture": 41
+  },
+  "bank_O": {
+   "success": 173,
+   "no_commit": 7,
+   "wrong_object": 2,
+   "wrong_goal": 52,
+   "motion": 25,
+   "fixture": 41
+  },
+  "bank_G": {
+   "success": 179,
+   "no_commit": 5,
+   "wrong_object": 3,
+   "wrong_goal": 47,
+   "motion": 25,
+   "fixture": 41
+  },
+  "ceiling": {
+   "success": 223,
+   "no_commit": 22,
+   "wrong_object": 4,
+   "wrong_goal": 1,
+   "motion": 26,
+   "fixture": 24
+  }
+ },
+ "types_ceiling_bind": 5,
+ "go": false,
+ "secondary": {
+  "bank_O_vs_zs": {
+   "x": 173,
+   "y": 170,
+   "n": 300,
+   "tasks": 15,
+   "diff": {
+    "diff": 0.01,
+    "lo": -0.03,
+    "hi": 0.056666666666666664,
+    "lo90": -0.023333333333333334,
+    "hi90": 0.05,
+    "n_pairs": 300,
+    "n_tasks": 15
+   },
+   "discordant": [
+    13,
+    10
+   ],
+   "sign_p": 0.6776394844055176,
+   "p_dir": 0.6776394844055176
+  },
+  "bank_G_vs_zs": {
+   "x": 179,
+   "y": 170,
+   "n": 300,
+   "tasks": 15,
+   "diff": {
+    "diff": 0.03,
+    "lo": -0.02,
+    "hi": 0.09666666666666666,
+    "lo90": -0.013333333333333334,
+    "hi90": 0.08333333333333333,
+    "n_pairs": 300,
+    "n_tasks": 15
+   },
+   "discordant": [
+    17,
+    8
+   ],
+   "sign_p": 0.10775214433670044,
+   "p_dir": 0.10775214433670044
+  },
+  "bank_vs_ceiling": {
+   "x": 181,
+   "y": 223,
+   "n": 300,
+   "tasks": 15,
+   "diff": {
+    "diff": -0.14,
+    "lo": -0.33,
+    "hi": 0.03,
+    "lo90": -0.2966666666666667,
+    "hi90": 0.006666666666666667,
+    "n_pairs": 300,
+    "n_tasks": 15
+   },
+   "discordant": [
+    23,
+    65
+   ],
+   "sign_p": 8.50110761369032e-06,
+   "p_dir": 1.0
+  },
+  "ceiling_vs_zs": {
+   "x": 223,
+   "y": 170,
+   "n": 300,
+   "tasks": 15,
+   "diff": {
+    "diff": 0.17666666666666667,
+    "lo": 0.0033333333333333335,
+    "hi": 0.36333333333333334,
+    "lo90": 0.02666666666666667,
+    "hi90": 0.3333333333333333,
+    "n_pairs": 300,
+    "n_tasks": 15
+   },
+   "discordant": [
+    74,
+    21
+   ],
+   "sign_p": 4.249891992384471e-08,
+   "p_dir": 4.249891992384471e-08
+  },
+  "bank_vs_bank_O": {
+   "x": 181,
+   "y": 173,
+   "n": 300,
+   "tasks": 15,
+   "diff": {
+    "diff": 0.02666666666666667,
+    "lo": -0.013333333333333334,
+    "hi": 0.07333333333333333,
+    "lo90": -0.006666666666666667,
+    "hi90": 0.06333333333333334,
+    "n_pairs": 300,
+    "n_tasks": 15
+   },
+   "discordant": [
+    19,
+    11
+   ],
+   "sign_p": 0.20048842206597328,
+   "p_dir": 0.20048842206597328
+  },
+  "bank_vs_bank_G": {
+   "x": 181,
+   "y": 179,
+   "n": 300,
+   "tasks": 15,
+   "diff": {
+    "diff": 0.006666666666666667,
+    "lo": -0.03666666666666667,
+    "hi": 0.04666666666666667,
+    "lo90": -0.02666666666666667,
+    "hi90": 0.04,
+    "n_pairs": 300,
+    "n_tasks": 15
+   },
+   "discordant": [
+    11,
+    9
+   ],
+   "sign_p": 0.8238029479980469,
+   "p_dir": 0.8238029479980469
+  }
+ },
+ "junk": {
+  "G|in|basket": {
+   "sources": 16,
+   "demos": 48,
+   "frames": 1024,
+   "seconds": {
+    "bank": 87.56054949760437,
+    "fit": 198.94557905197144,
+    "junk": 28.2247257232666
+   },
+   "fit": {
+    "mean": 0.0009322093637704293,
+    "sd": 0.0013000312717052955,
+    "cv": 1.394570063582249,
+    "positive_share": 0.7916666666666666,
+    "rel_mean": 0.043615722814102864,
+    "demos": 48
+   },
+   "held_out": {
+    "mean": -0.0011612147301699827,
+    "sd": 0.0018004210505269454,
+    "cv": 1.5504634963280164,
+    "positive_share": 0.25,
+    "rel_mean": -0.049888568469771175,
+    "demos": 8
+   }
+  },
+  "G|in|cabinet drawer top": {
+   "sources": 3,
+   "demos": 42,
+   "frames": 1024,
+   "seconds": {
+    "bank": 86.56351661682129,
+    "fit": 216.74288177490234,
+    "junk": 24.465179443359375
+   },
+   "fit": {
+    "mean": 0.0013497487459143457,
+    "sd": 0.0015253879933515375,
+    "cv": 1.130127364792038,
+    "positive_share": 0.7619047619047619,
+    "rel_mean": 0.0508632179477177,
+    "demos": 42
+   },
+   "held_out": {
+    "mean": -0.00043185681149932736,
+    "sd": 0.001740337442547464,
+    "cv": 4.029894622954615,
+    "positive_share": 0.16666666666666666,
+    "rel_mean": -0.02554557940790055,
+    "demos": 6
+   }
+  },
+  "G|in|tray": {
+   "sources": 4,
+   "demos": 40,
+   "frames": 1024,
+   "seconds": {
+    "bank": 87.72497797012329,
+    "fit": 219.33873414993286,
+    "junk": 27.12984275817871
+   },
+   "fit": {
+    "mean": 0.000987155937908705,
+    "sd": 0.0011696989005874994,
+    "cv": 1.1849180617456574,
+    "positive_share": 0.775,
+    "rel_mean": 0.037430888817493915,
+    "demos": 40
+   },
+   "held_out": {
+    "mean": -0.00045377413562164314,
+    "sd": 0.0009595923018179228,
+    "cv": 2.1146914874364517,
+    "positive_share": 0.25,
+    "rel_mean": -0.022097668527186722,
+    "demos": 8
+   }
+  },
+  "G|manip:close|cabinet drawer top": {
+   "sources": 4,
+   "demos": 40,
+   "frames": 1024,
+   "seconds": {
+    "bank": 85.80460166931152,
+    "fit": 232.77502059936523,
+    "junk": 26.574410676956177
+   },
+   "fit": {
+    "mean": 0.0016049483822725742,
+    "sd": 0.0011996154701557522,
+    "cv": 0.7474480073042107,
+    "positive_share": 0.9333333333333333,
+    "rel_mean": 0.0655782367892166,
+    "demos": 30
+   },
+   "held_out": {
+    "mean": 3.5577037932751444e-05,
+    "sd": 0.0021383706490066485,
+    "cv": 60.10535933454177,
+    "positive_share": 0.3333333333333333,
+    "rel_mean": -0.005021444290437131,
+    "demos": 6
+   }
+  },
+  "G|on|cabinet shelf": {
+   "sources": 2,
+   "demos": 40,
+   "frames": 1024,
+   "seconds": {
+    "bank": 86.36356902122498,
+    "fit": 207.45074939727783,
+    "junk": 21.28289794921875
+   },
+   "fit": {
+    "mean": 0.001409997870926967,
+    "sd": 0.0013728050601874847,
+    "cv": 0.9736220802127661,
+    "positive_share": 0.9,
+    "rel_mean": 0.056356903113638813,
+    "demos": 40
+   },
+   "held_out": {
+    "mean": -0.0005697136036057304,
+    "sd": 0.004008545561048759,
+    "cv": 7.0360713447574055,
+    "positive_share": 0.75,
+    "rel_mean": -0.02602051584005305,
+    "demos": 4
+   }
+  },
+  "G|on|plate": {
+   "sources": 15,
+   "demos": 45,
+   "frames": 1024,
+   "seconds": {
+    "bank": 87.21956419944763,
+    "fit": 210.5372347831726,
+    "junk": 28.798536777496338
+   },
+   "fit": {
+    "mean": 0.00188442392930065,
+    "sd": 0.0014547184066436621,
+    "cv": 0.7719698227264282,
+    "positive_share": 0.9111111111111111,
+    "rel_mean": 0.07489821087929623,
+    "demos": 45
+   },
+   "held_out": {
+    "mean": -0.0008798368720211633,
+    "sd": 0.0014975351352879496,
+    "cv": 1.7020599873790336,
+    "positive_share": 0.25,
+    "rel_mean": -0.03639009371053755,
+    "demos": 8
+   }
+  },
+  "O|alphabet soup": {
+   "sources": 3,
+   "demos": 42,
+   "frames": 1024,
+   "seconds": {
+    "bank": 85.96932983398438,
+    "fit": 205.64150476455688,
+    "junk": 24.88768744468689
+   },
+   "fit": {
+    "mean": 0.0007831226206596535,
+    "sd": 0.0016850550457427696,
+    "cv": 2.1517129007503124,
+    "positive_share": 0.7857142857142857,
+    "rel_mean": 0.04219125484899331,
+    "demos": 42
+   },
+   "held_out": {
+    "mean": 0.0003836151239132359,
+    "sd": 0.0005756105219651983,
+    "cv": 1.5004896472626739,
+    "positive_share": 0.6666666666666666,
+    "rel_mean": 0.022862324944326842,
+    "demos": 6
+   }
+  },
+  "O|black bowl": {
+   "sources": 1,
+   "demos": 40,
+   "frames": 1024,
+   "seconds": {
+    "bank": 85.97138094902039,
+    "fit": 200.42111587524414,
+    "junk": 17.354798316955566
+   },
+   "fit": {
+    "mean": 0.0006431549981289616,
+    "sd": 0.0012031378757993959,
+    "cv": 1.8706810633509994,
+    "positive_share": 0.725,
+    "rel_mean": 0.037398847959954476,
+    "demos": 40
+   },
+   "held_out": {
+    "mean": 0.0005324508044092617,
+    "sd": 0.0002458717079585231,
+    "cv": 0.4617735684169178,
+    "positive_share": 1.0,
+    "rel_mean": 0.034745158734360446,
+    "demos": 2
+   }
+  },
+  "O|black bowl front": {
+   "sources": 1,
+   "demos": 40,
+   "frames": 1024,
+   "seconds": {
+    "bank": 81.9888596534729,
+    "fit": 177.12154984474182,
+    "junk": 15.051072597503662
+   },
+   "fit": {
+    "mean": 0.0006436341667075487,
+    "sd": 0.0007915813433397616,
+    "cv": 1.2298622172110953,
+    "positive_share": 0.85,
+    "rel_mean": 0.03205535400212232,
+    "demos": 40
+   },
+   "held_out": {
+    "mean": -6.677745902076548e-05,
+    "sd": 0.000396097950753928,
+    "cv": 5.93161160311229,
+    "positive_share": 0.5,
+    "rel_mean": -0.006648635816412234,
+    "demos": 2
+   }
+  },
+  "O|black bowl middle": {
+   "sources": 2,
+   "demos": 40,
+   "frames": 1024,
+   "seconds": {
+    "bank": 84.0548164844513,
+    "fit": 204.7295639514923,
+    "junk": 21.03774094581604
+   },
+   "fit": {
+    "mean": 0.0007146660031993108,
+    "sd": 0.0007939090926083573,
+    "cv": 1.1108812914764419,
+    "positive_share": 0.85,
+    "rel_mean": 0.03559519436805278,
+    "demos": 40
+   },
+   "held_out": {
+    "mean": -1.0202307142512333e-05,
+    "sd": 0.0007331208753311549,
+    "cv": 71.85834195054657,
+    "positive_share": 0.5,
+    "rel_mean": 0.00028525251635590654,
+    "demos": 4
+   }
+  },
+  "O|bottom cabinet drawer": {
+   "sources": 2,
+   "demos": 40,
+   "frames": 1024,
+   "seconds": {
+    "bank": 85.84673643112183,
+    "fit": 199.8973696231842,
+    "junk": 21.161044120788574
+   },
+   "fit": {
+    "mean": 0.0005024101802266511,
+    "sd": 0.0005535746536348568,
+    "cv": 1.1018380507041556,
+    "positive_share": 0.75,
+    "rel_mean": 0.02304053389193597,
+    "demos": 40
+   },
+   "held_out": {
+    "mean": 0.00017145395092181114,
+    "sd": 0.0004504427758763953,
+    "cv": 2.6271939109867035,
+    "positive_share": 0.5,
+    "rel_mean": 0.007247045043561727,
+    "demos": 4
+   }
+  },
+  "O|bowl white": {
+   "sources": 2,
+   "demos": 40,
+   "frames": 1024,
+   "seconds": {
+    "bank": 88.6886818408966,
+    "fit": 176.91596388816833,
+    "junk": 19.06646752357483
+   },
+   "fit": {
+    "mean": 0.00039329492303134627,
+    "sd": 0.0009196667911765243,
+    "cv": 2.3383642587809996,
+    "positive_share": 0.75,
+    "rel_mean": 0.01706187082464212,
+    "demos": 40
+   },
+   "held_out": {
+    "mean": 6.442887130712416e-05,
+    "sd": 0.0005300879126494239,
+    "cv": 8.22749028339427,
+    "positive_share": 0.25,
+    "rel_mean": 0.012609117936793136,
+    "demos": 4
+   }
+  },
+  "O|cabinet drawer top": {
+   "sources": 4,
+   "demos": 40,
+   "frames": 1024,
+   "seconds": {
+    "bank": 84.06625270843506,
+    "fit": 155.70083141326904,
+    "junk": 25.105804443359375
+   },
+   "fit": {
+    "mean": 0.0005984321277847616,
+    "sd": 0.0006404964603728988,
+    "cv": 1.0702908995609048,
+    "positive_share": 0.8,
+    "rel_mean": 0.03654944643257456,
+    "demos": 40
+   },
+   "held_out": {
+    "mean": -0.00023923453879130352,
+    "sd": 0.0008080144395456632,
+    "cv": 3.3774991003725234,
+    "positive_share": 0.375,
+    "rel_mean": -0.01421867956775498,
+    "demos": 8
+   }
+  },
+  "O|chocolate pudding": {
+   "sources": 5,
+   "demos": 40,
+   "frames": 1024,
+   "seconds": {
+    "bank": 88.25736451148987,
+    "fit": 223.01757860183716,
+    "junk": 28.839528560638428
+   },
+   "fit": {
+    "mean": 0.0006654080287339641,
+    "sd": 0.001161974326997995,
+    "cv": 1.7462583509982899,
+    "positive_share": 0.775,
+    "rel_mean": 0.037857344770425856,
+    "demos": 40
+   },
+   "held_out": {
+    "mean": -0.0006850509836719232,
+    "sd": 0.00197353669434693,
+    "cv": 2.8808610474050114,
+    "positive_share": 0.375,
+    "rel_mean": -0.026550052185088387,
+    "demos": 8
+   }
+  },
+  "O|frying pan": {
+   "sources": 3,
+   "demos": 42,
+   "frames": 1024,
+   "seconds": {
+    "bank": 86.29731440544128,
+    "fit": 252.53241515159607,
+    "junk": 29.56874442100525
+   },
+   "fit": {
+    "mean": 0.000741992548874429,
+    "sd": 0.0010452062669965999,
+    "cv": 1.408647928583829,
+    "positive_share": 0.8095238095238095,
+    "rel_mean": 0.034235750842729167,
+    "demos": 42
+   },
+   "held_out": {
+    "mean": -0.00020713181099078307,
+    "sd": 0.001044722995097355,
+    "cv": 5.043759285935288,
+    "positive_share": 0.3333333333333333,
+    "rel_mean": -0.0069336117789064395,
+    "demos": 6
+   }
+  },
+  "O|sauce tomato": {
+   "sources": 2,
+   "demos": 40,
+   "frames": 1024,
+   "seconds": {
+    "bank": 93.19270992279053,
+    "fit": 241.39796996116638,
+    "junk": 24.667628049850464
+   },
+   "fit": {
+    "mean": 0.0006649207279019414,
+    "sd": 0.0011981900401184147,
+    "cv": 1.802004344035304,
+    "positive_share": 0.775,
+    "rel_mean": 0.03539084777598247,
+    "demos": 40
+   },
+   "held_out": {
+    "mean": -5.843172402819619e-06,
+    "sd": 0.000572687691580965,
+    "cv": 98.00972008024527,
+    "positive_share": 0.5,
+    "rel_mean": -0.0018584579819936097,
+    "demos": 4
+   }
+  }
+ },
+ "junk_flagged": [
+  "G|in|basket",
+  "G|in|cabinet drawer top",
+  "G|in|tray",
+  "G|manip:close|cabinet drawer top",
+  "G|on|plate",
+  "O|bowl white",
+  "O|cabinet drawer top",
+  "O|chocolate pudding",
+  "O|frying pan"
+ ],
+ "bytes": {
+  "per_token": 36864,
+  "bank_fitted": 589824,
+  "bank_admitted": 589824,
+  "per_task_served": {
+   "libero_90:0": 73728,
+   "libero_90:14": 73728,
+   "libero_90:16": 36864,
+   "libero_90:22": 36864,
+   "libero_90:60": 36864,
+   "libero_90:1": 110592,
+   "libero_90:29": 73728,
+   "libero_90:50": 73728,
+   "libero_90:7": 36864,
+   "libero_90:9": 73728,
+   "libero_90:11": 36864,
+   "libero_90:36": 73728,
+   "libero_90:40": 73728,
+   "libero_90:59": 73728,
+   "libero_90:61": 73728
+  },
+  "m1_token": 73728,
+  "m1_lora": 18710528
+ },
+ "fit_a40_s": {
+  "total": 4708.736288547516,
+  "per_token": 294.29601803421974
+ },
+ "H1": {
+  "tasks": 15,
+  "bank": 181,
+  "zs": 170,
+  "ceiling": 223,
+  "gap": 53,
+  "closure": 0.20754716981132076,
+  "D": {
+   "est": -0.051666666666666666,
+   "lo": -0.15,
+   "hi": 0.03666666666666667
+  },
+  "p": 0.863,
+  "closure_ci": [
+   0.0,
+   1.3
+  ],
+  "den_nonpositive_share": 0.022,
+  "closure_vs_m1_reference": 0.2037037037037037,
+  "passes": false
+ },
+ "H2": {
+  "x": 181,
+  "y": 170,
+  "n": 300,
+  "tasks": 15,
+  "diff": {
+   "diff": 0.03666666666666667,
+   "lo": 0.0,
+   "hi": 0.08333333333333333,
+   "lo90": 0.0033333333333333335,
+   "hi90": 0.07333333333333333,
+   "n_pairs": 300,
+   "n_tasks": 15
+  },
+  "discordant": [
+   15,
+   4
+  ],
+  "sign_p": 0.0192108154296875,
+  "p_dir": 0.0192108154296875,
+  "passes": false
+ },
+ "H3": {
+  "zs_bind": 60,
+  "bank_bind": 51,
+  "discordant": [
+   19,
+   10
+  ],
+  "sign_p": 0.13604594767093658,
+  "tasks": 15,
+  "diff": {
+   "diff": 0.03,
+   "lo": -0.03,
+   "hi": 0.10666666666666667,
+   "lo90": -0.023333333333333334,
+   "hi90": 0.09333333333333334,
+   "n_pairs": 300,
+   "n_tasks": 15
+  },
+  "p_dir": 0.13604594767093658,
+  "passes": false
+ },
+ "H4": {
+  "x": 158,
+  "y": 158,
+  "n": 160,
+  "tasks": 8,
+  "diff": {
+   "diff": 0.0,
+   "lo": -0.03125,
+   "hi": 0.03125,
+   "lo90": -0.025,
+   "hi90": 0.025,
+   "n_pairs": 160,
+   "n_tasks": 8
+  },
+  "discordant": [
+   2,
+   2
+  ],
+  "sign_p": 1.0,
+  "p_dir": 1.0,
+  "p_noninferior": 0.0018,
+  "per_cell": {
+   "libero_spatial:6": {
+    "served": 20,
+    "parity": 19,
+    "keys": [
+     "G|on|plate"
+    ]
+   },
+   "libero_90:70": {
+    "served": 19,
+    "parity": 20,
+    "keys": [
+     "O|chocolate pudding"
+    ]
+   },
+   "libero_90:72": {
+    "served": 20,
+    "parity": 20,
+    "keys": [
+     "G|on|plate"
+    ]
+   },
+   "libero_spatial:7": {
+    "served": 19,
+    "parity": 19,
+    "keys": [
+     "G|on|plate"
+    ]
+   },
+   "libero_goal:8": {
+    "served": 20,
+    "parity": 20,
+    "keys": [
+     "G|on|plate"
+    ]
+   },
+   "libero_90:52": {
+    "served": 20,
+    "parity": 20,
+    "keys": [
+     "G|in|basket"
+    ]
+   },
+   "libero_object:7": {
+    "served": 20,
+    "parity": 20,
+    "keys": [
+     "G|in|basket"
+    ]
+   },
+   "libero_90:42": {
+    "served": 20,
+    "parity": 20,
+    "keys": [
+     "O|frying pan"
+    ]
+   }
+  },
+  "mean_change": 0.0,
+  "passes": true
+ },
+ "holm": {
+  "H4": {
+   "p": 0.0018,
+   "threshold": 0.0125,
+   "reject": true
+  },
+  "H2": {
+   "p": 0.0192108154296875,
+   "threshold": 0.016666666666666666,
+   "reject": false
+  },
+  "H3": {
+   "p": 0.13604594767093658,
+   "threshold": 0.025,
+   "reject": false
+  },
+  "H1": {
+   "p": 0.863,
+   "threshold": 0.05,
+   "reject": false
+  }
+ }
+}

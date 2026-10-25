@@ -1,0 +1,730 @@
+{
+ "task": "libero_90:50",
+ "arms": {
+  "zs": {
+   "mode": "ours",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    }
+   ]
+  },
+  "ceiling": {
+   "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/m1/fits/libero_90_50/create.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "type": "motion",
+     "sub": "not_carried",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "type": "motion",
+     "sub": "not_carried",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "orange_juice_1"
+    }
+   ]
+  },
+  "bank": {
+   "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/rb2/specs/libero_90_50_e704e9fc328b.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "orange_juice_1"
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    }
+   ]
+  },
+  "bank_O": {
+   "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/rb2/specs/libero_90_50_8e7115312a63.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "orange_juice_1"
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    }
+   ]
+  },
+  "bank_G": {
+   "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/rb2/specs/libero_90_50_247a7c76a0c4.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 5,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 6,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 9,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "orange_juice_1"
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 14,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    },
+    {
+     "trial": 19,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "alphabet_soup_1"
+    }
+   ]
+  }
+ }
+}

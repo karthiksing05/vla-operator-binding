@@ -1,0 +1,730 @@
+{
+ "task": "libero_90:1",
+ "arms": {
+  "zs": {
+   "mode": "ours",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "chocolate_pudding_1"
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "chocolate_pudding_1"
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "type": "motion",
+     "sub": "not_carried",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "butter_1"
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "type": "wrong_goal",
+     "sub": "carried_elsewhere",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "type": "wrong_goal",
+     "sub": "carried_elsewhere",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "type": "motion",
+     "sub": "not_carried",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "type": "wrong_goal",
+     "sub": "other_region",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "type": "motion",
+     "sub": "not_carried",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "butter_1"
+    }
+   ]
+  },
+  "ceiling": {
+   "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/m1/fits/libero_90_1/create.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "chocolate_pudding_1"
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 3,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "butter_2"
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "type": "motion",
+     "sub": "in_region",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "butter_1"
+    },
+    {
+     "trial": 8,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "butter_1"
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "type": "motion",
+     "sub": "not_carried",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 15,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 16,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 17,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 18,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    }
+   ]
+  },
+  "bank": {
+   "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/rb2/specs/libero_90_1_6160b6d3d7e8.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 1,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "type": "wrong_goal",
+     "sub": "carried_elsewhere",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 4,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "chocolate_pudding_1"
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "chocolate_pudding_1"
+    },
+    {
+     "trial": 10,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "type": "motion",
+     "sub": "in_region",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "type": "motion",
+     "sub": "not_carried",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "type": "motion",
+     "sub": "not_carried",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "butter_1"
+    }
+   ]
+  },
+  "bank_O": {
+   "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/rb2/specs/libero_90_1_f4e52426ca30.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 2,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "type": "wrong_goal",
+     "sub": "other_region",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 7,
+     "success": false,
+     "type": "wrong_goal",
+     "sub": "other_region",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "butter_1"
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "type": "wrong_goal",
+     "sub": "carried_elsewhere",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 11,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 12,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 13,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "type": "motion",
+     "sub": "not_carried",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "butter_1"
+    }
+   ]
+  },
+  "bank_G": {
+   "mode": "lt:/coc/flash10/ksingara3/lifelong-ood-learner/results/rb2/specs/libero_90_1_39f75438e4b7.json",
+   "episodes": [
+    {
+     "trial": 0,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 1,
+     "success": false,
+     "type": "motion",
+     "sub": "in_region",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 2,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 3,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 4,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 5,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "chocolate_pudding_1"
+    },
+    {
+     "trial": 6,
+     "success": false,
+     "type": "motion",
+     "sub": "not_carried",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 7,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 8,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 9,
+     "success": false,
+     "type": "wrong_object",
+     "sub": "other_type",
+     "bound": "chocolate_pudding_1"
+    },
+    {
+     "trial": 10,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 11,
+     "success": false,
+     "type": "wrong_goal",
+     "sub": "other_region",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 12,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 13,
+     "success": true,
+     "type": "success",
+     "sub": "",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 14,
+     "success": false,
+     "type": "motion",
+     "sub": "not_carried",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 15,
+     "success": false,
+     "type": "motion",
+     "sub": "toward_target",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 16,
+     "success": false,
+     "type": "motion",
+     "sub": "in_region",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 17,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    },
+    {
+     "trial": 18,
+     "success": false,
+     "type": "motion",
+     "sub": "not_carried",
+     "bound": "akita_black_bowl_1"
+    },
+    {
+     "trial": 19,
+     "success": false,
+     "type": "no_commit",
+     "sub": "",
+     "bound": null
+    }
+   ]
+  }
+ }
+}

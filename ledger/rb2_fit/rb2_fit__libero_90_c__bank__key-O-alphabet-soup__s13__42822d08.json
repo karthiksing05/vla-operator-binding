@@ -1,0 +1,84 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 36864,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 36864,
+  "tree": 0
+ },
+ "command": "experiments/rb2_bank.py --fit --kid 5768e1bd3258",
+ "config": {
+  "batch": 32,
+  "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "data": "/coc/flash10/ksingara3/robot/data/hf/lerobot/lol/libero_l90c",
+  "lr": 0.01,
+  "n_role": 2,
+  "steps": 1000
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "megazord.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4225976",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "rb2_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "42822d0872af58163d5e869b509c061f12fa9e62",
+  "short": "42822d08"
+ },
+ "keys": {
+  "key": "O|alphabet soup"
+ },
+ "metrics": {
+  "final_loss": 0.016588548198342323,
+  "junk": {
+   "fit": {
+    "cv": 2.1517129007503124,
+    "demos": 42,
+    "mean": 0.0007831226206596535,
+    "positive_share": 0.7857142857142857,
+    "rel_mean": 0.04219125484899331,
+    "sd": 0.0016850550457427696
+   },
+   "held_out": {
+    "cv": 1.5004896472626739,
+    "demos": 6,
+    "mean": 0.0003836151239132359,
+    "positive_share": 0.6666666666666666,
+    "rel_mean": 0.022862324944326842,
+    "sd": 0.0005756105219651983
+   }
+  },
+  "n_demos": 42,
+  "n_frames": 1024,
+  "seconds": {
+   "bank": 85.96932983398438,
+   "fit": 205.64150476455688,
+   "junk": 24.88768744468689
+  },
+  "sources": [
+   "25",
+   "31",
+   "54"
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "rb2_fit__libero_90_c__bank__key-O-alphabet-soup__s13__42822d08",
+ "schema": 1,
+ "script": "experiments/rb2_bank.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-25T00:54:39+00:00",
+ "stream": null,
+ "tag": "bank"
+}

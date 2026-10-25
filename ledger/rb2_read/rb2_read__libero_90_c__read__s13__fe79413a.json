@@ -1,0 +1,1286 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 589824,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 589824,
+  "tree": 0
+ },
+ "command": "experiments/rb2_bank.py --read --record",
+ "config": {
+  "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "plan": {
+   "batch": 32,
+   "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+   "d_min": 3,
+   "d_tot": 40,
+   "data": "/coc/flash10/ksingara3/robot/data/hf/lerobot/lol/libero_l90c",
+   "f_hold": 24,
+   "f_max": 1024,
+   "fresh": {
+    "base": 7500000,
+    "dir": "fresh_rb2",
+    "n": 20
+   },
+   "gate_tol": 0.15,
+   "hold_max": 8,
+   "hold_per": 2,
+   "k_draws": 2,
+   "lr": 0.01,
+   "min_frames": 50,
+   "n_damage": 8,
+   "n_role": 2,
+   "prep_class": {
+    "in": "in",
+    "inside": "in",
+    "into": "in",
+    "on": "on",
+    "on top of": "on",
+    "onto": "on"
+   },
+   "seed": 13,
+   "steps": 1000
+  },
+  "prereg": "m3_prereg tag pr2_bank"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4227771",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "rb2_read",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "fe79413aac28bf06ee3c07c37b409b0342653bfa",
+  "short": "fe79413a"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": {
+   "D": {
+    "est": -0.051666666666666666,
+    "hi": 0.03666666666666667,
+    "lo": -0.15
+   },
+   "bank": 181,
+   "ceiling": 223,
+   "closure": 0.20754716981132076,
+   "closure_ci": [
+    0.0,
+    1.3
+   ],
+   "closure_vs_m1_reference": 0.2037037037037037,
+   "den_nonpositive_share": 0.022,
+   "gap": 53,
+   "p": 0.863,
+   "passes": false,
+   "tasks": 15,
+   "zs": 170
+  },
+  "H2": {
+   "diff": {
+    "diff": 0.03666666666666667,
+    "hi": 0.08333333333333333,
+    "hi90": 0.07333333333333333,
+    "lo": 0.0,
+    "lo90": 0.0033333333333333335,
+    "n_pairs": 300,
+    "n_tasks": 15
+   },
+   "discordant": [
+    15,
+    4
+   ],
+   "n": 300,
+   "p_dir": 0.0192108154296875,
+   "passes": false,
+   "sign_p": 0.0192108154296875,
+   "tasks": 15,
+   "x": 181,
+   "y": 170
+  },
+  "H3": {
+   "bank_bind": 51,
+   "diff": {
+    "diff": 0.03,
+    "hi": 0.10666666666666667,
+    "hi90": 0.09333333333333334,
+    "lo": -0.03,
+    "lo90": -0.023333333333333334,
+    "n_pairs": 300,
+    "n_tasks": 15
+   },
+   "discordant": [
+    19,
+    10
+   ],
+   "p_dir": 0.13604594767093658,
+   "passes": false,
+   "sign_p": 0.13604594767093658,
+   "tasks": 15,
+   "zs_bind": 60
+  },
+  "H4": {
+   "diff": {
+    "diff": 0.0,
+    "hi": 0.03125,
+    "hi90": 0.025,
+    "lo": -0.03125,
+    "lo90": -0.025,
+    "n_pairs": 160,
+    "n_tasks": 8
+   },
+   "discordant": [
+    2,
+    2
+   ],
+   "mean_change": 0.0,
+   "n": 160,
+   "p_dir": 1.0,
+   "p_noninferior": 0.0018,
+   "passes": true,
+   "per_cell": {
+    "libero_90:42": {
+     "keys": [
+      "O|frying pan"
+     ],
+     "parity": 20,
+     "served": 20
+    },
+    "libero_90:52": {
+     "keys": [
+      "G|in|basket"
+     ],
+     "parity": 20,
+     "served": 20
+    },
+    "libero_90:70": {
+     "keys": [
+      "O|chocolate pudding"
+     ],
+     "parity": 20,
+     "served": 19
+    },
+    "libero_90:72": {
+     "keys": [
+      "G|on|plate"
+     ],
+     "parity": 20,
+     "served": 20
+    },
+    "libero_goal:8": {
+     "keys": [
+      "G|on|plate"
+     ],
+     "parity": 20,
+     "served": 20
+    },
+    "libero_object:7": {
+     "keys": [
+      "G|in|basket"
+     ],
+     "parity": 20,
+     "served": 20
+    },
+    "libero_spatial:6": {
+     "keys": [
+      "G|on|plate"
+     ],
+     "parity": 19,
+     "served": 20
+    },
+    "libero_spatial:7": {
+     "keys": [
+      "G|on|plate"
+     ],
+     "parity": 19,
+     "served": 19
+    }
+   },
+   "sign_p": 1.0,
+   "tasks": 8,
+   "x": 158,
+   "y": 158
+  },
+  "by_bin": {
+   "0.1": {
+    "bank": 78,
+    "bank_G": 78,
+    "bank_O": 77,
+    "ceiling": 81,
+    "zs": 77
+   },
+   "0.3": {
+    "bank": 46,
+    "bank_G": 41,
+    "bank_O": 40,
+    "ceiling": 73,
+    "zs": 43
+   },
+   "0.5": {
+    "bank": 57,
+    "bank_G": 60,
+    "bank_O": 56,
+    "ceiling": 69,
+    "zs": 50
+   }
+  },
+  "bytes": {
+   "bank_admitted": 589824,
+   "bank_fitted": 589824,
+   "m1_lora": 18710528,
+   "m1_token": 73728,
+   "per_task_served": {
+    "libero_90:0": 73728,
+    "libero_90:1": 110592,
+    "libero_90:11": 36864,
+    "libero_90:14": 73728,
+    "libero_90:16": 36864,
+    "libero_90:22": 36864,
+    "libero_90:29": 73728,
+    "libero_90:36": 73728,
+    "libero_90:40": 73728,
+    "libero_90:50": 73728,
+    "libero_90:59": 73728,
+    "libero_90:60": 36864,
+    "libero_90:61": 73728,
+    "libero_90:7": 36864,
+    "libero_90:9": 73728
+   },
+   "per_token": 36864
+  },
+  "fit_a40_s": {
+   "per_token": 294.29601803421974,
+   "total": 4708.736288547516
+  },
+  "gate": {
+   "admitted": [
+    "G|in|basket",
+    "G|in|cabinet drawer top",
+    "G|in|tray",
+    "G|manip:close|cabinet drawer top",
+    "G|on|cabinet shelf",
+    "G|on|plate",
+    "O|alphabet soup",
+    "O|black bowl",
+    "O|black bowl front",
+    "O|black bowl middle",
+    "O|bottom cabinet drawer",
+    "O|bowl white",
+    "O|cabinet drawer top",
+    "O|chocolate pudding",
+    "O|frying pan",
+    "O|sauce tomato"
+   ],
+   "cells": {
+    "libero_90:13": {
+     "change": -0.05,
+     "keys": [
+      "G|on|plate",
+      "O|black bowl front"
+     ],
+     "parity": 20,
+     "passes": true,
+     "served": 19
+    },
+    "libero_90:15": {
+     "change": 0.0,
+     "keys": [
+      "O|black bowl middle"
+     ],
+     "parity": 20,
+     "passes": true,
+     "served": 20
+    },
+    "libero_90:25": {
+     "change": 0.0,
+     "keys": [
+      "O|black bowl"
+     ],
+     "parity": 20,
+     "passes": true,
+     "served": 20
+    },
+    "libero_90:37": {
+     "change": 0.05,
+     "keys": [
+      "O|bowl white"
+     ],
+     "parity": 19,
+     "passes": true,
+     "served": 20
+    },
+    "libero_90:41": {
+     "change": 0.0,
+     "keys": [
+      "O|frying pan"
+     ],
+     "parity": 20,
+     "passes": true,
+     "served": 20
+    },
+    "libero_90:5": {
+     "change": 0.0,
+     "keys": [
+      "G|in|cabinet drawer top",
+      "G|manip:close|cabinet drawer top",
+      "O|cabinet drawer top",
+      "O|chocolate pudding"
+     ],
+     "parity": 20,
+     "passes": true,
+     "served": 20
+    },
+    "libero_90:55": {
+     "change": 0.0,
+     "keys": [
+      "G|in|tray",
+      "O|alphabet soup"
+     ],
+     "parity": 20,
+     "passes": true,
+     "served": 20
+    },
+    "libero_90:6": {
+     "change": 0.05,
+     "keys": [
+      "O|bottom cabinet drawer"
+     ],
+     "parity": 16,
+     "passes": true,
+     "served": 17
+    },
+    "libero_90:88": {
+     "change": 0.0,
+     "keys": [
+      "G|on|cabinet shelf"
+     ],
+     "parity": 20,
+     "passes": true,
+     "served": 20
+    },
+    "libero_object:5": {
+     "change": 0.05,
+     "keys": [
+      "G|in|basket",
+      "O|sauce tomato"
+     ],
+     "parity": 17,
+     "passes": true,
+     "served": 18
+    }
+   },
+   "rejected": []
+  },
+  "go": false,
+  "holm": {
+   "H1": {
+    "p": 0.863,
+    "reject": false,
+    "threshold": 0.05
+   },
+   "H2": {
+    "p": 0.0192108154296875,
+    "reject": false,
+    "threshold": 0.016666666666666666
+   },
+   "H3": {
+    "p": 0.13604594767093658,
+    "reject": false,
+    "threshold": 0.025
+   },
+   "H4": {
+    "p": 0.0018,
+    "reject": true,
+    "threshold": 0.0125
+   }
+  },
+  "junk": {
+   "G|in|basket": {
+    "demos": 48,
+    "fit": {
+     "cv": 1.394570063582249,
+     "demos": 48,
+     "mean": 0.0009322093637704293,
+     "positive_share": 0.7916666666666666,
+     "rel_mean": 0.043615722814102864,
+     "sd": 0.0013000312717052955
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 1.5504634963280164,
+     "demos": 8,
+     "mean": -0.0011612147301699827,
+     "positive_share": 0.25,
+     "rel_mean": -0.049888568469771175,
+     "sd": 0.0018004210505269454
+    },
+    "seconds": {
+     "bank": 87.56054949760437,
+     "fit": 198.94557905197144,
+     "junk": 28.2247257232666
+    },
+    "sources": 16
+   },
+   "G|in|cabinet drawer top": {
+    "demos": 42,
+    "fit": {
+     "cv": 1.130127364792038,
+     "demos": 42,
+     "mean": 0.0013497487459143457,
+     "positive_share": 0.7619047619047619,
+     "rel_mean": 0.0508632179477177,
+     "sd": 0.0015253879933515375
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 4.029894622954615,
+     "demos": 6,
+     "mean": -0.00043185681149932736,
+     "positive_share": 0.16666666666666666,
+     "rel_mean": -0.02554557940790055,
+     "sd": 0.001740337442547464
+    },
+    "seconds": {
+     "bank": 86.56351661682129,
+     "fit": 216.74288177490234,
+     "junk": 24.465179443359375
+    },
+    "sources": 3
+   },
+   "G|in|tray": {
+    "demos": 40,
+    "fit": {
+     "cv": 1.1849180617456574,
+     "demos": 40,
+     "mean": 0.000987155937908705,
+     "positive_share": 0.775,
+     "rel_mean": 0.037430888817493915,
+     "sd": 0.0011696989005874994
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 2.1146914874364517,
+     "demos": 8,
+     "mean": -0.00045377413562164314,
+     "positive_share": 0.25,
+     "rel_mean": -0.022097668527186722,
+     "sd": 0.0009595923018179228
+    },
+    "seconds": {
+     "bank": 87.72497797012329,
+     "fit": 219.33873414993286,
+     "junk": 27.12984275817871
+    },
+    "sources": 4
+   },
+   "G|manip:close|cabinet drawer top": {
+    "demos": 40,
+    "fit": {
+     "cv": 0.7474480073042107,
+     "demos": 30,
+     "mean": 0.0016049483822725742,
+     "positive_share": 0.9333333333333333,
+     "rel_mean": 0.0655782367892166,
+     "sd": 0.0011996154701557522
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 60.10535933454177,
+     "demos": 6,
+     "mean": 3.5577037932751444e-05,
+     "positive_share": 0.3333333333333333,
+     "rel_mean": -0.005021444290437131,
+     "sd": 0.0021383706490066485
+    },
+    "seconds": {
+     "bank": 85.80460166931152,
+     "fit": 232.77502059936523,
+     "junk": 26.574410676956177
+    },
+    "sources": 4
+   },
+   "G|on|cabinet shelf": {
+    "demos": 40,
+    "fit": {
+     "cv": 0.9736220802127661,
+     "demos": 40,
+     "mean": 0.001409997870926967,
+     "positive_share": 0.9,
+     "rel_mean": 0.056356903113638813,
+     "sd": 0.0013728050601874847
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 7.0360713447574055,
+     "demos": 4,
+     "mean": -0.0005697136036057304,
+     "positive_share": 0.75,
+     "rel_mean": -0.02602051584005305,
+     "sd": 0.004008545561048759
+    },
+    "seconds": {
+     "bank": 86.36356902122498,
+     "fit": 207.45074939727783,
+     "junk": 21.28289794921875
+    },
+    "sources": 2
+   },
+   "G|on|plate": {
+    "demos": 45,
+    "fit": {
+     "cv": 0.7719698227264282,
+     "demos": 45,
+     "mean": 0.00188442392930065,
+     "positive_share": 0.9111111111111111,
+     "rel_mean": 0.07489821087929623,
+     "sd": 0.0014547184066436621
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 1.7020599873790336,
+     "demos": 8,
+     "mean": -0.0008798368720211633,
+     "positive_share": 0.25,
+     "rel_mean": -0.03639009371053755,
+     "sd": 0.0014975351352879496
+    },
+    "seconds": {
+     "bank": 87.21956419944763,
+     "fit": 210.5372347831726,
+     "junk": 28.798536777496338
+    },
+    "sources": 15
+   },
+   "O|alphabet soup": {
+    "demos": 42,
+    "fit": {
+     "cv": 2.1517129007503124,
+     "demos": 42,
+     "mean": 0.0007831226206596535,
+     "positive_share": 0.7857142857142857,
+     "rel_mean": 0.04219125484899331,
+     "sd": 0.0016850550457427696
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 1.5004896472626739,
+     "demos": 6,
+     "mean": 0.0003836151239132359,
+     "positive_share": 0.6666666666666666,
+     "rel_mean": 0.022862324944326842,
+     "sd": 0.0005756105219651983
+    },
+    "seconds": {
+     "bank": 85.96932983398438,
+     "fit": 205.64150476455688,
+     "junk": 24.88768744468689
+    },
+    "sources": 3
+   },
+   "O|black bowl": {
+    "demos": 40,
+    "fit": {
+     "cv": 1.8706810633509994,
+     "demos": 40,
+     "mean": 0.0006431549981289616,
+     "positive_share": 0.725,
+     "rel_mean": 0.037398847959954476,
+     "sd": 0.0012031378757993959
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 0.4617735684169178,
+     "demos": 2,
+     "mean": 0.0005324508044092617,
+     "positive_share": 1.0,
+     "rel_mean": 0.034745158734360446,
+     "sd": 0.0002458717079585231
+    },
+    "seconds": {
+     "bank": 85.97138094902039,
+     "fit": 200.42111587524414,
+     "junk": 17.354798316955566
+    },
+    "sources": 1
+   },
+   "O|black bowl front": {
+    "demos": 40,
+    "fit": {
+     "cv": 1.2298622172110953,
+     "demos": 40,
+     "mean": 0.0006436341667075487,
+     "positive_share": 0.85,
+     "rel_mean": 0.03205535400212232,
+     "sd": 0.0007915813433397616
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 5.93161160311229,
+     "demos": 2,
+     "mean": -6.677745902076548e-05,
+     "positive_share": 0.5,
+     "rel_mean": -0.006648635816412234,
+     "sd": 0.000396097950753928
+    },
+    "seconds": {
+     "bank": 81.9888596534729,
+     "fit": 177.12154984474182,
+     "junk": 15.051072597503662
+    },
+    "sources": 1
+   },
+   "O|black bowl middle": {
+    "demos": 40,
+    "fit": {
+     "cv": 1.1108812914764419,
+     "demos": 40,
+     "mean": 0.0007146660031993108,
+     "positive_share": 0.85,
+     "rel_mean": 0.03559519436805278,
+     "sd": 0.0007939090926083573
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 71.85834195054657,
+     "demos": 4,
+     "mean": -1.0202307142512333e-05,
+     "positive_share": 0.5,
+     "rel_mean": 0.00028525251635590654,
+     "sd": 0.0007331208753311549
+    },
+    "seconds": {
+     "bank": 84.0548164844513,
+     "fit": 204.7295639514923,
+     "junk": 21.03774094581604
+    },
+    "sources": 2
+   },
+   "O|bottom cabinet drawer": {
+    "demos": 40,
+    "fit": {
+     "cv": 1.1018380507041556,
+     "demos": 40,
+     "mean": 0.0005024101802266511,
+     "positive_share": 0.75,
+     "rel_mean": 0.02304053389193597,
+     "sd": 0.0005535746536348568
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 2.6271939109867035,
+     "demos": 4,
+     "mean": 0.00017145395092181114,
+     "positive_share": 0.5,
+     "rel_mean": 0.007247045043561727,
+     "sd": 0.0004504427758763953
+    },
+    "seconds": {
+     "bank": 85.84673643112183,
+     "fit": 199.8973696231842,
+     "junk": 21.161044120788574
+    },
+    "sources": 2
+   },
+   "O|bowl white": {
+    "demos": 40,
+    "fit": {
+     "cv": 2.3383642587809996,
+     "demos": 40,
+     "mean": 0.00039329492303134627,
+     "positive_share": 0.75,
+     "rel_mean": 0.01706187082464212,
+     "sd": 0.0009196667911765243
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 8.22749028339427,
+     "demos": 4,
+     "mean": 6.442887130712416e-05,
+     "positive_share": 0.25,
+     "rel_mean": 0.012609117936793136,
+     "sd": 0.0005300879126494239
+    },
+    "seconds": {
+     "bank": 88.6886818408966,
+     "fit": 176.91596388816833,
+     "junk": 19.06646752357483
+    },
+    "sources": 2
+   },
+   "O|cabinet drawer top": {
+    "demos": 40,
+    "fit": {
+     "cv": 1.0702908995609048,
+     "demos": 40,
+     "mean": 0.0005984321277847616,
+     "positive_share": 0.8,
+     "rel_mean": 0.03654944643257456,
+     "sd": 0.0006404964603728988
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 3.3774991003725234,
+     "demos": 8,
+     "mean": -0.00023923453879130352,
+     "positive_share": 0.375,
+     "rel_mean": -0.01421867956775498,
+     "sd": 0.0008080144395456632
+    },
+    "seconds": {
+     "bank": 84.06625270843506,
+     "fit": 155.70083141326904,
+     "junk": 25.105804443359375
+    },
+    "sources": 4
+   },
+   "O|chocolate pudding": {
+    "demos": 40,
+    "fit": {
+     "cv": 1.7462583509982899,
+     "demos": 40,
+     "mean": 0.0006654080287339641,
+     "positive_share": 0.775,
+     "rel_mean": 0.037857344770425856,
+     "sd": 0.001161974326997995
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 2.8808610474050114,
+     "demos": 8,
+     "mean": -0.0006850509836719232,
+     "positive_share": 0.375,
+     "rel_mean": -0.026550052185088387,
+     "sd": 0.00197353669434693
+    },
+    "seconds": {
+     "bank": 88.25736451148987,
+     "fit": 223.01757860183716,
+     "junk": 28.839528560638428
+    },
+    "sources": 5
+   },
+   "O|frying pan": {
+    "demos": 42,
+    "fit": {
+     "cv": 1.408647928583829,
+     "demos": 42,
+     "mean": 0.000741992548874429,
+     "positive_share": 0.8095238095238095,
+     "rel_mean": 0.034235750842729167,
+     "sd": 0.0010452062669965999
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 5.043759285935288,
+     "demos": 6,
+     "mean": -0.00020713181099078307,
+     "positive_share": 0.3333333333333333,
+     "rel_mean": -0.0069336117789064395,
+     "sd": 0.001044722995097355
+    },
+    "seconds": {
+     "bank": 86.29731440544128,
+     "fit": 252.53241515159607,
+     "junk": 29.56874442100525
+    },
+    "sources": 3
+   },
+   "O|sauce tomato": {
+    "demos": 40,
+    "fit": {
+     "cv": 1.802004344035304,
+     "demos": 40,
+     "mean": 0.0006649207279019414,
+     "positive_share": 0.775,
+     "rel_mean": 0.03539084777598247,
+     "sd": 0.0011981900401184147
+    },
+    "frames": 1024,
+    "held_out": {
+     "cv": 98.00972008024527,
+     "demos": 4,
+     "mean": -5.843172402819619e-06,
+     "positive_share": 0.5,
+     "rel_mean": -0.0018584579819936097,
+     "sd": 0.000572687691580965
+    },
+    "seconds": {
+     "bank": 93.19270992279053,
+     "fit": 241.39796996116638,
+     "junk": 24.667628049850464
+    },
+    "sources": 2
+   }
+  },
+  "junk_flagged": [
+   "G|in|basket",
+   "G|in|cabinet drawer top",
+   "G|in|tray",
+   "G|manip:close|cabinet drawer top",
+   "G|on|plate",
+   "O|bowl white",
+   "O|cabinet drawer top",
+   "O|chocolate pudding",
+   "O|frying pan"
+  ],
+  "missing": [],
+  "per_task": {
+   "libero_90:0": {
+    "bank": 19,
+    "bank_G": 19,
+    "bank_O": 19,
+    "ceiling": 14,
+    "oracle": {
+     "G": [
+      "G|manip:close|cabinet drawer top"
+     ],
+     "O": [
+      "O|cabinet drawer top"
+     ]
+    },
+    "zs": 19
+   },
+   "libero_90:1": {
+    "bank": 6,
+    "bank_G": 3,
+    "bank_O": 3,
+    "ceiling": 10,
+    "oracle": {
+     "G": [
+      "G|manip:close|cabinet drawer top"
+     ],
+     "O": [
+      "O|black bowl",
+      "O|cabinet drawer top"
+     ]
+    },
+    "zs": 4
+   },
+   "libero_90:11": {
+    "bank": 0,
+    "bank_G": 0,
+    "bank_O": 0,
+    "ceiling": 15,
+    "oracle": {
+     "G": [],
+     "O": [
+      "O|cabinet drawer top"
+     ]
+    },
+    "zs": 0
+   },
+   "libero_90:14": {
+    "bank": 20,
+    "bank_G": 20,
+    "bank_O": 19,
+    "ceiling": 20,
+    "oracle": {
+     "G": [
+      "G|on|plate"
+     ],
+     "O": [
+      "O|black bowl middle"
+     ]
+    },
+    "zs": 19
+   },
+   "libero_90:16": {
+    "bank": 0,
+    "bank_G": 0,
+    "bank_O": 0,
+    "ceiling": 7,
+    "oracle": {
+     "G": [],
+     "O": [
+      "O|black bowl front"
+     ]
+    },
+    "zs": 0
+   },
+   "libero_90:22": {
+    "bank": 20,
+    "bank_G": 20,
+    "bank_O": 20,
+    "ceiling": 20,
+    "oracle": {
+     "G": [],
+     "O": [
+      "O|bottom cabinet drawer"
+     ]
+    },
+    "zs": 20
+   },
+   "libero_90:29": {
+    "bank": 1,
+    "bank_G": 1,
+    "bank_O": 1,
+    "ceiling": 20,
+    "oracle": {
+     "G": [
+      "G|in|cabinet drawer top"
+     ],
+     "O": [
+      "O|black bowl"
+     ]
+    },
+    "zs": 1
+   },
+   "libero_90:36": {
+    "bank": 14,
+    "bank_G": 17,
+    "bank_O": 12,
+    "ceiling": 20,
+    "oracle": {
+     "G": [
+      "G|on|plate"
+     ],
+     "O": [
+      "O|bowl white"
+     ]
+    },
+    "zs": 10
+   },
+   "libero_90:40": {
+    "bank": 3,
+    "bank_G": 3,
+    "bank_O": 4,
+    "ceiling": 1,
+    "oracle": {
+     "G": [
+      "G|on|cabinet shelf"
+     ],
+     "O": [
+      "O|frying pan"
+     ]
+    },
+    "zs": 0
+   },
+   "libero_90:50": {
+    "bank": 19,
+    "bank_G": 18,
+    "bank_O": 18,
+    "ceiling": 16,
+    "oracle": {
+     "G": [
+      "G|in|basket"
+     ],
+     "O": [
+      "O|alphabet soup"
+     ]
+    },
+    "zs": 19
+   },
+   "libero_90:59": {
+    "bank": 20,
+    "bank_G": 20,
+    "bank_O": 20,
+    "ceiling": 13,
+    "oracle": {
+     "G": [
+      "G|in|tray"
+     ],
+     "O": [
+      "O|sauce tomato"
+     ]
+    },
+    "zs": 20
+   },
+   "libero_90:60": {
+    "bank": 19,
+    "bank_G": 19,
+    "bank_O": 19,
+    "ceiling": 20,
+    "oracle": {
+     "G": [
+      "G|in|tray"
+     ],
+     "O": []
+    },
+    "zs": 19
+   },
+   "libero_90:61": {
+    "bank": 20,
+    "bank_G": 20,
+    "bank_O": 20,
+    "ceiling": 20,
+    "oracle": {
+     "G": [
+      "G|in|tray"
+     ],
+     "O": [
+      "O|chocolate pudding"
+     ]
+    },
+    "zs": 20
+   },
+   "libero_90:7": {
+    "bank": 0,
+    "bank_G": 0,
+    "bank_O": 0,
+    "ceiling": 7,
+    "oracle": {
+     "G": [],
+     "O": [
+      "O|cabinet drawer top"
+     ]
+    },
+    "zs": 0
+   },
+   "libero_90:9": {
+    "bank": 20,
+    "bank_G": 19,
+    "bank_O": 18,
+    "ceiling": 20,
+    "oracle": {
+     "G": [
+      "G|on|plate"
+     ],
+     "O": [
+      "O|black bowl"
+     ]
+    },
+    "zs": 19
+   }
+  },
+  "rate_ci": {
+   "bank": {
+    "hi": 0.82,
+    "k": 181,
+    "lo": 0.37666666666666665,
+    "n": 300,
+    "rate": 0.6033333333333334,
+    "tasks": 15
+   },
+   "bank_G": {
+    "hi": 0.8134166666666655,
+    "k": 179,
+    "lo": 0.36333333333333334,
+    "n": 300,
+    "rate": 0.5966666666666667,
+    "tasks": 15
+   },
+   "bank_O": {
+    "hi": 0.79,
+    "k": 173,
+    "lo": 0.35333333333333333,
+    "n": 300,
+    "rate": 0.5766666666666667,
+    "tasks": 15
+   },
+   "ceiling": {
+    "hi": 0.89,
+    "k": 223,
+    "lo": 0.5833333333333334,
+    "n": 300,
+    "rate": 0.7433333333333333,
+    "tasks": 15
+   },
+   "zs": {
+    "hi": 0.79,
+    "k": 170,
+    "lo": 0.33666666666666667,
+    "n": 300,
+    "rate": 0.5666666666666667,
+    "tasks": 15
+   }
+  },
+  "secondary": {
+   "bank_G_vs_zs": {
+    "diff": {
+     "diff": 0.03,
+     "hi": 0.09666666666666666,
+     "hi90": 0.08333333333333333,
+     "lo": -0.02,
+     "lo90": -0.013333333333333334,
+     "n_pairs": 300,
+     "n_tasks": 15
+    },
+    "discordant": [
+     17,
+     8
+    ],
+    "n": 300,
+    "p_dir": 0.10775214433670044,
+    "sign_p": 0.10775214433670044,
+    "tasks": 15,
+    "x": 179,
+    "y": 170
+   },
+   "bank_O_vs_zs": {
+    "diff": {
+     "diff": 0.01,
+     "hi": 0.056666666666666664,
+     "hi90": 0.05,
+     "lo": -0.03,
+     "lo90": -0.023333333333333334,
+     "n_pairs": 300,
+     "n_tasks": 15
+    },
+    "discordant": [
+     13,
+     10
+    ],
+    "n": 300,
+    "p_dir": 0.6776394844055176,
+    "sign_p": 0.6776394844055176,
+    "tasks": 15,
+    "x": 173,
+    "y": 170
+   },
+   "bank_vs_bank_G": {
+    "diff": {
+     "diff": 0.006666666666666667,
+     "hi": 0.04666666666666667,
+     "hi90": 0.04,
+     "lo": -0.03666666666666667,
+     "lo90": -0.02666666666666667,
+     "n_pairs": 300,
+     "n_tasks": 15
+    },
+    "discordant": [
+     11,
+     9
+    ],
+    "n": 300,
+    "p_dir": 0.8238029479980469,
+    "sign_p": 0.8238029479980469,
+    "tasks": 15,
+    "x": 181,
+    "y": 179
+   },
+   "bank_vs_bank_O": {
+    "diff": {
+     "diff": 0.02666666666666667,
+     "hi": 0.07333333333333333,
+     "hi90": 0.06333333333333334,
+     "lo": -0.013333333333333334,
+     "lo90": -0.006666666666666667,
+     "n_pairs": 300,
+     "n_tasks": 15
+    },
+    "discordant": [
+     19,
+     11
+    ],
+    "n": 300,
+    "p_dir": 0.20048842206597328,
+    "sign_p": 0.20048842206597328,
+    "tasks": 15,
+    "x": 181,
+    "y": 173
+   },
+   "bank_vs_ceiling": {
+    "diff": {
+     "diff": -0.14,
+     "hi": 0.03,
+     "hi90": 0.006666666666666667,
+     "lo": -0.33,
+     "lo90": -0.2966666666666667,
+     "n_pairs": 300,
+     "n_tasks": 15
+    },
+    "discordant": [
+     23,
+     65
+    ],
+    "n": 300,
+    "p_dir": 1.0,
+    "sign_p": 8.50110761369032e-06,
+    "tasks": 15,
+    "x": 181,
+    "y": 223
+   },
+   "ceiling_vs_zs": {
+    "diff": {
+     "diff": 0.17666666666666667,
+     "hi": 0.36333333333333334,
+     "hi90": 0.3333333333333333,
+     "lo": 0.0033333333333333335,
+     "lo90": 0.02666666666666667,
+     "n_pairs": 300,
+     "n_tasks": 15
+    },
+    "discordant": [
+     74,
+     21
+    ],
+    "n": 300,
+    "p_dir": 4.249891992384471e-08,
+    "sign_p": 4.249891992384471e-08,
+    "tasks": 15,
+    "x": 223,
+    "y": 170
+   }
+  },
+  "totals": {
+   "bank": 181,
+   "bank_G": 179,
+   "bank_O": 173,
+   "ceiling": 223,
+   "zs": 170
+  },
+  "types": {
+   "bank": {
+    "fixture": 41,
+    "motion": 23,
+    "no_commit": 4,
+    "success": 181,
+    "wrong_goal": 48,
+    "wrong_object": 3
+   },
+   "bank_G": {
+    "fixture": 41,
+    "motion": 25,
+    "no_commit": 5,
+    "success": 179,
+    "wrong_goal": 47,
+    "wrong_object": 3
+   },
+   "bank_O": {
+    "fixture": 41,
+    "motion": 25,
+    "no_commit": 7,
+    "success": 173,
+    "wrong_goal": 52,
+    "wrong_object": 2
+   },
+   "ceiling": {
+    "fixture": 24,
+    "motion": 26,
+    "no_commit": 22,
+    "success": 223,
+    "wrong_goal": 1,
+    "wrong_object": 4
+   },
+   "zs": {
+    "fixture": 41,
+    "motion": 25,
+    "no_commit": 4,
+    "success": 170,
+    "wrong_goal": 56,
+    "wrong_object": 4
+   }
+  },
+  "types_ceiling_bind": 5
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "rb2_read__libero_90_c__read__s13__fe79413a",
+ "schema": 1,
+ "script": "experiments/rb2_bank.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-25T03:38:50+00:00",
+ "stream": null,
+ "tag": "read"
+}

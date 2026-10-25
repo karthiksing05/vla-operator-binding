@@ -1,0 +1,85 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 36864,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 36864,
+  "tree": 0
+ },
+ "command": "experiments/rb2_bank.py --fit --kid e06149ba0cf5",
+ "config": {
+  "batch": 32,
+  "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "data": "/coc/flash10/ksingara3/robot/data/hf/lerobot/lol/libero_l90c",
+  "lr": 0.01,
+  "n_role": 2,
+  "steps": 1000
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "conroy.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4225982",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "rb2_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "42822d0872af58163d5e869b509c061f12fa9e62",
+  "short": "42822d08"
+ },
+ "keys": {
+  "key": "O|cabinet drawer top"
+ },
+ "metrics": {
+  "final_loss": 0.02051646076142788,
+  "junk": {
+   "fit": {
+    "cv": 1.0702908995609048,
+    "demos": 40,
+    "mean": 0.0005984321277847616,
+    "positive_share": 0.8,
+    "rel_mean": 0.03654944643257456,
+    "sd": 0.0006404964603728988
+   },
+   "held_out": {
+    "cv": 3.3774991003725234,
+    "demos": 8,
+    "mean": -0.00023923453879130352,
+    "positive_share": 0.375,
+    "rel_mean": -0.01421867956775498,
+    "sd": 0.0008080144395456632
+   }
+  },
+  "n_demos": 40,
+  "n_frames": 1024,
+  "seconds": {
+   "bank": 84.06625270843506,
+   "fit": 155.70083141326904,
+   "junk": 25.105804443359375
+  },
+  "sources": [
+   "14",
+   "15",
+   "21",
+   "28"
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "rb2_fit__libero_90_c__bank__key-O-cabinet-drawer-top__s13__42822d08",
+ "schema": 1,
+ "script": "experiments/rb2_bank.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-25T00:57:33+00:00",
+ "stream": null,
+ "tag": "bank"
+}

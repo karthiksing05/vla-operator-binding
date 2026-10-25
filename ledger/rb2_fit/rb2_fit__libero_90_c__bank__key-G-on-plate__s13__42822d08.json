@@ -1,0 +1,96 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 36864,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 36864,
+  "tree": 0
+ },
+ "command": "experiments/rb2_bank.py --fit --kid 52071eeacc9e",
+ "config": {
+  "batch": 32,
+  "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "data": "/coc/flash10/ksingara3/robot/data/hf/lerobot/lol/libero_l90c",
+  "lr": 0.01,
+  "n_role": 2,
+  "steps": 1000
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "sonny.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4225975",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "rb2_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "42822d0872af58163d5e869b509c061f12fa9e62",
+  "short": "42822d08"
+ },
+ "keys": {
+  "key": "G|on|plate"
+ },
+ "metrics": {
+  "final_loss": 0.021241405978798866,
+  "junk": {
+   "fit": {
+    "cv": 0.7719698227264282,
+    "demos": 45,
+    "mean": 0.00188442392930065,
+    "positive_share": 0.9111111111111111,
+    "rel_mean": 0.07489821087929623,
+    "sd": 0.0014547184066436621
+   },
+   "held_out": {
+    "cv": 1.7020599873790336,
+    "demos": 8,
+    "mean": -0.0008798368720211633,
+    "positive_share": 0.25,
+    "rel_mean": -0.03639009371053755,
+    "sd": 0.0014975351352879496
+   }
+  },
+  "n_demos": 45,
+  "n_frames": 1024,
+  "seconds": {
+   "bank": 87.21956419944763,
+   "fit": 210.5372347831726,
+   "junk": 28.798536777496338
+  },
+  "sources": [
+   "2",
+   "6",
+   "41",
+   "42",
+   "52",
+   "63",
+   "64",
+   "65",
+   "66",
+   "67",
+   "68",
+   "69",
+   "70",
+   "71",
+   "72"
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "rb2_fit__libero_90_c__bank__key-G-on-plate__s13__42822d08",
+ "schema": 1,
+ "script": "experiments/rb2_bank.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-25T00:54:39+00:00",
+ "stream": null,
+ "tag": "bank"
+}

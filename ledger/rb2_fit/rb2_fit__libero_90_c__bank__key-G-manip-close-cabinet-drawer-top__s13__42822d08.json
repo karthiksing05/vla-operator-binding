@@ -1,0 +1,85 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 36864,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 36864,
+  "tree": 0
+ },
+ "command": "experiments/rb2_bank.py --fit --kid 14cfdad87ba7",
+ "config": {
+  "batch": 32,
+  "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "data": "/coc/flash10/ksingara3/robot/data/hf/lerobot/lol/libero_l90c",
+  "lr": 0.01,
+  "n_role": 2,
+  "steps": 1000
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "spd-13.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4225973",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "rb2_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "42822d0872af58163d5e869b509c061f12fa9e62",
+  "short": "42822d08"
+ },
+ "keys": {
+  "key": "G|manip:close|cabinet drawer top"
+ },
+ "metrics": {
+  "final_loss": 0.028876138851046562,
+  "junk": {
+   "fit": {
+    "cv": 0.7474480073042107,
+    "demos": 30,
+    "mean": 0.0016049483822725742,
+    "positive_share": 0.9333333333333333,
+    "rel_mean": 0.0655782367892166,
+    "sd": 0.0011996154701557522
+   },
+   "held_out": {
+    "cv": 60.10535933454177,
+    "demos": 6,
+    "mean": 3.5577037932751444e-05,
+    "positive_share": 0.3333333333333333,
+    "rel_mean": -0.005021444290437131,
+    "sd": 0.0021383706490066485
+   }
+  },
+  "n_demos": 40,
+  "n_frames": 1024,
+  "seconds": {
+   "bank": 85.80460166931152,
+   "fit": 232.77502059936523,
+   "junk": 26.574410676956177
+  },
+  "sources": [
+   "14",
+   "15",
+   "21",
+   "28"
+  ]
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "rb2_fit__libero_90_c__bank__key-G-manip-close-cabinet-drawer-top__s13__42822d08",
+ "schema": 1,
+ "script": "experiments/rb2_bank.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-25T00:54:59+00:00",
+ "stream": null,
+ "tag": "bank"
+}
