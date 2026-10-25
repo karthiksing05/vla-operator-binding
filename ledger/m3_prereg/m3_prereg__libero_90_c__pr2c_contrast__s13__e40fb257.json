@@ -1,0 +1,224 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: R2c contrastive minimal-pair role-token bank, stage-1 offline gate, stage-2 H1-H4",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4227840",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "e40fb257b06ee0b7aedfea9bfa72dec1e6c5bbe0",
+  "short": "e40fb257"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": "stage 2 GO: D = bank_rc2 - 0.5 zs - 0.5 ceiling > 0 over 300 paired fresh_rb2 episodes, one-sided two-level cluster bootstrap (B 10000, seed 0)",
+  "H2": "bank_rc2 > zs, exact two-sided sign test on discordant pairs",
+  "H3": "bank_rc2 > R2's bank, exact two-sided sign test on discordant pairs",
+  "H4": "R2's 8 damage cells, routed bank_rc2 vs parity, non-inferior at margin 0.05 (one-sided cluster bootstrap)",
+  "disclosure": "seen before this row: R2's published results (docs/PLAN_R2.md section 7: totals zs 170 / bank 181 / ceiling 223, the junk check's fit gains 1.7-7.5% relative and held-out gains ~0, 9 of 16 flagged), which motivated the probe and set MARGIN 0.02 at the low end of R2's fit-demo gains; --plan of rc2 (partner texts, tiers, demo and frame counts per key; no loss, no outcome); a pipeline smoke (RC2_SMOKE=1, 20 steps on O|frying pan, results/rc2/smoke, no ledger row; held-out scores not printed or read; its log showed the contrast loss rising 2.7% at step 20 with the hinge at 0; LAMBDA / MARGIN unchanged).  No R2c fit, token, held-out score or rollout exists.  Stage-2 serving code is not written yet: it will reuse rb2_bank.py's serve / roll / type / read pipeline unchanged except the arm, and an amendment row will be recorded before any stage-2 rollout.",
+  "family": "Holm over H1-H4 at alpha 0.05 (stage 2 only)",
+  "files_sha256": {
+   "code": "670aab3ef3221b697c2c273c789ec817de7651b77a0be1a6ea66ad1c52e4a22e",
+   "doc": "177654a305e8e35a2b3ee48773ed249043561e3c1a9f3babb073293f83c21f84",
+   "l4": "c12d1b6f155953f08801e833b4aad842f2c93e544261288b85e9c08d5395032f",
+   "plan": "917c0603f6cfd8c04e27160052c027dea9cf16071776f57dda946271408b008a",
+   "rb2_code": "c77a74024b9f8b1a3a16b70c4bf288a25e262a8a111f053c5f84f4804283060f",
+   "rb2_plan": "31b4af3d0a9028bc631385427a61fd41f0ad4f05094aa2e2c0595d96eaaa786e"
+  },
+  "keys": {
+   "G|in|basket": {
+    "fit_c_demos": 0,
+    "fit_c_frames": 0,
+    "hold_c": 0,
+    "hold_p": 16,
+    "partners": 0,
+    "role": "G",
+    "tier": "none"
+   },
+   "G|in|cabinet drawer top": {
+    "fit_c_demos": 0,
+    "fit_c_frames": 0,
+    "hold_c": 0,
+    "hold_p": 16,
+    "partners": 0,
+    "role": "G",
+    "tier": "none"
+   },
+   "G|in|tray": {
+    "fit_c_demos": 0,
+    "fit_c_frames": 0,
+    "hold_c": 0,
+    "hold_p": 16,
+    "partners": 0,
+    "role": "G",
+    "tier": "none"
+   },
+   "G|manip:close|cabinet drawer top": {
+    "fit_c_demos": 40,
+    "fit_c_frames": 1024,
+    "hold_c": 16,
+    "hold_p": 16,
+    "partners": 1,
+    "role": "G",
+    "tier": "B"
+   },
+   "G|on|cabinet shelf": {
+    "fit_c_demos": 31,
+    "fit_c_frames": 1024,
+    "hold_c": 16,
+    "hold_p": 16,
+    "partners": 1,
+    "role": "G",
+    "tier": "A"
+   },
+   "G|on|plate": {
+    "fit_c_demos": 40,
+    "fit_c_frames": 1024,
+    "hold_c": 16,
+    "hold_p": 16,
+    "partners": 2,
+    "role": "G",
+    "tier": "A"
+   },
+   "O|alphabet soup": {
+    "fit_c_demos": 40,
+    "fit_c_frames": 1024,
+    "hold_c": 16,
+    "hold_p": 16,
+    "partners": 4,
+    "role": "O",
+    "tier": "A"
+   },
+   "O|black bowl": {
+    "fit_c_demos": 40,
+    "fit_c_frames": 1024,
+    "hold_c": 16,
+    "hold_p": 16,
+    "partners": 5,
+    "role": "O",
+    "tier": "B"
+   },
+   "O|black bowl front": {
+    "fit_c_demos": 40,
+    "fit_c_frames": 1024,
+    "hold_c": 16,
+    "hold_p": 2,
+    "partners": 2,
+    "role": "O",
+    "tier": "B"
+   },
+   "O|black bowl middle": {
+    "fit_c_demos": 26,
+    "fit_c_frames": 1024,
+    "hold_c": 16,
+    "hold_p": 16,
+    "partners": 1,
+    "role": "O",
+    "tier": "B"
+   },
+   "O|bottom cabinet drawer": {
+    "fit_c_demos": 42,
+    "fit_c_frames": 1024,
+    "hold_c": 16,
+    "hold_p": 16,
+    "partners": 3,
+    "role": "O",
+    "tier": "B"
+   },
+   "O|bowl white": {
+    "fit_c_demos": 20,
+    "fit_c_frames": 1024,
+    "hold_c": 16,
+    "hold_p": 16,
+    "partners": 1,
+    "role": "O",
+    "tier": "A"
+   },
+   "O|cabinet drawer top": {
+    "fit_c_demos": 40,
+    "fit_c_frames": 1024,
+    "hold_c": 16,
+    "hold_p": 16,
+    "partners": 1,
+    "role": "O",
+    "tier": "B"
+   },
+   "O|chocolate pudding": {
+    "fit_c_demos": 40,
+    "fit_c_frames": 1024,
+    "hold_c": 16,
+    "hold_p": 16,
+    "partners": 2,
+    "role": "O",
+    "tier": "A"
+   },
+   "O|frying pan": {
+    "fit_c_demos": 40,
+    "fit_c_frames": 1024,
+    "hold_c": 16,
+    "hold_p": 16,
+    "partners": 2,
+    "role": "O",
+    "tier": "A"
+   },
+   "O|sauce tomato": {
+    "fit_c_demos": 42,
+    "fit_c_frames": 1024,
+    "hold_c": 16,
+    "hold_p": 16,
+    "partners": 6,
+    "role": "O",
+    "tier": "A"
+   }
+  },
+  "objective": "L = FM(tok|p)/Lbar0_p + 1.0 * relu(0.02 - (FM(tok|c) - FM(none|c))/FM(none|c)); p batch = R2's (same fit frames, sampling seed 13), contrast batch 32 partner role-phase frames on its own seed-14 streams",
+  "settings": {
+   "batch": 32,
+   "c_fmax": 1024,
+   "c_min": 3,
+   "c_tot": 40,
+   "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+   "e_draws": 4,
+   "gate_n": 8,
+   "h_demos": 16,
+   "h_frames": 24,
+   "lam": 1.0,
+   "lr": 0.01,
+   "margin": 0.02,
+   "seed": 13,
+   "steps": 1000
+  },
+  "stage1_compare": "R2's tokens scored on the identical held-out frames and draws (descriptive)",
+  "stage1_gate": "gain_p > 0 for >= 8 of 16 R2c tokens AND spec = gain_p - gain_c > 0 for >= 8 of 16 (no-partner keys fail spec); held-out 16 + 16 demos per key, <= 24 frames each, 4 draws; fail -> stop, no rollouts",
+  "written_before": "any R2c fit, held-out score, rollout or read"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pr2c_contrast__s13__e40fb257",
+ "schema": 1,
+ "script": "experiments/prereg/pr2c_contrast.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-25T03:59:06+00:00",
+ "stream": null,
+ "tag": "pr2c_contrast"
+}

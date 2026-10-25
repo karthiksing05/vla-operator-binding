@@ -1,0 +1,91 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 36864,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 36864,
+  "tree": 0
+ },
+ "command": "experiments/rc2_contrast.py --fit --kid fab8e92eba79",
+ "config": {
+  "batch": 32,
+  "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "lam": 1.0,
+  "lr": 0.01,
+  "margin": 0.02,
+  "steps": 1000
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "randotron.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4227851",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "rc2_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "e40fb257b06ee0b7aedfea9bfa72dec1e6c5bbe0",
+  "short": "e40fb257"
+ },
+ "keys": {
+  "key": "O|bottom cabinet drawer"
+ },
+ "metrics": {
+  "final": {
+   "c_rel_gain": -0.07802575826644897,
+   "fm_p": 0.026625359430909157,
+   "hinge": 0.0,
+   "step": 1000
+  },
+  "held": {
+   "c": {
+    "r2": {
+     "demos": 16,
+     "positive_share": 0.25,
+     "rel_mean": -0.007495251014810937
+    },
+    "rc2": {
+     "demos": 16,
+     "positive_share": 0.125,
+     "rel_mean": -0.07478410922846203
+    }
+   },
+   "p": {
+    "r2": {
+     "demos": 16,
+     "positive_share": 0.5,
+     "rel_mean": 0.006292145346254374
+    },
+    "rc2": {
+     "demos": 16,
+     "positive_share": 0.5625,
+     "rel_mean": 0.004400874289764967
+    }
+   }
+  },
+  "seconds": {
+   "bank": 169.2668046951294,
+   "fit": 415.2461485862732,
+   "score": 66.2089467048645
+  },
+  "tier": "B"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "rc2_fit__libero_90_c__contrast__key-O-bottom-cabinet-drawer__s13__e40fb257",
+ "schema": 1,
+ "script": "experiments/rc2_contrast.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-25T04:12:09+00:00",
+ "stream": null,
+ "tag": "contrast"
+}

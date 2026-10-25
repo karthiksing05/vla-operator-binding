@@ -1,0 +1,91 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 36864,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 36864,
+  "tree": 0
+ },
+ "command": "experiments/rc2_contrast.py --fit --kid da802f328d67",
+ "config": {
+  "batch": 32,
+  "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "lam": 1.0,
+  "lr": 0.01,
+  "margin": 0.02,
+  "steps": 1000
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "deebot.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4227856",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "rc2_fit",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "e40fb257b06ee0b7aedfea9bfa72dec1e6c5bbe0",
+  "short": "e40fb257"
+ },
+ "keys": {
+  "key": "O|sauce tomato"
+ },
+ "metrics": {
+  "final": {
+   "c_rel_gain": -0.0823509618639946,
+   "fm_p": 0.015685245394706726,
+   "hinge": 0.0,
+   "step": 1000
+  },
+  "held": {
+   "c": {
+    "r2": {
+     "demos": 16,
+     "positive_share": 0.25,
+     "rel_mean": -0.013968925053724181
+    },
+    "rc2": {
+     "demos": 16,
+     "positive_share": 0.0,
+     "rel_mean": -0.04009004813798841
+    }
+   },
+   "p": {
+    "r2": {
+     "demos": 16,
+     "positive_share": 0.625,
+     "rel_mean": 0.014396851168640127
+    },
+    "rc2": {
+     "demos": 16,
+     "positive_share": 0.5,
+     "rel_mean": 0.003098622266633597
+    }
+   }
+  },
+  "seconds": {
+   "bank": 174.72381114959717,
+   "fit": 430.5879256725311,
+   "score": 67.30281925201416
+  },
+  "tier": "A"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "rc2_fit__libero_90_c__contrast__key-O-sauce-tomato__s13__e40fb257",
+ "schema": 1,
+ "script": "experiments/rc2_contrast.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-25T04:12:31+00:00",
+ "stream": null,
+ "tag": "contrast"
+}

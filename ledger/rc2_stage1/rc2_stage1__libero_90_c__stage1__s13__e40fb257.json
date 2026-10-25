@@ -1,0 +1,348 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 589824,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 589824,
+  "tree": 0
+ },
+ "command": "experiments/rc2_contrast.py --stage1 --record",
+ "config": {
+  "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "plan": {
+   "batch": 32,
+   "c_fmax": 1024,
+   "c_min": 3,
+   "c_tot": 40,
+   "ckpt": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+   "e_draws": 4,
+   "gate_n": 8,
+   "h_demos": 16,
+   "h_frames": 24,
+   "lam": 1.0,
+   "lr": 0.01,
+   "margin": 0.02,
+   "seed": 13,
+   "steps": 1000
+  },
+  "prereg": "m3_prereg tag pr2c_contrast"
+ },
+ "env": {
+  "device": "cpu",
+  "host": "kipp.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4228027",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "rc2_stage1",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "e40fb257b06ee0b7aedfea9bfa72dec1e6c5bbe0",
+  "short": "e40fb257"
+ },
+ "keys": {},
+ "metrics": {
+  "a40_s": {
+   "total": 8945.664482593536
+  },
+  "gate": {
+   "gain_pass": false,
+   "rule": ">= 8 of 16 each",
+   "spec_pass": true
+  },
+  "missing": [],
+  "per_token": {
+   "G|in|basket": {
+    "r2": {
+     "gain_c": null,
+     "gain_p": -0.057904748429016925,
+     "pos_share_p": 0.1875,
+     "spec": null
+    },
+    "rc2": {
+     "gain_c": null,
+     "gain_p": -0.057904748429016925,
+     "pos_share_p": 0.1875,
+     "spec": null
+    },
+    "role": "G",
+    "tier": "none"
+   },
+   "G|in|cabinet drawer top": {
+    "r2": {
+     "gain_c": null,
+     "gain_p": -0.012691415351160348,
+     "pos_share_p": 0.5625,
+     "spec": null
+    },
+    "rc2": {
+     "gain_c": null,
+     "gain_p": -0.012691415351160348,
+     "pos_share_p": 0.5625,
+     "spec": null
+    },
+    "role": "G",
+    "tier": "none"
+   },
+   "G|in|tray": {
+    "r2": {
+     "gain_c": null,
+     "gain_p": -0.014329769362407463,
+     "pos_share_p": 0.25,
+     "spec": null
+    },
+    "rc2": {
+     "gain_c": null,
+     "gain_p": -0.014329769362407463,
+     "pos_share_p": 0.25,
+     "spec": null
+    },
+    "role": "G",
+    "tier": "none"
+   },
+   "G|manip:close|cabinet drawer top": {
+    "r2": {
+     "gain_c": -0.0267568739756334,
+     "gain_p": -0.026387098796400426,
+     "pos_share_p": 0.16666666666666666,
+     "spec": 0.00036977517923297495
+    },
+    "rc2": {
+     "gain_c": -0.1309081181981593,
+     "gain_p": -0.02331583301493025,
+     "pos_share_p": 0.25,
+     "spec": 0.10759228518322907
+    },
+    "role": "G",
+    "tier": "B"
+   },
+   "G|on|cabinet shelf": {
+    "r2": {
+     "gain_c": -0.01073254466918297,
+     "gain_p": -0.00543489762490286,
+     "pos_share_p": 0.5,
+     "spec": 0.00529764704428011
+    },
+    "rc2": {
+     "gain_c": -0.06320168807520427,
+     "gain_p": -0.014467579702148757,
+     "pos_share_p": 0.4375,
+     "spec": 0.04873410837305551
+    },
+    "role": "G",
+    "tier": "A"
+   },
+   "G|on|plate": {
+    "r2": {
+     "gain_c": -0.017769259726233933,
+     "gain_p": -0.04642272087541065,
+     "pos_share_p": 0.3125,
+     "spec": -0.028653461149176714
+    },
+    "rc2": {
+     "gain_c": -0.04531858432666108,
+     "gain_p": -0.04160663040743396,
+     "pos_share_p": 0.375,
+     "spec": 0.003711953919227122
+    },
+    "role": "G",
+    "tier": "A"
+   },
+   "O|alphabet soup": {
+    "r2": {
+     "gain_c": 0.007453969187117883,
+     "gain_p": -0.003639796114311143,
+     "pos_share_p": 0.4375,
+     "spec": -0.011093765301429026
+    },
+    "rc2": {
+     "gain_c": -0.025762330009940645,
+     "gain_p": -0.015798828864178625,
+     "pos_share_p": 0.375,
+     "spec": 0.00996350114576202
+    },
+    "role": "O",
+    "tier": "A"
+   },
+   "O|black bowl": {
+    "r2": {
+     "gain_c": -0.009496030309306732,
+     "gain_p": 0.0026404718358488304,
+     "pos_share_p": 0.625,
+     "spec": 0.012136502145155562
+    },
+    "rc2": {
+     "gain_c": -0.06368924583368578,
+     "gain_p": 0.004533986814085213,
+     "pos_share_p": 0.625,
+     "spec": 0.068223232647771
+    },
+    "role": "O",
+    "tier": "B"
+   },
+   "O|black bowl front": {
+    "r2": {
+     "gain_c": -0.013820738694303242,
+     "gain_p": -0.049802437624765536,
+     "pos_share_p": 0.0,
+     "spec": -0.0359816989304623
+    },
+    "rc2": {
+     "gain_c": -0.06670222865070258,
+     "gain_p": -0.04643316585389514,
+     "pos_share_p": 0.0,
+     "spec": 0.020269062796807437
+    },
+    "role": "O",
+    "tier": "B"
+   },
+   "O|black bowl middle": {
+    "r2": {
+     "gain_c": -0.006039291090845007,
+     "gain_p": -0.006968451286171675,
+     "pos_share_p": 0.5625,
+     "spec": -0.0009291601953266681
+    },
+    "rc2": {
+     "gain_c": -0.06732355279130964,
+     "gain_p": -0.008067777008890671,
+     "pos_share_p": 0.4375,
+     "spec": 0.05925577578241897
+    },
+    "role": "O",
+    "tier": "B"
+   },
+   "O|bottom cabinet drawer": {
+    "r2": {
+     "gain_c": -0.007495251014810937,
+     "gain_p": 0.006292145346254374,
+     "pos_share_p": 0.5,
+     "spec": 0.01378739636106531
+    },
+    "rc2": {
+     "gain_c": -0.07478410922846203,
+     "gain_p": 0.004400874289764967,
+     "pos_share_p": 0.5625,
+     "spec": 0.07918498351822699
+    },
+    "role": "O",
+    "tier": "B"
+   },
+   "O|bowl white": {
+    "r2": {
+     "gain_c": -0.014943010344499939,
+     "gain_p": -0.00467944686191596,
+     "pos_share_p": 0.625,
+     "spec": 0.01026356348258398
+    },
+    "rc2": {
+     "gain_c": -0.17151351117989158,
+     "gain_p": -0.009709046707887588,
+     "pos_share_p": 0.4375,
+     "spec": 0.161804464472004
+    },
+    "role": "O",
+    "tier": "A"
+   },
+   "O|cabinet drawer top": {
+    "r2": {
+     "gain_c": -0.0328121924347856,
+     "gain_p": -0.0210035999590023,
+     "pos_share_p": 0.25,
+     "spec": 0.011808592475783301
+    },
+    "rc2": {
+     "gain_c": -0.07774853781630303,
+     "gain_p": -0.022862690967849188,
+     "pos_share_p": 0.25,
+     "spec": 0.054885846848453844
+    },
+    "role": "O",
+    "tier": "B"
+   },
+   "O|chocolate pudding": {
+    "r2": {
+     "gain_c": -0.037616647884026216,
+     "gain_p": -0.018466231983481594,
+     "pos_share_p": 0.3125,
+     "spec": 0.019150415900544622
+    },
+    "rc2": {
+     "gain_c": -0.04643141114480486,
+     "gain_p": -0.0220370231623923,
+     "pos_share_p": 0.1875,
+     "spec": 0.02439438798241256
+    },
+    "role": "O",
+    "tier": "A"
+   },
+   "O|frying pan": {
+    "r2": {
+     "gain_c": -0.000844908043603733,
+     "gain_p": -0.0008371136217892906,
+     "pos_share_p": 0.625,
+     "spec": 7.794421814442411e-06
+    },
+    "rc2": {
+     "gain_c": -0.11974404042368937,
+     "gain_p": -0.006444906054169212,
+     "pos_share_p": 0.5,
+     "spec": 0.11329913436952016
+    },
+    "role": "O",
+    "tier": "A"
+   },
+   "O|sauce tomato": {
+    "r2": {
+     "gain_c": -0.013968925053724181,
+     "gain_p": 0.014396851168640127,
+     "pos_share_p": 0.625,
+     "spec": 0.02836577622236431
+    },
+    "rc2": {
+     "gain_c": -0.04009004813798841,
+     "gain_p": 0.003098622266633597,
+     "pos_share_p": 0.5,
+     "spec": 0.04318867040462201
+    },
+    "role": "O",
+    "tier": "A"
+   }
+  },
+  "r2": {
+   "median_gain_p": -0.009829933318666013,
+   "n": 16,
+   "n_gain_pos": 3,
+   "n_spec_pos": 9
+  },
+  "rc2": {
+   "median_gain_p": -0.01439867453227811,
+   "n": 16,
+   "n_gain_pos": 3,
+   "n_spec_pos": 13
+  },
+  "rc2_minus_r2": {
+   "gain_p_better": 4,
+   "n": 16,
+   "spec_better": 13
+  },
+  "stage1_pass": false
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "rc2_stage1__libero_90_c__stage1__s13__e40fb257",
+ "schema": 1,
+ "script": "experiments/rc2_contrast.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-25T04:14:59+00:00",
+ "stream": null,
+ "tag": "stage1"
+}

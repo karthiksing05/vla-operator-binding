@@ -99,3 +99,63 @@ Coverage (results/rc2/plan.json):
   written but not printed or read) ran before the pre-registration row. It is excluded from every number. Its training log showed the
   contrast batch's loss rising by 2.7% at step 20 (hinge 0): the init token already raises the partners' loss, so the hinge binds only
   if training drifts the token toward lowering it. LAMBDA and MARGIN were not changed after this.
+
+## 7. Result: stage 1 FAILS, R2c stops (2026-10-25; ledger `rc2_stage1`, results/rc2/stage1.json; pre-registration m3_prereg `pr2c_contrast`, e40fb257)
+
+16 fits (13 contrastive; 3 no-partner keys keep R2's token), each scored with R2's token on the identical held-out frames and draws.
+8,946 A40-s in all (bank build + 1000 steps + scoring). No code changed after the pre-registration row. No rollout ran.
+
+Held-out relative flow-loss gain, in % (gain_p on p demos, gain_c on partner demos, spec = gain_p - gain_c):
+
+| key | tier | R2 gain_p | R2 gain_c | R2 spec | R2c gain_p | R2c gain_c | R2c spec |
+|---|---|---|---|---|---|---|---|
+| `G|in|basket` | none | -5.79 | | | -5.79 | | |
+| `G|in|cabinet drawer top` | none | -1.27 | | | -1.27 | | |
+| `G|in|tray` | none | -1.43 | | | -1.43 | | |
+| `G|manip:close|cabinet drawer top` | B | -2.64 | -2.68 | +0.04 | -2.33 | -13.09 | +10.76 |
+| `G|on|cabinet shelf` | A | -0.54 | -1.07 | +0.53 | -1.45 | -6.32 | +4.87 |
+| `G|on|plate` | A | -4.64 | -1.78 | -2.87 | -4.16 | -4.53 | +0.37 |
+| `O|alphabet soup` | A | -0.36 | +0.75 | -1.11 | -1.58 | -2.58 | +1.00 |
+| `O|black bowl` | B | +0.26 | -0.95 | +1.21 | +0.45 | -6.37 | +6.82 |
+| `O|black bowl front` | B | -4.98 | -1.38 | -3.60 | -4.64 | -6.67 | +2.03 |
+| `O|black bowl middle` | B | -0.70 | -0.60 | -0.09 | -0.81 | -6.73 | +5.93 |
+| `O|bottom cabinet drawer` | B | +0.63 | -0.75 | +1.38 | +0.44 | -7.48 | +7.92 |
+| `O|bowl white` | A | -0.47 | -1.49 | +1.03 | -0.97 | -17.15 | +16.18 |
+| `O|cabinet drawer top` | B | -2.10 | -3.28 | +1.18 | -2.29 | -7.77 | +5.49 |
+| `O|chocolate pudding` | A | -1.85 | -3.76 | +1.92 | -2.20 | -4.64 | +2.44 |
+| `O|frying pan` | A | -0.08 | -0.08 | +0.00 | -0.64 | -11.97 | +11.33 |
+| `O|sauce tomato` | A | +1.44 | -1.40 | +2.84 | +0.31 | -4.01 | +4.32 |
+
+**Gate verdict: FAIL.**
+- gain_p > 0 on 3 of 16 R2c tokens (bar 8): `O|black bowl`, `O|bottom cabinet drawer`, `O|sauce tomato`. The median gain_p is -1.44%
+  (R2's -0.98%).
+- spec > 0 on 13 of 16 (bar 8; every partnered key). R2's tokens reach 9 of 16 on the same split.
+- R2c beats R2 on gain_p for 4 of 16 keys and on spec for 13 of 16.
+- Per the pre-registration, stage 2 does not run: no rollout, no H1-H4.
+
+**Reading.**
+1. **The contrastive objective buys specificity by damage, not by transfer.** Every partnered R2c token raises the partners' held-out
+   loss (gain_c -2.6% to -17.2%). Its gain on held-out demos of its own part stays negative for 10 of 13, no better than R2's.
+   The token becomes something that hurts other fillers. It does not become something that helps unseen demos of its filler.
+2. **The hinge was mostly slack.** The contrast loss rose 4% to 24% by step 1000 with the hinge at 0. It was active briefly on 5
+   keys near step 200, and at init the token already raised the partners' loss (smoke, section 6). So the p term alone drives a
+   token away from the partners. The objective here differs from R2's in only that small pushback. This means R2's failure is not
+   a token that helps everything in the scene. A token that lowers the loss on held-out demos of its own part does not exist in
+   this unit for most parts, with or without the contrast.
+3. **On a larger held-out split, R2's own tokens are worse than R2's junk check showed.** gain_p > 0 holds for 3 of 16, against R2's
+   9-of-16 junk flag on at most 8 held-out demos. `O|black bowl` (+3.5% in R2's check) is +0.26% here.
+4. **For PLAN_R.** The extraction objective is not the bottleneck. Two objectives (pooled flow matching, and the same plus a
+   minimal-pair contrast) both give tokens that do not lower the loss on unseen demos of their part. Pi05_l90c already fits its
+   training demos, so a 2-entry K/V token fitted there has no transferable residual to carry. The bank half of R needs a different
+   unit or a different signal (for example the policy's own features at the binding site, L0b), not a different loss on the same
+   unit.
+
+**Disclosures.**
+- No code changed after the pre-registration row. The ledger rows carry dirty=true: other agents' uncommitted files are in the tree.
+  The rc2 files were committed at e40fb257 before the row.
+- The 3 no-partner keys were scored, not refitted. Their R2c token is R2's file, so their R2 and R2c numbers are identical by
+  construction.
+- `O|black bowl front` has only 2 held-out p demos (section 4).
+- The held-out scoring uses 4 draws and 16 + 16 demos (R2's junk check used 2 draws and at most 8 demos). R2's tokens were rescored
+  on this split.
+- The pipeline smoke (section 6) ran before the row and is excluded.
