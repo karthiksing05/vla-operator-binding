@@ -1,0 +1,118 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: R4b non-circular on-manifold judge for R4-bind's stage 0 (+ stage 1 if it passes)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "kipp.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4232144",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "e8a45e382d0544a058f6295d6828b5588349ad69",
+  "short": "e8a45e38"
+ },
+ "keys": {},
+ "metrics": {
+  "admissible": "movable & bars & g_named >= -0.02 & still(named) <= 0.10",
+  "bars": "outlier rise <= 0.10; |normalised action| > 1 rise <= 0.05; still (< 2 cm) rise <= 0.10",
+  "choice": "max g_cf among admissible; ties 0.005 -> smaller w, early before all, d1 before dir; rb4b_stage0 first",
+  "coverage": {
+   "su_post": {
+    "bind_cf": 28,
+    "bind_named": 93,
+    "n": 133
+   },
+   "su_pre": {
+    "bind_cf": 148,
+    "bind_named": 220,
+    "n": 394
+   },
+   "tune": {
+    "bind_cf": 32,
+    "bind_cf_episodes": 32,
+    "bind_cf_tasks": [
+     "libero_90:16",
+     "libero_90:32",
+     "libero_90:40"
+    ],
+    "bind_named": 66,
+    "cf": 250,
+    "episodes": 250,
+    "n": 250,
+    "tasks": [
+     "libero_90:14",
+     "libero_90:16",
+     "libero_90:29",
+     "libero_90:32",
+     "libero_90:36",
+     "libero_90:38",
+     "libero_90:40",
+     "libero_90:50",
+     "libero_90:60",
+     "libero_90:73",
+     "libero_90:75",
+     "libero_90:76",
+     "libero_90:77",
+     "libero_90:78",
+     "libero_90:79",
+     "libero_90:80",
+     "libero_90:82",
+     "libero_90:83"
+    ]
+   },
+   "wg_post": {
+    "bind_cf": 15,
+    "bind_named": 1,
+    "n": 144
+   },
+   "wo_pre": {
+    "bind_cf": 17,
+    "bind_named": 0,
+    "n": 163
+   }
+  },
+  "disclosure": "seen before this row: R4-bind's complete stage-0 table under the OLD judge (results/rb4/stage0.json: g_cf, g_named, still, action range, old FM-outlier rise for all 12 configs; stage 0 failed, no config chosen), and R3b/R3c/R2a/OF published results. Binding-source coverage (no policy output): tuning Y 32 / 250 (tasks ['libero_90:16', 'libero_90:32', 'libero_90:40']), named 66 / 250; test named sources {\"wo_pre\": 0, \"su_pre\": 220, \"wg_post\": 1, \"su_post\": 93}; rule reproduces R3c's named sources (1084 agree, 0 disagree). Movability is fixed by the stored chunks (recomputed, asserted equal to R4-bind's). HARD-RULE slip during development: one `python3 -` heredoc was issued on the login node and blocked by the harness before it ran.",
+  "files_sha256": {
+   "doc": "28ccf6795de123481eb67ef4b23ff2205d71b6ad246eb665dcf7674ed0dc5e8b",
+   "rb4_script": "a822de3da85dcfaad421883a3366b2bddd62b1acf4d724c34b8abd7cfb57283e",
+   "rb4_stage0": "b93c33f19005545914f33f67d23c7401af3e77d83b6b644a9a27adfdec4d81f3",
+   "script": "659d6e211cbac231c2656a722963a3cb0b007bce68eddeb0b95a30abeabb77a3",
+   "sources": "ab3079137f5880e292e380ca0004c5444fa8f3477589e941688965cdfae000a6",
+   "split": "a0d998cadb5d076e7dbb5a60088378b4ce45f6a053cda9a828be6f268fc8a96c"
+  },
+  "fixed_from_rb4": "guidance form, 12-config grid, tuning pool (R3b's 250), cf target Y (rs3 cf_pick), noise floor, movability bar g_cf >= 0.130, secondary bars, admissibility, tie rule, stage-1 H1-H4",
+  "judge_fallback": "the same under the null prompt '' where Y has no binding source; gate statistic pooled",
+  "judge_primary": "FM (t {0.1,0.2,0.3,0.5} x 4 noises seed 5) of the guided |cf chunk under a same-scene train_l90 instruction whose BDDL In/On goal moves Y (R3c oracle rule, lowest sha1 rs4src:{task}:O:{Y}:{cell}); reference = own unguided chunks under that prompt, seeds 11 / 21; outlier = FM > mean + 2 sd of ref11's 12; rise = guided share - ref21 share, episode means, task-cluster bootstrap",
+  "reuse": "R4-bind's stored tuning chunks inverted through the affine output transform (round trip < 1e-4 asserted; instruction FM reproduced on 2 obs per shard); no guided chunk regenerated",
+  "stage1": "only if stage 0 passes: R4-bind's pre-registered stage 1 unchanged except the judge (vision anchor = SigLIP prototypes + depth at the episode start state; oracle-anchor arm = privileged upper bound; goal-anchor localisation first; H1 wo_pre rise >= 0.20 CI excl 0; H2 su_pre drop <= 0.05; H3 wg_post as H1; H4 su_post as H2; Holm over H1-H4 at 0.05; gate H1 & H2); stage 2 out of scope",
+  "why": "R4-bind's on-manifold judge (FM under the current, misbound conditioning) penalises a correct approach to an unbound object by construction (circular); R4b replaces only that judge",
+  "written_before": "any R4b judge flow loss, any R4b stage-0 statistic, any test observation"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pr4b_gate__s11__e8a45e38",
+ "schema": 1,
+ "script": "experiments/prereg/pr4b_gate.py",
+ "seconds": null,
+ "seed": 11,
+ "source_commit": null,
+ "started": "2026-10-25T17:42:31+00:00",
+ "stream": null,
+ "tag": "pr4b_gate"
+}
