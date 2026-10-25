@@ -1,0 +1,71 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: R3b attention-logit binding steering, stage-1 H1-H4, after regions/split/smoke, before tuning",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "kipp.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4228186",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5bdaaf1655ddafeeeae90f79abc8b84898c8e30a",
+  "short": "5bdaaf16"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": "wo_pre: steered - unsteered named-object hit share >= 0.20 (episode means), 95% CI excludes 0, one-sided bootstrap p (share <= 0) passes Holm",
+  "H2": "su_pre: steered - unsteered >= -0.05; one-sided p = share of bootstrap diffs <= -0.05 passes Holm",
+  "H3": "wg_post: as H1 on the own target (goal words, own-target region)",
+  "H4": "su_post: as H2 on the own target",
+  "comparators": "u21 (unsteered seed 21, noise floor), s_cf (counterfactual target), sweep over b, R2a arms recomputed",
+  "disclosure": "seen before this row: R2a's published results (docs/PLAN_R2A.md, read.json; so u11 = R2a policy_sample on these observations is known: 0.08 on zs wrong-object, 0.61 on zs successes, pre-grasp); the oracle region job (projection orientation (0,0,1) on every task, median body-origin vs mask-centroid error 1.3-19.4 px; the calibration assertion was relaxed twice from < 16 px to 'same transform everywhere, < 30 px' after tasks 73 and 77 failed it at 17-19 px); a hand check of 12 random overlays (orientation and object identity right; the right moka pot's region in libero_90:38 also holds a 3-4 token strip under the stove); the split counts (tune 250; wo_pre 163, su_pre 394, wg_post 144, su_post 133); a 2-observation GPU smoke on tuning-pool observations (libero_90:14 t8, :16 t0; results/rs3/scratch/smoke): parity max |u11 - R2a draft_instr| = 0 and mean |steered - u11| of 0.001-0.003 (word / both) and 0.027 (expert L0-7 b8), no pointing computed.  Parse note: M1's step_key reads libero_90:16 ('stack the black bowl at the front on the black bowl in the middle') as object 'black bowl at the front on the black bowl', goal 'middle', so its object-word rows include the second bowl's words (kept as M1's parse, disclosed).  A python heredoc was attempted on the login node once during development and was blocked by the harness before running.",
+  "family": "Holm over H1-H4 at alpha 0.05; stage-1 gate = H1 and H2; H3/H4 decide the goal phase in stage 2",
+  "files_sha256": {
+   "doc": "5976327e81816901eab14710701c003ee3a8cbb2bbd9ba94429b3b1c6d16dc62",
+   "r2a_read": "07a31b0218b8c05a02ad68c1a8767bb9615be48ae618bdd66da36b9adc267bf3",
+   "script": "d1f521392c9ab56f3f8c86ed2504a087845fcdb7034f330dbb33d378be2e477c",
+   "split": "a0d998cadb5d076e7dbb5a60088378b4ce45f6a053cda9a828be6f268fc8a96c"
+  },
+  "n": {
+   "test": {
+    "su_post": 133,
+    "su_pre": 394,
+    "wg_post": 144,
+    "wo_pre": 163
+   },
+   "tune": 250
+  },
+  "readout": "R2a's pointed(): integrated 10-step path, first candidate along the heading in a 5 cm corridor else best cosine, < 2 cm none; observation value = share of 12 chunks (seed 11) at the target",
+  "readout_noise": "R2a validity 0.645 pre-grasp (chance 0.379), 0.795 post-grasp (chance 0.272)",
+  "region": "ORACLE: simulator segmentation, movable objects at recorded poses, robot hidden, agentview 16x16 tokens, >= 5% pixel coverage; disk 24 px fallbacks; goal sites = parent mask inside the disk",
+  "selection": "grid site {word, expert, both} x layers {0-1, 0-3, 0-7} x b {2, 4, 8} on the tuning pool; admissible if g_named >= -0.02 and still <= +0.10; max g_cf; ties 0.005 -> smaller b, fewer layers, word<expert<both; none admissible -> max g_named; recorded as rs3_choice before any test observation is run",
+  "written_before": "any steered chunk scored, any tuning statistic, any test observation run"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pr3b_steer__s11__5bdaaf16",
+ "schema": 1,
+ "script": "experiments/prereg/pr3b_steer.py",
+ "seconds": null,
+ "seed": 11,
+ "source_commit": null,
+ "started": "2026-10-25T04:51:05+00:00",
+ "stream": null,
+ "tag": "pr3b_steer"
+}
