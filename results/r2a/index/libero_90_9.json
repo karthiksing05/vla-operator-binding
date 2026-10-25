@@ -1,0 +1,1910 @@
+{
+ "task": "libero_90:9",
+ "axes": {
+  "bin": "0.3",
+  "cd": 0.4537,
+  "kind": "combination",
+  "scene": "KITCHEN_SCENE1",
+  "scene_familiar": true,
+  "instance": false,
+  "quals": [],
+  "named": [
+   "akita_black_bowl_1"
+  ],
+  "atoms": [
+   [
+    "On",
+    "akita_black_bowl_1",
+    "plate_1"
+   ]
+  ],
+  "text": "put the black bowl on the plate"
+ },
+ "own": {
+  "akita_black_bowl_1": [
+   "plate_1"
+  ]
+ },
+ "episodes": [
+  {
+   "trial": 0,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 67,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t0_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.837,
+      0.969
+     ],
+     "exec_disp": [
+      0.02,
+      0.0137
+     ]
+    },
+    {
+     "key": "libero_90_9_t0_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.818,
+      0.352
+     ],
+     "exec_disp": [
+      0.0475,
+      0.0022
+     ]
+    },
+    {
+     "key": "libero_90_9_t0_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.628,
+      -0.264
+     ],
+     "exec_disp": [
+      -0.0181,
+      -0.0068
+     ]
+    },
+    {
+     "key": "libero_90_9_t0_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      1.0,
+      -0.996
+     ],
+     "exec_disp": [
+      -0.0001,
+      0.0794
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 1,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 78,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t1_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.967,
+      0.804
+     ],
+     "exec_disp": [
+      0.0222,
+      0.0072
+     ]
+    },
+    {
+     "key": "libero_90_9_t1_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.934,
+      0.596
+     ],
+     "exec_disp": [
+      0.0804,
+      0.0195
+     ]
+    },
+    {
+     "key": "libero_90_9_t1_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.697,
+      0.119
+     ],
+     "exec_disp": [
+      -0.0227,
+      -0.0044
+     ]
+    },
+    {
+     "key": "libero_90_9_t1_post85",
+     "role": "post",
+     "j": 85,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.982,
+      -0.985
+     ],
+     "exec_disp": [
+      -0.0049,
+      0.083
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 2,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 65,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t2_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.95,
+      0.76
+     ],
+     "exec_disp": [
+      0.0343,
+      0.007
+     ]
+    },
+    {
+     "key": "libero_90_9_t2_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.857,
+      0.33
+     ],
+     "exec_disp": [
+      0.0721,
+      0.0003
+     ]
+    },
+    {
+     "key": "libero_90_9_t2_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.678,
+      0.01
+     ],
+     "exec_disp": [
+      -0.0166,
+      -0.0015
+     ]
+    },
+    {
+     "key": "libero_90_9_t2_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.999,
+      -1.0
+     ],
+     "exec_disp": [
+      0.0013,
+      0.0783
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 3,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 77,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t3_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.997,
+      0.79
+     ],
+     "exec_disp": [
+      0.0117,
+      0.0019
+     ]
+    },
+    {
+     "key": "libero_90_9_t3_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.972,
+      0.81
+     ],
+     "exec_disp": [
+      0.0797,
+      0.0215
+     ]
+    },
+    {
+     "key": "libero_90_9_t3_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.86,
+      0.187
+     ],
+     "exec_disp": [
+      0.0397,
+      -0.0011
+     ]
+    },
+    {
+     "key": "libero_90_9_t3_post85",
+     "role": "post",
+     "j": 85,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.987,
+      -0.996
+     ],
+     "exec_disp": [
+      0.0107,
+      0.0825
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 4,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 74,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t4_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.956,
+      0.83
+     ],
+     "exec_disp": [
+      0.0114,
+      0.003
+     ]
+    },
+    {
+     "key": "libero_90_9_t4_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.93,
+      0.773
+     ],
+     "exec_disp": [
+      0.0849,
+      0.0201
+     ]
+    },
+    {
+     "key": "libero_90_9_t4_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.827,
+      0.13
+     ],
+     "exec_disp": [
+      0.0492,
+      -0.0113
+     ]
+    },
+    {
+     "key": "libero_90_9_t4_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.998,
+      -0.991
+     ],
+     "exec_disp": [
+      0.0052,
+      0.0559
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 5,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 71,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t5_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.903,
+      0.947
+     ],
+     "exec_disp": [
+      0.0296,
+      0.0159
+     ]
+    },
+    {
+     "key": "libero_90_9_t5_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.976,
+      0.794
+     ],
+     "exec_disp": [
+      0.0908,
+      0.0185
+     ]
+    },
+    {
+     "key": "libero_90_9_t5_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.923,
+      0.524
+     ],
+     "exec_disp": [
+      0.0626,
+      0.0076
+     ]
+    },
+    {
+     "key": "libero_90_9_t5_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.988,
+      -0.996
+     ],
+     "exec_disp": [
+      0.0106,
+      0.0801
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 6,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 74,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t6_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.898,
+      0.853
+     ],
+     "exec_disp": [
+      0.0399,
+      0.0183
+     ]
+    },
+    {
+     "key": "libero_90_9_t6_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.932,
+      -0.644
+     ],
+     "exec_disp": [
+      0.0261,
+      -0.0215
+     ]
+    },
+    {
+     "key": "libero_90_9_t6_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.108,
+      0.134
+     ],
+     "exec_disp": [
+      -0.0196,
+      -0.0008
+     ]
+    },
+    {
+     "key": "libero_90_9_t6_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.989,
+      -0.999
+     ],
+     "exec_disp": [
+      0.0046,
+      0.0778
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 7,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 65,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t7_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.978,
+      0.798
+     ],
+     "exec_disp": [
+      0.034,
+      0.0065
+     ]
+    },
+    {
+     "key": "libero_90_9_t7_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.838,
+      0.419
+     ],
+     "exec_disp": [
+      0.0729,
+      0.0019
+     ]
+    },
+    {
+     "key": "libero_90_9_t7_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.969,
+      -0.323
+     ],
+     "exec_disp": [
+      -0.0113,
+      -0.0053
+     ]
+    },
+    {
+     "key": "libero_90_9_t7_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      1.0,
+      -1.0
+     ],
+     "exec_disp": [
+      0.0015,
+      0.0756
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 8,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 69,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t8_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.936,
+      0.836
+     ],
+     "exec_disp": [
+      0.0235,
+      0.0078
+     ]
+    },
+    {
+     "key": "libero_90_9_t8_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.958,
+      0.644
+     ],
+     "exec_disp": [
+      0.0947,
+      0.0134
+     ]
+    },
+    {
+     "key": "libero_90_9_t8_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.885,
+      0.069
+     ],
+     "exec_disp": [
+      0.039,
+      -0.0048
+     ]
+    },
+    {
+     "key": "libero_90_9_t8_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.999,
+      -1.0
+     ],
+     "exec_disp": [
+      0.0015,
+      0.0692
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 9,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 74,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t9_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.984,
+      0.764
+     ],
+     "exec_disp": [
+      0.0119,
+      0.0013
+     ]
+    },
+    {
+     "key": "libero_90_9_t9_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.971,
+      0.692
+     ],
+     "exec_disp": [
+      0.0927,
+      0.0121
+     ]
+    },
+    {
+     "key": "libero_90_9_t9_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.853,
+      -0.399
+     ],
+     "exec_disp": [
+      -0.0078,
+      -0.0027
+     ]
+    },
+    {
+     "key": "libero_90_9_t9_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.999,
+      -0.986
+     ],
+     "exec_disp": [
+      0.0103,
+      0.0695
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 10,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 71,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t10_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.965,
+      0.767
+     ],
+     "exec_disp": [
+      0.0288,
+      0.0056
+     ]
+    },
+    {
+     "key": "libero_90_9_t10_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.961,
+      0.597
+     ],
+     "exec_disp": [
+      0.0915,
+      0.0091
+     ]
+    },
+    {
+     "key": "libero_90_9_t10_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.816,
+      0.148
+     ],
+     "exec_disp": [
+      0.031,
+      -0.0016
+     ]
+    },
+    {
+     "key": "libero_90_9_t10_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.99,
+      -0.999
+     ],
+     "exec_disp": [
+      0.0107,
+      0.0831
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 11,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 69,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t11_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.884,
+      0.928
+     ],
+     "exec_disp": [
+      0.017,
+      0.0116
+     ]
+    },
+    {
+     "key": "libero_90_9_t11_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.952,
+      0.745
+     ],
+     "exec_disp": [
+      0.0945,
+      0.0313
+     ]
+    },
+    {
+     "key": "libero_90_9_t11_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.707,
+      0.161
+     ],
+     "exec_disp": [
+      -0.019,
+      -0.0031
+     ]
+    },
+    {
+     "key": "libero_90_9_t11_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.999,
+      -1.0
+     ],
+     "exec_disp": [
+      -0.001,
+      0.0748
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 12,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 70,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t12_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.912,
+      0.872
+     ],
+     "exec_disp": [
+      0.0229,
+      0.0085
+     ]
+    },
+    {
+     "key": "libero_90_9_t12_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.603,
+      0.012
+     ],
+     "exec_disp": [
+      0.0517,
+      -0.0045
+     ]
+    },
+    {
+     "key": "libero_90_9_t12_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.7,
+      -0.053
+     ],
+     "exec_disp": [
+      -0.0114,
+      -0.0029
+     ]
+    },
+    {
+     "key": "libero_90_9_t12_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.981,
+      -1.0
+     ],
+     "exec_disp": [
+      0.0044,
+      0.0619
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 13,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 69,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t13_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.723,
+      0.981
+     ],
+     "exec_disp": [
+      0.0067,
+      0.0056
+     ]
+    },
+    {
+     "key": "libero_90_9_t13_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.929,
+      0.364
+     ],
+     "exec_disp": [
+      0.0838,
+      0.0038
+     ]
+    },
+    {
+     "key": "libero_90_9_t13_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.488,
+      0.219
+     ],
+     "exec_disp": [
+      -0.0069,
+      0.0004
+     ]
+    },
+    {
+     "key": "libero_90_9_t13_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      1.0,
+      -0.99
+     ],
+     "exec_disp": [
+      -0.0038,
+      0.0719
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 14,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 76,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t14_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.771,
+      0.974
+     ],
+     "exec_disp": [
+      0.0063,
+      0.0048
+     ]
+    },
+    {
+     "key": "libero_90_9_t14_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.911,
+      0.394
+     ],
+     "exec_disp": [
+      0.0657,
+      -0.0019
+     ]
+    },
+    {
+     "key": "libero_90_9_t14_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.48,
+      -0.1
+     ],
+     "exec_disp": [
+      -0.0105,
+      -0.0018
+     ]
+    },
+    {
+     "key": "libero_90_9_t14_post85",
+     "role": "post",
+     "j": 85,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.998,
+      -1.0
+     ],
+     "exec_disp": [
+      0.0065,
+      0.09
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 15,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 71,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t15_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.992,
+      0.73
+     ],
+     "exec_disp": [
+      0.0402,
+      0.0068
+     ]
+    },
+    {
+     "key": "libero_90_9_t15_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.971,
+      0.73
+     ],
+     "exec_disp": [
+      0.0899,
+      0.0238
+     ]
+    },
+    {
+     "key": "libero_90_9_t15_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.905,
+      0.338
+     ],
+     "exec_disp": [
+      0.0566,
+      0.0058
+     ]
+    },
+    {
+     "key": "libero_90_9_t15_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.996,
+      -0.999
+     ],
+     "exec_disp": [
+      -0.0008,
+      0.091
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 16,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 67,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t16_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.891,
+      0.887
+     ],
+     "exec_disp": [
+      0.0475,
+      0.0184
+     ]
+    },
+    {
+     "key": "libero_90_9_t16_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.946,
+      0.438
+     ],
+     "exec_disp": [
+      0.0856,
+      -0.0059
+     ]
+    },
+    {
+     "key": "libero_90_9_t16_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.634,
+      -0.107
+     ],
+     "exec_disp": [
+      -0.0222,
+      -0.0035
+     ]
+    },
+    {
+     "key": "libero_90_9_t16_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.998,
+      -0.988
+     ],
+     "exec_disp": [
+      0.0119,
+      0.0713
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 17,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 68,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t17_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.935,
+      0.895
+     ],
+     "exec_disp": [
+      0.0326,
+      0.0144
+     ]
+    },
+    {
+     "key": "libero_90_9_t17_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.964,
+      0.768
+     ],
+     "exec_disp": [
+      0.0902,
+      0.0225
+     ]
+    },
+    {
+     "key": "libero_90_9_t17_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.872,
+      0.355
+     ],
+     "exec_disp": [
+      0.0645,
+      0.002
+     ]
+    },
+    {
+     "key": "libero_90_9_t17_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      1.0,
+      -0.995
+     ],
+     "exec_disp": [
+      0.004,
+      0.0677
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 18,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 71,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t18_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.968,
+      0.846
+     ],
+     "exec_disp": [
+      0.0153,
+      0.005
+     ]
+    },
+    {
+     "key": "libero_90_9_t18_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.921,
+      0.837
+     ],
+     "exec_disp": [
+      0.0877,
+      0.0336
+     ]
+    },
+    {
+     "key": "libero_90_9_t18_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.959,
+      -0.996
+     ],
+     "exec_disp": [
+      -0.0008,
+      -0.0091
+     ]
+    },
+    {
+     "key": "libero_90_9_t18_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.999,
+      -0.97
+     ],
+     "exec_disp": [
+      0.0186,
+      0.0892
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 19,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 69,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_9_t19_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.995,
+      0.736
+     ],
+     "exec_disp": [
+      0.0261,
+      0.0052
+     ]
+    },
+    {
+     "key": "libero_90_9_t19_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.955,
+      0.82
+     ],
+     "exec_disp": [
+      0.082,
+      0.0332
+     ]
+    },
+    {
+     "key": "libero_90_9_t19_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.961,
+      0.412
+     ],
+     "exec_disp": [
+      0.0729,
+      0.0058
+     ]
+    },
+    {
+     "key": "libero_90_9_t19_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.952,
+      -0.98
+     ],
+     "exec_disp": [
+      0.0147,
+      0.0642
+     ]
+    }
+   ]
+  }
+ ]
+}

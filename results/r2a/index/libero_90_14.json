@@ -1,0 +1,2157 @@
+{
+ "task": "libero_90:14",
+ "axes": {
+  "bin": "0.1",
+  "cd": 0.264,
+  "kind": "combination",
+  "scene": "KITCHEN_SCENE2",
+  "scene_familiar": true,
+  "instance": true,
+  "quals": [
+   "middle"
+  ],
+  "named": [
+   "akita_black_bowl_2"
+  ],
+  "atoms": [
+   [
+    "On",
+    "akita_black_bowl_2",
+    "plate_1"
+   ]
+  ],
+  "text": "put the middle black bowl on the plate"
+ },
+ "own": {
+  "akita_black_bowl_2": [
+   "plate_1"
+  ]
+ },
+ "episodes": [
+  {
+   "trial": 0,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 65,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t0_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.869,
+      0.996,
+      0.975,
+      0.476
+     ],
+     "exec_disp": [
+      0.0312,
+      0.0439
+     ]
+    },
+    {
+     "key": "libero_90_14_t0_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.676,
+      0.993,
+      -0.999,
+      -0.358
+     ],
+     "exec_disp": [
+      0.0487,
+      0.0666
+     ]
+    },
+    {
+     "key": "libero_90_14_t0_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.334,
+      0.965,
+      -0.961,
+      -0.769
+     ],
+     "exec_disp": [
+      0.0222,
+      0.0534
+     ]
+    },
+    {
+     "key": "libero_90_14_t0_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.998,
+      0.484,
+      0.687,
+      0.998
+     ],
+     "exec_disp": [
+      0.012,
+      -0.1002
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 1,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 69,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t1_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.971,
+      0.957,
+      0.989,
+      0.787
+     ],
+     "exec_disp": [
+      0.0271,
+      0.023
+     ]
+    },
+    {
+     "key": "libero_90_14_t1_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.76,
+      0.976,
+      -0.985,
+      -0.111
+     ],
+     "exec_disp": [
+      0.0511,
+      0.0741
+     ]
+    },
+    {
+     "key": "libero_90_14_t1_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.58,
+      0.939,
+      -0.986,
+      -0.517
+     ],
+     "exec_disp": [
+      0.037,
+      0.0614
+     ]
+    },
+    {
+     "key": "libero_90_14_t1_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.999,
+      0.433,
+      0.711,
+      0.999
+     ],
+     "exec_disp": [
+      0.015,
+      -0.0939
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 2,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 67,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t2_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.762,
+      0.999,
+      -0.935,
+      0.129
+     ],
+     "exec_disp": [
+      0.0654,
+      0.079
+     ]
+    },
+    {
+     "key": "libero_90_14_t2_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.66,
+      0.999,
+      -0.954,
+      -0.144
+     ],
+     "exec_disp": [
+      0.0553,
+      0.0596
+     ]
+    },
+    {
+     "key": "libero_90_14_t2_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.252,
+      0.997,
+      -0.998,
+      -0.638
+     ],
+     "exec_disp": [
+      0.0267,
+      0.0481
+     ]
+    },
+    {
+     "key": "libero_90_14_t2_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      1.0,
+      0.633,
+      0.718,
+      0.999
+     ],
+     "exec_disp": [
+      0.015,
+      -0.104
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 3,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 60,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t3_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.923,
+      0.999,
+      0.955,
+      0.596
+     ],
+     "exec_disp": [
+      0.0305,
+      0.0372
+     ]
+    },
+    {
+     "key": "libero_90_14_t3_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.943,
+      1.0,
+      0.952,
+      0.618
+     ],
+     "exec_disp": [
+      0.0636,
+      0.0669
+     ]
+    },
+    {
+     "key": "libero_90_14_t3_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.848,
+      0.999,
+      -0.932,
+      -0.168
+     ],
+     "exec_disp": [
+      0.0428,
+      0.0401
+     ]
+    },
+    {
+     "key": "libero_90_14_t3_post65",
+     "role": "post",
+     "j": 65,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.999,
+      0.348,
+      0.751,
+      0.996
+     ],
+     "exec_disp": [
+      0.0128,
+      -0.0469
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 4,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 88,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t4_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.816,
+      1.0,
+      -1.0,
+      0.256
+     ],
+     "exec_disp": [
+      0.0584,
+      0.0752
+     ]
+    },
+    {
+     "key": "libero_90_14_t4_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.733,
+      0.999,
+      -1.0,
+      -0.07
+     ],
+     "exec_disp": [
+      0.0517,
+      0.0631
+     ]
+    },
+    {
+     "key": "libero_90_14_t4_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.521,
+      0.998,
+      -1.0,
+      -0.387
+     ],
+     "exec_disp": [
+      0.0378,
+      0.0471
+     ]
+    },
+    {
+     "key": "libero_90_14_t4_post95",
+     "role": "post",
+     "j": 95,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.991,
+      0.495,
+      0.645,
+      0.999
+     ],
+     "exec_disp": [
+      0.0139,
+      -0.1008
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 5,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 58,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t5_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.983,
+      0.986,
+      0.955,
+      0.784
+     ],
+     "exec_disp": [
+      0.0395,
+      0.031
+     ]
+    },
+    {
+     "key": "libero_90_14_t5_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.958,
+      0.997,
+      0.918,
+      0.695
+     ],
+     "exec_disp": [
+      0.0595,
+      0.0583
+     ]
+    },
+    {
+     "key": "libero_90_14_t5_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.808,
+      0.999,
+      -0.948,
+      -0.229
+     ],
+     "exec_disp": [
+      0.042,
+      0.0529
+     ]
+    },
+    {
+     "key": "libero_90_14_t5_post65",
+     "role": "post",
+     "j": 65,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.996,
+      0.247,
+      0.865,
+      0.997
+     ],
+     "exec_disp": [
+      0.0025,
+      -0.0856
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 6,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 173,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t6_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.995,
+      0.867,
+      0.976,
+      0.825
+     ],
+     "exec_disp": [
+      0.0286,
+      0.0159
+     ]
+    },
+    {
+     "key": "libero_90_14_t6_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.622,
+      0.962,
+      0.827,
+      0.31
+     ],
+     "exec_disp": [
+      -0.0172,
+      -0.0065
+     ]
+    },
+    {
+     "key": "libero_90_14_t6_pre160",
+     "role": "pre",
+     "j": 160,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.593,
+      0.906,
+      0.985,
+      0.973
+     ],
+     "exec_disp": [
+      0.0024,
+      -0.0225
+     ]
+    },
+    {
+     "key": "libero_90_14_t6_post180",
+     "role": "post",
+     "j": 180,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.996,
+      0.543,
+      0.872,
+      1.0
+     ],
+     "exec_disp": [
+      0.0137,
+      -0.1106
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 7,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 64,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t7_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.809,
+      0.991,
+      -0.994,
+      -0.089
+     ],
+     "exec_disp": [
+      0.0595,
+      0.0727
+     ]
+    },
+    {
+     "key": "libero_90_14_t7_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.999,
+      0.58,
+      0.659,
+      0.996
+     ],
+     "exec_disp": [
+      0.0135,
+      -0.0779
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 8,
+   "success": false,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 63,
+   "type": "motion",
+   "sub": "toward_target",
+   "obs": [
+    {
+     "key": "libero_90_14_t8_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.838,
+      0.998,
+      0.995,
+      0.509
+     ],
+     "exec_disp": [
+      0.0283,
+      0.0428
+     ]
+    },
+    {
+     "key": "libero_90_14_t8_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.738,
+      0.995,
+      -1.0,
+      -0.192
+     ],
+     "exec_disp": [
+      0.0579,
+      0.0606
+     ]
+    },
+    {
+     "key": "libero_90_14_t8_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.487,
+      0.995,
+      -0.977,
+      -0.607
+     ],
+     "exec_disp": [
+      0.0407,
+      0.0591
+     ]
+    },
+    {
+     "key": "libero_90_14_t8_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.997,
+      0.434,
+      0.749,
+      0.994
+     ],
+     "exec_disp": [
+      -0.0021,
+      -0.1015
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 9,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 67,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t9_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.935,
+      1.0,
+      0.909,
+      0.627
+     ],
+     "exec_disp": [
+      0.0225,
+      0.0239
+     ]
+    },
+    {
+     "key": "libero_90_14_t9_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.887,
+      0.997,
+      0.745,
+      0.45
+     ],
+     "exec_disp": [
+      0.0615,
+      0.0768
+     ]
+    },
+    {
+     "key": "libero_90_14_t9_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.592,
+      0.989,
+      -0.965,
+      -0.468
+     ],
+     "exec_disp": [
+      0.0497,
+      0.0613
+     ]
+    },
+    {
+     "key": "libero_90_14_t9_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "wooden_cabinet_1",
+     "exec_cos": [
+      0.949,
+      0.865,
+      0.632,
+      0.976
+     ],
+     "exec_disp": [
+      0.019,
+      -0.0832
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 10,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 64,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t10_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.769,
+      0.985,
+      0.995,
+      0.487
+     ],
+     "exec_disp": [
+      0.0184,
+      0.0351
+     ]
+    },
+    {
+     "key": "libero_90_14_t10_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.716,
+      0.999,
+      -0.995,
+      0.082
+     ],
+     "exec_disp": [
+      0.0617,
+      0.0742
+     ]
+    },
+    {
+     "key": "libero_90_14_t10_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.545,
+      0.997,
+      -0.997,
+      -0.254
+     ],
+     "exec_disp": [
+      0.0405,
+      0.0507
+     ]
+    },
+    {
+     "key": "libero_90_14_t10_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "akita_black_bowl_1",
+     "exec_cos": [
+      0.93,
+      0.944,
+      0.265,
+      0.843
+     ],
+     "exec_disp": [
+      0.0458,
+      -0.0582
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 11,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 138,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t11_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.785,
+      0.952,
+      -0.998,
+      -0.208
+     ],
+     "exec_disp": [
+      0.0553,
+      0.0753
+     ]
+    },
+    {
+     "key": "libero_90_14_t11_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.662,
+      0.763,
+      -1.0,
+      -0.549
+     ],
+     "exec_disp": [
+      0.0359,
+      0.0491
+     ]
+    },
+    {
+     "key": "libero_90_14_t11_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      -0.967,
+      0.999,
+      0.547,
+      -0.107
+     ],
+     "exec_disp": [
+      -0.0238,
+      0.002
+     ]
+    },
+    {
+     "key": "libero_90_14_t11_post145",
+     "role": "post",
+     "j": 145,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.999,
+      0.41,
+      0.757,
+      0.997
+     ],
+     "exec_disp": [
+      0.0226,
+      -0.0904
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 12,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 66,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t12_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.917,
+      0.997,
+      0.99,
+      0.723
+     ],
+     "exec_disp": [
+      0.0179,
+      0.019
+     ]
+    },
+    {
+     "key": "libero_90_14_t12_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.834,
+      0.999,
+      0.951,
+      0.551
+     ],
+     "exec_disp": [
+      0.0553,
+      0.0787
+     ]
+    },
+    {
+     "key": "libero_90_14_t12_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.468,
+      0.993,
+      -1.0,
+      -0.323
+     ],
+     "exec_disp": [
+      0.0338,
+      0.0625
+     ]
+    },
+    {
+     "key": "libero_90_14_t12_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.992,
+      0.443,
+      0.615,
+      0.996
+     ],
+     "exec_disp": [
+      0.016,
+      -0.0973
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 13,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 66,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t13_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.952,
+      0.977,
+      0.986,
+      0.761
+     ],
+     "exec_disp": [
+      0.0449,
+      0.0381
+     ]
+    },
+    {
+     "key": "libero_90_14_t13_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.645,
+      0.997,
+      -0.996,
+      -0.355
+     ],
+     "exec_disp": [
+      0.0475,
+      0.0636
+     ]
+    },
+    {
+     "key": "libero_90_14_t13_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.224,
+      1.0,
+      -0.93,
+      -0.818
+     ],
+     "exec_disp": [
+      0.018,
+      0.0464
+     ]
+    },
+    {
+     "key": "libero_90_14_t13_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.992,
+      0.499,
+      0.623,
+      0.999
+     ],
+     "exec_disp": [
+      0.0091,
+      -0.0906
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 14,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 69,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t14_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.979,
+      0.96,
+      0.994,
+      0.788
+     ],
+     "exec_disp": [
+      0.0248,
+      0.0173
+     ]
+    },
+    {
+     "key": "libero_90_14_t14_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.75,
+      0.996,
+      -0.988,
+      -0.078
+     ],
+     "exec_disp": [
+      0.0594,
+      0.08
+     ]
+    },
+    {
+     "key": "libero_90_14_t14_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.646,
+      0.974,
+      -0.998,
+      -0.375
+     ],
+     "exec_disp": [
+      0.0551,
+      0.0673
+     ]
+    },
+    {
+     "key": "libero_90_14_t14_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      1.0,
+      0.555,
+      0.701,
+      0.999
+     ],
+     "exec_disp": [
+      0.0102,
+      -0.0952
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 15,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 68,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t15_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.942,
+      0.991,
+      0.997,
+      0.617
+     ],
+     "exec_disp": [
+      0.0361,
+      0.0394
+     ]
+    },
+    {
+     "key": "libero_90_14_t15_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.754,
+      0.974,
+      -0.994,
+      -0.302
+     ],
+     "exec_disp": [
+      0.0557,
+      0.072
+     ]
+    },
+    {
+     "key": "libero_90_14_t15_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      -0.774,
+      0.963,
+      0.711,
+      0.113
+     ],
+     "exec_disp": [
+      -0.0272,
+      -0.0036
+     ]
+    },
+    {
+     "key": "libero_90_14_t15_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.989,
+      0.289,
+      0.799,
+      0.998
+     ],
+     "exec_disp": [
+      0.0074,
+      -0.0961
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 16,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 69,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t16_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.926,
+      0.996,
+      1.0,
+      0.743
+     ],
+     "exec_disp": [
+      0.0282,
+      0.0276
+     ]
+    },
+    {
+     "key": "libero_90_14_t16_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.582,
+      0.989,
+      -0.989,
+      -0.256
+     ],
+     "exec_disp": [
+      0.0472,
+      0.0804
+     ]
+    },
+    {
+     "key": "libero_90_14_t16_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.447,
+      0.994,
+      -0.999,
+      -0.518
+     ],
+     "exec_disp": [
+      0.0393,
+      0.0567
+     ]
+    },
+    {
+     "key": "libero_90_14_t16_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.98,
+      0.742,
+      0.582,
+      0.982
+     ],
+     "exec_disp": [
+      0.0223,
+      -0.0854
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 17,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 65,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t17_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.974,
+      0.986,
+      0.998,
+      0.764
+     ],
+     "exec_disp": [
+      0.0575,
+      0.0527
+     ]
+    },
+    {
+     "key": "libero_90_14_t17_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.984,
+      0.967,
+      1.0,
+      0.739
+     ],
+     "exec_disp": [
+      0.0724,
+      0.0571
+     ]
+    },
+    {
+     "key": "libero_90_14_t17_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.464,
+      0.981,
+      -0.799,
+      -0.817
+     ],
+     "exec_disp": [
+      0.0104,
+      0.0476
+     ]
+    },
+    {
+     "key": "libero_90_14_t17_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.997,
+      0.358,
+      0.786,
+      1.0
+     ],
+     "exec_disp": [
+      0.0069,
+      -0.0892
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 18,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 65,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t18_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.954,
+      0.996,
+      0.998,
+      0.661
+     ],
+     "exec_disp": [
+      0.039,
+      0.0409
+     ]
+    },
+    {
+     "key": "libero_90_14_t18_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      0.698,
+      1.0,
+      -0.983,
+      -0.454
+     ],
+     "exec_disp": [
+      0.0361,
+      0.0567
+     ]
+    },
+    {
+     "key": "libero_90_14_t18_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.757,
+      0.982,
+      0.777,
+      0.996
+     ],
+     "exec_disp": [
+      0.0022,
+      -0.0085
+     ]
+    },
+    {
+     "key": "libero_90_14_t18_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "plate_1",
+      "akita_black_bowl_1",
+      "akita_black_bowl_3",
+      "wooden_cabinet_1"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      1.0,
+      0.616,
+      0.787,
+      1.0
+     ],
+     "exec_disp": [
+      0.0071,
+      -0.083
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 19,
+   "success": true,
+   "bound": "akita_black_bowl_2",
+   "bound_step": 92,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_14_t19_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.92,
+      0.998,
+      0.979,
+      0.64
+     ],
+     "exec_disp": [
+      0.0106,
+      0.0138
+     ]
+    },
+    {
+     "key": "libero_90_14_t19_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_3",
+     "exec_cos": [
+      0.909,
+      0.998,
+      0.97,
+      0.581
+     ],
+     "exec_disp": [
+      0.0533,
+      0.0711
+     ]
+    },
+    {
+     "key": "libero_90_14_t19_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "akita_black_bowl_3",
+      "plate_1"
+     ],
+     "named": [
+      "akita_black_bowl_2"
+     ],
+     "exec_pointed": "akita_black_bowl_2",
+     "exec_cos": [
+      -0.632,
+      0.951,
+      0.77,
+      0.286
+     ],
+     "exec_disp": [
+      -0.0191,
+      -0.0065
+     ]
+    }
+   ]
+  }
+ ]
+}

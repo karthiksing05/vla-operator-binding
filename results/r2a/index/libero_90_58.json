@@ -1,0 +1,1824 @@
+{
+ "task": "libero_90:58",
+ "axes": {
+  "bin": "part",
+  "cd": null,
+  "kind": "part",
+  "scene": "LIVING_ROOM_SCENE3",
+  "scene_familiar": true,
+  "instance": false,
+  "quals": [],
+  "named": [
+   "ketchup_1"
+  ],
+  "atoms": [
+   [
+    "In",
+    "ketchup_1",
+    "wooden_tray_1_contain_region"
+   ]
+  ],
+  "text": "pick up the ketchup and put it in the tray"
+ },
+ "own": {
+  "ketchup_1": [
+   "wooden_tray_1_contain_region"
+  ]
+ },
+ "episodes": [
+  {
+   "trial": 0,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 59,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t0_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.94,
+      -0.346,
+      0.091,
+      -0.923,
+      0.846,
+      0.979
+     ],
+     "exec_disp": [
+      0.0022,
+      0.0045
+     ]
+    },
+    {
+     "key": "libero_90_58_t0_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.991,
+      -0.779,
+      0.224,
+      -0.685,
+      0.381,
+      0.964
+     ],
+     "exec_disp": [
+      -0.0003,
+      0.015
+     ]
+    },
+    {
+     "key": "libero_90_58_t0_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      0.06,
+      -0.614,
+      0.986,
+      0.666,
+      -0.984,
+      -0.333
+     ],
+     "exec_disp": [
+      -0.0347,
+      -0.0005
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 1,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 62,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t1_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.982,
+      0.818,
+      -0.687,
+      0.546,
+      -0.548,
+      -0.965
+     ],
+     "exec_disp": [
+      0.0004,
+      -0.0105
+     ]
+    },
+    {
+     "key": "libero_90_58_t1_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "wooden_tray_1",
+     "exec_cos": [
+      -0.991,
+      -0.802,
+      0.508,
+      -0.625,
+      0.541,
+      0.981
+     ],
+     "exec_disp": [
+      0.0007,
+      0.0255
+     ]
+    },
+    {
+     "key": "libero_90_58_t1_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      0.102,
+      -0.525,
+      1.0,
+      0.715,
+      -0.989,
+      -0.261
+     ],
+     "exec_disp": [
+      -0.0356,
+      0.0003
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 2,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 55,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t2_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.409,
+      -0.986,
+      0.972,
+      0.221,
+      -0.323,
+      0.482
+     ],
+     "exec_disp": [
+      -0.0038,
+      0.0032
+     ]
+    },
+    {
+     "key": "libero_90_58_t2_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.988,
+      -0.478,
+      -0.168,
+      -0.894,
+      0.721,
+      0.981
+     ],
+     "exec_disp": [
+      0.0069,
+      0.0162
+     ]
+    },
+    {
+     "key": "libero_90_58_t2_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      0.574,
+      -0.221,
+      0.983,
+      0.923,
+      -0.976,
+      -0.541
+     ],
+     "exec_disp": [
+      -0.0402,
+      -0.0153
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 3,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 54,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t3_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.65,
+      1.0,
+      -0.991,
+      0.033,
+      0.206,
+      -0.655
+     ],
+     "exec_disp": [
+      0.0042,
+      -0.0059
+     ]
+    },
+    {
+     "key": "libero_90_58_t3_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      -0.931,
+      -0.882,
+      0.583,
+      -0.549,
+      0.272,
+      0.959
+     ],
+     "exec_disp": [
+      -0.002,
+      0.0252
+     ]
+    },
+    {
+     "key": "libero_90_58_t3_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      0.256,
+      -0.486,
+      1.0,
+      0.74,
+      -0.998,
+      -0.221
+     ],
+     "exec_disp": [
+      -0.026,
+      -0.0
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 4,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 54,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t4_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.995,
+      -0.543,
+      0.174,
+      -0.815,
+      0.656,
+      1.0
+     ],
+     "exec_disp": [
+      0.002,
+      0.007
+     ]
+    },
+    {
+     "key": "libero_90_58_t4_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "wooden_tray_1",
+     "exec_cos": [
+      -0.927,
+      -0.796,
+      0.275,
+      -0.636,
+      0.278,
+      0.959
+     ],
+     "exec_disp": [
+      -0.0007,
+      0.0218
+     ]
+    },
+    {
+     "key": "libero_90_58_t4_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      0.361,
+      -0.519,
+      0.996,
+      0.746,
+      -0.997,
+      -0.404
+     ],
+     "exec_disp": [
+      -0.0308,
+      -0.003
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 5,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 59,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t5_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      0.445,
+      -0.379,
+      0.998,
+      0.829,
+      -0.972,
+      -0.216
+     ],
+     "exec_disp": [
+      -0.0264,
+      -0.002
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 6,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 59,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t6_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.38,
+      0.911,
+      -0.689,
+      -0.361,
+      0.669,
+      -0.283
+     ],
+     "exec_disp": [
+      0.0071,
+      -0.0038
+     ]
+    },
+    {
+     "key": "libero_90_58_t6_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      -0.995,
+      -0.774,
+      0.924,
+      -0.668,
+      0.424,
+      0.992
+     ],
+     "exec_disp": [
+      0.0029,
+      0.0538
+     ]
+    },
+    {
+     "key": "libero_90_58_t6_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      -0.998,
+      -0.72,
+      0.749,
+      -0.81,
+      0.399,
+      1.0
+     ],
+     "exec_disp": [
+      0.0087,
+      0.0419
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 7,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 49,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t7_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.813,
+      -0.919,
+      0.616,
+      -0.359,
+      0.168,
+      0.893
+     ],
+     "exec_disp": [
+      -0.002,
+      0.0079
+     ]
+    },
+    {
+     "key": "libero_90_58_t7_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.928,
+      -0.852,
+      0.175,
+      -0.585,
+      0.197,
+      0.952
+     ],
+     "exec_disp": [
+      -0.0005,
+      0.0077
+     ]
+    },
+    {
+     "key": "libero_90_58_t7_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      0.345,
+      -0.513,
+      0.999,
+      0.782,
+      -0.993,
+      -0.302
+     ],
+     "exec_disp": [
+      -0.047,
+      -0.0026
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 8,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 57,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t8_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.147,
+      0.837,
+      -0.826,
+      -0.6,
+      0.719,
+      -0.033
+     ],
+     "exec_disp": [
+      0.0059,
+      -0.0018
+     ]
+    },
+    {
+     "key": "libero_90_58_t8_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "wooden_tray_1",
+     "exec_cos": [
+      -0.963,
+      -0.868,
+      0.666,
+      -0.554,
+      0.248,
+      0.942
+     ],
+     "exec_disp": [
+      -0.0024,
+      0.0254
+     ]
+    },
+    {
+     "key": "libero_90_58_t8_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      -0.103,
+      -0.702,
+      0.998,
+      0.523,
+      -0.967,
+      -0.081
+     ],
+     "exec_disp": [
+      -0.0327,
+      0.0077
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 9,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 69,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": []
+  },
+  {
+   "trial": 10,
+   "success": true,
+   "bound": "ketchup_1",
+   "bound_step": 51,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_58_t10_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "alphabet_soup_1",
+     "exec_cos": [
+      0.979,
+      0.737,
+      -0.807,
+      0.626,
+      -0.256,
+      -0.973
+     ],
+     "exec_disp": [
+      0.0019,
+      -0.0571
+     ]
+    },
+    {
+     "key": "libero_90_58_t10_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "ketchup_1",
+     "exec_cos": [
+      0.517,
+      -0.799,
+      0.039,
+      0.999,
+      -0.79,
+      -0.392
+     ],
+     "exec_disp": [
+      -0.0603,
+      -0.0145
+     ]
+    },
+    {
+     "key": "libero_90_58_t10_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "ketchup_1",
+     "exec_cos": [
+      -0.746,
+      -0.95,
+      -0.338,
+      0.935,
+      -0.861,
+      -0.463
+     ],
+     "exec_disp": [
+      -0.0298,
+      -0.0026
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 11,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 61,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t11_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.588,
+      0.996,
+      -0.919,
+      -0.097,
+      0.315,
+      -0.562
+     ],
+     "exec_disp": [
+      0.0037,
+      -0.0041
+     ]
+    },
+    {
+     "key": "libero_90_58_t11_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "wooden_tray_1",
+     "exec_cos": [
+      -0.946,
+      -0.84,
+      0.131,
+      -0.619,
+      0.501,
+      0.998
+     ],
+     "exec_disp": [
+      0.0015,
+      0.0234
+     ]
+    },
+    {
+     "key": "libero_90_58_t11_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      0.489,
+      -0.248,
+      0.99,
+      0.901,
+      -0.995,
+      -0.448
+     ],
+     "exec_disp": [
+      -0.0212,
+      -0.0056
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 12,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 49,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t12_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.955,
+      0.877,
+      -0.95,
+      0.537,
+      -0.378,
+      -0.937
+     ],
+     "exec_disp": [
+      0.0013,
+      -0.0105
+     ]
+    },
+    {
+     "key": "libero_90_58_t12_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      -1.0,
+      -0.684,
+      0.719,
+      -0.777,
+      0.686,
+      1.0
+     ],
+     "exec_disp": [
+      0.0086,
+      0.0379
+     ]
+    },
+    {
+     "key": "libero_90_58_t12_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.287,
+      -0.409,
+      0.959,
+      0.751,
+      -0.99,
+      -0.219
+     ],
+     "exec_disp": [
+      -0.0189,
+      -0.0008
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 13,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 54,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t13_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.996,
+      0.582,
+      -0.614,
+      0.745,
+      -0.632,
+      -0.999
+     ],
+     "exec_disp": [
+      -0.0023,
+      -0.0099
+     ]
+    },
+    {
+     "key": "libero_90_58_t13_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "wooden_tray_1",
+     "exec_cos": [
+      -0.995,
+      -0.561,
+      0.684,
+      -0.732,
+      0.661,
+      0.999
+     ],
+     "exec_disp": [
+      0.0124,
+      0.0536
+     ]
+    },
+    {
+     "key": "libero_90_58_t13_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      -0.115,
+      -0.719,
+      0.967,
+      0.539,
+      -0.996,
+      0.002
+     ],
+     "exec_disp": [
+      -0.0258,
+      0.0061
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 14,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 48,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t14_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.455,
+      -0.429,
+      0.495,
+      0.927,
+      -0.995,
+      -0.506
+     ],
+     "exec_disp": [
+      -0.0009,
+      -0.0003
+     ]
+    },
+    {
+     "key": "libero_90_58_t14_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "wooden_tray_1",
+     "exec_cos": [
+      -0.98,
+      -0.776,
+      0.509,
+      -0.648,
+      0.29,
+      0.974
+     ],
+     "exec_disp": [
+      -0.0009,
+      0.0206
+     ]
+    },
+    {
+     "key": "libero_90_58_t14_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      0.023,
+      -0.704,
+      1.0,
+      0.606,
+      -0.974,
+      -0.111
+     ],
+     "exec_disp": [
+      -0.0259,
+      0.0026
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 15,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 57,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t15_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.717,
+      0.983,
+      -0.999,
+      0.247,
+      -0.063,
+      -0.789
+     ],
+     "exec_disp": [
+      0.0055,
+      -0.0118
+     ]
+    },
+    {
+     "key": "libero_90_58_t15_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "wooden_tray_1",
+     "exec_cos": [
+      -0.865,
+      -0.93,
+      0.566,
+      -0.582,
+      0.349,
+      0.987
+     ],
+     "exec_disp": [
+      -0.0015,
+      0.0251
+     ]
+    },
+    {
+     "key": "libero_90_58_t15_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      0.236,
+      -0.506,
+      1.0,
+      0.625,
+      -0.99,
+      -0.067
+     ],
+     "exec_disp": [
+      -0.0262,
+      0.0029
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 16,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 63,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t16_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.971,
+      0.76,
+      -0.779,
+      0.536,
+      -0.264,
+      -0.957
+     ],
+     "exec_disp": [
+      0.0002,
+      -0.0052
+     ]
+    },
+    {
+     "key": "libero_90_58_t16_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "wooden_tray_1",
+     "exec_cos": [
+      -0.999,
+      -0.592,
+      0.165,
+      -0.807,
+      0.382,
+      0.998
+     ],
+     "exec_disp": [
+      0.0084,
+      0.0288
+     ]
+    },
+    {
+     "key": "libero_90_58_t16_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      0.22,
+      -0.537,
+      0.997,
+      0.743,
+      -0.967,
+      -0.25
+     ],
+     "exec_disp": [
+      -0.0376,
+      -0.0003
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 17,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 54,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t17_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.978,
+      -0.679,
+      0.849,
+      -0.733,
+      0.575,
+      0.999
+     ],
+     "exec_disp": [
+      0.0028,
+      0.0126
+     ]
+    },
+    {
+     "key": "libero_90_58_t17_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      -0.983,
+      -0.655,
+      0.826,
+      -0.753,
+      0.606,
+      1.0
+     ],
+     "exec_disp": [
+      0.0074,
+      0.0285
+     ]
+    },
+    {
+     "key": "libero_90_58_t17_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      -0.989,
+      -0.666,
+      0.763,
+      -0.783,
+      0.558,
+      1.0
+     ],
+     "exec_disp": [
+      0.0073,
+      0.0269
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 18,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 55,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t18_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.005,
+      0.896,
+      -0.883,
+      -0.527,
+      0.701,
+      -0.136
+     ],
+     "exec_disp": [
+      0.018,
+      -0.0072
+     ]
+    },
+    {
+     "key": "libero_90_58_t18_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "wooden_tray_1",
+     "exec_cos": [
+      -0.814,
+      -0.856,
+      0.705,
+      -0.465,
+      0.35,
+      0.962
+     ],
+     "exec_disp": [
+      -0.0045,
+      0.0403
+     ]
+    },
+    {
+     "key": "libero_90_58_t18_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "tomato_sauce_1",
+     "exec_cos": [
+      0.218,
+      -0.652,
+      1.0,
+      0.638,
+      -0.983,
+      -0.094
+     ],
+     "exec_disp": [
+      -0.0332,
+      0.0047
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 19,
+   "success": false,
+   "bound": "tomato_sauce_1",
+   "bound_step": 54,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_58_t19_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.771,
+      -0.12,
+      -0.081,
+      0.998,
+      -0.985,
+      -0.699
+     ],
+     "exec_disp": [
+      -0.0074,
+      -0.0043
+     ]
+    },
+    {
+     "key": "libero_90_58_t19_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": "wooden_tray_1",
+     "exec_cos": [
+      -0.979,
+      -0.358,
+      0.646,
+      -0.901,
+      0.777,
+      0.966
+     ],
+     "exec_disp": [
+      0.0173,
+      0.0302
+     ]
+    },
+    {
+     "key": "libero_90_58_t19_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "alphabet_soup_1",
+      "cream_cheese_1",
+      "tomato_sauce_1",
+      "ketchup_1",
+      "butter_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "ketchup_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.041,
+      -0.704,
+      0.978,
+      0.517,
+      -0.991,
+      0.125
+     ],
+     "exec_disp": [
+      -0.0182,
+      0.006
+     ]
+    }
+   ]
+  }
+ ]
+}

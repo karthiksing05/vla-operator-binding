@@ -1,0 +1,466 @@
+{
+ "task": "libero_90:1",
+ "axes": {
+  "bin": "0.3",
+  "cd": 0.3779,
+  "kind": "combination",
+  "scene": "KITCHEN_SCENE10",
+  "scene_familiar": true,
+  "instance": false,
+  "quals": [],
+  "named": [
+   "akita_black_bowl_1"
+  ],
+  "atoms": [
+   [
+    "Close",
+    "wooden_cabinet_1_top_region"
+   ],
+   [
+    "On",
+    "akita_black_bowl_1",
+    "wooden_cabinet_1_top_side"
+   ]
+  ],
+  "text": "close the top drawer of the cabinet and put the black bowl on top of it"
+ },
+ "own": {
+  "akita_black_bowl_1": [
+   "wooden_cabinet_1_top_side"
+  ]
+ },
+ "episodes": [
+  {
+   "trial": 0,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 52,
+   "type": "motion",
+   "sub": "not_carried",
+   "obs": []
+  },
+  {
+   "trial": 1,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 66,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_1_t1_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "wooden_cabinet_1_top_side",
+      "butter_1",
+      "butter_2",
+      "chocolate_pudding_1",
+      "wooden_cabinet_1_top_region"
+     ],
+     "named": [
+      "wooden_cabinet_1_top_side"
+     ],
+     "exec_pointed": "wooden_cabinet_1_top_side",
+     "exec_cos": [
+      0.997,
+      -0.758,
+      -0.988,
+      0.428,
+      0.963
+     ],
+     "exec_disp": [
+      0.0139,
+      -0.0732
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 2,
+   "success": false,
+   "bound": null,
+   "bound_step": null,
+   "type": "no_commit",
+   "sub": "",
+   "obs": []
+  },
+  {
+   "trial": 3,
+   "success": false,
+   "bound": null,
+   "bound_step": null,
+   "type": "no_commit",
+   "sub": "",
+   "obs": []
+  },
+  {
+   "trial": 4,
+   "success": false,
+   "bound": null,
+   "bound_step": null,
+   "type": "no_commit",
+   "sub": "",
+   "obs": []
+  },
+  {
+   "trial": 5,
+   "success": false,
+   "bound": null,
+   "bound_step": null,
+   "type": "no_commit",
+   "sub": "",
+   "obs": []
+  },
+  {
+   "trial": 6,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 120,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_1_t6_post125",
+     "role": "post",
+     "j": 125,
+     "cand": [
+      "wooden_cabinet_1_top_side",
+      "butter_1",
+      "butter_2",
+      "chocolate_pudding_1",
+      "wooden_cabinet_1_top_region"
+     ],
+     "named": [
+      "wooden_cabinet_1_top_side"
+     ],
+     "exec_pointed": "wooden_cabinet_1_top_side",
+     "exec_cos": [
+      0.984,
+      -0.858,
+      -0.998,
+      -0.514,
+      0.887
+     ],
+     "exec_disp": [
+      0.0071,
+      -0.0541
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 7,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 71,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_1_t7_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "wooden_cabinet_1_top_side",
+      "butter_1",
+      "butter_2",
+      "chocolate_pudding_1",
+      "wooden_cabinet_1_top_region"
+     ],
+     "named": [
+      "wooden_cabinet_1_top_side"
+     ],
+     "exec_pointed": "wooden_cabinet_1_top_side",
+     "exec_cos": [
+      0.982,
+      -0.936,
+      -0.983,
+      -0.208,
+      0.94
+     ],
+     "exec_disp": [
+      0.003,
+      -0.0916
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 8,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 57,
+   "type": "motion",
+   "sub": "not_carried",
+   "obs": [
+    {
+     "key": "libero_90_1_t8_post65",
+     "role": "post",
+     "j": 65,
+     "cand": [
+      "wooden_cabinet_1_top_side",
+      "butter_1",
+      "butter_2",
+      "chocolate_pudding_1",
+      "wooden_cabinet_1_top_region"
+     ],
+     "named": [
+      "wooden_cabinet_1_top_side"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.769,
+      0.983,
+      0.691,
+      0.21,
+      -0.703
+     ],
+     "exec_disp": [
+      0.023,
+      0.0356
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 9,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 332,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_1_t9_post340",
+     "role": "post",
+     "j": 340,
+     "cand": [
+      "wooden_cabinet_1_top_side",
+      "butter_1",
+      "butter_2",
+      "chocolate_pudding_1",
+      "wooden_cabinet_1_top_region"
+     ],
+     "named": [
+      "wooden_cabinet_1_top_side"
+     ],
+     "exec_pointed": "wooden_cabinet_1_top_side",
+     "exec_cos": [
+      0.982,
+      -0.856,
+      -0.994,
+      -0.398,
+      0.849
+     ],
+     "exec_disp": [
+      0.0079,
+      -0.0475
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 10,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 64,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_1_t10_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "wooden_cabinet_1_top_side",
+      "butter_1",
+      "butter_2",
+      "chocolate_pudding_1",
+      "wooden_cabinet_1_top_region"
+     ],
+     "named": [
+      "wooden_cabinet_1_top_side"
+     ],
+     "exec_pointed": "wooden_cabinet_1_top_side",
+     "exec_cos": [
+      0.942,
+      -0.969,
+      -0.984,
+      -0.712,
+      0.828
+     ],
+     "exec_disp": [
+      -0.0078,
+      -0.0895
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 11,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 66,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_1_t11_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "wooden_cabinet_1_top_side",
+      "butter_1",
+      "butter_2",
+      "chocolate_pudding_1",
+      "wooden_cabinet_1_top_region"
+     ],
+     "named": [
+      "wooden_cabinet_1_top_side"
+     ],
+     "exec_pointed": "wooden_cabinet_1_top_region",
+     "exec_cos": [
+      0.991,
+      -0.782,
+      -0.993,
+      -0.134,
+      1.0
+     ],
+     "exec_disp": [
+      0.0193,
+      -0.0664
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 12,
+   "success": false,
+   "bound": null,
+   "bound_step": null,
+   "type": "no_commit",
+   "sub": "",
+   "obs": []
+  },
+  {
+   "trial": 13,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 341,
+   "type": "motion",
+   "sub": "not_carried",
+   "obs": []
+  },
+  {
+   "trial": 14,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 61,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_1_t14_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "wooden_cabinet_1_top_side",
+      "butter_1",
+      "butter_2",
+      "chocolate_pudding_1",
+      "wooden_cabinet_1_top_region"
+     ],
+     "named": [
+      "wooden_cabinet_1_top_side"
+     ],
+     "exec_pointed": "wooden_cabinet_1_top_side",
+     "exec_cos": [
+      0.988,
+      -0.684,
+      -0.994,
+      0.422,
+      0.945
+     ],
+     "exec_disp": [
+      0.0095,
+      -0.0826
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 15,
+   "success": false,
+   "bound": null,
+   "bound_step": null,
+   "type": "no_commit",
+   "sub": "",
+   "obs": []
+  },
+  {
+   "trial": 16,
+   "success": false,
+   "bound": null,
+   "bound_step": null,
+   "type": "no_commit",
+   "sub": "",
+   "obs": []
+  },
+  {
+   "trial": 17,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 396,
+   "type": "motion",
+   "sub": "not_carried",
+   "obs": []
+  },
+  {
+   "trial": 18,
+   "success": false,
+   "bound": null,
+   "bound_step": null,
+   "type": "no_commit",
+   "sub": "",
+   "obs": []
+  },
+  {
+   "trial": 19,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 193,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_1_t19_post200",
+     "role": "post",
+     "j": 200,
+     "cand": [
+      "wooden_cabinet_1_top_side",
+      "butter_1",
+      "butter_2",
+      "chocolate_pudding_1",
+      "wooden_cabinet_1_top_region"
+     ],
+     "named": [
+      "wooden_cabinet_1_top_side"
+     ],
+     "exec_pointed": "wooden_cabinet_1_top_region",
+     "exec_cos": [
+      0.969,
+      -0.569,
+      -0.808,
+      -0.29,
+      0.991
+     ],
+     "exec_disp": [
+      0.017,
+      -0.0239
+     ]
+    }
+   ]
+  }
+ ]
+}

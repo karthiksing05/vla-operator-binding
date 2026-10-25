@@ -1,0 +1,124 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: R2a null-field modes + instruction/null ratio, H1-H3, after readout validation, before modes",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4223481",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "75deff220f3e614dd3d22da5cad97b66fac15822",
+  "short": "75deff22"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": "coverage of the named object by the null-field options, pooled over the 22 object-role tasks (episode means, task-cluster bootstrap) >= 0.8 (estimate gate)",
+  "H2": "zs wrong_object episodes: ratio_top > policy_sample; one-sided exact sign test on discordant episodes; < 10 episodes -> not testable",
+  "H3": "zs successful object-role episodes: ratio_top - policy_sample >= -0.05; one-sided bootstrap p (share <= -0.05)",
+  "comparators": "policy_sample, policy_exec, instr_lik_top, instr_mode_top, cag_mode_top, null_mass_top, random",
+  "disclosure": "seen before this row: the zs rollouts of 28 of 29 tasks (libero_90:16 still rolling; its observations join the mode stage when it finishes) and their episode types (validation episode_types); the readout validation on 28 tasks; a hand check of libero_90:14 trial 13 (printed geometry), which showed max-cosine picking the cabinet BEHIND the plate, so the readout gained the first-along-heading rule (5 cm corridor) before the validation aggregate; a 2-observation GPU smoke of the mode stage (results/r2a/scratch/smoke_modes, post-grasp observations of libero_90:14, never read as data): it showed 63 s per observation and 46 of 48 null starts in one cluster, after which only the null modes and drafts are scored and the post-grasp role keeps 1 observation per episode; no pre-grasp mode, no ratio of a pre-grasp observation and no arm aggregate was computed",
+  "estimator": "Delta = L_FM(a|o,null) - L_FM(a|o,instr), velocity loss, t 0.1..0.9 uniform, K 8 shared noises (seed 5); Diffusion-Classifier ELBO difference",
+  "family": "Holm over H2-H3 at alpha 0.05; H1 an estimate gate; closed loop only if H1 and H2 pass",
+  "files_sha256": {
+   "doc": "1b9ea6eb65fef3a4237f9922a4f330fbfe840e64ab4a8a7309d7e5195ade1433",
+   "m1_plan": "383635c998509167b1c1226164ea343da94e1665075d0929924ba752c423f653",
+   "script": "aa6573713ea72a9259f627ae23b16c611d7e9fdf59c2976e70d89afe06241a29",
+   "validate": "8c04d40a9fa41e9c6085cf0488afddda49016ab6baa9e52bbebfa89453f90417"
+  },
+  "modes": "null field; 12 null drafts x u {0.1, 0.3, 0.55} + 12 x 0.7 eps at u 0.7; Adam 80 it lr 0.02; Tweedie x0; greedy rms 0.15 clusters; option score = mean member Delta; also instr and CAG (w 2) fields from the same starts",
+  "readout": "10-step path integrated with the pp2_dev_l90c scale; argmax horizontal cosine over candidates; < 2 cm -> none; cluster object = member majority",
+  "secondary": "every arm by bin / kind / scene / instance / zs type; goal role (post-grasp) tables; eps-weighted ratio; wrong-object cards",
+  "validation_seen": {
+   "episode_types": {
+    "fixture": 61,
+    "motion": 112,
+    "no_commit": 16,
+    "success": 176,
+    "wrong_goal": 139,
+    "wrong_object": 56
+   },
+   "n_obs": {
+    "post": 352,
+    "pre": 1245
+   },
+   "post": {
+    "accuracy": 0.7954545454545454,
+    "chance": 0.27195165945165944,
+    "n": 132,
+    "none": 0.015151515151515152,
+    "per_task": {
+     "libero_90:1": 0.5,
+     "libero_90:14": 0.889,
+     "libero_90:29": 0.0,
+     "libero_90:36": 1.0,
+     "libero_90:40": 1.0,
+     "libero_90:50": 0.474,
+     "libero_90:59": 1.0,
+     "libero_90:60": 0.294,
+     "libero_90:61": 1.0,
+     "libero_90:9": 1.0
+    },
+    "tasks": 10
+   },
+   "pre": {
+    "accuracy": 0.6453726453726454,
+    "chance": 0.37851487851487853,
+    "n": 1221,
+    "none": 0.22768222768222768,
+    "per_task": {
+     "libero_90:14": 0.586,
+     "libero_90:29": 0.533,
+     "libero_90:32": 0.85,
+     "libero_90:36": 0.55,
+     "libero_90:38": 0.63,
+     "libero_90:40": 0.417,
+     "libero_90:50": 0.383,
+     "libero_90:58": 0.4,
+     "libero_90:59": 0.444,
+     "libero_90:60": 0.433,
+     "libero_90:61": 0.917,
+     "libero_90:73": 0.783,
+     "libero_90:75": 0.783,
+     "libero_90:76": 0.386,
+     "libero_90:77": 0.915,
+     "libero_90:78": 0.947,
+     "libero_90:79": 0.932,
+     "libero_90:80": 0.833,
+     "libero_90:82": 0.667,
+     "libero_90:83": 0.456,
+     "libero_90:9": 0.683
+    },
+    "tasks": 21
+   }
+  },
+  "written_before": "any mode, likelihood ratio or arm aggregate"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pr2a_null_modes__s13__75deff22",
+ "schema": 1,
+ "script": "experiments/prereg/pr2a_null_modes.py",
+ "seconds": null,
+ "seed": 13,
+ "source_commit": null,
+ "started": "2026-10-24T22:28:19+00:00",
+ "stream": null,
+ "tag": "pr2a_null_modes"
+}

@@ -1,0 +1,1950 @@
+{
+ "task": "libero_90:36",
+ "axes": {
+  "bin": "0.5",
+  "cd": 0.6479,
+  "kind": "combination",
+  "scene": "KITCHEN_SCENE7",
+  "scene_familiar": true,
+  "instance": false,
+  "quals": [],
+  "named": [
+   "white_bowl_1"
+  ],
+  "atoms": [
+   [
+    "On",
+    "white_bowl_1",
+    "plate_1"
+   ]
+  ],
+  "text": "put the white bowl on the plate"
+ },
+ "own": {
+  "white_bowl_1": [
+   "plate_1"
+  ]
+ },
+ "episodes": [
+  {
+   "trial": 0,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 84,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_36_t0_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.915,
+      0.952
+     ],
+     "exec_disp": [
+      0.0145,
+      -0.0061
+     ]
+    },
+    {
+     "key": "libero_90_36_t0_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.992,
+      0.196
+     ],
+     "exec_disp": [
+      0.0595,
+      -0.0645
+     ]
+    },
+    {
+     "key": "libero_90_36_t0_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.782,
+      -0.588
+     ],
+     "exec_disp": [
+      -0.0117,
+      -0.013
+     ]
+    },
+    {
+     "key": "libero_90_36_t0_post90",
+     "role": "post",
+     "j": 90,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.993,
+      -0.965,
+      0.998
+     ],
+     "exec_disp": [
+      0.0003,
+      0.0735
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 1,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 73,
+   "type": "motion",
+   "sub": "toward_target",
+   "obs": [
+    {
+     "key": "libero_90_36_t1_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.963,
+      0.8
+     ],
+     "exec_disp": [
+      0.0202,
+      -0.0153
+     ]
+    },
+    {
+     "key": "libero_90_36_t1_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.957,
+      -0.225
+     ],
+     "exec_disp": [
+      0.0572,
+      -0.0606
+     ]
+    },
+    {
+     "key": "libero_90_36_t1_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.801,
+      -0.505
+     ],
+     "exec_disp": [
+      -0.0217,
+      -0.0147
+     ]
+    },
+    {
+     "key": "libero_90_36_t1_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.997,
+      -0.846,
+      0.999
+     ],
+     "exec_disp": [
+      0.0127,
+      0.0909
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 2,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 77,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_36_t2_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.992,
+      0.783
+     ],
+     "exec_disp": [
+      0.0321,
+      -0.03
+     ]
+    },
+    {
+     "key": "libero_90_36_t2_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.998,
+      -0.02
+     ],
+     "exec_disp": [
+      0.0556,
+      -0.0625
+     ]
+    },
+    {
+     "key": "libero_90_36_t2_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.681,
+      -0.913
+     ],
+     "exec_disp": [
+      -0.0039,
+      -0.0086
+     ]
+    },
+    {
+     "key": "libero_90_36_t2_post85",
+     "role": "post",
+     "j": 85,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.969,
+      -0.925,
+      0.988
+     ],
+     "exec_disp": [
+      0.0165,
+      0.0878
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 3,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 71,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_36_t3_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.83,
+      0.965
+     ],
+     "exec_disp": [
+      0.0309,
+      -0.0112
+     ]
+    },
+    {
+     "key": "libero_90_36_t3_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.962,
+      0.155
+     ],
+     "exec_disp": [
+      0.0482,
+      -0.0753
+     ]
+    },
+    {
+     "key": "libero_90_36_t3_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.426,
+      -0.151
+     ],
+     "exec_disp": [
+      -0.0215,
+      -0.0032
+     ]
+    },
+    {
+     "key": "libero_90_36_t3_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.986,
+      -0.852,
+      1.0
+     ],
+     "exec_disp": [
+      0.0175,
+      0.099
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 4,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 108,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_36_t4_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.869,
+      0.863
+     ],
+     "exec_disp": [
+      0.0149,
+      -0.0079
+     ]
+    },
+    {
+     "key": "libero_90_36_t4_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.874,
+      -0.341
+     ],
+     "exec_disp": [
+      0.045,
+      -0.0557
+     ]
+    },
+    {
+     "key": "libero_90_36_t4_pre85",
+     "role": "pre",
+     "j": 85,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.708,
+      -0.488
+     ],
+     "exec_disp": [
+      -0.0165,
+      -0.0068
+     ]
+    },
+    {
+     "key": "libero_90_36_t4_post115",
+     "role": "post",
+     "j": 115,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.977,
+      -0.866,
+      0.995
+     ],
+     "exec_disp": [
+      -0.0016,
+      0.0869
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 5,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 77,
+   "type": "motion",
+   "sub": "toward_target",
+   "obs": [
+    {
+     "key": "libero_90_36_t5_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.997,
+      0.562
+     ],
+     "exec_disp": [
+      0.0138,
+      -0.0207
+     ]
+    },
+    {
+     "key": "libero_90_36_t5_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.966,
+      0.38
+     ],
+     "exec_disp": [
+      0.0723,
+      -0.0557
+     ]
+    },
+    {
+     "key": "libero_90_36_t5_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.743,
+      -0.926
+     ],
+     "exec_disp": [
+      -0.0127,
+      -0.0228
+     ]
+    },
+    {
+     "key": "libero_90_36_t5_post85",
+     "role": "post",
+     "j": 85,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      1.0,
+      -0.859,
+      1.0
+     ],
+     "exec_disp": [
+      0.009,
+      0.095
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 6,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 72,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_36_t6_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.876,
+      0.871
+     ],
+     "exec_disp": [
+      0.0482,
+      -0.0218
+     ]
+    },
+    {
+     "key": "libero_90_36_t6_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.872,
+      -0.438
+     ],
+     "exec_disp": [
+      0.0371,
+      -0.0406
+     ]
+    },
+    {
+     "key": "libero_90_36_t6_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.076,
+      -0.152
+     ],
+     "exec_disp": [
+      -0.0085,
+      -0.0005
+     ]
+    },
+    {
+     "key": "libero_90_36_t6_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.997,
+      -0.974,
+      0.999
+     ],
+     "exec_disp": [
+      0.0046,
+      0.0912
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 7,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 60,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_36_t7_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.886,
+      0.845
+     ],
+     "exec_disp": [
+      0.0373,
+      -0.0195
+     ]
+    },
+    {
+     "key": "libero_90_36_t7_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.956,
+      -0.165
+     ],
+     "exec_disp": [
+      0.0511,
+      -0.0605
+     ]
+    },
+    {
+     "key": "libero_90_36_t7_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.812,
+      -0.816
+     ],
+     "exec_disp": [
+      -0.0189,
+      -0.0249
+     ]
+    },
+    {
+     "key": "libero_90_36_t7_post65",
+     "role": "post",
+     "j": 65,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.996,
+      -0.667,
+      0.999
+     ],
+     "exec_disp": [
+      0.0164,
+      0.0958
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 8,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 79,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_36_t8_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.904,
+      0.885
+     ],
+     "exec_disp": [
+      0.0122,
+      -0.0053
+     ]
+    },
+    {
+     "key": "libero_90_36_t8_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.966,
+      -0.401
+     ],
+     "exec_disp": [
+      0.0451,
+      -0.05
+     ]
+    },
+    {
+     "key": "libero_90_36_t8_pre55",
+     "role": "pre",
+     "j": 55,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.706,
+      -0.718
+     ],
+     "exec_disp": [
+      -0.0076,
+      -0.0082
+     ]
+    },
+    {
+     "key": "libero_90_36_t8_post85",
+     "role": "post",
+     "j": 85,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.998,
+      -0.98,
+      0.991
+     ],
+     "exec_disp": [
+      0.0057,
+      0.0923
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 9,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 75,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_36_t9_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      1.0,
+      0.549
+     ],
+     "exec_disp": [
+      0.0152,
+      -0.0219
+     ]
+    },
+    {
+     "key": "libero_90_36_t9_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.896,
+      -0.225
+     ],
+     "exec_disp": [
+      0.0504,
+      -0.0509
+     ]
+    },
+    {
+     "key": "libero_90_36_t9_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.96,
+      -0.85
+     ],
+     "exec_disp": [
+      -0.0037,
+      -0.0058
+     ]
+    },
+    {
+     "key": "libero_90_36_t9_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.989,
+      -0.837,
+      0.988
+     ],
+     "exec_disp": [
+      -0.0028,
+      0.0773
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 10,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 85,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_36_t10_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.954,
+      0.85
+     ],
+     "exec_disp": [
+      0.0098,
+      -0.007
+     ]
+    },
+    {
+     "key": "libero_90_36_t10_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.969,
+      -0.114
+     ],
+     "exec_disp": [
+      0.0577,
+      -0.0686
+     ]
+    },
+    {
+     "key": "libero_90_36_t10_pre55",
+     "role": "pre",
+     "j": 55,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.578,
+      -0.226
+     ],
+     "exec_disp": [
+      -0.0114,
+      -0.0035
+     ]
+    },
+    {
+     "key": "libero_90_36_t10_post90",
+     "role": "post",
+     "j": 90,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      1.0,
+      -0.999,
+      1.0
+     ],
+     "exec_disp": [
+      -0.0032,
+      0.0898
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 11,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 76,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_36_t11_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.872,
+      0.933
+     ],
+     "exec_disp": [
+      0.014,
+      -0.007
+     ]
+    },
+    {
+     "key": "libero_90_36_t11_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.96,
+      -0.195
+     ],
+     "exec_disp": [
+      0.0371,
+      -0.0474
+     ]
+    },
+    {
+     "key": "libero_90_36_t11_pre55",
+     "role": "pre",
+     "j": 55,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.443,
+      -0.741
+     ],
+     "exec_disp": [
+      -0.0048,
+      -0.0034
+     ]
+    },
+    {
+     "key": "libero_90_36_t11_post85",
+     "role": "post",
+     "j": 85,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.97,
+      -0.73,
+      0.998
+     ],
+     "exec_disp": [
+      0.013,
+      0.0909
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 12,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 94,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_36_t12_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.817,
+      0.948
+     ],
+     "exec_disp": [
+      0.0133,
+      -0.0042
+     ]
+    },
+    {
+     "key": "libero_90_36_t12_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.905,
+      0.066
+     ],
+     "exec_disp": [
+      0.0693,
+      -0.049
+     ]
+    },
+    {
+     "key": "libero_90_36_t12_pre60",
+     "role": "pre",
+     "j": 60,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.608,
+      0.001
+     ],
+     "exec_disp": [
+      -0.0157,
+      -0.002
+     ]
+    },
+    {
+     "key": "libero_90_36_t12_post100",
+     "role": "post",
+     "j": 100,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.998,
+      -0.763,
+      1.0
+     ],
+     "exec_disp": [
+      0.0059,
+      0.0705
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 13,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 65,
+   "type": "motion",
+   "sub": "toward_target",
+   "obs": [
+    {
+     "key": "libero_90_36_t13_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.999,
+      0.762
+     ],
+     "exec_disp": [
+      0.0235,
+      -0.0242
+     ]
+    },
+    {
+     "key": "libero_90_36_t13_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.992,
+      0.265
+     ],
+     "exec_disp": [
+      0.072,
+      -0.0678
+     ]
+    },
+    {
+     "key": "libero_90_36_t13_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.466,
+      -0.623
+     ],
+     "exec_disp": [
+      -0.0134,
+      -0.0133
+     ]
+    },
+    {
+     "key": "libero_90_36_t13_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.988,
+      -0.989,
+      0.99
+     ],
+     "exec_disp": [
+      0.0111,
+      0.0878
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 14,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 81,
+   "type": "motion",
+   "sub": "toward_target",
+   "obs": [
+    {
+     "key": "libero_90_36_t14_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.853,
+      0.941
+     ],
+     "exec_disp": [
+      0.0075,
+      -0.0029
+     ]
+    },
+    {
+     "key": "libero_90_36_t14_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.89,
+      -0.277
+     ],
+     "exec_disp": [
+      0.0442,
+      -0.0441
+     ]
+    },
+    {
+     "key": "libero_90_36_t14_pre55",
+     "role": "pre",
+     "j": 55,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.959,
+      -0.768
+     ],
+     "exec_disp": [
+      -0.0087,
+      -0.0112
+     ]
+    },
+    {
+     "key": "libero_90_36_t14_post90",
+     "role": "post",
+     "j": 90,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.995,
+      -0.941,
+      0.994
+     ],
+     "exec_disp": [
+      0.0127,
+      0.0869
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 15,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 66,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_36_t15_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      1.0,
+      0.6
+     ],
+     "exec_disp": [
+      0.0153,
+      -0.0173
+     ]
+    },
+    {
+     "key": "libero_90_36_t15_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      1.0,
+      0.037
+     ],
+     "exec_disp": [
+      0.0609,
+      -0.0783
+     ]
+    },
+    {
+     "key": "libero_90_36_t15_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.904,
+      -0.999
+     ],
+     "exec_disp": [
+      0.0002,
+      -0.0092
+     ]
+    },
+    {
+     "key": "libero_90_36_t15_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.998,
+      -1.0,
+      1.0
+     ],
+     "exec_disp": [
+      -0.0015,
+      0.0926
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 16,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 67,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_36_t16_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.985,
+      0.627
+     ],
+     "exec_disp": [
+      0.0138,
+      -0.0208
+     ]
+    },
+    {
+     "key": "libero_90_36_t16_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.995,
+      0.444
+     ],
+     "exec_disp": [
+      0.0602,
+      -0.05
+     ]
+    },
+    {
+     "key": "libero_90_36_t16_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.335,
+      -0.064
+     ],
+     "exec_disp": [
+      -0.0089,
+      0.0002
+     ]
+    },
+    {
+     "key": "libero_90_36_t16_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.996,
+      -0.979,
+      0.998
+     ],
+     "exec_disp": [
+      0.0082,
+      0.0963
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 17,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 78,
+   "type": "motion",
+   "sub": "toward_target",
+   "obs": [
+    {
+     "key": "libero_90_36_t17_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.95,
+      0.848
+     ],
+     "exec_disp": [
+      0.0151,
+      -0.0114
+     ]
+    },
+    {
+     "key": "libero_90_36_t17_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.973,
+      0.16
+     ],
+     "exec_disp": [
+      0.0577,
+      -0.0618
+     ]
+    },
+    {
+     "key": "libero_90_36_t17_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.056,
+      -0.252
+     ],
+     "exec_disp": [
+      -0.0134,
+      -0.0018
+     ]
+    },
+    {
+     "key": "libero_90_36_t17_post85",
+     "role": "post",
+     "j": 85,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.994,
+      -0.674,
+      0.993
+     ],
+     "exec_disp": [
+      0.0158,
+      0.064
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 18,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 79,
+   "type": "motion",
+   "sub": "toward_target",
+   "obs": [
+    {
+     "key": "libero_90_36_t18_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.932,
+      0.851
+     ],
+     "exec_disp": [
+      0.0125,
+      -0.008
+     ]
+    },
+    {
+     "key": "libero_90_36_t18_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.913,
+      -0.68
+     ],
+     "exec_disp": [
+      0.0086,
+      -0.013
+     ]
+    },
+    {
+     "key": "libero_90_36_t18_pre65",
+     "role": "pre",
+     "j": 65,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.883,
+      -0.99
+     ],
+     "exec_disp": [
+      -0.0003,
+      -0.0026
+     ]
+    },
+    {
+     "key": "libero_90_36_t18_post85",
+     "role": "post",
+     "j": 85,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.967,
+      -0.81,
+      0.99
+     ],
+     "exec_disp": [
+      -0.0009,
+      0.0989
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 19,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 104,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_36_t19_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.998,
+      0.608
+     ],
+     "exec_disp": [
+      0.0261,
+      -0.0286
+     ]
+    },
+    {
+     "key": "libero_90_36_t19_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.999,
+      -0.502
+     ],
+     "exec_disp": [
+      0.0427,
+      -0.0685
+     ]
+    },
+    {
+     "key": "libero_90_36_t19_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "white_bowl_1",
+      "plate_1"
+     ],
+     "named": [
+      "white_bowl_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.147,
+      -0.5
+     ],
+     "exec_disp": [
+      -0.0075,
+      -0.0041
+     ]
+    },
+    {
+     "key": "libero_90_36_t19_post110",
+     "role": "post",
+     "j": 110,
+     "cand": [
+      "plate_1",
+      "microwave_1",
+      "kitchen_table_plate_right_region"
+     ],
+     "named": [
+      "plate_1"
+     ],
+     "exec_pointed": "plate_1",
+     "exec_cos": [
+      0.997,
+      -0.837,
+      0.994
+     ],
+     "exec_disp": [
+      0.0106,
+      0.0739
+     ]
+    }
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2350 @@
+{
+ "task": "libero_90:61",
+ "axes": {
+  "bin": "0.5",
+  "cd": 0.6479,
+  "kind": "combination",
+  "scene": "LIVING_ROOM_SCENE4",
+  "scene_familiar": true,
+  "instance": false,
+  "quals": [],
+  "named": [
+   "chocolate_pudding_1"
+  ],
+  "atoms": [
+   [
+    "In",
+    "chocolate_pudding_1",
+    "wooden_tray_1_contain_region"
+   ]
+  ],
+  "text": "pick up the chocolate pudding and put it in the tray"
+ },
+ "own": {
+  "chocolate_pudding_1": [
+   "wooden_tray_1_contain_region"
+  ]
+ },
+ "episodes": [
+  {
+   "trial": 0,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 67,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t0_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.182,
+      -0.977,
+      -0.632,
+      0.88,
+      -0.107
+     ],
+     "exec_disp": [
+      0.0137,
+      -0.0046
+     ]
+    },
+    {
+     "key": "libero_90_61_t0_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.355,
+      -0.858,
+      -0.165,
+      0.979,
+      -0.908
+     ],
+     "exec_disp": [
+      0.0402,
+      -0.0819
+     ]
+    },
+    {
+     "key": "libero_90_61_t0_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.989,
+      -0.887,
+      -0.983,
+      0.912,
+      -0.464
+     ],
+     "exec_disp": [
+      0.0299,
+      -0.0089
+     ]
+    },
+    {
+     "key": "libero_90_61_t0_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.923,
+      0.184,
+      0.606,
+      0.085
+     ],
+     "exec_disp": [
+      0.0071,
+      0.0646
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 1,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 79,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t1_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.138,
+      -0.909,
+      -0.754,
+      0.863,
+      -0.099
+     ],
+     "exec_disp": [
+      0.0357,
+      -0.0104
+     ]
+    },
+    {
+     "key": "libero_90_61_t1_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.089,
+      -0.933,
+      -0.354,
+      0.993,
+      -0.874
+     ],
+     "exec_disp": [
+      0.0487,
+      -0.0793
+     ]
+    },
+    {
+     "key": "libero_90_61_t1_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.747,
+      -0.998,
+      -0.828,
+      0.994,
+      -0.782
+     ],
+     "exec_disp": [
+      0.0313,
+      -0.0269
+     ]
+    },
+    {
+     "key": "libero_90_61_t1_post85",
+     "role": "post",
+     "j": 85,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.951,
+      0.216,
+      0.697,
+      0.232
+     ],
+     "exec_disp": [
+      0.0016,
+      0.0786
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 2,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 69,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t2_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.451,
+      -0.949,
+      -0.312,
+      0.979,
+      -0.55
+     ],
+     "exec_disp": [
+      0.0268,
+      -0.0264
+     ]
+    },
+    {
+     "key": "libero_90_61_t2_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.083,
+      -0.956,
+      -0.399,
+      1.0,
+      -0.835
+     ],
+     "exec_disp": [
+      0.0456,
+      -0.0705
+     ]
+    },
+    {
+     "key": "libero_90_61_t2_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.747,
+      -1.0,
+      -0.789,
+      0.956,
+      -0.792
+     ],
+     "exec_disp": [
+      0.04,
+      -0.0397
+     ]
+    },
+    {
+     "key": "libero_90_61_t2_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.962,
+      0.294,
+      0.706,
+      0.214
+     ],
+     "exec_disp": [
+      0.0038,
+      0.0592
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 3,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 65,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t3_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.618,
+      -0.997,
+      -0.197,
+      0.998,
+      -0.615
+     ],
+     "exec_disp": [
+      0.0145,
+      -0.0179
+     ]
+    },
+    {
+     "key": "libero_90_61_t3_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.461,
+      -0.98,
+      -0.279,
+      0.972,
+      -0.835
+     ],
+     "exec_disp": [
+      0.0488,
+      -0.0854
+     ]
+    },
+    {
+     "key": "libero_90_61_t3_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.516,
+      -0.993,
+      -0.763,
+      0.963,
+      -0.785
+     ],
+     "exec_disp": [
+      0.0269,
+      -0.0282
+     ]
+    },
+    {
+     "key": "libero_90_61_t3_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.716,
+      -0.405,
+      0.338,
+      -0.309
+     ],
+     "exec_disp": [
+      0.0257,
+      0.0405
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 4,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 70,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t4_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.087,
+      -0.985,
+      -0.732,
+      0.754,
+      -0.069
+     ],
+     "exec_disp": [
+      0.0198,
+      -0.0055
+     ]
+    },
+    {
+     "key": "libero_90_61_t4_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.494,
+      -0.868,
+      -0.243,
+      1.0,
+      -0.861
+     ],
+     "exec_disp": [
+      0.0474,
+      -0.0876
+     ]
+    },
+    {
+     "key": "libero_90_61_t4_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.323,
+      -0.94,
+      -0.556,
+      1.0,
+      -0.948
+     ],
+     "exec_disp": [
+      0.0169,
+      -0.0358
+     ]
+    },
+    {
+     "key": "libero_90_61_t4_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.825,
+      0.014,
+      0.463,
+      -0.013
+     ],
+     "exec_disp": [
+      0.0242,
+      0.0569
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 5,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 84,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t5_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.663,
+      -0.997,
+      -0.191,
+      0.99,
+      -0.726
+     ],
+     "exec_disp": [
+      0.0392,
+      -0.0602
+     ]
+    },
+    {
+     "key": "libero_90_61_t5_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.414,
+      -0.993,
+      -0.321,
+      0.933,
+      -0.899
+     ],
+     "exec_disp": [
+      0.0328,
+      -0.0735
+     ]
+    },
+    {
+     "key": "libero_90_61_t5_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.972,
+      -0.603,
+      -0.998,
+      0.958,
+      -0.204
+     ],
+     "exec_disp": [
+      0.0389,
+      -0.0051
+     ]
+    },
+    {
+     "key": "libero_90_61_t5_post90",
+     "role": "post",
+     "j": 90,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.937,
+      -0.03,
+      0.699,
+      0.114
+     ],
+     "exec_disp": [
+      0.0078,
+      0.0634
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 6,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 65,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t6_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.216,
+      -0.505,
+      -0.695,
+      0.833,
+      -0.01
+     ],
+     "exec_disp": [
+      0.0252,
+      -0.0068
+     ]
+    },
+    {
+     "key": "libero_90_61_t6_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.234,
+      -0.996,
+      -0.136,
+      0.99,
+      -0.838
+     ],
+     "exec_disp": [
+      0.0465,
+      -0.0843
+     ]
+    },
+    {
+     "key": "libero_90_61_t6_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.948,
+      -0.858,
+      -0.938,
+      0.962,
+      -0.567
+     ],
+     "exec_disp": [
+      0.0456,
+      -0.0228
+     ]
+    },
+    {
+     "key": "libero_90_61_t6_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.943,
+      0.249,
+      0.767,
+      0.154
+     ],
+     "exec_disp": [
+      0.0042,
+      0.0428
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 7,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 64,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t7_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.858,
+      -0.667,
+      0.11,
+      0.961,
+      -0.846
+     ],
+     "exec_disp": [
+      0.0117,
+      -0.0351
+     ]
+    },
+    {
+     "key": "libero_90_61_t7_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.214,
+      -0.998,
+      -0.582,
+      1.0,
+      -0.715
+     ],
+     "exec_disp": [
+      0.0544,
+      -0.0673
+     ]
+    },
+    {
+     "key": "libero_90_61_t7_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.509,
+      -0.993,
+      -0.722,
+      0.985,
+      -0.869
+     ],
+     "exec_disp": [
+      0.0208,
+      -0.0313
+     ]
+    },
+    {
+     "key": "libero_90_61_t7_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.611,
+      -0.467,
+      0.126,
+      -0.401
+     ],
+     "exec_disp": [
+      0.0407,
+      0.0429
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 8,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 65,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t8_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.471,
+      -0.994,
+      -0.313,
+      0.996,
+      -0.512
+     ],
+     "exec_disp": [
+      0.0306,
+      -0.0304
+     ]
+    },
+    {
+     "key": "libero_90_61_t8_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.114,
+      -0.979,
+      -0.338,
+      0.981,
+      -0.869
+     ],
+     "exec_disp": [
+      0.0438,
+      -0.0812
+     ]
+    },
+    {
+     "key": "libero_90_61_t8_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.796,
+      -0.989,
+      -0.803,
+      0.992,
+      -0.779
+     ],
+     "exec_disp": [
+      0.0266,
+      -0.0268
+     ]
+    },
+    {
+     "key": "libero_90_61_t8_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.924,
+      0.193,
+      0.668,
+      0.118
+     ],
+     "exec_disp": [
+      0.0086,
+      0.0586
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 9,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 67,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t9_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.701,
+      -0.993,
+      -0.144,
+      0.999,
+      -0.723
+     ],
+     "exec_disp": [
+      0.0485,
+      -0.0725
+     ]
+    },
+    {
+     "key": "libero_90_61_t9_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.43,
+      -0.944,
+      -0.175,
+      0.974,
+      -0.957
+     ],
+     "exec_disp": [
+      0.0206,
+      -0.0675
+     ]
+    },
+    {
+     "key": "libero_90_61_t9_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.85,
+      -0.934,
+      -0.883,
+      0.966,
+      -0.675
+     ],
+     "exec_disp": [
+      0.0344,
+      -0.0262
+     ]
+    },
+    {
+     "key": "libero_90_61_t9_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.961,
+      0.162,
+      0.747,
+      0.152
+     ],
+     "exec_disp": [
+      0.0036,
+      0.0648
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 10,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 72,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t10_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.235,
+      -0.9,
+      -0.572,
+      0.898,
+      -0.242
+     ],
+     "exec_disp": [
+      0.0068,
+      -0.0033
+     ]
+    },
+    {
+     "key": "libero_90_61_t10_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.533,
+      -0.975,
+      -0.164,
+      0.994,
+      -0.823
+     ],
+     "exec_disp": [
+      0.0491,
+      -0.0866
+     ]
+    },
+    {
+     "key": "libero_90_61_t10_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.839,
+      -0.991,
+      -0.841,
+      0.999,
+      -0.812
+     ],
+     "exec_disp": [
+      0.031,
+      -0.0316
+     ]
+    },
+    {
+     "key": "libero_90_61_t10_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.801,
+      0.028,
+      0.492,
+      -0.036
+     ],
+     "exec_disp": [
+      0.0284,
+      0.0749
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 11,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 65,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t11_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.125,
+      -0.984,
+      -0.483,
+      0.982,
+      -0.367
+     ],
+     "exec_disp": [
+      0.0353,
+      -0.0244
+     ]
+    },
+    {
+     "key": "libero_90_61_t11_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.156,
+      -0.964,
+      -0.455,
+      0.963,
+      -0.826
+     ],
+     "exec_disp": [
+      0.045,
+      -0.0685
+     ]
+    },
+    {
+     "key": "libero_90_61_t11_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.995,
+      -0.718,
+      -0.993,
+      0.962,
+      -0.168
+     ],
+     "exec_disp": [
+      0.0382,
+      -0.002
+     ]
+    },
+    {
+     "key": "libero_90_61_t11_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.864,
+      -0.065,
+      0.445,
+      -0.07
+     ],
+     "exec_disp": [
+      0.0172,
+      0.0616
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 12,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 64,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t12_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.426,
+      -0.922,
+      -0.35,
+      0.985,
+      -0.49
+     ],
+     "exec_disp": [
+      0.0252,
+      -0.0227
+     ]
+    },
+    {
+     "key": "libero_90_61_t12_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.275,
+      -0.995,
+      -0.37,
+      0.99,
+      -0.87
+     ],
+     "exec_disp": [
+      0.0464,
+      -0.0851
+     ]
+    },
+    {
+     "key": "libero_90_61_t12_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.733,
+      -0.957,
+      -0.892,
+      0.996,
+      -0.734
+     ],
+     "exec_disp": [
+      0.0346,
+      -0.0295
+     ]
+    },
+    {
+     "key": "libero_90_61_t12_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.918,
+      0.066,
+      0.698,
+      0.19
+     ],
+     "exec_disp": [
+      0.008,
+      0.0507
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 13,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 74,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t13_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.518,
+      -0.997,
+      -0.323,
+      0.997,
+      -0.563
+     ],
+     "exec_disp": [
+      0.0088,
+      -0.0092
+     ]
+    },
+    {
+     "key": "libero_90_61_t13_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.123,
+      -0.978,
+      -0.344,
+      0.95,
+      -0.913
+     ],
+     "exec_disp": [
+      0.0378,
+      -0.085
+     ]
+    },
+    {
+     "key": "libero_90_61_t13_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.999,
+      -0.827,
+      -0.994,
+      0.995,
+      -0.5
+     ],
+     "exec_disp": [
+      0.0269,
+      -0.0103
+     ]
+    },
+    {
+     "key": "libero_90_61_t13_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.838,
+      0.036,
+      0.544,
+      -0.035
+     ],
+     "exec_disp": [
+      0.0172,
+      0.0516
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 14,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 68,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t14_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.402,
+      -0.992,
+      -0.423,
+      0.959,
+      -0.357
+     ],
+     "exec_disp": [
+      0.0244,
+      -0.0163
+     ]
+    },
+    {
+     "key": "libero_90_61_t14_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.338,
+      -0.977,
+      -0.286,
+      0.992,
+      -0.808
+     ],
+     "exec_disp": [
+      0.052,
+      -0.0813
+     ]
+    },
+    {
+     "key": "libero_90_61_t14_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.974,
+      -0.938,
+      -0.947,
+      0.996,
+      -0.638
+     ],
+     "exec_disp": [
+      0.0206,
+      -0.0121
+     ]
+    },
+    {
+     "key": "libero_90_61_t14_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.809,
+      -0.046,
+      0.435,
+      -0.14
+     ],
+     "exec_disp": [
+      0.0239,
+      0.0615
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 15,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 63,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t15_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.331,
+      -0.9,
+      -0.333,
+      0.981,
+      -0.463
+     ],
+     "exec_disp": [
+      0.0193,
+      -0.0167
+     ]
+    },
+    {
+     "key": "libero_90_61_t15_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.364,
+      -0.996,
+      -0.165,
+      0.988,
+      -0.852
+     ],
+     "exec_disp": [
+      0.0469,
+      -0.0924
+     ]
+    },
+    {
+     "key": "libero_90_61_t15_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.697,
+      -0.954,
+      -0.793,
+      1.0,
+      -0.722
+     ],
+     "exec_disp": [
+      0.0376,
+      -0.0338
+     ]
+    },
+    {
+     "key": "libero_90_61_t15_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.943,
+      -0.039,
+      0.709,
+      0.023
+     ],
+     "exec_disp": [
+      0.0083,
+      0.0719
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 16,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 72,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t16_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.57,
+      -0.996,
+      -0.377,
+      0.985,
+      -0.507
+     ],
+     "exec_disp": [
+      0.0125,
+      -0.0119
+     ]
+    },
+    {
+     "key": "libero_90_61_t16_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.584,
+      -0.994,
+      -0.302,
+      0.999,
+      -0.751
+     ],
+     "exec_disp": [
+      0.0519,
+      -0.078
+     ]
+    },
+    {
+     "key": "libero_90_61_t16_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.799,
+      -0.982,
+      -0.86,
+      0.978,
+      -0.753
+     ],
+     "exec_disp": [
+      0.0505,
+      -0.0445
+     ]
+    },
+    {
+     "key": "libero_90_61_t16_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.954,
+      0.3,
+      0.737,
+      0.258
+     ],
+     "exec_disp": [
+      0.0037,
+      0.0737
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 17,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 71,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t17_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.047,
+      -0.648,
+      -0.708,
+      0.829,
+      -0.115
+     ],
+     "exec_disp": [
+      0.0132,
+      -0.005
+     ]
+    },
+    {
+     "key": "libero_90_61_t17_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.565,
+      -0.99,
+      -0.137,
+      0.999,
+      -0.819
+     ],
+     "exec_disp": [
+      0.0387,
+      -0.0752
+     ]
+    },
+    {
+     "key": "libero_90_61_t17_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.545,
+      -0.975,
+      -0.785,
+      0.98,
+      -0.77
+     ],
+     "exec_disp": [
+      0.0314,
+      -0.0324
+     ]
+    },
+    {
+     "key": "libero_90_61_t17_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.973,
+      -0.111,
+      0.785,
+      0.114
+     ],
+     "exec_disp": [
+      0.0039,
+      0.0524
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 18,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 63,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t18_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.833,
+      -0.941,
+      0.108,
+      0.958,
+      -0.822
+     ],
+     "exec_disp": [
+      0.0125,
+      -0.0335
+     ]
+    },
+    {
+     "key": "libero_90_61_t18_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.297,
+      -0.997,
+      -0.332,
+      0.954,
+      -0.843
+     ],
+     "exec_disp": [
+      0.0436,
+      -0.0864
+     ]
+    },
+    {
+     "key": "libero_90_61_t18_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.991,
+      -0.626,
+      -0.998,
+      0.991,
+      -0.188
+     ],
+     "exec_disp": [
+      0.0476,
+      -0.0072
+     ]
+    },
+    {
+     "key": "libero_90_61_t18_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.938,
+      0.123,
+      0.674,
+      0.064
+     ],
+     "exec_disp": [
+      0.0097,
+      0.0598
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 19,
+   "success": true,
+   "bound": "chocolate_pudding_1",
+   "bound_step": 72,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_61_t19_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.38,
+      -0.947,
+      -0.357,
+      0.996,
+      -0.539
+     ],
+     "exec_disp": [
+      0.0278,
+      -0.028
+     ]
+    },
+    {
+     "key": "libero_90_61_t19_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      0.073,
+      -0.999,
+      -0.391,
+      0.963,
+      -0.87
+     ],
+     "exec_disp": [
+      0.0396,
+      -0.075
+     ]
+    },
+    {
+     "key": "libero_90_61_t19_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1",
+      "chocolate_pudding_1",
+      "wooden_tray_1"
+     ],
+     "named": [
+      "chocolate_pudding_1"
+     ],
+     "exec_pointed": "chocolate_pudding_1",
+     "exec_cos": [
+      -0.989,
+      -0.722,
+      -0.997,
+      0.99,
+      -0.366
+     ],
+     "exec_disp": [
+      0.0382,
+      -0.0109
+     ]
+    },
+    {
+     "key": "libero_90_61_t19_post80",
+     "role": "post",
+     "j": 80,
+     "cand": [
+      "wooden_tray_1_contain_region",
+      "akita_black_bowl_1",
+      "akita_black_bowl_2",
+      "new_salad_dressing_1"
+     ],
+     "named": [
+      "wooden_tray_1_contain_region"
+     ],
+     "exec_pointed": "wooden_tray_1_contain_region",
+     "exec_cos": [
+      0.982,
+      0.186,
+      0.808,
+      0.252
+     ],
+     "exec_disp": [
+      -0.0047,
+      0.0767
+     ]
+    }
+   ]
+  }
+ ]
+}

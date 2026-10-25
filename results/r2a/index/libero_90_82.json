@@ -1,0 +1,2315 @@
+{
+ "task": "libero_90:82",
+ "axes": {
+  "bin": "part",
+  "cd": null,
+  "kind": "part",
+  "scene": "STUDY_SCENE3",
+  "scene_familiar": false,
+  "instance": false,
+  "quals": [
+   "left"
+  ],
+  "named": [
+   "black_book_1"
+  ],
+  "atoms": [
+   [
+    "In",
+    "black_book_1",
+    "desk_caddy_1_left_contain_region"
+   ]
+  ],
+  "text": "pick up the book and place it in the left compartment of the caddy"
+ },
+ "own": {
+  "black_book_1": [
+   "desk_caddy_1_left_contain_region"
+  ]
+ },
+ "episodes": [
+  {
+   "trial": 0,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 62,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t0_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.799,
+      0.819,
+      1.0
+     ],
+     "exec_disp": [
+      0.0221,
+      -0.0046
+     ]
+    },
+    {
+     "key": "libero_90_82_t0_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.939,
+      0.533,
+      0.92
+     ],
+     "exec_disp": [
+      0.0677,
+      -0.0432
+     ]
+    },
+    {
+     "key": "libero_90_82_t0_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.866,
+      -0.986,
+      -0.527
+     ],
+     "exec_disp": [
+      -0.0117,
+      -0.0207
+     ]
+    },
+    {
+     "key": "libero_90_82_t0_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.664,
+      0.897,
+      0.902,
+      -0.151,
+      0.99,
+      -0.625,
+      0.709,
+      0.422,
+      -0.144,
+      -0.153
+     ],
+     "exec_disp": [
+      0.0023,
+      0.0185
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 1,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 65,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t1_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.978,
+      0.253,
+      0.69
+     ],
+     "exec_disp": [
+      0.0362,
+      -0.0385
+     ]
+    },
+    {
+     "key": "libero_90_82_t1_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.968,
+      0.036,
+      0.056
+     ],
+     "exec_disp": [
+      0.0288,
+      -0.0353
+     ]
+    },
+    {
+     "key": "libero_90_82_t1_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.998,
+      -0.648,
+      -0.976
+     ],
+     "exec_disp": [
+      0.0044,
+      -0.0327
+     ]
+    },
+    {
+     "key": "libero_90_82_t1_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      -0.409,
+      0.564,
+      0.929,
+      0.226,
+      0.737,
+      -0.917,
+      0.97,
+      0.815,
+      0.245,
+      0.209
+     ],
+     "exec_disp": [
+      -0.0151,
+      0.0446
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 2,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 65,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t2_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.98,
+      0.352,
+      0.877
+     ],
+     "exec_disp": [
+      0.0034,
+      -0.0031
+     ]
+    },
+    {
+     "key": "libero_90_82_t2_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.996,
+      0.233,
+      0.808
+     ],
+     "exec_disp": [
+      0.0577,
+      -0.0667
+     ]
+    },
+    {
+     "key": "libero_90_82_t2_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.872,
+      0.218,
+      -0.305
+     ],
+     "exec_disp": [
+      0.037,
+      -0.0247
+     ]
+    },
+    {
+     "key": "libero_90_82_t2_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "red_coffee_mug_1",
+     "exec_cos": [
+      -0.932,
+      1.0,
+      0.703,
+      -0.558,
+      0.972,
+      -0.99,
+      0.379,
+      0.034,
+      -0.551,
+      -0.56
+     ],
+     "exec_disp": [
+      0.0126,
+      0.0202
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 3,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 60,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t3_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.963,
+      0.332,
+      0.779
+     ],
+     "exec_disp": [
+      0.0301,
+      -0.0291
+     ]
+    },
+    {
+     "key": "libero_90_82_t3_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.991,
+      0.01,
+      0.355
+     ],
+     "exec_disp": [
+      0.0486,
+      -0.072
+     ]
+    },
+    {
+     "key": "libero_90_82_t3_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.995,
+      -0.711,
+      -0.966
+     ],
+     "exec_disp": [
+      0.0036,
+      -0.0351
+     ]
+    },
+    {
+     "key": "libero_90_82_t3_post65",
+     "role": "post",
+     "j": 65,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "study_table_desk_caddy_front_left_contain_region",
+     "exec_cos": [
+      -0.727,
+      0.967,
+      0.962,
+      -0.146,
+      1.0,
+      0.874,
+      0.665,
+      0.411,
+      -0.162,
+      -0.119
+     ],
+     "exec_disp": [
+      0.0118,
+      0.0423
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 4,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 64,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t4_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.862,
+      0.659,
+      0.991
+     ],
+     "exec_disp": [
+      0.0233,
+      -0.0094
+     ]
+    },
+    {
+     "key": "libero_90_82_t4_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.965,
+      0.35,
+      0.878
+     ],
+     "exec_disp": [
+      0.0562,
+      -0.0479
+     ]
+    },
+    {
+     "key": "libero_90_82_t4_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.865,
+      -0.369,
+      -0.999
+     ],
+     "exec_disp": [
+      0.0108,
+      -0.0189
+     ]
+    },
+    {
+     "key": "libero_90_82_t4_post70",
+     "role": "post",
+     "j": 70,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "study_table_red_coffee_mug_behind_region",
+     "exec_cos": [
+      -0.642,
+      0.894,
+      0.928,
+      -0.074,
+      0.986,
+      -0.026,
+      0.745,
+      0.49,
+      -0.078,
+      -0.063
+     ],
+     "exec_disp": [
+      0.0038,
+      0.0323
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 5,
+   "success": false,
+   "bound": null,
+   "bound_step": null,
+   "type": "no_commit",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_82_t5_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.482,
+      0.902,
+      0.982
+     ],
+     "exec_disp": [
+      0.0489,
+      0.0019
+     ]
+    },
+    {
+     "key": "libero_90_82_t5_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.937,
+      -0.779,
+      -0.998
+     ],
+     "exec_disp": [
+      0.0035,
+      -0.0427
+     ]
+    },
+    {
+     "key": "libero_90_82_t5_pre195",
+     "role": "pre",
+     "j": 195,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.396,
+      -0.959,
+      -0.839
+     ],
+     "exec_disp": [
+      -0.015,
+      -0.0109
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 6,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 149,
+   "type": "motion",
+   "sub": "not_carried",
+   "obs": [
+    {
+     "key": "libero_90_82_t6_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.906,
+      0.516,
+      0.709
+     ],
+     "exec_disp": [
+      0.0505,
+      -0.035
+     ]
+    },
+    {
+     "key": "libero_90_82_t6_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.998,
+      -0.246,
+      -0.288
+     ],
+     "exec_disp": [
+      0.0087,
+      -0.0246
+     ]
+    },
+    {
+     "key": "libero_90_82_t6_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.993,
+      -0.743,
+      -0.922
+     ],
+     "exec_disp": [
+      -0.003,
+      -0.0276
+     ]
+    },
+    {
+     "key": "libero_90_82_t6_post155",
+     "role": "post",
+     "j": 155,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      -0.999,
+      0.997,
+      0.964,
+      -0.776,
+      0.979,
+      -0.11,
+      0.32,
+      -0.075,
+      -0.751,
+      -0.802
+     ],
+     "exec_disp": [
+      0.0164,
+      0.0199
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 7,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 67,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t7_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.485,
+      0.906,
+      0.94
+     ],
+     "exec_disp": [
+      0.0297,
+      0.0018
+     ]
+    },
+    {
+     "key": "libero_90_82_t7_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.872,
+      -0.994,
+      -0.302
+     ],
+     "exec_disp": [
+      -0.0258,
+      -0.0399
+     ]
+    },
+    {
+     "key": "libero_90_82_t7_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.991,
+      -0.81,
+      -0.975
+     ],
+     "exec_disp": [
+      0.0,
+      -0.0257
+     ]
+    },
+    {
+     "key": "libero_90_82_t7_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      -0.166,
+      0.523,
+      0.988,
+      0.408,
+      0.723,
+      -0.417,
+      0.984,
+      0.859,
+      0.417,
+      0.404
+     ],
+     "exec_disp": [
+      -0.0262,
+      0.052
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 8,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 58,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t8_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.964,
+      0.404,
+      0.553
+     ],
+     "exec_disp": [
+      0.0524,
+      -0.0425
+     ]
+    },
+    {
+     "key": "libero_90_82_t8_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.984,
+      -0.039,
+      -0.488
+     ],
+     "exec_disp": [
+      0.0456,
+      -0.0613
+     ]
+    },
+    {
+     "key": "libero_90_82_t8_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.999,
+      -0.476,
+      -0.944
+     ],
+     "exec_disp": [
+      0.0137,
+      -0.0381
+     ]
+    },
+    {
+     "key": "libero_90_82_t8_post65",
+     "role": "post",
+     "j": 65,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "study_table_red_coffee_mug_behind_region",
+     "exec_cos": [
+      -0.791,
+      0.944,
+      0.943,
+      -0.282,
+      0.994,
+      -0.893,
+      0.663,
+      0.36,
+      -0.272,
+      -0.286
+     ],
+     "exec_disp": [
+      0.0068,
+      0.0275
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 9,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 69,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t9_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.931,
+      0.569,
+      0.937
+     ],
+     "exec_disp": [
+      0.0379,
+      -0.0218
+     ]
+    },
+    {
+     "key": "libero_90_82_t9_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      1.0,
+      -0.085,
+      0.028
+     ],
+     "exec_disp": [
+      0.043,
+      -0.0602
+     ]
+    },
+    {
+     "key": "libero_90_82_t9_pre55",
+     "role": "pre",
+     "j": 55,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.952,
+      -0.675,
+      -0.415
+     ],
+     "exec_disp": [
+      -0.0113,
+      -0.001
+     ]
+    },
+    {
+     "key": "libero_90_82_t9_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "study_table_desk_caddy_right_region",
+     "exec_cos": [
+      -0.05,
+      0.248,
+      0.557,
+      0.577,
+      0.483,
+      -0.979,
+      0.995,
+      0.968,
+      0.586,
+      0.571
+     ],
+     "exec_disp": [
+      -0.0235,
+      0.0299
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 10,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 54,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t10_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.995,
+      0.178,
+      0.401
+     ],
+     "exec_disp": [
+      0.0454,
+      -0.0623
+     ]
+    },
+    {
+     "key": "libero_90_82_t10_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      1.0,
+      0.234,
+      0.149
+     ],
+     "exec_disp": [
+      0.0574,
+      -0.0574
+     ]
+    },
+    {
+     "key": "libero_90_82_t10_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.977,
+      0.362,
+      -0.06
+     ],
+     "exec_disp": [
+      0.0581,
+      -0.0346
+     ]
+    },
+    {
+     "key": "libero_90_82_t10_post60",
+     "role": "post",
+     "j": 60,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      -0.832,
+      0.906,
+      0.923,
+      -0.414,
+      0.995,
+      -0.99,
+      0.601,
+      0.239,
+      -0.389,
+      -0.439
+     ],
+     "exec_disp": [
+      0.0055,
+      0.0209
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 11,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 177,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t11_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.754,
+      0.692,
+      0.999
+     ],
+     "exec_disp": [
+      0.0358,
+      -0.0122
+     ]
+    },
+    {
+     "key": "libero_90_82_t11_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.704,
+      0.673,
+      0.999
+     ],
+     "exec_disp": [
+      0.0541,
+      -0.0183
+     ]
+    },
+    {
+     "key": "libero_90_82_t11_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.897,
+      -0.999,
+      -0.71
+     ],
+     "exec_disp": [
+      -0.0183,
+      -0.0223
+     ]
+    },
+    {
+     "key": "libero_90_82_t11_post185",
+     "role": "post",
+     "j": 185,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.639,
+      0.748,
+      0.997,
+      -0.083,
+      0.888,
+      -0.931,
+      0.859,
+      0.598,
+      -0.056,
+      -0.111
+     ],
+     "exec_disp": [
+      -0.0003,
+      0.0046
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 12,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 68,
+   "type": "motion",
+   "sub": "not_carried",
+   "obs": [
+    {
+     "key": "libero_90_82_t12_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.517,
+      0.879,
+      0.995
+     ],
+     "exec_disp": [
+      0.0399,
+      -0.0012
+     ]
+    },
+    {
+     "key": "libero_90_82_t12_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.951,
+      0.123,
+      0.5
+     ],
+     "exec_disp": [
+      0.0386,
+      -0.0514
+     ]
+    },
+    {
+     "key": "libero_90_82_t12_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.968,
+      -0.882,
+      -1.0
+     ],
+     "exec_disp": [
+      -0.0072,
+      -0.0294
+     ]
+    },
+    {
+     "key": "libero_90_82_t12_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "study_table_desk_caddy_right_region",
+     "exec_cos": [
+      -0.217,
+      0.439,
+      0.755,
+      0.52,
+      0.661,
+      -0.18,
+      0.999,
+      0.937,
+      0.508,
+      0.545
+     ],
+     "exec_disp": [
+      -0.0239,
+      0.05
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 13,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 53,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_82_t13_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.938,
+      0.48,
+      0.774
+     ],
+     "exec_disp": [
+      0.0435,
+      -0.0279
+     ]
+    },
+    {
+     "key": "libero_90_82_t13_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.999,
+      -0.092,
+      -0.087
+     ],
+     "exec_disp": [
+      0.0393,
+      -0.0633
+     ]
+    },
+    {
+     "key": "libero_90_82_t13_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.952,
+      -0.719,
+      -0.979
+     ],
+     "exec_disp": [
+      0.0007,
+      -0.0386
+     ]
+    },
+    {
+     "key": "libero_90_82_t13_post60",
+     "role": "post",
+     "j": 60,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "desk_caddy_1_right_contain_region",
+     "exec_cos": [
+      0.017,
+      0.186,
+      0.606,
+      0.661,
+      0.374,
+      -0.912,
+      0.974,
+      0.993,
+      0.668,
+      0.659
+     ],
+     "exec_disp": [
+      -0.0229,
+      0.0243
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 14,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 67,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t14_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.954,
+      0.58,
+      0.898
+     ],
+     "exec_disp": [
+      0.0296,
+      -0.0172
+     ]
+    },
+    {
+     "key": "libero_90_82_t14_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.957,
+      0.449,
+      0.734
+     ],
+     "exec_disp": [
+      0.0603,
+      -0.0413
+     ]
+    },
+    {
+     "key": "libero_90_82_t14_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.999,
+      -0.422,
+      -0.963
+     ],
+     "exec_disp": [
+      0.0122,
+      -0.0378
+     ]
+    },
+    {
+     "key": "libero_90_82_t14_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "study_table_red_coffee_mug_behind_region",
+     "exec_cos": [
+      -0.773,
+      0.95,
+      0.843,
+      -0.328,
+      1.0,
+      -0.785,
+      0.573,
+      0.246,
+      -0.317,
+      -0.334
+     ],
+     "exec_disp": [
+      0.0056,
+      0.0202
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 15,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 56,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t15_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.634,
+      0.811,
+      0.944
+     ],
+     "exec_disp": [
+      0.0348,
+      -0.0066
+     ]
+    },
+    {
+     "key": "libero_90_82_t15_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.967,
+      -0.216,
+      -0.388
+     ],
+     "exec_disp": [
+      0.0175,
+      -0.0376
+     ]
+    },
+    {
+     "key": "libero_90_82_t15_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.611,
+      -0.905,
+      -0.548
+     ],
+     "exec_disp": [
+      -0.0269,
+      -0.0122
+     ]
+    },
+    {
+     "key": "libero_90_82_t15_post65",
+     "role": "post",
+     "j": 65,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "study_table_desk_caddy_right_region",
+     "exec_cos": [
+      -0.545,
+      0.422,
+      0.673,
+      0.018,
+      0.638,
+      -0.926,
+      0.976,
+      0.79,
+      0.079,
+      -0.057
+     ],
+     "exec_disp": [
+      -0.0146,
+      0.0417
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 16,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 58,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t16_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.895,
+      0.609,
+      0.9
+     ],
+     "exec_disp": [
+      0.0306,
+      -0.0134
+     ]
+    },
+    {
+     "key": "libero_90_82_t16_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.992,
+      0.179,
+      0.51
+     ],
+     "exec_disp": [
+      0.0609,
+      -0.0648
+     ]
+    },
+    {
+     "key": "libero_90_82_t16_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.923,
+      -0.812,
+      -0.995
+     ],
+     "exec_disp": [
+      -0.0019,
+      -0.0332
+     ]
+    },
+    {
+     "key": "libero_90_82_t16_post65",
+     "role": "post",
+     "j": 65,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      -0.41,
+      0.764,
+      0.999,
+      0.178,
+      0.895,
+      -0.3,
+      0.898,
+      0.699,
+      0.18,
+      0.181
+     ],
+     "exec_disp": [
+      -0.005,
+      0.0277
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 17,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 70,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t17_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.819,
+      0.56,
+      0.836
+     ],
+     "exec_disp": [
+      0.0413,
+      -0.0209
+     ]
+    },
+    {
+     "key": "libero_90_82_t17_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.928,
+      -0.252,
+      -0.432
+     ],
+     "exec_disp": [
+      0.0286,
+      -0.0484
+     ]
+    },
+    {
+     "key": "libero_90_82_t17_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.981,
+      -0.962,
+      -0.971
+     ],
+     "exec_disp": [
+      -0.0049,
+      -0.0167
+     ]
+    },
+    {
+     "key": "libero_90_82_t17_post75",
+     "role": "post",
+     "j": 75,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "study_table_desk_caddy_front_left_contain_region",
+     "exec_cos": [
+      -0.701,
+      0.912,
+      0.999,
+      -0.096,
+      0.978,
+      0.215,
+      0.762,
+      0.515,
+      -0.1,
+      -0.082
+     ],
+     "exec_disp": [
+      0.004,
+      0.0275
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 18,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 56,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t18_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.957,
+      0.465,
+      0.754
+     ],
+     "exec_disp": [
+      0.0502,
+      -0.0352
+     ]
+    },
+    {
+     "key": "libero_90_82_t18_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.929,
+      0.279,
+      0.174
+     ],
+     "exec_disp": [
+      0.0533,
+      -0.0398
+     ]
+    },
+    {
+     "key": "libero_90_82_t18_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.984,
+      -0.924,
+      -0.884
+     ],
+     "exec_disp": [
+      -0.0086,
+      -0.0345
+     ]
+    },
+    {
+     "key": "libero_90_82_t18_post65",
+     "role": "post",
+     "j": 65,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      -0.707,
+      0.916,
+      0.948,
+      -0.219,
+      0.987,
+      -0.903,
+      0.696,
+      0.386,
+      -0.204,
+      -0.231
+     ],
+     "exec_disp": [
+      0.0063,
+      0.0478
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 19,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 59,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_82_t19_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.891,
+      0.484,
+      0.795
+     ],
+     "exec_disp": [
+      0.0363,
+      -0.0225
+     ]
+    },
+    {
+     "key": "libero_90_82_t19_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.996,
+      -0.609,
+      -0.745
+     ],
+     "exec_disp": [
+      0.0047,
+      -0.0397
+     ]
+    },
+    {
+     "key": "libero_90_82_t19_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.939,
+      0.696,
+      0.549
+     ],
+     "exec_disp": [
+      0.0136,
+      0.0005
+     ]
+    },
+    {
+     "key": "libero_90_82_t19_post65",
+     "role": "post",
+     "j": 65,
+     "cand": [
+      "desk_caddy_1_left_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_left_contain_region"
+     ],
+     "exec_pointed": "study_table_desk_caddy_right_region",
+     "exec_cos": [
+      -0.677,
+      0.675,
+      0.85,
+      -0.117,
+      0.809,
+      -0.8,
+      0.909,
+      0.665,
+      -0.071,
+      -0.171
+     ],
+     "exec_disp": [
+      -0.0034,
+      0.028
+     ]
+    }
+   ]
+  }
+ ]
+}

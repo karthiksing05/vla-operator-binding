@@ -1,0 +1,1496 @@
+{
+ "task": "libero_90:38",
+ "axes": {
+  "bin": "part",
+  "cd": null,
+  "kind": "part",
+  "scene": "KITCHEN_SCENE8",
+  "scene_familiar": true,
+  "instance": true,
+  "quals": [
+   "right"
+  ],
+  "named": [
+   "moka_pot_1"
+  ],
+  "atoms": [
+   [
+    "On",
+    "moka_pot_1",
+    "flat_stove_1_cook_region"
+   ],
+   [
+    "Turnon",
+    "flat_stove_1"
+   ]
+  ],
+  "text": "put the right moka pot on the stove"
+ },
+ "own": {
+  "moka_pot_1": [
+   "flat_stove_1_cook_region"
+  ]
+ },
+ "episodes": [
+  {
+   "trial": 0,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 100,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t0_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.814,
+      0.98
+     ],
+     "exec_disp": [
+      0.0226,
+      0.0085
+     ]
+    },
+    {
+     "key": "libero_90_38_t0_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      -0.257,
+      0.914
+     ],
+     "exec_disp": [
+      0.0338,
+      -0.0035
+     ]
+    },
+    {
+     "key": "libero_90_38_t0_pre80",
+     "role": "pre",
+     "j": 80,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.785,
+      0.303
+     ],
+     "exec_disp": [
+      -0.0127,
+      0.0066
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 1,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 86,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t1_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.443,
+      0.959
+     ],
+     "exec_disp": [
+      0.0195,
+      -0.0012
+     ]
+    },
+    {
+     "key": "libero_90_38_t1_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      -0.043,
+      0.879
+     ],
+     "exec_disp": [
+      0.0387,
+      -0.0012
+     ]
+    },
+    {
+     "key": "libero_90_38_t1_pre60",
+     "role": "pre",
+     "j": 60,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.337,
+      -0.109
+     ],
+     "exec_disp": [
+      -0.0157,
+      -0.0007
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 2,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 86,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t2_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.942,
+      0.436
+     ],
+     "exec_disp": [
+      0.0005,
+      0.0026
+     ]
+    },
+    {
+     "key": "libero_90_38_t2_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      -0.371,
+      0.679
+     ],
+     "exec_disp": [
+      0.0323,
+      -0.0068
+     ]
+    },
+    {
+     "key": "libero_90_38_t2_pre70",
+     "role": "pre",
+     "j": 70,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.959,
+      0.964
+     ],
+     "exec_disp": [
+      -0.0011,
+      0.0069
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 3,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 101,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t3_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.563,
+      0.967
+     ],
+     "exec_disp": [
+      0.0227,
+      0.0004
+     ]
+    },
+    {
+     "key": "libero_90_38_t3_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      -0.415,
+      0.224
+     ],
+     "exec_disp": [
+      0.0202,
+      -0.0026
+     ]
+    },
+    {
+     "key": "libero_90_38_t3_pre85",
+     "role": "pre",
+     "j": 85,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.988,
+      0.852
+     ],
+     "exec_disp": [
+      -0.0054,
+      0.009
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 4,
+   "success": false,
+   "bound": null,
+   "bound_step": null,
+   "type": "no_commit",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_38_t4_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.802,
+      0.982
+     ],
+     "exec_disp": [
+      0.0188,
+      0.0066
+     ]
+    },
+    {
+     "key": "libero_90_38_t4_pre60",
+     "role": "pre",
+     "j": 60,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.547,
+      0.48
+     ],
+     "exec_disp": [
+      -0.0141,
+      0.0045
+     ]
+    },
+    {
+     "key": "libero_90_38_t4_pre165",
+     "role": "pre",
+     "j": 165,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.488,
+      0.921
+     ],
+     "exec_disp": [
+      -0.0184,
+      0.0017
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 5,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 84,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t5_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.723,
+      1.0
+     ],
+     "exec_disp": [
+      0.0453,
+      0.0112
+     ]
+    },
+    {
+     "key": "libero_90_38_t5_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      -0.279,
+      0.569
+     ],
+     "exec_disp": [
+      0.0226,
+      -0.0012
+     ]
+    },
+    {
+     "key": "libero_90_38_t5_pre70",
+     "role": "pre",
+     "j": 70,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.887,
+      0.569
+     ],
+     "exec_disp": [
+      -0.0081,
+      0.0074
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 6,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 180,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t6_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.501,
+      0.984
+     ],
+     "exec_disp": [
+      0.0368,
+      -0.0024
+     ]
+    },
+    {
+     "key": "libero_90_38_t6_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.132,
+      0.966
+     ],
+     "exec_disp": [
+      0.0371,
+      -0.0028
+     ]
+    },
+    {
+     "key": "libero_90_38_t6_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      -0.225,
+      0.725
+     ],
+     "exec_disp": [
+      0.021,
+      -0.0028
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 7,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 92,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t7_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.599,
+      0.999
+     ],
+     "exec_disp": [
+      0.0243,
+      0.0041
+     ]
+    },
+    {
+     "key": "libero_90_38_t7_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      -0.397,
+      0.606
+     ],
+     "exec_disp": [
+      0.0288,
+      -0.0072
+     ]
+    },
+    {
+     "key": "libero_90_38_t7_pre70",
+     "role": "pre",
+     "j": 70,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.948,
+      0.981
+     ],
+     "exec_disp": [
+      0.0001,
+      0.0446
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 8,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 90,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t8_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.486,
+      0.981
+     ],
+     "exec_disp": [
+      0.0357,
+      -0.003
+     ]
+    },
+    {
+     "key": "libero_90_38_t8_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      -0.229,
+      0.636
+     ],
+     "exec_disp": [
+      0.024,
+      -0.0015
+     ]
+    },
+    {
+     "key": "libero_90_38_t8_pre75",
+     "role": "pre",
+     "j": 75,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.916,
+      0.454
+     ],
+     "exec_disp": [
+      -0.0047,
+      0.0057
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 9,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 91,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t9_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.449,
+      0.958
+     ],
+     "exec_disp": [
+      0.0466,
+      -0.0025
+     ]
+    },
+    {
+     "key": "libero_90_38_t9_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.106,
+      0.785
+     ],
+     "exec_disp": [
+      0.0257,
+      0.0065
+     ]
+    },
+    {
+     "key": "libero_90_38_t9_pre75",
+     "role": "pre",
+     "j": 75,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_1",
+     "exec_cos": [
+      0.462,
+      -0.172
+     ],
+     "exec_disp": [
+      -0.0206,
+      0.0045
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 10,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 86,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t10_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.05,
+      0.777
+     ],
+     "exec_disp": [
+      0.0246,
+      -0.0149
+     ]
+    },
+    {
+     "key": "libero_90_38_t10_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.307,
+      0.638
+     ],
+     "exec_disp": [
+      0.0167,
+      -0.0029
+     ]
+    },
+    {
+     "key": "libero_90_38_t10_pre70",
+     "role": "pre",
+     "j": 70,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.958,
+      0.634
+     ],
+     "exec_disp": [
+      -0.0042,
+      0.0061
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 11,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 110,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t11_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.679,
+      0.999
+     ],
+     "exec_disp": [
+      0.0251,
+      0.0032
+     ]
+    },
+    {
+     "key": "libero_90_38_t11_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.58,
+      1.0
+     ],
+     "exec_disp": [
+      0.0527,
+      0.0073
+     ]
+    },
+    {
+     "key": "libero_90_38_t11_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      -0.168,
+      0.958
+     ],
+     "exec_disp": [
+      0.0407,
+      -0.0078
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 12,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 79,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t12_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.729,
+      0.999
+     ],
+     "exec_disp": [
+      0.042,
+      0.0132
+     ]
+    },
+    {
+     "key": "libero_90_38_t12_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.191,
+      0.782
+     ],
+     "exec_disp": [
+      0.0174,
+      -0.0009
+     ]
+    },
+    {
+     "key": "libero_90_38_t12_pre65",
+     "role": "pre",
+     "j": 65,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.979,
+      0.861
+     ],
+     "exec_disp": [
+      -0.001,
+      0.0108
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 13,
+   "success": false,
+   "bound": null,
+   "bound_step": null,
+   "type": "no_commit",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_38_t13_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.56,
+      0.991
+     ],
+     "exec_disp": [
+      0.0331,
+      -0.0001
+     ]
+    },
+    {
+     "key": "libero_90_38_t13_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.674,
+      0.408
+     ],
+     "exec_disp": [
+      0.0146,
+      -0.0097
+     ]
+    },
+    {
+     "key": "libero_90_38_t13_pre110",
+     "role": "pre",
+     "j": 110,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.994,
+      0.638
+     ],
+     "exec_disp": [
+      -0.0078,
+      0.0275
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 14,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 97,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t14_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.524,
+      0.978
+     ],
+     "exec_disp": [
+      0.019,
+      -0.0003
+     ]
+    },
+    {
+     "key": "libero_90_38_t14_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      -0.114,
+      0.83
+     ],
+     "exec_disp": [
+      0.0261,
+      0.0002
+     ]
+    },
+    {
+     "key": "libero_90_38_t14_pre80",
+     "role": "pre",
+     "j": 80,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.974,
+      0.854
+     ],
+     "exec_disp": [
+      -0.0083,
+      0.012
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 15,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 90,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t15_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.621,
+      0.999
+     ],
+     "exec_disp": [
+      0.0268,
+      0.0043
+     ]
+    },
+    {
+     "key": "libero_90_38_t15_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      -0.39,
+      0.653
+     ],
+     "exec_disp": [
+      0.0258,
+      -0.0058
+     ]
+    },
+    {
+     "key": "libero_90_38_t15_pre75",
+     "role": "pre",
+     "j": 75,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.941,
+      0.647
+     ],
+     "exec_disp": [
+      -0.0087,
+      0.0097
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 16,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 94,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t16_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.718,
+      0.996
+     ],
+     "exec_disp": [
+      0.0295,
+      0.0042
+     ]
+    },
+    {
+     "key": "libero_90_38_t16_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      -0.237,
+      0.67
+     ],
+     "exec_disp": [
+      0.0266,
+      -0.0027
+     ]
+    },
+    {
+     "key": "libero_90_38_t16_pre75",
+     "role": "pre",
+     "j": 75,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.992,
+      0.886
+     ],
+     "exec_disp": [
+      -0.0065,
+      0.0268
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 17,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 94,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t17_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.561,
+      0.993
+     ],
+     "exec_disp": [
+      0.0459,
+      0.0016
+     ]
+    },
+    {
+     "key": "libero_90_38_t17_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.766,
+      -0.39
+     ],
+     "exec_disp": [
+      0.0099,
+      -0.0063
+     ]
+    },
+    {
+     "key": "libero_90_38_t17_pre75",
+     "role": "pre",
+     "j": 75,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.917,
+      0.594
+     ],
+     "exec_disp": [
+      -0.0055,
+      0.0064
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 18,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 94,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t18_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.552,
+      0.966
+     ],
+     "exec_disp": [
+      0.0445,
+      -0.0005
+     ]
+    },
+    {
+     "key": "libero_90_38_t18_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      -0.244,
+      0.462
+     ],
+     "exec_disp": [
+      0.0295,
+      -0.0015
+     ]
+    },
+    {
+     "key": "libero_90_38_t18_pre75",
+     "role": "pre",
+     "j": 75,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.789,
+      0.746
+     ],
+     "exec_disp": [
+      -0.0123,
+      0.0069
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 19,
+   "success": false,
+   "bound": "moka_pot_2",
+   "bound_step": 105,
+   "type": "wrong_object",
+   "sub": "wrong_instance",
+   "obs": [
+    {
+     "key": "libero_90_38_t19_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.593,
+      0.999
+     ],
+     "exec_disp": [
+      0.0241,
+      0.0021
+     ]
+    },
+    {
+     "key": "libero_90_38_t19_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": "moka_pot_2",
+     "exec_cos": [
+      0.034,
+      0.961
+     ],
+     "exec_disp": [
+      0.0305,
+      0.0003
+     ]
+    },
+    {
+     "key": "libero_90_38_t19_pre90",
+     "role": "pre",
+     "j": 90,
+     "cand": [
+      "moka_pot_1",
+      "moka_pot_2"
+     ],
+     "named": [
+      "moka_pot_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.941,
+      0.555
+     ],
+     "exec_disp": [
+      -0.0045,
+      0.0063
+     ]
+    }
+   ]
+  }
+ ]
+}

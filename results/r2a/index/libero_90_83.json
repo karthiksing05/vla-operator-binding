@@ -1,0 +1,1723 @@
+{
+ "task": "libero_90:83",
+ "axes": {
+  "bin": "part",
+  "cd": null,
+  "kind": "part",
+  "scene": "STUDY_SCENE3",
+  "scene_familiar": false,
+  "instance": false,
+  "quals": [
+   "right"
+  ],
+  "named": [
+   "black_book_1"
+  ],
+  "atoms": [
+   [
+    "In",
+    "black_book_1",
+    "desk_caddy_1_right_contain_region"
+   ]
+  ],
+  "text": "pick up the book and place it in the right compartment of the caddy"
+ },
+ "own": {
+  "black_book_1": [
+   "desk_caddy_1_right_contain_region"
+  ]
+ },
+ "episodes": [
+  {
+   "trial": 0,
+   "success": false,
+   "bound": "porcelain_mug_1",
+   "bound_step": 63,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_83_t0_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "red_coffee_mug_1",
+     "exec_cos": [
+      0.083,
+      0.973,
+      0.689
+     ],
+     "exec_disp": [
+      0.0287,
+      0.0212
+     ]
+    },
+    {
+     "key": "libero_90_83_t0_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.293,
+      -1.0,
+      0.691
+     ],
+     "exec_disp": [
+      -0.0354,
+      -0.0116
+     ]
+    },
+    {
+     "key": "libero_90_83_t0_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.183,
+      -0.985,
+      0.12
+     ],
+     "exec_disp": [
+      -0.0147,
+      -0.0085
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 1,
+   "success": false,
+   "bound": "porcelain_mug_1",
+   "bound_step": 153,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_83_t1_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.463,
+      0.906,
+      0.998
+     ],
+     "exec_disp": [
+      0.023,
+      0.0014
+     ]
+    },
+    {
+     "key": "libero_90_83_t1_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.147,
+      0.983,
+      0.937
+     ],
+     "exec_disp": [
+      0.043,
+      0.0147
+     ]
+    },
+    {
+     "key": "libero_90_83_t1_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      -0.047,
+      0.996,
+      0.885
+     ],
+     "exec_disp": [
+      0.0361,
+      0.0171
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 2,
+   "success": false,
+   "bound": "porcelain_mug_1",
+   "bound_step": 65,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_83_t2_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.438,
+      0.819,
+      0.247
+     ],
+     "exec_disp": [
+      0.002,
+      0.0038
+     ]
+    },
+    {
+     "key": "libero_90_83_t2_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.23,
+      0.953,
+      0.665
+     ],
+     "exec_disp": [
+      0.0608,
+      0.0102
+     ]
+    },
+    {
+     "key": "libero_90_83_t2_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.751,
+      -0.994,
+      0.997
+     ],
+     "exec_disp": [
+      -0.0204,
+      -0.0184
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 3,
+   "success": false,
+   "bound": "porcelain_mug_1",
+   "bound_step": 60,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_83_t3_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.311,
+      0.969,
+      0.954
+     ],
+     "exec_disp": [
+      0.02,
+      0.0043
+     ]
+    },
+    {
+     "key": "libero_90_83_t3_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.214,
+      0.999,
+      0.417
+     ],
+     "exec_disp": [
+      0.0116,
+      0.0052
+     ]
+    },
+    {
+     "key": "libero_90_83_t3_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.875,
+      0.081,
+      0.947
+     ],
+     "exec_disp": [
+      0.0078,
+      -0.0125
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 4,
+   "success": false,
+   "bound": "porcelain_mug_1",
+   "bound_step": 69,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_83_t4_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "red_coffee_mug_1",
+     "exec_cos": [
+      0.026,
+      0.987,
+      0.64
+     ],
+     "exec_disp": [
+      0.0249,
+      0.0182
+     ]
+    },
+    {
+     "key": "libero_90_83_t4_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.982,
+      -0.069,
+      0.9
+     ],
+     "exec_disp": [
+      0.0016,
+      -0.0048
+     ]
+    },
+    {
+     "key": "libero_90_83_t4_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.541,
+      -0.968,
+      0.77
+     ],
+     "exec_disp": [
+      -0.0269,
+      -0.0236
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 5,
+   "success": false,
+   "bound": "porcelain_mug_1",
+   "bound_step": 57,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_83_t5_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "red_coffee_mug_1",
+     "exec_cos": [
+      0.115,
+      0.998,
+      0.838
+     ],
+     "exec_disp": [
+      0.0543,
+      0.0247
+     ]
+    },
+    {
+     "key": "libero_90_83_t5_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.79,
+      0.04,
+      0.853
+     ],
+     "exec_disp": [
+      0.0104,
+      -0.0156
+     ]
+    },
+    {
+     "key": "libero_90_83_t5_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.539,
+      -0.948,
+      0.708
+     ],
+     "exec_disp": [
+      -0.0252,
+      -0.0099
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 6,
+   "success": false,
+   "bound": "porcelain_mug_1",
+   "bound_step": 118,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_83_t6_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.442,
+      0.938,
+      0.994
+     ],
+     "exec_disp": [
+      0.0443,
+      0.0031
+     ]
+    },
+    {
+     "key": "libero_90_83_t6_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.899,
+      -0.13,
+      -0.801
+     ],
+     "exec_disp": [
+      -0.0035,
+      0.0065
+     ]
+    },
+    {
+     "key": "libero_90_83_t6_pre95",
+     "role": "pre",
+     "j": 95,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.271,
+      -0.991,
+      -0.516
+     ],
+     "exec_disp": [
+      -0.0146,
+      -0.0031
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 7,
+   "success": false,
+   "bound": "porcelain_mug_1",
+   "bound_step": 62,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_83_t7_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "red_coffee_mug_1",
+     "exec_cos": [
+      0.015,
+      0.999,
+      0.668
+     ],
+     "exec_disp": [
+      0.0357,
+      0.022
+     ]
+    },
+    {
+     "key": "libero_90_83_t7_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.762,
+      -0.881,
+      0.866
+     ],
+     "exec_disp": [
+      -0.0078,
+      -0.0112
+     ]
+    },
+    {
+     "key": "libero_90_83_t7_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.503,
+      -0.946,
+      0.243
+     ],
+     "exec_disp": [
+      -0.005,
+      -0.0054
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 8,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 138,
+   "type": "motion",
+   "sub": "toward_target",
+   "obs": [
+    {
+     "key": "libero_90_83_t8_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.526,
+      0.918,
+      0.972
+     ],
+     "exec_disp": [
+      0.0482,
+      0.0032
+     ]
+    },
+    {
+     "key": "libero_90_83_t8_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      1.0,
+      -0.764,
+      -0.653
+     ],
+     "exec_disp": [
+      -0.007,
+      -0.0652
+     ]
+    },
+    {
+     "key": "libero_90_83_t8_pre30",
+     "role": "pre",
+     "j": 30,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.932,
+      -0.983,
+      -0.387
+     ],
+     "exec_disp": [
+      -0.016,
+      -0.0161
+     ]
+    },
+    {
+     "key": "libero_90_83_t8_post145",
+     "role": "post",
+     "j": 145,
+     "cand": [
+      "desk_caddy_1_right_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_right_contain_region"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.663,
+      0.768,
+      0.999,
+      0.106,
+      0.897,
+      -0.749,
+      0.883,
+      -0.469,
+      0.115,
+      0.102
+     ],
+     "exec_disp": [
+      -0.006,
+      0.0395
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 9,
+   "success": false,
+   "bound": "porcelain_mug_1",
+   "bound_step": 132,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_83_t9_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "red_coffee_mug_1",
+     "exec_cos": [
+      0.348,
+      0.992,
+      0.885
+     ],
+     "exec_disp": [
+      0.0372,
+      0.0123
+     ]
+    },
+    {
+     "key": "libero_90_83_t9_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.072,
+      -0.9,
+      -0.275
+     ],
+     "exec_disp": [
+      -0.0133,
+      -0.0008
+     ]
+    },
+    {
+     "key": "libero_90_83_t9_pre115",
+     "role": "pre",
+     "j": 115,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.294,
+      -0.85,
+      -0.774
+     ],
+     "exec_disp": [
+      -0.0042,
+      0.0002
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 10,
+   "success": false,
+   "bound": null,
+   "bound_step": null,
+   "type": "no_commit",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_83_t10_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.994,
+      0.377,
+      0.582
+     ],
+     "exec_disp": [
+      0.0365,
+      -0.0329
+     ]
+    },
+    {
+     "key": "libero_90_83_t10_pre165",
+     "role": "pre",
+     "j": 165,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      -0.314,
+      0.496,
+      0.808
+     ],
+     "exec_disp": [
+      -0.0067,
+      0.0263
+     ]
+    },
+    {
+     "key": "libero_90_83_t10_pre195",
+     "role": "pre",
+     "j": 195,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.995,
+      0.612,
+      0.381
+     ],
+     "exec_disp": [
+      0.0189,
+      -0.0042
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 11,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 55,
+   "type": "motion",
+   "sub": "not_carried",
+   "obs": [
+    {
+     "key": "libero_90_83_t11_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.245,
+      0.98,
+      0.848
+     ],
+     "exec_disp": [
+      0.0363,
+      0.0104
+     ]
+    },
+    {
+     "key": "libero_90_83_t11_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.169,
+      -0.892,
+      0.251
+     ],
+     "exec_disp": [
+      -0.0177,
+      -0.0007
+     ]
+    },
+    {
+     "key": "libero_90_83_t11_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.821,
+      0.735,
+      -0.262
+     ],
+     "exec_disp": [
+      0.0004,
+      0.0011
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 12,
+   "success": false,
+   "bound": "porcelain_mug_1",
+   "bound_step": 60,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_83_t12_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      -0.015,
+      0.998,
+      0.897
+     ],
+     "exec_disp": [
+      0.0447,
+      0.0261
+     ]
+    },
+    {
+     "key": "libero_90_83_t12_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.995,
+      -0.492,
+      0.926
+     ],
+     "exec_disp": [
+      -0.0008,
+      -0.0062
+     ]
+    },
+    {
+     "key": "libero_90_83_t12_pre40",
+     "role": "pre",
+     "j": 40,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.861,
+      -0.798,
+      0.487
+     ],
+     "exec_disp": [
+      -0.0081,
+      -0.0149
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 13,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 77,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_83_t13_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.49,
+      0.934,
+      1.0
+     ],
+     "exec_disp": [
+      0.0342,
+      0.0046
+     ]
+    },
+    {
+     "key": "libero_90_83_t13_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.165,
+      -0.978,
+      -0.742
+     ],
+     "exec_disp": [
+      -0.031,
+      -0.0231
+     ]
+    },
+    {
+     "key": "libero_90_83_t13_pre55",
+     "role": "pre",
+     "j": 55,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.703,
+      -0.919,
+      -0.746
+     ],
+     "exec_disp": [
+      -0.0022,
+      -0.001
+     ]
+    },
+    {
+     "key": "libero_90_83_t13_post85",
+     "role": "post",
+     "j": 85,
+     "cand": [
+      "desk_caddy_1_right_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_right_contain_region"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.524,
+      0.624,
+      0.858,
+      -0.337,
+      0.771,
+      -0.921,
+      0.877,
+      -0.749,
+      -0.261,
+      -0.426
+     ],
+     "exec_disp": [
+      -0.0039,
+      0.0351
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 14,
+   "success": false,
+   "bound": "porcelain_mug_1",
+   "bound_step": 69,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_83_t14_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.479,
+      0.983,
+      0.952
+     ],
+     "exec_disp": [
+      0.0231,
+      0.0056
+     ]
+    },
+    {
+     "key": "libero_90_83_t14_pre25",
+     "role": "pre",
+     "j": 25,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.485,
+      -0.987,
+      0.742
+     ],
+     "exec_disp": [
+      -0.0253,
+      -0.0164
+     ]
+    },
+    {
+     "key": "libero_90_83_t14_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.557,
+      -0.829,
+      0.199
+     ],
+     "exec_disp": [
+      -0.0044,
+      -0.0065
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 15,
+   "success": false,
+   "bound": "porcelain_mug_1",
+   "bound_step": 327,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_83_t15_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      -0.002,
+      0.998,
+      0.939
+     ],
+     "exec_disp": [
+      0.0385,
+      0.0212
+     ]
+    },
+    {
+     "key": "libero_90_83_t15_pre145",
+     "role": "pre",
+     "j": 145,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.991,
+      -0.38,
+      -0.444
+     ],
+     "exec_disp": [
+      0.0036,
+      -0.0155
+     ]
+    },
+    {
+     "key": "libero_90_83_t15_pre270",
+     "role": "pre",
+     "j": 270,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.762,
+      0.459,
+      0.975
+     ],
+     "exec_disp": [
+      -0.0059,
+      0.0165
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 16,
+   "success": false,
+   "bound": "porcelain_mug_1",
+   "bound_step": 58,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_83_t16_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.351,
+      0.986,
+      0.956
+     ],
+     "exec_disp": [
+      0.0262,
+      0.0092
+     ]
+    },
+    {
+     "key": "libero_90_83_t16_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.213,
+      0.997,
+      0.899
+     ],
+     "exec_disp": [
+      0.0511,
+      0.0228
+     ]
+    },
+    {
+     "key": "libero_90_83_t16_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.121,
+      0.998,
+      0.866
+     ],
+     "exec_disp": [
+      0.0621,
+      0.0297
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 17,
+   "success": false,
+   "bound": "porcelain_mug_1",
+   "bound_step": 56,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_83_t17_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      -0.024,
+      1.0,
+      0.92
+     ],
+     "exec_disp": [
+      0.0446,
+      0.0252
+     ]
+    },
+    {
+     "key": "libero_90_83_t17_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      -0.23,
+      0.999,
+      0.813
+     ],
+     "exec_disp": [
+      0.0541,
+      0.0262
+     ]
+    },
+    {
+     "key": "libero_90_83_t17_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.577,
+      -0.968,
+      0.773
+     ],
+     "exec_disp": [
+      -0.0298,
+      -0.0115
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 18,
+   "success": false,
+   "bound": "porcelain_mug_1",
+   "bound_step": 59,
+   "type": "wrong_object",
+   "sub": "other_type",
+   "obs": [
+    {
+     "key": "libero_90_83_t18_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.497,
+      0.946,
+      0.999
+     ],
+     "exec_disp": [
+      0.0416,
+      0.0061
+     ]
+    },
+    {
+     "key": "libero_90_83_t18_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.811,
+      -0.874,
+      0.955
+     ],
+     "exec_disp": [
+      -0.0086,
+      -0.0122
+     ]
+    },
+    {
+     "key": "libero_90_83_t18_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.129,
+      -0.95,
+      0.446
+     ],
+     "exec_disp": [
+      -0.0229,
+      -0.0033
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 19,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 108,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_83_t19_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "porcelain_mug_1",
+     "exec_cos": [
+      0.358,
+      0.945,
+      0.997
+     ],
+     "exec_disp": [
+      0.0372,
+      0.0067
+     ]
+    },
+    {
+     "key": "libero_90_83_t19_pre35",
+     "role": "pre",
+     "j": 35,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.71,
+      -0.977,
+      -0.999
+     ],
+     "exec_disp": [
+      -0.0116,
+      -0.0191
+     ]
+    },
+    {
+     "key": "libero_90_83_t19_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1",
+      "porcelain_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.717,
+      -0.81,
+      -0.921
+     ],
+     "exec_disp": [
+      -0.0005,
+      -0.0043
+     ]
+    },
+    {
+     "key": "libero_90_83_t19_post115",
+     "role": "post",
+     "j": 115,
+     "cand": [
+      "desk_caddy_1_right_contain_region",
+      "red_coffee_mug_1",
+      "porcelain_mug_1",
+      "desk_caddy_1",
+      "study_table_red_coffee_mug_behind_region",
+      "study_table_desk_caddy_front_left_contain_region",
+      "study_table_desk_caddy_right_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region",
+      "desk_caddy_1_front_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_right_contain_region"
+     ],
+     "exec_pointed": "study_table_desk_caddy_front_left_contain_region",
+     "exec_cos": [
+      0.204,
+      0.986,
+      0.992,
+      -0.553,
+      1.0,
+      0.053,
+      0.533,
+      -0.963,
+      -0.536,
+      -0.567
+     ],
+     "exec_disp": [
+      0.0191,
+      0.0351
+     ]
+    }
+   ]
+  }
+ ]
+}

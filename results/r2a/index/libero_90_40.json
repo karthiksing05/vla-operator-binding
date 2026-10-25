@@ -1,0 +1,1915 @@
+{
+ "task": "libero_90:40",
+ "axes": {
+  "bin": "0.5",
+  "cd": 0.6479,
+  "kind": "combination",
+  "scene": "KITCHEN_SCENE9",
+  "scene_familiar": true,
+  "instance": false,
+  "quals": [],
+  "named": [
+   "chefmate_8_frypan_1"
+  ],
+  "atoms": [
+   [
+    "In",
+    "chefmate_8_frypan_1",
+    "wooden_two_layer_shelf_1_top_region"
+   ]
+  ],
+  "text": "put the frying pan on the cabinet shelf"
+ },
+ "own": {
+  "chefmate_8_frypan_1": [
+   "wooden_two_layer_shelf_1_top_region"
+  ]
+ },
+ "episodes": [
+  {
+   "trial": 0,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 114,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_40_t0_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.733,
+      0.942
+     ],
+     "exec_disp": [
+      0.0248,
+      0.0101
+     ]
+    },
+    {
+     "key": "libero_90_40_t0_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.994,
+      0.204
+     ],
+     "exec_disp": [
+      0.0137,
+      0.0023
+     ]
+    },
+    {
+     "key": "libero_90_40_t0_pre95",
+     "role": "pre",
+     "j": 95,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.983,
+      0.309
+     ],
+     "exec_disp": [
+      -0.0174,
+      -0.0077
+     ]
+    },
+    {
+     "key": "libero_90_40_t0_post120",
+     "role": "post",
+     "j": 120,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": "wooden_two_layer_shelf_1_top_region",
+     "exec_cos": [
+      0.997,
+      0.234,
+      -0.49,
+      -0.825
+     ],
+     "exec_disp": [
+      -0.014,
+      -0.0682
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 1,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 117,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_40_t1_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.503,
+      0.999
+     ],
+     "exec_disp": [
+      0.0278,
+      0.0033
+     ]
+    },
+    {
+     "key": "libero_90_40_t1_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      -0.942,
+      -0.344
+     ],
+     "exec_disp": [
+      0.0257,
+      0.0146
+     ]
+    },
+    {
+     "key": "libero_90_40_t1_pre95",
+     "role": "pre",
+     "j": 95,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.977,
+      0.377
+     ],
+     "exec_disp": [
+      -0.0121,
+      -0.0062
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 2,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 113,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_40_t2_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.832,
+      0.881
+     ],
+     "exec_disp": [
+      0.0093,
+      0.0058
+     ]
+    },
+    {
+     "key": "libero_90_40_t2_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      -0.895,
+      -0.346
+     ],
+     "exec_disp": [
+      0.0207,
+      0.0156
+     ]
+    },
+    {
+     "key": "libero_90_40_t2_pre100",
+     "role": "pre",
+     "j": 100,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.849,
+      -0.21
+     ],
+     "exec_disp": [
+      -0.0204,
+      0.0044
+     ]
+    },
+    {
+     "key": "libero_90_40_t2_post120",
+     "role": "post",
+     "j": 120,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.728,
+      -0.408,
+      -0.947,
+      -0.991
+     ],
+     "exec_disp": [
+      0.0057,
+      -0.0078
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 3,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 112,
+   "type": "motion",
+   "sub": "toward_target",
+   "obs": [
+    {
+     "key": "libero_90_40_t3_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.67,
+      0.975
+     ],
+     "exec_disp": [
+      0.0306,
+      0.0043
+     ]
+    },
+    {
+     "key": "libero_90_40_t3_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      -0.985,
+      -0.184
+     ],
+     "exec_disp": [
+      0.0257,
+      0.009
+     ]
+    },
+    {
+     "key": "libero_90_40_t3_pre95",
+     "role": "pre",
+     "j": 95,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.933,
+      -0.152
+     ],
+     "exec_disp": [
+      -0.0123,
+      0.0008
+     ]
+    },
+    {
+     "key": "libero_90_40_t3_post120",
+     "role": "post",
+     "j": 120,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": "wooden_two_layer_shelf_1_top_region",
+     "exec_cos": [
+      0.997,
+      0.352,
+      -0.433,
+      -0.768
+     ],
+     "exec_disp": [
+      -0.0017,
+      -0.0253
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 4,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 102,
+   "type": "motion",
+   "sub": "toward_target",
+   "obs": [
+    {
+     "key": "libero_90_40_t4_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.716,
+      0.928
+     ],
+     "exec_disp": [
+      0.0281,
+      0.0118
+     ]
+    },
+    {
+     "key": "libero_90_40_t4_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.971,
+      -0.228
+     ],
+     "exec_disp": [
+      0.0176,
+      0.0089
+     ]
+    },
+    {
+     "key": "libero_90_40_t4_pre95",
+     "role": "pre",
+     "j": 95,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.994,
+      0.198
+     ],
+     "exec_disp": [
+      -0.003,
+      -0.0014
+     ]
+    },
+    {
+     "key": "libero_90_40_t4_post115",
+     "role": "post",
+     "j": 115,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.979,
+      0.18,
+      -0.634,
+      -0.925
+     ],
+     "exec_disp": [
+      0.002,
+      -0.0194
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 5,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 111,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_40_t5_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.905,
+      0.91
+     ],
+     "exec_disp": [
+      0.0539,
+      0.0194
+     ]
+    },
+    {
+     "key": "libero_90_40_t5_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.952,
+      -0.462
+     ],
+     "exec_disp": [
+      0.006,
+      0.0039
+     ]
+    },
+    {
+     "key": "libero_90_40_t5_pre90",
+     "role": "pre",
+     "j": 90,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.999,
+      0.246
+     ],
+     "exec_disp": [
+      -0.0178,
+      -0.006
+     ]
+    },
+    {
+     "key": "libero_90_40_t5_post120",
+     "role": "post",
+     "j": 120,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": "wooden_two_layer_shelf_1_top_region",
+     "exec_cos": [
+      0.993,
+      -0.002,
+      -0.591,
+      -0.881
+     ],
+     "exec_disp": [
+      -0.0166,
+      -0.0765
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 6,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 122,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_40_t6_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.74,
+      0.989
+     ],
+     "exec_disp": [
+      0.0537,
+      0.0136
+     ]
+    },
+    {
+     "key": "libero_90_40_t6_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.9,
+      -0.404
+     ],
+     "exec_disp": [
+      0.0138,
+      0.0096
+     ]
+    },
+    {
+     "key": "libero_90_40_t6_pre105",
+     "role": "pre",
+     "j": 105,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.684,
+      0.814
+     ],
+     "exec_disp": [
+      -0.002,
+      -0.0045
+     ]
+    },
+    {
+     "key": "libero_90_40_t6_post130",
+     "role": "post",
+     "j": 130,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": "wooden_two_layer_shelf_1_top_region",
+     "exec_cos": [
+      1.0,
+      0.289,
+      -0.486,
+      -0.87
+     ],
+     "exec_disp": [
+      -0.0029,
+      -0.0489
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 7,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 113,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_40_t7_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.768,
+      0.885
+     ],
+     "exec_disp": [
+      0.0307,
+      0.0143
+     ]
+    },
+    {
+     "key": "libero_90_40_t7_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      -0.822,
+      -0.451
+     ],
+     "exec_disp": [
+      0.0165,
+      0.0181
+     ]
+    },
+    {
+     "key": "libero_90_40_t7_pre90",
+     "role": "pre",
+     "j": 90,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.577,
+      -0.602
+     ],
+     "exec_disp": [
+      -0.0029,
+      0.0021
+     ]
+    },
+    {
+     "key": "libero_90_40_t7_post120",
+     "role": "post",
+     "j": 120,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": "wooden_two_layer_shelf_1_top_region",
+     "exec_cos": [
+      0.961,
+      0.631,
+      -0.129,
+      -0.533
+     ],
+     "exec_disp": [
+      -0.0148,
+      -0.0318
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 8,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 108,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_40_t8_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.397,
+      0.998
+     ],
+     "exec_disp": [
+      0.0482,
+      0.005
+     ]
+    },
+    {
+     "key": "libero_90_40_t8_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      -0.829,
+      -0.433
+     ],
+     "exec_disp": [
+      0.0185,
+      0.0118
+     ]
+    },
+    {
+     "key": "libero_90_40_t8_pre95",
+     "role": "pre",
+     "j": 95,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.587,
+      0.798
+     ],
+     "exec_disp": [
+      -0.0015,
+      -0.0029
+     ]
+    },
+    {
+     "key": "libero_90_40_t8_post115",
+     "role": "post",
+     "j": 115,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.88,
+      -0.378,
+      -0.876,
+      -1.0
+     ],
+     "exec_disp": [
+      0.0074,
+      -0.0165
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 9,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 118,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_40_t9_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.776,
+      0.989
+     ],
+     "exec_disp": [
+      0.0392,
+      0.0053
+     ]
+    },
+    {
+     "key": "libero_90_40_t9_pre55",
+     "role": "pre",
+     "j": 55,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.971,
+      -0.123
+     ],
+     "exec_disp": [
+      0.0133,
+      0.0072
+     ]
+    },
+    {
+     "key": "libero_90_40_t9_pre105",
+     "role": "pre",
+     "j": 105,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.526,
+      -0.82
+     ],
+     "exec_disp": [
+      -0.0029,
+      0.0029
+     ]
+    },
+    {
+     "key": "libero_90_40_t9_post140",
+     "role": "post",
+     "j": 140,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": "wooden_two_layer_shelf_1_top_region",
+     "exec_cos": [
+      0.93,
+      -0.085,
+      -0.506,
+      -0.809
+     ],
+     "exec_disp": [
+      -0.0388,
+      -0.0827
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 10,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 119,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_40_t10_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      -0.102,
+      0.849
+     ],
+     "exec_disp": [
+      0.0277,
+      -0.014
+     ]
+    },
+    {
+     "key": "libero_90_40_t10_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      -0.862,
+      -0.134
+     ],
+     "exec_disp": [
+      0.026,
+      0.0153
+     ]
+    },
+    {
+     "key": "libero_90_40_t10_pre100",
+     "role": "pre",
+     "j": 100,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.705,
+      0.747
+     ],
+     "exec_disp": [
+      -0.0043,
+      -0.0062
+     ]
+    },
+    {
+     "key": "libero_90_40_t10_post125",
+     "role": "post",
+     "j": 125,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": "wooden_two_layer_shelf_1_top_region",
+     "exec_cos": [
+      1.0,
+      0.223,
+      -0.414,
+      -0.763
+     ],
+     "exec_disp": [
+      -0.0057,
+      -0.0398
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 11,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 109,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_40_t11_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.815,
+      0.937
+     ],
+     "exec_disp": [
+      0.0525,
+      0.0256
+     ]
+    },
+    {
+     "key": "libero_90_40_t11_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.191,
+      -0.908
+     ],
+     "exec_disp": [
+      -0.0027,
+      0.0038
+     ]
+    },
+    {
+     "key": "libero_90_40_t11_pre95",
+     "role": "pre",
+     "j": 95,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.871,
+      0.172
+     ],
+     "exec_disp": [
+      0.0097,
+      -0.0002
+     ]
+    },
+    {
+     "key": "libero_90_40_t11_post115",
+     "role": "post",
+     "j": 115,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": "wooden_two_layer_shelf_1_top_region",
+     "exec_cos": [
+      0.982,
+      0.603,
+      -0.31,
+      -0.758
+     ],
+     "exec_disp": [
+      -0.0058,
+      -0.022
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 12,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 110,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_40_t12_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.834,
+      0.904
+     ],
+     "exec_disp": [
+      0.0442,
+      0.0183
+     ]
+    },
+    {
+     "key": "libero_90_40_t12_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.707,
+      0.787
+     ],
+     "exec_disp": [
+      0.0118,
+      -0.009
+     ]
+    },
+    {
+     "key": "libero_90_40_t12_pre90",
+     "role": "pre",
+     "j": 90,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.983,
+      0.377
+     ],
+     "exec_disp": [
+      -0.0198,
+      -0.0082
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 13,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 125,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_40_t13_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.511,
+      0.998
+     ],
+     "exec_disp": [
+      0.0326,
+      0.0034
+     ]
+    },
+    {
+     "key": "libero_90_40_t13_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.845,
+      -0.024
+     ],
+     "exec_disp": [
+      0.0159,
+      0.0098
+     ]
+    },
+    {
+     "key": "libero_90_40_t13_pre95",
+     "role": "pre",
+     "j": 95,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.997,
+      0.01
+     ],
+     "exec_disp": [
+      -0.0348,
+      -0.006
+     ]
+    },
+    {
+     "key": "libero_90_40_t13_post130",
+     "role": "post",
+     "j": 130,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.873,
+      0.741,
+      0.045,
+      -0.451
+     ],
+     "exec_disp": [
+      -0.0036,
+      -0.0053
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 14,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 106,
+   "type": "motion",
+   "sub": "toward_target",
+   "obs": [
+    {
+     "key": "libero_90_40_t14_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.604,
+      0.996
+     ],
+     "exec_disp": [
+      0.0315,
+      0.0051
+     ]
+    },
+    {
+     "key": "libero_90_40_t14_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      -0.983,
+      0.207
+     ],
+     "exec_disp": [
+      0.0223,
+      0.0094
+     ]
+    },
+    {
+     "key": "libero_90_40_t14_pre90",
+     "role": "pre",
+     "j": 90,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "white_bowl_1",
+     "exec_cos": [
+      0.955,
+      0.099
+     ],
+     "exec_disp": [
+      -0.0331,
+      0.0011
+     ]
+    },
+    {
+     "key": "libero_90_40_t14_post115",
+     "role": "post",
+     "j": 115,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": "wooden_two_layer_shelf_1_top_region",
+     "exec_cos": [
+      0.989,
+      0.544,
+      -0.219,
+      -0.613
+     ],
+     "exec_disp": [
+      -0.0107,
+      -0.0361
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 15,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 116,
+   "type": "motion",
+   "sub": "toward_target",
+   "obs": [
+    {
+     "key": "libero_90_40_t15_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.766,
+      0.95
+     ],
+     "exec_disp": [
+      0.0412,
+      0.0139
+     ]
+    },
+    {
+     "key": "libero_90_40_t15_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.898,
+      -0.26
+     ],
+     "exec_disp": [
+      0.0092,
+      0.0052
+     ]
+    },
+    {
+     "key": "libero_90_40_t15_pre100",
+     "role": "pre",
+     "j": 100,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.965,
+      0.275
+     ],
+     "exec_disp": [
+      -0.0088,
+      -0.0047
+     ]
+    },
+    {
+     "key": "libero_90_40_t15_post125",
+     "role": "post",
+     "j": 125,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": "wooden_two_layer_shelf_1_top_region",
+     "exec_cos": [
+      0.966,
+      -0.116,
+      -0.786,
+      -0.996
+     ],
+     "exec_disp": [
+      0.0053,
+      -0.0227
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 16,
+   "success": true,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 110,
+   "type": "success",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_40_t16_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.59,
+      0.992
+     ],
+     "exec_disp": [
+      0.0321,
+      0.0052
+     ]
+    },
+    {
+     "key": "libero_90_40_t16_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      -0.957,
+      0.125
+     ],
+     "exec_disp": [
+      0.0269,
+      0.0088
+     ]
+    },
+    {
+     "key": "libero_90_40_t16_pre95",
+     "role": "pre",
+     "j": 95,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.665,
+      0.844
+     ],
+     "exec_disp": [
+      -0.0035,
+      -0.006
+     ]
+    },
+    {
+     "key": "libero_90_40_t16_post115",
+     "role": "post",
+     "j": 115,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": "wooden_two_layer_shelf_1_top_region",
+     "exec_cos": [
+      1.0,
+      0.236,
+      -0.433,
+      -0.767
+     ],
+     "exec_disp": [
+      -0.005,
+      -0.0333
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 17,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 121,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_40_t17_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.685,
+      0.979
+     ],
+     "exec_disp": [
+      0.0259,
+      0.004
+     ]
+    },
+    {
+     "key": "libero_90_40_t17_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -1.0,
+      -0.019
+     ],
+     "exec_disp": [
+      0.0072,
+      0.0011
+     ]
+    },
+    {
+     "key": "libero_90_40_t17_pre100",
+     "role": "pre",
+     "j": 100,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.987,
+      0.236
+     ],
+     "exec_disp": [
+      -0.0113,
+      -0.0047
+     ]
+    },
+    {
+     "key": "libero_90_40_t17_post130",
+     "role": "post",
+     "j": 130,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": "wooden_two_layer_shelf_1_top_region",
+     "exec_cos": [
+      0.997,
+      0.178,
+      -0.537,
+      -0.893
+     ],
+     "exec_disp": [
+      -0.0035,
+      -0.028
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 18,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 117,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_40_t18_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.668,
+      0.966
+     ],
+     "exec_disp": [
+      0.0181,
+      0.0058
+     ]
+    },
+    {
+     "key": "libero_90_40_t18_pre50",
+     "role": "pre",
+     "j": 50,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.95,
+      -0.042
+     ],
+     "exec_disp": [
+      0.0104,
+      0.0044
+     ]
+    },
+    {
+     "key": "libero_90_40_t18_pre100",
+     "role": "pre",
+     "j": 100,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.974,
+      -0.129
+     ],
+     "exec_disp": [
+      -0.0126,
+      0.0003
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 19,
+   "success": false,
+   "bound": "chefmate_8_frypan_1",
+   "bound_step": 106,
+   "type": "wrong_goal",
+   "sub": "other_region",
+   "obs": [
+    {
+     "key": "libero_90_40_t19_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": "chefmate_8_frypan_1",
+     "exec_cos": [
+      0.741,
+      0.977
+     ],
+     "exec_disp": [
+      0.0341,
+      0.0094
+     ]
+    },
+    {
+     "key": "libero_90_40_t19_pre45",
+     "role": "pre",
+     "j": 45,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.882,
+      -0.154
+     ],
+     "exec_disp": [
+      0.0134,
+      0.0077
+     ]
+    },
+    {
+     "key": "libero_90_40_t19_pre90",
+     "role": "pre",
+     "j": 90,
+     "cand": [
+      "white_bowl_1",
+      "chefmate_8_frypan_1"
+     ],
+     "named": [
+      "chefmate_8_frypan_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.147,
+      -0.998
+     ],
+     "exec_disp": [
+      -0.0011,
+      0.0091
+     ]
+    },
+    {
+     "key": "libero_90_40_t19_post115",
+     "role": "post",
+     "j": 115,
+     "cand": [
+      "wooden_two_layer_shelf_1_top_region",
+      "white_bowl_1",
+      "flat_stove_1",
+      "flat_stove_1_cook_region"
+     ],
+     "named": [
+      "wooden_two_layer_shelf_1_top_region"
+     ],
+     "exec_pointed": "wooden_two_layer_shelf_1_top_region",
+     "exec_cos": [
+      0.96,
+      0.108,
+      -0.472,
+      -0.837
+     ],
+     "exec_disp": [
+      -0.0267,
+      -0.0784
+     ]
+    }
+   ]
+  }
+ ]
+}

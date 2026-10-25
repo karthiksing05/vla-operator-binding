@@ -1,0 +1,2043 @@
+{
+ "task": "libero_90:78",
+ "axes": {
+  "bin": "part",
+  "cd": null,
+  "kind": "part",
+  "scene": "STUDY_SCENE2",
+  "scene_familiar": false,
+  "instance": false,
+  "quals": [
+   "front"
+  ],
+  "named": [
+   "black_book_1"
+  ],
+  "atoms": [
+   [
+    "In",
+    "black_book_1",
+    "desk_caddy_1_front_contain_region"
+   ]
+  ],
+  "text": "pick up the book and place it in the front compartment of the caddy"
+ },
+ "own": {
+  "black_book_1": [
+   "desk_caddy_1_front_contain_region"
+  ]
+ },
+ "episodes": [
+  {
+   "trial": 0,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 56,
+   "type": "motion",
+   "sub": "not_carried",
+   "obs": [
+    {
+     "key": "libero_90_78_t0_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.868,
+      0.682
+     ],
+     "exec_disp": [
+      0.0264,
+      0.0058
+     ]
+    },
+    {
+     "key": "libero_90_78_t0_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.904,
+      0.424
+     ],
+     "exec_disp": [
+      0.0738,
+      0.0019
+     ]
+    },
+    {
+     "key": "libero_90_78_t0_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.972,
+      -0.285
+     ],
+     "exec_disp": [
+      0.0455,
+      -0.0216
+     ]
+    },
+    {
+     "key": "libero_90_78_t0_post65",
+     "role": "post",
+     "j": 65,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": "desk_caddy_1_left_contain_region",
+     "exec_cos": [
+      0.916,
+      -0.67,
+      0.887,
+      0.467,
+      0.992,
+      0.856
+     ],
+     "exec_disp": [
+      -0.0133,
+      -0.0214
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 1,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 52,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_78_t1_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.947,
+      0.432
+     ],
+     "exec_disp": [
+      0.0322,
+      -0.002
+     ]
+    },
+    {
+     "key": "libero_90_78_t1_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.853,
+      0.514
+     ],
+     "exec_disp": [
+      0.0461,
+      0.0044
+     ]
+    },
+    {
+     "key": "libero_90_78_t1_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.735,
+      0.471
+     ],
+     "exec_disp": [
+      0.036,
+      0.006
+     ]
+    },
+    {
+     "key": "libero_90_78_t1_post60",
+     "role": "post",
+     "j": 60,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.83,
+      -0.937,
+      0.779,
+      0.21,
+      0.949,
+      0.729
+     ],
+     "exec_disp": [
+      -0.003,
+      -0.0099
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 2,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 55,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_78_t2_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.429,
+      0.969
+     ],
+     "exec_disp": [
+      0.0026,
+      0.0027
+     ]
+    },
+    {
+     "key": "libero_90_78_t2_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.996,
+      0.247
+     ],
+     "exec_disp": [
+      0.064,
+      -0.018
+     ]
+    },
+    {
+     "key": "libero_90_78_t2_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.976,
+      -0.005
+     ],
+     "exec_disp": [
+      0.059,
+      -0.0204
+     ]
+    },
+    {
+     "key": "libero_90_78_t2_post60",
+     "role": "post",
+     "j": 60,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": "red_coffee_mug_1",
+     "exec_cos": [
+      -0.989,
+      0.54,
+      -0.975,
+      -0.624,
+      -0.987,
+      -0.958
+     ],
+     "exec_disp": [
+      0.018,
+      0.0164
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 3,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 47,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_78_t3_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.975,
+      0.225
+     ],
+     "exec_disp": [
+      0.0367,
+      -0.0154
+     ]
+    },
+    {
+     "key": "libero_90_78_t3_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.954,
+      -0.017
+     ],
+     "exec_disp": [
+      0.0495,
+      -0.0222
+     ]
+    },
+    {
+     "key": "libero_90_78_t3_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.909,
+      -0.987
+     ],
+     "exec_disp": [
+      0.0002,
+      -0.0255
+     ]
+    },
+    {
+     "key": "libero_90_78_t3_post55",
+     "role": "post",
+     "j": 55,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": "red_coffee_mug_1",
+     "exec_cos": [
+      -0.55,
+      0.948,
+      -0.509,
+      0.083,
+      -0.824,
+      -0.47
+     ],
+     "exec_disp": [
+      0.0038,
+      0.0199
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 4,
+   "success": false,
+   "bound": null,
+   "bound_step": null,
+   "type": "no_commit",
+   "sub": "",
+   "obs": [
+    {
+     "key": "libero_90_78_t4_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.815,
+      0.679
+     ],
+     "exec_disp": [
+      0.0273,
+      0.0064
+     ]
+    },
+    {
+     "key": "libero_90_78_t4_pre135",
+     "role": "pre",
+     "j": 135,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.975,
+      -0.164
+     ],
+     "exec_disp": [
+      0.0064,
+      0.0043
+     ]
+    },
+    {
+     "key": "libero_90_78_t4_pre195",
+     "role": "pre",
+     "j": 195,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.99,
+      0.457
+     ],
+     "exec_disp": [
+      -0.0187,
+      -0.0054
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 5,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 54,
+   "type": "motion",
+   "sub": "not_carried",
+   "obs": [
+    {
+     "key": "libero_90_78_t5_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.767,
+      0.743
+     ],
+     "exec_disp": [
+      0.0537,
+      0.0049
+     ]
+    },
+    {
+     "key": "libero_90_78_t5_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.865,
+      0.099
+     ],
+     "exec_disp": [
+      0.0519,
+      -0.0227
+     ]
+    },
+    {
+     "key": "libero_90_78_t5_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.975,
+      -0.999
+     ],
+     "exec_disp": [
+      0.0004,
+      -0.0374
+     ]
+    },
+    {
+     "key": "libero_90_78_t5_post60",
+     "role": "post",
+     "j": 60,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.287,
+      0.653,
+      0.348,
+      0.857,
+      -0.068,
+      0.402
+     ],
+     "exec_disp": [
+      -0.0065,
+      0.0065
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 6,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 243,
+   "type": "motion",
+   "sub": "not_carried",
+   "obs": [
+    {
+     "key": "libero_90_78_t6_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.931,
+      0.594
+     ],
+     "exec_disp": [
+      0.0533,
+      0.0013
+     ]
+    },
+    {
+     "key": "libero_90_78_t6_pre170",
+     "role": "pre",
+     "j": 170,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.686,
+      0.664
+     ],
+     "exec_disp": [
+      0.0071,
+      0.0039
+     ]
+    },
+    {
+     "key": "libero_90_78_t6_pre230",
+     "role": "pre",
+     "j": 230,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.546,
+      -0.101
+     ],
+     "exec_disp": [
+      -0.0352,
+      -0.0007
+     ]
+    },
+    {
+     "key": "libero_90_78_t6_post250",
+     "role": "post",
+     "j": 250,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.996,
+      0.752,
+      -0.986,
+      -0.743,
+      -0.99,
+      -0.972
+     ],
+     "exec_disp": [
+      0.007,
+      0.0073
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 7,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 60,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_78_t7_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.784,
+      0.618
+     ],
+     "exec_disp": [
+      0.0348,
+      0.0044
+     ]
+    },
+    {
+     "key": "libero_90_78_t7_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.979,
+      -0.08
+     ],
+     "exec_disp": [
+      0.0598,
+      -0.0313
+     ]
+    },
+    {
+     "key": "libero_90_78_t7_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.973,
+      -0.679
+     ],
+     "exec_disp": [
+      0.0307,
+      -0.0327
+     ]
+    },
+    {
+     "key": "libero_90_78_t7_post65",
+     "role": "post",
+     "j": 65,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": "red_coffee_mug_1",
+     "exec_cos": [
+      -0.707,
+      0.939,
+      -0.652,
+      -0.016,
+      -0.898,
+      -0.6
+     ],
+     "exec_disp": [
+      0.0067,
+      0.0308
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 8,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 50,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_78_t8_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.963,
+      0.324
+     ],
+     "exec_disp": [
+      0.0532,
+      -0.0051
+     ]
+    },
+    {
+     "key": "libero_90_78_t8_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.948,
+      0.239
+     ],
+     "exec_disp": [
+      0.0612,
+      -0.0064
+     ]
+    },
+    {
+     "key": "libero_90_78_t8_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.919,
+      -0.033
+     ],
+     "exec_disp": [
+      0.0508,
+      -0.0098
+     ]
+    },
+    {
+     "key": "libero_90_78_t8_post55",
+     "role": "post",
+     "j": 55,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.381,
+      0.667,
+      0.447,
+      0.913,
+      0.058,
+      0.504
+     ],
+     "exec_disp": [
+      -0.0111,
+      0.008
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 9,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 57,
+   "type": "motion",
+   "sub": "not_carried",
+   "obs": [
+    {
+     "key": "libero_90_78_t9_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.948,
+      0.596
+     ],
+     "exec_disp": [
+      0.0482,
+      -0.0042
+     ]
+    },
+    {
+     "key": "libero_90_78_t9_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.998,
+      0.017
+     ],
+     "exec_disp": [
+      0.0384,
+      -0.0199
+     ]
+    },
+    {
+     "key": "libero_90_78_t9_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.995,
+      -0.233
+     ],
+     "exec_disp": [
+      0.0208,
+      -0.0117
+     ]
+    },
+    {
+     "key": "libero_90_78_t9_post65",
+     "role": "post",
+     "j": 65,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": "desk_caddy_1_right_contain_region",
+     "exec_cos": [
+      0.35,
+      0.347,
+      0.431,
+      0.916,
+      0.075,
+      0.5
+     ],
+     "exec_disp": [
+      -0.0276,
+      0.0164
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 10,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 44,
+   "type": "motion",
+   "sub": "toward_target",
+   "obs": [
+    {
+     "key": "libero_90_78_t10_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.996,
+      0.156
+     ],
+     "exec_disp": [
+      0.0381,
+      -0.0123
+     ]
+    },
+    {
+     "key": "libero_90_78_t10_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.962,
+      0.49
+     ],
+     "exec_disp": [
+      0.0574,
+      0.0085
+     ]
+    },
+    {
+     "key": "libero_90_78_t10_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.955,
+      0.39
+     ],
+     "exec_disp": [
+      0.0686,
+      0.0098
+     ]
+    },
+    {
+     "key": "libero_90_78_t10_post50",
+     "role": "post",
+     "j": 50,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.895,
+      0.109,
+      -0.928,
+      -0.973,
+      -0.761,
+      -0.953
+     ],
+     "exec_disp": [
+      0.0168,
+      0.0042
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 11,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 79,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_78_t11_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.839,
+      0.713
+     ],
+     "exec_disp": [
+      0.038,
+      0.0085
+     ]
+    },
+    {
+     "key": "libero_90_78_t11_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.7,
+      0.413
+     ],
+     "exec_disp": [
+      0.0373,
+      0.0022
+     ]
+    },
+    {
+     "key": "libero_90_78_t11_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.826,
+      -0.864
+     ],
+     "exec_disp": [
+      -0.0086,
+      -0.0125
+     ]
+    },
+    {
+     "key": "libero_90_78_t11_post90",
+     "role": "post",
+     "j": 90,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.939,
+      -0.786,
+      0.91,
+      0.551,
+      0.99,
+      0.877
+     ],
+     "exec_disp": [
+      -0.0014,
+      -0.0029
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 12,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 58,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_78_t12_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.736,
+      0.694
+     ],
+     "exec_disp": [
+      0.0471,
+      0.007
+     ]
+    },
+    {
+     "key": "libero_90_78_t12_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.874,
+      -0.026
+     ],
+     "exec_disp": [
+      0.0361,
+      -0.0176
+     ]
+    },
+    {
+     "key": "libero_90_78_t12_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.955,
+      -0.923
+     ],
+     "exec_disp": [
+      -0.0159,
+      -0.0314
+     ]
+    },
+    {
+     "key": "libero_90_78_t12_post65",
+     "role": "post",
+     "j": 65,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.94,
+      0.837,
+      -0.912,
+      -0.354,
+      -0.998,
+      -0.883
+     ],
+     "exec_disp": [
+      0.0124,
+      0.0138
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 13,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 55,
+   "type": "motion",
+   "sub": "not_carried",
+   "obs": [
+    {
+     "key": "libero_90_78_t13_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.935,
+      0.508
+     ],
+     "exec_disp": [
+      0.0399,
+      0.0007
+     ]
+    },
+    {
+     "key": "libero_90_78_t13_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.929,
+      0.412
+     ],
+     "exec_disp": [
+      0.0588,
+      -0.001
+     ]
+    },
+    {
+     "key": "libero_90_78_t13_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.942,
+      0.154
+     ],
+     "exec_disp": [
+      0.049,
+      -0.0083
+     ]
+    },
+    {
+     "key": "libero_90_78_t13_post60",
+     "role": "post",
+     "j": 60,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": "desk_caddy_1_right_contain_region",
+     "exec_cos": [
+      0.53,
+      0.268,
+      0.606,
+      0.985,
+      0.265,
+      0.669
+     ],
+     "exec_disp": [
+      -0.0274,
+      0.0095
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 14,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 60,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_78_t14_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.941,
+      0.614
+     ],
+     "exec_disp": [
+      0.0269,
+      0.0027
+     ]
+    },
+    {
+     "key": "libero_90_78_t14_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.886,
+      0.556
+     ],
+     "exec_disp": [
+      0.0593,
+      0.0095
+     ]
+    },
+    {
+     "key": "libero_90_78_t14_pre20",
+     "role": "pre",
+     "j": 20,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.992,
+      -0.707
+     ],
+     "exec_disp": [
+      0.0142,
+      -0.0147
+     ]
+    },
+    {
+     "key": "libero_90_78_t14_post65",
+     "role": "post",
+     "j": 65,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.386,
+      -0.648,
+      -0.453,
+      -0.878,
+      -0.136,
+      -0.513
+     ],
+     "exec_disp": [
+      0.0039,
+      -0.0022
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 15,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 50,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_78_t15_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.776,
+      0.67
+     ],
+     "exec_disp": [
+      0.0418,
+      0.0062
+     ]
+    },
+    {
+     "key": "libero_90_78_t15_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.882,
+      0.414
+     ],
+     "exec_disp": [
+      0.0596,
+      -0.0074
+     ]
+    },
+    {
+     "key": "libero_90_78_t15_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.974,
+      -0.242
+     ],
+     "exec_disp": [
+      0.0339,
+      -0.0266
+     ]
+    },
+    {
+     "key": "libero_90_78_t15_post55",
+     "role": "post",
+     "j": 55,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": "desk_caddy_1_back_contain_region",
+     "exec_cos": [
+      0.943,
+      -0.562,
+      0.971,
+      0.876,
+      0.827,
+      0.988
+     ],
+     "exec_disp": [
+      -0.0225,
+      -0.0096
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 16,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 54,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_78_t16_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.918,
+      0.578
+     ],
+     "exec_disp": [
+      0.0411,
+      0.0031
+     ]
+    },
+    {
+     "key": "libero_90_78_t16_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.963,
+      0.149
+     ],
+     "exec_disp": [
+      0.0612,
+      -0.0136
+     ]
+    },
+    {
+     "key": "libero_90_78_t16_pre15",
+     "role": "pre",
+     "j": 15,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.972,
+      -0.395
+     ],
+     "exec_disp": [
+      0.0254,
+      -0.0146
+     ]
+    },
+    {
+     "key": "libero_90_78_t16_post60",
+     "role": "post",
+     "j": 60,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      -0.315,
+      0.996,
+      -0.253,
+      0.376,
+      -0.605,
+      -0.195
+     ],
+     "exec_disp": [
+      -0.0023,
+      0.0108
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 17,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 46,
+   "type": "motion",
+   "sub": "toward_target",
+   "obs": [
+    {
+     "key": "libero_90_78_t17_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.79,
+      0.613
+     ],
+     "exec_disp": [
+      0.0502,
+      0.0018
+     ]
+    },
+    {
+     "key": "libero_90_78_t17_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.924,
+      0.064
+     ],
+     "exec_disp": [
+      0.0469,
+      -0.0219
+     ]
+    },
+    {
+     "key": "libero_90_78_t17_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.901,
+      -0.202
+     ],
+     "exec_disp": [
+      0.0393,
+      -0.0269
+     ]
+    },
+    {
+     "key": "libero_90_78_t17_post55",
+     "role": "post",
+     "j": 55,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": "desk_caddy_1_left_contain_region",
+     "exec_cos": [
+      0.923,
+      -0.862,
+      0.892,
+      0.39,
+      0.999,
+      0.86
+     ],
+     "exec_disp": [
+      -0.0122,
+      -0.017
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 18,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 54,
+   "type": "wrong_goal",
+   "sub": "carried_elsewhere",
+   "obs": [
+    {
+     "key": "libero_90_78_t18_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.964,
+      0.431
+     ],
+     "exec_disp": [
+      0.0494,
+      -0.0032
+     ]
+    },
+    {
+     "key": "libero_90_78_t18_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.922,
+      0.389
+     ],
+     "exec_disp": [
+      0.0442,
+      -0.0003
+     ]
+    },
+    {
+     "key": "libero_90_78_t18_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.844,
+      0.346
+     ],
+     "exec_disp": [
+      0.0508,
+      0.004
+     ]
+    },
+    {
+     "key": "libero_90_78_t18_post60",
+     "role": "post",
+     "j": 60,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": "red_coffee_mug_1",
+     "exec_cos": [
+      -0.998,
+      0.567,
+      -0.991,
+      -0.7,
+      -0.973,
+      -0.979
+     ],
+     "exec_disp": [
+      0.0253,
+      0.0208
+     ]
+    }
+   ]
+  },
+  {
+   "trial": 19,
+   "success": false,
+   "bound": "black_book_1",
+   "bound_step": 53,
+   "type": "motion",
+   "sub": "not_carried",
+   "obs": [
+    {
+     "key": "libero_90_78_t19_pre0",
+     "role": "pre",
+     "j": 0,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.874,
+      0.638
+     ],
+     "exec_disp": [
+      0.0421,
+      0.0038
+     ]
+    },
+    {
+     "key": "libero_90_78_t19_pre5",
+     "role": "pre",
+     "j": 5,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.865,
+      0.585
+     ],
+     "exec_disp": [
+      0.0557,
+      0.004
+     ]
+    },
+    {
+     "key": "libero_90_78_t19_pre10",
+     "role": "pre",
+     "j": 10,
+     "cand": [
+      "black_book_1",
+      "red_coffee_mug_1"
+     ],
+     "named": [
+      "black_book_1"
+     ],
+     "exec_pointed": "black_book_1",
+     "exec_cos": [
+      0.86,
+      0.239
+     ],
+     "exec_disp": [
+      0.0356,
+      -0.0066
+     ]
+    },
+    {
+     "key": "libero_90_78_t19_post60",
+     "role": "post",
+     "j": 60,
+     "cand": [
+      "desk_caddy_1_front_contain_region",
+      "red_coffee_mug_1",
+      "desk_caddy_1",
+      "desk_caddy_1_right_contain_region",
+      "desk_caddy_1_left_contain_region",
+      "desk_caddy_1_back_contain_region"
+     ],
+     "named": [
+      "desk_caddy_1_front_contain_region"
+     ],
+     "exec_pointed": null,
+     "exec_cos": [
+      0.38,
+      -0.839,
+      0.291,
+      -0.371,
+      0.574,
+      0.207
+     ],
+     "exec_disp": [
+      0.0051,
+      -0.012
+     ]
+    }
+   ]
+  }
+ ]
+}
