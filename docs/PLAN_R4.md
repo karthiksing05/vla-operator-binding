@@ -166,3 +166,60 @@ most 4 hypotheses. GO = the guided policy closes >= 0.5 of the zs -> ceiling gap
 
 Prep: CPU minutes. Geometry: about 1,100 observations, one EGL job per shard. Tuning: 250 observations x 28 arms of 12 chunks
 plus flow losses, 4 A40 shards. Test: about 830 observations x 5 arms.
+
+## 8. Result, stage 0 (2026-10-25; ledger `rb4_stage0`; results/rb4/stage0.json)
+
+Tuning pool: 250 observations. Unsteered, the named object is hit in 0.715 of chunks and the counterfactual target Y in 0.102.
+The noise floor (u21 - u11 at Y) is +0.005, so the movability bar is g_cf >= 0.130. The manifold bar is a flow-loss outlier rise
+of at most 0.10 over u21.
+
+| config (target / schedule / w) | g_cf [95% CI] | g_named | FM-outlier rise (FM ratio) | still rise cf | movable | on-manifold |
+|---|---|---|---|---|---|---|
+| d1 / early / 0.25 | +0.017 [+0.008, +0.027] | +0.004 | +0.053 (1.01) | +0.022 | no | yes |
+| d1 / early / 0.5 | +0.054 [+0.031, +0.076] | +0.005 | +0.069 (1.06) | +0.043 | no | yes |
+| d1 / early / 1 | +0.158 [+0.098, +0.223] | +0.013 | +0.169 (1.19) | +0.071 | yes | **no** |
+| d1 / all / 0.25 | +0.429 [+0.282, +0.571] | +0.089 | +0.327 (1.41) | +0.015 | yes | no |
+| d1 / all / 0.5 | +0.740 [+0.582, +0.876] | +0.153 | +0.653 (1.93) | -0.104 | yes | no |
+| d1 / all / 1 | +0.782 [+0.637, +0.904] | +0.181 | +0.798 (2.26) | -0.132 | yes | no |
+| dir / early / 0.25 | +0.022 [+0.012, +0.035] | +0.013 | +0.056 (1.02) | +0.020 | no | yes |
+| dir / early / 0.5 | +0.061 [+0.034, +0.095] | +0.026 | +0.067 (1.05) | +0.047 | no | yes |
+| dir / early / 1 | +0.169 [+0.091, +0.264] | +0.041 | +0.166 (1.19) | +0.106 | yes | **no** |
+| dir / all / 0.25 | +0.375 [+0.240, +0.508] | +0.077 | +0.294 (1.36) | +0.110 | yes | no |
+| dir / all / 0.5 | +0.658 [+0.518, +0.787] | +0.213 | +0.581 (1.79) | -0.007 | yes | no |
+| dir / all / 1 | +0.802 [+0.665, +0.918] | +0.257 | +0.699 (2.10) | -0.148 | yes | no |
+| naive post-hoc edit, d1 / dir (reference) | - | - | +0.860 / +0.775 (2.45 / 2.45) | - | - | - |
+
+The action-range check never binds: the |x| > 1 share rises by at most +0.005.
+
+**STAGE 0 FAILS.** No configuration is both movable and on-manifold. Every configuration that moves the chunk to Y by at least
+0.13 raises the flow-loss outlier share by 0.166 or more (bar 0.10). Every configuration within the manifold bar moves it by
+0.061 at most. No configuration was chosen, and no test observation was run. Stage 1 (H1-H4, including the goal-role anchor
+localisation) and stage 2 were not run.
+
+**Reading.**
+1. **The sampler can be steered, but only off the policy's manifold.** Guiding at every Euler step moves the chunk to an
+   arbitrary object in 0.38-0.80 of chunks. It even raises the named-object hit on the tuning pool by up to +0.26 (from 0.715).
+   The chunks it produces are ones the policy itself rates as unlikely: the flow-loss outlier share rises by 0.29-0.80 over its
+   own samples, approaching the naive post-hoc edit (+0.78 / +0.86).
+2. **With guidance only while the chunk forms (the first 5 steps), the policy pulls back.** At w 1, 0.16-0.17 of the movement
+   survives. That passes the movability bar but already costs +0.17 outliers. At w <= 0.5 almost nothing survives (+0.02-0.06).
+   So the frozen policy's last denoising steps return the chunk to its own scene-bound choice.
+3. **Trade-off, not a dead end of the anchor.** The bar sits between the two regimes: the nearest misses are d1/early/1 and
+   dir/early/1, with g_cf +0.16-0.17 at an outlier rise of +0.17. This matches the atlas: the binding is a scene-wide code (R3c),
+   and an action whose target the policy does not bind is out of distribution for the action expert. The vision anchor was
+   never tested here: stage 0 uses oracle poses only.
+4. **Not tested** (it would mean reopening the grid after a failed gate): w between 0.5 and 1 on `early`, schedules between
+   early and all, a looser flow-loss bar, and guidance through the network (backprop / DPS) instead of the action map.
+
+**Disclosures.**
+- The rollout recordings were deleted, so depth is rendered at each episode's start state (section 1). The calibration bound was
+  relaxed from 3 to 5 cm before any policy output (libero_90:40 3.4 cm, :1 3.6 cm; all 23 tasks 1.7-3.6 cm). Depth matters only
+  for the vision arm, which was never run.
+- The flow-loss outlier reference is u21 (a second own-sample seed), and the outlier threshold is u11's mean + 2 sd. Even the
+  weakest guidance (early, w 0.25) gives +0.053, so part of the rise is a small systematic shift.
+- The operator was fitted on approach frames only; it was not tested on the goal role.
+- During development one placeholder `python3 -` was issued on the login node. The harness blocked it before it ran. All
+  computation ran on compute nodes.
+- The probe label collides with PLAN_R section 7's "R4" (composition-space comparison). This probe's rows are tagged `R4-bind`
+  (prefix rb4).
+- Audits after the read: audit_numbers 0 discrepancies over 2,064 checks; audit_coverage 0 uncovered numerals.
