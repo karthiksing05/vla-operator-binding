@@ -957,8 +957,49 @@ def read(record):
                                 backbone=dict(models={m: MODELS[m]["cfg"] for m in MODELS}), artifacts=[os.path.join(OUT, "read.json")]))
 
 
+def diag():
+    """Print the descriptive parts of read.json and the argmax-token histogram of the D2 maps (a check for attention sinks)."""
+    r = jload(os.path.join(OUT, "read.json"))
+    for m in MODELS:
+        print(f"== {m}")
+        for s in ("part", "instr", "own", "null"):
+            x = r["d1"][m]["sources"][s]
+            print(f"D1 {s}: p2_centre {x['p2_centre']}; per_object " + json.dumps(
+                {c: {k: (round(v, 3) if isinstance(v, float) else v) for k, v in d.items()} for c, d in x["per_object"].items()}))
+        for g, x in r["d2"][m].items():
+            if g in ("gates", "coverage"):
+                print(f"D2 {g}: {x}")
+                continue
+            print(f"D2 {g} n {x['n_obs']}: " + json.dumps({f: (None if x[f]["mean"] is None else [round(x[f]["mean"], 3),
+                                                              round(x[f]["lo"], 3), round(x[f]["hi"], 3), x[f]["n"]])
+                                                          for f in x if isinstance(x[f], dict) and "mean" in x[f]}))
+            print(f"   att_hit_by_layer {[None if v is None else round(v, 3) for v in x['att_hit_by_layer']]}")
+            print(f"   rev_hit_by_layer {[None if v is None else round(v, 3) for v in x['rev_hit_by_layer']]}")
+        print("D3 what " + json.dumps({k: {q: v for q, v in d.items() if q != "types_eligible"} for k, d in r["d3"][m]["what"].items()},
+                                      default=float))
+        print("D3 eligible types " + json.dumps(r["d3"][m]["what"]["sig"]["types_eligible"]))
+        hist = {}
+        for f in sorted(glob.glob(os.path.join(OUT, f"dev_{m}", "*.npz")))[:400]:
+            d = np.load(f, allow_pickle=True)
+            for rk in ("O",):
+                W = d[f"w2i_{rk}"]
+                if W.sum() == 0:
+                    continue
+                for l in (0, 1, 2, 8, 14):
+                    hist.setdefault(l, []).append(int(np.argmax(W[l])))
+                hist.setdefault("mass_img", []).append(float(W[list(D2_LAYERS)].sum(1).mean()))
+        for l, v in hist.items():
+            if l == "mass_img":
+                print(f"D2 check: word->agentview total attention mass (layers 0-2 mean) {np.mean(v):.4f}")
+            else:
+                u, c = np.unique(v, return_counts=True)
+                o = np.argsort(-c)[:5]
+                print(f"D2 check layer {l}: top argmax tokens {list(zip(u[o].tolist(), c[o].tolist()))} of {len(v)}")
+
+
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--diag", action="store_true")
     for s in ("index", "poses", "select", "gpu", "protos", "dev", "sanity", "read"):
         ap.add_argument(f"--{s}", action="store_true")
     ap.add_argument("--model", default="l90c")
@@ -981,6 +1022,8 @@ def main():
         sanity()
     if a.read:
         read(a.record)
+    if a.diag:
+        diag()
 
 
 if __name__ == "__main__":
