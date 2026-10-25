@@ -45,7 +45,23 @@ into the scene's image tokens with the wrong filler, and the action expert reads
   the remaining gap is motion on new parts (FM).
 - Routed by instruction text it damages a same-text training cell (-0.075); keyed by scene it does not (M1, L4).
 
-## 4. Open choice (for the user)
+## 4. One explanation for every failure
+
+The policy does not hold object and goal as separable pieces. It reads the instruction holistically against the scene and
+writes the result into a scene-wide code in the deep image tokens (layers 10-17; R3c: whole-image splice +0.44 of the full
+prompt's +0.50, region splice -0.005). Each repair fails for a consequence of this:
+- **no local handle:** attention steering (R3b) and region splicing (R3c) are inert;
+- **no correct option inside the frozen model:** the named object is rarely a null mode (R2a) and guidance scales the wrong
+  binding (R1);
+- **no transferable part:** tokens fitted on training demos capture those demos, not the part (R2, R2c, L4);
+- **no own correct state to borrow:** wrong-object failures occur exactly where no training cell binds that object in that
+  scene (0 / 163, R3c).
+
+The one-demo token works because it is fitted on the target task: it supplies the scene-specific binding directly. That is
+demonstrated adaptation, not composition.
+
+## 5. Open choice (for the user)
 
 The demo-free recovery claim of Plan R is not supported on this policy. Candidate papers: (a) this atlas plus the one-demo
-token as the cheap fix, or (b) the atlas as a negative result on demo-free compositional recovery.
+token as the cheap fix; (b) the atlas as a negative result on demo-free compositional recovery; (c) change training so that
+binding becomes local, then retest demo-free composition (tens of A40-h).
