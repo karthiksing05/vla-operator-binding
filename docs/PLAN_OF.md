@@ -139,3 +139,121 @@ segmentation).
 
 Index and select: CPU, minutes. Poses: 1 EGL job. D1 GPU: about 1,000 frames x about 12 s, 4 shards per model. Dev: 1,677
 observations x about 3 s per model, 2 shards. Read: CPU.
+
+## 5. Result (2026-10-25; ledger `of_read` tags d1 / d2 / d3, results/of/read.json; pre-registration m3_prereg `pof_frame`)
+
+**Data.**
+- D1 frames: pi05_l90c 547 frames on 54 training tasks (12 object types in >= 2 scenes); pi05_libero 357 frames on 33 tasks
+  (4 types: alphabet soup, cream cheese, black bowl, porcelain mug; 345 frames after the control-body filter).
+- Demo images match the simulator render at the poses (corr 0.98, the expected 180-degree flip on 100% of frames).
+- Dev: 1,677 R2a observations, 1,648 with a word parse, 1,461 / 1,284 with a prototype of the named type (l90c / libero).
+- **Sanity:** P2's transfer recomputed by this code from P2's files = its ledger value exactly (0.0257 l90c, 0.0710 libero).
+
+### 5.1 D1: transfer T (mean over types of leave-scene-out corr2), task-cluster 95% CI
+
+| model | source | world | object | control | object - world | object - control |
+|---|---|---|---|---|---|---|
+| l90c | part | -0.30 [-0.55, -0.02] | 0.23 [-0.01, 0.72] | -0.05 | +0.53 | +0.28 |
+| l90c | instr | -0.26 | 0.41 [0.18, 0.79] | 0.03 | +0.67 | +0.37 |
+| l90c | own samples | -0.26 | 0.38 | 0.03 | +0.65 | +0.36 |
+| l90c | null (control prompt) | -0.23 | 0.18 | 0.12 | +0.41 | +0.06 |
+| libero | part | -0.07 [-0.33, 0.27] | 0.62 [0.54, 0.77] | -0.03 [-0.33, 0.29] | +0.69 | +0.64 |
+| libero | instr | -0.07 | 0.63 [0.56, 0.80] | -0.05 | +0.71 | +0.69 |
+| libero | own samples | -0.08 | 0.63 | -0.05 | +0.71 | +0.68 |
+| libero | null (control prompt) | -0.08 | 0.62 | -0.01 | +0.69 | +0.63 |
+
+**Verdict (Holm over H1-H4).**
+- H1 (l90c part) FAILS: 0.23 < 0.5.
+- H2 (l90c instr) FAILS: 0.41 < 0.5.
+- H3 (libero part) PASSES.
+- H4 (libero instr) PASSES.
+- By the pre-registered rule, route 1 is "alive".
+
+**Qualifiers (descriptive, from the same read):**
+1. **The part prompt adds nothing on pi05_libero.** The null prompt's mode transfers as well (0.62 vs 0.62). The object-frame
+   regularity is the scene's default approach on its training tasks, not something the part prompt carries. On pi05_l90c the part
+   prompt sits below the full instruction (0.23 vs 0.41), and null is 0.18.
+2. **The yaw adds nothing.** object = object_trans to 3 decimals everywhere. The regularity is "head for the object's centre",
+   which is what R2a's pointing readout scores.
+3. **P2's ~0 came from its data, not from its coordinates.** P2's own target (displacement vs object - hand, no fit) pooled over
+   these approach frames gives 0.66-0.79 (l90c part 0.77, instr 0.79; libero 0.66-0.68). P2 used first frames, where the hand
+   sits at a fixed home pose and the objects move a few cm.
+4. **Per type, l90c splits into two groups.**
+   - Most types transfer (instr: cream cheese 0.84, black bowl 0.83, chocolate pudding 0.89, milk 0.86, frypan 0.75, butter 0.70,
+     wine bottle 0.70).
+   - Three 2-scene types are strongly negative under the leave-scene-out fit (white bowl -0.84, orange juice -0.74, alphabet
+     soup -0.27). Their aim fitted on the single other scene does not carry over. These pull the l90c mean under 0.5.
+   - libero: black bowl 0.82, alphabet soup 0.68, cream cheese 0.63, porcelain mug 0.41.
+
+### 5.2 D2: word -> image attention as an anchor
+
+- **Pre-registered gate FAILS on both models.** The argmax hit of the layer-{0,1,2} mean map is 0.000 on successes and on
+  wrong-object episodes (chance 0.027-0.038). The cause is an attention sink: at layer 0 every one of 400 checked observations
+  puts its argmax on the same agentview token (193). The layer mean inherits it. Words send only 7% of their attention to the
+  agentview image at these layers.
+- **Descriptive, per layer (l90c argmax hit, success vs wrong-object episodes):**
+
+| layer | 3 | 5 | 7 | 8 | 10 | 12 |
+|---|---|---|---|---|---|---|
+| success | 0.65 | 0.88 | 0.89 | 0.88 | 0.80 | 0.85 |
+| wrong object | 0.25 | 0.46 | 0.22 | 0.34 | 0.33 | 0.25 |
+
+- In the middle layers, the object words do localise the named object on successes (chance 0.03). On wrong-object episodes they
+  localise it 2-4x less often.
+- pi05_libero shows the same pattern on its proxy labels (layer 8: 0.85 on own-hit vs 0.58 on own-wrong observations).
+- Goal words post-grasp: layer 8 0.75 (success) vs 0.46 (wrong goal).
+- So for the word -> patch attention, **the misbinding is not downstream of grounding.** Where zs takes the wrong object, the
+  object words already attend away from it.
+
+### 5.3 D3: what / where in the vision tower, and the vision anchor
+
+| model | features | leave-scene-out identity acc [CI] | chance | near / far | same-vs-diff AUC | position R^2 from features | gate |
+|---|---|---|---|---|---|---|---|
+| l90c | SigLIP | 0.795 [0.754, 0.834] | 0.039 | 0.85 / 0.74 | 0.81 | 0.72 | what FAILS (< 0.8, narrowly); not stable (0.106 > 0.10) |
+| l90c | VLM L0 / L2 (null prompt) | 0.793 / 0.796 | 0.039 | stable | 0.80 | 0.63-0.65 | what fails narrowly |
+| libero | SigLIP | 0.646 [0.579, 0.713] | 0.049 | 0.68 / 0.61 (stable) | 0.70 | 0.51 | what FAILS |
+
+- The pre-registered dissociation (what gate AND stable) FAILS on both models.
+- Identity is 13-20x chance and drops by 0.08-0.11 when the object sits far from its usual image position. The features also
+  carry position (R^2 0.5-0.7).
+- **Vision anchor** (argmax of the per-token cosine to the named type's training prototype; oracle region hit):
+
+| model | labels | success | wrong | chance | gate |
+|---|---|---|---|---|---|
+| l90c | zs episode types | 0.68 [0.49, 0.87] | 0.62 [0.10, 0.96] (55 ep, 7 tasks) | 0.038 | **PASSES** |
+| libero | own-sample proxy | 0.66 | 0.67 | 0.032 | **PASSES** |
+
+- Candidate-level (the best-matching candidate region is the named one), l90c: 0.68 / 0.66 vs chance 0.27 / 0.35.
+- The wrong-object CI is wide (7 tasks). The goal role is too sparse to read (15 wrong-goal episodes with a target prototype).
+
+### 5.4 Reading
+
+1. **An object-pose-parameterised approach exists inside the frozen policies, on their training tasks.** It is "head for the
+   named object's centre" (pooled r 0.66-0.79; leave-scene-out 0.41-0.63). It does not live in the part prompt: pi05_libero's
+   null mode carries it as well, and pi05_l90c's part prompt carries less of it than the instruction. Route 1, read as "part
+   prompts carry object-frame prototypes", is not supported. Read as "the policy's approach is a skill parameterised by the
+   object's pose", it is supported, with the pose supplied from outside.
+2. **The vision tower is a usable anchor and it survives the misbinding.** SigLIP prototypes from training scenes find the named
+   object in dev scenes at 0.62-0.68, 16-20x chance, and as often on zs wrong-object episodes as on successes.
+3. **The binding error sits between the words and the image.** The object words' attention reaches the named object at 0.8-0.9 on
+   successes and 0.2-0.46 on wrong-object episodes.
+4. **Together:** "what" is readable from vision (not fully position-invariant: 0.80 / 0.65 identity, a 0.1 drop far from the
+   usual position), and "where" is readable from the anchor's argmax. The language-to-patch link is what fails. A demo-free repair
+   would have to take the object from the vision anchor (keyed by the named type's prototype) rather than from the policy's own
+   word grounding, and drive the pose-parameterised approach with it. This probe does not test that offline or closed loop.
+
+**Disclosures.**
+- The read was run once unrecorded to check for crashes and printed every number. A diagnostic print followed (the per-type
+  tables and the argmax-token histogram that showed the sink). The recorded read is the same code (only `--diag` was added),
+  so its numbers are identical. The verdicts above are the pre-registered ones. The per-layer D2 table and every "qualifier" are
+  descriptive, chosen after seeing the primary result.
+- The pre-registered D2 layer set {0, 1, 2} was a poor choice (a layer-0 sink). It was not changed after the read.
+- The index was rerun once before the poses were used (a first-step put / pick up / stack filter), disclosed in the
+  pre-registration.
+- The D1 bootstrap holds the leave-scene-out predictions fixed (it does not refit per resample). Each frame takes its own best
+  level (P2's convention); every frame gets the same selection.
+- pi05_libero has no zs episodes on these tasks. Its D2 / D3 groups use its own 12 samples (R2a's readout plurality) as an
+  observation-level proxy, on pi05_l90c's rollout images.
+- The prototypes for the vision anchor use every training frame (not leave-scene-out). The dev scenes include familiar LIBERO-90
+  scenes.
+- Robot geoms are hidden in the segmentation, so an object occluded by the arm still has its full region.

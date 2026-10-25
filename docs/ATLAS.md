@@ -16,6 +16,8 @@ The sealed third is untouched. Every number below is ledger-backed in the commit
 | the right object is usually not among the frozen policy's own options | named object is a null-field mode in 0.534 of pre-grasp observations, 0.19 on wrong-object episodes | R2a, fd474579 |
 | binding leaves the word positions by layer 2 and lives in the image tokens | restoring word positions recovers at most 0.25 from layer 2 on | L0b, docs/PLAN_LANG.md |
 | action-space part modes are not readable | attribution about 1.8x, transfer about 0, R0 at most 0.60 | P2/P3, 5e65bc83 |
+| the approach IS object-frame on training tasks, but the part prompt does not carry it | leave-scene-out object-frame transfer pi05_libero 0.62 (world -0.07, control -0.03; pre-reg GO) but null prompt also 0.62; pi05_l90c part 0.23 / instr 0.41 (fail); yaw adds nothing; P2's ~0 was its first-frame data (its own statistic pooled on approach frames 0.66-0.79) | OF D1, docs/PLAN_OF.md |
+| the vision tower finds the named object even where zs misbinds; the words do not | SigLIP prototype anchor hit 0.62 on wrong-object vs 0.68 on successes (chance 0.04; gate passes); object-word attention (layers 3-12) 0.22-0.46 vs 0.65-0.89; identity leave-scene-out 0.80 / 0.65 (gate 0.8 fails narrowly), drops 0.1 far from the usual position | OF D2/D3, docs/PLAN_OF.md |
 
 **Reading.** The policy reads the instruction holistically, keyed on the scene. By layer 2 the instruction has been written
 into the scene's image tokens with the wrong filler, and the action expert reads the misbinding from there.
