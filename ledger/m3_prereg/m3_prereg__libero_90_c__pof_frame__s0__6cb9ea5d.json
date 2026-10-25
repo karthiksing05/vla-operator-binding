@@ -1,0 +1,93 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: probe OF (D1 object-frame transfer H1-H4, D2 attention anchor gate, D3 vision what/where + anchor)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "eva.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4231486",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "6cb9ea5d0fd622c622893db4dbd62ad791158c23",
+  "short": "6cb9ea5d"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": "D1 l90c part (obj:named spliced mode): T_obj >= 0.5, T_obj - T_world >= 0.3, T_obj > T_ctrl, Holm p",
+  "H2": "D1 l90c instr mode: as H1",
+  "H3": "D1 libero part: as H1",
+  "H4": "D1 libero instr: as H1",
+  "d1_statistic": "leave-scene-out 3-parameter approach model per object type, P2 corr2 pooled per type, mean over types (>= 5 frames, >= 2 scenes); each frame at its own best level of {0.1, 0.3, 0.55} as P2; own samples, part variants, alt instructions, null, object_trans and P2-centre descriptive",
+  "d2_gate": "word->agentview attention, mean heads x role word rows x layers {0,1,2}, argmax in the oracle region; hit(wrong) >= hit(success) - 0.10 and >= 2 x chance; l90c zs episode types (episode means, R2a ci_rate), libero own-sample plurality proxy (observation unit); object role primary, goal role reported likewise",
+  "d3_gates": "SigLIP region-pooled leave-scene-out nearest-prototype accuracy >= 0.8 and >= 3 x chance; stable if |acc far - acc near| <= 0.10 (median centroid shift); dissociation = both; vision anchor = argmax per-token cosine to the named type prototype, gate as D2",
+  "disclosure": "seen before this row: P2/P3, R2a, R3b, R3c, L0/L0b/L1 published results (docs/ATLAS.md); the index / poses / select logs (task lists, candidate and kept frame counts, object types per scene; no model output); a 2-frame GPU smoke per model (results/of/scratch: runtime, conditions, image-vs-sim-render alignment correlations; no endpoint, transfer, attention or feature statistic computed).  The index was rerun once before the poses were used, adding a filter that the instruction's FIRST step is put / pick up / stack (two-step tasks starting with turn on / open approach another body before the named object).  D3 was added by the user (via the coordinator) before this row was written and is pre-registered in it.  P2's transfer definition was read from experiments/pp2_dev.py; the D1 statistic generalises it (docs/PLAN_OF.md section 0).  Hypothesis family: Holm over H1-H4 (D1 only); D2 / D3 are estimate gates.",
+  "family": "Holm over H1-H4 at 0.05; p = max of the two one-sided task-cluster bootstrap p (obj <= world, obj <= ctrl)",
+  "files_sha256": {
+   "doc": "e91c4968d9513bfd5f62e943584db558ca04353af48b733395342d9f34ada9e8",
+   "index_l90c": "3219ea450536e203fcad110169cc5a03a029c57dc2e054731022c069b92ef14e",
+   "index_libero": "c75968667b652d4d8a6d4b2847b0cfe0e5c9d261640a430f0b7b077cfb8adc9c",
+   "script": "ff2db2e70fc6e7971dd74c9a45f58093c8e2d733ff36c4a8d0dd4dc5ff6114bf",
+   "sel_l90c": "6a5db6e5fa49147fdb48c2c33a476249f25ac120a89c655fc5b93db0d141eb99",
+   "sel_libero": "e01c1f73c9217ddc2a77cec92c239b7febc1f5af5d8d1b170db6e08a9b8fb3c0"
+  },
+  "n": {
+   "l90c": {
+    "frames": 547,
+    "multi_scene_types": {
+     "akita_black_bowl": 5,
+     "alphabet_soup": 2,
+     "butter": 2,
+     "chefmate_8_frypan": 2,
+     "chocolate_pudding": 3,
+     "cream_cheese": 4,
+     "milk": 2,
+     "orange_juice": 2,
+     "porcelain_mug": 2,
+     "red_coffee_mug": 2,
+     "white_bowl": 2,
+     "wine_bottle": 2
+    },
+    "tasks": 54
+   },
+   "libero": {
+    "frames": 357,
+    "multi_scene_types": {
+     "akita_black_bowl": 3,
+     "alphabet_soup": 3,
+     "cream_cheese": 3,
+     "porcelain_mug": 2
+    },
+    "tasks": 33
+   }
+  },
+  "route1": "alive if H1 or H3; instruction-level only if only H2/H4; dead otherwise",
+  "written_before": "any D1 / D2 / D3 statistic, any D1 frame or dev observation run beyond the 2-frame smoke"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pof_frame__s0__6cb9ea5d",
+ "schema": 1,
+ "script": "experiments/prereg/pof_frame.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-25T15:58:43+00:00",
+ "stream": null,
+ "tag": "pof_frame"
+}
