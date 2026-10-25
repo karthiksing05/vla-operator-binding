@@ -129,3 +129,15 @@ reusable at all.
   Our gate is task success of the training tasks, which LIBERO provides.
 - **Dropped or corrected:** LatentSkill is an LLM-agent paper. TTT-VLA retrains pi0.5. The SAE "hooking costs success"
   finding holds for OpenVLA, not pi0.5.
+
+## 9. Verdicts R1, R2a, R2 (2026-10-24)
+
+| probe | commit | result |
+|---|---|---|
+| R1 CAG-VA (training-free) | fe79413a | does not repair recombinations: w* 1.5 gives 173 vs zs 180 of 300; no w beats zs; damage -0.06 on training cells. The empty instruction completes a demonstrated task in 0.47 of episodes (vision shortcut real), yet only 38/400 zs failures replay one: zs mis-binds, it does not replay |
+| R2a null-field modes | fd474579 | the named object is a null mode in 0.53 of pre-grasp observations (0.19 on zs wrong-object episodes); ranking given coverage is fine (0.93). Selection from the frozen field cannot fix binding |
+| R2 training-demo role bank, oracle retrieval | 42822d08, 4eff744a | NO-GO: closes 0.21 of the zs -> demo-token gap (bar 0.5); bank 181 vs zs 170 vs ceiling 223 of 300; no damage. 9 of 16 tokens lower flow loss only on their own fit demos (held-out gain ~0): flow-matched part tokens memorise demo residual |
+
+**Consequence.** R as specified (flow-matched post-hoc part tokens in the K/V cache) is killed. The cheap fixes (language
+guidance, selection among frozen modes) are also closed, which strengthens the atlas half: the zs failure is a binding error
+inside the conditioning that neither the frozen field nor a guidance rule exposes.
