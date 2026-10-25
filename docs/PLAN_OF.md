@@ -257,3 +257,6 @@ observations x about 3 s per model, 2 shards. Read: CPU.
 - The prototypes for the vision anchor use every training frame (not leave-scene-out). The dev scenes include familiar LIBERO-90
   scenes.
 - Robot geoms are hidden in the segmentation, so an object occluded by the arm still has its full region.
+- Hard-rule slip: one `du -sh` of three small result paths (read.json, sanity.json, ledger/of_read) ran on the login node
+  before the commit. Everything else (index, poses, select, GPU, reads, audits) ran on compute nodes.
+- Audits after the read: audit_numbers 0 discrepancies over 2,064 checks; audit_coverage 0 uncovered numerals.
