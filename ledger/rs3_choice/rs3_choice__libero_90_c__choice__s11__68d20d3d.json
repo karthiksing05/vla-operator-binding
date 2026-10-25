@@ -1,0 +1,318 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/rs3/choice.json"
+ ],
+ "backbone": {
+  "checkpoint": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "config": "pi05_l90c"
+ },
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/rs3_steer.py --choose --record",
+ "config": {
+  "admit_named": -0.02,
+  "admit_still": 0.1,
+  "biases": [
+   2.0,
+   4.0,
+   8.0
+  ],
+  "cov_min": 0.05,
+  "disk_px": 24,
+  "gate_harm": -0.05,
+  "gate_rise": 0.2,
+  "layer_sets": {
+   "L0-1": [
+    0,
+    1
+   ],
+   "L0-3": [
+    0,
+    1,
+    2,
+    3
+   ],
+   "L0-7": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  "n_samp": 12,
+  "seeds": [
+   11,
+   21
+  ],
+  "sites": [
+   "word",
+   "expert",
+   "both"
+  ],
+  "tie": 0.005
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4228264",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "rs3_choice",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "68d20d3db343535be34d3ee75fc72c45f55f2563",
+  "short": "68d20d3d"
+ },
+ "keys": {},
+ "metrics": {
+  "any_admissible": true,
+  "chosen": "expert|L0-1|8",
+  "criterion": "g_cf",
+  "n_tune": 250,
+  "table": {
+   "both|L0-1|2": {
+    "admissible": true,
+    "g_cf": -0.0003333333333333333,
+    "g_named": 0.0003333333333333326,
+    "n": 250,
+    "n_cf": 250,
+    "still": -0.0003333333333333335
+   },
+   "both|L0-1|4": {
+    "admissible": true,
+    "g_cf": 0.0,
+    "g_named": 0.0013333333333333324,
+    "n": 250,
+    "n_cf": 250,
+    "still": -0.0006666666666666665
+   },
+   "both|L0-1|8": {
+    "admissible": true,
+    "g_cf": 0.004666666666666666,
+    "g_named": -0.002333333333333335,
+    "n": 250,
+    "n_cf": 250,
+    "still": -0.0013333333333333329
+   },
+   "both|L0-3|2": {
+    "admissible": true,
+    "g_cf": -0.0009999999999999996,
+    "g_named": 0.00033333333333333305,
+    "n": 250,
+    "n_cf": 250,
+    "still": -1.1102230246251566e-19
+   },
+   "both|L0-3|4": {
+    "admissible": true,
+    "g_cf": -0.0006666666666666663,
+    "g_named": -0.0010000000000000007,
+    "n": 250,
+    "n_cf": 250,
+    "still": 0.0003333333333333339
+   },
+   "both|L0-3|8": {
+    "admissible": false,
+    "g_cf": 0.006333333333333333,
+    "g_named": -0.021333333333333336,
+    "n": 250,
+    "n_cf": 250,
+    "still": 0.006
+   },
+   "both|L0-7|2": {
+    "admissible": true,
+    "g_cf": -0.0016666666666666663,
+    "g_named": 0.0,
+    "n": 250,
+    "n_cf": 250,
+    "still": -0.0006666666666666662
+   },
+   "both|L0-7|4": {
+    "admissible": true,
+    "g_cf": -0.004333333333333333,
+    "g_named": -0.006333333333333334,
+    "n": 250,
+    "n_cf": 250,
+    "still": 0.00033333333333333484
+   },
+   "both|L0-7|8": {
+    "admissible": false,
+    "g_cf": 0.005333333333333333,
+    "g_named": -0.052,
+    "n": 250,
+    "n_cf": 250,
+    "still": 0.01933333333333333
+   },
+   "expert|L0-1|2": {
+    "admissible": true,
+    "g_cf": -0.0003333333333333333,
+    "g_named": 0.00033333333333333305,
+    "n": 250,
+    "n_cf": 250,
+    "still": -0.0003333333333333333
+   },
+   "expert|L0-1|4": {
+    "admissible": true,
+    "g_cf": -0.0006666666666666663,
+    "g_named": 0.0013333333333333326,
+    "n": 250,
+    "n_cf": 250,
+    "still": -0.0013333333333333333
+   },
+   "expert|L0-1|8": {
+    "admissible": true,
+    "g_cf": 0.005666666666666666,
+    "g_named": -0.002333333333333335,
+    "n": 250,
+    "n_cf": 250,
+    "still": 0.0006666666666666672
+   },
+   "expert|L0-3|2": {
+    "admissible": true,
+    "g_cf": 0.0003333333333333333,
+    "g_named": 0.0,
+    "n": 250,
+    "n_cf": 250,
+    "still": 0.0
+   },
+   "expert|L0-3|4": {
+    "admissible": true,
+    "g_cf": 0.000666666666666667,
+    "g_named": 0.0016666666666666655,
+    "n": 250,
+    "n_cf": 250,
+    "still": -0.0009999999999999994
+   },
+   "expert|L0-3|8": {
+    "admissible": true,
+    "g_cf": 0.008,
+    "g_named": -0.0026666666666666687,
+    "n": 250,
+    "n_cf": 250,
+    "still": 0.005666666666666667
+   },
+   "expert|L0-7|2": {
+    "admissible": true,
+    "g_cf": -0.00033333333333333305,
+    "g_named": 0.0006666666666666663,
+    "n": 250,
+    "n_cf": 250,
+    "still": -0.0003333333333333328
+   },
+   "expert|L0-7|4": {
+    "admissible": true,
+    "g_cf": 0.00033333333333333354,
+    "g_named": 0.004333333333333332,
+    "n": 250,
+    "n_cf": 250,
+    "still": -0.0006666666666666652
+   },
+   "expert|L0-7|8": {
+    "admissible": true,
+    "g_cf": 0.006666666666666666,
+    "g_named": -0.0020000000000000013,
+    "n": 250,
+    "n_cf": 250,
+    "still": 0.012666666666666668
+   },
+   "word|L0-1|2": {
+    "admissible": true,
+    "g_cf": 0.0003333333333333333,
+    "g_named": 0.00033333333333333305,
+    "n": 250,
+    "n_cf": 250,
+    "still": 1.6653345369377348e-19
+   },
+   "word|L0-1|4": {
+    "admissible": true,
+    "g_cf": -0.0003333333333333333,
+    "g_named": 0.001333333333333333,
+    "n": 250,
+    "n_cf": 250,
+    "still": -0.00033333333333333316
+   },
+   "word|L0-1|8": {
+    "admissible": true,
+    "g_cf": -0.0023333333333333335,
+    "g_named": 0.0013333333333333335,
+    "n": 250,
+    "n_cf": 250,
+    "still": -0.0009999999999999998
+   },
+   "word|L0-3|2": {
+    "admissible": true,
+    "g_cf": -0.001333333333333333,
+    "g_named": 0.0006666666666666665,
+    "n": 250,
+    "n_cf": 250,
+    "still": -0.0003333333333333333
+   },
+   "word|L0-3|4": {
+    "admissible": true,
+    "g_cf": -0.0009999999999999998,
+    "g_named": -0.0020000000000000005,
+    "n": 250,
+    "n_cf": 250,
+    "still": 0.0006666666666666666
+   },
+   "word|L0-3|8": {
+    "admissible": false,
+    "g_cf": -0.002333333333333333,
+    "g_named": -0.021333333333333333,
+    "n": 250,
+    "n_cf": 250,
+    "still": 0.0010000000000000002
+   },
+   "word|L0-7|2": {
+    "admissible": true,
+    "g_cf": -0.001333333333333333,
+    "g_named": -0.0006666666666666663,
+    "n": 250,
+    "n_cf": 250,
+    "still": 2.7755575615628914e-19
+   },
+   "word|L0-7|4": {
+    "admissible": true,
+    "g_cf": -0.006,
+    "g_named": -0.010666666666666668,
+    "n": 250,
+    "n_cf": 250,
+    "still": 0.0020000000000000005
+   },
+   "word|L0-7|8": {
+    "admissible": false,
+    "g_cf": -0.0010000000000000002,
+    "g_named": -0.04633333333333334,
+    "n": 250,
+    "n_cf": 250,
+    "still": 0.0033333333333333344
+   }
+  },
+  "unsteered_named": 0.7153333333333334,
+  "unsteered_still": 0.1476666666666667
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "rs3_choice__libero_90_c__choice__s11__68d20d3d",
+ "schema": 1,
+ "script": "experiments/rs3_steer.py",
+ "seconds": null,
+ "seed": 11,
+ "source_commit": null,
+ "started": "2026-10-25T05:13:17+00:00",
+ "stream": null,
+ "tag": "choice"
+}
