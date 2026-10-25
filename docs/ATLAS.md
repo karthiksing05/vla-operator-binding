@@ -30,6 +30,7 @@ into the scene's image tokens with the wrong filler, and the action expert reads
 | bank of part tokens fitted on training demos, oracle retrieval | 181 vs zs 170 vs ceiling 223 (closure 0.21, bar 0.5); no damage | tokens fit their own demos; held-out gain about 0 (3 of 16 positive) | R2, 4eff744a |
 | same bank with a contrastive minimal-pair objective | held-out own-part gain positive for 3 of 16 | specificity only by damaging partners; the unit, not the loss, fails | R2c, 5bdaaf16 |
 | early-layer attention steering to the oracle object region | wrong-object hit 0.077 -> 0.077 (bar +0.20); counterfactual target +0.001 | the misbinding already lives in the image tokens; where early queries look does not rewrite it | R3b, 12a9c42e |
+| splice the model's own image K/V at the object's region from a same-scene training instruction (oracle source) | counterfactual hit -0.005 (bar +0.13); whole-image splice +0.44, full prompt +0.50 | binding is a distributed scene code in the deep image K/V, not local to the object's patches; no wrong-object case has a same-scene source (0 / 163) | R3c, docs/PLAN_R3C.md |
 | reuse role tokens from earlier tasks with no fit | 8 vs zs 13 of 260 | per-task parts are not reusable words | L4, 75deff22 |
 
 ## 3. What does repair it (one demo of the target task)

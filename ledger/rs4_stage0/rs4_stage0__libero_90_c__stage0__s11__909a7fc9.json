@@ -1,0 +1,221 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/rs4/stage0.json"
+ ],
+ "backbone": {
+  "checkpoint": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "config": "pi05_l90c"
+ },
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/rs4_splice.py --stage0 --record",
+ "config": {
+  "admit_named": -0.02,
+  "admit_still": 0.1,
+  "dilations": [
+   0,
+   1
+  ],
+  "floor_min": 0.03,
+  "gate_harm": -0.05,
+  "gate_rise": 0.2,
+  "layer_sets": [
+   "all",
+   "ge2",
+   "ge4"
+  ],
+  "move_bar": 0.1,
+  "n_samp": 12,
+  "seeds": [
+   11,
+   21
+  ],
+  "sources": "ORACLE: BDDL goal atoms of same-scene training cells (train_l90)",
+  "tie": 0.005
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4230705",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "rs4_stage0",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "909a7fc99ef06a2b9bcb6c0ea5681718e0f239c3",
+  "short": "909a7fc9"
+ },
+ "keys": {},
+ "metrics": {
+  "any_movable_region": false,
+  "chosen": null,
+  "floor_cf_u21_minus_u11": 0.025956284153005466,
+  "floor_named_u21_minus_u11": 0.007000000000000021,
+  "n_tune": 250,
+  "reference": {
+   "full_cf": {
+    "diff": 0.49590163934426224,
+    "hi": 0.7986111111111112,
+    "hi90": 0.7756486568986569,
+    "lo": 0.14283685064935064,
+    "lo90": 0.19333333333333336,
+    "n_pairs": 61,
+    "n_tasks": 6
+   },
+   "full_named": 4.5418214643756407e-17
+  },
+  "stage0_pass": false,
+  "table": {
+   "region|all|d0": {
+    "admissible": false,
+    "extent": "region",
+    "g_cf": -0.0054644808743169425,
+    "g_cf_ci": [
+     -0.017857142857142856,
+     0.0
+    ],
+    "g_named": -0.0012626262626262582,
+    "movable": false,
+    "n_cf": 61,
+    "n_named": 66,
+    "still": 0.0012626262626262716
+   },
+   "region|all|d1": {
+    "admissible": false,
+    "extent": "region",
+    "g_cf": -0.0054644808743169425,
+    "g_cf_ci": [
+     -0.017857142857142856,
+     0.0
+    ],
+    "g_named": 4.0371746350005693e-17,
+    "movable": false,
+    "n_cf": 61,
+    "n_named": 66,
+    "still": 0.0012626262626262716
+   },
+   "region|ge2|d0": {
+    "admissible": false,
+    "extent": "region",
+    "g_cf": -0.0054644808743169425,
+    "g_cf_ci": [
+     -0.017857142857142856,
+     0.0
+    ],
+    "g_named": -0.0012626262626262582,
+    "movable": false,
+    "n_cf": 61,
+    "n_named": 66,
+    "still": 0.0012626262626262716
+   },
+   "region|ge2|d1": {
+    "admissible": false,
+    "extent": "region",
+    "g_cf": -0.0054644808743169425,
+    "g_cf_ci": [
+     -0.017857142857142856,
+     0.0
+    ],
+    "g_named": 4.0371746350005693e-17,
+    "movable": false,
+    "n_cf": 61,
+    "n_named": 66,
+    "still": 0.0012626262626262716
+   },
+   "region|ge4|d0": {
+    "admissible": false,
+    "extent": "region",
+    "g_cf": -0.0054644808743169425,
+    "g_cf_ci": [
+     -0.017857142857142856,
+     0.0
+    ],
+    "g_named": -0.0012626262626262582,
+    "movable": false,
+    "n_cf": 61,
+    "n_named": 66,
+    "still": 0.0012626262626262716
+   },
+   "region|ge4|d1": {
+    "admissible": false,
+    "extent": "region",
+    "g_cf": -0.0054644808743169425,
+    "g_cf_ci": [
+     -0.017857142857142856,
+     0.0
+    ],
+    "g_named": 4.0371746350005693e-17,
+    "movable": false,
+    "n_cf": 61,
+    "n_named": 66,
+    "still": 0.0012626262626262716
+   },
+   "whole|all": {
+    "admissible": false,
+    "extent": "whole",
+    "g_cf": 0.44125683060109283,
+    "g_cf_ci": [
+     0.13825757575757577,
+     0.7763969017094015
+    ],
+    "g_named": -0.007575757575757589,
+    "movable": true,
+    "n_cf": 61,
+    "n_named": 66,
+    "still": 0.012626262626262643
+   },
+   "whole|ge2": {
+    "admissible": false,
+    "extent": "whole",
+    "g_cf": 0.44125683060109283,
+    "g_cf_ci": [
+     0.13825757575757577,
+     0.7763969017094015
+    ],
+    "g_named": -0.007575757575757589,
+    "movable": true,
+    "n_cf": 61,
+    "n_named": 66,
+    "still": 0.013888888888888916
+   },
+   "whole|ge4": {
+    "admissible": false,
+    "extent": "whole",
+    "g_cf": 0.44125683060109283,
+    "g_cf_ci": [
+     0.13825757575757577,
+     0.7763969017094015
+    ],
+    "g_named": -0.007575757575757589,
+    "movable": true,
+    "n_cf": 61,
+    "n_named": 66,
+    "still": 0.013888888888888916
+   }
+  },
+  "threshold": 0.13,
+  "unsteered_at_cf": 0.054644808743169404,
+  "unsteered_named": 0.7153333333333334
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "rs4_stage0__libero_90_c__stage0__s11__909a7fc9",
+ "schema": 1,
+ "script": "experiments/rs4_splice.py",
+ "seconds": null,
+ "seed": 11,
+ "source_commit": null,
+ "started": "2026-10-25T12:55:30+00:00",
+ "stream": null,
+ "tag": "stage0"
+}
