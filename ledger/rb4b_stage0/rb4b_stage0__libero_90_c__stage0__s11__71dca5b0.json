@@ -1,0 +1,469 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/rb4b/stage0.json",
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/rb4b/sources.json"
+ ],
+ "backbone": {
+  "checkpoint": "/coc/flash10/ksingara3/robot/checkpoints_l90c/pytorch/pi05_l90c_5000",
+  "config": "pi05_l90c"
+ },
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "experiments/rb4b_bind.py --stage0 --record",
+ "config": {
+  "admit_fm": 0.1,
+  "admit_named": -0.02,
+  "admit_oob": 0.05,
+  "admit_still": 0.1,
+  "dir_min": 0.03,
+  "early_steps": 5,
+  "floor_min": 0.03,
+  "fm_z": 2.0,
+  "gate_harm": -0.05,
+  "gate_rise": 0.2,
+  "guidance": "endpoint x0-projection: x0_hat += w (d* - D(x0_hat)) spread over the H xy steps; v = (x_t - x0_hat') / t",
+  "judge": "binding-source FM (R3c oracle rule) with own unguided binding references (ref11 mean + 2 sd; rise vs ref21); null-prompt fallback",
+  "k_fm": 4,
+  "move_bar": 0.1,
+  "n_samp": 12,
+  "oob": 1.0,
+  "operator": {
+   "level": 0.55,
+   "source": "instr"
+  },
+  "scheds": [
+   "early",
+   "all"
+  ],
+  "seeds": [
+   11,
+   21
+  ],
+  "t_fm": [
+   0.1,
+   0.2,
+   0.3,
+   0.5
+  ],
+  "targets": [
+   "d1",
+   "dir"
+  ],
+  "tie": 0.005,
+  "ws": [
+   0.25,
+   0.5,
+   1.0
+  ]
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4232198",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "rb4b_stage0",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "71dca5b0c63064c9667979035402865e2a79f4f2",
+  "short": "71dca5b0"
+ },
+ "keys": {},
+ "metrics": {
+  "any_movable": true,
+  "any_movable_on_manifold": false,
+  "chosen": null,
+  "coverage": {
+   "bind_cf": 32,
+   "bind_cf_episodes": 32,
+   "bind_cf_tasks": [
+    "libero_90:16",
+    "libero_90:32",
+    "libero_90:40"
+   ],
+   "bind_named": 66,
+   "cf_obs": 250,
+   "null_cf": 218,
+   "null_named": 184
+  },
+  "floor_cf_u21_minus_u11": 0.0053333333333333306,
+  "inversion": {
+   "instr_fm_check_max": 0.006553381681442261,
+   "max_roundtrip": 1.414160728518965e-07,
+   "n_checked": 8
+  },
+  "n_tune": 250,
+  "old_judge_stage0_pass": false,
+  "posthoc_reference": {
+   "d1": {
+    "fm_out_rise_new": 0.7626666666666665,
+    "fm_out_rise_null_all": 0.7529999999999999
+   },
+   "dir": {
+    "fm_out_rise_new": 0.6706666666666666,
+    "fm_out_rise_null_all": 0.661
+   }
+  },
+  "reference_hit_at_cf": {
+   "bind": 0.6223958333333333,
+   "n_bind": 32,
+   "n_null": 250,
+   "null": 0.2303333333333333,
+   "u11": 0.102
+  },
+  "stage0_pass": false,
+  "table": {
+   "d1|all|w0.25": {
+    "admissible": false,
+    "fm_out_rise_named_new": 0.2396666666666667,
+    "fm_out_rise_new": 0.39233333333333337,
+    "fm_out_rise_new_bind_only": 0.7682291666666666,
+    "fm_out_rise_new_ci": [
+     0.27566236681887374,
+     0.5332733356950347
+    ],
+    "fm_out_rise_new_null_only": 0.3371559633027522,
+    "fm_out_rise_null_all": 0.3526666666666667,
+    "fm_out_rise_old": 0.3266666666666666,
+    "fm_ratio_new": 1.5645309920934962,
+    "g_cf": 0.42866666666666675,
+    "g_cf_ci": [
+     0.28240740740740744,
+     0.5712523887371045
+    ],
+    "g_named": 0.0893333333333333,
+    "movable": true,
+    "n_cf": 250,
+    "on_manifold": false,
+    "oob_rise_cf": 0.0004952380952380955,
+    "still_cf": 0.014666666666666677,
+    "still_named": -0.010999999999999998,
+    "tasks_cf": 18
+   },
+   "d1|all|w0.5": {
+    "admissible": false,
+    "fm_out_rise_named_new": 0.323,
+    "fm_out_rise_new": 0.6156666666666666,
+    "fm_out_rise_new_bind_only": 0.7864583333333334,
+    "fm_out_rise_new_ci": [
+     0.4712740758282328,
+     0.7532939965626123
+    ],
+    "fm_out_rise_new_null_only": 0.5905963302752294,
+    "fm_out_rise_null_all": 0.6053333333333334,
+    "fm_out_rise_old": 0.6529999999999999,
+    "fm_ratio_new": 1.9066879586379701,
+    "g_cf": 0.74,
+    "g_cf_ci": [
+     0.5815537969209479,
+     0.8760075406974384
+    ],
+    "g_named": 0.15266666666666676,
+    "movable": true,
+    "n_cf": 250,
+    "on_manifold": false,
+    "oob_rise_cf": 0.0025190476190476213,
+    "still_cf": -0.10366666666666666,
+    "still_named": -0.05766666666666666,
+    "tasks_cf": 18
+   },
+   "d1|all|w1": {
+    "admissible": false,
+    "fm_out_rise_named_new": 0.3589999999999999,
+    "fm_out_rise_new": 0.7063333333333334,
+    "fm_out_rise_new_bind_only": 0.8229166666666667,
+    "fm_out_rise_new_ci": [
+     0.5667435076781521,
+     0.8354291384458524
+    ],
+    "fm_out_rise_new_null_only": 0.6892201834862385,
+    "fm_out_rise_null_all": 0.6956666666666667,
+    "fm_out_rise_old": 0.7980000000000002,
+    "fm_ratio_new": 2.140534399924819,
+    "g_cf": 0.782,
+    "g_cf_ci": [
+     0.6366174871698059,
+     0.9041161761634291
+    ],
+    "g_named": 0.18066666666666673,
+    "movable": true,
+    "n_cf": 250,
+    "on_manifold": false,
+    "oob_rise_cf": 0.0047,
+    "still_cf": -0.13166666666666665,
+    "still_named": -0.07966666666666665,
+    "tasks_cf": 18
+   },
+   "d1|early|w0.25": {
+    "admissible": false,
+    "fm_out_rise_named_new": 0.16,
+    "fm_out_rise_new": 0.25966666666666677,
+    "fm_out_rise_new_bind_only": 0.7864583333333333,
+    "fm_out_rise_new_ci": [
+     0.12384176587301586,
+     0.4187561917249416
+    ],
+    "fm_out_rise_new_null_only": 0.18233944954128445,
+    "fm_out_rise_null_all": 0.168,
+    "fm_out_rise_old": 0.05333333333333333,
+    "fm_ratio_new": 1.3590111584910762,
+    "g_cf": 0.01733333333333333,
+    "g_cf_ci": [
+     0.008432237224157953,
+     0.026869229423450266
+    ],
+    "g_named": 0.0036666666666667035,
+    "movable": false,
+    "n_cf": 250,
+    "on_manifold": false,
+    "oob_rise_cf": 0.00016190476190476274,
+    "still_cf": 0.021666666666666667,
+    "still_named": 0.008333333333333344,
+    "tasks_cf": 18
+   },
+   "d1|early|w0.5": {
+    "admissible": false,
+    "fm_out_rise_named_new": 0.16266666666666668,
+    "fm_out_rise_new": 0.26133333333333336,
+    "fm_out_rise_new_bind_only": 0.7734374999999999,
+    "fm_out_rise_new_ci": [
+     0.13000897129186598,
+     0.41798021388491063
+    ],
+    "fm_out_rise_new_null_only": 0.18616207951070335,
+    "fm_out_rise_null_all": 0.17333333333333334,
+    "fm_out_rise_old": 0.06933333333333333,
+    "fm_ratio_new": 1.366203165909266,
+    "g_cf": 0.053666666666666654,
+    "g_cf_ci": [
+     0.031352861502964444,
+     0.07610249435214046
+    ],
+    "g_named": 0.005333333333333339,
+    "movable": false,
+    "n_cf": 250,
+    "on_manifold": false,
+    "oob_rise_cf": 0.00019047619047619094,
+    "still_cf": 0.042666666666666686,
+    "still_named": 0.016333333333333342,
+    "tasks_cf": 18
+   },
+   "d1|early|w1": {
+    "admissible": false,
+    "fm_out_rise_named_new": 0.18266666666666664,
+    "fm_out_rise_new": 0.3096666666666667,
+    "fm_out_rise_new_bind_only": 0.7578125,
+    "fm_out_rise_new_ci": [
+     0.19082046147978646,
+     0.4527254132928475
+    ],
+    "fm_out_rise_new_null_only": 0.24388379204892965,
+    "fm_out_rise_null_all": 0.23299999999999998,
+    "fm_out_rise_old": 0.16866666666666666,
+    "fm_ratio_new": 1.4236788940988903,
+    "g_cf": 0.158,
+    "g_cf_ci": [
+     0.097965527035183,
+     0.22316397556069162
+    ],
+    "g_named": 0.013333333333333352,
+    "movable": true,
+    "n_cf": 250,
+    "on_manifold": false,
+    "oob_rise_cf": 0.0005238095238095236,
+    "still_cf": 0.07133333333333333,
+    "still_named": 0.025666666666666674,
+    "tasks_cf": 18
+   },
+   "dir|all|w0.25": {
+    "admissible": false,
+    "fm_out_rise_named_new": 0.22466666666666665,
+    "fm_out_rise_new": 0.334,
+    "fm_out_rise_new_bind_only": 0.734375,
+    "fm_out_rise_new_ci": [
+     0.21487522598140496,
+     0.4830357142857143
+    ],
+    "fm_out_rise_new_null_only": 0.2752293577981651,
+    "fm_out_rise_null_all": 0.2613333333333333,
+    "fm_out_rise_old": 0.294,
+    "fm_ratio_new": 1.4934830064295823,
+    "g_cf": 0.37500000000000006,
+    "g_cf_ci": [
+     0.24020681412407502,
+     0.5082703677478038
+    ],
+    "g_named": 0.077,
+    "movable": true,
+    "n_cf": 250,
+    "on_manifold": false,
+    "oob_rise_cf": 0.00020000000000000012,
+    "still_cf": 0.11033333333333332,
+    "still_named": 0.009333333333333338,
+    "tasks_cf": 18
+   },
+   "dir|all|w0.5": {
+    "admissible": false,
+    "fm_out_rise_named_new": 0.2783333333333333,
+    "fm_out_rise_new": 0.4833333333333334,
+    "fm_out_rise_new_bind_only": 0.7447916666666666,
+    "fm_out_rise_new_ci": [
+     0.34845774896716675,
+     0.6300901533171073
+    ],
+    "fm_out_rise_new_null_only": 0.444954128440367,
+    "fm_out_rise_null_all": 0.46733333333333343,
+    "fm_out_rise_old": 0.5806666666666667,
+    "fm_ratio_new": 1.7475255266277303,
+    "g_cf": 0.6579999999999999,
+    "g_cf_ci": [
+     0.517904456434131,
+     0.7868601190476191
+    ],
+    "g_named": 0.21300000000000002,
+    "movable": true,
+    "n_cf": 250,
+    "on_manifold": false,
+    "oob_rise_cf": 0.0012047619047619057,
+    "still_cf": -0.0066666666666666515,
+    "still_named": -0.11366666666666665,
+    "tasks_cf": 18
+   },
+   "dir|all|w1": {
+    "admissible": false,
+    "fm_out_rise_named_new": 0.2983333333333334,
+    "fm_out_rise_new": 0.5936666666666667,
+    "fm_out_rise_new_bind_only": 0.7838541666666667,
+    "fm_out_rise_new_ci": [
+     0.46654702264581305,
+     0.7209227945805128
+    ],
+    "fm_out_rise_new_null_only": 0.5657492354740061,
+    "fm_out_rise_null_all": 0.581,
+    "fm_out_rise_old": 0.699,
+    "fm_ratio_new": 1.9517720597282067,
+    "g_cf": 0.802,
+    "g_cf_ci": [
+     0.6653607453147743,
+     0.9181042394551623
+    ],
+    "g_named": 0.25666666666666677,
+    "movable": true,
+    "n_cf": 250,
+    "on_manifold": false,
+    "oob_rise_cf": 0.0022380952380952382,
+    "still_cf": -0.14766666666666667,
+    "still_named": -0.14766666666666667,
+    "tasks_cf": 18
+   },
+   "dir|early|w0.25": {
+    "admissible": false,
+    "fm_out_rise_named_new": 0.16400000000000006,
+    "fm_out_rise_new": 0.25833333333333336,
+    "fm_out_rise_new_bind_only": 0.78125,
+    "fm_out_rise_new_ci": [
+     0.1251697770362898,
+     0.41559501912352925
+    ],
+    "fm_out_rise_new_null_only": 0.18157492354740062,
+    "fm_out_rise_null_all": 0.167,
+    "fm_out_rise_old": 0.05633333333333332,
+    "fm_ratio_new": 1.3560153096837795,
+    "g_cf": 0.02233333333333333,
+    "g_cf_ci": [
+     0.011514629049111809,
+     0.03512139419271079
+    ],
+    "g_named": 0.012666666666666689,
+    "movable": false,
+    "n_cf": 250,
+    "on_manifold": false,
+    "oob_rise_cf": 0.00010000000000000005,
+    "still_cf": 0.019999999999999993,
+    "still_named": 0.006666666666666675,
+    "tasks_cf": 18
+   },
+   "dir|early|w0.5": {
+    "admissible": false,
+    "fm_out_rise_named_new": 0.16866666666666666,
+    "fm_out_rise_new": 0.25600000000000006,
+    "fm_out_rise_new_bind_only": 0.7526041666666666,
+    "fm_out_rise_new_ci": [
+     0.12741965111287232,
+     0.4113362541686249
+    ],
+    "fm_out_rise_new_null_only": 0.18310397553516822,
+    "fm_out_rise_null_all": 0.167,
+    "fm_out_rise_old": 0.06733333333333334,
+    "fm_ratio_new": 1.3549033490597622,
+    "g_cf": 0.061,
+    "g_cf_ci": [
+     0.03416308371503471,
+     0.0945388449497446
+    ],
+    "g_named": 0.025666666666666678,
+    "movable": false,
+    "n_cf": 250,
+    "on_manifold": false,
+    "oob_rise_cf": 0.000166666666666667,
+    "still_cf": 0.04666666666666666,
+    "still_named": 0.01300000000000001,
+    "tasks_cf": 18
+   },
+   "dir|early|w1": {
+    "admissible": false,
+    "fm_out_rise_named_new": 0.18466666666666667,
+    "fm_out_rise_new": 0.28466666666666673,
+    "fm_out_rise_new_bind_only": 0.7421875,
+    "fm_out_rise_new_ci": [
+     0.1632913265953398,
+     0.43657878858449417
+    ],
+    "fm_out_rise_new_null_only": 0.2175076452599388,
+    "fm_out_rise_null_all": 0.1983333333333333,
+    "fm_out_rise_old": 0.1663333333333333,
+    "fm_ratio_new": 1.4050966898339945,
+    "g_cf": 0.16933333333333336,
+    "g_cf_ci": [
+     0.0910986019919434,
+     0.26418898263634133
+    ],
+    "g_named": 0.04133333333333338,
+    "movable": true,
+    "n_cf": 250,
+    "on_manifold": false,
+    "oob_rise_cf": 0.00047142857142857186,
+    "still_cf": 0.10633333333333334,
+    "still_named": 0.020333333333333346,
+    "tasks_cf": 18
+   }
+  },
+  "threshold": 0.13,
+  "u_vs_ref_primary": {
+   "fm_u11_over_ref11": 1.3712124084349606,
+   "u11": 0.2693333333333333,
+   "u21": 0.25866666666666666
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "rb4b_stage0__libero_90_c__stage0__s11__71dca5b0",
+ "schema": 1,
+ "script": "experiments/rb4b_bind.py",
+ "seconds": null,
+ "seed": 11,
+ "source_commit": null,
+ "started": "2026-10-25T17:55:59+00:00",
+ "stream": null,
+ "tag": "stage0"
+}
