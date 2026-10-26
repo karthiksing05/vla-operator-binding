@@ -142,6 +142,12 @@ the five-task diagnosis do not meet. The approach-role readout is clear nonethel
 | the same, re-judged under a target-binding prompt | still +0.26 to +0.71 | guided chunks do not match the model's own bound approach | R4b, 4ff66022 |
 | reuse role tokens from earlier tasks, no fit | 8 vs zs 13 of 260 | per-task parts are not reusable | L4, 75deff22 |
 | closed-loop approach guidance (vision anchor + D4 bank; exploratory) | success 0 vs zs 2 of 140; grasp fixed on one task (1 -> 16 of 20), which then fails at the goal | goal role unbound; anchor within 5 cm only 0.41 live; even oracle poses barely help | R5s, e40daaa4 |
+| closed-loop carry guidance through the D5 release operator (exploratory) | 6 wrong-goal recombination tasks: zs 0.325, goal-only 0.350, oracle 0.358 (CIs include 0) | wrong-goal errors are same-body region errors; the anchor lands within 5 cm of the region in 0.14 | R6, 3d7767fd |
+| select among the frozen policy's own samples (oracle verifier ceiling) | coverage@16 from the carry 0.200 (bar 0.5; :40 0.00); from pre-grasp 0.529; from start 0.572 | the region is decided at the grasp; once carried, the error is committed | R7, 9d8b3c25, 1f106dfa |
+| deployable selection at the pre-grasp query | learned-ceiling top-1 gain +0.036 [-0.086, +0.161] (bar +0.05) | the first chunk carries no detectable signal of the eventual region | R7 stage B, 96a2c7e3 |
+| re-condition the region phrase (activation prototype; region-contrastive guidance) | per-seed 0.042 -> 0.002 (prototype), about -0.02 (contrastive) on 28 region-error states | a training phrase's activations carry their training scene; the contrast removes what the right region shares | R8, 7162a1f8 |
+| failure-gated retry | no-op: zs keeps acting about 260 steps after a wrong release; re-grasp :29 0.11, :40 0.00 | a gate that changes nothing leaves the action distribution unchanged | R9, 353ce213 |
+| gated retry with a trained pick-up sub-instruction | infeasible: 0 of 73 training instructions is a standalone pick-up | the policy has no trained sub-step to re-condition on | R10, 549c579d |
 
 ## 6. What does repair it: one demonstration
 
@@ -166,6 +172,10 @@ writes the result into a scene-wide code in its deep image tokens. Each failed r
   scene (R3c).
 - **What survives is the approach binding operator.** It is real, causal and shared across types (D4). It can redirect the
   grasp in closed loop (R5s, task 83), but without a goal binding and a precise instance anchor it does not lift success.
+- **The goal role is bound too, at the release (D5), but the region inside a body is not.** Recombination wrong-goal errors
+  are mostly the wrong region of the right body. The frozen policy's own samples contain the right region before the grasp
+  (R7, 0.529) and almost never after it (0.200). Nothing visible at the decision point selects it (R7 stage B), and
+  re-conditioning the region phrase lowers success (R8).
 
 ## 8. Limitations
 
@@ -177,12 +187,15 @@ writes the result into a scene-wide code in its deep image tokens. Each failed r
 - Several probes stop at an offline gate. Their gates are proxies (movability, flow-loss outliers), and R4b shows those
   proxies have their own floors.
 
-## 9. What a demo-free method would still need
+## 9. The boundary of test-time recovery on this policy
 
-1. **A goal-role binding operator.** The place readout needs larger displacements and a release-point readout (D5, running).
-2. **An instance-level anchor.** The SigLIP anchor reaches 0.62 offline but 0.41 within 5 cm in closed loop, and is weakest
-   for similar instances.
-3. **A carry-phase intervention** on recombination tasks, whose failures are mostly wrong-goal. This is R6, gated on (1).
+With frozen weights, no target demonstration and no simulator at decision time, no tested route recovers the recombination
+region errors (R5s-R10). Three relaxations remain, and each changes the claim:
+1. **A world model or simulator at decision time**, for branched verified search. The oracle ceiling is coverage@16 0.529
+   from the pre-grasp query (R7).
+2. **A weight change**, such as an adapter. The one-demo token and LoRA (section 6) are the demonstrated ceilings.
+3. **An instance- and region-level anchor.** The SigLIP anchor finds the region (0.97 / 0.92 / 0.69, D5) but lands within
+   5 cm in only 0.07-0.16, and the policy does not use an external target without breaking its own manifold (R4-bind, R4b).
 
 ## Appendix: probe index
 
@@ -202,3 +215,9 @@ writes the result into a scene-wide code in its deep image tokens. Each failed r
 | R4b | docs/PLAN_R4B.md | 71dca5b0, 4ff66022 |
 | D4 | docs/PLAN_D4.md | 2cd1d611, 1ec377e3 |
 | R5s | docs/PLAN_R5S.md | a35fb7a9, e40daaa4 |
+| D5 | docs/PLAN_D5.md | 8104015c, 08b32296 |
+| R6 | docs/PLAN_R6.md | d8b7cbbe, 3d7767fd |
+| R7 | docs/PLAN_R7.md | 45d52831, 9d8b3c25, b5ce0e5f, 1f106dfa, fcb15068, 96a2c7e3 |
+| R8 | docs/PLAN_R8.md | 0e03e729, 7162a1f8 |
+| R9 | docs/PLAN_R9.md | 353ce213 |
+| R10 | docs/PLAN_R10.md | 549c579d |
