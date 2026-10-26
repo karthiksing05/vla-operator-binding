@@ -1,6 +1,6 @@
-# Probe R8 (DRAFT, not pre-registered, not run): test-time re-conditioning of the region word on the frozen policy (written 2026-10-26)
+# Probe R8: test-time re-conditioning of the region word on the frozen policy (drafted 2026-10-26; stage A pre-registered in section 6)
 
-**Status: DRAFT for the user's approval.** No code, no ledger row, no rollout. Every number below is a cited past result.
+**Status.** Sections 1-5 are the draft. Section 6 is the stage-A pre-registration (coordinator-approved while the user sleeps; the user may overrule it).
 
 **User direction.** The method is test-time, on the frozen pi05_l90c@5000, with no new demos and no weight change. It uses
 prototypes extracted from the model's internals (how language and vision bind to action), and the task structure comes from the
@@ -67,3 +67,65 @@ parse.
    new data.
 2. C2 needs two policy passes per Euler step, which doubles inference cost. Is that acceptable?
 3. The budget for stage A.
+
+## 6. Stage A as pre-registered (2026-10-26, before any R8 rollout; m3_prereg `pr8_cover`)
+
+**Coordinator's resolution of section 5 (provisional; the user can overrule it).**
+- C3 is the primary method arm, then C2 at 2 values of w.
+- C1 would be a DIAGNOSTIC arm only. C4 is skipped.
+- Pre-grasp states only, K 16 paired with R7's seeds.
+- Budget: about 8 A40-h for stage A.
+
+**What the lexicon showed (results/r8/lex.json, training split only), and the consequences.**
+- **C1 is a no-op, so it is not run.** :29's phrase "in the top drawer of the cabinet" is word for word the training phrase of
+  :3 / :4 / :5 (wooden cabinet, top_region). :40's "on the cabinet shelf" is word for word :88's (the same shelf type, top_region).
+  Re-rendering with the training lexicon would change nothing: the failure is not lexical.
+- **The scenes' own training priors point at the wrong region.** In :29's white-cabinet scene, :25 trains "put the black bowl on top
+  of the cabinet" (top_side), the region zs chooses. In :40's shelf scene, :43 trains "put the white bowl on top of the cabinet" (the
+  shelf's top_side).
+- **:16 is out of scope.** Its errors are instance-level (which bowl), not region-level, and its target (a bowl) has no regions. No
+  operator applies, and its units are not re-rolled.
+- **The spec rule (experiments/r8_ops.py) uses only the parse's goal atom, the scene's fixture types and the training lexicon.** It
+  finds a region phrase verbatim in the instruction, with a same-type training entry first and else category level. It applies on
+  libero_90:29 (category level: sources :3 / :4 / :5) and :40 (type level: source :88), and on no other dev task in R7's set.
+
+**Units (results/r8/plan.json).**
+- 28 wrong-goal region-error pre-grasp states (PRIMARY): :29 19, :40 9.
+- 4 controls: :29 1, :40 3.
+- The other 44 R7 pre-grasp units have no spec. The operator is never active there, so harm on them is 0 by construction. They are
+  not re-rolled.
+
+**Arms (experiments/r8_serve.py, a subclass of d5_serve.BatchPolicy, opt-in request fields; d5_serve.py unchanged).**
+- **C3 (PRIMARY method arm): the region-phrase prototype from the model's own training activations.**
+  - Before every encoder layer i >= 1 of the prefix pass, the residual stream at the phrase's tokens is REPLACED by the prototype.
+  - The prototype is the mean, over D5's training carry observations of the source tasks, of the same layer's input at the same
+    phrase tokens. Images and state come from D4's training renders; the training instruction is used. That is 12 observations for
+    the drawer phrase (7 tokens) and 4 for the shelf phrase (4 tokens): results/r8/protos.npz.
+  - The image tokens attend to the phrase in the bidirectional prefix, so the patch reaches the deep image code (R3c).
+- **C2 (method arm): region-contrastive guidance.**
+  - On the first 5 of 10 Euler steps, v = v(p) + w [v(p) - mean_a v(p_a)], with w in {1, 2}; afterwards the plain v(p).
+  - p_a is the instruction with the phrase replaced by each OTHER region of the same body that has a training phrase:
+    - :29: "in the bottom drawer of the cabinet" and "on top of the cabinet";
+    - :40: "on top of the cabinet" and "under the cabinet shelf".
+  - The noise is the same as the plain sampler's.
+- **Server parity, checked at every server start:** C2 at w 0 equals the plain sampler, and C3 patched with the prompt's own residual
+  equals the plain prefix.
+
+**Rollouts.** R7's run loop (r7_cover.run_unit) with R7's seeds k = 0..15 plus the zs-seed run, from R7's pre-grasp states. A run ends
+at LIBERO success or the episode budget.
+
+**Readouts (per arm).**
+- Per-seed success vs R7's unconditioned runs with the same seeds at the same states: the paired per-state difference, pooled with
+  the two-level task-cluster bootstrap. With 2 tasks, the interval is wide.
+- coverage@16, per task; the controls' per-seed difference.
+- **On-manifold guard (descriptive):** the share of executed actions with any |a[0:6]| > 1 (LIBERO's action bound), arm vs R7.
+  Flag if it rises by > 0.10.
+
+**Bar (from section 3).** An arm PASSES if:
+- the wrong-goal per-seed success rises by >= +0.10, with the paired CI's lower bound > 0; and
+- the controls' per-seed success falls by at most 0.05 (point estimate; 4 states, so this is weak, disclosed).
+
+**Next step.** If any method arm passes, a stage B exploratory closed-loop smoke is pre-registered (R6 tasks, harm and damage tasks,
+an oracle-region arm; about 4 A40-h). Otherwise R8 stage A is recorded and handed back.
+
+**Cost (planned).** C3 about 0.9 A40-h; C2 about 2 A40-h per w; plus prototypes and smokes. About 5-6 A40-h.

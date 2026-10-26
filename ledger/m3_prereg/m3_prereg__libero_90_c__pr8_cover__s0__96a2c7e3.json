@@ -1,0 +1,109 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: probe R8 stage A region re-conditioning coverage",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4237557",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "96a2c7e330d90654861faa2d2ea818b76be106ef",
+  "short": "96a2c7e3"
+ },
+ "keys": {},
+ "metrics": {
+  "arms": "c3 (PRIMARY): phrase-token residual replaced at every encoder layer >= 1 by the mean training activation of the same phrase (D5 training carry observations of :3/:4/:5 resp. :88); c2w1 / c2w2: v + w (v - mean v_alt) on the first 5 of 10 Euler steps, alts = other regions of the same body with a training phrase; C1 no-op (phrases already equal training phrases), not run; C4 skipped",
+  "bar": "PASS if wrong-goal per-seed success diff vs R7 same seeds >= +0.10 with two-level CI lo > 0 and control per-seed diff >= -0.05; on-manifold guard: out-of-bound executed actions share rise > 0.10 flagged",
+  "counts": {
+   "libero_90:29|succ": 1,
+   "libero_90:29|wg": 19,
+   "libero_90:40|succ": 3,
+   "libero_90:40|wg": 9
+  },
+  "disclosure": "seen before this row: R7's full reads (incl. per-state success counts at these states), the lexicon, the plan, prototype shapes, server parity (c2 w0 exact; c3 own-residual 2-3e-3, bf16 batch noise), two 2-query smokes (timing only)",
+  "files_sha256": {
+   "d5serve": "94960632ecce491787527dbbfa94ab4b0ef2cfc55d0ec55d4edbe7c426482401",
+   "doc": "9758eb5d0adae1b21f3bce916ee6d8774c56f4cf25eda29a951c5fab3f16efa3",
+   "lex": "60e42add4011efa66cc97142d9ba22c6281963398125e70c5b5ba03166b2212d",
+   "loop": "19e56576f7c73bfc1a2fb44a82ecc4c8cd6ef246fefdd72a6795507877018a8f",
+   "ops": "6e258f62dbb4f2044305347a08df19bbee36eba8a22988def573161fe3396833",
+   "pack": "cca1f22ce4fcdca3d76dd9e6a119561405f69a11b98ee7f1a0f14597ede0b0f7",
+   "plan": "c87e50ee004de69561adfe4f648094003c2f196a9411dcca437514717ec03de8",
+   "protos": "a35b8b5f81b32503f3ba802a79d67ee527b2b4283ca452435ba889726940a0c4",
+   "script": "10284a2361c760dd983fa4d7fe703e30e107bdbafa7bec70c8ab52d3227b450c",
+   "serve": "05d3de69edc4c6d077f3713709cfa7fe78857d2a8a46f3c702a7992409f0dcaf"
+  },
+  "rollouts": "R7 run loop, R7 seeds k 0..15 + zs-seed run, from R7 pre-grasp states, to success or budget",
+  "specs": {
+   "libero_90:29": {
+    "alt_phrases": [
+     "in the bottom drawer of the cabinet",
+     "on top of the cabinet"
+    ],
+    "alt_prompts": [
+     "put the black bowl in the bottom drawer of the cabinet",
+     "put the black bowl on top of the cabinet"
+    ],
+    "body": "white_cabinet_1",
+    "level": "category",
+    "phrase": "in the top drawer of the cabinet",
+    "region": "top_region",
+    "sources": [
+     "libero_90:3",
+     "libero_90:4",
+     "libero_90:5"
+    ],
+    "type": "white_cabinet"
+   },
+   "libero_90:40": {
+    "alt_phrases": [
+     "on top of the cabinet",
+     "under the cabinet shelf"
+    ],
+    "alt_prompts": [
+     "put the frying pan on top of the cabinet",
+     "put the frying pan under the cabinet shelf"
+    ],
+    "body": "wooden_two_layer_shelf_1",
+    "level": "type",
+    "phrase": "on the cabinet shelf",
+    "region": "top_region",
+    "sources": [
+     "libero_90:88"
+    ],
+    "type": "wooden_two_layer_shelf"
+   }
+  },
+  "status": "PRE-REGISTERED stage A of probe R8 (test-time region re-conditioning, frozen weights, sandboxed coverage)",
+  "units": "28 wrong-goal region-error pre-grasp states (:29 19, :40 9; PRIMARY) + 4 controls (:29 1, :40 3); 44 R7 units with no spec are not re-rolled (operator inactive)",
+  "written_before": "any R8 rollout"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pr8_cover__s0__96a2c7e3",
+ "schema": 1,
+ "script": "experiments/prereg/pr8_cover.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T05:18:19+00:00",
+ "stream": null,
+ "tag": "pr8_cover"
+}

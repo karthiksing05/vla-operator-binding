@@ -1,0 +1,462 @@
+{
+ "dev": {
+  "libero_90:16": {
+   "language": "stack the black bowl at the front on the black bowl in the middle",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "akita_black_bowl_2"
+    ]
+   ],
+   "objects": {
+    "akita_black_bowl_1": "akita_black_bowl",
+    "akita_black_bowl_2": "akita_black_bowl",
+    "akita_black_bowl_3": "akita_black_bowl",
+    "plate_1": "plate"
+   },
+   "fixtures": {
+    "kitchen_table": "kitchen_table",
+    "wooden_cabinet_1": "wooden_cabinet"
+   }
+  },
+  "libero_90:29": {
+   "language": "put the black bowl in the top drawer of the cabinet",
+   "goal": [
+    [
+     "In",
+     "akita_black_bowl_1",
+     "white_cabinet_1_top_region"
+    ]
+   ],
+   "objects": {
+    "akita_black_bowl_1": "akita_black_bowl",
+    "plate_1": "plate",
+    "ketchup_1": "ketchup"
+   },
+   "fixtures": {
+    "kitchen_table": "kitchen_table",
+    "white_cabinet_1": "white_cabinet"
+   }
+  },
+  "libero_90:40": {
+   "language": "put the frying pan on the cabinet shelf",
+   "goal": [
+    [
+     "In",
+     "chefmate_8_frypan_1",
+     "wooden_two_layer_shelf_1_top_region"
+    ]
+   ],
+   "objects": {
+    "white_bowl_1": "white_bowl",
+    "chefmate_8_frypan_1": "chefmate_8_frypan"
+   },
+   "fixtures": {
+    "kitchen_table": "kitchen_table",
+    "flat_stove_1": "flat_stove",
+    "wooden_two_layer_shelf_1": "wooden_two_layer_shelf"
+   }
+  }
+ },
+ "train": {
+  "libero_90:13": {
+   "language": "put the black bowl at the front on the plate",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "plate_1"
+    ]
+   ],
+   "fixtures": {
+    "kitchen_table": "kitchen_table",
+    "wooden_cabinet_1": "wooden_cabinet"
+   },
+   "n_d5": 4
+  },
+  "libero_90:25": {
+   "language": "put the black bowl on top of the cabinet",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "white_cabinet_1_top_side"
+    ]
+   ],
+   "fixtures": {
+    "kitchen_table": "kitchen_table",
+    "white_cabinet_1": "white_cabinet",
+    "wine_rack_1": "wine_rack"
+   },
+   "n_d5": 4
+  },
+  "libero_90:26": {
+   "language": "put the wine bottle in the bottom drawer of the cabinet",
+   "goal": [
+    [
+     "In",
+     "wine_bottle_1",
+     "white_cabinet_1_bottom_region"
+    ]
+   ],
+   "fixtures": {
+    "kitchen_table": "kitchen_table",
+    "white_cabinet_1": "white_cabinet",
+    "wine_rack_1": "wine_rack"
+   },
+   "n_d5": 4
+  },
+  "libero_90:3": {
+   "language": "put the butter at the back in the top drawer of the cabinet and close it",
+   "goal": [
+    [
+     "In",
+     "butter_2",
+     "wooden_cabinet_1_top_region"
+    ],
+    [
+     "Close",
+     "wooden_cabinet_1_top_region"
+    ]
+   ],
+   "fixtures": {
+    "kitchen_table": "kitchen_table",
+    "wooden_cabinet_1": "wooden_cabinet"
+   },
+   "n_d5": 4
+  },
+  "libero_90:4": {
+   "language": "put the butter at the front in the top drawer of the cabinet and close it",
+   "goal": [
+    [
+     "In",
+     "butter_1",
+     "wooden_cabinet_1_top_region"
+    ],
+    [
+     "Close",
+     "wooden_cabinet_1_top_region"
+    ]
+   ],
+   "fixtures": {
+    "kitchen_table": "kitchen_table",
+    "wooden_cabinet_1": "wooden_cabinet"
+   },
+   "n_d5": 4
+  },
+  "libero_90:43": {
+   "language": "put the white bowl on top of the cabinet",
+   "goal": [
+    [
+     "On",
+     "white_bowl_1",
+     "wooden_two_layer_shelf_1_top_side"
+    ]
+   ],
+   "fixtures": {
+    "kitchen_table": "kitchen_table",
+    "flat_stove_1": "flat_stove",
+    "wooden_two_layer_shelf_1": "wooden_two_layer_shelf"
+   },
+   "n_d5": 4
+  },
+  "libero_90:5": {
+   "language": "put the chocolate pudding in the top drawer of the cabinet and close it",
+   "goal": [
+    [
+     "In",
+     "chocolate_pudding_1",
+     "wooden_cabinet_1_top_region"
+    ],
+    [
+     "Close",
+     "wooden_cabinet_1_top_region"
+    ]
+   ],
+   "fixtures": {
+    "kitchen_table": "kitchen_table",
+    "wooden_cabinet_1": "wooden_cabinet"
+   },
+   "n_d5": 4
+  },
+  "libero_90:63": {
+   "language": "stack the left bowl on the right bowl and place them in the tray",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "akita_black_bowl_2"
+    ],
+    [
+     "In",
+     "akita_black_bowl_2",
+     "wooden_tray_1_contain_region"
+    ]
+   ],
+   "fixtures": {
+    "living_room_table": "living_room_table"
+   },
+   "n_d5": 4
+  },
+  "libero_90:88": {
+   "language": "pick up the book on the right and place it on the cabinet shelf",
+   "goal": [
+    [
+     "In",
+     "yellow_book_1",
+     "wooden_two_layer_shelf_1_top_region"
+    ]
+   ],
+   "fixtures": {
+    "study_table": "study_table",
+    "wooden_two_layer_shelf_1": "wooden_two_layer_shelf"
+   },
+   "n_d5": 4
+  },
+  "libero_90:89": {
+   "language": "pick up the book on the right and place it under the cabinet shelf",
+   "goal": [
+    [
+     "In",
+     "yellow_book_1",
+     "wooden_two_layer_shelf_1_bottom_region"
+    ]
+   ],
+   "fixtures": {
+    "study_table": "study_table",
+    "wooden_two_layer_shelf_1": "wooden_two_layer_shelf"
+   },
+   "n_d5": 4
+  },
+  "libero_goal:1": {
+   "language": "put the bowl on the stove",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "flat_stove_1_cook_region"
+    ]
+   ],
+   "fixtures": {
+    "main_table": "table",
+    "wooden_cabinet_1": "wooden_cabinet",
+    "flat_stove_1": "flat_stove",
+    "wine_rack_1": "wine_rack"
+   },
+   "n_d5": 4
+  },
+  "libero_goal:4": {
+   "language": "put the bowl on top of the cabinet",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "wooden_cabinet_1_top_side"
+    ]
+   ],
+   "fixtures": {
+    "main_table": "table",
+    "wooden_cabinet_1": "wooden_cabinet",
+    "flat_stove_1": "flat_stove",
+    "wine_rack_1": "wine_rack"
+   },
+   "n_d5": 4
+  },
+  "libero_goal:6": {
+   "language": "put the cream cheese in the bowl",
+   "goal": [
+    [
+     "On",
+     "cream_cheese_1",
+     "akita_black_bowl_1"
+    ]
+   ],
+   "fixtures": {
+    "main_table": "table",
+    "wooden_cabinet_1": "wooden_cabinet",
+    "flat_stove_1": "flat_stove",
+    "wine_rack_1": "wine_rack"
+   },
+   "n_d5": 4
+  },
+  "libero_goal:8": {
+   "language": "put the bowl on the plate",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "plate_1"
+    ]
+   ],
+   "fixtures": {
+    "main_table": "table",
+    "wooden_cabinet_1": "wooden_cabinet",
+    "flat_stove_1": "flat_stove",
+    "wine_rack_1": "wine_rack"
+   },
+   "n_d5": 4
+  },
+  "libero_goal:9": {
+   "language": "put the wine bottle on the rack",
+   "goal": [
+    [
+     "On",
+     "wine_bottle_1",
+     "wine_rack_1_top_region"
+    ]
+   ],
+   "fixtures": {
+    "main_table": "table",
+    "wooden_cabinet_1": "wooden_cabinet",
+    "flat_stove_1": "flat_stove",
+    "wine_rack_1": "wine_rack"
+   },
+   "n_d5": 4
+  },
+  "libero_spatial:0": {
+   "language": "pick up the black bowl between the plate and the ramekin and place it on the plate",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "plate_1"
+    ]
+   ],
+   "fixtures": {
+    "main_table": "table",
+    "wooden_cabinet_1": "wooden_cabinet",
+    "flat_stove_1": "flat_stove"
+   },
+   "n_d5": 3
+  },
+  "libero_spatial:1": {
+   "language": "pick up the black bowl next to the ramekin and place it on the plate",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "plate_1"
+    ]
+   ],
+   "fixtures": {
+    "main_table": "table",
+    "wooden_cabinet_1": "wooden_cabinet",
+    "flat_stove_1": "flat_stove"
+   },
+   "n_d5": 4
+  },
+  "libero_spatial:3": {
+   "language": "pick up the black bowl on the cookie box and place it on the plate",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "plate_1"
+    ]
+   ],
+   "fixtures": {
+    "main_table": "table",
+    "wooden_cabinet_1": "wooden_cabinet",
+    "flat_stove_1": "flat_stove"
+   },
+   "n_d5": 3
+  },
+  "libero_spatial:4": {
+   "language": "pick up the black bowl in the top drawer of the wooden cabinet and place it on the plate",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "plate_1"
+    ]
+   ],
+   "fixtures": {
+    "main_table": "table",
+    "wooden_cabinet_1": "wooden_cabinet",
+    "flat_stove_1": "flat_stove"
+   },
+   "n_d5": 4
+  },
+  "libero_spatial:5": {
+   "language": "pick up the black bowl on the ramekin and place it on the plate",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "plate_1"
+    ]
+   ],
+   "fixtures": {
+    "main_table": "table",
+    "wooden_cabinet_1": "wooden_cabinet",
+    "flat_stove_1": "flat_stove"
+   },
+   "n_d5": 4
+  },
+  "libero_spatial:6": {
+   "language": "pick up the black bowl next to the cookie box and place it on the plate",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "plate_1"
+    ]
+   ],
+   "fixtures": {
+    "main_table": "table",
+    "wooden_cabinet_1": "wooden_cabinet",
+    "flat_stove_1": "flat_stove"
+   },
+   "n_d5": 4
+  },
+  "libero_spatial:7": {
+   "language": "pick up the black bowl on the stove and place it on the plate",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "plate_1"
+    ]
+   ],
+   "fixtures": {
+    "main_table": "table",
+    "wooden_cabinet_1": "wooden_cabinet",
+    "flat_stove_1": "flat_stove"
+   },
+   "n_d5": 4
+  },
+  "libero_spatial:8": {
+   "language": "pick up the black bowl next to the plate and place it on the plate",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "plate_1"
+    ]
+   ],
+   "fixtures": {
+    "main_table": "table",
+    "wooden_cabinet_1": "wooden_cabinet",
+    "flat_stove_1": "flat_stove"
+   },
+   "n_d5": 2
+  },
+  "libero_spatial:9": {
+   "language": "pick up the black bowl on the wooden cabinet and place it on the plate",
+   "goal": [
+    [
+     "On",
+     "akita_black_bowl_1",
+     "plate_1"
+    ]
+   ],
+   "fixtures": {
+    "main_table": "table",
+    "wooden_cabinet_1": "wooden_cabinet",
+    "flat_stove_1": "flat_stove"
+   },
+   "n_d5": 4
+  }
+ }
+}
