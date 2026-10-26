@@ -129,3 +129,68 @@ at LIBERO success or the episode budget.
 an oracle-region arm; about 4 A40-h). Otherwise R8 stage A is recorded and handed back.
 
 **Cost (planned).** C3 about 0.9 A40-h; C2 about 2 A40-h per w; plus prototypes and smokes. About 5-6 A40-h.
+
+## 7. Stage A result (2026-10-26; ledger `r8_read` tag cover, results/r8/read.json; pre-registration 0e03e729)
+
+**Data.** 3 arms x 32 units x 17 runs, all complete (6 A40 jobs x 3 pairs; 0 crashes, 0 missing). The baseline is R7's
+unconditioned runs at the same states with the same seeds (k 0..15). Intervals are two-level task-cluster bootstrap 95% intervals;
+with only 2 tasks they are wide.
+
+| arm | wrong-goal per-seed (28) | paired diff | cov@16 | controls per-seed (4) | control diff | out-of-bound actions | verdict |
+|---|---|---|---|---|---|---|---|
+| R7 (no operator) | 0.042 | | 0.464 | 0.188 | | 0.004 / 0.002 | |
+| **C3 prototype (PRIMARY)** | 0.002 | **-0.040 [-0.069, -0.021]** | 0.036 | 0.000 | -0.188 [-0.312, -0.104] | 0.002 / 0.002 | **FAIL** |
+| C2 contrast, w 1 | 0.025 | -0.018 [-0.059, +0.002] | 0.286 | 0.078 | -0.109 [-0.156, -0.062] | 0.007 / 0.009 | FAIL |
+| C2 contrast, w 2 | 0.022 | -0.020 [-0.076, +0.003] | 0.250 | 0.062 | -0.125 [-0.250, +0.062] | 0.018 / 0.031 | FAIL |
+
+The out-of-bound column is wrong-goal / controls.
+
+- **Per task (wrong-goal per-seed, R7 -> arm):**
+  - :29 0.036 -> 0.000 (C3), 0.026 (C2 w 1), 0.033 (C2 w 2);
+  - :40 0.056 -> 0.007 / 0.021 / 0.000.
+- **No method arm passes. Every arm LOWERS success**, on the wrong-goal states and on the controls. The on-manifold guard never
+  trips (out-of-bound actions stay <= 0.031), so the harm is not from out-of-range actions.
+
+### 7.1 Reading
+
+1. **C3 breaks the task.**
+   - Replacing the phrase tokens' residual at every layer with the training mean removes almost all success: wrong-goal 0.042 ->
+     0.002, controls 0.19 -> 0.00, cov@16 0.46 -> 0.04.
+   - The prototype is not a portable "region" code. The phrase's contextual state at the training scenes carries those scenes, and
+     forcing it into another scene derails the policy. On :29 the level is category (a wooden cabinet's drawer for a white cabinet);
+     on :40 it is the same shelf type and still fails.
+   - This matches R3c: binding lives in a distributed deep scene code, not in local token states, and R2 / R2c found that fitted
+     part tokens do not transfer.
+2. **C2 pushes away from the wrong regions but does not bind the named one.**
+   - The contrast against the same body's other regions lowers success at both weights: -0.02 on wrong-goal, -0.11 / -0.13 on
+     controls.
+   - Subtracting the alternative-region velocity removes components the correct placement also needs (the same body, approach and
+     grasp), since the alternatives share everything except the region.
+3. **C1 needed no run.** The dev region phrases are already word for word the training phrases. The region word is in the
+   instruction, in the training wording; the policy does not ground it in these scenes. That is a grounding failure, not a lexical one.
+
+### 7.2 Where the recovery route stands (R5s-R8)
+
+- **The goal role is bound** (D5: G1 1.0, G2 0.81).
+- **None of these recovers the region errors:**
+  - steering the carry (R6);
+  - selecting among the frozen policy's own samples at carry (R7: ceiling 0.20) or at the pre-grasp query (R7 B: no signal);
+  - re-conditioning the region phrase by a training prototype (C3) or by region contrast (C2) (R8).
+- **The fix exists only as a rare outcome of the policy's own pre-grasp sampling** (cov@16 0.53, per-seed 0.06). No test-time
+  handle tested so far raises its rate without a simulator at decision time.
+- **Hence**, on the frozen pi05_l90c, test-time recovery of the recombination REGION errors is not justified by any method tested.
+  The remaining options need a user decision:
+  - (a) allow a world model / simulator at decision time (branched verified search, ceiling 0.53 at K 16);
+  - (b) allow weight change (adapters), which leaves "test-time, frozen";
+  - (c) report the region errors as the failure map's boundary of test-time composition, with R6-R8 as the evidence.
+
+**Cost.** R8 6.4 A40-h: C3 1.0, C2 w 1 2.6, C2 w 2 2.6, plus about 0.1 for the prototypes and smokes. Also 6 short CPU jobs.
+
+**Disclosures.**
+- Stage A ran while the user slept, under the coordinator's provisional resolution of section 5.
+- C1 was not run, because it is a no-op (section 6). :16 is out of scope.
+- The control set is 4 states, so the harm read is weak. On the 44 units with no spec, harm is 0 by construction.
+- The C3 prototypes come from carry-state training renders but are applied at pre-grasp queries.
+- C3's own-residual server parity is 2-3e-3 (bf16 batch noise, as in D5), not exact. C2 at w 0 is exact.
+- The read was run once with `--record`.
+- Audits after the read: audit_numbers 0 discrepancies over 2,064 checks; audit_coverage 0 uncovered numerals.
