@@ -86,3 +86,22 @@ binder (B1a) is a comparison. The adapter is trained once per policy, never per 
 - It collapses in scenes no training cell covers: the STUDY_SCENE1-3 tasks score depth 0 0.24, and the never-labelled caddy's
   compartments are at chance.
 - GroundingDINO is the mirror image: 0.90 on held-out depth 0, but 0.00-0.20 on sub-regions and qualifiers.
+
+## 7. Framing and decisions (user, 2026-10-26)
+
+**Framing: a compositional crutch.** The VLA already holds the necessary ingredients: motor operators, visual features and the
+language lexicon. It still cannot always combine them zero-shot, and fine-tuning on the training cells does not teach it to.
+A separate, small model stores the representational information and the bindings the VLA lacks, and helps it with input and
+output. The pieces:
+- the factorised binder: which body, and which part of it;
+- the binding adapter: writes the binding where the policy reads it.
+
+The VLA stays frozen and does the acting. The crutch is trained once per policy, never per task.
+
+**Decisions:**
+- A once-trained adapter is APPROVED.
+- S0 budget of about 20 A40-h is APPROVED.
+- Keep iterating until the theory holds.
+- Next:
+  - S1b: the factorised binder, body by open-vocabulary detection x relation in the body's own frame;
+  - S0: adapter + oracle binding, the dissociation test.
