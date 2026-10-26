@@ -1,0 +1,69 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: probe D5 (goal-role binding operator at the release point: G1 validity, G2 systematicity, G3 diagnosis)",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "kipp.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4235052",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "c479398ec4129034d0af6032c34ce7b30712a692",
+  "short": "c479398e"
+ },
+ "keys": {},
+ "metrics": {
+  "G1": "l90c training carry obs: target body == argmax ||J_xy||_F body (release-or-success hand xy, +-5 cm, noise A1/A2 mean) in >= 0.8 and CI lo > chance; p = P*(hit - chance <= 0), two-level task-cluster bootstrap B 10000",
+  "G2": "same obs: d4_read.h2 on the primary readout: leave-type-out R^2 >= 0.5 and > filler-shuffled control; p = P*(R^2 - R^2_ctrl <= 0), B 2000",
+  "G3": "zs dev wrong-goal obs with an actual body != own target (alt body; carried-elsewhere: nearest body to the zs release within 10 cm): bound == actual in >= 0.7 (one obs per episode); p = P*(actual - target <= 0), two-level bootstrap",
+  "descriptive": "secondary readouts (+-10 cm A1; xyz J; first-chunk mean; first-chunk end; held object at release) with the same G1-G3; validity per magnitude; release share; noise floor (B1/B2 vs A1/A2); operator table per target type; dev success / recombination wrong-goal bound == target; sandbox fidelity (zs seeds vs the recorded zs release); region readout; goal-role SigLIP anchor localisation (D3 region hit, 5 cm, median)",
+  "disclosure": "seen before this row: every published result up to R5s (docs/ATLAS.md); D4's dev index episode types and the typer's alternative regions per wrong-goal episode (used to define G3's actual body and to see that :29 / :40 errors are same-body regions); D4's training carry index and render metadata (bodies per observation); the parity check (restored recorded state + recorded zs actions for 40 steps: eef within 0.4-2.7 mm of the recording on 5 of 6 states, 8.6 cm on a contact-chaotic :40 state; interleaved vs uninterrupted sandboxes equal to <= 2e-9 on 4 of 6, 4e-4 and 0.17 (the same :40 state) on 2 -- not bit-exact, disclosed); the batched-vs-single sampler parity (max |diff| 1.9e-3 to 2.7e-3 action units); a one-observation smoke per set: training tr_libero_10_1_e12_carry68 (7 bodies, 68 sandboxes, all released, 145 s) and dev dv_libero_90_1_t6_post125 (4 bodies, 3 rejected for penetration at both magnitudes, 17 sandboxes, every one ended by task success before any open command -- this is why the readout is release-OR-success, fixed after the smoke and before any readout was computed).  No readout point, J, bound body or hypothesis statistic was computed.  During development an empty python heredoc was issued on the login node; the harness denied it and it did not run.",
+  "family": "Holm over G1, G2, G3 at 0.05",
+  "files_sha256": {
+   "doc": "3fb316d454a40b4c2d462c70ee6eec2050b23543a937838e737f3053e8453bc9",
+   "index": "4ddfa3fb3f1e1a7012a047d5942309f38f54cdd24c5efd579ad2f691da096a46",
+   "pack": "e391f92e3f189c833823800210af7ab6b1894ffc0b7fab97004baa6ab612a8d3",
+   "parity": "cb1cf5b75ea0e7079512ebf741306a9a77252e53261184cf4046fc868eb1d5e0",
+   "read": "35b374facd352d00e20ac05c8da577674a955341a78396d24ad491663a5e7f94",
+   "script": "d50cbf4a198119b89b8a97d5e1acd2145ba2a38d960758600d546f1c0c9781b9",
+   "serve": "94960632ecce491787527dbbfa94ab4b0ef2cfc55d0ec55d4edbe7c426482401"
+  },
+  "n": {
+   "dev": 127,
+   "dev_success": 37,
+   "dev_wrong_goal": 90,
+   "train": 156,
+   "train_tasks": 40
+  },
+  "readout": "mags 0.05 (primary) / 0.10; perts +-x +-y; validity: D4's (pen growth <= 2 mm, 50-step pinned settle within 5 mm); sandbox: full integration state + gripper ramp + OSC goal restored; replan 5, Q_MAX 24; noise seeds set base + query index (A1 11e6, A2 12e6, B1 21e6, B2 22e6)",
+  "stage_b_rule": "R6 exploratory closed-loop smoke only if G1 passes",
+  "written_before": "any D5 sandbox output beyond the one-observation smokes, any readout / J / bound body / statistic"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pd5_goal__s0__c479398e",
+ "schema": 1,
+ "script": "experiments/prereg/pd5_goal.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T00:42:34+00:00",
+ "stream": null,
+ "tag": "pd5_goal"
+}
