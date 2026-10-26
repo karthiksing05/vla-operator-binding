@@ -166,3 +166,4 @@ sampler is pulled back.
   fresh_d4, so the set mixes heavy and light wrong-goal tasks by the pre-declared rule.
 - The 5 cm anchor criterion is against the goal region's site (R6_TGT), not D3's segmentation-region hit used in D5.
 - Per-instance ledger rows (r6_<arm>, r6_smoke_*) were written by roll.sh, as for every rollout.
+- Audits after the read: audit_numbers 0 discrepancies over 2,064 checks; audit_coverage 0 uncovered numerals.
