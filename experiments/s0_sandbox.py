@@ -30,7 +30,7 @@ sys.path.insert(0, os.path.join(ROOT, "experiments"))
 sys.path.insert(0, "/coc/flash10/ksingara3/robot/openpi/src")
 import bind_e2 as E                                               # noqa: E402
 
-OUT = os.path.join(ROOT, "results", "bind", "s0", "roll")
+OUT = os.environ.get("S0_ROLL_DIR") or os.path.join(ROOT, "results", "bind", "s0", "roll")   # S0_ROLL_DIR: smoke only
 SETTLE = 20
 MAX_STEPS = int(os.environ.get("BIND_MAX_STEPS", 400))
 TRAIN_BASE, N_TRAIN_STATES = 9_400_000, 5
