@@ -76,3 +76,81 @@ Payloads: `results/r7/` (plan.json and read.json tracked; sb/, sb_smoke/, logs/ 
 
 158 units (42 + 37 states x 2 conditions) x 33 runs, up to 80 queries each. Wrong-goal runs mostly use the full budget. At D5's
 speed this is about 5-6 A40-h, run as 4 A40 jobs x 3 pairs (12 shards).
+
+## 6. Result (2026-10-25; ledger `r7_read` tag cover, results/r7/read.json; pre-registration m3_prereg `pr7_cover`, commit 45d52831)
+
+**Data.** 158 units (42 wrong-goal + 37 control states, each under 2 conditions) x 33 runs, all complete (6 A40 jobs x 3 pairs, 18
+shards, 72-84 min each; 0 crashes, 0 missing units).
+
+### 6.1 Coverage@K of the frozen policy's own samples (exact from 32 seeds)
+
+The pooled CIs are two-level task-cluster bootstrap 95% intervals. `zs run` is the success of the 33rd run, which uses the recorded
+zs seeds.
+
+| states | condition | @1 (= per-seed) | @4 | @8 | @16 | @32 | zs run |
+|---|---|---|---|---|---|---|---|
+| wrong-goal (42) | **carry (PRIMARY)** | 0.060 [0.00, 0.12] | 0.118 [0.00, 0.21] | 0.153 [0.00, 0.28] | **0.200 [0.00, 0.39]** | 0.262 [0.00, 0.57] | 0.048 |
+| wrong-goal (42) | start | 0.056 [0.04, 0.09] | 0.199 [0.14, 0.30] | 0.352 [0.25, 0.50] | 0.572 [0.44, 0.76] | 0.810 [0.67, 0.95] | 0.119 |
+| zs success (37) | carry | 0.795 [0.61, 0.93] | 0.915 | 0.947 | 0.965 | 0.973 | 0.865 |
+| zs success (37) | start | 0.747 [0.53, 0.91] | 0.876 | 0.920 | 0.955 | 0.973 | 0.838 |
+
+Per task, wrong-goal states (coverage@1 / @4 / @8 / @16 / @32; successes out of 32 per state):
+
+| task | n | carry | carry successes / 32 | start | start successes / 32 |
+|---|---|---|---|---|---|
+| :16 stack front bowl on middle bowl | 14 | 0.06 / 0.16 / 0.25 / 0.39 / 0.57 | 0 x6, 1 x4, 2 x2, 3, 17 | 0.06 / 0.22 / 0.37 / 0.59 / 0.86 | 0 x2, 1 x5, 2 x4, 3 x2, 10 |
+| :29 bowl in the top drawer | 19 | 0.09 / 0.14 / 0.16 / 0.16 / 0.16 | 0 x16, 11, 11, 30 | 0.04 / 0.14 / 0.27 / 0.47 / 0.74 | 0 x5, 1 x8, 2 x3, 3 x3 |
+| :40 frying pan on the shelf | 9 | 0.00 at every K | 0 x9 | 0.08 / 0.29 / 0.50 / 0.75 / 0.89 | 0, 2 x4, 3, 4 x3 |
+
+Per-task state-bootstrap CIs are in read.json.
+
+### 6.2 Verdict (pre-declared, section 3)
+
+**H-cover FAILS.** Pooled coverage@16 on the wrong-goal carry states is 0.200 [0.00, 0.39], against a bar of 0.5. Stage B (verifier)
+and stage C (closed loop) are not run.
+
+### 6.3 Reading
+
+1. **The sandbox reproduces the outcomes.** The zs-seed run fails on 0.95 of the wrong-goal carry states (success 0.048) and
+   succeeds on 0.87 of the control carry states. The control states' own samples succeed 0.80 per seed, with coverage 0.97. The
+   measurement can therefore see success where it exists.
+2. **Once the object is grasped and carried, the error is mostly committed.**
+   - From the carry state, 31 of 42 wrong-goal states have no success in 32 samples. Those are all 9 of :40, 16 of 19 of :29 and 6 of
+     14 of :16.
+   - The successes concentrate in a few states (17, 30, 11, 11 of 32). Coverage therefore saturates at 0.16 on :29 and 0 on :40,
+     even at K = 32.
+   - No selection over the policy's own carry-phase samples can recover these states. That holds for any verifier, the oracle
+     included, since coverage is an oracle verifier's ceiling.
+3. **From the episode start, the correct behaviour IS in the distribution, but rarely.**
+   - The per-seed success from the start is 0.056, about what one expects of tasks the policy usually fails.
+   - The successes are spread across states (34 of 42 states have at least one success in 32), so coverage grows with K: 0.35 at 8,
+     0.57 at 16, 0.81 at 32.
+   - On :40, the carry states are 0 / 9 but the start states reach 0.75 at K = 16. The region outcome is decided at or before the
+     grasp (how and where the pan is picked up), not in the carry.
+   - So a selection route exists only at the episode level, or at least before the grasp. A pre-grasp verifier would have to
+     predict the final region from the approach / grasp, about 0.06 base rate, with K >= 16 whole-episode samples per state.
+4. **Consequence for verified search at carry queries (PLAN_R 2.4 as designed for R7 stage C).** It is closed: its oracle ceiling
+   is 0.20 at K = 16. That is the principled stopping point the question asked for, for the carry-phase route.
+
+### 6.4 Recommended next step (not run)
+
+- **Option 1: an episode- or grasp-level selection.** The ceiling is cov@16 0.57 from the start. It would need a deployable predictor
+  of the final region from the first chunks or from the grasp configuration, and K whole-episode samples, which are not deployable
+  without a simulator. In closed loop, the selection can only happen at the approach / grasp queries. Before designing a verifier,
+  measure the ceiling of a grasp-time selection: coverage from a state just before the grasp. That costs about 1 A40-h with the same
+  code (a new condition at D4's pre-grasp step).
+- **Option 2: change the conditioning.** The parse's region word enters only through the prompt. A test-time change of what the
+  policy is conditioned on (the language / vision binding of the region) is the remaining route for the carry-committed states.
+  Weights stay frozen.
+- Either option needs the user's approval: option 1 is a new stage, option 2 a new route.
+
+**Cost.** 7.7 A40-h: 6 packs, 1.21-1.40 h each, plus the smoke at about 0.03 h. Also 4 short CPU jobs (plan, pre-registration, read).
+
+**Disclosures.**
+- The cost exceeded the plan (5-6 A40-h). The wrong-goal runs use the full 400-step budget.
+- Five of :40's 14 fresh_d4 wrong-goal episodes have no D5 post-grasp observation, so they are not in the set (section 1).
+- Start and carry states are the same 42 episodes. The `start` condition re-samples the whole episode from its recorded first state.
+- A waiter command that contained `ls results/r7/sb | wc -l` was armed on the login node and stopped before it reached that line.
+  The line never ran. No python or data inspection ran on the login node: every computation ran via sbatch.
+- The read was run once with `--record`.
+- Audits after the read: audit_numbers 0 discrepancies over 2,064 checks; audit_coverage 0 uncovered numerals.
