@@ -1,0 +1,129 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "python experiments/bind_e3.py --read --record",
+ "config": {},
+ "env": {
+  "device": "NVIDIA GeForce RTX 2080 Ti",
+  "host": "vincent.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4243702",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "bind_e3",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "f0fc67224e663fdcd89671db41c15b8dc3422201",
+  "short": "f0fc6722"
+ },
+ "keys": {},
+ "metrics": {
+  "H1_verdict": "FAIL",
+  "H2_verdict": "PASS",
+  "H3_verdict": "FAIL",
+  "SSworld_minus_SSobj": {
+   "hi": -0.0016107357551158232,
+   "lo": -0.0024459610328230277,
+   "mean": -0.0020138924683263076,
+   "n": 489,
+   "tasks": 53
+  },
+  "gain_obj_10cm": {
+   "hi": 0.31449269308136807,
+   "lo": 0.22619885170500587,
+   "mean": 0.2714480434435988,
+   "n": 146,
+   "tasks": 50
+  },
+  "gain_obj_5cm": {
+   "hi": 0.35492428295915396,
+   "lo": 0.26858074988800174,
+   "mean": 0.3129466382123097,
+   "n": 164,
+   "tasks": 50
+  },
+  "gain_rig_5cm": {
+   "hi": 0.36684102206132696,
+   "lo": 0.26509106522546494,
+   "mean": 0.31671737742908723,
+   "n": 179,
+   "tasks": 49
+  },
+  "inj16-17_gain_obj_5cm": {
+   "hi": 0.0,
+   "lo": 0.0,
+   "mean": 0.0,
+   "n": 164,
+   "tasks": 50
+  },
+  "inj16-17_median_dist": {
+   "delta_lock": 1.3877787807814457e-17,
+   "src_abs": 0.2562939126927473,
+   "target": 0.04352587442556692
+  },
+  "inj16-17_target_minus_lock_dist": {
+   "hi": 0.05641089903981819,
+   "lo": 0.04054985967763568,
+   "mean": 0.04825846010860104,
+   "n": 54,
+   "tasks": 54
+  },
+  "inj16_gain_obj_5cm": {
+   "hi": 0.005736266634655117,
+   "lo": 0.0035561099474451887,
+   "mean": 0.004590454935616181,
+   "n": 164,
+   "tasks": 50
+  },
+  "inj16_median_dist": {
+   "delta_lock": 0.0004521821505745012,
+   "src_abs": 0.25612204983854026,
+   "target": 0.042692612887199693
+  },
+  "inj16_target_minus_lock_dist": {
+   "hi": 0.0535954507283855,
+   "lo": 0.038760466746245434,
+   "mean": 0.045962169064217094,
+   "n": 54,
+   "tasks": 54
+  },
+  "n_obs": 54,
+  "valid_conditions": 586,
+  "yaw_errobj_minus_errscene": {
+   "hi": 0.0030343026088157895,
+   "lo": 0.0001172774622680485,
+   "mean": 0.0015181455789032023,
+   "n": 97,
+   "tasks": 51
+  },
+  "yaw_errworld_minus_errscene": {
+   "hi": -0.005688093984776988,
+   "lo": -0.010726105243026179,
+   "mean": -0.008237510655483487,
+   "n": 97,
+   "tasks": 51
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "bind_e3__libero_90_c__read__s0__f0fc6722",
+ "schema": 1,
+ "script": "experiments/bind_e3.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T18:58:20+00:00",
+ "stream": null,
+ "tag": "read"
+}

@@ -97,3 +97,15 @@ The data support a ROLE-SPECIFIC version of the binding claim.
   from competence failures (:45, :32).
 - **Pooled prediction (a) as first stated is falsified** (E1). The theory keeps (a) for the goal role only. The object role needs
   its own account before S3 (the exemplar-aware gate) can cover it.
+- **Binding resolution (E4, docs/PLAN_E34.md):**
+  - Binding error rises with the depth of the referring expression: b_depth +2.01 [1.03, 15.4], controlling for scene
+    familiarity. Mean error is 0.18 for type, 0.38 for instance and 0.95 for relational sub-region.
+  - This gives the object role a candidate account: instance-level confusions (:58, :38).
+  - Power is thin. Depth 2 is mostly goal-role rows in new scenes, and object depth 1 has only familiar scenes.
+- **Frames (E3, docs/PLAN_E34.md):**
+  - Without injection, the approach endpoint is mostly WORLD-frame: it follows a 5 cm object move with gain 0.31 [0.27, 0.36],
+    0.27 at 10 cm, and 0.32 under a rigid scene shift. The world frame fits better than the object frame.
+  - "Follows the object frame" (P1) is falsified at the first-chunk endpoint.
+  - The program is set in the expert's residual stream by layer 16. Injecting a source task's layer-16 output gives a
+    hand-relative endpoint within 0.45 mm of the source program, and the target object no longer moves it (gain 0.005).
+  - The 16-17 arm passes trivially, because layer 17 is the last layer.

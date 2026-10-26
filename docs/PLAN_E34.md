@@ -89,3 +89,77 @@ An invalid condition is skipped.
 - Validity counts.
 
 **Server parity (checked at every start).** Injecting a request's own observation as the source reproduces the plain sampler.
+
+## 3. E4 result (read 2026-10-26; ledger bind_e4 tag read; results/bind/e4.json)
+
+**PASS as pre-registered.**
+- b_depth: +2.011, 95% CI [1.032, 15.39].
+- b_fam: -1.49 [-15.2, 0.11].
+
+The CI is wide because the bootstrap partly separates the data.
+
+**Mean error by depth.**
+
+| depth | mean error | n rows |
+|---|---|---|
+| 0 | 0.180 | 26 |
+| 1 | 0.381 | 8 |
+| 2 | 0.945 | 11 |
+
+The error rises monotonically with depth.
+
+**Confounds (as pre-stated).**
+- Goal depth 2 is 7 rows in new scenes and 4 in familiar ones.
+- Object depth 1 is 7 rows, all in familiar scenes.
+- So the object-role instance effect has no new-scene rows and rests on :38 and :58.
+
+**Disclosed coding miss.**
+- The pre-registered relational rule missed :76: its target names `desk_caddy`, not `desk_caddy_1`, so :76's goal was coded 1, not 2.
+- The pre-registered code stands. A post-hoc recode is descriptive only (experiments/bind_e4_posthoc.py, results/bind/e4_posthoc.json).
+- Recoded: b_depth 2.00 [1.10, 14.7]; depth means 0.148 / 0.381 / 0.949.
+
+**Post-hoc robustness (descriptive).**
+- Counting only wrong-region goal errors (failures to reach any goal are dropped): b_depth 2.09 [0.55, 17.9] on 37 rows.
+- The depth-2 goal rows that remain are :1 2/6, :29 39/39, :40 23/23 and :82 5/5.
+
+**Disclosures.**
+- E4 re-analyses already-read E2b data. The dry run printed the trial counts, which reveal the already-read P_obj.
+- Power is about 45 rows on 24 tasks, with depth confounded with scene novelty for the goal role.
+
+## 4. E3 result (read 2026-10-26; ledger bind_e3 tag read; results/bind/e3.json)
+
+**Coverage.** 54 observations; 586 valid conditions. Sandbox cost about 0.23 A40-h; the read ran on CPU.
+
+**H1: FAIL. The endpoint follows the object only partially.**
+- 5 cm object gain: 0.313 [0.269, 0.355] (50 tasks).
+- SS_world - SS_obj: -0.0020 [-0.0024, -0.0016]. The world frame fits better.
+- The PLAN_BIND falsifier ("world-frame fit >= object-frame fit without injection") is therefore met.
+
+**H3: FAIL.** 10 cm object gain: 0.271 [0.226, 0.314]. The gain is smaller at 10 cm than at 5 cm.
+
+**Descriptive.**
+- Rigid 5 cm translation of the whole scene: gain 0.317 [0.265, 0.367], the same as moving the named object alone.
+- Yaw +-10 deg:
+  - err_world - err_scene: -0.0082 [-0.0107, -0.0057]. The world prediction beats the scene prediction.
+  - err_obj - err_scene: +0.0015 [+0.0001, +0.0030].
+- Reading: about a third of the displacement shows up in the first-chunk endpoint, whether the object or the whole scene moves.
+  The endpoint is mostly a world-frame program, with a weak visual correction.
+
+**H2: PASS, but the pass is uninformative by construction (disclosed).**
+- inj16-17: gain under a 5 cm object move 0.000 [0, 0]; target - lock distance +0.048 [+0.041, +0.056] m; median distance to the
+  locked source program 1e-17 m.
+- The expert has 18 layers (0-17), so layer 17 is the last. Replacing its output replaces the action head's whole input. Under the
+  same noise the output therefore equals the source rows exactly.
+- This design flaw was not caught at pre-registration.
+- **The informative arm is inj16 (layer 16 only, descriptive):**
+  - gain 0.0046 [0.0036, 0.0057];
+  - median distance to the source program 0.45 mm, vs 43 mm to the target's own endpoint;
+  - target - lock +0.046 [+0.039, +0.054] m.
+- So once layer 16's expert output is fixed, layer 17's attention to the target's own prefix moves the endpoint by less than 1 mm.
+  By layer 16 the expert residual stream carries the whole program.
+- The absolute source endpoint (median 0.256 m away) is not reproduced. What transfers is the hand-relative program.
+
+**Fix applied before the read (disclosed).** The pre-registered read called `d4_read.scale_for("pi05_l90c")`. The MODELS key is
+`"l90c"`, and the wrong key made three earlier read attempts exit silently before any statistic was computed. The key was corrected
+in experiments/bind_e3.py line 238. The scale is the existing D4 constant (it is not an outcome). The ledger row carries dirty=true
+(the shared tree has other agents' uncommitted edits).

@@ -235,7 +235,7 @@ def sandbox(shard, port):
 
 def read(record=False):
     import d4_read
-    scale = d4_read.scale_for("pi05_l90c")
+    scale = d4_read.scale_for("l90c")
     P = jload(os.path.join(OUT, "e3_plan.json"))["obs"]
     rec = {}
     for o in P:

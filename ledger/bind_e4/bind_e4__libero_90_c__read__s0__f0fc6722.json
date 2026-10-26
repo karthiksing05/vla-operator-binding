@@ -1,0 +1,114 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "python experiments/bind_e4.py --record",
+ "config": {},
+ "env": {
+  "device": "NVIDIA GeForce RTX 2080 Ti",
+  "host": "vincent.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4243372",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "bind_e4",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "f0fc67224e663fdcd89671db41c15b8dc3422201",
+  "short": "f0fc6722"
+ },
+ "keys": {},
+ "metrics": {
+  "b_depth_ci": [
+   1.0324009332438548,
+   15.3931480529485
+  ],
+  "b_fam_ci": [
+   -15.186821239946756,
+   0.11115244852363729
+  ],
+  "coef": {
+   "b0": -1.5307630529012746,
+   "b_depth": 2.010987862740759,
+   "b_fam": -1.4854129929328308,
+   "b_role_goal": 2.112561859865929
+  },
+  "counts": {
+   "goal|d0|fam0": 1,
+   "goal|d0|fam1": 8,
+   "goal|d1|fam0": 0,
+   "goal|d1|fam1": 1,
+   "goal|d2|fam0": 7,
+   "goal|d2|fam1": 4,
+   "object|d0|fam0": 9,
+   "object|d0|fam1": 8,
+   "object|d1|fam0": 0,
+   "object|d1|fam1": 7,
+   "object|d2|fam0": 0,
+   "object|d2|fam1": 0
+  },
+  "mean_err_by_depth": {
+   "0": {
+    "mean": 0.18035714285714288,
+    "n": 26
+   },
+   "1": {
+    "mean": 0.38125,
+    "n": 8
+   },
+   "2": {
+    "mean": 0.9446969696969696,
+    "n": 11
+   }
+  },
+  "mean_err_by_depth_fam0": {
+   "0": {
+    "mean": 0.21749999999999997,
+    "n": 10
+   },
+   "2": {
+    "mean": 1.0,
+    "n": 7
+   }
+  },
+  "mean_err_by_depth_fam1": {
+   "0": {
+    "mean": 0.15714285714285714,
+    "n": 16
+   },
+   "1": {
+    "mean": 0.38125,
+    "n": 8
+   },
+   "2": {
+    "mean": 0.8479166666666667,
+    "n": 4
+   }
+  },
+  "n_boot": 2000,
+  "n_rows": 45,
+  "n_tasks": 24,
+  "verdict": "PASS (not falsified)"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "bind_e4__libero_90_c__read__s0__f0fc6722",
+ "schema": 1,
+ "script": "experiments/bind_e4.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T18:34:53+00:00",
+ "stream": null,
+ "tag": "read"
+}
