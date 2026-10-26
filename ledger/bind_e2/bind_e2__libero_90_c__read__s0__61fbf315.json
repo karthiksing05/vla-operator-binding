@@ -1,0 +1,256 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "python experiments/bind_e2.py --read --record",
+ "config": {},
+ "env": {
+  "device": "NVIDIA TITAN Xp",
+  "host": "walle.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4242144",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "bind_e2",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "61fbf3156a1360fb00eacd44527be9cb1b079856",
+  "short": "61fbf315"
+ },
+ "keys": {},
+ "metrics": {
+  "calibration": {
+   "hi": 0.9448342439962434,
+   "intercept": 0.14310552645054558,
+   "lo": -0.03929349136401353,
+   "slope": 0.45335013983534894
+  },
+  "mean_abs_err": 0.28020833333333334,
+  "n_tasks": 24,
+  "per_task": {
+   "libero_90:1": {
+    "P_hat": 0.1,
+    "P_obj": 0.425,
+    "early_success": 0.075,
+    "grasp": 0.625,
+    "n": 40,
+    "zs_success": 0.25
+   },
+   "libero_90:14": {
+    "P_hat": 0.95,
+    "P_obj": 1.0,
+    "early_success": 0.8,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 1.0
+   },
+   "libero_90:16": {
+    "P_hat": 0.5,
+    "P_obj": 1.0,
+    "early_success": 0.05,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.1
+   },
+   "libero_90:29": {
+    "P_hat": 0.0,
+    "P_obj": 1.0,
+    "early_success": 0.0,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.05
+   },
+   "libero_90:32": {
+    "P_hat": 0.975,
+    "P_obj": 1.0,
+    "early_success": 0.0,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.0
+   },
+   "libero_90:36": {
+    "P_hat": 0.825,
+    "P_obj": 1.0,
+    "early_success": 0.125,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.85
+   },
+   "libero_90:38": {
+    "P_hat": 0.0,
+    "P_obj": 0.0,
+    "early_success": 0.0,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.0
+   },
+   "libero_90:40": {
+    "P_hat": 0.275,
+    "P_obj": 1.0,
+    "early_success": 0.275,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.0
+   },
+   "libero_90:45": {
+    "P_hat": 1.0,
+    "P_obj": 1.0,
+    "early_success": 0.0,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.0
+   },
+   "libero_90:50": {
+    "P_hat": 0.575,
+    "P_obj": 0.875,
+    "early_success": 0.05,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.9
+   },
+   "libero_90:58": {
+    "P_hat": 0.0,
+    "P_obj": 0.0,
+    "early_success": 0.0,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.0
+   },
+   "libero_90:59": {
+    "P_hat": 0.6,
+    "P_obj": 1.0,
+    "early_success": 0.25,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 1.0
+   },
+   "libero_90:60": {
+    "P_hat": 0.05,
+    "P_obj": 1.0,
+    "early_success": 0.05,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.95
+   },
+   "libero_90:61": {
+    "P_hat": 0.0,
+    "P_obj": 1.0,
+    "early_success": 0.0,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 1.0
+   },
+   "libero_90:73": {
+    "P_hat": 0.375,
+    "P_obj": 1.0,
+    "early_success": 0.0,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.0
+   },
+   "libero_90:75": {
+    "P_hat": 0.2,
+    "P_obj": 0.975,
+    "early_success": 0.0,
+    "grasp": 0.975,
+    "n": 40,
+    "zs_success": 0.0
+   },
+   "libero_90:76": {
+    "P_hat": 0.0,
+    "P_obj": 1.0,
+    "early_success": 0.0,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.0
+   },
+   "libero_90:77": {
+    "P_hat": 0.0,
+    "P_obj": 1.0,
+    "early_success": 0.0,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.0
+   },
+   "libero_90:78": {
+    "P_hat": 0.45,
+    "P_obj": 0.975,
+    "early_success": 0.0,
+    "grasp": 0.975,
+    "n": 40,
+    "zs_success": 0.0
+   },
+   "libero_90:79": {
+    "P_hat": 0.0,
+    "P_obj": 1.0,
+    "early_success": 0.0,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.0
+   },
+   "libero_90:80": {
+    "P_hat": 0.1,
+    "P_obj": 0.875,
+    "early_success": 0.0,
+    "grasp": 0.925,
+    "n": 40,
+    "zs_success": 0.0
+   },
+   "libero_90:82": {
+    "P_hat": 0.0,
+    "P_obj": 0.975,
+    "early_success": 0.0,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.0
+   },
+   "libero_90:83": {
+    "P_hat": 0.0,
+    "P_obj": 0.025,
+    "early_success": 0.0,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.0
+   },
+   "libero_90:9": {
+    "P_hat": 1.0,
+    "P_obj": 1.0,
+    "early_success": 0.725,
+    "grasp": 1.0,
+    "n": 40,
+    "zs_success": 0.95
+   }
+  },
+  "spearman": {
+   "hi": 0.7158226648096432,
+   "lo": -0.08972842630129195,
+   "p_le0": 0.058,
+   "rho": 0.34092967658532164
+  },
+  "spearman_P_obj": 0.31827095769550134,
+  "verdict": "FAIL (falsified)",
+  "verdict_calibration": "PASS",
+  "verdict_rank": "FAIL"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "bind_e2__libero_90_c__read__s0__61fbf315",
+ "schema": 1,
+ "script": "experiments/bind_e2.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T17:28:13+00:00",
+ "stream": null,
+ "tag": "read"
+}
