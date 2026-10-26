@@ -218,3 +218,28 @@ The caddy (unseen body type) is reported separately.
 
 **Power (stated honestly).** (i) has ONE task: :1, "on top of the top drawer of the cabinet", 5 units. It is a weak test; all
 cells are reported with CIs.
+
+## 7. S1b result (progress note; read 2026-10-26; ledger s1b_bind tag read; results/bind/s1b.json)
+
+**FAIL as pre-registered.**
+- (i) Depth-2 held-out with a seen body type: **0.60 [0.20, 1.00]**. This is one task (:1), 5 units, below the 0.70 bar.
+- (ii) Depth 0: S1b **0.821 [0.70, 0.93]** >= GroundingDINO alone (0.786). This condition passes.
+
+**What the factorisation bought.**
+- **Type-level transfer to new scenes.** Held-out depth 0 with a seen body type is 0.911 [0.76, 1.00], vs B1b 0.267. The book in
+  STUDY_SCENE1-3 goes from 0.00-0.60 (B1b) to 0.60-1.00.
+
+**What it lost or still lacks.**
+- **The instance stage is weak.**
+  - "middle black bowl" 0.20 (B1b 1.00); "black bowl at the front" 0.00 (0.80); "right moka pot" 0.00 (0.60).
+  - The plain "black bowl" (:9, :29, :1) scores 0.00-0.20. The detector's bowl boxes do not isolate single bowls, so the
+    instance labels were dropped in training (section 6), and the chosen box is often the wrong body.
+- **Seen sub-regions are partly lost.** "in the top drawer of the cabinet" 1.00 (:29, :32), but "on the cabinet shelf" 0.00 (:40).
+- **The caddy (unseen body type) stays at 0.125.** Only "back compartment" hits. A relation head trained without any compartment
+  does not transfer "front / left / right compartment".
+
+**Reading.**
+- Body x relation factorisation fixes the scene transfer that B1b lacked, at type level.
+- Instances and sub-regions on detector boxes are not yet solved. The depth-1 / depth-2 numbers sit at or below B1b's.
+- **Next:** S0 (adapter + ORACLE binding) tests whether a correct binding, however obtained, fixes the policy. That decides whether
+  the binder is worth improving.
