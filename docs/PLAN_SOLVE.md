@@ -74,3 +74,15 @@ binder (B1a) is a comparison. The adapter is trained once per policy, never per 
 2. Is an off-the-shelf binder (B1a) acceptable as the main deployable variant, or should B1b (our own binder, trained on
    training cells only) be the headline and B1a a comparison?
 3. Budget: S0 is the gate, at about 15-25 A40-h including adapter training.
+
+## 6. S1 result (2026-10-26; docs/PLAN_S1.md section 5; ledger s1_bind tag read)
+
+**S1 FAILS as pre-registered.**
+- B1b depth-2 held-out hit: 0.378 [0.11, 0.67], below 0.70.
+- At depth 0, B1b is below the SigLIP anchor: 0.733 vs 0.867.
+
+**What failed.**
+- B1b is near-perfect on seen phrase x scene combinations at every depth: depth 2 1.00, where the anchor and GroundingDINO score 0.
+- It collapses in scenes no training cell covers: the STUDY_SCENE1-3 tasks score depth 0 0.24, and the never-labelled caddy's
+  compartments are at chance.
+- GroundingDINO is the mirror image: 0.90 on held-out depth 0, but 0.00-0.20 on sub-regions and qualifiers.

@@ -113,3 +113,52 @@ entity and region with a phrase gets an example, not only the cell's own target.
 - Render: CPU, about 0.05 A40-h (the GPU-allocated shards).
 - Features: about 0.1 A40-h. Training: about 0.2 A40-h. B1a: about 0.05 A40-h.
 - The read is on CPU. Total: under 1 A40-h.
+
+## 5. Result (read 2026-10-26; ledger s1_bind tag read; results/bind/s1.json)
+
+**FAIL on both pre-declared conditions.**
+- (i) B1b's depth-2 held-out hit is **0.378 [0.111, 0.667]** (45 units, 9 tasks), below 0.70.
+- (ii) At depth 0, B1b is below the anchor on the units with a prototype: 0.733 [0.56, 0.88] vs 0.867 [0.76, 0.95].
+  - At depth 1: 0.60 vs 0.45. At depth 2: 0.90 vs 0.00 (4 tasks).
+
+**Hit by method** (two-level task-cluster bootstrap):
+
+| depth / split | n (tasks) | B1b (ours) | B1a GroundingDINO | anchor (proto units) |
+|---|---|---|---|---|
+| 0 seen | 90 (14) | 0.967 [0.89, 1.00] | 0.722 [0.54, 0.89] | 0.911 |
+| 0 held-out | 50 (9) | 0.240 [0.07, 0.42] | 0.900 [0.72, 1.00] | 0.778 (45) |
+| 1 seen | 25 (5) | 0.800 [0.56, 1.00] | 0.200 [0.00, 0.60] | 0.600 |
+| 1 held-out | 15 (3) | 0.267 [0.00, 0.60] | 0.000 | 0.200 |
+| 2 seen | 15 (3) | 1.000 [1.00, 1.00] | 0.000 | 0.000 |
+| 2 held-out | 45 (9) | 0.378 [0.11, 0.67] | 0.111 [0.00, 0.33] | 0.000 (5; the caddy has no prototype) |
+
+**Reading.**
+- **B1b resolves what the training labels taught, in the scenes they taught it, at every depth.**
+  - Seen depth 2 is 1.00: "in the top drawer of the cabinet" on :29 / :32, "on the cabinet shelf" on :40. The anchor and
+    GroundingDINO both score 0 there: they find the body, not the region.
+  - Seen depth 1 is 0.80: "middle black bowl" 1.00, "black bowl at the front" 0.80.
+- **It does not transfer out of the training scenes.**
+  - The STUDY_SCENE1-3 tasks are a scene family with no training cell. Even the TYPE phrase "book" falls to 0.00-0.60 (depth 0
+    held-out 0.24), where GroundingDINO gets 1.00.
+  - The caddy compartments (a body never labelled) are 0 on 5 of 8 tasks and 0.8-1.0 on 3. With four compartments, this is not
+    above chance.
+  - New phrasings in familiar scenes partly transfer:
+    - :1 "on top of the top drawer of the cabinet" 0.60;
+    - :38 "right moka pot" 0.60;
+    - :16's goal "on the black bowl in the middle" 0.20;
+    - :60 "black bowl on the left" 0.00 (training said "left bowl"; the anchor gets 0.60).
+- **The two binders fail in complementary places.**
+  - GroundingDINO handles new scenes at type level (0.90 held-out depth 0) and fails every relational sub-region and every
+    instance qualifier (0.00-0.20).
+  - B1b handles sub-regions and qualifiers in the training scene distribution and fails new scenes.
+  - The headline claim (B1b resolves held-out combinations) is not supported.
+- **IoU:** B1b's sigmoid masks are under-confident (IoU 0.22 at depth 0, 0.35 at depth 2; mostly empty at 0.5). GroundingDINO's
+  boxes give 0.53 at depth 0 and 0.09 at depth 2. The peak hit is the informative measure here.
+
+**Disclosures.**
+- The competitor rule replaces the brief's plain "target-in-mask" for overlapping region boxes. It was declared before the read; the
+  loose hit is in results/bind/s1.json.
+- RoboRefer was not run, and GroundingDINO was run without depth.
+- :76's goal is coded depth 0 by E4's pre-registered code. It is held-out and missed by all three methods.
+- The within-training check (frames k >= 7, loose hit) was 0.93 object / 0.98 goal. B1b fits its training distribution.
+- The ledger rows carry dirty=true, because other agents' edits are in the shared tree.
