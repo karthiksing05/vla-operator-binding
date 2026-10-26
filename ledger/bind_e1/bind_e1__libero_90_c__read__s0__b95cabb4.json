@@ -1,0 +1,159 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "python experiments/bind_e1.py --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "gideon.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4242001",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "bind_e1",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "b95cabb4107e4c7114a4135ef53c340fa1e953d8",
+  "short": "b95cabb4"
+ },
+ "keys": {},
+ "metrics": {
+  "EX_base_freq": {
+   "hi": 0.7025777253049981,
+   "lo": 0.1594452608114596,
+   "mean": 0.36720487648148825,
+   "n": 92,
+   "tasks": 7
+  },
+  "EX_hit": {
+   "hi": 0.7260273972602739,
+   "lo": 0.07560137457044673,
+   "mean": 0.36775362318840576,
+   "n": 92,
+   "tasks": 7
+  },
+  "EX_minus_IS": {
+   "hi": 0.25208755630630625,
+   "lo": -0.18855536497045935,
+   "mean": 0.03804347826086957,
+   "n": 92,
+   "tasks": 7
+  },
+  "EX_minus_freq": {
+   "hi": 0.5547197809037665,
+   "lo": -0.5575553261047117,
+   "mean": 0.000548746706917634,
+   "n": 92,
+   "tasks": 7
+  },
+  "EX_minus_freq_goal": {
+   "hi": 0.8719211822660099,
+   "lo": 0.13157443157443155,
+   "mean": 0.48263203154125045,
+   "n": 49,
+   "tasks": 4
+  },
+  "EX_minus_freq_object": {
+   "hi": -0.11451048951048949,
+   "lo": -0.9690860215053764,
+   "mean": -0.5488019732205779,
+   "n": 43,
+   "tasks": 4
+  },
+  "EX_minus_unif": {
+   "hi": 0.544593790774426,
+   "lo": -0.5546298174442191,
+   "mean": 0.008152173913043478,
+   "n": 92,
+   "tasks": 7
+  },
+  "IS_base_freq": {
+   "hi": 0.6111333809977246,
+   "lo": 0.17848178839260315,
+   "mean": 0.3731651339314175,
+   "n": 135,
+   "tasks": 14
+  },
+  "IS_hit": {
+   "hi": 0.43940348866819434,
+   "lo": 0.005248318569553807,
+   "mean": 0.22469135802469134,
+   "n": 135,
+   "tasks": 14
+  },
+  "IS_minus_freq": {
+   "hi": 0.21098194782347912,
+   "lo": -0.530195622350754,
+   "mean": -0.14847377590672614,
+   "n": 135,
+   "tasks": 14
+  },
+  "IS_minus_freq_goal": {
+   "hi": 0.4647496492324078,
+   "lo": -0.14160206718346258,
+   "mean": 0.2449702560334744,
+   "n": 72,
+   "tasks": 10
+  },
+  "IS_minus_freq_object": {
+   "hi": -0.2240490006447453,
+   "lo": -0.9583333333333333,
+   "mean": -0.5981240981240981,
+   "n": 63,
+   "tasks": 7
+  },
+  "by_role": {
+   "goal": 72,
+   "object": 63
+  },
+  "by_task": {
+   "libero_90:1": 2,
+   "libero_90:16": 14,
+   "libero_90:29": 19,
+   "libero_90:38": 20,
+   "libero_90:40": 16,
+   "libero_90:58": 20,
+   "libero_90:60": 1,
+   "libero_90:76": 4,
+   "libero_90:77": 1,
+   "libero_90:78": 2,
+   "libero_90:79": 3,
+   "libero_90:80": 2,
+   "libero_90:82": 13,
+   "libero_90:83": 18
+  },
+  "discordant": {
+   "ex_better": 34,
+   "is_better": 18,
+   "n": 52
+  },
+  "ex_undefined_new_scene": 43,
+  "excluded": {
+   "carried_elsewhere_no_site_10cm": 80
+  },
+  "n_units": 135,
+  "verdict": "FAIL (falsified)"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "bind_e1__libero_90_c__read__s0__b95cabb4",
+ "schema": 1,
+ "script": "experiments/bind_e1.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T17:07:01+00:00",
+ "stream": null,
+ "tag": "read"
+}

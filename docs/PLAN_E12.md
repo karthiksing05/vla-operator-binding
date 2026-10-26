@@ -83,3 +83,50 @@ bound), LIBERO success, or the 400-step budget.
 
 **Cost (planned).** About 960 runs, mostly ending at the first release: roughly 2-3 A40-h on 2 A40 jobs x 3 pairs. Together with E1
 on CPU, this is within the 6 A40-h budget.
+
+## 3. E1 result (ledger `bind_e1` tag read, results/bind/e1.json; pre-registration b95cabb4)
+
+**Units.** 135 units (63 object, 72 goal) on 14 tasks; 80 carried_elsewhere episodes were excluded. EX is defined on 92 units (7
+tasks) and undefined on 43, which lie in scenes with no training cell (the caddy STUDY scenes and :38's KITCHEN_SCENE8).
+Intervals are two-level task-cluster bootstrap 95% intervals. With 7 tasks they are very wide.
+
+| statistic | value |
+|---|---|
+| EX hit rate | 0.368 [0.08, 0.73] (n 92, 7 tasks) |
+| frequency-matched baseline on the same units | 0.367 |
+| **EX - P_freq (PRIMARY)** | **+0.001 [-0.558, +0.555]** |
+| EX - uniform | +0.008 [-0.555, +0.545] |
+| IS hit rate | 0.225 (n 135, 14 tasks) |
+| IS - P_freq | -0.148 [-0.530, +0.211] |
+| EX - IS (where both are defined) | +0.038 [-0.189, +0.252]; 52 discordant units: EX-only 34, IS-only 18 |
+| **by role: goal, EX - P_freq** | **+0.483 [+0.132, +0.872]** (49 units, 4 tasks) |
+| **by role: object, EX - P_freq** | **-0.549 [-0.969, -0.115]** (43 units, 4 tasks) |
+| by role: IS - P_freq, goal / object | +0.245 [-0.142, +0.465] / -0.598 [-0.958, -0.224] |
+
+**Per task (the zs wrong fillers against the predictions):**
+- **:29:** the filler is the cabinet top side in 18 of 19. EX names the top side; this scene's training task :25 is "put the black
+  bowl on top of the cabinet". IS also names the top side (0.67).
+- **:40:** the shelf top side 9, bottom region 7. EX names the top side (:43, "on top of the cabinet"); IS names the bottom region
+  (:42).
+- **:16:** the third bowl 11, the plate 3. EX ties between the plate, the cabinet top side and bowl_3; IS names bowl_3 (:17).
+- **:58:** tomato sauce 19 of 20. EX names alphabet soup / cream cheese; IS is split three ways.
+- **:38:** moka_pot_2 in 20. EX is undefined (new scene), and there is a single candidate (P_freq 1.0).
+- **:83:** the porcelain mug in 18. EX is undefined (new scene).
+
+**Verdict (pre-declared): E1 FAILS.** EX - P_freq has a lower bound of -0.56 <= 0. Prediction (a) is falsified as stated, for
+binding failures pooled over roles.
+
+**Reading (descriptive).**
+1. **Goal role (region / goal errors): the exemplar account holds strongly.** EX - P_freq is +0.48 with a CI above 0, on :29, :40
+   and :16's plate errors.
+   - The zs goal is the region that the scene's own training instruction binds. This is the R8 lexicon observation, now measured.
+   - It also beats the instruction-similar account (IS) on goal: +0.48 vs +0.25.
+2. **Object role (wrong-object errors): neither account holds; both are below the baseline.**
+   - The wrong object is not the scene's most frequent training object, and not the most similar instruction's object.
+   - On :58 the policy picks the tomato sauce, which no :58-scene training instruction or nearest instruction names first. On :38
+     and :83 the scenes have no training cell at all.
+3. **The theory therefore needs a role-specific refinement before E3-E5.**
+   - "Binding P is exemplar-like" holds for the goal role.
+   - The object role's errors are not explained by scene exemplars and need another account: for example visual similarity /
+     salience, or a nearest-type prior. E1 does not test those.
+4. **Power.** Only 7 tasks define EX, and two tasks with 18-20 units dominate each role. The pooled interval spans about +-0.55.

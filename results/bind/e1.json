@@ -1,0 +1,3206 @@
+{
+ "n_units": 135,
+ "excluded": {
+  "carried_elsewhere_no_site_10cm": 80
+ },
+ "by_role": {
+  "goal": 72,
+  "object": 63
+ },
+ "by_task": {
+  "libero_90:16": 14,
+  "libero_90:60": 1,
+  "libero_90:1": 2,
+  "libero_90:29": 19,
+  "libero_90:40": 16,
+  "libero_90:58": 20,
+  "libero_90:76": 4,
+  "libero_90:77": 1,
+  "libero_90:78": 2,
+  "libero_90:79": 3,
+  "libero_90:80": 2,
+  "libero_90:82": 13,
+  "libero_90:83": 18,
+  "libero_90:38": 20
+ },
+ "ex_undefined_new_scene": 43,
+ "EX_hit": {
+  "mean": 0.36775362318840576,
+  "lo": 0.07560137457044673,
+  "hi": 0.7260273972602739,
+  "n": 92,
+  "tasks": 7
+ },
+ "EX_base_freq": {
+  "mean": 0.36720487648148825,
+  "lo": 0.1594452608114596,
+  "hi": 0.7025777253049981,
+  "n": 92,
+  "tasks": 7
+ },
+ "EX_minus_freq": {
+  "mean": 0.000548746706917634,
+  "lo": -0.5575553261047117,
+  "hi": 0.5547197809037665,
+  "n": 92,
+  "tasks": 7
+ },
+ "EX_minus_unif": {
+  "mean": 0.008152173913043478,
+  "lo": -0.5546298174442191,
+  "hi": 0.544593790774426,
+  "n": 92,
+  "tasks": 7
+ },
+ "IS_hit": {
+  "mean": 0.22469135802469134,
+  "lo": 0.005248318569553807,
+  "hi": 0.43940348866819434,
+  "n": 135,
+  "tasks": 14
+ },
+ "IS_base_freq": {
+  "mean": 0.3731651339314175,
+  "lo": 0.17848178839260315,
+  "hi": 0.6111333809977246,
+  "n": 135,
+  "tasks": 14
+ },
+ "IS_minus_freq": {
+  "mean": -0.14847377590672614,
+  "lo": -0.530195622350754,
+  "hi": 0.21098194782347912,
+  "n": 135,
+  "tasks": 14
+ },
+ "EX_minus_IS": {
+  "mean": 0.03804347826086957,
+  "lo": -0.18855536497045935,
+  "hi": 0.25208755630630625,
+  "n": 92,
+  "tasks": 7
+ },
+ "discordant": {
+  "n": 52,
+  "ex_better": 34,
+  "is_better": 18
+ },
+ "EX_minus_freq_object": {
+  "mean": -0.5488019732205779,
+  "lo": -0.9690860215053764,
+  "hi": -0.11451048951048949,
+  "n": 43,
+  "tasks": 4
+ },
+ "IS_minus_freq_object": {
+  "mean": -0.5981240981240981,
+  "lo": -0.9583333333333333,
+  "hi": -0.2240490006447453,
+  "n": 63,
+  "tasks": 7
+ },
+ "EX_minus_freq_goal": {
+  "mean": 0.48263203154125045,
+  "lo": 0.13157443157443155,
+  "hi": 0.8719211822660099,
+  "n": 49,
+  "tasks": 4
+ },
+ "IS_minus_freq_goal": {
+  "mean": 0.2449702560334744,
+  "lo": -0.14160206718346258,
+  "hi": 0.4647496492324078,
+  "n": 72,
+  "tasks": 10
+ },
+ "verdict": "FAIL (falsified)",
+ "units": [
+  {
+   "tid": "libero_90:16",
+   "scene": "KITCHEN_SCENE2",
+   "trial": 0,
+   "role": "goal",
+   "filler": "akita_black_bowl_3",
+   "label": "bddl",
+   "n_cands": 7,
+   "p_freq": 0.10810810810810811,
+   "p_unif": 0.14285714285714285,
+   "ex": {
+    "plate_1": 0.3333333333333333,
+    "wooden_cabinet_1_top_side": 0.3333333333333333,
+    "akita_black_bowl_3": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_3": 1.0
+   },
+   "is_near": [
+    "libero_90:17"
+   ],
+   "is_sim": 0.6,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:16",
+   "scene": "KITCHEN_SCENE2",
+   "trial": 1,
+   "role": "goal",
+   "filler": "akita_black_bowl_3",
+   "label": "bddl",
+   "n_cands": 7,
+   "p_freq": 0.10810810810810811,
+   "p_unif": 0.14285714285714285,
+   "ex": {
+    "plate_1": 0.3333333333333333,
+    "wooden_cabinet_1_top_side": 0.3333333333333333,
+    "akita_black_bowl_3": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_3": 1.0
+   },
+   "is_near": [
+    "libero_90:17"
+   ],
+   "is_sim": 0.6,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:16",
+   "scene": "KITCHEN_SCENE2",
+   "trial": 2,
+   "role": "goal",
+   "filler": "plate_1",
+   "label": "bddl",
+   "n_cands": 7,
+   "p_freq": 0.5675675675675675,
+   "p_unif": 0.14285714285714285,
+   "ex": {
+    "plate_1": 0.3333333333333333,
+    "wooden_cabinet_1_top_side": 0.3333333333333333,
+    "akita_black_bowl_3": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_3": 1.0
+   },
+   "is_near": [
+    "libero_90:17"
+   ],
+   "is_sim": 0.6,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:16",
+   "scene": "KITCHEN_SCENE2",
+   "trial": 6,
+   "role": "goal",
+   "filler": "akita_black_bowl_3",
+   "label": "bddl",
+   "n_cands": 7,
+   "p_freq": 0.10810810810810811,
+   "p_unif": 0.14285714285714285,
+   "ex": {
+    "plate_1": 0.3333333333333333,
+    "wooden_cabinet_1_top_side": 0.3333333333333333,
+    "akita_black_bowl_3": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_3": 1.0
+   },
+   "is_near": [
+    "libero_90:17"
+   ],
+   "is_sim": 0.6,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:16",
+   "scene": "KITCHEN_SCENE2",
+   "trial": 7,
+   "role": "goal",
+   "filler": "plate_1",
+   "label": "bddl",
+   "n_cands": 7,
+   "p_freq": 0.5675675675675675,
+   "p_unif": 0.14285714285714285,
+   "ex": {
+    "plate_1": 0.3333333333333333,
+    "wooden_cabinet_1_top_side": 0.3333333333333333,
+    "akita_black_bowl_3": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_3": 1.0
+   },
+   "is_near": [
+    "libero_90:17"
+   ],
+   "is_sim": 0.6,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:16",
+   "scene": "KITCHEN_SCENE2",
+   "trial": 9,
+   "role": "goal",
+   "filler": "plate_1",
+   "label": "bddl",
+   "n_cands": 7,
+   "p_freq": 0.5675675675675675,
+   "p_unif": 0.14285714285714285,
+   "ex": {
+    "plate_1": 0.3333333333333333,
+    "wooden_cabinet_1_top_side": 0.3333333333333333,
+    "akita_black_bowl_3": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_3": 1.0
+   },
+   "is_near": [
+    "libero_90:17"
+   ],
+   "is_sim": 0.6,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:16",
+   "scene": "KITCHEN_SCENE2",
+   "trial": 10,
+   "role": "goal",
+   "filler": "akita_black_bowl_3",
+   "label": "bddl",
+   "n_cands": 7,
+   "p_freq": 0.10810810810810811,
+   "p_unif": 0.14285714285714285,
+   "ex": {
+    "plate_1": 0.3333333333333333,
+    "wooden_cabinet_1_top_side": 0.3333333333333333,
+    "akita_black_bowl_3": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_3": 1.0
+   },
+   "is_near": [
+    "libero_90:17"
+   ],
+   "is_sim": 0.6,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:16",
+   "scene": "KITCHEN_SCENE2",
+   "trial": 11,
+   "role": "goal",
+   "filler": "akita_black_bowl_3",
+   "label": "bddl",
+   "n_cands": 7,
+   "p_freq": 0.10810810810810811,
+   "p_unif": 0.14285714285714285,
+   "ex": {
+    "plate_1": 0.3333333333333333,
+    "wooden_cabinet_1_top_side": 0.3333333333333333,
+    "akita_black_bowl_3": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_3": 1.0
+   },
+   "is_near": [
+    "libero_90:17"
+   ],
+   "is_sim": 0.6,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:16",
+   "scene": "KITCHEN_SCENE2",
+   "trial": 12,
+   "role": "goal",
+   "filler": "akita_black_bowl_3",
+   "label": "bddl",
+   "n_cands": 7,
+   "p_freq": 0.10810810810810811,
+   "p_unif": 0.14285714285714285,
+   "ex": {
+    "plate_1": 0.3333333333333333,
+    "wooden_cabinet_1_top_side": 0.3333333333333333,
+    "akita_black_bowl_3": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_3": 1.0
+   },
+   "is_near": [
+    "libero_90:17"
+   ],
+   "is_sim": 0.6,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:16",
+   "scene": "KITCHEN_SCENE2",
+   "trial": 13,
+   "role": "goal",
+   "filler": "akita_black_bowl_3",
+   "label": "bddl",
+   "n_cands": 7,
+   "p_freq": 0.10810810810810811,
+   "p_unif": 0.14285714285714285,
+   "ex": {
+    "plate_1": 0.3333333333333333,
+    "wooden_cabinet_1_top_side": 0.3333333333333333,
+    "akita_black_bowl_3": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_3": 1.0
+   },
+   "is_near": [
+    "libero_90:17"
+   ],
+   "is_sim": 0.6,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:16",
+   "scene": "KITCHEN_SCENE2",
+   "trial": 15,
+   "role": "goal",
+   "filler": "akita_black_bowl_3",
+   "label": "bddl",
+   "n_cands": 7,
+   "p_freq": 0.10810810810810811,
+   "p_unif": 0.14285714285714285,
+   "ex": {
+    "plate_1": 0.3333333333333333,
+    "wooden_cabinet_1_top_side": 0.3333333333333333,
+    "akita_black_bowl_3": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_3": 1.0
+   },
+   "is_near": [
+    "libero_90:17"
+   ],
+   "is_sim": 0.6,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:16",
+   "scene": "KITCHEN_SCENE2",
+   "trial": 16,
+   "role": "goal",
+   "filler": "akita_black_bowl_3",
+   "label": "bddl",
+   "n_cands": 7,
+   "p_freq": 0.10810810810810811,
+   "p_unif": 0.14285714285714285,
+   "ex": {
+    "plate_1": 0.3333333333333333,
+    "wooden_cabinet_1_top_side": 0.3333333333333333,
+    "akita_black_bowl_3": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_3": 1.0
+   },
+   "is_near": [
+    "libero_90:17"
+   ],
+   "is_sim": 0.6,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:16",
+   "scene": "KITCHEN_SCENE2",
+   "trial": 17,
+   "role": "goal",
+   "filler": "akita_black_bowl_3",
+   "label": "bddl",
+   "n_cands": 7,
+   "p_freq": 0.10810810810810811,
+   "p_unif": 0.14285714285714285,
+   "ex": {
+    "plate_1": 0.3333333333333333,
+    "wooden_cabinet_1_top_side": 0.3333333333333333,
+    "akita_black_bowl_3": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_3": 1.0
+   },
+   "is_near": [
+    "libero_90:17"
+   ],
+   "is_sim": 0.6,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:16",
+   "scene": "KITCHEN_SCENE2",
+   "trial": 19,
+   "role": "goal",
+   "filler": "akita_black_bowl_3",
+   "label": "bddl",
+   "n_cands": 7,
+   "p_freq": 0.10810810810810811,
+   "p_unif": 0.14285714285714285,
+   "ex": {
+    "plate_1": 0.3333333333333333,
+    "wooden_cabinet_1_top_side": 0.3333333333333333,
+    "akita_black_bowl_3": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_3": 1.0
+   },
+   "is_near": [
+    "libero_90:17"
+   ],
+   "is_sim": 0.6,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:60",
+   "scene": "LIVING_ROOM_SCENE4",
+   "trial": 18,
+   "role": "goal",
+   "filler": "akita_black_bowl_2",
+   "label": "bddl",
+   "n_cands": 4,
+   "p_freq": 0.5714285714285714,
+   "p_unif": 0.25,
+   "ex": {
+    "akita_black_bowl_2": 1.0
+   },
+   "is_pred": {
+    "wooden_tray_1_contain_region": 1.0
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.5714285714285714,
+   "hit_ex": 1.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:1",
+   "scene": "KITCHEN_SCENE10",
+   "trial": 4,
+   "role": "object",
+   "filler": "chocolate_pudding_1",
+   "label": "bound",
+   "n_cands": 3,
+   "p_freq": 0.375,
+   "p_unif": 0.3333333333333333,
+   "ex": {
+    "butter_2": 0.3333333333333333,
+    "butter_1": 0.3333333333333333,
+    "chocolate_pudding_1": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_1": 1.0
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.6666666666666666,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:1",
+   "scene": "KITCHEN_SCENE10",
+   "trial": 18,
+   "role": "object",
+   "filler": "chocolate_pudding_1",
+   "label": "bound",
+   "n_cands": 3,
+   "p_freq": 0.375,
+   "p_unif": 0.3333333333333333,
+   "ex": {
+    "butter_2": 0.3333333333333333,
+    "butter_1": 0.3333333333333333,
+    "chocolate_pudding_1": 0.3333333333333333
+   },
+   "is_pred": {
+    "akita_black_bowl_1": 1.0
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.6666666666666666,
+   "hit_ex": 0.3333333333333333,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 0,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 1,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 2,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 3,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 4,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 5,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 6,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 7,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 8,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 9,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 10,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 11,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 12,
+   "role": "object",
+   "filler": "ketchup_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.3333333333333333,
+   "p_unif": 0.5,
+   "ex": {},
+   "is_pred": {
+    "akita_black_bowl_1": 1.0
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 14,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 15,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 16,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 17,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 18,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:29",
+   "scene": "KITCHEN_SCENE5",
+   "trial": 19,
+   "role": "goal",
+   "filler": "white_cabinet_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.10344827586206896,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "white_cabinet_1_top_side": 1.0
+   },
+   "is_pred": {
+    "white_cabinet_1_top_side": 0.6666666666666666
+   },
+   "is_near": [
+    "libero_90:10",
+    "libero_90:25",
+    "libero_90:31"
+   ],
+   "is_sim": 0.7,
+   "hit_ex": 1.0,
+   "hit_is": 0.6666666666666666
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 0,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_bottom_region",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 0.0,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 1,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_bottom_region",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 0.0,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 2,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 1.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 4,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 1.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 5,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_bottom_region",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 0.0,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 7,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 1.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 8,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 1.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 9,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_bottom_region",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 0.0,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 11,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 1.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 12,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_bottom_region",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 0.0,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 13,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 1.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 15,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 1.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 16,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_bottom_region",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 0.0,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 17,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_bottom_region",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 0.0,
+   "hit_is": 1.0
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 18,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 1.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:40",
+   "scene": "KITCHEN_SCENE9",
+   "trial": 19,
+   "role": "goal",
+   "filler": "wooden_two_layer_shelf_1_top_side",
+   "label": "bddl",
+   "n_cands": 6,
+   "p_freq": 0.23076923076923078,
+   "p_unif": 0.16666666666666666,
+   "ex": {
+    "wooden_two_layer_shelf_1_top_side": 1.0
+   },
+   "is_pred": {
+    "wooden_two_layer_shelf_1_bottom_region": 1.0
+   },
+   "is_near": [
+    "libero_90:42"
+   ],
+   "is_sim": 0.75,
+   "hit_ex": 1.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 0,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 1,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 2,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 3,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 4,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 5,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 6,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 7,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 8,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 9,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 10,
+   "role": "object",
+   "filler": "alphabet_soup_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.22727272727272727,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.5,
+   "hit_is": 0.3333333333333333
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 11,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 12,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 13,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 14,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 15,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 16,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 17,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 18,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:58",
+   "scene": "LIVING_ROOM_SCENE3",
+   "trial": 19,
+   "role": "object",
+   "filler": "tomato_sauce_1",
+   "label": "bound",
+   "n_cands": 5,
+   "p_freq": 0.18181818181818182,
+   "p_unif": 0.2,
+   "ex": {
+    "alphabet_soup_1": 0.5,
+    "cream_cheese_1": 0.5
+   },
+   "is_pred": {
+    "alphabet_soup_1": 0.3333333333333333,
+    "cream_cheese_1": 0.3333333333333333
+   },
+   "is_near": [
+    "libero_90:55",
+    "libero_90:57",
+    "libero_90:62"
+   ],
+   "is_sim": 0.7272727272727273,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:76",
+   "scene": "STUDY_SCENE1",
+   "trial": 9,
+   "role": "object",
+   "filler": "black_book_1",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": null,
+   "is_pred": {
+    "white_yellow_mug_1": 1.0
+   },
+   "is_near": [
+    "libero_90:34"
+   ],
+   "is_sim": 0.4666666666666667,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:76",
+   "scene": "STUDY_SCENE1",
+   "trial": 14,
+   "role": "goal",
+   "filler": "black_book_1",
+   "label": "near_site",
+   "n_cands": 6,
+   "p_freq": 0.16666666666666666,
+   "p_unif": 0.16666666666666666,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:34"
+   ],
+   "is_sim": 0.4666666666666667,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:76",
+   "scene": "STUDY_SCENE1",
+   "trial": 15,
+   "role": "goal",
+   "filler": "black_book_1",
+   "label": "near_site",
+   "n_cands": 6,
+   "p_freq": 0.16666666666666666,
+   "p_unif": 0.16666666666666666,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:34"
+   ],
+   "is_sim": 0.4666666666666667,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:76",
+   "scene": "STUDY_SCENE1",
+   "trial": 17,
+   "role": "goal",
+   "filler": "black_book_1",
+   "label": "near_site",
+   "n_cands": 6,
+   "p_freq": 0.16666666666666666,
+   "p_unif": 0.16666666666666666,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:34"
+   ],
+   "is_sim": 0.4666666666666667,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:77",
+   "scene": "STUDY_SCENE2",
+   "trial": 13,
+   "role": "goal",
+   "filler": "red_coffee_mug_1",
+   "label": "near_site",
+   "n_cands": 5,
+   "p_freq": 0.2,
+   "p_unif": 0.2,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:78",
+   "scene": "STUDY_SCENE2",
+   "trial": 7,
+   "role": "goal",
+   "filler": "red_coffee_mug_1",
+   "label": "near_site",
+   "n_cands": 5,
+   "p_freq": 0.2,
+   "p_unif": 0.2,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:78",
+   "scene": "STUDY_SCENE2",
+   "trial": 14,
+   "role": "goal",
+   "filler": "red_coffee_mug_1",
+   "label": "near_site",
+   "n_cands": 5,
+   "p_freq": 0.2,
+   "p_unif": 0.2,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:79",
+   "scene": "STUDY_SCENE2",
+   "trial": 4,
+   "role": "goal",
+   "filler": "desk_caddy_1_right_contain_region",
+   "label": "near_site",
+   "n_cands": 5,
+   "p_freq": 0.2,
+   "p_unif": 0.2,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:79",
+   "scene": "STUDY_SCENE2",
+   "trial": 12,
+   "role": "goal",
+   "filler": "red_coffee_mug_1",
+   "label": "bddl",
+   "n_cands": 5,
+   "p_freq": 0.2,
+   "p_unif": 0.2,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:79",
+   "scene": "STUDY_SCENE2",
+   "trial": 17,
+   "role": "goal",
+   "filler": "desk_caddy_1_front_contain_region",
+   "label": "near_site",
+   "n_cands": 5,
+   "p_freq": 0.2,
+   "p_unif": 0.2,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:80",
+   "scene": "STUDY_SCENE2",
+   "trial": 6,
+   "role": "object",
+   "filler": "red_coffee_mug_1",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:80",
+   "scene": "STUDY_SCENE2",
+   "trial": 9,
+   "role": "goal",
+   "filler": "red_coffee_mug_1",
+   "label": "near_site",
+   "n_cands": 5,
+   "p_freq": 0.2,
+   "p_unif": 0.2,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:82",
+   "scene": "STUDY_SCENE3",
+   "trial": 0,
+   "role": "goal",
+   "filler": "desk_caddy_1_right_contain_region",
+   "label": "near_site",
+   "n_cands": 9,
+   "p_freq": 0.1111111111111111,
+   "p_unif": 0.1111111111111111,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:82",
+   "scene": "STUDY_SCENE3",
+   "trial": 4,
+   "role": "goal",
+   "filler": "desk_caddy_1_front_contain_region",
+   "label": "near_site",
+   "n_cands": 9,
+   "p_freq": 0.1111111111111111,
+   "p_unif": 0.1111111111111111,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:82",
+   "scene": "STUDY_SCENE3",
+   "trial": 5,
+   "role": "goal",
+   "filler": "study_table_desk_caddy_front_left_contain_region",
+   "label": "near_site",
+   "n_cands": 9,
+   "p_freq": 0.1111111111111111,
+   "p_unif": 0.1111111111111111,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:82",
+   "scene": "STUDY_SCENE3",
+   "trial": 6,
+   "role": "goal",
+   "filler": "study_table_desk_caddy_front_left_contain_region",
+   "label": "near_site",
+   "n_cands": 9,
+   "p_freq": 0.1111111111111111,
+   "p_unif": 0.1111111111111111,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:82",
+   "scene": "STUDY_SCENE3",
+   "trial": 7,
+   "role": "goal",
+   "filler": "study_table_desk_caddy_front_left_contain_region",
+   "label": "near_site",
+   "n_cands": 9,
+   "p_freq": 0.1111111111111111,
+   "p_unif": 0.1111111111111111,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:82",
+   "scene": "STUDY_SCENE3",
+   "trial": 8,
+   "role": "goal",
+   "filler": "study_table_desk_caddy_front_left_contain_region",
+   "label": "near_site",
+   "n_cands": 9,
+   "p_freq": 0.1111111111111111,
+   "p_unif": 0.1111111111111111,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:82",
+   "scene": "STUDY_SCENE3",
+   "trial": 9,
+   "role": "goal",
+   "filler": "study_table_desk_caddy_front_left_contain_region",
+   "label": "near_site",
+   "n_cands": 9,
+   "p_freq": 0.1111111111111111,
+   "p_unif": 0.1111111111111111,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:82",
+   "scene": "STUDY_SCENE3",
+   "trial": 11,
+   "role": "goal",
+   "filler": "study_table_desk_caddy_right_region",
+   "label": "near_site",
+   "n_cands": 9,
+   "p_freq": 0.1111111111111111,
+   "p_unif": 0.1111111111111111,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:82",
+   "scene": "STUDY_SCENE3",
+   "trial": 13,
+   "role": "goal",
+   "filler": "porcelain_mug_1",
+   "label": "near_site",
+   "n_cands": 9,
+   "p_freq": 0.1111111111111111,
+   "p_unif": 0.1111111111111111,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:82",
+   "scene": "STUDY_SCENE3",
+   "trial": 14,
+   "role": "goal",
+   "filler": "porcelain_mug_1",
+   "label": "near_site",
+   "n_cands": 9,
+   "p_freq": 0.1111111111111111,
+   "p_unif": 0.1111111111111111,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:82",
+   "scene": "STUDY_SCENE3",
+   "trial": 15,
+   "role": "goal",
+   "filler": "study_table_desk_caddy_front_left_contain_region",
+   "label": "near_site",
+   "n_cands": 9,
+   "p_freq": 0.1111111111111111,
+   "p_unif": 0.1111111111111111,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:82",
+   "scene": "STUDY_SCENE3",
+   "trial": 16,
+   "role": "goal",
+   "filler": "porcelain_mug_1",
+   "label": "bddl",
+   "n_cands": 9,
+   "p_freq": 0.1111111111111111,
+   "p_unif": 0.1111111111111111,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:82",
+   "scene": "STUDY_SCENE3",
+   "trial": 17,
+   "role": "goal",
+   "filler": "desk_caddy_1_front_contain_region",
+   "label": "near_site",
+   "n_cands": 9,
+   "p_freq": 0.1111111111111111,
+   "p_unif": 0.1111111111111111,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:86",
+    "libero_object:6",
+    "libero_object:7"
+   ],
+   "is_sim": 0.5,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 0,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 1,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 2,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 3,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 4,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 5,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 6,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 7,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 8,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 9,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 10,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 11,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 12,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 14,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 15,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 16,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 18,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:83",
+   "scene": "STUDY_SCENE3",
+   "trial": 19,
+   "role": "object",
+   "filler": "porcelain_mug_1",
+   "label": "bound",
+   "n_cands": 2,
+   "p_freq": 0.625,
+   "p_unif": 0.5,
+   "ex": null,
+   "is_pred": {},
+   "is_near": [
+    "libero_90:88"
+   ],
+   "is_sim": 0.5333333333333333,
+   "hit_ex": null,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 0,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 1,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 2,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 3,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 4,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 5,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 6,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 7,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 8,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 9,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 10,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 11,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 12,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 13,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 14,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 15,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 16,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 17,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 18,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  },
+  {
+   "tid": "libero_90:38",
+   "scene": "KITCHEN_SCENE8",
+   "trial": 19,
+   "role": "object",
+   "filler": "moka_pot_2",
+   "label": "bound",
+   "n_cands": 1,
+   "p_freq": 1.0,
+   "p_unif": 1.0,
+   "ex": {},
+   "is_pred": {
+    "moka_pot_1": 1.0
+   },
+   "is_near": [
+    "libero_90:19"
+   ],
+   "is_sim": 0.8571428571428571,
+   "hit_ex": 0.0,
+   "hit_is": 0.0
+  }
+ ]
+}
