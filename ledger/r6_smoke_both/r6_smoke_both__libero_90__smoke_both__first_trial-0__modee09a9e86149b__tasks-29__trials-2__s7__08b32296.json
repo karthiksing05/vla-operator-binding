@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/smoke/smoke_both_libero_90_29.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=r6:/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/specs/libero_90_29.json?arm=both&w=1&log=/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/smoke/smoke_both_libero_90_29.jsonl SUITE=libero_90 TASKS=29 TRIALS=2 (job 4235201)",
+ "config": {
+  "client": {
+   "all_objects": true,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_d4",
+   "host": "127.0.0.1",
+   "light": true,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": true,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/smoke/smoke_both_libero_90_29.json",
+   "port": 9125,
+   "record": true,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_90",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "29",
+   "trials": 2,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4235201",
+  "mode": "r6:/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/specs/libero_90_29.json?arm=both&w=1&log=/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/smoke/smoke_both_libero_90_29.jsonl"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "spot.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4235201",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r6_smoke_both",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "08b3229606a92cc61c97ce300a7a550274c984de",
+  "short": "08b32296"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "r6:/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/specs/libero_90_29.json?arm=both&w=1&log=/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/smoke/smoke_both_libero_90_29.jsonl",
+  "tasks": "29",
+  "trials": 2
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 2,
+  "secs": 133.54645013809204,
+  "success_rate": 0.0,
+  "tasks": {
+   "29": {
+    "errors": 0,
+    "language": "put the black bowl in the top drawer of the cabinet",
+    "mean_steps": 400.0,
+    "n": 2,
+    "success_rate": 0.0
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r6_smoke_both__libero_90__smoke_both__first_trial-0__modee09a9e86149b__tasks-29__trials-2__s7__08b32296",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-26T01:29:49+00:00",
+ "stream": null,
+ "tag": "smoke_both"
+}

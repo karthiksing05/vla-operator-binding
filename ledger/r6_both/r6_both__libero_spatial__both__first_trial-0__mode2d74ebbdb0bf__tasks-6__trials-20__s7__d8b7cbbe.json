@@ -1,0 +1,96 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/roll/r6_both_libero_spatial_6.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_spatial",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "roll.sh MODE=r6:/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/specs/libero_spatial_6.json?arm=both&w=1&log=/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/qlog/both_libero_spatial_6.jsonl SUITE=libero_spatial TASKS=6 TRIALS=20 (job 4235233)",
+ "config": {
+  "client": {
+   "all_objects": true,
+   "bind": "track",
+   "branches": "",
+   "first_trial": 0,
+   "fresh": "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/fresh_r5s",
+   "host": "127.0.0.1",
+   "light": true,
+   "max_steps": 0,
+   "no_meta": false,
+   "objects": true,
+   "out": "/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/roll/r6_both_libero_spatial_6.json",
+   "port": 9222,
+   "record": true,
+   "replan": 5,
+   "resize": 224,
+   "seed": 7,
+   "seg": false,
+   "state_mod": 0,
+   "suite": "libero_spatial",
+   "swap": "",
+   "swap_cams": "both",
+   "swap_mode": "render",
+   "swap_phase": "all",
+   "tasks": "6",
+   "trials": 20,
+   "videos": 2,
+   "wait": 10
+  },
+  "job": "4235233",
+  "mode": "r6:/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/specs/libero_spatial_6.json?arm=both&w=1&log=/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/qlog/both_libero_spatial_6.jsonl"
+ },
+ "env": {
+  "device": "NVIDIA A40",
+  "host": "sonny.cc.gatech.edu",
+  "python": "3.11.16",
+  "slurm_job": "4235233",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r6_both",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "d8b7cbbe7a0ae335bfe308362bf5ec4b92cb04d5",
+  "short": "d8b7cbbe"
+ },
+ "keys": {
+  "first_trial": 0,
+  "mode": "r6:/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/specs/libero_spatial_6.json?arm=both&w=1&log=/coc/flash10/ksingara3/lifelong-ood-learner/results/r6/qlog/both_libero_spatial_6.jsonl",
+  "tasks": "6",
+  "trials": 20
+ },
+ "metrics": {
+  "complete": true,
+  "n_episodes": 20,
+  "secs": 436.4233932495117,
+  "success_rate": 0.95,
+  "tasks": {
+   "6": {
+    "errors": 0,
+    "language": "pick up the black bowl next to the cookie box and place it on the plate",
+    "mean_steps": 110.7,
+    "n": 20,
+    "success_rate": 0.95
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r6_both__libero_spatial__both__first_trial-0__mode2d74ebbdb0bf__tasks-6__trials-20__s7__d8b7cbbe",
+ "schema": 1,
+ "script": "experiments/libero_client.py",
+ "seconds": null,
+ "seed": 7,
+ "source_commit": null,
+ "started": "2026-10-26T01:43:28+00:00",
+ "stream": null,
+ "tag": "both"
+}
