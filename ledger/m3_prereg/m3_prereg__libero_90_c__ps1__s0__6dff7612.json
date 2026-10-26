@@ -1,0 +1,61 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: PLAN_SOLVE S1",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "brainiac.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4245061",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "6dff7612cbfe620db6b59e670805c5b188e97d14",
+  "short": "6dff7612"
+ },
+ "keys": {},
+ "metrics": {
+  "b1b": "frozen pi05_l90c agentview image tokens + the policy's own word embeddings; one head per role, own-role phrase only; trained once on training-cell labels (5168, counterfactual within scene); fixed hyper-parameters, 40 epochs, seed 0",
+  "bar": "PASS iff B1b depth-2 held-out hit >= 0.70 AND B1b hit >= anchor hit at depths 0, 1, 2 on units with a prototype (point estimates)",
+  "comparisons": "SigLIP prototype anchor (rb4 protos, argmax token); B1a GroundingDINO-base (no depth)",
+  "expectation": "depth-2 held-out = :1 + 8 caddy tasks; the caddy is in no training scene; FAIL on (i) likely",
+  "files_sha256": {
+   "docs/PLAN_S1.md": "a8949307b1c235ff2daa24cc77f6853411ea158fdca0c5e9cf9afd18d3c81265",
+   "experiments/s1_b1a.py": "063fbb809df5f9f62516a8e8528e74be009a95abc70999f9c259a7a9d8c2122e",
+   "experiments/s1_feats.py": "9b5acf1f061dfb61609cd944f054c3a53430b91c6a56543a77e796ce727314e6",
+   "experiments/s1_labels.py": "5752291fa5e28f46d3dc2995adb53c005b705c9294c06a8313614d866d37ee11",
+   "experiments/s1_read.py": "c5bd38a27e53cac7c2d0072604f7b4dfbfcd9d70c131fd8943790c385759b8ca",
+   "experiments/s1_render.py": "65997ab6338b2afba450a805609d0f3393d979508bf62005f0b8b602e79160a3",
+   "experiments/s1_train.py": "0c6805ec0ec92dbdf290ac19f960256a3846dab5290beeb02d2e138b6d45b803",
+   "results/bind/s1/labels.json": "6e6b5d22241960ef6a41c8d93cc7ba492847103922fa478392104e699e05888f"
+  },
+  "hit": "peak token in target mask and covered >= every competitor (same-body regions / same-ref table regions / same-type instances)",
+  "status": "PRE-REGISTERED PLAN_SOLVE S1 (binder accuracy; B1b headline)",
+  "written_before": "B1b training and any dev score"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__ps1__s0__6dff7612",
+ "schema": 1,
+ "script": "experiments/prereg/ps1.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T19:37:35+00:00",
+ "stream": null,
+ "tag": "ps1"
+}
