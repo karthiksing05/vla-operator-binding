@@ -1,0 +1,56 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: PLAN_BIND E1 exemplar binding",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "gideon.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4241993",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "57859301496cf7add51755133b7f0fc9e993f432",
+  "short": "57859301"
+ },
+ "keys": {},
+ "metrics": {
+  "accounts": "EX = the scene's most frequent training binding for the role (excl. correct); IS = the most similar training instruction's binding (word Jaccard), mapped by name / type key",
+  "baseline": "PRIMARY frequency-matched: candidates weighted 1 + global training count of the type key; uniform descriptive",
+  "falsified_if": "two-level task bootstrap 95% CI of mean(hit_EX - P_freq) has lo <= 0",
+  "files_sha256": {
+   "docs/PLAN_E12.md": "da89a4b1de6fcbd0b63e60b1da50adad0db7f864dbf59a7fa221d0fdd0442893",
+   "experiments/bind_e1.py": "ac37ded8ec3e751aeb3fff02a35318143fb261d0b40a80a3c9f2c8b179dd0ede",
+   "experiments/bind_e1_scene.py": "174eea07075efd48d015546d0e7f13c75c1a004af029b8be6bb892c1b9644339",
+   "results/bind/e1_scene.json": "b223fcb060d9187acf227a423b199b62d7caa4f879f03cd60a2b11bc3726eb31"
+  },
+  "status": "PRE-REGISTERED PLAN_BIND E1 (CPU)",
+  "units": "zs binding failures on the dev tasks (fm types, fresh_m1): wrong_object (bound object), wrong_goal other_region (BDDL alt), carried_elsewhere (nearest scene site within 10 cm); dry run: 135 units (63 object, 72 goal), 80 excluded, 43 EX-undefined",
+  "written_before": "the E1 read"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pbind_e1__s0__57859301",
+ "schema": 1,
+ "script": "experiments/prereg/pbind_e12.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T17:05:56+00:00",
+ "stream": null,
+ "tag": "pbind_e1"
+}

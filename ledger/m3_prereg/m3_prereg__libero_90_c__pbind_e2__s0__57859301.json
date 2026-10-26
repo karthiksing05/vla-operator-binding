@@ -1,0 +1,58 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: PLAN_BIND E2 measuring P",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "gideon.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4241993",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "57859301496cf7add51755133b7f0fc9e993f432",
+  "short": "57859301"
+ },
+ "keys": {},
+ "metrics": {
+  "P_hat": "share of runs binding the named object AND releasing nearest (xy) an own target among the scene candidates",
+  "falsified_if": "rho <= 0 or rho CI lo <= 0; or slope CI entirely < 0.5 or entirely > 2.0",
+  "files_sha256": {
+   "docs/PLAN_E12.md": "da89a4b1de6fcbd0b63e60b1da50adad0db7f864dbf59a7fa221d0fdd0442893",
+   "experiments/bind_e2.py": "f1de5a21b8acb7e91f3a52e272b7baf5cd15cbca9a71005776190279bb2a306b",
+   "experiments/bind_e2_pack.sbatch": "60a11c9f9d9546d4e9b3a696628386c938514cd1da972ef8458fa0a9cbbe39f9",
+   "experiments/d5_goal.py": "d50cbf4a198119b89b8a97d5e1acd2145ba2a38d960758600d546f1c0c9781b9",
+   "experiments/d5_serve.py": "94960632ecce491787527dbbfa94ab4b0ef2cfc55d0ec55d4edbe7c426482401",
+   "results/bind/e2_plan.json": "2a48c4280e13c7fc56f682a66801945228d5f2669d32799dbda59bfbfbea23d0"
+  },
+  "status": "PRE-REGISTERED PLAN_BIND E2 (a few A40-h)",
+  "tasks": "24 dev tasks with an In / On goal; fresh_m1 states 0-4; K 8 seeds; D5 sandbox to the first release / success / 400 steps",
+  "tests": "Spearman(P_hat, zs success over 20 fresh_m1 episodes) with task bootstrap CI; OLS calibration slope with CI",
+  "written_before": "any E2 rollout or read"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pbind_e2__s0__57859301",
+ "schema": 1,
+ "script": "experiments/prereg/pbind_e12.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T17:05:57+00:00",
+ "stream": null,
+ "tag": "pbind_e2"
+}
