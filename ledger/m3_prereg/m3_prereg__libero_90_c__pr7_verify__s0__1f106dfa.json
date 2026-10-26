@@ -1,0 +1,55 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: probe R7 stage B gate",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "kipp.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4237352",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1f106dfa017c3066727ce1118a9eab13d1e57b2e",
+  "short": "1f106dfa"
+ },
+ "keys": {},
+ "metrics": {
+  "disclosure": "seen before this row: R7 stage A and option 1 reads (coverage, per-state success counts); no chunk feature or score computed",
+  "files_sha256": {
+   "doc": "b853ccaa818593d60c132b0a58c72f266802bc63fa130ae4d1af4cb1abc8cb4a",
+   "plan": "bbbe7ad7ed9496ad27e9efd57824cbac7108ab7096fcad0d245007e4dd25dd1d",
+   "script": "c236346e9964684ee9af766a7cb810579a014a92da85db28217f3614c53b2354"
+  },
+  "gate": "V_ceil leave-state-out pooled gain >= +0.05 and CI lo > 0",
+  "metric": "top-1 gain = picked run success - c/32 per state, two-level task-cluster bootstrap; pick success on covering states",
+  "status": "PRE-REGISTERED stage B gate of probe R7 (offline; one-step selection of the first chunk at the pre-grasp query)",
+  "verifiers": "V_ceil (PRIMARY, information ceiling, not deployable): L2 logistic C 1.0 balanced on within-state-centred standardised first-chunk features, leave-one-state-out over 42 wrong-goal pre-grasp states (leave-task-out descriptive); V_mode / V_anti descriptive",
+  "written_before": "r7_verify.py run"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pr7_verify__s0__1f106dfa",
+ "schema": 1,
+ "script": "experiments/prereg/pr7_verify.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T04:59:47+00:00",
+ "stream": null,
+ "tag": "pr7_verify"
+}

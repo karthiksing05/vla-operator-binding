@@ -180,3 +180,57 @@ contain the fix. The coordinator approved this ceiling check; no verifier is des
   passes, the outcome is fixed during the approach, before the hand nears the object. Selection would then have to act at the first
   queries. That is reported, and the route is handed back.
 - **Cost (planned):** 76 units x 33 runs; about 4 A40-h (4 jobs x 3 pairs).
+
+### 7.1 Result (ledger `r7_read` tag pregrasp, results/r7/read_pg.json; commit b5ce0e5f pre-registration, 1f106dfa read)
+
+76 units x 33 runs; all read, with 0 unread. Two overcap jobs were preempted and requeued; existing units are skipped on restart.
+Coverage@K on the SAME 42 wrong-goal states, with two-level bootstrap 95% intervals:
+
+| condition | @1 | @4 | @8 | @16 | @32 | zs run |
+|---|---|---|---|---|---|---|
+| carry | 0.060 | 0.118 | 0.153 | 0.200 [0.00, 0.39] | 0.262 | 0.048 |
+| **pre-grasp** | 0.060 | 0.206 | 0.349 | **0.529 [0.35, 0.73]** | 0.690 | 0.048 |
+| start | 0.056 | 0.199 | 0.352 | 0.572 [0.44, 0.76] | 0.810 | 0.119 |
+
+- **Per task at pre-grasp, cov@16:** :16 0.65, :29 0.38, :40 0.66. At carry the same tasks are 0.39 / 0.16 / 0.00.
+- **Paired cov@16 differences:**
+  - pre-grasp - carry: +0.329 [+0.16, +0.65];
+  - start - pre-grasp: +0.043 [-0.11, +0.20].
+- **Controls (34):** cov@16 at carry / pre-grasp / start is 0.962 / 0.978 / 0.952.
+- **Gap:** the carry - pre-grasp gap is a median of 40 steps (20-105).
+
+**Verdict: H-pregrasp PASSES (0.529 >= 0.5), narrowly.** The CI's lower bound is 0.35.
+
+**Reading.** Almost all of the coverage available from the episode start survives to the last approach query before the grasp.
+Most of it is lost between that query and the carry state, so the region outcome is decided by the grasp. A selection must
+therefore act at the approach / grasp queries.
+
+## 8. Stage B gate: is there a selectable signal in the first chunk at the pre-grasp query? (pre-registered before it is computed; m3_prereg `pr7_verify`)
+
+**Budget note.** Stage A and option 1 used about 11.7 A40-h of the night's 12 A40-h, so a stage C closed-loop smoke does not fit
+tonight. Stage B is offline, on CPU only.
+
+**Why a gate before a deployable verifier.** At the pre-grasp query, a deployable verifier can only score the K chunks the policy
+samples there. The grasp, and with it the region, comes about 8 queries later. A 10-step chunk cannot "land" anywhere near the goal
+region, and D5 found the first chunk carries no goal readout (R^2 about 0). So the first question is whether the first chunk holds
+ANY information about the eventual success.
+
+**Design.** Code: `experiments/r7_verify.py` (offline, chunks env). Each run's first chunk is followed by fresh independent noise.
+A run's success is therefore an unbiased sample of the success of "execute this first chunk, then let the policy continue".
+
+- **V_ceil (PRIMARY gate; an information ceiling, not deployable).** This is a logistic regression trained on dev success labels:
+  L2 with C 1.0, balanced classes.
+  - Features are within-state-centred and standardised: the 10 x 7 first chunk, the integrated xyz and the summed rotation of its 5
+    executed actions, and its minimum gripper command.
+  - Evaluation is leave-one-STATE-out over the 42 wrong-goal pre-grasp states. Leave-one-TASK-out is descriptive.
+- **V_mode / V_anti (descriptive; deployable heuristics):** the chunk nearest to / farthest from the state's mean chunk.
+- **Metric:** the top-1 gain, i.e. the success of the picked run minus c / 32 (the expectation of random-seed selection), per state.
+  It is pooled with the two-level task-cluster bootstrap. The pick's success on states with c >= 1 is also reported.
+- **Gate:** V_ceil's leave-state-out pooled gain >= +0.05 AND the CI's lower bound > 0.
+- **Decision.**
+  - If the gate passes, a deployable verifier (vision anchor + parse region word) is worth designing. It would be handed back,
+    because stage C does not fit the budget.
+  - If it fails, even a verifier trained on success labels cannot pick a winning first chunk at the pre-grasp query. One-step
+    pre-grasp selection is then closed, and PLAN_R8 (test-time conditioning) is drafted, not run.
+- **Known limit.** A real verified search could re-select at every approach query. That cannot be evaluated from these rollouts,
+  since the runs are not branched per query. The gate tests one-step selection only.
