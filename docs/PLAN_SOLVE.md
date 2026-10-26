@@ -65,6 +65,10 @@ The confirmatory 15-task read and the sealed set follow S2, only with the user's
 
 ## 5. Decisions for the user
 
+**Decided (user, 2026-10-26).** Our own binder (B1b, trained once on the training cells) is the HEADLINE. The off-the-shelf
+binder (B1a) is a comparison. The adapter is trained once per policy, never per task (clarified to the user).
+
+
 1. **The adapter is new trained weights** (frozen policy, trained once, no target demos). This relaxes "no weight change". Is
    that acceptable? Without it, R1-R10 show there is no working delivery site.
 2. Is an off-the-shelf binder (B1a) acceptable as the main deployable variant, or should B1b (our own binder, trained on
