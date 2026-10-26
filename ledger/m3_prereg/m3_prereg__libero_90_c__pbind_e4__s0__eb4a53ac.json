@@ -1,0 +1,56 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: PLAN_BIND E4",
+ "config": {},
+ "env": {
+  "device": "NVIDIA GeForce RTX 2080 Ti",
+  "host": "vincent.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4243370",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "eb4a53ac94e80f182bdf47ddddae18049f40c399",
+  "short": "eb4a53ac"
+ },
+ "keys": {},
+ "metrics": {
+  "coding": "object 0 type / 1 instance (same-type instances or same CAT category); goal 0 / 1 instance object / 2 relational sub-region (body with >= 2 goal regions, or a table region relative to a body)",
+  "falsified_if": "b_depth <= 0 or 95% CI lo <= 0",
+  "files_sha256": {
+   "docs/PLAN_E34.md": "6408a2ce43fd14394dc2370434c30ae508cd2df98491fd3999bc125503930d95",
+   "experiments/bind_e4.py": "38b7071ef168e7fc7cef9c37773a8993771e2a15a538f15a9296d74611532022",
+   "results/bind/e1_scene.json": "b223fcb060d9187acf227a423b199b62d7caa4f879f03cd60a2b11bc3726eb31",
+   "results/bind/e2b.json": "993b177e66c4a41957f92f53e1313e2dde4f5cfb02178b2c5c3028770e320eb5"
+  },
+  "model": "binomial GLM logit(err) ~ depth + scene_familiar + role, IRLS; task-cluster bootstrap B 2000",
+  "power": "about 45 rows, 24 tasks; depth 2 confounded with new caddy scenes; weak",
+  "status": "PRE-REGISTERED PLAN_BIND E4 (re-analysis of read E2b measures; coding + model fixed first)",
+  "written_before": "the E4 fit"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pbind_e4__s0__eb4a53ac",
+ "schema": 1,
+ "script": "experiments/prereg/pbind_e34.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T18:34:29+00:00",
+ "stream": null,
+ "tag": "pbind_e4"
+}

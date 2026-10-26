@@ -1,0 +1,60 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: PLAN_BIND E3",
+ "config": {},
+ "env": {
+  "device": "NVIDIA GeForce RTX 2080 Ti",
+  "host": "vincent.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4243370",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "eb4a53ac94e80f182bdf47ddddae18049f40c399",
+  "short": "eb4a53ac"
+ },
+ "keys": {},
+ "metrics": {
+  "H1": "mean(SS_world - SS_obj) CI lo > 0 and obj 5 cm gain CI lo > 0.5",
+  "H2": "inj16-17 gain at 5 cm CI hi < 0.5 and mean(dist_target - dist_delta_lock) CI lo > 0",
+  "H3": "obj 10 cm gain CI lo > 0.5",
+  "conditions": "obj +-5/+-10 cm; rig +-5 cm; yaw +-10 deg; inj (expert layers 16+17 outputs from a different-scene source) base + obj 5 cm; inj16",
+  "files_sha256": {
+   "docs/PLAN_E34.md": "6408a2ce43fd14394dc2370434c30ae508cd2df98491fd3999bc125503930d95",
+   "experiments/bind_e3.py": "7558352b529f6749f82d85d4328b820b82301fb7e30f1bedea270f119dff6f38",
+   "experiments/bind_e3_pack.sbatch": "b2b7d0d494f973d874904bc9d262e14c8c2b4c1f2ee46aad86d52b716c307f19",
+   "experiments/bind_e3_serve.py": "be8353f58c50c7f287d8aab069d2de24fcf1b0bb5eb789a0eb8c6bd64b527b61",
+   "experiments/d5_goal.py": "d50cbf4a198119b89b8a97d5e1acd2145ba2a38d960758600d546f1c0c9781b9",
+   "experiments/d5_serve.py": "94960632ecce491787527dbbfa94ab4b0ef2cfc55d0ec55d4edbe7c426482401",
+   "results/bind/e3_plan.json": "3f3220cb065cda5c8d18d5d5b32b6b53ca620afca1b7a3e79a3cc5eec4ffc39d"
+  },
+  "obs": "54 D4 training approach states, first-chunk endpoints, K 4",
+  "status": "PRE-REGISTERED PLAN_BIND E3 (frames)",
+  "written_before": "any E3 rollout"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pbind_e3__s0__eb4a53ac",
+ "schema": 1,
+ "script": "experiments/prereg/pbind_e34.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T18:34:30+00:00",
+ "stream": null,
+ "tag": "pbind_e3"
+}
