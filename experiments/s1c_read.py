@@ -95,7 +95,9 @@ def main():
     d2s_units = [u for u in units if u["depth"] == 2 and u["body_seen"]]
     d2s = per(d2s_units, "s1b_hit")
     cells["d2_body_seen_all"] = dict(n=len(d2s_units), tasks=sorted({u["tid"] for u in d2s_units}), s1b_hit=d2s,
-                                     b1b_hit=per(d2s_units, "b1b_hit"), b1a_hit=per(d2s_units, "b1a_hit"))
+                                     b1b_hit=per(d2s_units, "b1b_hit"), b1a_hit=per(d2s_units, "b1a_hit"),
+                                     anchor_hit=per(d2s_units, "anchor_hit"), s1b_iou=per(d2s_units, "s1b_iou"),
+                                     detected=per(d2s_units, "detected"))
     s0, a0 = cells["d0_all"]["s1b_hit"]["mean"], cells["d0_all"]["b1a_hit"]["mean"]
     bar = dict(i_depth1_heldout=d1h["mean"], i_n=d1h["n"], i_pass=bool(d1h["mean"] is not None and d1h["mean"] >= 0.70),
                ii_depth2_body_seen=d2s["mean"], ii_n=d2s["n"], ii_pass=bool(d2s["mean"] is not None and d2s["mean"] >= 0.70),

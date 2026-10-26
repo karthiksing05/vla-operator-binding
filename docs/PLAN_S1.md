@@ -277,3 +277,24 @@ choice.
 - **(ii)** hit on ALL depth-2 units with a seen body type >= 0.70. This is :1, :29, :32 and :40: 20 units, 4 tasks.
 - **(iii)** depth-0 hit >= GroundingDINO alone (0.786).
 - The caddy is reported separately and is out of scope.
+
+## 9. S1c result (progress note; read 2026-10-26; ledger s1c_bind tag read; results/bind/s1c.json): FAIL (two of three bars)
+
+| bar | value | n | pass |
+|---|---|---|---|
+| (i) held-out depth-1 hit >= 0.70 | 0.40 [0.00, 1.00] | 15 units, 3 tasks | no |
+| (ii) depth-2 seen-body hit >= 0.70 | 0.65 (seen cells 0.867, 15 units / 3 tasks; held-out seen-body 0.00, 5 units / 1 task) | 20 units, 4 tasks | no |
+| (iii) depth-0 hit >= GroundingDINO | 0.879 [0.766, 0.976] vs 0.786 | 140 units, 23 tasks | yes |
+
+Other cells:
+- held-out depth-0 with a seen body type: 1.00 (45 units);
+- d1 seen 0.68; d2 held-out 0.04;
+- caddy (out of scope): 0.05.
+
+Reading: the detector-body / sim-trained head transfers bodies and seen-cell instances, but not instance or sub-region choice to
+held-out cells. The sub-region head memorises cells it saw.
+
+Disclosure: the first recorded read (job 4250350) crashed in the print loop (the new pooled cell lacked three report keys) after
+writing s1c.json and before the ledger row. The keys were added and the read was rerun unchanged otherwise (job 4250438).
+
+Per the coordinator's rule, S2 uses **S1b** (S1c did not pass).
