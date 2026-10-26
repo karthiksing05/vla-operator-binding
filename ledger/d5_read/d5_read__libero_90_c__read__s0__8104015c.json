@@ -1,0 +1,2972 @@
+{
+ "artifacts": [
+  "/coc/flash10/ksingara3/lifelong-ood-learner/results/d5/read.json"
+ ],
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "python experiments/d5_goal.py --read --record",
+ "config": {
+  "base": [
+   "A1",
+   "A2",
+   "B1",
+   "B2"
+  ],
+  "mags": [
+   0.05,
+   0.1
+  ],
+  "noises": {
+   "0.05": [
+    "A1",
+    "A2"
+   ],
+   "0.1": [
+    "A1"
+   ]
+  },
+  "primary": "release",
+  "primary_mag": 0.05,
+  "q_max": 24,
+  "replan": 5
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4235179",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "d5_read",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "8104015c5d964b6c05b5750b9dabcfb410a80803",
+  "short": "8104015c"
+ },
+ "keys": {},
+ "metrics": {
+  "anchor": {
+   "dev_success": {
+    "chance": {
+     "hi": 0.11929921271718147,
+     "lo": 0.06343005952380952,
+     "mean": 0.09089949324324324,
+     "n": 37,
+     "tasks": 11
+    },
+    "err_median_m": 0.12661910470488402,
+    "group": "dev_success",
+    "hit": {
+     "hi": 1.0,
+     "lo": 0.7586206896551724,
+     "mean": 0.918918918918919,
+     "n": 37,
+     "tasks": 11
+    },
+    "n": 37,
+    "no_proto": 0,
+    "within_5cm": {
+     "hi": 0.3684210526315789,
+     "lo": 0.0,
+     "mean": 0.16216216216216217,
+     "n": 37,
+     "tasks": 11
+    }
+   },
+   "dev_wrong_goal": {
+    "chance": {
+     "hi": 0.20292112116228067,
+     "lo": 0.01246279761904762,
+     "mean": 0.13271949404761904,
+     "n": 42,
+     "tasks": 3
+    },
+    "err_median_m": 0.15920462257831214,
+    "group": "dev_wrong_goal",
+    "hit": {
+     "hi": 1.0,
+     "lo": 0.09523809523809523,
+     "mean": 0.6904761904761905,
+     "n": 42,
+     "tasks": 3
+    },
+    "n": 42,
+    "no_proto": 48,
+    "within_5cm": {
+     "hi": 0.10638297872340426,
+     "lo": 0.0,
+     "mean": 0.023809523809523808,
+     "n": 42,
+     "tasks": 3
+    }
+   },
+   "dev_wrong_goal_recomb": {
+    "chance": {
+     "hi": 0.20292112116228067,
+     "lo": 0.01246279761904762,
+     "mean": 0.13271949404761904,
+     "n": 42,
+     "tasks": 3
+    },
+    "err_median_m": 0.15920462257831214,
+    "group": "dev_wrong_goal_recomb",
+    "hit": {
+     "hi": 1.0,
+     "lo": 0.09523809523809523,
+     "mean": 0.6904761904761905,
+     "n": 42,
+     "tasks": 3
+    },
+    "n": 42,
+    "no_proto": 0,
+    "within_5cm": {
+     "hi": 0.10638297872340426,
+     "lo": 0.0,
+     "mean": 0.023809523809523808,
+     "n": 42,
+     "tasks": 3
+    }
+   },
+   "train": {
+    "chance": {
+     "hi": 0.1203972041794324,
+     "lo": 0.0841368638928542,
+     "mean": 0.10193810096153846,
+     "n": 156,
+     "tasks": 40
+    },
+    "err_median_m": 0.09721308325465891,
+    "group": "train",
+    "hit": {
+     "hi": 1.0,
+     "lo": 0.9078947368421053,
+     "mean": 0.967948717948718,
+     "n": 156,
+     "tasks": 40
+    },
+    "n": 156,
+    "no_proto": 0,
+    "within_5cm": {
+     "hi": 0.15483870967741936,
+     "lo": 0.0,
+     "mean": 0.07051282051282051,
+     "n": 156,
+     "tasks": 40
+    }
+   }
+  },
+  "fidelity": {
+   "median_xy_m": 0.007918431823690366,
+   "n": 127,
+   "release_agree": 0.8818897637795275,
+   "within_3cm": 0.7007874015748031
+  },
+  "readouts": {
+   "chunk_end": {
+    "G1": {
+     "above_floor": {
+      "hi": 0.37410071942446044,
+      "lo": 0.1276595744680851,
+      "mean": 0.2446043165467626,
+      "n": 139,
+      "tasks": 36
+     },
+     "chance": {
+      "hi": 0.26836947278911566,
+      "lo": 0.20441125894802367,
+      "mean": 0.23436108256252142,
+      "n": 139,
+      "tasks": 36
+     },
+     "n_unscored": 17,
+     "p": 0.0,
+     "point": false,
+     "rate": {
+      "hi": 0.6884057971014492,
+      "lo": 0.391304347826087,
+      "mean": 0.539568345323741,
+      "n": 139,
+      "tasks": 36
+     }
+    },
+    "G2": {
+     "diff": -0.07735979067250542,
+     "diff_ci": [
+      -0.417130612750204,
+      -0.0164496491915002
+     ],
+     "n": 139,
+     "n_ctrl_rows": 139,
+     "p": 0.999,
+     "per_type": {
+      "akita_black_bowl": {
+       "n": 4,
+       "r2": -0.13662193721934646,
+       "r2_ctrl": 0.1092001411281831
+      },
+      "basket": {
+       "n": 56,
+       "r2": -3.2056287145051714,
+       "r2_ctrl": 0.16674618763290472
+      },
+      "flat_stove": {
+       "n": 4,
+       "r2": 0.20106856122536854,
+       "r2_ctrl": 0.06083293752845931
+      },
+      "microwave": {
+       "n": 4,
+       "r2": -3.0105205832329167,
+       "r2_ctrl": 0.05826205531125905
+      },
+      "plate": {
+       "n": 40,
+       "r2": 0.033039605589056165,
+       "r2_ctrl": 0.010439753194038226
+      },
+      "wine_rack": {
+       "n": 3,
+       "r2": -0.3874033880328043,
+       "r2_ctrl": -0.06403339958709209
+      },
+      "wooden_cabinet": {
+       "n": 12,
+       "r2": -3.2225326035226773,
+       "r2_ctrl": -0.016314586041422663
+      },
+      "wooden_tray": {
+       "n": 4,
+       "r2": -1.4595576456985535,
+       "r2_ctrl": 0.007445685708804217
+      },
+      "wooden_two_layer_shelf": {
+       "n": 12,
+       "r2": -3.4584405327138272,
+       "r2_ctrl": 0.012827528363969276
+      }
+     },
+     "point": false,
+     "r2": -0.0625044664147647,
+     "r2_ci": [
+      -0.3854563065974057,
+      -0.004906336820063708
+     ],
+     "r2_ctrl": 0.01485532425774072,
+     "r2_object_frame": -0.0625044664147647,
+     "r2_type_shuffled_ref": 0.09798203294181285,
+     "tasks": 36,
+     "types": [
+      "akita_black_bowl",
+      "basket",
+      "flat_stove",
+      "microwave",
+      "plate",
+      "wine_rack",
+      "wooden_cabinet",
+      "wooden_tray",
+      "wooden_two_layer_shelf"
+     ]
+    },
+    "G3": {
+     "excluded": {
+      "no_body": 43,
+      "same_body_region": 28,
+      "unscored": 6
+     },
+     "p": 0.1661,
+     "point": false,
+     "rate_actual": {
+      "hi": 0.8571428571428571,
+      "lo": 0.2857142857142857,
+      "mean": 0.5384615384615384,
+      "n": 13,
+      "tasks": 4
+     },
+     "rate_named": {
+      "hi": 0.6666666666666666,
+      "lo": 0.0,
+      "mean": 0.23076923076923078,
+      "n": 13,
+      "tasks": 4
+     },
+     "rows": [
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t0_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t10_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t14_post80",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t17_post70",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "near",
+       "key": "dv_libero_90_16_t3_post80",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t5_post70",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "akita_black_bowl_2",
+       "how": "alt",
+       "key": "dv_libero_90_16_t7_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t9_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "white_yellow_mug_1",
+       "bound": "white_yellow_mug_1",
+       "how": "near",
+       "key": "dv_libero_90_73_t3_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:73"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "red_coffee_mug_1",
+       "how": "near",
+       "key": "dv_libero_90_79_t12_post65",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:79"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "near",
+       "key": "dv_libero_90_79_t15_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:79"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "red_coffee_mug_1",
+       "how": "alt",
+       "key": "dv_libero_90_80_t4_post110",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:80"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "near",
+       "key": "dv_libero_90_80_t8_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:80"
+      }
+     ]
+    },
+    "dev_recomb_wrong_goal_bound_target": {
+     "above_floor": {
+      "hi": 1.0,
+      "lo": 0.4722222222222222,
+      "mean": 0.7142857142857143,
+      "n": 35,
+      "tasks": 3
+     },
+     "chance": {
+      "hi": 0.4642857142857143,
+      "lo": 0.321078431372549,
+      "mean": 0.380952380952381,
+      "n": 35,
+      "tasks": 3
+     },
+     "n_unscored": 7,
+     "p": 0.0581,
+     "point": false,
+     "rate": {
+      "hi": 0.7222222222222222,
+      "lo": 0.3235294117647059,
+      "mean": 0.5142857142857142,
+      "n": 35,
+      "tasks": 3
+     }
+    },
+    "dev_success_bound_target": {
+     "above_floor": {
+      "hi": 0.7692307692307693,
+      "lo": 0.18181818181818182,
+      "mean": 0.45161290322580644,
+      "n": 31,
+      "tasks": 10
+     },
+     "chance": {
+      "hi": 0.4004640151515152,
+      "lo": 0.22757865646258502,
+      "mean": 0.30952380952380953,
+      "n": 31,
+      "tasks": 10
+     },
+     "n_unscored": 6,
+     "p": 0.0068,
+     "point": false,
+     "rate": {
+      "hi": 0.9142857142857143,
+      "lo": 0.37037037037037035,
+      "mean": 0.6774193548387096,
+      "n": 31,
+      "tasks": 10
+     }
+    },
+    "floor_median": 0.12423128644722227,
+    "n_dev": 127,
+    "n_train": 156,
+    "ops": {
+     "akita_black_bowl": {
+      "J_mean": [
+       [
+        0.035,
+        0.072
+       ],
+       [
+        0.038,
+        -0.021
+       ],
+       [
+        -0.068,
+        0.116
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.006876009765488184,
+      "n": 4,
+      "norm": 0.09324356433913356,
+      "tasks": 1
+     },
+     "basket": {
+      "J_mean": [
+       [
+        0.024,
+        0.015
+       ],
+       [
+        0.02,
+        -0.008
+       ],
+       [
+        -0.025,
+        0.032
+       ]
+      ],
+      "hit": 0.35714285714285715,
+      "lam": 0.007887116714276346,
+      "n": 56,
+      "norm": 0.04307267297551608,
+      "tasks": 14
+     },
+     "flat_stove": {
+      "J_mean": [
+       [
+        0.073,
+        0.088
+       ],
+       [
+        0.071,
+        -0.006
+       ],
+       [
+        -0.142,
+        0.209
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.033779759411713114,
+      "n": 4,
+      "norm": 0.16354665593660125,
+      "tasks": 1
+     },
+     "microwave": {
+      "J_mean": [
+       [
+        -0.005,
+        0.022
+       ],
+       [
+        0.013,
+        -0.001
+       ],
+       [
+        -0.039,
+        0.061
+       ]
+      ],
+      "hit": 1.0,
+      "lam": -0.003207002835921606,
+      "n": 4,
+      "norm": 0.039429557729308354,
+      "tasks": 1
+     },
+     "plate": {
+      "J_mean": [
+       [
+        0.185,
+        -0.011
+       ],
+       [
+        0.032,
+        0.144
+       ],
+       [
+        0.167,
+        -0.023
+       ]
+      ],
+      "hit": 0.775,
+      "lam": 0.16446822972582004,
+      "n": 40,
+      "norm": 0.2959318975977759,
+      "tasks": 11
+     },
+     "wine_rack": {
+      "J_mean": [
+       [
+        0.014,
+        -0.037
+       ],
+       [
+        -0.039,
+        0.039
+       ],
+       [
+        -0.088,
+        -0.102
+       ]
+      ],
+      "hit": 0.6666666666666666,
+      "lam": 0.026558895453581605,
+      "n": 3,
+      "norm": 0.0737921100704717,
+      "tasks": 1
+     },
+     "wooden_cabinet": {
+      "J_mean": [
+       [
+        0.013,
+        0.001
+       ],
+       [
+        -0.028,
+        -0.006
+       ],
+       [
+        -0.013,
+        -0.004
+       ]
+      ],
+      "hit": 0.16666666666666666,
+      "lam": 0.0031693081195988044,
+      "n": 12,
+      "norm": 0.03712987057572084,
+      "tasks": 3
+     },
+     "wooden_tray": {
+      "J_mean": [
+       [
+        0.035,
+        0.007
+       ],
+       [
+        -0.019,
+        -0.019
+       ],
+       [
+        0.007,
+        0.053
+       ]
+      ],
+      "hit": 0.25,
+      "lam": 0.008040530889920697,
+      "n": 4,
+      "norm": 0.047418165644546297,
+      "tasks": 1
+     },
+     "wooden_two_layer_shelf": {
+      "J_mean": [
+       [
+        0.012,
+        0.012
+       ],
+       [
+        -0.0,
+        0.013
+       ],
+       [
+        0.004,
+        0.08
+       ]
+      ],
+      "hit": 0.5833333333333334,
+      "lam": 0.01247701898546741,
+      "n": 12,
+      "norm": 0.031118183893249732,
+      "tasks": 3
+     }
+    },
+    "released_dev": 0.6674802097907621,
+    "released_train": 0.5692609495337824
+   },
+   "chunk_mean": {
+    "G1": {
+     "above_floor": {
+      "hi": 0.2765957446808511,
+      "lo": 0.07042253521126761,
+      "mean": 0.16546762589928057,
+      "n": 139,
+      "tasks": 36
+     },
+     "chance": {
+      "hi": 0.26836947278911566,
+      "lo": 0.20441125894802367,
+      "mean": 0.23436108256252142,
+      "n": 139,
+      "tasks": 36
+     },
+     "n_unscored": 17,
+     "p": 0.0002,
+     "point": false,
+     "rate": {
+      "hi": 0.6370531400966182,
+      "lo": 0.34965034965034963,
+      "mean": 0.4892086330935252,
+      "n": 139,
+      "tasks": 36
+     }
+    },
+    "G2": {
+     "diff": -0.06661994302932173,
+     "diff_ci": [
+      -0.3149358231206204,
+      -0.018158213939760595
+     ],
+     "n": 139,
+     "n_ctrl_rows": 139,
+     "p": 0.9995,
+     "per_type": {
+      "akita_black_bowl": {
+       "n": 4,
+       "r2": 0.03796135191551686,
+       "r2_ctrl": 0.11423666441494318
+      },
+      "basket": {
+       "n": 56,
+       "r2": -1.9083675817851735,
+       "r2_ctrl": 0.180174531126578
+      },
+      "flat_stove": {
+       "n": 4,
+       "r2": 0.09784764875643048,
+       "r2_ctrl": 0.05987278694531384
+      },
+      "microwave": {
+       "n": 4,
+       "r2": -1.2301349894306748,
+       "r2_ctrl": 0.08627109383012732
+      },
+      "plate": {
+       "n": 40,
+       "r2": 0.021469160800280718,
+       "r2_ctrl": 0.009415786473750298
+      },
+      "wine_rack": {
+       "n": 3,
+       "r2": -0.35971195585798754,
+       "r2_ctrl": -0.08493603219328083
+      },
+      "wooden_cabinet": {
+       "n": 12,
+       "r2": -2.121444761810466,
+       "r2_ctrl": -0.04030878533251703
+      },
+      "wooden_tray": {
+       "n": 4,
+       "r2": -1.0335649583903463,
+       "r2_ctrl": -0.008843131473530885
+      },
+      "wooden_two_layer_shelf": {
+       "n": 12,
+       "r2": -1.7804782444056233,
+       "r2_ctrl": -0.025972469834667278
+      }
+     },
+     "point": false,
+     "r2": -0.051327662658411155,
+     "r2_ci": [
+      -0.27599306599263385,
+      -0.006053355441589541
+     ],
+     "r2_ctrl": 0.015292280370910571,
+     "r2_object_frame": -0.051327662658411155,
+     "r2_type_shuffled_ref": 0.07812409277743598,
+     "tasks": 36,
+     "types": [
+      "akita_black_bowl",
+      "basket",
+      "flat_stove",
+      "microwave",
+      "plate",
+      "wine_rack",
+      "wooden_cabinet",
+      "wooden_tray",
+      "wooden_two_layer_shelf"
+     ]
+    },
+    "G3": {
+     "excluded": {
+      "no_body": 43,
+      "same_body_region": 28,
+      "unscored": 6
+     },
+     "p": 0.1661,
+     "point": false,
+     "rate_actual": {
+      "hi": 0.8571428571428571,
+      "lo": 0.2857142857142857,
+      "mean": 0.5384615384615384,
+      "n": 13,
+      "tasks": 4
+     },
+     "rate_named": {
+      "hi": 0.6666666666666666,
+      "lo": 0.0,
+      "mean": 0.23076923076923078,
+      "n": 13,
+      "tasks": 4
+     },
+     "rows": [
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t0_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t10_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t14_post80",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t17_post70",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "near",
+       "key": "dv_libero_90_16_t3_post80",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t5_post70",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "akita_black_bowl_2",
+       "how": "alt",
+       "key": "dv_libero_90_16_t7_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t9_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "white_yellow_mug_1",
+       "bound": "white_yellow_mug_1",
+       "how": "near",
+       "key": "dv_libero_90_73_t3_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:73"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "red_coffee_mug_1",
+       "how": "near",
+       "key": "dv_libero_90_79_t12_post65",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:79"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "near",
+       "key": "dv_libero_90_79_t15_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:79"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "red_coffee_mug_1",
+       "how": "alt",
+       "key": "dv_libero_90_80_t4_post110",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:80"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "near",
+       "key": "dv_libero_90_80_t8_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:80"
+      }
+     ]
+    },
+    "dev_recomb_wrong_goal_bound_target": {
+     "above_floor": {
+      "hi": 0.6206896551724138,
+      "lo": 0.2619047619047619,
+      "mean": 0.42857142857142855,
+      "n": 35,
+      "tasks": 3
+     },
+     "chance": {
+      "hi": 0.4642857142857143,
+      "lo": 0.321078431372549,
+      "mean": 0.380952380952381,
+      "n": 35,
+      "tasks": 3
+     },
+     "n_unscored": 7,
+     "p": 0.0581,
+     "point": false,
+     "rate": {
+      "hi": 0.7222222222222222,
+      "lo": 0.3235294117647059,
+      "mean": 0.5142857142857142,
+      "n": 35,
+      "tasks": 3
+     }
+    },
+    "dev_success_bound_target": {
+     "above_floor": {
+      "hi": 0.6129032258064516,
+      "lo": 0.05555555555555555,
+      "mean": 0.2903225806451613,
+      "n": 31,
+      "tasks": 10
+     },
+     "chance": {
+      "hi": 0.4004640151515152,
+      "lo": 0.22757865646258502,
+      "mean": 0.30952380952380953,
+      "n": 31,
+      "tasks": 10
+     },
+     "n_unscored": 6,
+     "p": 0.0068,
+     "point": false,
+     "rate": {
+      "hi": 0.9142857142857143,
+      "lo": 0.37037037037037035,
+      "mean": 0.6774193548387096,
+      "n": 31,
+      "tasks": 10
+     }
+    },
+    "floor_median": 0.09241621658298993,
+    "n_dev": 127,
+    "n_train": 156,
+    "ops": {
+     "akita_black_bowl": {
+      "J_mean": [
+       [
+        0.02,
+        0.038
+       ],
+       [
+        0.025,
+        -0.019
+       ],
+       [
+        -0.036,
+        0.057
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.0005955425324955747,
+      "n": 4,
+      "norm": 0.05392330950890565,
+      "tasks": 1
+     },
+     "basket": {
+      "J_mean": [
+       [
+        0.011,
+        0.007
+       ],
+       [
+        0.013,
+        -0.005
+       ],
+       [
+        -0.014,
+        0.015
+       ]
+      ],
+      "hit": 0.26785714285714285,
+      "lam": 0.003078984268925003,
+      "n": 56,
+      "norm": 0.023294833292043,
+      "tasks": 14
+     },
+     "flat_stove": {
+      "J_mean": [
+       [
+        0.027,
+        0.057
+       ],
+       [
+        0.046,
+        -0.019
+       ],
+       [
+        -0.071,
+        0.105
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.004155221165061144,
+      "n": 4,
+      "norm": 0.09361482497807541,
+      "tasks": 1
+     },
+     "microwave": {
+      "J_mean": [
+       [
+        -0.003,
+        0.012
+       ],
+       [
+        0.01,
+        -0.006
+       ],
+       [
+        -0.019,
+        0.031
+       ]
+      ],
+      "hit": 0.75,
+      "lam": -0.004379080183533869,
+      "n": 4,
+      "norm": 0.02441813120777194,
+      "tasks": 1
+     },
+     "plate": {
+      "J_mean": [
+       [
+        0.071,
+        -0.005
+       ],
+       [
+        0.019,
+        0.065
+       ],
+       [
+        0.092,
+        -0.012
+       ]
+      ],
+      "hit": 0.75,
+      "lam": 0.06799914458239589,
+      "n": 40,
+      "norm": 0.13738681489090815,
+      "tasks": 11
+     },
+     "wine_rack": {
+      "J_mean": [
+       [
+        0.005,
+        -0.018
+       ],
+       [
+        -0.026,
+        0.017
+       ],
+       [
+        -0.042,
+        -0.042
+       ]
+      ],
+      "hit": 0.6666666666666666,
+      "lam": 0.010625913269597503,
+      "n": 3,
+      "norm": 0.04087651749578883,
+      "tasks": 1
+     },
+     "wooden_cabinet": {
+      "J_mean": [
+       [
+        0.006,
+        0.0
+       ],
+       [
+        -0.016,
+        -0.004
+       ],
+       [
+        -0.005,
+        0.001
+       ]
+      ],
+      "hit": 0.16666666666666666,
+      "lam": 0.001338307572640295,
+      "n": 12,
+      "norm": 0.020445048842689027,
+      "tasks": 3
+     },
+     "wooden_tray": {
+      "J_mean": [
+       [
+        0.017,
+        0.003
+       ],
+       [
+        -0.01,
+        -0.012
+       ],
+       [
+        0.004,
+        0.03
+       ]
+      ],
+      "hit": 0.25,
+      "lam": 0.002655000023017145,
+      "n": 4,
+      "norm": 0.02544545544986851,
+      "tasks": 1
+     },
+     "wooden_two_layer_shelf": {
+      "J_mean": [
+       [
+        0.006,
+        0.007
+       ],
+       [
+        -0.0,
+        0.006
+       ],
+       [
+        0.004,
+        0.045
+       ]
+      ],
+      "hit": 0.5833333333333334,
+      "lam": 0.0062129851574182085,
+      "n": 12,
+      "norm": 0.016712514679482104,
+      "tasks": 3
+     }
+    },
+    "released_dev": 0.6674802097907621,
+    "released_train": 0.5692609495337824
+   },
+   "obj_release": {
+    "G1": {
+     "above_floor": {
+      "hi": 1.0,
+      "lo": 1.0,
+      "mean": 1.0,
+      "n": 139,
+      "tasks": 36
+     },
+     "chance": {
+      "hi": 0.26836947278911566,
+      "lo": 0.20441125894802367,
+      "mean": 0.23436108256252142,
+      "n": 139,
+      "tasks": 36
+     },
+     "n_unscored": 17,
+     "p": 0.0,
+     "point": true,
+     "rate": {
+      "hi": 1.0,
+      "lo": 1.0,
+      "mean": 1.0,
+      "n": 139,
+      "tasks": 36
+     }
+    },
+    "G2": {
+     "diff": 0.7731291933220606,
+     "diff_ci": [
+      0.6765588241731674,
+      0.8451435143772184
+     ],
+     "n": 139,
+     "n_ctrl_rows": 139,
+     "p": 0.0,
+     "per_type": {
+      "akita_black_bowl": {
+       "n": 4,
+       "r2": 0.8880560420911807,
+       "r2_ctrl": 0.01793426611618998
+      },
+      "basket": {
+       "n": 56,
+       "r2": 0.8993433836370673,
+       "r2_ctrl": 0.02190725363437851
+      },
+      "flat_stove": {
+       "n": 4,
+       "r2": 0.942794385129622,
+       "r2_ctrl": 0.020323116379916684
+      },
+      "microwave": {
+       "n": 4,
+       "r2": -0.07013247170660097,
+       "r2_ctrl": -0.00033918496930573916
+      },
+      "plate": {
+       "n": 40,
+       "r2": 0.8291336960514362,
+       "r2_ctrl": 0.01896919119311813
+      },
+      "wine_rack": {
+       "n": 3,
+       "r2": 0.6715927562699334,
+       "r2_ctrl": 0.011008730974217174
+      },
+      "wooden_cabinet": {
+       "n": 12,
+       "r2": 0.7603743137499968,
+       "r2_ctrl": 0.017176520223898928
+      },
+      "wooden_tray": {
+       "n": 4,
+       "r2": 0.8918416326978407,
+       "r2_ctrl": 0.013625957348808782
+      },
+      "wooden_two_layer_shelf": {
+       "n": 12,
+       "r2": 0.6451108028572758,
+       "r2_ctrl": 0.013880894555920675
+      }
+     },
+     "point": true,
+     "r2": 0.7912418304575985,
+     "r2_ci": [
+      0.6922346233863661,
+      0.8650818900653892
+     ],
+     "r2_ctrl": 0.0181126371355379,
+     "r2_object_frame": 0.7912418304575985,
+     "r2_type_shuffled_ref": 0.8187310867191914,
+     "tasks": 36,
+     "types": [
+      "akita_black_bowl",
+      "basket",
+      "flat_stove",
+      "microwave",
+      "plate",
+      "wine_rack",
+      "wooden_cabinet",
+      "wooden_tray",
+      "wooden_two_layer_shelf"
+     ]
+    },
+    "G3": {
+     "excluded": {
+      "no_body": 43,
+      "same_body_region": 28,
+      "unscored": 6
+     },
+     "p": 0.4168,
+     "point": false,
+     "rate_actual": {
+      "hi": 0.7222222222222222,
+      "lo": 0.0,
+      "mean": 0.46153846153846156,
+      "n": 13,
+      "tasks": 4
+     },
+     "rate_named": {
+      "hi": 1.0,
+      "lo": 0.04,
+      "mean": 0.3076923076923077,
+      "n": 13,
+      "tasks": 4
+     },
+     "rows": [
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t0_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t10_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t14_post80",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "plate_1",
+       "bound": "akita_black_bowl_3",
+       "how": "alt",
+       "key": "dv_libero_90_16_t17_post70",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "near",
+       "key": "dv_libero_90_16_t3_post80",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "akita_black_bowl_3",
+       "how": "alt",
+       "key": "dv_libero_90_16_t5_post70",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "akita_black_bowl_3",
+       "how": "alt",
+       "key": "dv_libero_90_16_t7_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t9_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "white_yellow_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "near",
+       "key": "dv_libero_90_73_t3_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:73"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "red_coffee_mug_1",
+       "how": "near",
+       "key": "dv_libero_90_79_t12_post65",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:79"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "near",
+       "key": "dv_libero_90_79_t15_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:79"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "alt",
+       "key": "dv_libero_90_80_t4_post110",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:80"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "near",
+       "key": "dv_libero_90_80_t8_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:80"
+      }
+     ]
+    },
+    "dev_recomb_wrong_goal_bound_target": {
+     "above_floor": {
+      "hi": 1.0,
+      "lo": 0.8,
+      "mean": 0.9142857142857143,
+      "n": 35,
+      "tasks": 3
+     },
+     "chance": {
+      "hi": 0.4642857142857143,
+      "lo": 0.321078431372549,
+      "mean": 0.380952380952381,
+      "n": 35,
+      "tasks": 3
+     },
+     "n_unscored": 7,
+     "p": 0.0145,
+     "point": false,
+     "rate": {
+      "hi": 1.0,
+      "lo": 0.38235294117647056,
+      "mean": 0.7428571428571429,
+      "n": 35,
+      "tasks": 3
+     }
+    },
+    "dev_success_bound_target": {
+     "above_floor": {
+      "hi": 1.0,
+      "lo": 1.0,
+      "mean": 1.0,
+      "n": 31,
+      "tasks": 10
+     },
+     "chance": {
+      "hi": 0.4004640151515152,
+      "lo": 0.22757865646258502,
+      "mean": 0.30952380952380953,
+      "n": 31,
+      "tasks": 10
+     },
+     "n_unscored": 6,
+     "p": 0.001,
+     "point": false,
+     "rate": {
+      "hi": 0.9473684210526315,
+      "lo": 0.4666666666666667,
+      "mean": 0.7419354838709677,
+      "n": 31,
+      "tasks": 10
+     }
+    },
+    "floor_median": 0.2055720090021963,
+    "n_dev": 127,
+    "n_train": 156,
+    "ops": {
+     "akita_black_bowl": {
+      "J_mean": [
+       [
+        0.797,
+        0.024
+       ],
+       [
+        -0.106,
+        1.033
+       ],
+       [
+        -0.071,
+        -0.027
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.9152269998518634,
+      "n": 4,
+      "norm": 1.3097497139060303,
+      "tasks": 1
+     },
+     "basket": {
+      "J_mean": [
+       [
+        0.456,
+        0.059
+       ],
+       [
+        0.103,
+        0.876
+       ],
+       [
+        -0.128,
+        0.111
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.6658680450929353,
+      "n": 56,
+      "norm": 1.0146951845032188,
+      "tasks": 14
+     },
+     "flat_stove": {
+      "J_mean": [
+       [
+        0.495,
+        -0.09
+       ],
+       [
+        -0.046,
+        0.812
+       ],
+       [
+        -0.024,
+        0.038
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.6535842764274762,
+      "n": 4,
+      "norm": 0.9568780871859273,
+      "tasks": 1
+     },
+     "microwave": {
+      "J_mean": [
+       [
+        -0.245,
+        0.025
+       ],
+       [
+        0.699,
+        0.622
+       ],
+       [
+        -0.118,
+        0.076
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.18856717048913296,
+      "n": 4,
+      "norm": 1.0783805965227136,
+      "tasks": 1
+     },
+     "plate": {
+      "J_mean": [
+       [
+        0.781,
+        -0.038
+       ],
+       [
+        0.054,
+        0.843
+       ],
+       [
+        -0.022,
+        0.006
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.8121296627990826,
+      "n": 40,
+      "norm": 1.1662909251008045,
+      "tasks": 11
+     },
+     "wine_rack": {
+      "J_mean": [
+       [
+        0.274,
+        0.004
+       ],
+       [
+        -0.239,
+        1.201
+       ],
+       [
+        -0.04,
+        -0.514
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.7375782468782471,
+      "n": 3,
+      "norm": 1.2757709577488172,
+      "tasks": 1
+     },
+     "wooden_cabinet": {
+      "J_mean": [
+       [
+        0.338,
+        -0.168
+       ],
+       [
+        -0.107,
+        0.985
+       ],
+       [
+        -0.096,
+        -0.127
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.6618325551424761,
+      "n": 12,
+      "norm": 1.07308074954907,
+      "tasks": 3
+     },
+     "wooden_tray": {
+      "J_mean": [
+       [
+        0.594,
+        0.214
+       ],
+       [
+        0.086,
+        0.781
+       ],
+       [
+        -0.015,
+        0.021
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.6875794811426735,
+      "n": 4,
+      "norm": 1.010196316182923,
+      "tasks": 1
+     },
+     "wooden_two_layer_shelf": {
+      "J_mean": [
+       [
+        0.057,
+        -0.149
+       ],
+       [
+        -0.029,
+        0.918
+       ],
+       [
+        -0.071,
+        -0.064
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.4875636449117724,
+      "n": 12,
+      "norm": 0.9436705534680828,
+      "tasks": 3
+     }
+    },
+    "released_dev": 0.6674802097907621,
+    "released_train": 0.5692609495337824
+   },
+   "release": {
+    "G1": {
+     "above_floor": {
+      "hi": 1.0,
+      "lo": 1.0,
+      "mean": 1.0,
+      "n": 139,
+      "tasks": 36
+     },
+     "chance": {
+      "hi": 0.26836947278911566,
+      "lo": 0.20441125894802367,
+      "mean": 0.23436108256252142,
+      "n": 139,
+      "tasks": 36
+     },
+     "n_unscored": 17,
+     "p": 0.0,
+     "point": true,
+     "rate": {
+      "hi": 1.0,
+      "lo": 1.0,
+      "mean": 1.0,
+      "n": 139,
+      "tasks": 36
+     }
+    },
+    "G2": {
+     "diff": 0.7944091702922397,
+     "diff_ci": [
+      0.6988041006013419,
+      0.8631905818603774
+     ],
+     "n": 139,
+     "n_ctrl_rows": 139,
+     "p": 0.0,
+     "per_type": {
+      "akita_black_bowl": {
+       "n": 4,
+       "r2": 0.8940065160714115,
+       "r2_ctrl": 0.018046176169795536
+      },
+      "basket": {
+       "n": 56,
+       "r2": 0.903466482337485,
+       "r2_ctrl": 0.02051635837197463
+      },
+      "flat_stove": {
+       "n": 4,
+       "r2": 0.939518479323795,
+       "r2_ctrl": 0.01805214819875245
+      },
+      "microwave": {
+       "n": 4,
+       "r2": 0.13163498722830413,
+       "r2_ctrl": -0.00016672426332475787
+      },
+      "plate": {
+       "n": 40,
+       "r2": 0.8487776095527926,
+       "r2_ctrl": 0.017449151091706416
+      },
+      "wine_rack": {
+       "n": 3,
+       "r2": 0.8000023177742287,
+       "r2_ctrl": 0.012213749811674779
+      },
+      "wooden_cabinet": {
+       "n": 12,
+       "r2": 0.8385610545297596,
+       "r2_ctrl": 0.017739634656674164
+      },
+      "wooden_tray": {
+       "n": 4,
+       "r2": 0.8925457746758776,
+       "r2_ctrl": 0.01464136811263772
+      },
+      "wooden_two_layer_shelf": {
+       "n": 12,
+       "r2": 0.5713368059112145,
+       "r2_ctrl": 0.009420159730625155
+      }
+     },
+     "point": true,
+     "r2": 0.8113112406620883,
+     "r2_ci": [
+      0.7134957289241521,
+      0.8815364385154384
+     ],
+     "r2_ctrl": 0.016902070369848587,
+     "r2_object_frame": 0.8113112406620883,
+     "r2_type_shuffled_ref": 0.8355551721441085,
+     "tasks": 36,
+     "types": [
+      "akita_black_bowl",
+      "basket",
+      "flat_stove",
+      "microwave",
+      "plate",
+      "wine_rack",
+      "wooden_cabinet",
+      "wooden_tray",
+      "wooden_two_layer_shelf"
+     ]
+    },
+    "G3": {
+     "excluded": {
+      "no_body": 43,
+      "same_body_region": 28,
+      "unscored": 6
+     },
+     "p": 0.3543,
+     "point": false,
+     "rate_actual": {
+      "hi": 0.8,
+      "lo": 0.0,
+      "mean": 0.5384615384615384,
+      "n": 13,
+      "tasks": 4
+     },
+     "rate_named": {
+      "hi": 1.0,
+      "lo": 0.04,
+      "mean": 0.3076923076923077,
+      "n": 13,
+      "tasks": 4
+     },
+     "rows": [
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t0_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t10_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "akita_black_bowl_3",
+       "how": "alt",
+       "key": "dv_libero_90_16_t14_post80",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "plate_1",
+       "bound": "akita_black_bowl_3",
+       "how": "alt",
+       "key": "dv_libero_90_16_t17_post70",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "near",
+       "key": "dv_libero_90_16_t3_post80",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "akita_black_bowl_3",
+       "how": "alt",
+       "key": "dv_libero_90_16_t5_post70",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "akita_black_bowl_3",
+       "how": "alt",
+       "key": "dv_libero_90_16_t7_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t9_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "white_yellow_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "near",
+       "key": "dv_libero_90_73_t3_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:73"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "red_coffee_mug_1",
+       "how": "near",
+       "key": "dv_libero_90_79_t12_post65",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:79"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "near",
+       "key": "dv_libero_90_79_t15_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:79"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "alt",
+       "key": "dv_libero_90_80_t4_post110",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:80"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "near",
+       "key": "dv_libero_90_80_t8_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:80"
+      }
+     ]
+    },
+    "dev_recomb_wrong_goal_bound_target": {
+     "above_floor": {
+      "hi": 0.9523809523809523,
+      "lo": 0.6,
+      "mean": 0.8285714285714286,
+      "n": 35,
+      "tasks": 3
+     },
+     "chance": {
+      "hi": 0.4642857142857143,
+      "lo": 0.321078431372549,
+      "mean": 0.380952380952381,
+      "n": 35,
+      "tasks": 3
+     },
+     "n_unscored": 7,
+     "p": 0.0136,
+     "point": false,
+     "rate": {
+      "hi": 1.0,
+      "lo": 0.38461538461538464,
+      "mean": 0.7714285714285715,
+      "n": 35,
+      "tasks": 3
+     }
+    },
+    "dev_success_bound_target": {
+     "above_floor": {
+      "hi": 1.0,
+      "lo": 0.8620689655172413,
+      "mean": 0.967741935483871,
+      "n": 31,
+      "tasks": 10
+     },
+     "chance": {
+      "hi": 0.4004640151515152,
+      "lo": 0.22757865646258502,
+      "mean": 0.30952380952380953,
+      "n": 31,
+      "tasks": 10
+     },
+     "n_unscored": 6,
+     "p": 0.0004,
+     "point": true,
+     "rate": {
+      "hi": 1.0,
+      "lo": 0.5333333333333333,
+      "mean": 0.8064516129032258,
+      "n": 31,
+      "tasks": 10
+     }
+    },
+    "floor_median": 0.203147531258538,
+    "n_dev": 127,
+    "n_train": 156,
+    "ops": {
+     "akita_black_bowl": {
+      "J_mean": [
+       [
+        0.823,
+        0.038
+       ],
+       [
+        -0.069,
+        1.013
+       ],
+       [
+        0.004,
+        -0.069
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.9175613703997891,
+      "n": 4,
+      "norm": 1.3074568727700182,
+      "tasks": 1
+     },
+     "basket": {
+      "J_mean": [
+       [
+        0.479,
+        0.054
+       ],
+       [
+        0.105,
+        0.875
+       ],
+       [
+        -0.135,
+        0.111
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.6769763574606998,
+      "n": 56,
+      "norm": 1.0245723470863184,
+      "tasks": 14
+     },
+     "flat_stove": {
+      "J_mean": [
+       [
+        0.496,
+        -0.097
+       ],
+       [
+        -0.044,
+        0.805
+       ],
+       [
+        -0.023,
+        0.045
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.6506255313768111,
+      "n": 4,
+      "norm": 0.9519170857023702,
+      "tasks": 1
+     },
+     "microwave": {
+      "J_mean": [
+       [
+        -0.385,
+        -0.16
+       ],
+       [
+        0.798,
+        0.986
+       ],
+       [
+        -0.125,
+        0.094
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.30055704589517307,
+      "n": 4,
+      "norm": 1.3786741279765344,
+      "tasks": 1
+     },
+     "plate": {
+      "J_mean": [
+       [
+        0.753,
+        -0.032
+       ],
+       [
+        0.056,
+        0.847
+       ],
+       [
+        -0.046,
+        0.028
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.800122024790755,
+      "n": 40,
+      "norm": 1.1491219996190658,
+      "tasks": 11
+     },
+     "wine_rack": {
+      "J_mean": [
+       [
+        0.269,
+        -0.002
+       ],
+       [
+        -0.163,
+        1.006
+       ],
+       [
+        0.179,
+        0.049
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.6370733200975747,
+      "n": 3,
+      "norm": 1.061620090930312,
+      "tasks": 1
+     },
+     "wooden_cabinet": {
+      "J_mean": [
+       [
+        0.336,
+        -0.15
+       ],
+       [
+        -0.106,
+        0.86
+       ],
+       [
+        -0.099,
+        -0.008
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.5979574592793441,
+      "n": 12,
+      "norm": 0.9488469473131503,
+      "tasks": 3
+     },
+     "wooden_tray": {
+      "J_mean": [
+       [
+        0.586,
+        0.22
+       ],
+       [
+        0.084,
+        0.769
+       ],
+       [
+        -0.018,
+        0.02
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.677464271937567,
+      "n": 4,
+      "norm": 0.9973013051468949,
+      "tasks": 1
+     },
+     "wooden_two_layer_shelf": {
+      "J_mean": [
+       [
+        0.072,
+        -0.139
+       ],
+       [
+        -0.019,
+        0.788
+       ],
+       [
+        -0.041,
+        -0.275
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.4297495789086041,
+      "n": 12,
+      "norm": 0.8144748968837393,
+      "tasks": 3
+     }
+    },
+    "released_dev": 0.6674802097907621,
+    "released_train": 0.5692609495337824
+   },
+   "release_10": {
+    "G1": {
+     "above_floor": {
+      "hi": 1.0,
+      "lo": 1.0,
+      "mean": 1.0,
+      "n": 74,
+      "tasks": 19
+     },
+     "chance": {
+      "hi": 0.503606106106106,
+      "lo": 0.2812485119047619,
+      "mean": 0.38378378378378375,
+      "n": 74,
+      "tasks": 19
+     },
+     "n_unscored": 82,
+     "p": 0.0,
+     "point": true,
+     "rate": {
+      "hi": 1.0,
+      "lo": 1.0,
+      "mean": 1.0,
+      "n": 74,
+      "tasks": 19
+     }
+    },
+    "G2": {
+     "diff": 0.7223874284953773,
+     "diff_ci": [
+      0.5998600431938207,
+      0.8377063713068736
+     ],
+     "n": 74,
+     "n_ctrl_rows": 66,
+     "p": 0.0,
+     "per_type": {
+      "akita_black_bowl": {
+       "n": 4,
+       "r2": 0.8885032745232468,
+       "r2_ctrl": 0.008189683950651117
+      },
+      "basket": {
+       "n": 48,
+       "r2": 0.7623346340216308,
+       "r2_ctrl": 0.011061275294686479
+      },
+      "microwave": {
+       "n": 4,
+       "r2": 0.11191072782938949,
+       "r2_ctrl": 0.0048862674267977635
+      },
+      "wooden_cabinet": {
+       "n": 8,
+       "r2": 0.8908601098165911,
+       "r2_ctrl": 0.004791635004242845
+      },
+      "wooden_two_layer_shelf": {
+       "n": 10,
+       "r2": 0.6883588427330558,
+       "r2_ctrl": 0.0037001927938304924
+      }
+     },
+     "point": true,
+     "r2": 0.7315289188215812,
+     "r2_ci": [
+      0.6081635252764607,
+      0.8479856288456642
+     ],
+     "r2_ctrl": 0.009141490326203927,
+     "r2_object_frame": 0.7315289188215812,
+     "r2_type_shuffled_ref": 0.7689825451991819,
+     "tasks": 19,
+     "types": [
+      "akita_black_bowl",
+      "basket",
+      "microwave",
+      "wooden_cabinet",
+      "wooden_two_layer_shelf"
+     ]
+    },
+    "G3": {
+     "excluded": {
+      "no_body": 43,
+      "same_body_region": 28,
+      "unscored": 15
+     },
+     "p": 0.2597,
+     "point": true,
+     "rate_actual": {
+      "hi": 1.0,
+      "lo": 0.0,
+      "mean": 0.75,
+      "n": 4,
+      "tasks": 3
+     },
+     "rate_named": {
+      "hi": 1.0,
+      "lo": 0.0,
+      "mean": 0.25,
+      "n": 4,
+      "tasks": 3
+     },
+     "rows": [
+      {
+       "actual": "white_yellow_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "near",
+       "key": "dv_libero_90_73_t3_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:73"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "red_coffee_mug_1",
+       "how": "near",
+       "key": "dv_libero_90_79_t12_post65",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:79"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "red_coffee_mug_1",
+       "how": "near",
+       "key": "dv_libero_90_79_t15_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:79"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "red_coffee_mug_1",
+       "how": "near",
+       "key": "dv_libero_90_80_t8_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:80"
+      }
+     ]
+    },
+    "dev_recomb_wrong_goal_bound_target": {
+     "above_floor": {
+      "hi": 1.0,
+      "lo": 1.0,
+      "mean": 1.0,
+      "n": 9,
+      "tasks": 3
+     },
+     "chance": {
+      "hi": 1.0,
+      "lo": 0.5,
+      "mean": 0.7222222222222222,
+      "n": 9,
+      "tasks": 3
+     },
+     "n_unscored": 33,
+     "p": 0.1467,
+     "point": false,
+     "rate": {
+      "hi": 1.0,
+      "lo": 0.625,
+      "mean": 0.8888888888888888,
+      "n": 9,
+      "tasks": 3
+     }
+    },
+    "dev_success_bound_target": {
+     "above_floor": {
+      "hi": 1.0,
+      "lo": 0.7916666666666666,
+      "mean": 0.9473684210526315,
+      "n": 19,
+      "tasks": 8
+     },
+     "chance": {
+      "hi": 0.55625,
+      "lo": 0.33213638716356114,
+      "mean": 0.4394736842105263,
+      "n": 19,
+      "tasks": 8
+     },
+     "n_unscored": 18,
+     "p": 0.0,
+     "point": true,
+     "rate": {
+      "hi": 1.0,
+      "lo": 0.8,
+      "mean": 0.9473684210526315,
+      "n": 19,
+      "tasks": 8
+     }
+    },
+    "floor_median": 0.101573765629269,
+    "n_dev": 127,
+    "n_train": 156,
+    "ops": {
+     "akita_black_bowl": {
+      "J_mean": [
+       [
+        0.82,
+        0.003
+       ],
+       [
+        -0.054,
+        0.992
+       ],
+       [
+        -0.02,
+        -0.072
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.9063039953414422,
+      "n": 4,
+      "norm": 1.2890339776417796,
+      "tasks": 1
+     },
+     "basket": {
+      "J_mean": [
+       [
+        0.564,
+        -0.023
+       ],
+       [
+        0.122,
+        0.901
+       ],
+       [
+        -0.108,
+        0.094
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.7321925271658133,
+      "n": 48,
+      "norm": 1.1032256032754233,
+      "tasks": 12
+     },
+     "microwave": {
+      "J_mean": [
+       [
+        -0.085,
+        0.143
+       ],
+       [
+        0.549,
+        0.72
+       ],
+       [
+        -0.184,
+        0.143
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.31770021826760386,
+      "n": 4,
+      "norm": 0.970502409887799,
+      "tasks": 1
+     },
+     "wooden_cabinet": {
+      "J_mean": [
+       [
+        0.405,
+        -0.173
+       ],
+       [
+        -0.027,
+        0.961
+       ],
+       [
+        -0.097,
+        -0.074
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.6831196842657522,
+      "n": 8,
+      "norm": 1.0659116231444878,
+      "tasks": 2
+     },
+     "wooden_two_layer_shelf": {
+      "J_mean": [
+       [
+        0.185,
+        -0.215
+       ],
+       [
+        -0.045,
+        0.863
+       ],
+       [
+        -0.045,
+        -0.148
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.5238782635685784,
+      "n": 10,
+      "norm": 0.9157141070710617,
+      "tasks": 3
+     }
+    },
+    "released_dev": 0.6674802097907621,
+    "released_train": 0.5692609495337824
+   },
+   "release_xyz": {
+    "G1": {
+     "above_floor": {
+      "hi": 1.0,
+      "lo": 1.0,
+      "mean": 1.0,
+      "n": 139,
+      "tasks": 36
+     },
+     "chance": {
+      "hi": 0.26836947278911566,
+      "lo": 0.20441125894802367,
+      "mean": 0.23436108256252142,
+      "n": 139,
+      "tasks": 36
+     },
+     "n_unscored": 17,
+     "p": 0.0,
+     "point": true,
+     "rate": {
+      "hi": 1.0,
+      "lo": 1.0,
+      "mean": 1.0,
+      "n": 139,
+      "tasks": 36
+     }
+    },
+    "G2": {
+     "diff": 0.7944091702922397,
+     "diff_ci": [
+      0.6988041006013419,
+      0.8631905818603774
+     ],
+     "n": 139,
+     "n_ctrl_rows": 139,
+     "p": 0.0,
+     "per_type": {
+      "akita_black_bowl": {
+       "n": 4,
+       "r2": 0.8940065160714115,
+       "r2_ctrl": 0.018046176169795536
+      },
+      "basket": {
+       "n": 56,
+       "r2": 0.903466482337485,
+       "r2_ctrl": 0.02051635837197463
+      },
+      "flat_stove": {
+       "n": 4,
+       "r2": 0.939518479323795,
+       "r2_ctrl": 0.01805214819875245
+      },
+      "microwave": {
+       "n": 4,
+       "r2": 0.13163498722830413,
+       "r2_ctrl": -0.00016672426332475787
+      },
+      "plate": {
+       "n": 40,
+       "r2": 0.8487776095527926,
+       "r2_ctrl": 0.017449151091706416
+      },
+      "wine_rack": {
+       "n": 3,
+       "r2": 0.8000023177742287,
+       "r2_ctrl": 0.012213749811674779
+      },
+      "wooden_cabinet": {
+       "n": 12,
+       "r2": 0.8385610545297596,
+       "r2_ctrl": 0.017739634656674164
+      },
+      "wooden_tray": {
+       "n": 4,
+       "r2": 0.8925457746758776,
+       "r2_ctrl": 0.01464136811263772
+      },
+      "wooden_two_layer_shelf": {
+       "n": 12,
+       "r2": 0.5713368059112145,
+       "r2_ctrl": 0.009420159730625155
+      }
+     },
+     "point": true,
+     "r2": 0.8113112406620883,
+     "r2_ci": [
+      0.7134957289241521,
+      0.8815364385154384
+     ],
+     "r2_ctrl": 0.016902070369848587,
+     "r2_object_frame": 0.8113112406620883,
+     "r2_type_shuffled_ref": 0.8355551721441085,
+     "tasks": 36,
+     "types": [
+      "akita_black_bowl",
+      "basket",
+      "flat_stove",
+      "microwave",
+      "plate",
+      "wine_rack",
+      "wooden_cabinet",
+      "wooden_tray",
+      "wooden_two_layer_shelf"
+     ]
+    },
+    "G3": {
+     "excluded": {
+      "no_body": 43,
+      "same_body_region": 28,
+      "unscored": 6
+     },
+     "p": 0.3543,
+     "point": false,
+     "rate_actual": {
+      "hi": 0.8,
+      "lo": 0.0,
+      "mean": 0.5384615384615384,
+      "n": 13,
+      "tasks": 4
+     },
+     "rate_named": {
+      "hi": 1.0,
+      "lo": 0.04,
+      "mean": 0.3076923076923077,
+      "n": 13,
+      "tasks": 4
+     },
+     "rows": [
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t0_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t10_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "akita_black_bowl_3",
+       "how": "alt",
+       "key": "dv_libero_90_16_t14_post80",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "plate_1",
+       "bound": "akita_black_bowl_3",
+       "how": "alt",
+       "key": "dv_libero_90_16_t17_post70",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "plate_1",
+       "bound": "plate_1",
+       "how": "near",
+       "key": "dv_libero_90_16_t3_post80",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "akita_black_bowl_3",
+       "how": "alt",
+       "key": "dv_libero_90_16_t5_post70",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "akita_black_bowl_3",
+       "how": "alt",
+       "key": "dv_libero_90_16_t7_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "akita_black_bowl_3",
+       "bound": "plate_1",
+       "how": "alt",
+       "key": "dv_libero_90_16_t9_post75",
+       "target": "akita_black_bowl_2",
+       "tid": "libero_90:16"
+      },
+      {
+       "actual": "white_yellow_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "near",
+       "key": "dv_libero_90_73_t3_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:73"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "red_coffee_mug_1",
+       "how": "near",
+       "key": "dv_libero_90_79_t12_post65",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:79"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "near",
+       "key": "dv_libero_90_79_t15_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:79"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "alt",
+       "key": "dv_libero_90_80_t4_post110",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:80"
+      },
+      {
+       "actual": "red_coffee_mug_1",
+       "bound": "desk_caddy_1",
+       "how": "near",
+       "key": "dv_libero_90_80_t8_post60",
+       "target": "desk_caddy_1",
+       "tid": "libero_90:80"
+      }
+     ]
+    },
+    "dev_recomb_wrong_goal_bound_target": {
+     "above_floor": {
+      "hi": 1.0,
+      "lo": 0.8529411764705882,
+      "mean": 0.9428571428571428,
+      "n": 35,
+      "tasks": 3
+     },
+     "chance": {
+      "hi": 0.4642857142857143,
+      "lo": 0.321078431372549,
+      "mean": 0.380952380952381,
+      "n": 35,
+      "tasks": 3
+     },
+     "n_unscored": 7,
+     "p": 0.0136,
+     "point": false,
+     "rate": {
+      "hi": 1.0,
+      "lo": 0.38461538461538464,
+      "mean": 0.7714285714285715,
+      "n": 35,
+      "tasks": 3
+     }
+    },
+    "dev_success_bound_target": {
+     "above_floor": {
+      "hi": 1.0,
+      "lo": 1.0,
+      "mean": 1.0,
+      "n": 31,
+      "tasks": 10
+     },
+     "chance": {
+      "hi": 0.4004640151515152,
+      "lo": 0.22757865646258502,
+      "mean": 0.30952380952380953,
+      "n": 31,
+      "tasks": 10
+     },
+     "n_unscored": 6,
+     "p": 0.0004,
+     "point": true,
+     "rate": {
+      "hi": 1.0,
+      "lo": 0.5333333333333333,
+      "mean": 0.8064516129032258,
+      "n": 31,
+      "tasks": 10
+     }
+    },
+    "floor_median": 0.203147531258538,
+    "n_dev": 127,
+    "n_train": 156,
+    "ops": {
+     "akita_black_bowl": {
+      "J_mean": [
+       [
+        0.823,
+        0.038
+       ],
+       [
+        -0.069,
+        1.013
+       ],
+       [
+        0.004,
+        -0.069
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.9175613703997891,
+      "n": 4,
+      "norm": 1.3074568727700182,
+      "tasks": 1
+     },
+     "basket": {
+      "J_mean": [
+       [
+        0.479,
+        0.054
+       ],
+       [
+        0.105,
+        0.875
+       ],
+       [
+        -0.135,
+        0.111
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.6769763574606998,
+      "n": 56,
+      "norm": 1.0245723470863184,
+      "tasks": 14
+     },
+     "flat_stove": {
+      "J_mean": [
+       [
+        0.496,
+        -0.097
+       ],
+       [
+        -0.044,
+        0.805
+       ],
+       [
+        -0.023,
+        0.045
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.6506255313768111,
+      "n": 4,
+      "norm": 0.9519170857023702,
+      "tasks": 1
+     },
+     "microwave": {
+      "J_mean": [
+       [
+        -0.385,
+        -0.16
+       ],
+       [
+        0.798,
+        0.986
+       ],
+       [
+        -0.125,
+        0.094
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.30055704589517307,
+      "n": 4,
+      "norm": 1.3786741279765344,
+      "tasks": 1
+     },
+     "plate": {
+      "J_mean": [
+       [
+        0.753,
+        -0.032
+       ],
+       [
+        0.056,
+        0.847
+       ],
+       [
+        -0.046,
+        0.028
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.800122024790755,
+      "n": 40,
+      "norm": 1.1491219996190658,
+      "tasks": 11
+     },
+     "wine_rack": {
+      "J_mean": [
+       [
+        0.269,
+        -0.002
+       ],
+       [
+        -0.163,
+        1.006
+       ],
+       [
+        0.179,
+        0.049
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.6370733200975747,
+      "n": 3,
+      "norm": 1.061620090930312,
+      "tasks": 1
+     },
+     "wooden_cabinet": {
+      "J_mean": [
+       [
+        0.336,
+        -0.15
+       ],
+       [
+        -0.106,
+        0.86
+       ],
+       [
+        -0.099,
+        -0.008
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.5979574592793441,
+      "n": 12,
+      "norm": 0.9488469473131503,
+      "tasks": 3
+     },
+     "wooden_tray": {
+      "J_mean": [
+       [
+        0.586,
+        0.22
+       ],
+       [
+        0.084,
+        0.769
+       ],
+       [
+        -0.018,
+        0.02
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.677464271937567,
+      "n": 4,
+      "norm": 0.9973013051468949,
+      "tasks": 1
+     },
+     "wooden_two_layer_shelf": {
+      "J_mean": [
+       [
+        0.072,
+        -0.139
+       ],
+       [
+        -0.019,
+        0.788
+       ],
+       [
+        -0.041,
+        -0.275
+       ]
+      ],
+      "hit": 1.0,
+      "lam": 0.4297495789086041,
+      "n": 12,
+      "norm": 0.8144748968837393,
+      "tasks": 3
+     }
+    },
+    "released_dev": 0.6674802097907621,
+    "released_train": 0.5692609495337824
+   }
+  },
+  "region": {
+   "same_body_wrong_goal": {
+    "n": 28,
+    "sandbox_region_is_target": 0.25,
+    "sandbox_region_is_zs_region": 0.7857142857142857
+   },
+   "success": {
+    "n": 7,
+    "sandbox_region_is_target": 0.7142857142857143,
+    "sandbox_region_is_zs_region": 0.8571428571428571
+   }
+  },
+  "validity": {
+   "dev": {
+    "perturbations": {
+     "0.05": 1524,
+     "0.1": 1524
+    },
+    "rejected_by": {
+     "0.05:penetration": 58,
+     "0.05:settle": 4,
+     "0.1:penetration": 284,
+     "0.1:settle": 5
+    },
+    "valid_rate": {
+     "0.05": 0.9593175853018373,
+     "0.1": 0.8103674540682415
+    }
+   },
+   "train": {
+    "perturbations": {
+     "0.05": 3232,
+     "0.1": 3232
+    },
+    "rejected_by": {
+     "0.05:penetration": 108,
+     "0.05:settle": 24,
+     "0.1:penetration": 598,
+     "0.1:settle": 77
+    },
+    "valid_rate": {
+     "0.05": 0.9591584158415841,
+     "0.1": 0.7911509900990099
+    }
+   }
+  },
+  "verdict": {
+   "G1": {
+    "go": true,
+    "holm": true,
+    "p": 0.0,
+    "point": true
+   },
+   "G2": {
+    "go": true,
+    "holm": true,
+    "p": 0.0,
+    "point": true
+   },
+   "G3": {
+    "go": false,
+    "holm": false,
+    "p": 0.3543,
+    "point": false
+   }
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "d5_read__libero_90_c__read__s0__8104015c",
+ "schema": 1,
+ "script": "experiments/d5_read.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T01:17:38+00:00",
+ "stream": null,
+ "tag": "read"
+}
