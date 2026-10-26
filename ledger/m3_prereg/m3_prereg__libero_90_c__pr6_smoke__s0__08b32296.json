@@ -1,0 +1,83 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration (EXPLORATORY): probe R6 closed-loop goal-role guidance smoke",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4235218",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "08b3229606a92cc61c97ce300a7a550274c984de",
+  "short": "08b32296"
+ },
+ "keys": {},
+ "metrics": {
+  "arms": "zs (D4 / R5s rows, paired); both (R5s vis_e1 approach + vision-anchored carry guidance via D5's release operator, PRIMARY); goal (carry only); orc (oracle object + goal region)",
+  "decision": "stage C iff `both` raises pooled wrong-goal-set success by >= +0.10 or its paired-difference CI excludes 0",
+  "disclosure": "seen before this row: D5's full read (docs/PLAN_D5.md section 8), R5s's read, R2's zs types on fresh_rb2 (task selection), the bank print; serving smoke on libero_90:29 trials 0-1; no R6 rollout read.  Two login-node slips during D5 development are disclosed in PLAN_D5 section 7.",
+  "files_sha256": {
+   "bank": "727191ecaebeedbb5133f50c0fc984fc82ea33ac1d854b947d9e9a6d78d11ccd",
+   "client": "bdaf485d0142fca5755ad0e63fff1edc18fdefcaf8b1b2f60e0dff4d3d5c2690",
+   "doc": "cc5f0d06575e07c1fbb31356ca17e86cb2d1bed4435ac706627d0fafe0d16595",
+   "guide": "f860c1d9b05ba3d548e278fe7b26abe7df2cc6d2d53eef96554522011acb3033",
+   "plan": "fcc6540890ce5be893c372e1225bb652182fd29ec10ddeeb91ae82c95a11315c",
+   "script": "bff8cde9334afa67f24f28f6bff995064c585652b456606b106209395f6c407b",
+   "serve": "00fb8826f7bb4cf3efc16c32851d7778a19a3ebe079d091120a51dfad3baf52b"
+  },
+  "groups": {
+   "cell": [
+    "libero_spatial:6",
+    "libero_90:70"
+   ],
+   "harm": [
+    "libero_90:59",
+    "libero_90:61",
+    "libero_90:14"
+   ],
+   "wg": [
+    "libero_90:29",
+    "libero_90:40",
+    "libero_90:16",
+    "libero_90:1",
+    "libero_90:60",
+    "libero_90:36"
+   ]
+  },
+  "guidance": "x0-projection, first 5 of 10 Euler steps, w 1; carry: d* = min(|r*-h|, max(|D|, 3 cm)) unit(r*-h), r* = h + J (c - h) + b, D5 release bank region > type > category > role",
+  "readouts": "success, named-goal placement (own atom at the final pose), failure-type shift, harm (3 zs-success tasks), damage (2 cells), closed-loop goal-anchor hit (5 cm of the region site), guidance bookkeeping, cost",
+  "smoke": {
+   "smoke_off": true,
+   "smoke_ours": true
+  },
+  "status": "EXPLORATORY closed-loop smoke; no confirmatory claim, no p-values",
+  "written_before": "any R6 rollout"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pr6_smoke__s0__08b32296",
+ "schema": 1,
+ "script": "experiments/prereg/pr6_smoke.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T01:31:34+00:00",
+ "stream": null,
+ "tag": "pr6_smoke"
+}

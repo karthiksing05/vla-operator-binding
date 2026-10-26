@@ -1,0 +1,85 @@
+{
+ "task": "libero_90:29",
+ "text": "put the black bowl in the top drawer of the cabinet",
+ "named": [
+  {
+   "name": "akita_black_bowl_1",
+   "type": "akita_black_bowl",
+   "category": "bowl",
+   "level": "type",
+   "J": [
+    [
+     0.17681403160748776,
+     -0.004336498380543688
+    ],
+    [
+     0.012234417130305738,
+     0.24412452473858917
+    ]
+   ],
+   "b": [
+    0.015917440722565977,
+    0.009090215647827528
+   ],
+   "proto": 0
+  }
+ ],
+ "goal_vis": [
+  {
+   "frame": "vis",
+   "region": "white_cabinet_1_top_region",
+   "body": "white_cabinet_1",
+   "type": "white_cabinet",
+   "category": "cabinet",
+   "region_suffix": "top_region",
+   "level": "category",
+   "J": [
+    [
+     0.3363044460516212,
+     -0.1495493228534306
+    ],
+    [
+     -0.10605815624612054,
+     0.8596104725070672
+    ]
+   ],
+   "b": [
+    -0.07163880333256452,
+    0.04464992371214632
+   ],
+   "proto": 24
+  }
+ ],
+ "goal_orc": [
+  {
+   "frame": "orc",
+   "region": "white_cabinet_1_top_region",
+   "body": "white_cabinet_1",
+   "type": "white_cabinet",
+   "category": "cabinet",
+   "region_suffix": "top_region",
+   "level": "category",
+   "J": [
+    [
+     0.3363044460516212,
+     -0.1495493228534306
+    ],
+    [
+     -0.10605815624612054,
+     0.8596104725070672
+    ]
+   ],
+   "b": [
+    -0.022482998209064447,
+    -0.007079438334846896
+   ],
+   "proto": 24
+  }
+ ],
+ "tgt": "white_cabinet_1_top_region",
+ "scale": [
+  0.01052401745032942,
+  0.011963828742732078,
+  0.011237455538931119
+ ]
+}

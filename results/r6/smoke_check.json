@@ -1,0 +1,98 @@
+{
+ "smoke_ours": {
+  "episodes": [
+   {
+    "trial": 0,
+    "exact": true,
+    "max_abs": 0.0,
+    "success": false
+   },
+   {
+    "trial": 1,
+    "exact": true,
+    "max_abs": 0.0,
+    "success": false
+   }
+  ],
+  "queries": 0,
+  "guided": 0,
+  "guided_by_phase": {
+   "approach": 0,
+   "carry": 0
+  },
+  "reasons": []
+ },
+ "smoke_off": {
+  "episodes": [
+   {
+    "trial": 0,
+    "exact": true,
+    "max_abs": 0.0,
+    "success": false
+   },
+   {
+    "trial": 1,
+    "exact": true,
+    "max_abs": 0.0,
+    "success": false
+   }
+  ],
+  "queries": 160,
+  "guided": 0,
+  "guided_by_phase": {
+   "approach": 0,
+   "carry": 0
+  },
+  "reasons": []
+ },
+ "smoke_both": {
+  "episodes": [
+   {
+    "trial": 0,
+    "exact": false,
+    "max_abs": 2.003037691116333,
+    "success": false
+   },
+   {
+    "trial": 1,
+    "exact": false,
+    "max_abs": 0.5643118023872375,
+    "success": false
+   }
+  ],
+  "queries": 160,
+  "guided": 55,
+  "guided_by_phase": {
+   "approach": 35,
+   "carry": 20
+  },
+  "reasons": []
+ },
+ "smoke_orc": {
+  "episodes": [
+   {
+    "trial": 0,
+    "exact": false,
+    "max_abs": 2.0002050399780273,
+    "success": false
+   },
+   {
+    "trial": 1,
+    "exact": false,
+    "max_abs": 2.0015337467193604,
+    "success": false
+   }
+  ],
+  "queries": 160,
+  "guided": 46,
+  "guided_by_phase": {
+   "approach": 35,
+   "carry": 11
+  },
+  "reasons": []
+ },
+ "reproduces": {
+  "smoke_ours": true,
+  "smoke_off": true
+ }
+}

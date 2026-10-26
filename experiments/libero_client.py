@@ -464,6 +464,11 @@ def main():
                             el.update({"meta/obj_names": on_, "meta/obj_pos": op_.reshape(-1).tolist(), "meta/obj_quat": oq_.reshape(-1).tolist()})
                         if os.environ.get("R5S_GEOM") == "1":    # opt-in (probe R5s): per-token 3D points of the live agentview depth
                             el["meta/tok_xyz"] = r5s_tok_xyz(env.env.sim)
+                        if os.environ.get("R6_TGT"):              # opt-in (probe R6): the named goal region's / body's simulator position
+                            _n = os.environ["R6_TGT"]
+                            _st = env.env.object_states_dict.get(_n)
+                            el["meta/tgt_xyz"] = (np.asarray(_st.get_geom_state()["pos"], np.float64) if _st is not None
+                                                  else np.asarray(env.env.sim.data.body_xpos[env.env.obj_body_id[_n]], np.float64)).tolist()
                         ff = prefix is not None and calls < int(br["at"]) and a.replan * (calls + 1) <= len(prefix)
                         if ff:
                             el["meta/ff"] = True

@@ -93,6 +93,16 @@ def main():
         warm(policy)
         serve(policy, a.port)
         return
+    if a.mode.startswith("r6:"):
+        # r6:<spec.json>?arm=<off|both|goal|orc>&w=<w>&log=<jsonl> -- probe R6 (docs/PLAN_R6.md; opt-in, EXPLORATORY): zs on every query
+        # except the guided ones: R5s's approach guidance pre-grasp (both / orc) and carry-phase guidance toward D5's release operator
+        # aimed at the vision-anchored (both / goal) or oracle (orc) goal, from the grasp until the release (experiments/r6_guide.py)
+        sys.path.insert(0, os.path.join(ROOT, "experiments"))
+        import r6_guide as R6
+        policy = R6.make_policy(bk, a.mode, num_steps=a.num_steps, seed=a.seed)
+        warm(policy)
+        serve(policy, a.port)
+        return
     if a.mode.startswith("pirl:"):
         # pirl:<task>?lora=<one-demo LoRA>&save=<final.pt>&matched=<matched.pt>&ckpt=<ckpt.pt>&budget=577&episodes=100 -- plan D2
         # (ledger m3_prereg g30_rl): pi_RL's Flow-Noise PPO with a LoRA on the action expert, trained online on the client's

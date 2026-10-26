@@ -1,0 +1,85 @@
+{
+ "task": "libero_90:70",
+ "text": "put the chocolate pudding to the right of the plate",
+ "named": [
+  {
+   "name": "chocolate_pudding_1",
+   "type": "chocolate_pudding",
+   "category": "grocery",
+   "level": "type",
+   "J": [
+    [
+     0.1379837325625489,
+     0.01117265747991465
+    ],
+    [
+     0.013410027145654594,
+     0.25420909503725025
+    ]
+   ],
+   "b": [
+    0.022583910653887766,
+    -0.005893150422777781
+   ],
+   "proto": 7
+  }
+ ],
+ "goal_vis": [
+  {
+   "frame": "vis",
+   "region": "living_room_table_plate_right_region",
+   "body": null,
+   "type": null,
+   "category": null,
+   "region_suffix": "",
+   "level": "role",
+   "J": [
+    [
+     0.49455656962775013,
+     -0.012433206113194591
+    ],
+    [
+     0.06631154703175524,
+     0.8629124131983633
+    ]
+   ],
+   "b": [
+    -0.034153990567187695,
+    0.025395308023108264
+   ],
+   "proto": null
+  }
+ ],
+ "goal_orc": [
+  {
+   "frame": "orc",
+   "region": "living_room_table_plate_right_region",
+   "body": null,
+   "type": null,
+   "category": null,
+   "region_suffix": "",
+   "level": "role",
+   "J": [
+    [
+     0.49455656962775013,
+     -0.012433206113194591
+    ],
+    [
+     0.06631154703175524,
+     0.8629124131983633
+    ]
+   ],
+   "b": [
+    -0.008547016669537454,
+    0.018654083223545496
+   ],
+   "proto": null
+  }
+ ],
+ "tgt": "living_room_table_plate_right_region",
+ "scale": [
+  0.01052401745032942,
+  0.011963828742732078,
+  0.011237455538931119
+ ]
+}

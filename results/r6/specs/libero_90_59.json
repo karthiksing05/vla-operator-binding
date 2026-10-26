@@ -1,0 +1,85 @@
+{
+ "task": "libero_90:59",
+ "text": "pick up the tomato sauce and put it in the tray",
+ "named": [
+  {
+   "name": "tomato_sauce_1",
+   "type": "tomato_sauce",
+   "category": "grocery",
+   "level": "type",
+   "J": [
+    [
+     0.12131778668444941,
+     -0.015204567851114263
+    ],
+    [
+     0.011364964286369628,
+     0.1866714663029512
+    ]
+   ],
+   "b": [
+    0.01548023494227222,
+    -0.011636336142848073
+   ],
+   "proto": 22
+  }
+ ],
+ "goal_vis": [
+  {
+   "frame": "vis",
+   "region": "wooden_tray_1_contain_region",
+   "body": "wooden_tray_1",
+   "type": "wooden_tray",
+   "category": "tray",
+   "region_suffix": "contain_region",
+   "level": "region",
+   "J": [
+    [
+     0.5857245856753774,
+     0.21958957543592372
+    ],
+    [
+     0.08358418519107458,
+     0.7692039581997567
+    ]
+   ],
+   "b": [
+    -0.06925344826006082,
+    0.10433233805785162
+   ],
+   "proto": 29
+  }
+ ],
+ "goal_orc": [
+  {
+   "frame": "orc",
+   "region": "wooden_tray_1_contain_region",
+   "body": "wooden_tray_1",
+   "type": "wooden_tray",
+   "category": "tray",
+   "region_suffix": "contain_region",
+   "level": "region",
+   "J": [
+    [
+     0.5857245856753774,
+     0.21958957543592372
+    ],
+    [
+     0.08358418519107458,
+     0.7692039581997567
+    ]
+   ],
+   "b": [
+    -0.01848760677681372,
+    0.051158593391857174
+   ],
+   "proto": 29
+  }
+ ],
+ "tgt": "wooden_tray_1_contain_region",
+ "scale": [
+  0.01052401745032942,
+  0.011963828742732078,
+  0.011237455538931119
+ ]
+}

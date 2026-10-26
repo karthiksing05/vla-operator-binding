@@ -1,0 +1,85 @@
+{
+ "task": "libero_90:61",
+ "text": "pick up the chocolate pudding and put it in the tray",
+ "named": [
+  {
+   "name": "chocolate_pudding_1",
+   "type": "chocolate_pudding",
+   "category": "grocery",
+   "level": "type",
+   "J": [
+    [
+     0.1379837325625489,
+     0.01117265747991465
+    ],
+    [
+     0.013410027145654594,
+     0.25420909503725025
+    ]
+   ],
+   "b": [
+    0.022583910653887766,
+    -0.005893150422777781
+   ],
+   "proto": 7
+  }
+ ],
+ "goal_vis": [
+  {
+   "frame": "vis",
+   "region": "wooden_tray_1_contain_region",
+   "body": "wooden_tray_1",
+   "type": "wooden_tray",
+   "category": "tray",
+   "region_suffix": "contain_region",
+   "level": "region",
+   "J": [
+    [
+     0.5857245856753774,
+     0.21958957543592372
+    ],
+    [
+     0.08358418519107458,
+     0.7692039581997567
+    ]
+   ],
+   "b": [
+    -0.06925344826006082,
+    0.10433233805785162
+   ],
+   "proto": 29
+  }
+ ],
+ "goal_orc": [
+  {
+   "frame": "orc",
+   "region": "wooden_tray_1_contain_region",
+   "body": "wooden_tray_1",
+   "type": "wooden_tray",
+   "category": "tray",
+   "region_suffix": "contain_region",
+   "level": "region",
+   "J": [
+    [
+     0.5857245856753774,
+     0.21958957543592372
+    ],
+    [
+     0.08358418519107458,
+     0.7692039581997567
+    ]
+   ],
+   "b": [
+    -0.01848760677681372,
+    0.051158593391857174
+   ],
+   "proto": 29
+  }
+ ],
+ "tgt": "wooden_tray_1_contain_region",
+ "scale": [
+  0.01052401745032942,
+  0.011963828742732078,
+  0.011237455538931119
+ ]
+}
