@@ -1,0 +1,2271 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "python experiments/r6_smoke.py --read --record",
+ "config": {
+  "arms": {
+   "both": "both",
+   "goal": "goal",
+   "orc": "orc"
+  },
+  "w": 1.0
+ },
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4235351",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r6_read",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "d8b7cbbe7a0ae335bfe308362bf5ec4b92cb04d5",
+  "short": "d8b7cbbe"
+ },
+ "keys": {},
+ "metrics": {
+  "cost": {
+   "a40_h": 2.488888888888889,
+   "packs": {
+    "r6_roll_000_4235227.out": 0.42527777777777775,
+    "r6_roll_001_4235228.out": 0.4275,
+    "r6_roll_002_4235229.out": 0.4008333333333333,
+    "r6_roll_003_4235230.out": 0.3080555555555556,
+    "r6_roll_004_4235231.out": 0.2275,
+    "r6_roll_005_4235232.out": 0.18583333333333332,
+    "r6_roll_006_4235233.out": 0.20444444444444446,
+    "r6_roll_007_4235234.out": 0.13944444444444445,
+    "r6_roll_008_4235235.out": 0.09666666666666666,
+    "r6_smoke_000_4235201.out": 0.07333333333333333
+   }
+  },
+  "decision": {
+   "gain": -0.03333333333333333,
+   "hi": 0.1,
+   "lo": -0.16666666666666666,
+   "stage_c": false
+  },
+  "exploratory": true,
+  "goal_anchor_hit_5cm": {
+   "both": {
+    "cell": {
+     "hi": 0.36278124999999994,
+     "lo": 0.14444444444444443,
+     "mean": 0.24958333333333335,
+     "n": 20,
+     "tasks": 1
+    },
+    "harm": {
+     "hi": 0.26644262566137555,
+     "lo": 0.0,
+     "mean": 0.09183201058201057,
+     "n": 60,
+     "tasks": 3
+    },
+    "wg": {
+     "hi": 0.3078253808949694,
+     "lo": 0.0,
+     "mean": 0.14001626831173397,
+     "n": 118,
+     "tasks": 6
+    }
+   },
+   "goal": {
+    "cell": {
+     "hi": 0.3702169913419913,
+     "lo": 0.13738045634920637,
+     "mean": 0.24941378066378067,
+     "n": 20,
+     "tasks": 1
+    },
+    "harm": {
+     "hi": 0.22185227272727273,
+     "lo": 0.0,
+     "mean": 0.07686868686868688,
+     "n": 60,
+     "tasks": 3
+    },
+    "wg": {
+     "hi": 0.3419193281597101,
+     "lo": 0.0,
+     "mean": 0.15504571980348003,
+     "n": 113,
+     "tasks": 6
+    }
+   }
+  },
+  "groups": {
+   "cell": {
+    "both": {
+     "binding_error": {
+      "hi": 0.1,
+      "lo": 0.0,
+      "mean": 0.025,
+      "n": 40,
+      "tasks": 2
+     },
+     "diff_vs_zs": {
+      "binding_error": {
+       "hi": 0.1,
+       "lo": 0.0,
+       "mean": 0.025,
+       "n": 40,
+       "tasks": 2
+      },
+      "goal_placed": {
+       "hi": 0.05,
+       "lo": -0.35,
+       "mean": -0.125,
+       "n": 40,
+       "tasks": 2
+      },
+      "success": {
+       "hi": 0.0,
+       "lo": -0.125,
+       "mean": -0.05,
+       "n": 40,
+       "tasks": 2
+      },
+      "wrong_goal": {
+       "hi": 0.0,
+       "lo": 0.0,
+       "mean": 0.0,
+       "n": 40,
+       "tasks": 2
+      }
+     },
+     "discordant": [
+      0,
+      2
+     ],
+     "goal_placed": {
+      "hi": 1.0,
+      "lo": 0.6,
+      "mean": 0.825,
+      "n": 40,
+      "tasks": 2
+     },
+     "success": {
+      "hi": 1.0,
+      "lo": 0.875,
+      "mean": 0.95,
+      "n": 40,
+      "tasks": 2
+     },
+     "types": {
+      "motion/toward_target": 1,
+      "wrong_object/other_type": 1
+     },
+     "wrong_goal": {
+      "hi": 0.0,
+      "lo": 0.0,
+      "mean": 0.0,
+      "n": 40,
+      "tasks": 2
+     }
+    },
+    "goal": {
+     "binding_error": {
+      "hi": 0.0,
+      "lo": 0.0,
+      "mean": 0.0,
+      "n": 40,
+      "tasks": 2
+     },
+     "diff_vs_zs": {
+      "binding_error": {
+       "hi": 0.0,
+       "lo": 0.0,
+       "mean": 0.0,
+       "n": 40,
+       "tasks": 2
+      },
+      "goal_placed": {
+       "hi": 0.1,
+       "lo": 0.0,
+       "mean": 0.025,
+       "n": 40,
+       "tasks": 2
+      },
+      "success": {
+       "hi": 0.0,
+       "lo": 0.0,
+       "mean": 0.0,
+       "n": 40,
+       "tasks": 2
+      },
+      "wrong_goal": {
+       "hi": 0.0,
+       "lo": 0.0,
+       "mean": 0.0,
+       "n": 40,
+       "tasks": 2
+      }
+     },
+     "discordant": [
+      0,
+      0
+     ],
+     "goal_placed": {
+      "hi": 1.0,
+      "lo": 0.9,
+      "mean": 0.975,
+      "n": 40,
+      "tasks": 2
+     },
+     "success": {
+      "hi": 1.0,
+      "lo": 1.0,
+      "mean": 1.0,
+      "n": 40,
+      "tasks": 2
+     },
+     "types": {},
+     "wrong_goal": {
+      "hi": 0.0,
+      "lo": 0.0,
+      "mean": 0.0,
+      "n": 40,
+      "tasks": 2
+     }
+    },
+    "orc": {
+     "binding_error": {
+      "hi": 0.15,
+      "lo": 0.0,
+      "mean": 0.05,
+      "n": 40,
+      "tasks": 2
+     },
+     "diff_vs_zs": {
+      "binding_error": {
+       "hi": 0.15,
+       "lo": 0.0,
+       "mean": 0.05,
+       "n": 40,
+       "tasks": 2
+      },
+      "goal_placed": {
+       "hi": 0.1,
+       "lo": -0.275,
+       "mean": -0.075,
+       "n": 40,
+       "tasks": 2
+      },
+      "success": {
+       "hi": 0.0,
+       "lo": -0.15,
+       "mean": -0.05,
+       "n": 40,
+       "tasks": 2
+      },
+      "wrong_goal": {
+       "hi": 0.0,
+       "lo": 0.0,
+       "mean": 0.0,
+       "n": 40,
+       "tasks": 2
+      }
+     },
+     "discordant": [
+      0,
+      2
+     ],
+     "goal_placed": {
+      "hi": 1.0,
+      "lo": 0.675,
+      "mean": 0.875,
+      "n": 40,
+      "tasks": 2
+     },
+     "success": {
+      "hi": 1.0,
+      "lo": 0.85,
+      "mean": 0.95,
+      "n": 40,
+      "tasks": 2
+     },
+     "types": {
+      "wrong_object/other_type": 2
+     },
+     "wrong_goal": {
+      "hi": 0.0,
+      "lo": 0.0,
+      "mean": 0.0,
+      "n": 40,
+      "tasks": 2
+     }
+    },
+    "zs": {
+     "binding_error": {
+      "hi": 0.0,
+      "lo": 0.0,
+      "mean": 0.0,
+      "n": 40,
+      "tasks": 2
+     },
+     "goal_placed": {
+      "hi": 1.0,
+      "lo": 0.875,
+      "mean": 0.95,
+      "n": 40,
+      "tasks": 2
+     },
+     "success": {
+      "hi": 1.0,
+      "lo": 1.0,
+      "mean": 1.0,
+      "n": 40,
+      "tasks": 2
+     },
+     "types": {},
+     "wrong_goal": {
+      "hi": 0.0,
+      "lo": 0.0,
+      "mean": 0.0,
+      "n": 40,
+      "tasks": 2
+     }
+    }
+   },
+   "harm": {
+    "both": {
+     "binding_error": {
+      "hi": 0.2,
+      "lo": 0.0,
+      "mean": 0.06666666666666667,
+      "n": 60,
+      "tasks": 3
+     },
+     "diff_vs_zs": {
+      "binding_error": {
+       "hi": 0.2,
+       "lo": 0.0,
+       "mean": 0.06666666666666667,
+       "n": 60,
+       "tasks": 3
+      },
+      "goal_placed": {
+       "hi": 0.06666666666666667,
+       "lo": -0.21666666666666667,
+       "mean": -0.05,
+       "n": 60,
+       "tasks": 3
+      },
+      "success": {
+       "hi": 0.0,
+       "lo": -0.21666666666666667,
+       "mean": -0.06666666666666667,
+       "n": 60,
+       "tasks": 3
+      },
+      "wrong_goal": {
+       "hi": 0.0,
+       "lo": 0.0,
+       "mean": 0.0,
+       "n": 60,
+       "tasks": 3
+      }
+     },
+     "discordant": [
+      1,
+      5
+     ],
+     "goal_placed": {
+      "hi": 1.0,
+      "lo": 0.75,
+      "mean": 0.9166666666666666,
+      "n": 60,
+      "tasks": 3
+     },
+     "success": {
+      "hi": 1.0,
+      "lo": 0.75,
+      "mean": 0.9166666666666666,
+      "n": 60,
+      "tasks": 3
+     },
+     "types": {
+      "motion/toward_target": 1,
+      "wrong_object/wrong_instance": 4
+     },
+     "wrong_goal": {
+      "hi": 0.0,
+      "lo": 0.0,
+      "mean": 0.0,
+      "n": 60,
+      "tasks": 3
+     }
+    },
+    "goal": {
+     "binding_error": {
+      "hi": 0.0,
+      "lo": 0.0,
+      "mean": 0.0,
+      "n": 60,
+      "tasks": 3
+     },
+     "diff_vs_zs": {
+      "binding_error": {
+       "hi": 0.0,
+       "lo": 0.0,
+       "mean": 0.0,
+       "n": 60,
+       "tasks": 3
+      },
+      "goal_placed": {
+       "hi": 0.06666666666666667,
+       "lo": -0.13333333333333333,
+       "mean": -0.016666666666666666,
+       "n": 60,
+       "tasks": 3
+      },
+      "success": {
+       "hi": 0.05,
+       "lo": -0.05,
+       "mean": 0.0,
+       "n": 60,
+       "tasks": 3
+      },
+      "wrong_goal": {
+       "hi": 0.0,
+       "lo": 0.0,
+       "mean": 0.0,
+       "n": 60,
+       "tasks": 3
+      }
+     },
+     "discordant": [
+      1,
+      1
+     ],
+     "goal_placed": {
+      "hi": 1.0,
+      "lo": 0.8333333333333334,
+      "mean": 0.95,
+      "n": 60,
+      "tasks": 3
+     },
+     "success": {
+      "hi": 1.0,
+      "lo": 0.9333333333333333,
+      "mean": 0.9833333333333333,
+      "n": 60,
+      "tasks": 3
+     },
+     "types": {
+      "motion/toward_target": 1
+     },
+     "wrong_goal": {
+      "hi": 0.0,
+      "lo": 0.0,
+      "mean": 0.0,
+      "n": 60,
+      "tasks": 3
+     }
+    },
+    "orc": {
+     "binding_error": {
+      "hi": 0.0,
+      "lo": 0.0,
+      "mean": 0.0,
+      "n": 60,
+      "tasks": 3
+     },
+     "diff_vs_zs": {
+      "binding_error": {
+       "hi": 0.0,
+       "lo": 0.0,
+       "mean": 0.0,
+       "n": 60,
+       "tasks": 3
+      },
+      "goal_placed": {
+       "hi": 0.1,
+       "lo": 0.0,
+       "mean": 0.03333333333333333,
+       "n": 60,
+       "tasks": 3
+      },
+      "success": {
+       "hi": 0.06666666666666667,
+       "lo": 0.0,
+       "mean": 0.016666666666666666,
+       "n": 60,
+       "tasks": 3
+      },
+      "wrong_goal": {
+       "hi": 0.0,
+       "lo": 0.0,
+       "mean": 0.0,
+       "n": 60,
+       "tasks": 3
+      }
+     },
+     "discordant": [
+      1,
+      0
+     ],
+     "goal_placed": {
+      "hi": 1.0,
+      "lo": 1.0,
+      "mean": 1.0,
+      "n": 60,
+      "tasks": 3
+     },
+     "success": {
+      "hi": 1.0,
+      "lo": 1.0,
+      "mean": 1.0,
+      "n": 60,
+      "tasks": 3
+     },
+     "types": {},
+     "wrong_goal": {
+      "hi": 0.0,
+      "lo": 0.0,
+      "mean": 0.0,
+      "n": 60,
+      "tasks": 3
+     }
+    },
+    "zs": {
+     "binding_error": {
+      "hi": 0.0,
+      "lo": 0.0,
+      "mean": 0.0,
+      "n": 60,
+      "tasks": 3
+     },
+     "goal_placed": {
+      "hi": 1.0,
+      "lo": 0.9,
+      "mean": 0.9666666666666667,
+      "n": 60,
+      "tasks": 3
+     },
+     "success": {
+      "hi": 1.0,
+      "lo": 0.9333333333333333,
+      "mean": 0.9833333333333333,
+      "n": 60,
+      "tasks": 3
+     },
+     "types": {
+      "motion/toward_target": 1
+     },
+     "wrong_goal": {
+      "hi": 0.0,
+      "lo": 0.0,
+      "mean": 0.0,
+      "n": 60,
+      "tasks": 3
+     }
+    }
+   },
+   "wg": {
+    "both": {
+     "binding_error": {
+      "hi": 0.6666666666666666,
+      "lo": 0.2,
+      "mean": 0.43333333333333335,
+      "n": 120,
+      "tasks": 6
+     },
+     "diff_vs_zs": {
+      "binding_error": {
+       "hi": 0.19166666666666668,
+       "lo": -0.13333333333333333,
+       "mean": 0.03333333333333333,
+       "n": 120,
+       "tasks": 6
+      },
+      "goal_placed": {
+       "hi": 0.14166666666666666,
+       "lo": -0.15833333333333333,
+       "mean": 0.0,
+       "n": 120,
+       "tasks": 6
+      },
+      "success": {
+       "hi": 0.1,
+       "lo": -0.16666666666666666,
+       "mean": -0.03333333333333333,
+       "n": 120,
+       "tasks": 6
+      },
+      "wrong_goal": {
+       "hi": 0.08333333333333333,
+       "lo": -0.16666666666666666,
+       "mean": -0.03333333333333333,
+       "n": 120,
+       "tasks": 6
+      }
+     },
+     "discordant": [
+      12,
+      16
+     ],
+     "goal_placed": {
+      "hi": 0.5083333333333333,
+      "lo": 0.08333333333333333,
+      "mean": 0.2833333333333333,
+      "n": 120,
+      "tasks": 6
+     },
+     "success": {
+      "hi": 0.5333333333333333,
+      "lo": 0.08333333333333333,
+      "mean": 0.2916666666666667,
+      "n": 120,
+      "tasks": 6
+     },
+     "types": {
+      "motion/in_region": 4,
+      "motion/not_carried": 5,
+      "motion/toward_target": 21,
+      "no_commit": 3,
+      "wrong_goal/carried_elsewhere": 2,
+      "wrong_goal/other_region": 41,
+      "wrong_object/other_type": 5,
+      "wrong_object/wrong_instance": 4
+     },
+     "wrong_goal": {
+      "hi": 0.625,
+      "lo": 0.10833333333333334,
+      "mean": 0.35833333333333334,
+      "n": 120,
+      "tasks": 6
+     }
+    },
+    "goal": {
+     "binding_error": {
+      "hi": 0.6416666666666667,
+      "lo": 0.10833333333333334,
+      "mean": 0.36666666666666664,
+      "n": 120,
+      "tasks": 6
+     },
+     "diff_vs_zs": {
+      "binding_error": {
+       "hi": 0.058333333333333334,
+       "lo": -0.14166666666666666,
+       "mean": -0.03333333333333333,
+       "n": 120,
+       "tasks": 6
+      },
+      "goal_placed": {
+       "hi": 0.15833333333333333,
+       "lo": -0.075,
+       "mean": 0.025,
+       "n": 120,
+       "tasks": 6
+      },
+      "success": {
+       "hi": 0.125,
+       "lo": -0.058333333333333334,
+       "mean": 0.025,
+       "n": 120,
+       "tasks": 6
+      },
+      "wrong_goal": {
+       "hi": 0.041666666666666664,
+       "lo": -0.15,
+       "mean": -0.041666666666666664,
+       "n": 120,
+       "tasks": 6
+      }
+     },
+     "discordant": [
+      14,
+      11
+     ],
+     "goal_placed": {
+      "hi": 0.625,
+      "lo": 0.041666666666666664,
+      "mean": 0.30833333333333335,
+      "n": 120,
+      "tasks": 6
+     },
+     "success": {
+      "hi": 0.65,
+      "lo": 0.1,
+      "mean": 0.35,
+      "n": 120,
+      "tasks": 6
+     },
+     "types": {
+      "motion/not_carried": 2,
+      "motion/toward_target": 23,
+      "no_commit": 9,
+      "wrong_goal/carried_elsewhere": 4,
+      "wrong_goal/other_region": 38,
+      "wrong_object/other_type": 2
+     },
+     "wrong_goal": {
+      "hi": 0.6333333333333333,
+      "lo": 0.08333333333333333,
+      "mean": 0.35,
+      "n": 120,
+      "tasks": 6
+     }
+    },
+    "orc": {
+     "binding_error": {
+      "hi": 0.5583333333333333,
+      "lo": 0.125,
+      "mean": 0.3333333333333333,
+      "n": 120,
+      "tasks": 6
+     },
+     "diff_vs_zs": {
+      "binding_error": {
+       "hi": 0.08333333333333333,
+       "lo": -0.24166666666666667,
+       "mean": -0.06666666666666667,
+       "n": 120,
+       "tasks": 6
+      },
+      "goal_placed": {
+       "hi": 0.175,
+       "lo": -0.05,
+       "mean": 0.05,
+       "n": 120,
+       "tasks": 6
+      },
+      "success": {
+       "hi": 0.15833333333333333,
+       "lo": -0.075,
+       "mean": 0.03333333333333333,
+       "n": 120,
+       "tasks": 6
+      },
+      "wrong_goal": {
+       "hi": 0.09166666666666666,
+       "lo": -0.23333333333333334,
+       "mean": -0.058333333333333334,
+       "n": 120,
+       "tasks": 6
+      }
+     },
+     "discordant": [
+      16,
+      12
+     ],
+     "goal_placed": {
+      "hi": 0.6166666666666667,
+      "lo": 0.09166666666666666,
+      "mean": 0.3333333333333333,
+      "n": 120,
+      "tasks": 6
+     },
+     "success": {
+      "hi": 0.6416666666666667,
+      "lo": 0.10833333333333334,
+      "mean": 0.35833333333333334,
+      "n": 120,
+      "tasks": 6
+     },
+     "types": {
+      "motion/in_region": 1,
+      "motion/not_carried": 1,
+      "motion/toward_target": 27,
+      "no_commit": 8,
+      "wrong_goal/carried_elsewhere": 3,
+      "wrong_goal/other_region": 37
+     },
+     "wrong_goal": {
+      "hi": 0.5583333333333333,
+      "lo": 0.125,
+      "mean": 0.3333333333333333,
+      "n": 120,
+      "tasks": 6
+     }
+    },
+    "zs": {
+     "binding_error": {
+      "hi": 0.7166666666666667,
+      "lo": 0.10833333333333334,
+      "mean": 0.4,
+      "n": 120,
+      "tasks": 6
+     },
+     "goal_placed": {
+      "hi": 0.5916666666666667,
+      "lo": 0.06666666666666667,
+      "mean": 0.2833333333333333,
+      "n": 120,
+      "tasks": 6
+     },
+     "success": {
+      "hi": 0.625,
+      "lo": 0.09166666666666666,
+      "mean": 0.325,
+      "n": 120,
+      "tasks": 6
+     },
+     "types": {
+      "motion/in_region": 1,
+      "motion/not_carried": 1,
+      "motion/toward_target": 23,
+      "no_commit": 8,
+      "wrong_goal/carried_elsewhere": 2,
+      "wrong_goal/other_region": 45,
+      "wrong_object/other_type": 1
+     },
+     "wrong_goal": {
+      "hi": 0.7083333333333334,
+      "lo": 0.1,
+      "mean": 0.39166666666666666,
+      "n": 120,
+      "tasks": 6
+     }
+    }
+   }
+  },
+  "guidance": {
+   "both": {
+    "libero_90:1": {
+     "carry_queries": 135,
+     "fallback_carry": 0,
+     "goal_err_median": 0.1391,
+     "goal_hit_ep": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.1111111111111111,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 427,
+     "guided_carry": 135,
+     "levels": {
+      "category": 0,
+      "region": 135,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 659.1366548042704,
+     "queries": 1497
+    },
+    "libero_90:14": {
+     "carry_queries": 131,
+     "fallback_carry": 0,
+     "goal_err_median": 0.0673,
+     "goal_hit_ep": [
+      0.0,
+      0.0,
+      0.42857142857142855,
+      1.0,
+      0.1111111111111111,
+      1.0,
+      0.0,
+      0.625,
+      0.0,
+      0.0,
+      0.42857142857142855,
+      1.0,
+      0.0,
+      0.0,
+      0.4166666666666667,
+      0.0,
+      0.0,
+      0.5,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 212,
+     "guided_carry": 131,
+     "levels": {
+      "category": 0,
+      "region": 131,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 553.2973760932944,
+     "queries": 870
+    },
+    "libero_90:16": {
+     "carry_queries": 490,
+     "fallback_carry": 0,
+     "goal_err_median": 0.0475,
+     "goal_hit_ep": [
+      0.0,
+      0.4,
+      0.5161290322580645,
+      0.0,
+      0.6923076923076923,
+      0.3103448275862069,
+      0.3076923076923077,
+      0.2222222222222222,
+      0.3076923076923077,
+      0.8823529411764706,
+      0.8059701492537313,
+      0.8,
+      0.1111111111111111,
+      0.0,
+      0.14285714285714285,
+      0.15384615384615385,
+      0.5454545454545454,
+      0.7586206896551724,
+      0.86,
+      0.8
+     ],
+     "guided_approach": 230,
+     "guided_carry": 490,
+     "levels": {
+      "category": 0,
+      "region": 490,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 638.7534722222222,
+     "queries": 1600
+    },
+    "libero_90:29": {
+     "carry_queries": 184,
+     "fallback_carry": 0,
+     "goal_err_median": 0.14605,
+     "goal_hit_ep": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 258,
+     "guided_carry": 184,
+     "levels": {
+      "category": 184,
+      "region": 0,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 686.9307692307693,
+     "queries": 1498
+    },
+    "libero_90:36": {
+     "carry_queries": 267,
+     "fallback_carry": 0,
+     "goal_err_median": 0.0589,
+     "goal_hit_ep": [
+      0.0,
+      0.26666666666666666,
+      0.1111111111111111,
+      0.45,
+      0.23529411764705882,
+      0.38461538461538464,
+      0.42857142857142855,
+      0.6666666666666666,
+      1.0,
+      0.0,
+      0.6153846153846154,
+      0.8666666666666667,
+      0.8,
+      0.2,
+      0.0,
+      1.0,
+      0.07692307692307693,
+      0.6923076923076923,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 264,
+     "guided_carry": 267,
+     "levels": {
+      "category": 0,
+      "region": 267,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 631.4679849340866,
+     "queries": 1110
+    },
+    "libero_90:40": {
+     "carry_queries": 511,
+     "fallback_carry": 0,
+     "goal_err_median": 0.0618,
+     "goal_hit_ep": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 408,
+     "guided_carry": 511,
+     "levels": {
+      "category": 0,
+      "region": 511,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 641.3134929270947,
+     "queries": 1555
+    },
+    "libero_90:59": {
+     "carry_queries": 90,
+     "fallback_carry": 0,
+     "goal_err_median": 0.1371,
+     "goal_hit_ep": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 214,
+     "guided_carry": 90,
+     "levels": {
+      "category": 0,
+      "region": 90,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 672.2763157894736,
+     "queries": 512
+    },
+    "libero_90:60": {
+     "carry_queries": 181,
+     "fallback_carry": 0,
+     "goal_err_median": 0.1352,
+     "goal_hit_ep": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 248,
+     "guided_carry": 181,
+     "levels": {
+      "category": 0,
+      "region": 181,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 622.2710955710957,
+     "queries": 1150
+    },
+    "libero_90:61": {
+     "carry_queries": 261,
+     "fallback_carry": 0,
+     "goal_err_median": 0.1358,
+     "goal_hit_ep": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 233,
+     "guided_carry": 261,
+     "levels": {
+      "category": 0,
+      "region": 261,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 635.7064777327935,
+     "queries": 581
+    },
+    "libero_90:70": {
+     "carry_queries": 92,
+     "fallback_carry": 92,
+     "goal_err_median": null,
+     "goal_hit_ep": [],
+     "guided_approach": 179,
+     "guided_carry": 0,
+     "levels": {
+      "category": 0,
+      "region": 0,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 568.2798882681565,
+     "queries": 477
+    },
+    "libero_spatial:6": {
+     "carry_queries": 186,
+     "fallback_carry": 0,
+     "goal_err_median": 0.0603,
+     "goal_hit_ep": [
+      0.0,
+      0.0,
+      0.625,
+      0.625,
+      0.1111111111111111,
+      0.0,
+      0.5,
+      0.375,
+      0.3333333333333333,
+      0.0,
+      0.4444444444444444,
+      0.7,
+      0.1111111111111111,
+      0.16666666666666666,
+      0.4,
+      0.6,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 206,
+     "guided_carry": 186,
+     "levels": {
+      "category": 0,
+      "region": 186,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 654.9989795918367,
+     "queries": 455
+    }
+   },
+   "goal": {
+    "libero_90:1": {
+     "carry_queries": 113,
+     "fallback_carry": 0,
+     "goal_err_median": 0.1408,
+     "goal_hit_ep": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 0,
+     "guided_carry": 113,
+     "levels": {
+      "category": 0,
+      "region": 113,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 628.5159292035398,
+     "queries": 1413
+    },
+    "libero_90:14": {
+     "carry_queries": 180,
+     "fallback_carry": 0,
+     "goal_err_median": 0.13,
+     "goal_hit_ep": [
+      0.0,
+      0.1,
+      1.0,
+      0.3,
+      0.0,
+      0.3,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      0.5,
+      0.5555555555555556,
+      0.0,
+      0.09090909090909091,
+      0.45454545454545453,
+      0.1111111111111111,
+      0.0,
+      0.2,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 0,
+     "guided_carry": 180,
+     "levels": {
+      "category": 0,
+      "region": 180,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 657.3461111111111,
+     "queries": 555
+    },
+    "libero_90:16": {
+     "carry_queries": 551,
+     "fallback_carry": 0,
+     "goal_err_median": 0.0475,
+     "goal_hit_ep": [
+      0.1,
+      0.375,
+      0.6578947368421053,
+      0.52,
+      0.7692307692307693,
+      0.7333333333333333,
+      0.3076923076923077,
+      0.6829268292682927,
+      0.45454545454545453,
+      0.8333333333333334,
+      0.0,
+      0.9393939393939394,
+      0.02,
+      0.9032258064516129,
+      0.0,
+      0.18181818181818182,
+      0.8648648648648649,
+      0.0,
+      0.6956521739130435,
+      0.7105263157894737
+     ],
+     "guided_approach": 0,
+     "guided_carry": 551,
+     "levels": {
+      "category": 0,
+      "region": 551,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 640.6947368421054,
+     "queries": 1447
+    },
+    "libero_90:29": {
+     "carry_queries": 244,
+     "fallback_carry": 0,
+     "goal_err_median": 0.1462,
+     "goal_hit_ep": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 0,
+     "guided_carry": 244,
+     "levels": {
+      "category": 244,
+      "region": 0,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 685.6963114754099,
+     "queries": 1546
+    },
+    "libero_90:36": {
+     "carry_queries": 299,
+     "fallback_carry": 0,
+     "goal_err_median": 0.0583,
+     "goal_hit_ep": [
+      0.058823529411764705,
+      0.4666666666666667,
+      0.2,
+      0.21428571428571427,
+      0.3333333333333333,
+      0.25,
+      0.35714285714285715,
+      0.7777777777777778,
+      0.8333333333333334,
+      0.2222222222222222,
+      0.625,
+      0.9285714285714286,
+      0.875,
+      0.2,
+      0.0,
+      1.0,
+      0.0,
+      0.42857142857142855,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 0,
+     "guided_carry": 299,
+     "levels": {
+      "category": 0,
+      "region": 299,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 559.0324414715719,
+     "queries": 1013
+    },
+    "libero_90:40": {
+     "carry_queries": 544,
+     "fallback_carry": 0,
+     "goal_err_median": 0.06565,
+     "goal_hit_ep": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 0,
+     "guided_carry": 544,
+     "levels": {
+      "category": 0,
+      "region": 544,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 642.2836397058824,
+     "queries": 1511
+    },
+    "libero_90:59": {
+     "carry_queries": 125,
+     "fallback_carry": 0,
+     "goal_err_median": 0.1371,
+     "goal_hit_ep": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 0,
+     "guided_carry": 125,
+     "levels": {
+      "category": 0,
+      "region": 125,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 658.6472000000001,
+     "queries": 401
+    },
+    "libero_90:60": {
+     "carry_queries": 145,
+     "fallback_carry": 0,
+     "goal_err_median": 0.1358,
+     "goal_hit_ep": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 0,
+     "guided_carry": 145,
+     "levels": {
+      "category": 0,
+      "region": 145,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 640.255172413793,
+     "queries": 1005
+    },
+    "libero_90:61": {
+     "carry_queries": 255,
+     "fallback_carry": 0,
+     "goal_err_median": 0.1358,
+     "goal_hit_ep": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "guided_approach": 0,
+     "guided_carry": 255,
+     "levels": {
+      "category": 0,
+      "region": 255,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 659.518431372549,
+     "queries": 584
+    },
+    "libero_90:70": {
+     "carry_queries": 100,
+     "fallback_carry": 100,
+     "goal_err_median": null,
+     "goal_hit_ep": [],
+     "guided_approach": 0,
+     "guided_carry": 0,
+     "levels": {
+      "category": 0,
+      "region": 0,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": null,
+     "queries": 362
+    },
+    "libero_spatial:6": {
+     "carry_queries": 172,
+     "fallback_carry": 0,
+     "goal_err_median": 0.0603,
+     "goal_hit_ep": [
+      0.0,
+      0.0,
+      0.5,
+      0.7142857142857143,
+      0.0,
+      0.0,
+      0.5555555555555556,
+      0.0,
+      0.3333333333333333,
+      0.0,
+      0.4,
+      0.75,
+      0.125,
+      0.5,
+      0.45454545454545453,
+      0.5555555555555556,
+      0.0,
+      0.0,
+      0.0,
+      0.1
+     ],
+     "guided_approach": 0,
+     "guided_carry": 172,
+     "levels": {
+      "category": 0,
+      "region": 172,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 567.167441860465,
+     "queries": 432
+    }
+   },
+   "orc": {
+    "libero_90:1": {
+     "carry_queries": 134,
+     "fallback_carry": 0,
+     "goal_err_median": null,
+     "goal_hit_ep": [],
+     "guided_approach": 706,
+     "guided_carry": 134,
+     "levels": {
+      "category": 0,
+      "region": 134,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 625.7820238095238,
+     "queries": 1434
+    },
+    "libero_90:14": {
+     "carry_queries": 144,
+     "fallback_carry": 0,
+     "goal_err_median": null,
+     "goal_hit_ep": [],
+     "guided_approach": 210,
+     "guided_carry": 144,
+     "levels": {
+      "category": 0,
+      "region": 144,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 606.9499999999999,
+     "queries": 518
+    },
+    "libero_90:16": {
+     "carry_queries": 653,
+     "fallback_carry": 0,
+     "goal_err_median": null,
+     "goal_hit_ep": [],
+     "guided_approach": 225,
+     "guided_carry": 653,
+     "levels": {
+      "category": 0,
+      "region": 653,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 571.8512528473805,
+     "queries": 1590
+    },
+    "libero_90:29": {
+     "carry_queries": 192,
+     "fallback_carry": 0,
+     "goal_err_median": null,
+     "goal_hit_ep": [],
+     "guided_approach": 251,
+     "guided_carry": 192,
+     "levels": {
+      "category": 192,
+      "region": 0,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 626.3218961625283,
+     "queries": 1465
+    },
+    "libero_90:36": {
+     "carry_queries": 306,
+     "fallback_carry": 0,
+     "goal_err_median": null,
+     "goal_hit_ep": [],
+     "guided_approach": 239,
+     "guided_carry": 306,
+     "levels": {
+      "category": 0,
+      "region": 306,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 545.3047706422018,
+     "queries": 954
+    },
+    "libero_90:40": {
+     "carry_queries": 629,
+     "fallback_carry": 0,
+     "goal_err_median": null,
+     "goal_hit_ep": [],
+     "guided_approach": 406,
+     "guided_carry": 629,
+     "levels": {
+      "category": 0,
+      "region": 629,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 609.7465700483091,
+     "queries": 1552
+    },
+    "libero_90:59": {
+     "carry_queries": 108,
+     "fallback_carry": 0,
+     "goal_err_median": null,
+     "goal_hit_ep": [],
+     "guided_approach": 187,
+     "guided_carry": 108,
+     "levels": {
+      "category": 0,
+      "region": 108,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 589.8620338983052,
+     "queries": 502
+    },
+    "libero_90:60": {
+     "carry_queries": 155,
+     "fallback_carry": 0,
+     "goal_err_median": null,
+     "goal_hit_ep": [],
+     "guided_approach": 217,
+     "guided_carry": 155,
+     "levels": {
+      "category": 0,
+      "region": 155,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 602.2112903225806,
+     "queries": 1035
+    },
+    "libero_90:61": {
+     "carry_queries": 258,
+     "fallback_carry": 0,
+     "goal_err_median": null,
+     "goal_hit_ep": [],
+     "guided_approach": 239,
+     "guided_carry": 258,
+     "levels": {
+      "category": 0,
+      "region": 258,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 594.0875251509054,
+     "queries": 581
+    },
+    "libero_90:70": {
+     "carry_queries": 91,
+     "fallback_carry": 0,
+     "goal_err_median": null,
+     "goal_hit_ep": [],
+     "guided_approach": 177,
+     "guided_carry": 91,
+     "levels": {
+      "category": 0,
+      "region": 0,
+      "role": 91,
+      "type": 0
+     },
+     "ms_guided": 314.87462686567164,
+     "queries": 544
+    },
+    "libero_spatial:6": {
+     "carry_queries": 176,
+     "fallback_carry": 0,
+     "goal_err_median": null,
+     "goal_hit_ep": [],
+     "guided_approach": 202,
+     "guided_carry": 176,
+     "levels": {
+      "category": 0,
+      "region": 176,
+      "role": 0,
+      "type": 0
+     },
+     "ms_guided": 537.4452380952381,
+     "queries": 432
+    }
+   }
+  },
+  "per_task": {
+   "libero_90:1": {
+    "both": {
+     "binding_error": 6,
+     "goal_placed": 6,
+     "n": 20,
+     "success": 5,
+     "types": {
+      "motion/in_region": 2,
+      "motion/not_carried": 3,
+      "motion/toward_target": 2,
+      "no_commit": 2,
+      "wrong_goal/other_region": 1,
+      "wrong_object/other_type": 5
+     },
+     "wrong_goal": 1
+    },
+    "goal": {
+     "binding_error": 3,
+     "goal_placed": 3,
+     "n": 20,
+     "success": 4,
+     "types": {
+      "motion/not_carried": 2,
+      "motion/toward_target": 2,
+      "no_commit": 9,
+      "wrong_goal/carried_elsewhere": 1,
+      "wrong_object/other_type": 2
+     },
+     "wrong_goal": 1
+    },
+    "orc": {
+     "binding_error": 3,
+     "goal_placed": 5,
+     "n": 20,
+     "success": 5,
+     "types": {
+      "motion/in_region": 1,
+      "motion/not_carried": 1,
+      "motion/toward_target": 4,
+      "no_commit": 6,
+      "wrong_goal/carried_elsewhere": 2,
+      "wrong_goal/other_region": 1
+     },
+     "wrong_goal": 3
+    },
+    "zs": {
+     "binding_error": 1,
+     "goal_placed": 4,
+     "n": 20,
+     "success": 3,
+     "types": {
+      "motion/in_region": 1,
+      "motion/not_carried": 1,
+      "motion/toward_target": 6,
+      "no_commit": 8,
+      "wrong_object/other_type": 1
+     },
+     "wrong_goal": 0
+    }
+   },
+   "libero_90:14": {
+    "both": {
+     "binding_error": 4,
+     "goal_placed": 15,
+     "n": 20,
+     "success": 15,
+     "types": {
+      "motion/toward_target": 1,
+      "wrong_object/wrong_instance": 4
+     },
+     "wrong_goal": 0
+    },
+    "goal": {
+     "binding_error": 0,
+     "goal_placed": 17,
+     "n": 20,
+     "success": 19,
+     "types": {
+      "motion/toward_target": 1
+     },
+     "wrong_goal": 0
+    },
+    "orc": {
+     "binding_error": 0,
+     "goal_placed": 20,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    },
+    "zs": {
+     "binding_error": 0,
+     "goal_placed": 19,
+     "n": 20,
+     "success": 19,
+     "types": {
+      "motion/toward_target": 1
+     },
+     "wrong_goal": 0
+    }
+   },
+   "libero_90:16": {
+    "both": {
+     "binding_error": 13,
+     "goal_placed": 0,
+     "n": 20,
+     "success": 0,
+     "types": {
+      "motion/toward_target": 7,
+      "wrong_goal/carried_elsewhere": 2,
+      "wrong_goal/other_region": 10,
+      "wrong_object/wrong_instance": 1
+     },
+     "wrong_goal": 12
+    },
+    "goal": {
+     "binding_error": 12,
+     "goal_placed": 1,
+     "n": 20,
+     "success": 3,
+     "types": {
+      "motion/toward_target": 5,
+      "wrong_goal/carried_elsewhere": 3,
+      "wrong_goal/other_region": 9
+     },
+     "wrong_goal": 12
+    },
+    "orc": {
+     "binding_error": 7,
+     "goal_placed": 0,
+     "n": 20,
+     "success": 1,
+     "types": {
+      "motion/toward_target": 12,
+      "wrong_goal/carried_elsewhere": 1,
+      "wrong_goal/other_region": 6
+     },
+     "wrong_goal": 7
+    },
+    "zs": {
+     "binding_error": 14,
+     "goal_placed": 1,
+     "n": 20,
+     "success": 2,
+     "types": {
+      "motion/toward_target": 4,
+      "wrong_goal/carried_elsewhere": 2,
+      "wrong_goal/other_region": 12
+     },
+     "wrong_goal": 14
+    }
+   },
+   "libero_90:29": {
+    "both": {
+     "binding_error": 13,
+     "goal_placed": 4,
+     "n": 20,
+     "success": 3,
+     "types": {
+      "motion/in_region": 1,
+      "motion/not_carried": 2,
+      "no_commit": 1,
+      "wrong_goal/other_region": 13
+     },
+     "wrong_goal": 13
+    },
+    "goal": {
+     "binding_error": 18,
+     "goal_placed": 1,
+     "n": 20,
+     "success": 1,
+     "types": {
+      "motion/toward_target": 1,
+      "wrong_goal/other_region": 18
+     },
+     "wrong_goal": 18
+    },
+    "orc": {
+     "binding_error": 14,
+     "goal_placed": 4,
+     "n": 20,
+     "success": 4,
+     "types": {
+      "no_commit": 2,
+      "wrong_goal/other_region": 14
+     },
+     "wrong_goal": 14
+    },
+    "zs": {
+     "binding_error": 19,
+     "goal_placed": 1,
+     "n": 20,
+     "success": 1,
+     "types": {
+      "wrong_goal/other_region": 19
+     },
+     "wrong_goal": 19
+    }
+   },
+   "libero_90:36": {
+    "both": {
+     "binding_error": 1,
+     "goal_placed": 10,
+     "n": 20,
+     "success": 11,
+     "types": {
+      "motion/toward_target": 8,
+      "wrong_goal/other_region": 1
+     },
+     "wrong_goal": 1
+    },
+    "goal": {
+     "binding_error": 0,
+     "goal_placed": 12,
+     "n": 20,
+     "success": 12,
+     "types": {
+      "motion/toward_target": 8
+     },
+     "wrong_goal": 0
+    },
+    "orc": {
+     "binding_error": 2,
+     "goal_placed": 11,
+     "n": 20,
+     "success": 13,
+     "types": {
+      "motion/toward_target": 5,
+      "wrong_goal/other_region": 2
+     },
+     "wrong_goal": 2
+    },
+    "zs": {
+     "binding_error": 0,
+     "goal_placed": 7,
+     "n": 20,
+     "success": 10,
+     "types": {
+      "motion/toward_target": 10
+     },
+     "wrong_goal": 0
+    }
+   },
+   "libero_90:40": {
+    "both": {
+     "binding_error": 16,
+     "goal_placed": 0,
+     "n": 20,
+     "success": 1,
+     "types": {
+      "motion/toward_target": 3,
+      "wrong_goal/other_region": 16
+     },
+     "wrong_goal": 16
+    },
+    "goal": {
+     "binding_error": 11,
+     "goal_placed": 0,
+     "n": 20,
+     "success": 2,
+     "types": {
+      "motion/toward_target": 7,
+      "wrong_goal/other_region": 11
+     },
+     "wrong_goal": 11
+    },
+    "orc": {
+     "binding_error": 13,
+     "goal_placed": 1,
+     "n": 20,
+     "success": 1,
+     "types": {
+      "motion/toward_target": 6,
+      "wrong_goal/other_region": 13
+     },
+     "wrong_goal": 13
+    },
+    "zs": {
+     "binding_error": 14,
+     "goal_placed": 1,
+     "n": 20,
+     "success": 3,
+     "types": {
+      "motion/toward_target": 3,
+      "wrong_goal/other_region": 14
+     },
+     "wrong_goal": 14
+    }
+   },
+   "libero_90:59": {
+    "both": {
+     "binding_error": 0,
+     "goal_placed": 20,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    },
+    "goal": {
+     "binding_error": 0,
+     "goal_placed": 20,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    },
+    "orc": {
+     "binding_error": 0,
+     "goal_placed": 20,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    },
+    "zs": {
+     "binding_error": 0,
+     "goal_placed": 19,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    }
+   },
+   "libero_90:60": {
+    "both": {
+     "binding_error": 3,
+     "goal_placed": 14,
+     "n": 20,
+     "success": 15,
+     "types": {
+      "motion/in_region": 1,
+      "motion/toward_target": 1,
+      "wrong_object/wrong_instance": 3
+     },
+     "wrong_goal": 0
+    },
+    "goal": {
+     "binding_error": 0,
+     "goal_placed": 20,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    },
+    "orc": {
+     "binding_error": 1,
+     "goal_placed": 19,
+     "n": 20,
+     "success": 19,
+     "types": {
+      "wrong_goal/other_region": 1
+     },
+     "wrong_goal": 1
+    },
+    "zs": {
+     "binding_error": 0,
+     "goal_placed": 20,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    }
+   },
+   "libero_90:61": {
+    "both": {
+     "binding_error": 0,
+     "goal_placed": 20,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    },
+    "goal": {
+     "binding_error": 0,
+     "goal_placed": 20,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    },
+    "orc": {
+     "binding_error": 0,
+     "goal_placed": 20,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    },
+    "zs": {
+     "binding_error": 0,
+     "goal_placed": 20,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    }
+   },
+   "libero_90:70": {
+    "both": {
+     "binding_error": 1,
+     "goal_placed": 14,
+     "n": 20,
+     "success": 19,
+     "types": {
+      "wrong_object/other_type": 1
+     },
+     "wrong_goal": 0
+    },
+    "goal": {
+     "binding_error": 0,
+     "goal_placed": 19,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    },
+    "orc": {
+     "binding_error": 2,
+     "goal_placed": 15,
+     "n": 20,
+     "success": 18,
+     "types": {
+      "wrong_object/other_type": 2
+     },
+     "wrong_goal": 0
+    },
+    "zs": {
+     "binding_error": 0,
+     "goal_placed": 19,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    }
+   },
+   "libero_spatial:6": {
+    "both": {
+     "binding_error": 0,
+     "goal_placed": 19,
+     "n": 20,
+     "success": 19,
+     "types": {
+      "motion/toward_target": 1
+     },
+     "wrong_goal": 0
+    },
+    "goal": {
+     "binding_error": 0,
+     "goal_placed": 20,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    },
+    "orc": {
+     "binding_error": 0,
+     "goal_placed": 20,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    },
+    "zs": {
+     "binding_error": 0,
+     "goal_placed": 19,
+     "n": 20,
+     "success": 20,
+     "types": {},
+     "wrong_goal": 0
+    }
+   }
+  },
+  "zs_retype_mismatch": []
+ },
+ "notes": "EXPLORATORY closed-loop smoke (docs/PLAN_R6.md); no confirmatory claim",
+ "retired": null,
+ "run_id": "r6_read__libero_90_c__smoke__s0__d8b7cbbe",
+ "schema": 1,
+ "script": "experiments/r6_smoke.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T02:01:45+00:00",
+ "stream": null,
+ "tag": "smoke"
+}

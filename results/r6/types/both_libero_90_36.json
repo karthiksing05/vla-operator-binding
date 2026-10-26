@@ -1,0 +1,532 @@
+{
+ "task": "libero_90:36",
+ "arm": "both",
+ "roll": "results/r6/roll/r6_both_libero_90_36.json",
+ "episodes": [
+  {
+   "trial": 0,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 113,
+   "steps": 183,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0279,
+     -0.2635
+    ],
+    "plate_1": [
+     -0.0227,
+     -0.0209
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 1,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 69,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0284,
+     -0.2709
+    ],
+    "plate_1": [
+     0.0228,
+     0.0138
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.975,
+   "carried": 0.328,
+   "d_bind": 0.264,
+   "d_min": 0.007,
+   "d_final": 0.039,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 2,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 78,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0208,
+     -0.28
+    ],
+    "plate_1": [
+     -0.009,
+     -0.013
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.898,
+   "carried": 0.371,
+   "d_bind": 0.257,
+   "d_min": 0.026,
+   "d_final": 0.117,
+   "alt": [
+    "kitchen_table_plate_right_region"
+   ],
+   "target": "plate_1",
+   "type": "wrong_goal",
+   "sub": "other_region"
+  },
+  {
+   "trial": 3,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 93,
+   "steps": 165,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0057,
+     -0.2648
+    ],
+    "plate_1": [
+     0.0072,
+     0.0071
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 4,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 82,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0033,
+     -0.2648
+    ],
+    "plate_1": [
+     -0.0246,
+     -0.0212
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.867,
+   "carried": 0.325,
+   "d_bind": 0.228,
+   "d_min": 0.03,
+   "d_final": 0.043,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 5,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 73,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0199,
+     -0.2614
+    ],
+    "plate_1": [
+     -0.0013,
+     0.0088
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.96,
+   "carried": 0.297,
+   "d_bind": 0.241,
+   "d_min": 0.01,
+   "d_final": 0.043,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 6,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 89,
+   "steps": 156,
+   "start_xy": {
+    "white_bowl_1": [
+     0.017,
+     -0.2604
+    ],
+    "plate_1": [
+     0.0104,
+     0.0038
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 7,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 87,
+   "steps": 192,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0364,
+     -0.266
+    ],
+    "plate_1": [
+     -0.0082,
+     -0.016
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 8,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 176,
+   "steps": 244,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0349,
+     -0.2587
+    ],
+    "plate_1": [
+     0.009,
+     -0.0091
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 9,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 96,
+   "steps": 177,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0055,
+     -0.2599
+    ],
+    "plate_1": [
+     -0.0049,
+     -0.0052
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 10,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 69,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0084,
+     -0.2594
+    ],
+    "plate_1": [
+     -0.023,
+     0.0033
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.904,
+   "carried": 0.292,
+   "d_bind": 0.252,
+   "d_min": 0.024,
+   "d_final": 0.033,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 11,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 100,
+   "steps": 166,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0381,
+     -0.2603
+    ],
+    "plate_1": [
+     0.0165,
+     -0.002
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 12,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 75,
+   "steps": 146,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0169,
+     -0.2625
+    ],
+    "plate_1": [
+     0.0055,
+     -0.0167
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 13,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 77,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0286,
+     -0.259
+    ],
+    "plate_1": [
+     0.0118,
+     0.0095
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.878,
+   "carried": 0.294,
+   "d_bind": 0.256,
+   "d_min": 0.031,
+   "d_final": 0.05,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 14,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 333,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0118,
+     -0.2446
+    ],
+    "plate_1": [
+     0.0063,
+     -0.0001
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.799,
+   "carried": 0.368,
+   "d_bind": 0.252,
+   "d_min": 0.051,
+   "d_final": 0.126,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 15,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 96,
+   "steps": 193,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0406,
+     -0.2698
+    ],
+    "plate_1": [
+     -0.0001,
+     0.0163
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 16,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 71,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0265,
+     -0.2796
+    ],
+    "plate_1": [
+     -0.0073,
+     0.0065
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.905,
+   "carried": 0.319,
+   "d_bind": 0.268,
+   "d_min": 0.026,
+   "d_final": 0.033,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 17,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 83,
+   "steps": 144,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0138,
+     -0.2676
+    ],
+    "plate_1": [
+     -0.0156,
+     0.0166
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 18,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 88,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     0.001,
+     -0.2735
+    ],
+    "plate_1": [
+     -0.0096,
+     -0.0032
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.983,
+   "carried": 0.312,
+   "d_bind": 0.253,
+   "d_min": 0.004,
+   "d_final": 0.038,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 19,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 80,
+   "steps": 151,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0101,
+     -0.2742
+    ],
+    "plate_1": [
+     0.0108,
+     0.0245
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  }
+ ]
+}

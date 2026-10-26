@@ -1,0 +1,537 @@
+{
+ "task": "libero_90:36",
+ "arm": "zs",
+ "roll": "results/d4/roll/d4_zs_libero_90_36.json",
+ "episodes": [
+  {
+   "trial": 0,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 83,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0279,
+     -0.2635
+    ],
+    "plate_1": [
+     -0.0227,
+     -0.0209
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.953,
+   "carried": 0.335,
+   "d_bind": 0.238,
+   "d_min": 0.011,
+   "d_final": 0.041,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 1,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 70,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0284,
+     -0.2709
+    ],
+    "plate_1": [
+     0.0228,
+     0.0138
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.959,
+   "carried": 0.378,
+   "d_bind": 0.303,
+   "d_min": 0.012,
+   "d_final": 0.042,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 2,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 77,
+   "steps": 149,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0208,
+     -0.28
+    ],
+    "plate_1": [
+     -0.009,
+     -0.013
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 3,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 76,
+   "steps": 144,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0057,
+     -0.2648
+    ],
+    "plate_1": [
+     0.0072,
+     0.0071
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 4,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 88,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0033,
+     -0.2648
+    ],
+    "plate_1": [
+     -0.0246,
+     -0.0212
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.845,
+   "carried": 0.324,
+   "d_bind": 0.235,
+   "d_min": 0.036,
+   "d_final": 0.037,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 5,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 68,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0199,
+     -0.2614
+    ],
+    "plate_1": [
+     -0.0013,
+     0.0088
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.853,
+   "carried": 0.379,
+   "d_bind": 0.271,
+   "d_min": 0.04,
+   "d_final": 0.04,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 6,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 68,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     0.017,
+     -0.2604
+    ],
+    "plate_1": [
+     0.0104,
+     0.0038
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.914,
+   "carried": 0.308,
+   "d_bind": 0.255,
+   "d_min": 0.022,
+   "d_final": 0.037,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 7,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 70,
+   "steps": 143,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0364,
+     -0.266
+    ],
+    "plate_1": [
+     -0.0082,
+     -0.016
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 8,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 80,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0349,
+     -0.2587
+    ],
+    "plate_1": [
+     0.009,
+     -0.0091
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.97,
+   "carried": 0.356,
+   "d_bind": 0.254,
+   "d_min": 0.008,
+   "d_final": 0.032,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 9,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 66,
+   "steps": 134,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0055,
+     -0.2599
+    ],
+    "plate_1": [
+     -0.0049,
+     -0.0052
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 10,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 78,
+   "steps": 159,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0084,
+     -0.2594
+    ],
+    "plate_1": [
+     -0.023,
+     0.0033
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 11,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 80,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0381,
+     -0.2603
+    ],
+    "plate_1": [
+     0.0165,
+     -0.002
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.954,
+   "carried": 0.327,
+   "d_bind": 0.253,
+   "d_min": 0.012,
+   "d_final": 0.044,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 12,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 67,
+   "steps": 187,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0169,
+     -0.2625
+    ],
+    "plate_1": [
+     0.0055,
+     -0.0167
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 13,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 79,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0286,
+     -0.259
+    ],
+    "plate_1": [
+     0.0118,
+     0.0095
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.908,
+   "carried": 0.35,
+   "d_bind": 0.263,
+   "d_min": 0.024,
+   "d_final": 0.035,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 14,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 67,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0118,
+     -0.2446
+    ],
+    "plate_1": [
+     0.0063,
+     -0.0001
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.828,
+   "carried": 0.337,
+   "d_bind": 0.246,
+   "d_min": 0.042,
+   "d_final": 0.043,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 15,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 91,
+   "steps": 168,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0406,
+     -0.2698
+    ],
+    "plate_1": [
+     -0.0001,
+     0.0163
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 16,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 74,
+   "steps": 144,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0265,
+     -0.2796
+    ],
+    "plate_1": [
+     -0.0073,
+     0.0065
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 17,
+   "success": false,
+   "bound": "white_bowl_1",
+   "bound_step": 68,
+   "steps": 400,
+   "start_xy": {
+    "white_bowl_1": [
+     0.0138,
+     -0.2676
+    ],
+    "plate_1": [
+     -0.0156,
+     0.0166
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "progress": 0.894,
+   "carried": 0.339,
+   "d_bind": 0.294,
+   "d_min": 0.031,
+   "d_final": 0.041,
+   "alt": [],
+   "target": "plate_1",
+   "type": "motion",
+   "sub": "toward_target"
+  },
+  {
+   "trial": 18,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 82,
+   "steps": 159,
+   "start_xy": {
+    "white_bowl_1": [
+     0.001,
+     -0.2735
+    ],
+    "plate_1": [
+     -0.0096,
+     -0.0032
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": false
+   },
+   "success_settled": false,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 19,
+   "success": true,
+   "bound": "white_bowl_1",
+   "bound_step": 73,
+   "steps": 146,
+   "start_xy": {
+    "white_bowl_1": [
+     -0.0101,
+     -0.2742
+    ],
+    "plate_1": [
+     0.0108,
+     0.0245
+    ]
+   },
+   "own_atoms_final": {
+    "white_bowl_1>plate_1": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  }
+ ]
+}

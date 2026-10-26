@@ -1,0 +1,688 @@
+{
+ "task": "libero_90:29",
+ "arm": "both",
+ "roll": "results/r6/roll/r6_both_libero_90_29.json",
+ "episodes": [
+  {
+   "trial": 0,
+   "success": false,
+   "bound": null,
+   "bound_step": null,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0119,
+     -0.0336
+    ],
+    "plate_1": [
+     -0.0727,
+     -0.2709
+    ],
+    "ketchup_1": [
+     -0.0864,
+     -0.1167
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "type": "no_commit",
+   "sub": ""
+  },
+  {
+   "trial": 1,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 67,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0108,
+     -0.0592
+    ],
+    "plate_1": [
+     -0.0272,
+     -0.2362
+    ],
+    "ketchup_1": [
+     -0.1211,
+     -0.1069
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "progress": 0.971,
+   "carried": 0.328,
+   "d_bind": 0.236,
+   "d_min": 0.007,
+   "d_final": 0.093,
+   "alt": [
+    "white_cabinet_1_top_side"
+   ],
+   "target": "white_cabinet_1_top_region",
+   "type": "wrong_goal",
+   "sub": "other_region"
+  },
+  {
+   "trial": 2,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 275,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0107,
+     -0.0586
+    ],
+    "plate_1": [
+     -0.059,
+     -0.263
+    ],
+    "ketchup_1": [
+     -0.0982,
+     -0.0896
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "progress": 0.877,
+   "carried": 0.316,
+   "d_bind": 0.196,
+   "d_min": 0.024,
+   "d_final": 0.121,
+   "alt": [
+    "white_cabinet_1",
+    "white_cabinet_1_top_side"
+   ],
+   "target": "white_cabinet_1_top_region",
+   "type": "wrong_goal",
+   "sub": "other_region"
+  },
+  {
+   "trial": 3,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 68,
+   "steps": 276,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0394,
+     -0.0579
+    ],
+    "plate_1": [
+     -0.0428,
+     -0.2429
+    ],
+    "ketchup_1": [
+     -0.0805,
+     -0.0817
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 4,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 378,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0187,
+     -0.063
+    ],
+    "plate_1": [
+     -0.0746,
+     -0.2712
+    ],
+    "ketchup_1": [
+     -0.0869,
+     -0.105
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "progress": 0.285,
+   "carried": 0.065,
+   "d_bind": 0.229,
+   "d_min": 0.164,
+   "d_final": 0.164,
+   "alt": [],
+   "target": "white_cabinet_1_top_region",
+   "type": "motion",
+   "sub": "not_carried"
+  },
+  {
+   "trial": 5,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 72,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0236,
+     -0.038
+    ],
+    "plate_1": [
+     -0.0513,
+     -0.2412
+    ],
+    "ketchup_1": [
+     -0.0806,
+     -0.1189
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "progress": 0.796,
+   "carried": 0.309,
+   "d_bind": 0.193,
+   "d_min": 0.039,
+   "d_final": 0.117,
+   "alt": [
+    "white_cabinet_1",
+    "white_cabinet_1_top_side"
+   ],
+   "target": "white_cabinet_1_top_region",
+   "type": "wrong_goal",
+   "sub": "other_region"
+  },
+  {
+   "trial": 6,
+   "success": true,
+   "bound": "ketchup_1",
+   "bound_step": 218,
+   "steps": 278,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0062,
+     -0.0622
+    ],
+    "plate_1": [
+     -0.0396,
+     -0.2462
+    ],
+    "ketchup_1": [
+     -0.0764,
+     -0.1048
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 7,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 92,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0444,
+     -0.0582
+    ],
+    "plate_1": [
+     -0.0582,
+     -0.266
+    ],
+    "ketchup_1": [
+     -0.1046,
+     -0.1182
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "progress": 0.802,
+   "carried": 0.341,
+   "d_bind": 0.223,
+   "d_min": 0.044,
+   "d_final": 0.123,
+   "alt": [
+    "white_cabinet_1",
+    "white_cabinet_1_top_side"
+   ],
+   "target": "white_cabinet_1_top_region",
+   "type": "wrong_goal",
+   "sub": "other_region"
+  },
+  {
+   "trial": 8,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 130,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0233,
+     -0.0523
+    ],
+    "plate_1": [
+     -0.041,
+     -0.2591
+    ],
+    "ketchup_1": [
+     -0.118,
+     -0.0772
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "progress": 0.97,
+   "carried": 0.339,
+   "d_bind": 0.185,
+   "d_min": 0.006,
+   "d_final": 0.154,
+   "alt": [
+    "white_cabinet_1",
+    "white_cabinet_1_top_side"
+   ],
+   "target": "white_cabinet_1_top_region",
+   "type": "wrong_goal",
+   "sub": "other_region"
+  },
+  {
+   "trial": 9,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 69,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0468,
+     -0.0423
+    ],
+    "plate_1": [
+     -0.0549,
+     -0.2552
+    ],
+    "ketchup_1": [
+     -0.1239,
+     -0.1019
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "progress": 0.761,
+   "carried": 0.316,
+   "d_bind": 0.181,
+   "d_min": 0.043,
+   "d_final": 0.138,
+   "alt": [
+    "white_cabinet_1",
+    "white_cabinet_1_top_side"
+   ],
+   "target": "white_cabinet_1_top_region",
+   "type": "wrong_goal",
+   "sub": "other_region"
+  },
+  {
+   "trial": 10,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 68,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0548,
+     -0.0354
+    ],
+    "plate_1": [
+     -0.073,
+     -0.2467
+    ],
+    "ketchup_1": [
+     -0.1122,
+     -0.119
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "progress": 0.732,
+   "carried": 0.307,
+   "d_bind": 0.178,
+   "d_min": 0.048,
+   "d_final": 0.137,
+   "alt": [
+    "white_cabinet_1",
+    "white_cabinet_1_top_side"
+   ],
+   "target": "white_cabinet_1_top_region",
+   "type": "wrong_goal",
+   "sub": "other_region"
+  },
+  {
+   "trial": 11,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 66,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0132,
+     -0.064
+    ],
+    "plate_1": [
+     -0.0335,
+     -0.252
+    ],
+    "ketchup_1": [
+     -0.1058,
+     -0.0981
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "progress": 0.911,
+   "carried": 0.353,
+   "d_bind": 0.224,
+   "d_min": 0.02,
+   "d_final": 0.13,
+   "alt": [
+    "white_cabinet_1",
+    "white_cabinet_1_top_side"
+   ],
+   "target": "white_cabinet_1_top_region",
+   "type": "wrong_goal",
+   "sub": "other_region"
+  },
+  {
+   "trial": 12,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 68,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0284,
+     -0.0562
+    ],
+    "plate_1": [
+     -0.0445,
+     -0.2667
+    ],
+    "ketchup_1": [
+     -0.0911,
+     -0.1033
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "progress": 0.843,
+   "carried": 0.358,
+   "d_bind": 0.211,
+   "d_min": 0.033,
+   "d_final": 0.146,
+   "alt": [
+    "white_cabinet_1",
+    "white_cabinet_1_top_side"
+   ],
+   "target": "white_cabinet_1_top_region",
+   "type": "wrong_goal",
+   "sub": "other_region"
+  },
+  {
+   "trial": 13,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 64,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0249,
+     -0.0683
+    ],
+    "plate_1": [
+     -0.0382,
+     -0.2405
+    ],
+    "ketchup_1": [
+     -0.084,
+     -0.1157
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "progress": 0.625,
+   "carried": 0.312,
+   "d_bind": 0.213,
+   "d_min": 0.08,
+   "d_final": 0.111,
+   "alt": [
+    "white_cabinet_1_top_side"
+   ],
+   "target": "white_cabinet_1_top_region",
+   "type": "wrong_goal",
+   "sub": "other_region"
+  },
+  {
+   "trial": 14,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 70,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0184,
+     -0.0428
+    ],
+    "plate_1": [
+     -0.0437,
+     -0.2501
+    ],
+    "ketchup_1": [
+     -0.1019,
+     -0.101
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "progress": 0.819,
+   "carried": 0.338,
+   "d_bind": 0.205,
+   "d_min": 0.037,
+   "d_final": 0.134,
+   "alt": [
+    "white_cabinet_1",
+    "white_cabinet_1_top_side"
+   ],
+   "target": "white_cabinet_1_top_region",
+   "type": "wrong_goal",
+   "sub": "other_region"
+  },
+  {
+   "trial": 15,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 64,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.051,
+     -0.0389
+    ],
+    "plate_1": [
+     -0.0501,
+     -0.2337
+    ],
+    "ketchup_1": [
+     -0.0855,
+     -0.0801
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "progress": 0.203,
+   "carried": 0.04,
+   "d_bind": 0.187,
+   "d_min": 0.149,
+   "d_final": 0.204,
+   "alt": [],
+   "target": "white_cabinet_1_top_region",
+   "type": "motion",
+   "sub": "not_carried"
+  },
+  {
+   "trial": 16,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 77,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0302,
+     -0.0691
+    ],
+    "plate_1": [
+     -0.0573,
+     -0.2435
+    ],
+    "ketchup_1": [
+     -0.0969,
+     -0.0758
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": true
+   },
+   "success_settled": true,
+   "type": "motion",
+   "sub": "in_region"
+  },
+  {
+   "trial": 17,
+   "success": true,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 67,
+   "steps": 125,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0244,
+     -0.0383
+    ],
+    "plate_1": [
+     -0.0656,
+     -0.2334
+    ],
+    "ketchup_1": [
+     -0.1213,
+     -0.1205
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": true
+   },
+   "success_settled": true,
+   "type": "success",
+   "sub": ""
+  },
+  {
+   "trial": 18,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 71,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0383,
+     -0.057
+    ],
+    "plate_1": [
+     -0.0596,
+     -0.2532
+    ],
+    "ketchup_1": [
+     -0.1232,
+     -0.0908
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "progress": 0.756,
+   "carried": 0.307,
+   "d_bind": 0.196,
+   "d_min": 0.048,
+   "d_final": 0.113,
+   "alt": [
+    "white_cabinet_1_top_side"
+   ],
+   "target": "white_cabinet_1_top_region",
+   "type": "wrong_goal",
+   "sub": "other_region"
+  },
+  {
+   "trial": 19,
+   "success": false,
+   "bound": "akita_black_bowl_1",
+   "bound_step": 65,
+   "steps": 400,
+   "start_xy": {
+    "akita_black_bowl_1": [
+     0.0479,
+     -0.0487
+    ],
+    "plate_1": [
+     -0.0392,
+     -0.2255
+    ],
+    "ketchup_1": [
+     -0.1107,
+     -0.0845
+    ]
+   },
+   "own_atoms_final": {
+    "akita_black_bowl_1>white_cabinet_1_top_region": false
+   },
+   "success_settled": false,
+   "progress": 0.917,
+   "carried": 0.318,
+   "d_bind": 0.19,
+   "d_min": 0.016,
+   "d_final": 0.128,
+   "alt": [
+    "white_cabinet_1",
+    "white_cabinet_1_top_side"
+   ],
+   "target": "white_cabinet_1_top_region",
+   "type": "wrong_goal",
+   "sub": "other_region"
+  }
+ ]
+}
