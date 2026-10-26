@@ -1,0 +1,56 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: PLAN_BIND E2b",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "gideon.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4242183",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "b9391687046b16c29be403bd81be7ddb129ee6b0",
+  "short": "b9391687"
+ },
+ "keys": {},
+ "metrics": {
+  "design": "E2 tasks/states/seeds re-rolled; first release branched, 20 settle steps, LIBERO In/On predicates vs every candidate; run continues to success / 400 steps; P_hat = P_obj x P_goal; competence = success of correct runs; S_hat = P_hat x competence",
+  "falsified_if": "Spearman(P_hat, zs) <= 0 or its task-bootstrap CI lo <= 0",
+  "files_sha256": {
+   "docs/PLAN_E12.md": "6c0dec43c7207c147e1706074dc26538465e5503c6c146985d587f4d59878ff9",
+   "experiments/bind_e2.py": "f1de5a21b8acb7e91f3a52e272b7baf5cd15cbca9a71005776190279bb2a306b",
+   "experiments/bind_e2b.py": "de49e796bb982f471ab95c7ffc8f371493d778208a4051df9f2e8ca00a14ac79",
+   "experiments/bind_e2b_pack.sbatch": "029e0295cdfc010ec7af01fcbc302dda9aa44a9ab336343df9ab39fd9126e409",
+   "results/bind/e2_plan.json": "2a48c4280e13c7fc56f682a66801945228d5f2669d32799dbda59bfbfbea23d0"
+  },
+  "secondary": "S_hat calibration slope CI entirely < 0.5 or > 2.0 -> FAIL",
+  "status": "PRE-REGISTERED PLAN_BIND E2b",
+  "written_before": "any E2b rollout"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pbind_e2b__s0__b9391687",
+ "schema": 1,
+ "script": "experiments/prereg/pbind_e1b2b.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T17:38:54+00:00",
+ "stream": null,
+ "tag": "pbind_e2b"
+}

@@ -1,0 +1,56 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: PLAN_BIND E1b",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "gideon.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4242183",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "b9391687046b16c29be403bd81be7ddb129ee6b0",
+  "short": "b9391687"
+ },
+ "keys": {},
+ "metrics": {
+  "above_baseline_if": "two-level task bootstrap CI of mean(hit - P_freq) lo > 0",
+  "accounts": "VIS SigLIP type-prototype similarity to the named type; FREQ global training object-role exposure; SRC nearest training grasp source of the same scene / family (2609.39971)",
+  "baseline": "frequency-matched P_freq (as E1); uniform descriptive",
+  "files_sha256": {
+   "docs/PLAN_E12.md": "6c0dec43c7207c147e1706074dc26538465e5503c6c146985d587f4d59878ff9",
+   "experiments/bind_e1b.py": "41298fa8de4fe252fc57964a321b5180891c7201efeacc9e230276bba5ba2226",
+   "results/bind/e1.json": "041a27cb1022a640c41789f2505146ee1c71ad46f4462031e346304d286ca6df",
+   "results/bind/e1b_sources.json": "7d6a4a448b220ee7a7498ab28e2eae6974abdb8ed7dcae75b6cbc70f8d024806"
+  },
+  "status": "PRE-REGISTERED PLAN_BIND E1b",
+  "units": "E1 object-role units with >= 2 candidates: 41 (:58 20, :83 18, :1 2, :29 1); low power pre-declared",
+  "written_before": "the E1b read"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pbind_e1b__s0__b9391687",
+ "schema": 1,
+ "script": "experiments/prereg/pbind_e1b2b.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T17:38:54+00:00",
+ "stream": null,
+ "tag": "pbind_e1b"
+}

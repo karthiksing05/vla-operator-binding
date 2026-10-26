@@ -179,3 +179,50 @@ re-test rank, and calibration against success / competence. That re-uses the sav
 - E2's states are 5 of zs's 20 fresh_m1 states, with different noise.
 - The post-hoc body-equivalence check was written after the read and is descriptive only.
 - Audits after the reads: audit_numbers 0 discrepancies over 2,064 checks; audit_coverage 0 uncovered numerals.
+
+## 5. E2b: P re-measured with LIBERO's predicates (pre-registered 2026-10-26, before any E2b rollout; m3_prereg `pbind_e2b`)
+
+Code: `experiments/bind_e2b.py`, `bind_e2b_pack.sbatch`. Approved by the coordinator.
+
+**Design.** E2's tasks, states and seeds: 24 tasks x fresh_m1 states 0-4 x 8 seeds. They are re-rolled, because E2 saved only labels.
+- **Bound object:** as in E2.
+- **At the first release the run is BRANCHED.** A copy settles 20 no-op steps (zero delta, gripper open), and LIBERO's In / On
+  predicates of the bound object are evaluated against every scene candidate (fm_types.Scene.alternatives) and the own targets.
+  The copy is then discarded.
+- **The run itself continues,** in the policy's own closed loop, to LIBERO success or the 400-step budget.
+- **Correct:** the bound object is the named object AND the own goal atom holds at the settled first release. A success before any
+  release counts as correct.
+- **P_obj:** the share binding the named object.
+- **P_goal:** the share correct among those.
+- **P_hat = P_obj x P_goal:** the share correct.
+- **competence:** the success rate of the correct runs' continuations. With no correct run, P_hat = 0 and S_hat = 0.
+- **S_hat = P_hat x competence.**
+
+**Bars (set now).**
+- **PRIMARY:** E2b FAILS if Spearman(P_hat, zs success over the 20 fresh_m1 episodes) is <= 0, or its task-bootstrap 95% CI
+  (B 10,000, seed 0) has a lower bound <= 0.
+- **Secondary:** S_hat's calibration FAILS if its slope CI lies entirely below 0.5 or entirely above 2.0.
+- **Descriptive:** Spearman(S_hat, zs); the sandbox's own success vs zs; first-release label histograms; P_obj / P_goal per task.
+
+## 6. E1b: what predicts the wrong OBJECT? (pre-registered 2026-10-26, before the read; m3_prereg `pbind_e1b`)
+
+Code: `experiments/bind_e1b.py` (stage `--sources`, LIBERO env, CPU).
+
+**Units.** E1's object-role units minus those with a single candidate, since a single candidate is no choice. The dry run (counts
+only) gives 41 units: :58 20, :83 18, :1 2, :29 1. That is effectively 2 tasks, so power is very low (pre-declared). 22 units are
+excluded, mostly :38.
+
+**Accounts.** Each predicts one candidate among the dev task's movable objects minus the named one; ties count fractionally.
+- **(i) VIS:** the candidate whose type's SigLIP prototype (results/rb4/protos.npz, 32 types) is most cosine-similar to the named
+  type's prototype.
+- **(ii) FREQ:** the candidate whose type is the object-role filler of the most training cells (exposure).
+- **(iii) SRC, the source-bound slot (2609.39971):**
+  - It predicts the candidate whose start xy, in that zs episode, is nearest a training grasp source.
+  - Training grasp sources are the start xy of the object-role fillers of the training cells in the same scene (else the same scene
+    family), taken from LIBERO init states 0-4 of each training cell: 69 cells, results/bind/e1b_sources.json.
+
+**Baseline (PRIMARY, as in E1).** Frequency-matched: P(filler) is proportional to 1 + the global training count of its type key.
+Uniform is descriptive.
+
+**Bar (set now).** An account PREDICTS the wrong object above baseline if the two-level task-cluster bootstrap 95% CI of
+mean(hit - P_freq) has a lower bound > 0.
