@@ -87,3 +87,68 @@ working delivery site without new information. The adapter is the first module t
 - Training: about 1.1 A40-h.
 - Rollouts: 3 full dev arms + zero subset + damage, about 4-6 A40-h on overcap.
 - Total: under 10 A40-h.
+
+## 6. Result (read 2026-10-26; ledger s0_adapter tag read; results/bind/s0.json)
+
+**PASS on all three pre-registered bars.**
+
+Dev setting: 24 tasks, 960 runs per arm. CIs are two-level task-cluster bootstrap; differences are paired task bootstrap.
+
+| arm | success | binding error | motion failure |
+|---|---|---|---|
+| zs | 0.276 [0.126, 0.439] | 0.234 [0.101, 0.393] | 0.490 [0.308, 0.666] |
+| adapter + oracle masks | 0.379 [0.208, 0.559] | **0.048** [0.014, 0.092] | 0.573 [0.395, 0.746] |
+| adapter + WRONG masks | 0.023 [0.000, 0.061] | 0.685 [0.559, 0.800] | 0.292 [0.190, 0.401] |
+
+**Bars.**
+- **B1 (binding): PASS.**
+  - Binding errors fall by 79.6%.
+  - The paired difference is -0.186 [-0.311, -0.072].
+- **B2 (dissociation): PASS.**
+  - Motion failures do not fall: their relative change is -17%, i.e. they rise from 0.490 to 0.573, +0.083 [-0.017, +0.194].
+  - The runs whose binding is fixed but which then fail to execute move into this category.
+- **B3 (damage): PASS.**
+  - Training cells, 10 cells x 5 states x 8 seeds: 0.945 (zs) vs 0.915 (oracle).
+  - Difference -0.030 [-0.070, +0.008], within the 0.05 bound.
+
+**Success:** +0.103 [+0.017, +0.217].
+
+**Controls.**
+- **The policy follows the mask.** With wrong masks it binds the wrong-mask object in 0.614 of runs (zs: 0.084), and success
+  collapses to 0.023.
+- The wrong-mask GOAL is followed rarely (0.046 vs 0.008).
+- **Zero masks:** 24 / 24 units identical to zs, as by construction.
+
+**Per task.** These are the predicted binding failures; they are repaired, and the remaining failures are motion failures.
+
+| task | change (oracle vs zs) | reading |
+|---|---|---|
+| :29 | success 0.00 -> 1.00 | binding 0.97 -> 0.00 |
+| :36 | success 0.33 -> 0.97 | |
+| :58 (ketchup) | success 0.00 -> 0.53 | binding 1.00 -> 0.33 |
+| :38 | binding 0.97 -> 0.00 | becomes motion; success 0.03 |
+| :83 | binding 0.97 -> 0.20 | becomes motion |
+| :16 | binding 0.38 -> 0.07 | |
+| :40 | binding 0.57 -> 0.30; success 0.30 -> 0.42 | |
+| :32, :45 | unchanged | motion, as E2b predicted |
+| the 8 caddy tasks | unchanged | motion failures under every arm: no binding helps a skill the policy lacks in that scene |
+
+**Harm on one zs-success task:** :9 falls 0.95 -> 0.78.
+
+**Reading.**
+- A correct binding delivered as an additive edit of the deep image K/V (R3c's locus) by a once-trained 8.4 MB adapter fixes about
+  80% of the frozen policy's binding errors and leaves its motion failures in place. That is the predicted dissociation:
+  success = binding x competence.
+- With oracle masks, the remaining gap is competence (caddy scenes, :32, :45, :38), not binding.
+- The deployable question is now the binder. S1 / S1b give no binder that matches the oracle on instances and sub-regions.
+
+**Cost.**
+- About 9.1 GPU-h (A40, from sacct) for S1b and S0 together.
+- S0: adapter training about 1.0 h; rollouts about 7.5 h, including one shard rerun after a port collision (exit 3 before any
+  rollout).
+
+**Disclosures.**
+- s0_sandbox.py gained an opt-in S0_ROLL_DIR (smoke output only) after registration. Its hash differs from the registered one; the
+  rollout logic is unchanged.
+- The zero arm is a 24-unit subset; its rates are not comparable to the full arms. Only parity is read from it.
+- The ledger row carries dirty=true, because other agents' edits are in the shared tree.

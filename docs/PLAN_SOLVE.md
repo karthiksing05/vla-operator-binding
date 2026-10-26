@@ -105,3 +105,18 @@ The VLA stays frozen and does the acting. The crutch is trained once per policy,
 - Next:
   - S1b: the factorised binder, body by open-vocabulary detection x relation in the body's own frame;
   - S0: adapter + oracle binding, the dissociation test.
+
+## 8. S1b and S0 results (2026-10-26; docs/PLAN_S1.md section 7, docs/PLAN_S0.md section 6)
+
+- **S1b (factorised binder): FAIL** (depth-2 held-out seen-body 0.60, one task).
+  - It fixes type-level transfer to new scenes: held-out depth 0 0.91 vs B1b 0.27.
+  - Instances and sub-regions on detector boxes are still unsolved.
+- **S0 (adapter + oracle binding): PASS.**
+  - Binding errors 0.234 -> 0.048 (-80%; diff -0.186 [-0.311, -0.072]).
+  - Motion failures not reduced (0.490 -> 0.573).
+  - Training-cell damage -0.030 [-0.070, +0.008].
+  - Success +0.103 [+0.017, +0.217].
+  - Wrong masks make the policy bind the masked object (0.61 vs 0.08).
+- **The theory's dissociation holds:** success = binding x competence, and binding is repairable through the deep image K/V with
+  a once-trained crutch.
+- **The open problem is the deployable binder:** S2 needs one that resolves instances and sub-regions.

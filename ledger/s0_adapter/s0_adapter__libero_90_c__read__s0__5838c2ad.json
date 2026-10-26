@@ -1,0 +1,230 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "python experiments/s0_read.py --record",
+ "config": {
+  "note": "S0 binding adapter with oracle masks"
+ },
+ "env": {
+  "device": "NVIDIA GeForce RTX 2080 Ti",
+  "host": "vincent.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4249963",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "s0_adapter",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "5838c2ad5eb48d8bf94d5434b9e156921ce05757",
+  "short": "5838c2ad"
+ },
+ "keys": {},
+ "metrics": {
+  "bar": {
+   "B1_diff": {
+    "diff": -0.18645833333333334,
+    "hi": -0.071875,
+    "lo": -0.31145833333333334,
+    "tasks": 24
+   },
+   "B1_pass": true,
+   "B1_rel_binding_reduction": 0.7955555555555556,
+   "B2_pass": true,
+   "B2_rel_motion_reduction": -0.17021276595744678,
+   "B3_damage": {
+    "diff": -0.03000000000000001,
+    "hi": 0.007500000000000007,
+    "lo": -0.07000000000000002,
+    "tasks": 10
+   },
+   "B3_pass": true,
+   "verdict": "PASS"
+  },
+  "dev": {
+   "oracle": {
+    "binding": {
+     "hi": 0.09166666666666666,
+     "lo": 0.013541666666666667,
+     "mean": 0.04791666666666667,
+     "n": 960,
+     "tasks": 24
+    },
+    "motion": {
+     "hi": 0.7458333333333333,
+     "lo": 0.39479166666666665,
+     "mean": 0.5729166666666666,
+     "n": 960,
+     "tasks": 24
+    },
+    "success": {
+     "hi": 0.559375,
+     "lo": 0.20833333333333334,
+     "mean": 0.37916666666666665,
+     "n": 960,
+     "tasks": 24
+    }
+   },
+   "wrong": {
+    "binding": {
+     "hi": 0.8,
+     "lo": 0.559375,
+     "mean": 0.6854166666666667,
+     "n": 960,
+     "tasks": 24
+    },
+    "motion": {
+     "hi": 0.4010416666666667,
+     "lo": 0.18958333333333333,
+     "mean": 0.2916666666666667,
+     "n": 960,
+     "tasks": 24
+    },
+    "success": {
+     "hi": 0.06145833333333333,
+     "lo": 0.0,
+     "mean": 0.022916666666666665,
+     "n": 960,
+     "tasks": 24
+    }
+   },
+   "zero": {
+    "binding": {
+     "hi": 0.6197010869565197,
+     "lo": 0.055,
+     "mean": 0.296875,
+     "n": 192,
+     "tasks": 5
+    },
+    "motion": {
+     "hi": 0.4479166666666667,
+     "lo": 0.041666666666666664,
+     "mean": 0.23958333333333334,
+     "n": 192,
+     "tasks": 5
+    },
+    "success": {
+     "hi": 0.8050572916666658,
+     "lo": 0.10869565217391304,
+     "mean": 0.4635416666666667,
+     "n": 192,
+     "tasks": 5
+    }
+   },
+   "zs": {
+    "binding": {
+     "hi": 0.3927083333333333,
+     "lo": 0.10104166666666667,
+     "mean": 0.234375,
+     "n": 960,
+     "tasks": 24
+    },
+    "motion": {
+     "hi": 0.665625,
+     "lo": 0.30833333333333335,
+     "mean": 0.4895833333333333,
+     "n": 960,
+     "tasks": 24
+    },
+    "success": {
+     "hi": 0.43854166666666666,
+     "lo": 0.12604166666666666,
+     "mean": 0.2760416666666667,
+     "n": 960,
+     "tasks": 24
+    }
+   }
+  },
+  "follow": {
+   "wrong": {
+    "bind_wrong_mask_object": 0.6135416666666667,
+    "n": 960,
+    "release_at_wrong_mask_goal": 0.04583333333333333
+   },
+   "zs": {
+    "bind_wrong_mask_object": 0.084375,
+    "n": 960,
+    "release_at_wrong_mask_goal": 0.008333333333333333
+   }
+  },
+  "success_diff": {
+   "diff": 0.103125,
+   "hi": 0.2166927083333332,
+   "lo": 0.01666666666666668,
+   "tasks": 24
+  },
+  "train": {
+   "oracle": {
+    "binding": {
+     "hi": 0.0,
+     "lo": 0.0,
+     "mean": 0.0,
+     "n": 400,
+     "tasks": 10
+    },
+    "motion": {
+     "hi": 0.1825,
+     "lo": 0.01,
+     "mean": 0.085,
+     "n": 400,
+     "tasks": 10
+    },
+    "success": {
+     "hi": 0.99,
+     "lo": 0.8175,
+     "mean": 0.915,
+     "n": 400,
+     "tasks": 10
+    }
+   },
+   "zs": {
+    "binding": {
+     "hi": 0.0,
+     "lo": 0.0,
+     "mean": 0.0,
+     "n": 400,
+     "tasks": 10
+    },
+    "motion": {
+     "hi": 0.12,
+     "lo": 0.005,
+     "mean": 0.055,
+     "n": 400,
+     "tasks": 10
+    },
+    "success": {
+     "hi": 0.995,
+     "lo": 0.88,
+     "mean": 0.945,
+     "n": 400,
+     "tasks": 10
+    }
+   }
+  },
+  "zero_parity": {
+   "units": 24,
+   "units_identical": 24
+  }
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "s0_adapter__libero_90_c__read__s0__5838c2ad",
+ "schema": 1,
+ "script": "experiments/s0_read.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T23:12:54+00:00",
+ "stream": null,
+ "tag": "read"
+}
