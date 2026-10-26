@@ -234,3 +234,46 @@ A run's success is therefore an unbiased sample of the success of "execute this 
     pre-grasp selection is then closed, and PLAN_R8 (test-time conditioning) is drafted, not run.
 - **Known limit.** A real verified search could re-select at every approach query. That cannot be evaluated from these rollouts,
   since the runs are not branched per query. The gate tests one-step selection only.
+
+### 8.1 Result (ledger `r7_read` tag verify, results/r7/verify.json; pre-registration fcb15068)
+
+42 wrong-goal pre-grasp states, 32 first chunks each. Random-seed selection gives 0.060. The top-1 gain is the success of the picked
+run minus c / 32 (two-level bootstrap 95%):
+
+| verifier | top-1 gain | pick success on covering states (29) | :16 / :29 / :40 |
+|---|---|---|---|
+| **V_ceil, leave-state-out (PRIMARY gate)** | **+0.036 [-0.086, +0.161]** | 0.138 | -0.004 / +0.120 / -0.080 |
+| V_ceil, leave-task-out | -0.012 [-0.087, +0.067] | 0.069 | -0.004 / +0.015 / -0.080 |
+| V_mode (nearest the mean chunk) | +0.083 [-0.076, +0.209] | 0.207 | +0.138 / +0.120 / -0.080 |
+| V_anti (farthest) | +0.012 [-0.083, +0.120] | 0.103 | -0.076 / +0.067 / +0.031 |
+
+**Gate FAILS.** The gain is +0.036, below the bar of +0.05, and the CI includes 0.
+- Even a classifier trained on dev success labels cannot pick a winning first chunk at the pre-grasp query.
+- Across tasks it is at chance (-0.012).
+- The deployable mode heuristic's +0.083 is descriptive. Its CI includes 0, and it is negative on :40.
+
+**Power caveat.** Each pick reads ONE binary outcome at a base rate of 0.06, so a true gain of about +0.05 is near the noise floor
+(CI half-width about 0.12). The test can rule out a large first-chunk signal, but not a small one.
+
+## 9. Conclusion of R7 (stopping point)
+
+1. **Carry phase:** the policy's own samples do not contain the fix (cov@16 0.20; :40 0). Selection or steering of the carry is
+   closed: R6 closed steering, and the selection ceiling is 0.20.
+2. **Pre-grasp:** the samples do contain it (cov@16 0.53), so the region outcome is decided by the grasp. But the one query at which
+   a deployable selection could act carries no detectable signal about it. Even the learned ceiling gains +0.036, with a CI that
+   includes 0.
+3. **Hence:** test-time selection among the frozen policy's own samples does not recover the recombination region errors at any
+   phase we can evaluate. The remaining routes are:
+   - multi-query branched search, which needs a simulator at decision time and is therefore not deployable;
+   - changing what the policy is conditioned on.
+   docs/PLAN_R8.md drafts the second (not run).
+4. **Cost of R7:** stage A 7.7 A40-h; option 1 about 4.0 A40-h (4 packs, two preempted and requeued); stage B on CPU only. Total
+   about 11.7 A40-h, plus about 10 short CPU jobs.
+
+**Disclosures (sections 7-8).**
+- Option 1 and stage B were run after stage A's failed gate, at the coordinator's direction (pre-grasp check approved; then
+  "keep iterating" for exploratory work). Each was pre-registered before it ran.
+- H-pregrasp's pass is narrow (lower bound 0.35).
+- The 3 libero_90:1 controls have no pre-grasp state.
+- Stage C was not run (the night's budget).
+- Audits after the reads: audit_numbers 0 discrepancies over 2,064 checks; audit_coverage 0 uncovered numerals.

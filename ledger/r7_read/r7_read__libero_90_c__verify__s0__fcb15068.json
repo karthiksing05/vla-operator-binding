@@ -1,0 +1,136 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "python experiments/r7_verify.py --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "kipp.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4237353",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "r7_read",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "fcb15068a892de06442d2993286823d848682535",
+  "short": "fcb15068"
+ },
+ "keys": {},
+ "metrics": {
+  "arms": {
+   "V_anti": {
+    "gain": {
+     "hi": 0.1196808510638298,
+     "lo": -0.08258928571428571,
+     "mean": 0.011904761904761904,
+     "n": 42,
+     "tasks": 3
+    },
+    "per_task": {
+     "libero_90:16": -0.07589285714285714,
+     "libero_90:29": 0.06743421052631579,
+     "libero_90:40": 0.03125
+    },
+    "pick_covering": {
+     "hi": 0.2916666666666667,
+     "lo": 0.0,
+     "mean": 0.10344827586206896,
+     "n": 29,
+     "tasks": 3
+    }
+   },
+   "V_ceil_loso": {
+    "gain": {
+     "hi": 0.16105769230769232,
+     "lo": -0.08615267052767052,
+     "mean": 0.03571428571428571,
+     "n": 42,
+     "tasks": 3
+    },
+    "per_task": {
+     "libero_90:16": -0.004464285714285714,
+     "libero_90:29": 0.12006578947368421,
+     "libero_90:40": -0.0798611111111111
+    },
+    "pick_covering": {
+     "hi": 0.3333333333333333,
+     "lo": 0.0,
+     "mean": 0.13793103448275862,
+     "n": 29,
+     "tasks": 3
+    }
+   },
+   "V_ceil_loto": {
+    "gain": {
+     "hi": 0.06697287087912075,
+     "lo": -0.08680555555555555,
+     "mean": -0.011904761904761904,
+     "n": 42,
+     "tasks": 3
+    },
+    "per_task": {
+     "libero_90:16": -0.004464285714285714,
+     "libero_90:29": 0.014802631578947368,
+     "libero_90:40": -0.0798611111111111
+    },
+    "pick_covering": {
+     "hi": 0.17647058823529413,
+     "lo": 0.0,
+     "mean": 0.06896551724137931,
+     "n": 29,
+     "tasks": 3
+    }
+   },
+   "V_mode": {
+    "gain": {
+     "hi": 0.20914228723404243,
+     "lo": -0.0763888888888889,
+     "mean": 0.08333333333333333,
+     "n": 42,
+     "tasks": 3
+    },
+    "per_task": {
+     "libero_90:16": 0.13839285714285715,
+     "libero_90:29": 0.12006578947368421,
+     "libero_90:40": -0.0798611111111111
+    },
+    "pick_covering": {
+     "hi": 0.3870967741935484,
+     "lo": 0.0,
+     "mean": 0.20689655172413793,
+     "n": 29,
+     "tasks": 3
+    }
+   }
+  },
+  "base_rate": 0.05952380952380952,
+  "gate": {
+   "bar": 0.05,
+   "verdict": "FAIL"
+  },
+  "n_states": 42
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "r7_read__libero_90_c__verify__s0__fcb15068",
+ "schema": 1,
+ "script": "experiments/r7_verify.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T05:00:18+00:00",
+ "stream": null,
+ "tag": "verify"
+}
