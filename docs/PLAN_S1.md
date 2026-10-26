@@ -243,3 +243,37 @@ cells are reported with CIs.
 - Instances and sub-regions on detector boxes are not yet solved. The depth-1 / depth-2 numbers sit at or below B1b's.
 - **Next:** S0 (adapter + ORACLE binding) tests whether a correct binding, however obtained, fixes the policy. That decides whether
   the binder is worth improving.
+
+## 8. S1c: detector body x a sim-trained instance / sub-region head (pre-registered 2026-10-26, before S1c is trained)
+
+S1b's instance labels were lost because detector boxes did not isolate single bowls. S1c keeps S1b's body stage at test time
+(GroundingDINO boxes, results/bind/s1b/det.json) and trains the head on SIMULATOR boxes instead (experiments/s1c_train.py).
+
+### Training candidates
+
+- **Candidate set:** every body of the frame whose type the body phrase names. The phrase -> types map is read from the TRAINING
+  labels.
+- **Boxes:** each candidate is the tight box of its segmentation tokens, jittered to look like a detector box (scale 0.85-1.2,
+  shift +-8 px, a random score).
+- **Negatives:** in half the examples, up to 2 boxes of other bodies are added, standing in for detector false positives.
+- **Positive:** the target instance; any instance of a type phrase; a region's body; a table region's reference body.
+- **Mask:** the target's coverage on the positive's 8 x 8 crop (box x 2, the body's frame), so every region of a seen body type is
+  trained.
+- No training example is dropped (S1b dropped 234).
+
+### Head
+
+S1b's head:
+- the policy's image tokens on the crop;
+- box geometry and rank among the candidates (sibling-relative position for qualifiers);
+- the FULL role phrase in the policy's own word embeddings, so a wrong-type box can be rejected.
+
+Training: multi-positive CE over the candidates, plus the crop-mask loss. S1's hyper-parameters (40 epochs, seed 0), no dev-based
+choice.
+
+### Bars (pre-declared, point estimates; PASS iff all three; results/bind/s1c.json; s1c_read.py)
+
+- **(i)** held-out depth-1 hit >= 0.70. This is :60, :38 and :16's goal: 15 units, 3 tasks.
+- **(ii)** hit on ALL depth-2 units with a seen body type >= 0.70. This is :1, :29, :32 and :40: 20 units, 4 tasks.
+- **(iii)** depth-0 hit >= GroundingDINO alone (0.786).
+- The caddy is reported separately and is out of scope.
