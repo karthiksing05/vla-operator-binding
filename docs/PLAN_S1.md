@@ -181,8 +181,14 @@ features and scoring.
 
 **Body stage** (s1b_detect.py).
 - GroundingDINO-base proposes boxes for the body phrase on the policy's 224 image.
-- Settings: score >= 0.15, NMS 0.5, at most 6 boxes.
-- Run on all 728 S1 frames (3403 queries; 289 return no box).
+- Settings: score >= 0.05, NMS 0.5, at most 6 boxes.
+- Run on all 728 S1 frames (3403 queries; every query returns a box).
+- **Set before registration (disclosed):**
+  - A first run at 0.15 returned no box for "cabinet" on most training frames, which dropped half the goal examples. A
+    training-only diagnostic (experiments/s1b_diag.py) showed this, and the threshold was lowered.
+  - Separately, a type phrase with several instances now matches the box covering any ONE instance.
+  - The remaining training drops are mostly the black-bowl instances of KITCHEN_SCENE2 ("black bowl at the front" 0 / 24
+    matched), where the detector's boxes do not isolate one bowl.
 
 **Relation / instance stage** (s1b_train.py). One head per role, trained once on the TRAINING cells' S1 labels. Per candidate box
 it sees only:
