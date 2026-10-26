@@ -1,4 +1,8 @@
-# lifelong-ood-learner
+# vla-operator-binding (formerly lifelong-ood-learner)
+
+**Current direction (2026-10-26), docs/PLAN_BIND.md: compositional operators, holistic binding.** Flow VLAs compose in their
+motor operators (pose-equivariant, shared across objects) but bind instruction roles to scene entities holistically, by
+exemplar. The project measures this and designs a binding-only repair. The text below describes the earlier framing.
 
 **How far can composition carry a frozen policy on new tasks?** A frozen flow-matching robot policy meets tasks it was never
 trained on and takes them on by composing what it already holds, creating new units only where nothing it holds explains the
