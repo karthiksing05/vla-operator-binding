@@ -1,0 +1,56 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: PLAN_SOLVE S1b",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "crushinator.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4246154",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "9b695e7f5a2569e4a090e385d28dfded4527be5e",
+  "short": "9b695e7f"
+ },
+ "keys": {},
+ "metrics": {
+  "bar": "PASS iff S1b hit on depth-2 held-out units with a SEEN body type >= 0.70 AND S1b depth-0 hit >= GroundingDINO alone (S1 B1a), point estimates",
+  "design": "GroundingDINO body boxes x a trained relation / instance head on the box's 8x8 crop (2x) of the frozen policy's image tokens + box geometry / rank + the relation's own word embeddings",
+  "files_sha256": {
+   "docs/PLAN_S1.md": "e2d283d8e052631281ddbca7f02ce115b9cd45928676643a6375106a3188da67",
+   "experiments/s1b_detect.py": "50f60f4696c5358c9faafdc33d5de26f87c2e42fa2e57319853faa413a081b79",
+   "experiments/s1b_read.py": "39f468cfff7ec14288ae51bf5c37366bc030a63df73bf420aa6734f503a4b402",
+   "experiments/s1b_train.py": "b3e7ebd9efe2347ceaf2f28c2a5f0971adfe0690fba7ab179bd9ad2856bf4283",
+   "results/bind/s1b/det.json": "21a38e2b1cbc3736bae452107d2bb207d3c7cbbf6e5acf314a32caadfe2fef8c"
+  },
+  "power": "(i) is one task (:1, 5 units)",
+  "status": "PRE-REGISTERED PLAN_SOLVE S1b (factorised binder)",
+  "written_before": "S1b training and any dev score"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__ps1b__s0__9b695e7f",
+ "schema": 1,
+ "script": "experiments/prereg/ps1b.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T20:55:39+00:00",
+ "stream": null,
+ "tag": "ps1b"
+}
