@@ -76,3 +76,24 @@ one today (SigLIP anchor within 5 cm only 0.07-0.16).
 - SLURM only, on overcap or tail-lab with the exclude list. Nothing on the login node except edits, git and job control.
 - Pre-register before any read. Audits stay at 0 / 0. Local commits of own files only.
 - Never open split_sealed.json. Demos are fitted or scored only, never executed.
+
+## 1.1 Refinement after E1 / E1b / E2 / E2b (2026-10-26; docs/PLAN_E12.md)
+
+The data support a ROLE-SPECIFIC version of the binding claim.
+
+- **Goal role: exemplar-like, scene-keyed.**
+  - On zs goal errors, the wrong goal is the region that the SCENE's training tasks bind most often: +0.48 [+0.13, +0.87] above a
+    frequency-matched baseline.
+  - Examples: :29 the cabinet top (18 of 19), the binding of the same scene's training task "put the black bowl on top of the
+    cabinet"; :40 the shelf top.
+  - The goal binding is committed by the grasp (R7) and is visible at the settled first release (E2b: :29, :40, :16 reproduce the
+    zs regions).
+  - So P(b_goal | o, l) ~ P(b_goal | k(scene)) holds for the goal role, at region resolution.
+- **Object role: NOT explained by scene exemplars, by instruction similarity, by type-level visual similarity, by exposure, or by
+  source slot.** E1 gives -0.55, and E1b gives no account above baseline (2 effective tasks). The wrong-object errors look like
+  instance-level confusions, e.g. :58 ketchup -> tomato sauce. E4 (type > instance resolution) is the place to test that.
+- **P is measurable from early own-policy samples** (E2b: rank-predicts zs success, rho +0.76 [+0.44, +0.98]). The decomposition
+  success = P(correct b) x competence is calibrated (slope 1.00), and it separates binding failures (:29, :40, :16, :38, :58, :83)
+  from competence failures (:45, :32).
+- **Pooled prediction (a) as first stated is falsified** (E1). The theory keeps (a) for the goal role only. The object role needs
+  its own account before S3 (the exemplar-aware gate) can cover it.

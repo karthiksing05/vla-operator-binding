@@ -1,0 +1,413 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "python experiments/bind_e2b.py --read --record",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "gideon.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4243302",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "bind_e2",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "0f55d8846e91db5fc57568ede5745d747a5a7c23",
+  "short": "0f55d884"
+ },
+ "keys": {},
+ "metrics": {
+  "P_hat_slope": {
+   "hi": 1.0829518486953065,
+   "lo": 0.37162485597946726,
+   "slope": 0.7961842356114478
+  },
+  "S_hat": {
+   "hi": 0.9984981405933465,
+   "lo": 0.6526442690764647,
+   "rho": 0.8797507900178424,
+   "slope": 0.9965075669383007,
+   "slope_hi": 1.134423412024129,
+   "slope_lo": 0.8679299344103001
+  },
+  "S_hat_calibration": "PASS",
+  "n_tasks": 24,
+  "per_task": {
+   "libero_90:1": {
+    "P_goal": 0.3333333333333333,
+    "P_hat": 0.15,
+    "P_obj": 0.45,
+    "S_hat": 0.125,
+    "competence": 0.8333333333333334,
+    "first_release": {
+     "no_release": 2,
+     "none": 8,
+     "own": 4,
+     "success_before_release": 2,
+     "wooden_cabinet_1_top_region": 2
+    },
+    "n": 40,
+    "sandbox_success": 0.15,
+    "zs_success": 0.25
+   },
+   "libero_90:14": {
+    "P_goal": 0.95,
+    "P_hat": 0.95,
+    "P_obj": 1.0,
+    "S_hat": 0.95,
+    "competence": 1.0,
+    "first_release": {
+     "none": 2,
+     "own": 6,
+     "success_before_release": 32
+    },
+    "n": 40,
+    "sandbox_success": 1.0,
+    "zs_success": 1.0
+   },
+   "libero_90:16": {
+    "P_goal": 0.075,
+    "P_hat": 0.075,
+    "P_obj": 1.0,
+    "S_hat": 0.075,
+    "competence": 1.0,
+    "first_release": {
+     "akita_black_bowl_3": 14,
+     "none": 22,
+     "own": 1,
+     "plate_1": 1,
+     "success_before_release": 2
+    },
+    "n": 40,
+    "sandbox_success": 0.225,
+    "zs_success": 0.1
+   },
+   "libero_90:29": {
+    "P_goal": 0.0,
+    "P_hat": 0.0,
+    "P_obj": 1.0,
+    "S_hat": 0.0,
+    "competence": null,
+    "first_release": {
+     "none": 1,
+     "white_cabinet_1": 25,
+     "white_cabinet_1_top_side": 14
+    },
+    "n": 40,
+    "sandbox_success": 0.0,
+    "zs_success": 0.05
+   },
+   "libero_90:32": {
+    "P_goal": 0.0,
+    "P_hat": 0.0,
+    "P_obj": 1.0,
+    "S_hat": 0.0,
+    "competence": null,
+    "first_release": {
+     "none": 40
+    },
+    "n": 40,
+    "sandbox_success": 0.0,
+    "zs_success": 0.0
+   },
+   "libero_90:36": {
+    "P_goal": 0.3,
+    "P_hat": 0.3,
+    "P_obj": 1.0,
+    "S_hat": 0.27499999999999997,
+    "competence": 0.9166666666666666,
+    "first_release": {
+     "kitchen_table_plate_right_region": 5,
+     "none": 23,
+     "own": 7,
+     "success_before_release": 5
+    },
+    "n": 40,
+    "sandbox_success": 0.325,
+    "zs_success": 0.85
+   },
+   "libero_90:38": {
+    "P_goal": null,
+    "P_hat": 0.0,
+    "P_obj": 0.0,
+    "S_hat": 0.0,
+    "competence": null,
+    "first_release": {},
+    "n": 40,
+    "sandbox_success": 0.0,
+    "zs_success": 0.0
+   },
+   "libero_90:40": {
+    "P_goal": 0.275,
+    "P_hat": 0.275,
+    "P_obj": 1.0,
+    "S_hat": 0.275,
+    "competence": 1.0,
+    "first_release": {
+     "no_release": 1,
+     "none": 5,
+     "success_before_release": 11,
+     "wooden_two_layer_shelf_1": 7,
+     "wooden_two_layer_shelf_1_top_side": 16
+    },
+    "n": 40,
+    "sandbox_success": 0.3,
+    "zs_success": 0.0
+   },
+   "libero_90:45": {
+    "P_goal": 0.975,
+    "P_hat": 0.975,
+    "P_obj": 1.0,
+    "S_hat": 0.0,
+    "competence": 0.0,
+    "first_release": {
+     "none": 1,
+     "own": 39
+    },
+    "n": 40,
+    "sandbox_success": 0.0,
+    "zs_success": 0.0
+   },
+   "libero_90:50": {
+    "P_goal": 0.8857142857142857,
+    "P_hat": 0.775,
+    "P_obj": 0.875,
+    "S_hat": 0.775,
+    "competence": 1.0,
+    "first_release": {
+     "none": 4,
+     "own": 30,
+     "success_before_release": 1
+    },
+    "n": 40,
+    "sandbox_success": 0.85,
+    "zs_success": 0.9
+   },
+   "libero_90:58": {
+    "P_goal": null,
+    "P_hat": 0.0,
+    "P_obj": 0.0,
+    "S_hat": 0.0,
+    "competence": null,
+    "first_release": {},
+    "n": 40,
+    "sandbox_success": 0.0,
+    "zs_success": 0.0
+   },
+   "libero_90:59": {
+    "P_goal": 0.95,
+    "P_hat": 0.95,
+    "P_obj": 1.0,
+    "S_hat": 0.95,
+    "competence": 1.0,
+    "first_release": {
+     "none": 2,
+     "own": 28,
+     "success_before_release": 10
+    },
+    "n": 40,
+    "sandbox_success": 0.975,
+    "zs_success": 1.0
+   },
+   "libero_90:60": {
+    "P_goal": 0.05,
+    "P_hat": 0.05,
+    "P_obj": 1.0,
+    "S_hat": 0.05,
+    "competence": 1.0,
+    "first_release": {
+     "akita_black_bowl_2": 29,
+     "none": 9,
+     "success_before_release": 2
+    },
+    "n": 40,
+    "sandbox_success": 0.85,
+    "zs_success": 0.95
+   },
+   "libero_90:61": {
+    "P_goal": 1.0,
+    "P_hat": 1.0,
+    "P_obj": 1.0,
+    "S_hat": 1.0,
+    "competence": 1.0,
+    "first_release": {
+     "own": 40
+    },
+    "n": 40,
+    "sandbox_success": 1.0,
+    "zs_success": 1.0
+   },
+   "libero_90:73": {
+    "P_goal": 0.0,
+    "P_hat": 0.0,
+    "P_obj": 1.0,
+    "S_hat": 0.0,
+    "competence": null,
+    "first_release": {
+     "no_release": 2,
+     "none": 38
+    },
+    "n": 40,
+    "sandbox_success": 0.0,
+    "zs_success": 0.0
+   },
+   "libero_90:75": {
+    "P_goal": 0.0,
+    "P_hat": 0.0,
+    "P_obj": 0.975,
+    "S_hat": 0.0,
+    "competence": null,
+    "first_release": {
+     "none": 39
+    },
+    "n": 40,
+    "sandbox_success": 0.0,
+    "zs_success": 0.0
+   },
+   "libero_90:76": {
+    "P_goal": 0.0,
+    "P_hat": 0.0,
+    "P_obj": 1.0,
+    "S_hat": 0.0,
+    "competence": null,
+    "first_release": {
+     "none": 40
+    },
+    "n": 40,
+    "sandbox_success": 0.0,
+    "zs_success": 0.0
+   },
+   "libero_90:77": {
+    "P_goal": 0.0,
+    "P_hat": 0.0,
+    "P_obj": 1.0,
+    "S_hat": 0.0,
+    "competence": null,
+    "first_release": {
+     "none": 40
+    },
+    "n": 40,
+    "sandbox_success": 0.0,
+    "zs_success": 0.0
+   },
+   "libero_90:78": {
+    "P_goal": 0.0,
+    "P_hat": 0.0,
+    "P_obj": 0.975,
+    "S_hat": 0.0,
+    "competence": null,
+    "first_release": {
+     "none": 38,
+     "red_coffee_mug_1": 1
+    },
+    "n": 40,
+    "sandbox_success": 0.0,
+    "zs_success": 0.0
+   },
+   "libero_90:79": {
+    "P_goal": 0.0,
+    "P_hat": 0.0,
+    "P_obj": 1.0,
+    "S_hat": 0.0,
+    "competence": null,
+    "first_release": {
+     "none": 40
+    },
+    "n": 40,
+    "sandbox_success": 0.0,
+    "zs_success": 0.0
+   },
+   "libero_90:80": {
+    "P_goal": 0.0,
+    "P_hat": 0.0,
+    "P_obj": 0.875,
+    "S_hat": 0.0,
+    "competence": null,
+    "first_release": {
+     "no_release": 2,
+     "none": 33
+    },
+    "n": 40,
+    "sandbox_success": 0.0,
+    "zs_success": 0.0
+   },
+   "libero_90:82": {
+    "P_goal": 0.0,
+    "P_hat": 0.0,
+    "P_obj": 0.975,
+    "S_hat": 0.0,
+    "competence": null,
+    "first_release": {
+     "desk_caddy_1": 1,
+     "none": 34,
+     "porcelain_mug_1": 2,
+     "study_table_desk_caddy_front_left_contain_region": 2
+    },
+    "n": 40,
+    "sandbox_success": 0.0,
+    "zs_success": 0.0
+   },
+   "libero_90:83": {
+    "P_goal": 0.0,
+    "P_hat": 0.0,
+    "P_obj": 0.025,
+    "S_hat": 0.0,
+    "competence": null,
+    "first_release": {
+     "none": 1
+    },
+    "n": 40,
+    "sandbox_success": 0.0,
+    "zs_success": 0.0
+   },
+   "libero_90:9": {
+    "P_goal": 0.925,
+    "P_hat": 0.925,
+    "P_obj": 1.0,
+    "S_hat": 0.925,
+    "competence": 1.0,
+    "first_release": {
+     "none": 3,
+     "own": 8,
+     "success_before_release": 29
+    },
+    "n": 40,
+    "sandbox_success": 0.95,
+    "zs_success": 0.95
+   }
+  },
+  "primary": {
+   "hi": 0.9794885227340707,
+   "lo": 0.4413696031463996,
+   "rho": 0.7631556008986721
+  },
+  "sandbox_vs_zs": {
+   "mae": 0.053125,
+   "rho": 0.9166443442801444
+  },
+  "verdict": "PASS (not falsified)"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "bind_e2__libero_90_c__e2b__s0__0f55d884",
+ "schema": 1,
+ "script": "experiments/bind_e2b.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T18:22:18+00:00",
+ "stream": null,
+ "tag": "e2b"
+}

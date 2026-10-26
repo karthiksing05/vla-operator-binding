@@ -253,3 +253,36 @@ or source slot. The data are effectively 2 tasks, so this is a weak negative.
   bottles that the type-prototype cosine does not capture.
 - Testing that needs instance-level (patch) similarity in the live scene, not type prototypes. It is a candidate for E4 (binding
   resolution: type > instance).
+
+## 8. E2b result (ledger `bind_e2` tag e2b, results/bind/e2b.json; pre-registration 5b425d0d)
+
+**Data.** 960 runs, all complete (3 A40 jobs x 3 pairs, 36-42 min each; about 1.95 A40-h).
+
+| statistic | value | bar |
+|---|---|---|
+| **Spearman(P_hat, zs success) (PRIMARY)** | **+0.763 [+0.441, +0.979]** | > 0, lower bound > 0: **PASS** |
+| P_hat calibration slope | 0.796 [0.372, 1.083] | |
+| Spearman(S_hat = P_hat x competence, zs) | +0.880 [+0.653, +0.998] | |
+| S_hat calibration slope | 0.997 [0.868, 1.134] | not entirely outside [0.5, 2]: **PASS** |
+| sandbox's own success vs zs (descriptive) | rho +0.917, MAE 0.053 | |
+
+**First-release bindings (settled predicates) reproduce the zs failure types:**
+- **:29:** the cabinet top side 14, the cabinet body 25, own 0. This is E1's exemplar region.
+- **:40:** the shelf top side 16, the body 7, own or success 11.
+- **:16:** the third bowl 14, none 22, own 1.
+- **:38 / :58 / :83:** P_obj 0.00 / 0.00 / 0.03, the wrong-object tasks.
+- **Competence separates "right binding, wrong motion":** :45 has P_hat 0.975 and competence 0.00 (zs 0).
+
+**Verdict (pre-declared): E2b PASSES. P is measurable from early own-policy samples with LIBERO's predicates, and it rank-predicts
+zs success.** With competence from the same runs, S_hat is calibrated (slope 1.00).
+
+**Caveats.**
+1. **The settled first-release predicate is close to placement success.** The sandbox's own success alone predicts zs at rho +0.92.
+   So P_hat's predictive power is largely that of a K-sample success estimate, and S_hat's calibration is close to tautological:
+   competence is measured on the same runs.
+   - The non-trivial content is the decomposition. The wrong first-release bindings name the same wrong regions / objects that the
+     zs typer and E1 found, so binding (P) and competence fail separately and visibly (:45, :32).
+2. **On the caddy tasks (:73-:82), the first release lands in no region** ("none" 33-40 of 40). The compartment goals are not
+   reached at all, so P_goal is 0 there, consistent with zs 0.
+3. **:60:** the first release lands on the other bowl in the tray (29 of 40), yet the run then succeeds (sandbox 0.85, zs 0.95). The
+   policy corrects itself after the first release, so P_hat underestimates success there.
