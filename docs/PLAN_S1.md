@@ -162,3 +162,53 @@ entity and region with a phrase gets an example, not only the cell's own target.
 - :76's goal is coded depth 0 by E4's pre-registered code. It is held-out and missed by all three methods.
 - The within-training check (frames k >= 7, loose hit) was 0.93 object / 0.98 goal. B1b fits its training distribution.
 - The ledger rows carry dirty=true, because other agents' edits are in the shared tree.
+
+## 6. S1b: the factorised binder (pre-registered 2026-10-26, before S1b is trained or any dev unit is scored)
+
+From PLAN_SOLVE section 7: body by open-vocabulary detection x relation in the body's own frame. Reuses S1's frames, labels,
+features and scoring.
+
+### Design
+
+**Split** (experiments/s1b_detect.split).
+- The role phrase's BODY is the longest known type / fixture noun phrase in it. The lexicon is:
+  - the training tasks' type phrases;
+  - the attested goal templates' fixture nouns, and "caddy" from factors' fallback table.
+- The RELATION is the remainder:
+  - "in the top drawer of the cabinet" -> body "cabinet", relation "in the top drawer of the";
+  - "middle black bowl" -> "black bowl" + "middle";
+  - "black bowl on the left" -> "black bowl" + "on the left".
+
+**Body stage** (s1b_detect.py).
+- GroundingDINO-base proposes boxes for the body phrase on the policy's 224 image.
+- Settings: score >= 0.15, NMS 0.5, at most 6 boxes.
+- Run on all 728 S1 frames (3403 queries; 289 return no box).
+
+**Relation / instance stage** (s1b_train.py). One head per role, trained once on the TRAINING cells' S1 labels. Per candidate box
+it sees only:
+- the frozen policy's image tokens resampled on an 8 x 8 grid over the box enlarged 2x (the body's frame);
+- the box geometry and its rank position among the body's candidates (needed to pick an instance by qualifier);
+- the policy's own word embeddings of the RELATION phrase.
+
+It outputs a softmax over the candidates (instance choice) and a mask over the crop cells. Settings are S1's: AdamW 3e-4, 40
+epochs, seed 0, no dev-based choice.
+- **Deviation from "only the crop" (disclosed):** the geometry / rank features are needed for instance qualifiers, as the brief
+  asks ("detect all same-type instances and have the qualifier head pick among them").
+- The 2x enlargement lets table regions beside a body ("to the right of the plate") fall inside the frame.
+
+### Scoring
+
+S1's hit (the competitor rule) and IoU, on the same 240 dev units (results/bind/s1b.json; s1b_read.py).
+- **body_seen:** the target's body type (the named type; a region's body; a table region's reference body) is the body type of
+  some training example's target.
+
+### Bar (pre-declared)
+
+**PASS iff both hold:**
+- (i) S1b's hit on depth-2 HELD-OUT units with a SEEN body type >= 0.70 (point estimate);
+- (ii) S1b's depth-0 hit >= GroundingDINO alone (S1's B1a) on the same units (point estimates).
+
+The caddy (unseen body type) is reported separately.
+
+**Power (stated honestly).** (i) has ONE task: :1, "on top of the top drawer of the cabinet", 5 units. It is a weak test; all
+cells are reported with CIs.
