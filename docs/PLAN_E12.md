@@ -226,3 +226,30 @@ Uniform is descriptive.
 
 **Bar (set now).** An account PREDICTS the wrong object above baseline if the two-level task-cluster bootstrap 95% CI of
 mean(hit - P_freq) has a lower bound > 0.
+
+## 7. E1b result (ledger `bind_e1` tag e1b, results/bind/e1b.json; pre-registration 5b425d0d)
+
+41 units on 4 tasks (:58 20, :83 18, :1 2, :29 1). Intervals are two-level task-cluster bootstrap 95% intervals.
+
+| account | hit - P_freq | hit - uniform | verdict |
+|---|---|---|---|
+| (i) VIS, SigLIP type-prototype similarity | +0.122 [-0.160, +0.438] | +0.167 | not above baseline |
+| (ii) FREQ, training exposure | +0.097 [-0.192, +0.438] | +0.142 | not above baseline |
+| (iii) SRC, source-bound slot | +0.073 [-0.226, +0.390] | +0.118 | not above baseline |
+
+**Verdict (pre-declared): no account predicts the wrong object above the frequency-matched baseline.**
+
+**Per task:**
+- **:83 (porcelain mug, 18 of 18):** all three accounts name the porcelain mug, and so does the baseline's top candidate. The task does
+  not discriminate between them.
+- **:58 ("put the ketchup in the tray"; the tomato sauce in 19 of 20):** no account names the tomato sauce. VIS names the alphabet
+  soup, FREQ the cream cheese, SRC the alphabet soup / cream cheese.
+- **:1 (chocolate pudding, 2 of 2):** VIS and FREQ hit; SRC names the butter.
+- **:29 (ketchup, 1):** SRC hits; VIS and FREQ name the plate.
+
+**Reading.** The wrong-object errors remain unexplained by exemplar, instruction similarity, type-level visual similarity, exposure,
+or source slot. The data are effectively 2 tasks, so this is a weak negative.
+- :58's ketchup -> tomato sauce substitution looks like a fine-grained, instance-level visual confusion between two red sauce
+  bottles that the type-prototype cosine does not capture.
+- Testing that needs instance-level (patch) similarity in the live scene, not type prototypes. It is a candidate for E4 (binding
+  resolution: type > instance).
