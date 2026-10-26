@@ -1,0 +1,80 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: probe R7 option 1 pre-grasp coverage@K",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "asimo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4235907",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "9d8b3c254ad72dd4606fe0875c552df01495244d",
+  "short": "9d8b3c25"
+ },
+ "keys": {},
+ "metrics": {
+  "counts": {
+   "libero_90:14|succ": 4,
+   "libero_90:16|succ": 2,
+   "libero_90:16|wg": 14,
+   "libero_90:29|succ": 1,
+   "libero_90:29|wg": 19,
+   "libero_90:36|succ": 4,
+   "libero_90:40|succ": 3,
+   "libero_90:40|wg": 9,
+   "libero_90:50|succ": 4,
+   "libero_90:59|succ": 4,
+   "libero_90:60|succ": 4,
+   "libero_90:61|succ": 4,
+   "libero_90:9|succ": 4
+  },
+  "descriptive": "carry vs pre-grasp vs start coverage@K on the same states; paired cov@16 differences (two-level bootstrap); per task; zs-run success; carry - pre-grasp gap",
+  "disclosure": "seen before this row: R7 stage A's full read (carry and start coverage on these states), the plan counts; no pre-grasp rollout",
+  "files_sha256": {
+   "doc": "3f891c0585ae526bb5d578cbb87a7cf1af84652c103a162f72b327a3cb59d92c",
+   "loop": "19e56576f7c73bfc1a2fb44a82ecc4c8cd6ef246fefdd72a6795507877018a8f",
+   "pack": "0a687921f055a49f679d47383dfccdb31963a29cb3c005af000f8f2f6e925a6a",
+   "plan": "bbbe7ad7ed9496ad27e9efd57824cbac7108ab7096fcad0d245007e4dd25dd1d",
+   "sandbox": "d50cbf4a198119b89b8a97d5e1acd2145ba2a38d960758600d546f1c0c9781b9",
+   "script": "0ec21c2c6179d77683b3296b0af84ee2a9d38e68884ea9606904a0e9572ff10d",
+   "serve": "94960632ecce491787527dbbfa94ab4b0ef2cfc55d0ec55d4edbe7c426482401"
+  },
+  "hypothesis": "H-pregrasp: pooled coverage@16 on wrong-goal pre-grasp states >= 0.5 (point estimate)",
+  "missing": [
+   "dv_libero_90_1_t6_post125",
+   "dv_libero_90_1_t11_post280",
+   "dv_libero_90_1_t13_post310"
+  ],
+  "rollouts": "as stage A: K 32 seeds (41e6 + 1e5 k + q) + zs-seed run, D5 sandbox, to LIBERO success or (400 - j) / 5 queries",
+  "states": "the same 42 recombination zs wrong-goal + 34 of the 37 control episodes (libero_90:1 has no D4 pre observation); state = the episode's last D4 `pre` observation (approach query before the bound step)",
+  "status": "PRE-REGISTERED option 1 of probe R7 (pre-grasp coverage ceiling; coordinator-approved after stage A)",
+  "written_before": "any pre-grasp rollout"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__pr7_pregrasp__s0__9d8b3c25",
+ "schema": 1,
+ "script": "experiments/prereg/pr7_pregrasp.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T03:44:16+00:00",
+ "stream": null,
+ "tag": "pr7_pregrasp"
+}

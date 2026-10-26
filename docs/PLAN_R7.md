@@ -154,3 +154,29 @@ and stage C (closed loop) are not run.
   The line never ran. No python or data inspection ran on the login node: every computation ran via sbatch.
 - The read was run once with `--record`.
 - Audits after the read: audit_numbers 0 discrepancies over 2,064 checks; audit_coverage 0 uncovered numerals.
+
+## 7. Option 1: the pre-grasp coverage ceiling (pre-registered 2026-10-25, before any pre-grasp rollout; m3_prereg `pr7_pregrasp`)
+
+**Why.** Section 6 placed the region outcome at or before the grasp: carry cov@16 0.20, start 0.57. A selection that acts at the
+approach / grasp queries is deployable in closed loop only if the policy's own samples from a state just before the grasp still
+contain the fix. The coordinator approved this ceiling check; no verifier is designed until the user decides.
+
+- **States:** the same 42 wrong-goal + 37 control episodes. The pre-grasp state is the episode's LAST D4 `pre` observation
+  (experiments/d4_bind.py): an approach query before the bound step, with an open gripper and the hand at least R2A.HAND_CLEAR (xy)
+  from every object. The 3 control episodes of libero_90:1 have no `pre` observation, since it is an articulation-first task (D4).
+  That leaves 76 units: 42 wrong-goal, 34 control.
+- **Rollouts:** as in section 2. The run loop is r7_cover.run_unit, unchanged, with the same 32 seeds and a zs-seed run (the
+  recorded zs seed at that query). The budget is (400 - j) / 5 queries, and the gripper ramp is rebuilt from the recorded commands
+  before j. Code: `experiments/r7_pregrasp.py`, `experiments/r7pg_pack.sbatch` (a copy of r7_pack.sbatch). Plan: results/r7/plan_pg.json.
+- **Hypothesis H-pregrasp:** pooled coverage@16 on the wrong-goal pre-grasp states >= 0.5 (point estimate; same estimator and
+  bootstrap as section 3).
+- **Also reported (descriptive), on the same states:**
+  - carry vs pre-grasp vs start coverage@K;
+  - paired differences of coverage@16 (pre-grasp - carry, start - pre-grasp; two-level bootstrap);
+  - per task;
+  - the zs-run success;
+  - the carry - pre-grasp gap in steps.
+- **Reading rule.** If H-pregrasp passes, a grasp-time verifier is worth designing (not here: hand back). If it fails while start
+  passes, the outcome is fixed during the approach, before the hand nears the object. Selection would then have to act at the first
+  queries. That is reported, and the route is handed back.
+- **Cost (planned):** 76 units x 33 runs; about 4 A40-h (4 jobs x 3 pairs).
