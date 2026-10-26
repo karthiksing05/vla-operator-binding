@@ -1,0 +1,56 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: PLAN_SOLVE S1c",
+ "config": {},
+ "env": {
+  "device": "NVIDIA GeForce RTX 2080 Ti",
+  "host": "bmo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4250247",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "91b2d075f4f84120996cd76df727983ade3e2239",
+  "short": "91b2d075"
+ },
+ "keys": {},
+ "metrics": {
+  "bar": "PASS iff held-out depth-1 hit >= 0.70 AND all depth-2 seen-body hit >= 0.70 AND depth-0 hit >= GroundingDINO (0.786); caddy out of scope",
+  "design": "GroundingDINO body boxes at test; head trained on SIM segmentation boxes (jittered, + distractors) of training cells, full role phrase",
+  "files_sha256": {
+   "docs/PLAN_S1.md": "871c04999042aa72f9085f99872b9493af76017d1bbf3daaa0f94f99448e2db4",
+   "experiments/s1b_detect.py": "50f60f4696c5358c9faafdc33d5de26f87c2e42fa2e57319853faa413a081b79",
+   "experiments/s1c_read.py": "04c6aaabaad420244136b0af76faca71f10da5ef043ebab119fb903407719906",
+   "experiments/s1c_train.py": "82b8d8983d883281264ef9a60f044b06d34aeb76918586ab109a18bf936512b2",
+   "results/bind/s1b/det.json": "21a38e2b1cbc3736bae452107d2bb207d3c7cbbf6e5acf314a32caadfe2fef8c"
+  },
+  "power": "(i) 3 tasks, 15 units; (ii) 4 tasks, 20 units",
+  "status": "PRE-REGISTERED PLAN_SOLVE S1c (detector body x sim-trained instance / sub-region head)",
+  "written_before": "S1c training and any dev score"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__ps1c__s0__91b2d075",
+ "schema": 1,
+ "script": "experiments/prereg/ps1c.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T23:24:12+00:00",
+ "stream": null,
+ "tag": "ps1c"
+}
