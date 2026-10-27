@@ -1,0 +1,58 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "pre-registration: PLAN_SOLVE S2 smoke",
+ "config": {},
+ "env": {
+  "device": "cpu",
+  "host": "gideon.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4250541",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "m3_prereg",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1bfc6cffc8c913e8925b6e39ca391a545dc05a96",
+  "short": "1bfc6cff"
+ },
+ "keys": {},
+ "metrics": {
+  "arms": "zs / oracle = S0's dev runs at seeds 0-3 (reused, paired); deploy = adapter + S1b masks per replan, new",
+  "binder": "s1b (S1c FAILED: i 0.40, ii 0.65)",
+  "direction": "D1 binding(deploy) < binding(zs); D2 binding closure in [0,1]; D3 damage >= -0.05; no pass bar",
+  "files_sha256": {
+   "docs/PLAN_S2.md": "c2b5a5894e78d0b0fe70c5434044a505e770aa01b9ba98238362791afbd300af",
+   "experiments/s2_pack.sbatch": "736b1c613618e3a88df8390f6e35ac7db572790b6989f6355d5245ef911b86f2",
+   "experiments/s2_read.py": "bfd6183cdf27598b4afc2c3b0fdd5ad6def6cb894586d917a4dc5ee7aa98cd96",
+   "experiments/s2_sandbox.py": "1fe06611c79a992063a5182204d8232a70c96b4249c71e05a96672afda5af65e",
+   "experiments/s2_serve.py": "c9df7c820a9f13f744962f3cb8e8da52bc1d2ce3ecd3bf37ab0c746fc02dda68",
+   "results/bind/s2/plan.json": "96a3b2ac4f415b19f5a7bf83e9a3a708420a30b9196661ec8e4e135ec57ecfea"
+  },
+  "metrics": "success, binding error, motion (S0 classify); closure (deploy-zs)/(oracle-zs); damage vs S0 train_zs seeds 0-3",
+  "status": "PRE-REGISTERED PLAN_SOLVE S2 smoke (EXPLORATORY; S0 adapter + S1b deployable binder)",
+  "written_before": "any S2 rollout"
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "m3_prereg__libero_90_c__ps2__s0__1bfc6cff",
+ "schema": 1,
+ "script": "experiments/prereg/ps2.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-26T23:39:39+00:00",
+ "stream": null,
+ "tag": "ps2"
+}

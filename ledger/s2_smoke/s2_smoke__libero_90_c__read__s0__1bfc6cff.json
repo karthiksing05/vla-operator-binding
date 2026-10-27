@@ -1,0 +1,276 @@
+{
+ "artifacts": {},
+ "backbone": null,
+ "backfilled": false,
+ "bench": "libero_90_c",
+ "bytes": {
+  "codes": 0,
+  "experts": 0,
+  "samples": 0,
+  "teacher_copies": 0,
+  "total": 0,
+  "tree": 0
+ },
+ "command": "python experiments/s2_read.py --record",
+ "config": {
+  "note": "S2 smoke: S0 adapter + S1b deployable binder, exploratory"
+ },
+ "env": {
+  "device": "NVIDIA GeForce RTX 2080 Ti",
+  "host": "bmo.cc.gatech.edu",
+  "python": "3.12.13",
+  "slurm_job": "4253241",
+  "torch": "2.7.1+cu126"
+ },
+ "experiment": "s2_smoke",
+ "git": {
+  "branch": "main",
+  "dirty": true,
+  "hash": "1bfc6cffc8c913e8925b6e39ca391a545dc05a96",
+  "short": "1bfc6cff"
+ },
+ "keys": {},
+ "metrics": {
+  "binder_diag": {
+   "goal": {
+    "empty": 0.0,
+    "inside": 0.6405781660469161,
+    "iou": 0.3882087308980523,
+    "majority_inside": 0.6166666666666667,
+    "units": 120
+   },
+   "obj": {
+    "empty": 0.0,
+    "inside": 0.5974641754850087,
+    "iou": 0.37160699443866746,
+    "majority_inside": 0.575,
+    "units": 120
+   }
+  },
+  "closure": {
+   "binding": {
+    "c": 0.08235294117647061,
+    "hi": 0.48335317460317456,
+    "lo": -0.853046218487395,
+    "tasks": 24
+   },
+   "motion": {
+    "c": 0.6874999999999993,
+    "hi": 5.00000000000001,
+    "lo": -4.0,
+    "tasks": 24
+   },
+   "success": {
+    "c": -0.28301886792452857,
+    "hi": 0.3529718137254899,
+    "lo": -2.5717261904761948,
+    "tasks": 24
+   }
+  },
+  "damage": {
+   "diff": -0.18,
+   "hi": -0.075,
+   "lo": -0.29,
+   "tasks": 10
+  },
+  "dev": {
+   "deploy": {
+    "binding": {
+     "hi": 0.33125,
+     "lo": 0.11041666666666666,
+     "mean": 0.21458333333333332,
+     "n": 480,
+     "tasks": 24
+    },
+    "motion": {
+     "hi": 0.7,
+     "lo": 0.37916666666666665,
+     "mean": 0.5395833333333333,
+     "n": 480,
+     "tasks": 24
+    },
+    "success": {
+     "hi": 0.38333333333333336,
+     "lo": 0.125,
+     "mean": 0.24583333333333332,
+     "n": 480,
+     "tasks": 24
+    }
+   },
+   "oracle": {
+    "binding": {
+     "hi": 0.1,
+     "lo": 0.014583333333333334,
+     "mean": 0.052083333333333336,
+     "n": 480,
+     "tasks": 24
+    },
+    "motion": {
+     "hi": 0.7354166666666667,
+     "lo": 0.37916666666666665,
+     "mean": 0.5604166666666667,
+     "n": 480,
+     "tasks": 24
+    },
+    "success": {
+     "hi": 0.5708333333333333,
+     "lo": 0.21666666666666667,
+     "mean": 0.3875,
+     "n": 480,
+     "tasks": 24
+    }
+   },
+   "zs": {
+    "binding": {
+     "hi": 0.3854166666666667,
+     "lo": 0.09375,
+     "mean": 0.22916666666666666,
+     "n": 480,
+     "tasks": 24
+    },
+    "motion": {
+     "hi": 0.6750520833333327,
+     "lo": 0.31666666666666665,
+     "mean": 0.49375,
+     "n": 480,
+     "tasks": 24
+    },
+    "success": {
+     "hi": 0.4375,
+     "lo": 0.13125,
+     "mean": 0.27708333333333335,
+     "n": 480,
+     "tasks": 24
+    }
+   }
+  },
+  "dev_units": 120,
+  "diffs": {
+   "binding": {
+    "deploy_minus_oracle": {
+     "diff": 0.1625,
+     "hi": 0.26880208333333305,
+     "lo": 0.07291666666666667,
+     "tasks": 24
+    },
+    "deploy_minus_zs": {
+     "diff": -0.014583333333333334,
+     "hi": 0.07083333333333333,
+     "lo": -0.11041666666666666,
+     "tasks": 24
+    },
+    "oracle_minus_zs": {
+     "diff": -0.17708333333333334,
+     "hi": -0.06041666666666667,
+     "lo": -0.30625,
+     "tasks": 24
+    }
+   },
+   "motion": {
+    "deploy_minus_oracle": {
+     "diff": -0.020833333333333332,
+     "hi": 0.07083333333333333,
+     "lo": -0.12708333333333333,
+     "tasks": 24
+    },
+    "deploy_minus_zs": {
+     "diff": 0.04583333333333333,
+     "hi": 0.12291666666666666,
+     "lo": -0.02500000000000001,
+     "tasks": 24
+    },
+    "oracle_minus_zs": {
+     "diff": 0.06666666666666667,
+     "hi": 0.18125,
+     "lo": -0.03125,
+     "tasks": 24
+    }
+   },
+   "success": {
+    "deploy_minus_oracle": {
+     "diff": -0.14166666666666666,
+     "hi": -0.04791666666666667,
+     "lo": -0.24166666666666667,
+     "tasks": 24
+    },
+    "deploy_minus_zs": {
+     "diff": -0.03125,
+     "hi": 0.04791666666666667,
+     "lo": -0.12083333333333333,
+     "tasks": 24
+    },
+    "oracle_minus_zs": {
+     "diff": 0.11041666666666666,
+     "hi": 0.22083333333333333,
+     "lo": 0.025,
+     "tasks": 24
+    }
+   }
+  },
+  "direction": {
+   "binding_closure_in_0_1": true,
+   "binding_deploy_below_zs": true
+  },
+  "k_seeds": 4,
+  "train": {
+   "deploy": {
+    "binding": {
+     "hi": 0.065,
+     "lo": 0.0,
+     "mean": 0.025,
+     "n": 200,
+     "tasks": 10
+    },
+    "motion": {
+     "hi": 0.4,
+     "lo": 0.07487500000000011,
+     "mean": 0.225,
+     "n": 200,
+     "tasks": 10
+    },
+    "success": {
+     "hi": 0.905,
+     "lo": 0.57,
+     "mean": 0.75,
+     "n": 200,
+     "tasks": 10
+    }
+   },
+   "zs": {
+    "binding": {
+     "hi": 0.0,
+     "lo": 0.0,
+     "mean": 0.0,
+     "n": 200,
+     "tasks": 10
+    },
+    "motion": {
+     "hi": 0.165,
+     "lo": 0.0,
+     "mean": 0.07,
+     "n": 200,
+     "tasks": 10
+    },
+    "success": {
+     "hi": 1.0,
+     "lo": 0.835,
+     "mean": 0.93,
+     "n": 200,
+     "tasks": 10
+    }
+   }
+  },
+  "train_units": 50
+ },
+ "notes": null,
+ "retired": null,
+ "run_id": "s2_smoke__libero_90_c__read__s0__1bfc6cff",
+ "schema": 1,
+ "script": "experiments/s2_read.py",
+ "seconds": null,
+ "seed": 0,
+ "source_commit": null,
+ "started": "2026-10-27T00:51:58+00:00",
+ "stream": null,
+ "tag": "read"
+}

@@ -1,0 +1,642 @@
+{
+ "k_seeds": 4,
+ "dev_units": 120,
+ "dev": {
+  "zs": {
+   "success": {
+    "mean": 0.27708333333333335,
+    "lo": 0.13125,
+    "hi": 0.4375,
+    "n": 480,
+    "tasks": 24
+   },
+   "binding": {
+    "mean": 0.22916666666666666,
+    "lo": 0.09375,
+    "hi": 0.3854166666666667,
+    "n": 480,
+    "tasks": 24
+   },
+   "motion": {
+    "mean": 0.49375,
+    "lo": 0.31666666666666665,
+    "hi": 0.6750520833333327,
+    "n": 480,
+    "tasks": 24
+   }
+  },
+  "oracle": {
+   "success": {
+    "mean": 0.3875,
+    "lo": 0.21666666666666667,
+    "hi": 0.5708333333333333,
+    "n": 480,
+    "tasks": 24
+   },
+   "binding": {
+    "mean": 0.052083333333333336,
+    "lo": 0.014583333333333334,
+    "hi": 0.1,
+    "n": 480,
+    "tasks": 24
+   },
+   "motion": {
+    "mean": 0.5604166666666667,
+    "lo": 0.37916666666666665,
+    "hi": 0.7354166666666667,
+    "n": 480,
+    "tasks": 24
+   }
+  },
+  "deploy": {
+   "success": {
+    "mean": 0.24583333333333332,
+    "lo": 0.125,
+    "hi": 0.38333333333333336,
+    "n": 480,
+    "tasks": 24
+   },
+   "binding": {
+    "mean": 0.21458333333333332,
+    "lo": 0.11041666666666666,
+    "hi": 0.33125,
+    "n": 480,
+    "tasks": 24
+   },
+   "motion": {
+    "mean": 0.5395833333333333,
+    "lo": 0.37916666666666665,
+    "hi": 0.7,
+    "n": 480,
+    "tasks": 24
+   }
+  }
+ },
+ "train": {
+  "zs": {
+   "success": {
+    "mean": 0.93,
+    "lo": 0.835,
+    "hi": 1.0,
+    "n": 200,
+    "tasks": 10
+   },
+   "binding": {
+    "mean": 0.0,
+    "lo": 0.0,
+    "hi": 0.0,
+    "n": 200,
+    "tasks": 10
+   },
+   "motion": {
+    "mean": 0.07,
+    "lo": 0.0,
+    "hi": 0.165,
+    "n": 200,
+    "tasks": 10
+   }
+  },
+  "deploy": {
+   "success": {
+    "mean": 0.75,
+    "lo": 0.57,
+    "hi": 0.905,
+    "n": 200,
+    "tasks": 10
+   },
+   "binding": {
+    "mean": 0.025,
+    "lo": 0.0,
+    "hi": 0.065,
+    "n": 200,
+    "tasks": 10
+   },
+   "motion": {
+    "mean": 0.225,
+    "lo": 0.07487500000000011,
+    "hi": 0.4,
+    "n": 200,
+    "tasks": 10
+   }
+  }
+ },
+ "train_units": 50,
+ "diffs": {
+  "success": {
+   "deploy_minus_zs": {
+    "diff": -0.03125,
+    "lo": -0.12083333333333333,
+    "hi": 0.04791666666666667,
+    "tasks": 24
+   },
+   "oracle_minus_zs": {
+    "diff": 0.11041666666666666,
+    "lo": 0.025,
+    "hi": 0.22083333333333333,
+    "tasks": 24
+   },
+   "deploy_minus_oracle": {
+    "diff": -0.14166666666666666,
+    "lo": -0.24166666666666667,
+    "hi": -0.04791666666666667,
+    "tasks": 24
+   }
+  },
+  "binding": {
+   "deploy_minus_zs": {
+    "diff": -0.014583333333333334,
+    "lo": -0.11041666666666666,
+    "hi": 0.07083333333333333,
+    "tasks": 24
+   },
+   "oracle_minus_zs": {
+    "diff": -0.17708333333333334,
+    "lo": -0.30625,
+    "hi": -0.06041666666666667,
+    "tasks": 24
+   },
+   "deploy_minus_oracle": {
+    "diff": 0.1625,
+    "lo": 0.07291666666666667,
+    "hi": 0.26880208333333305,
+    "tasks": 24
+   }
+  },
+  "motion": {
+   "deploy_minus_zs": {
+    "diff": 0.04583333333333333,
+    "lo": -0.02500000000000001,
+    "hi": 0.12291666666666666,
+    "tasks": 24
+   },
+   "oracle_minus_zs": {
+    "diff": 0.06666666666666667,
+    "lo": -0.03125,
+    "hi": 0.18125,
+    "tasks": 24
+   },
+   "deploy_minus_oracle": {
+    "diff": -0.020833333333333332,
+    "lo": -0.12708333333333333,
+    "hi": 0.07083333333333333,
+    "tasks": 24
+   }
+  }
+ },
+ "closure": {
+  "success": {
+   "c": -0.28301886792452857,
+   "lo": -2.5717261904761948,
+   "hi": 0.3529718137254899,
+   "tasks": 24
+  },
+  "binding": {
+   "c": 0.08235294117647061,
+   "lo": -0.853046218487395,
+   "hi": 0.48335317460317456,
+   "tasks": 24
+  },
+  "motion": {
+   "c": 0.6874999999999993,
+   "lo": -4.0,
+   "hi": 5.00000000000001,
+   "tasks": 24
+  }
+ },
+ "damage": {
+  "diff": -0.18,
+  "lo": -0.29,
+  "hi": -0.075,
+  "tasks": 10
+ },
+ "binder_diag": {
+  "obj": {
+   "units": 120,
+   "empty": 0.0,
+   "inside": 0.5974641754850087,
+   "iou": 0.37160699443866746,
+   "majority_inside": 0.575
+  },
+  "goal": {
+   "units": 120,
+   "empty": 0.0,
+   "inside": 0.6405781660469161,
+   "iou": 0.3882087308980523,
+   "majority_inside": 0.6166666666666667
+  }
+ },
+ "direction": {
+  "binding_deploy_below_zs": true,
+  "binding_closure_in_0_1": true
+ },
+ "per_task": {
+  "libero_90:1": {
+   "zs": {
+    "success": 0.2,
+    "binding": 0.2,
+    "motion": 0.6
+   },
+   "oracle": {
+    "success": 0.25,
+    "binding": 0.15,
+    "motion": 0.6
+   },
+   "deploy": {
+    "success": 0.05,
+    "binding": 0.1,
+    "motion": 0.85
+   }
+  },
+  "libero_90:14": {
+   "zs": {
+    "success": 1.0,
+    "binding": 0.0,
+    "motion": 0.0
+   },
+   "oracle": {
+    "success": 1.0,
+    "binding": 0.0,
+    "motion": 0.0
+   },
+   "deploy": {
+    "success": 0.65,
+    "binding": 0.2,
+    "motion": 0.15
+   }
+  },
+  "libero_90:16": {
+   "zs": {
+    "success": 0.25,
+    "binding": 0.3,
+    "motion": 0.45
+   },
+   "oracle": {
+    "success": 0.15,
+    "binding": 0.1,
+    "motion": 0.75
+   },
+   "deploy": {
+    "success": 0.05,
+    "binding": 0.6,
+    "motion": 0.35
+   }
+  },
+  "libero_90:29": {
+   "zs": {
+    "success": 0.0,
+    "binding": 1.0,
+    "motion": 0.0
+   },
+   "oracle": {
+    "success": 1.0,
+    "binding": 0.0,
+    "motion": 0.0
+   },
+   "deploy": {
+    "success": 0.45,
+    "binding": 0.55,
+    "motion": 0.0
+   }
+  },
+  "libero_90:32": {
+   "zs": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "oracle": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "deploy": {
+    "success": 0.3,
+    "binding": 0.0,
+    "motion": 0.7
+   }
+  },
+  "libero_90:36": {
+   "zs": {
+    "success": 0.45,
+    "binding": 0.05,
+    "motion": 0.5
+   },
+   "oracle": {
+    "success": 0.95,
+    "binding": 0.0,
+    "motion": 0.05
+   },
+   "deploy": {
+    "success": 0.65,
+    "binding": 0.0,
+    "motion": 0.35
+   }
+  },
+  "libero_90:38": {
+   "zs": {
+    "success": 0.0,
+    "binding": 0.95,
+    "motion": 0.05
+   },
+   "oracle": {
+    "success": 0.05,
+    "binding": 0.0,
+    "motion": 0.95
+   },
+   "deploy": {
+    "success": 0.0,
+    "binding": 1.0,
+    "motion": 0.0
+   }
+  },
+  "libero_90:40": {
+   "zs": {
+    "success": 0.3,
+    "binding": 0.55,
+    "motion": 0.15
+   },
+   "oracle": {
+    "success": 0.5,
+    "binding": 0.35,
+    "motion": 0.15
+   },
+   "deploy": {
+    "success": 0.45,
+    "binding": 0.4,
+    "motion": 0.15
+   }
+  },
+  "libero_90:45": {
+   "zs": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "oracle": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "deploy": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   }
+  },
+  "libero_90:50": {
+   "zs": {
+    "success": 0.7,
+    "binding": 0.25,
+    "motion": 0.05
+   },
+   "oracle": {
+    "success": 0.95,
+    "binding": 0.0,
+    "motion": 0.05
+   },
+   "deploy": {
+    "success": 0.15,
+    "binding": 0.5,
+    "motion": 0.35
+   }
+  },
+  "libero_90:58": {
+   "zs": {
+    "success": 0.0,
+    "binding": 1.0,
+    "motion": 0.0
+   },
+   "oracle": {
+    "success": 0.55,
+    "binding": 0.3,
+    "motion": 0.15
+   },
+   "deploy": {
+    "success": 0.15,
+    "binding": 0.55,
+    "motion": 0.3
+   }
+  },
+  "libero_90:59": {
+   "zs": {
+    "success": 0.95,
+    "binding": 0.0,
+    "motion": 0.05
+   },
+   "oracle": {
+    "success": 1.0,
+    "binding": 0.0,
+    "motion": 0.0
+   },
+   "deploy": {
+    "success": 0.5,
+    "binding": 0.35,
+    "motion": 0.15
+   }
+  },
+  "libero_90:60": {
+   "zs": {
+    "success": 0.8,
+    "binding": 0.0,
+    "motion": 0.2
+   },
+   "oracle": {
+    "success": 1.0,
+    "binding": 0.0,
+    "motion": 0.0
+   },
+   "deploy": {
+    "success": 0.7,
+    "binding": 0.3,
+    "motion": 0.0
+   }
+  },
+  "libero_90:61": {
+   "zs": {
+    "success": 1.0,
+    "binding": 0.0,
+    "motion": 0.0
+   },
+   "oracle": {
+    "success": 1.0,
+    "binding": 0.0,
+    "motion": 0.0
+   },
+   "deploy": {
+    "success": 1.0,
+    "binding": 0.0,
+    "motion": 0.0
+   }
+  },
+  "libero_90:73": {
+   "zs": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "oracle": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "deploy": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   }
+  },
+  "libero_90:75": {
+   "zs": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "oracle": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "deploy": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   }
+  },
+  "libero_90:76": {
+   "zs": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "oracle": {
+    "success": 0.0,
+    "binding": 0.05,
+    "motion": 0.95
+   },
+   "deploy": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   }
+  },
+  "libero_90:77": {
+   "zs": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "oracle": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "deploy": {
+    "success": 0.0,
+    "binding": 0.1,
+    "motion": 0.9
+   }
+  },
+  "libero_90:78": {
+   "zs": {
+    "success": 0.0,
+    "binding": 0.05,
+    "motion": 0.95
+   },
+   "oracle": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "deploy": {
+    "success": 0.0,
+    "binding": 0.05,
+    "motion": 0.95
+   }
+  },
+  "libero_90:79": {
+   "zs": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "oracle": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "deploy": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   }
+  },
+  "libero_90:80": {
+   "zs": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "oracle": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   },
+   "deploy": {
+    "success": 0.0,
+    "binding": 0.0,
+    "motion": 1.0
+   }
+  },
+  "libero_90:82": {
+   "zs": {
+    "success": 0.0,
+    "binding": 0.15,
+    "motion": 0.85
+   },
+   "oracle": {
+    "success": 0.0,
+    "binding": 0.15,
+    "motion": 0.85
+   },
+   "deploy": {
+    "success": 0.0,
+    "binding": 0.1,
+    "motion": 0.9
+   }
+  },
+  "libero_90:83": {
+   "zs": {
+    "success": 0.0,
+    "binding": 1.0,
+    "motion": 0.0
+   },
+   "oracle": {
+    "success": 0.0,
+    "binding": 0.15,
+    "motion": 0.85
+   },
+   "deploy": {
+    "success": 0.0,
+    "binding": 0.35,
+    "motion": 0.65
+   }
+  },
+  "libero_90:9": {
+   "zs": {
+    "success": 1.0,
+    "binding": 0.0,
+    "motion": 0.0
+   },
+   "oracle": {
+    "success": 0.9,
+    "binding": 0.0,
+    "motion": 0.1
+   },
+   "deploy": {
+    "success": 0.8,
+    "binding": 0.0,
+    "motion": 0.2
+   }
+  }
+ }
+}
