@@ -5,7 +5,7 @@ flow-matching policies trained on the same LIBERO suites: pi0 (openpi pi0_libero
 zero-shot and pfield; acceptance on set a (10 episodes) keeps pfield only if it beats the policy; test on set c (20 per task), noise
 seed 13, Li's modified LIBERO."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="g4c_field", seed=13,

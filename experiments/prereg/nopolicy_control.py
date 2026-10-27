@@ -1,10 +1,10 @@
 """Pre-registration of the no-policy control (ledger m3_prereg tag nopolicy_control), written before any no-policy rollout."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
-chk = {b: json.load(open(f"/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/guide_override_{b}.json")) for b in ("pi05_libero", "smolvla_libero")}
+chk = {b: json.load(open(f"/coc/flash10/ksingara3/vla-operator-binding/results/robot/guide_override_{b}.json")) for b in ("pi05_libero", "smolvla_libero")}
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="nopolicy_control", seed=0,
     metrics={

@@ -2,7 +2,7 @@
 one round of the folded token's OWN practice (rapid, no further demonstration) close the gap between the 18.4 KB demo token
 (140 of 420) and the 18.7 MB one-demo LoRA (252 of 420)?"""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
 print(ledger.record(

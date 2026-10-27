@@ -3,7 +3,7 @@ import json, pathlib, sys, glob
 import numpy as np
 from libero.libero import benchmark, get_libero_path
 from libero.libero.envs import OffScreenRenderEnv
-R = "/coc/flash10/ksingara3/lifelong-ood-learner/results/robot"
+R = "/coc/flash10/ksingara3/vla-operator-binding/results/robot"
 suite = benchmark.get_benchmark_dict()["libero_90"]()
 for tid, site, obj in ((25, None, None), (43, None, None), (31, None, None)):
     task = suite.get_task(tid)

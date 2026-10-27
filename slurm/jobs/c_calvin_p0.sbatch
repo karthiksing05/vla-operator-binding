@@ -2,12 +2,12 @@
 # CALVIN-C P0: freeze the three split seeds (+ ledger c_calvin_split), run the split tests, and build each seed's
 # training-window filter from ABC's annotations (+ ledger c_calvin_windows).  CPU only.
 #SBATCH --job-name=ccalvin-p0
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/logs/%j_p0.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/logs/%j_p0.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/results/calvin_c/logs/%j_p0.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/results/calvin_c/logs/%j_p0.out
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 set -u
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8 PYTHONUNBUFFERED=1 OMP_NUM_THREADS=4
 PY=/coc/flash10/ksingara3/miniconda3/bin/python
 echo "[p0] $(date) $(hostname)"

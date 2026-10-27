@@ -6,7 +6,7 @@ designed: practice chooses the sources inside FLOWER's suite (G10's two stages o
 13, 14, 17, 18; 5 episodes each on set a), nothing fitted.  Test on set f, 20 per task, noise seed 13 (experiments/z1_flower.py
 --run-b)."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="z1b_flower", seed=13,

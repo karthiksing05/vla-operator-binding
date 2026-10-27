@@ -8,7 +8,7 @@ import math
 import os
 import sys
 
-REPO = "/coc/flash10/ksingara3/lifelong-ood-learner"
+REPO = "/coc/flash10/ksingara3/vla-operator-binding"
 BYTES0 = dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0)
 STOCK_PUB = {"widowx_carrot_on_plate": 55.8, "widowx_put_eggplant_in_basket": 85.4, "widowx_spoon_on_towel": 84.6, "widowx_stack_cube": 47.9}
 

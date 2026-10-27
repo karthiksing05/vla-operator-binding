@@ -3,7 +3,7 @@ demonstrations (2,000 steps) and on all of them (28 to 50; 3,000 steps), the cei
 the prototypes.  Written after the stage-1 fits of the 5-demonstration LoRA and before any episode on set b; the all-demonstration LoRA is fitted on
 all 29 tasks (the user's decision 6, 2026-10-20), and its parity smoke (tasks 13, 36, 52, stored states 30-49) runs alongside, never on set b."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g30_multidemo", seed=13,

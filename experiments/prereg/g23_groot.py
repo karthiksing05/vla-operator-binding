@@ -4,7 +4,7 @@ lifelong_ood/policy/backbone_groot.py).  The finished OOD system (practice choos
 then the operator per task), Li's 20 tasks, test on set e (20 per task, noise seed 13), with the policy alone, Li's pairs at the
 grasp and Li's TLI (experiments/g18_four_policies.py --backbone groot_libero)."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="g23_groot", seed=13,

@@ -1,14 +1,14 @@
 #!/bin/bash
 #SBATCH --job-name=lolrule
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%A_%a.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%A_%a.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%A_%a.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%A_%a.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=08:00:00
 #SBATCH --partition=overcap
 #SBATCH --account=overcap
 #SBATCH --array=0-11
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8
 PY=$HOME/flash/miniconda3/envs/chunks/bin/python
 # 12 = 2 experiments x 2 rules x 3 seeds.  The rule is set by env so the experiment code is

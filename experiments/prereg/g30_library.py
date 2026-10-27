@@ -3,7 +3,7 @@ LOTUS (arXiv 2311.02058; runnable code, LIBERO; IsCiL ships no LIBERO setup) as 
 pi0.5's 40 training tasks (50 demonstrations each, LOTUS's base stage), then W1's order a as the lifelong stream with 1 demonstration per
 task (matched) and 10 (LOTUS's published setting).  Its own ResNet-T policy trained from scratch, as published.  NOT YET RECORDED."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g30_library", seed=13,

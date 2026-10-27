@@ -3,8 +3,8 @@
 # experiments/x1_calvin_flower_eval.py.  NPROC processes share one GPU, each a contiguous slice of chains [START, END).
 #   sbatch --export=ALL,START=0,END=50,NPROC=5 slurm/jobs/x1_calvin_flower.sbatch
 #SBATCH --job-name=x1flower
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=96G
@@ -14,7 +14,7 @@ export PYTHONIOENCODING=utf-8 HYDRA_FULL_ERROR=1 TOKENIZERS_PARALLELISM=false WA
 export HF_HOME=/coc/flash10/ksingara3/robot/data/hf/home HF_HUB_OFFLINE=1
 export OMP_NUM_THREADS=2 MKL_NUM_THREADS=2
 PY=/coc/flash10/ksingara3/robot/calvin/.venv/bin/python
-REPO=/coc/flash10/ksingara3/lifelong-ood-learner
+REPO=/coc/flash10/ksingara3/vla-operator-binding
 FLOWER=/coc/flash10/ksingara3/robot/ext/flower_vla_calvin
 CKPT=/coc/flash10/ksingara3/robot/data/hf/home/hub/models--mbreuss--flower_calvin_abc/snapshots/6424ee4c064eb6654a39280314793620b149dd97
 VAL=/coc/flash10/ksingara3/robot/calvin/task_ABC_D/validation

@@ -21,7 +21,7 @@ if SUITE in ("libero_goal_task", "libero_spatial_task", "libero_object_task", "l
 from libero.libero import benchmark, get_libero_path
 from libero.libero.envs import OffScreenRenderEnv
 
-OUT = os.path.join("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot",
+OUT = os.path.join("/coc/flash10/ksingara3/vla-operator-binding/results/robot",
                    os.environ.get("FRESH_DIR", "fresh_states"))   # a second set (fresh_states_b, BASE 200000) for E3
 
 

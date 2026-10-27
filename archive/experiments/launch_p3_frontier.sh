@@ -7,7 +7,7 @@
 # The reference arm (lora-all-c1@gate=label) must reproduce C1's 0.716 / 0.715; every other arm runs
 # under the ANALYTIC gate.  Jobs go to overcap on A40s (hal's TITAN Xp made a 1-minute setup take 20).
 set -euo pipefail
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 ARMS="${ARMS:-lora-all-c1@gate=label:lora-all-c1:lora-all:lora-b32:lora-b16:film-all:film-512:film-128:token-emb:nonparam}"
 SEEDS="${SEEDS:-0 1 2}"
 TAG="${TAG:-_F1}"

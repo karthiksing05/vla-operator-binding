@@ -1,7 +1,7 @@
 """Pre-registration of the self-prototype read (ledger m3_prereg tag q18_self), written before any of its episodes: no demonstration
 of any kind; a task's object prototype comes from its own zero-shot successes (experiments/q18_selfproto.py, q18_read.py)."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
 print(ledger.record(

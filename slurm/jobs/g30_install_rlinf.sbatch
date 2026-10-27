@@ -3,7 +3,7 @@
 # HOME is redirected so the installer's LIBERO config reset (set_libero_default_path -> ~/.libero/config.yaml), uv / HF caches
 # and any ~/.mujoco writes stay out of the user's real home; --no-root skips system packages; flash-attn / apex / natten skipped.
 #SBATCH --job-name=g30rlinf
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=04:00:00

@@ -4,7 +4,7 @@ concept alone (the policy doing the other phase); acceptance on stored states 0-
 (seed 15).  Factor-level selection = the acceptance test's best of {policy, both concepts, object alone, goal alone}, ties to the
 policy, then both, then object, then goal."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g5_factors", seed=15,

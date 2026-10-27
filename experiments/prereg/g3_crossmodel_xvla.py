@@ -5,9 +5,9 @@
 states and seed."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
-pl = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g3_plan_xvla.json"))
+pl = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/g3_plan_xvla.json"))
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g3_crossmodel_xvla", seed=13,
     metrics={"plan": pl, "backbone": "xvla",

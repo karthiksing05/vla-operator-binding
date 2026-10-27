@@ -20,7 +20,7 @@ since its first episode (rollouts plus PPO updates) passes 577 s (arm lora@pirlm
 practice episodes, DSRL's budget in G7 (arm lora@pirl).  Neither counts the per-task LoRA fit both start from (about 5 min), which
 the library does not need."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g30_rl", seed=13,

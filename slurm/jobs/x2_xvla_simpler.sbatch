@@ -3,8 +3,8 @@
 #   sbatch --export=ALL,MODEL=2toINF/X-VLA-WidowX,SUITE=WidowX,TASKS=spoon:carrot:blocks:eggplant,TAG=run0 slurm/jobs/x2_xvla_simpler.sbatch
 # TASKS is colon-separated (sbatch --export splits on commas). Clients for all TASKS run in parallel against one server.
 #SBATCH --job-name=x2xvla
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=48G
@@ -15,7 +15,7 @@ export HF_HOME=/coc/flash10/ksingara3/robot/data/hf/home
 PY=/coc/flash10/ksingara3/robot/simpler/.venv/bin/python
 export PATH=/coc/flash10/ksingara3/robot/simpler/.venv/bin:$PATH   # ffmpeg (imageio-ffmpeg static binary) for the clients' write_video
 XVLA=/coc/flash10/ksingara3/robot/ext/xvla_src/X-VLA
-REPO=/coc/flash10/ksingara3/lifelong-ood-learner
+REPO=/coc/flash10/ksingara3/vla-operator-binding
 MODEL=${MODEL:-2toINF/X-VLA-WidowX}; SUITE=${SUITE:-WidowX}; TASKS=${TASKS:-spoon:carrot:blocks:eggplant}; TAG=${TAG:-run0}
 PORT=${PORT:-$((8100 + SLURM_JOB_ID % 800))}
 OUT=$REPO/results/x2_simpler/xvla_${SUITE}_${TAG}_${SLURM_JOB_ID}

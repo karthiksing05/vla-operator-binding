@@ -2,7 +2,7 @@
 scoring episodes: the one demonstration supplies only an object prototype (where), everything else is the frozen policy's own
 attempts; no simulator state anywhere."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
 print(ledger.record(

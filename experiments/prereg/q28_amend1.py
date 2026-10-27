@@ -6,7 +6,7 @@ under binding on only part of their frames.  The first run's binding arm is void
 refit (names ...b2), their arm rerun on the same acceptance (stored states 0-9) and test (fresh states) episodes, noise seed 10.
 The plain and zero-shot arms of the first run are kept.  Hypotheses, rules and correction unchanged."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="q28_amend1", seed=10,

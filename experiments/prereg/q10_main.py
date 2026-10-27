@@ -2,7 +2,7 @@
 episodes: the binding form found by the broad screen (ledger b2_q2 tag q9_w4screen) is practised, folded into a token, the token
 practises alone and is refit; at test the token alone (instruction + 18.4 KB) against zero-shot."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
 print(ledger.record(

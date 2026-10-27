@@ -1,6 +1,6 @@
 """Amendment 1 to the readability probe's pre-registration (ledger m3_prereg tag zc_probe_amend1), before the full run."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 from lifelong_ood.policy import factors as F
 

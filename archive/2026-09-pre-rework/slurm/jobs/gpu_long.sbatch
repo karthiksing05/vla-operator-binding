@@ -11,14 +11,14 @@
 # This file lives in slurm/jobs/ because that directory is tracked; an untracked copy under
 # experiments/slurm/ was deleted by a restructure while jobs still referenced it.
 #SBATCH --job-name=lolgpu
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=12:00:00
 #SBATCH --partition=overcap
 #SBATCH --account=overcap
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8
 PY=$HOME/flash/miniconda3/envs/chunks/bin/python
 if [ -z "$SCRIPT" ]; then echo "SCRIPT unset -- nothing to run"; exit 2; fi

@@ -5,8 +5,8 @@
 # the demo); hybrid_approach (library codes + rank-4 fold switched on in the approach/contact windows) on the tasks whose
 # demo grasps or releases.  The practice-then-compose rule is derived afterwards (m34_report --final).
 set -euo pipefail
-cd /coc/flash10/ksingara3/lifelong-ood-learner
-R=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot
+cd /coc/flash10/ksingara3/vla-operator-binding
+R=/coc/flash10/ksingara3/vla-operator-binding/results/robot
 EXP=${EXP:-m3_final}; FIRST=${FIRST:-30}; TRIALS=${TRIALS:-20}; DEP=${DEP:-}
 TASKS=67+19+39+35+36+42 TRIALS=$TRIALS FIRST=$FIRST EXP=$EXP ARMS="zeroshot raw_replay code_replay" PROGTAG=_lib40 bash experiments/launch_m3.sh
 for tid in 67 19 39 35 36 42; do

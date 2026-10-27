@@ -2,7 +2,7 @@
 episodes: can the frozen policy be ADDRESSED -- does biasing its action expert toward the named object's tokens (oracle maps)
 make it pick up that object where it otherwise runs the room's routine?"""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 from lifelong_ood.policy import factors as F
 

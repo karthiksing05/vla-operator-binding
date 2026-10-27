@@ -4,8 +4,8 @@
 #   sbatch --export=ALL,PART=0,NPART=2,NPROC=4 slurm/jobs/x4_metaworld_pi0.sbatch     # tasks [PART::NPART] of the 50
 #   CKPT=RLinf/RLinf-Pi05-MetaWorld-SFT CONFIG=pi05_metaworld for pi0.5; MAXSTEPS=100 for the RL-config horizon.
 #SBATCH --job-name=x4mwpi0
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=12
 #SBATCH --mem=96G
@@ -18,7 +18,7 @@ export OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 XLA_PYTHON_CLIENT_PREALLOCATE=false J
 ROOT=/coc/flash10/ksingara3/robot/metaworld
 PY=$ROOT/.venv/bin/python
 RL=$ROOT/ext/RLinf
-REPO=/coc/flash10/ksingara3/lifelong-ood-learner
+REPO=/coc/flash10/ksingara3/vla-operator-binding
 CKPT=${CKPT:-RLinf/RLinf-Pi0-MetaWorld-SFT}; CONFIG=${CONFIG:-pi0_metaworld}; TAG=${TAG:-pi0_sft}
 MAXSTEPS=${MAXSTEPS:-160}; PART=${PART:-0}; NPART=${NPART:-1}; NPROC=${NPROC:-4}; TRIALS=${TRIALS:-10}
 SNAP=$($PY -I -c "from huggingface_hub import snapshot_download; print(snapshot_download('$CKPT'))")

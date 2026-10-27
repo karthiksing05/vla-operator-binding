@@ -4,7 +4,7 @@ were identified (experiments/g12_tli.py).  Li et al. (arXiv 2505.03500) report T
 procedure (lifelong_ood/policy/tli.py), Li's base-task pairs and lambda, the test instruction as the prompt; start states set c,
 20 per task, noise seed 13, paired with G4d's policy alone and pi0^S and with G10's practice-chosen pair (all on set c)."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="g12_tli", seed=13,

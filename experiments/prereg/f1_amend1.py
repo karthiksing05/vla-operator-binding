@@ -3,7 +3,7 @@ SAME acceptance test as the scheme (kept only if it beats zero-shot on stored in
 experiment f1_accept), scored with f1_main's fresh-state episodes.  Descriptive: it isolates what composition and consolidation add
 beyond keeping only units that the learner's practice favours."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="f1_amend1", seed=9,

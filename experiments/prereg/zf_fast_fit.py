@@ -3,7 +3,7 @@ f1_levers tag read: E5's 26 units, held-out flow loss only, no episode) and befo
 cached once (c0_fit --cache; equal losses, 39.4 -> 4.6 min per 1,000 steps), from scratch, 200 steps (held-out loss 47% below the
 1,000-step fit on average, 32% in the worst unit).  experiments/zf_fast_fit.py."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="f1_fast_fit", seed=13,

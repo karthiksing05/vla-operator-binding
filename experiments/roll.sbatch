@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=lolroll
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=48G
@@ -11,7 +11,7 @@
 #SBATCH --qos=short
 #SBATCH --requeue
 #SBATCH --open-mode=append
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 mkdir -p results/robot
 # a job admitted without its GPU (seen 2026-09-25: AllocTRES without gres) requeues itself, at most 3 times
 if ! nvidia-smi -L 2>/dev/null | grep -q "GPU "; then

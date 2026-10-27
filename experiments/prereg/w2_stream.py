@@ -7,9 +7,9 @@ then; one that gave it falls back to the policy.  Served: the final library's co
 policy; tested on E3's fresh start states (set b), seed 13."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
-st = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/w2_state.json"))
+st = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/w2_state.json"))
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="w2_stream", seed=13,
     metrics={"orders": {o: st[o]["order"] for o in ("a", "b")}, "theta": 8,

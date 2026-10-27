@@ -7,9 +7,9 @@ policy; the baseline keeps its LoRA only if it beats the policy.  Test: 20 fresh
 200000-200019), seed 14."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
-pl = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/e5_plan.json"))
+pl = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/e5_plan.json"))
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="e5_replicate", seed=14,
     metrics={"tasks": sorted(int(t) for t in pl["tasks"]), "plan": pl,

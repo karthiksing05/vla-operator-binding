@@ -4,7 +4,7 @@ lifelong_ood/policy/backbone_opz.py, parity 1.8e-7), stock SimplerEnv protocol (
 sink scene), the driver experiments/x2_simpler_rollout.py.  The supervised scheme's grasp switch: prompt A until the policy's
 gripper command is 'close' for 3 consecutive queries, prompt B after; nothing fitted."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 ARMS = {"X2G1GreenBlockOnPlate": ["stack the green block on the yellow block", "put carrot on plate"],
         "X2G1CarrotOnYellowBlock": ["put carrot on plate", "stack the green block on the yellow block"],

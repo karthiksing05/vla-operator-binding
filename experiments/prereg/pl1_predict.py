@@ -23,7 +23,7 @@ Known before computing: pi0 alone succeeds on 149 of 1,600 pooled episodes and p
 pooled AUC partly separates the two policies; the per-policy AUCs are therefore reported next to it (descriptive).
 LIBERO-90-C dev zero-shot episodes are not part of this test (noted for later)."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="pl1_predict", seed=13,

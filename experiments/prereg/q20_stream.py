@@ -2,10 +2,10 @@
 stream, with a known type's single library prototype tried at each of its 4 instances (experiments/q20_stream.py)."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
-plan = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/q20_plan.json"))
+plan = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/q20_plan.json"))
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="q20_stream", seed=5,
     metrics={

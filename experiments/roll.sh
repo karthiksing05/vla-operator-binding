@@ -8,7 +8,7 @@
 set -uo pipefail
 MODE=${MODE:-openpi}; SUITE=${SUITE:-libero_goal}; TASKS=${TASKS:-all}; TRIALS=${TRIALS:-10}; FIRST=${FIRST:-0}
 TASKS=${TASKS//+/,}      # sbatch --export splits on commas: pass task lists as 0+1+2
-REPO=/coc/flash10/ksingara3/lifelong-ood-learner
+REPO=/coc/flash10/ksingara3/vla-operator-binding
 OUT=${OUT:-$REPO/results/robot/roll_${SUITE}_${SLURM_JOB_ID:-x}.json}
 ROBOT=/coc/flash10/ksingara3/robot/openpi
 export OPENPI_DATA_HOME=/coc/flash10/ksingara3/robot/openpi_cache MUJOCO_GL=egl PYOPENGL_PLATFORM=egl PYTHONUNBUFFERED=1

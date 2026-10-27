@@ -1,14 +1,14 @@
 #!/bin/bash
 #SBATCH --job-name=loln45c
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%A_%a.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%A_%a.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%A_%a.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%A_%a.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=12:00:00
 #SBATCH --partition=overcap
 #SBATCH --account=overcap
 #SBATCH --array=0-1
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8
 PY=$HOME/flash/miniconda3/envs/chunks/bin/python
 # ColorMNIST measured the layout permutation at -28.7% held-out loss and +0.031 joint accuracy.

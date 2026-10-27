@@ -3,7 +3,7 @@
 # saved" -> the job requeues itself (overcap preemption also requeues, via --requeue), so a long run spans many 4-h jobs.
 #   sbatch --export=ALL,ARGS="experiments/x3_egodex_train.py --steps 30000 --out results/robot/egodex/train/run1" slurm/jobs/x3_egodex_gpu.sbatch
 #SBATCH --job-name=x3gpu
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/egodex/logs/gpu_%x_%j.log
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/results/robot/egodex/logs/gpu_%x_%j.log
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
@@ -19,7 +19,7 @@ if ! nvidia-smi -L 2>/dev/null | grep -q "GPU "; then
   if [ "${SLURM_RESTART_COUNT:-0}" -lt 3 ]; then scontrol requeue $SLURM_JOB_ID; sleep 30; fi
   exit 97
 fi
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8 PYTHONUNBUFFERED=1
 export HF_HOME=/coc/flash10/ksingara3/robot/data/hf/home HF_LEROBOT_HOME=/coc/flash10/ksingara3/robot/data/hf/lerobot HF_HUB_OFFLINE=1
 PY=/coc/flash10/ksingara3/robot/groot/.venv/bin/python

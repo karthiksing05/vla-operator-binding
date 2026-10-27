@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=b1install
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/results/b1/logs/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/results/b1/logs/%j.out
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=01:00:00

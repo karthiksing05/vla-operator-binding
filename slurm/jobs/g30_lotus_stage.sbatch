@@ -9,7 +9,7 @@
 # Base stage: BASED demonstrations per base task; later stages: NEWD for the new task and OLDD replayed per earlier task (the
 # paper: 50 / 10 / 5).  Skills and the meta-controller resume per skill (markers in the stage directory).
 #SBATCH --job-name=g30lot
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=110G

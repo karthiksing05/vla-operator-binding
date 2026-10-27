@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --job-name=loladap
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=04:00:00
 #SBATCH --partition=overcap
 #SBATCH --account=overcap
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8
 # The paper's CelebA is a fine-tune of ddpm-celebahq-256.  If we cannot get clean faces out of that
 # model unmodified, nothing downstream can replicate their figures.

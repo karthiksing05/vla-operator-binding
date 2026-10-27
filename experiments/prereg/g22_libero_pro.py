@@ -25,7 +25,7 @@ Arms and start states (noise seed 13, paired):
   protocol), and the chosen arm; LIBERO-PRO's published number for the same policy beside them.
 Policies: pi0.5 first, then pi0 if time allows (same design; G22's read per policy)."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 from lifelong_ood.policy import factors as F
 print(ledger.record(

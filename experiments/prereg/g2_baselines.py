@@ -4,9 +4,9 @@ outside their fold: task arithmetic (the two donors' per-task LoRAs both on at w
 always on.  Acceptance on stored states 0-9 (seed 15), test on G0's fresh start states (seed 15), paired with G0's arms."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
-pl = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g2_plan.json"))
+pl = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/g2_plan.json"))
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g2_baselines", seed=15,
     metrics={"plan": pl, "tasks": sorted(int(t) for t, v in pl.items() if v["ok"]),

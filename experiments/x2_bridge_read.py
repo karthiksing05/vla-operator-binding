@@ -15,7 +15,7 @@ import json
 import os
 import sys
 
-REPO = "/coc/flash10/ksingara3/lifelong-ood-learner"
+REPO = "/coc/flash10/ksingara3/vla-operator-binding"
 sys.path.insert(0, REPO)
 from lifelong_ood import ledger, stats  # noqa: E402
 

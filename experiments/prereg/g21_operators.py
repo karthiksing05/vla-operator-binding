@@ -15,7 +15,7 @@ thing that varies (lifelong_ood/policy/held_ops.py):
 Pairs: G10's practice-chosen pair (sel) and Li et al.'s pair (li).  Test on set e (BASE 800000, 20 per task, noise seed 13),
 paired with G15's set-e files.  Per policy (pi0.5, pi0)."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="g21_operators", seed=13,

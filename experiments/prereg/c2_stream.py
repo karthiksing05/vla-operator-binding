@@ -1,11 +1,11 @@
 """Pre-registration of plan C's stream (ledger m3_prereg tag c2_stream), written before any of its episodes and fits
 (experiments/c2_stream.py)."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 sys.argv = ["x"]
 import importlib.util
-spec = importlib.util.spec_from_file_location("c2", "/coc/flash10/ksingara3/lifelong-ood-learner/experiments/c2_stream.py")
+spec = importlib.util.spec_from_file_location("c2", "/coc/flash10/ksingara3/vla-operator-binding/experiments/c2_stream.py")
 c2 = importlib.util.module_from_spec(spec); spec.loader.exec_module(c2)
 st = c2.init()
 print(ledger.record(

@@ -1,10 +1,10 @@
 """Pre-registration of P3c: cross-task composition under rules v2, through the frozen prior (ledger m3_prereg tag p3c)."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
-tab = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/p3c_table.json"))["table"]
+tab = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/p3c_table.json"))["table"]
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="p3c", seed=0,
     metrics={

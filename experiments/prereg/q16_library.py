@@ -2,7 +2,7 @@
 demonstration; its candidate binding forms point attention with object prototypes ALREADY IN THE LIBRARY (other tasks' demos, same
 object type), and the acceptance test on the learner's own practice keeps one of them or the policy alone."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
 print(ledger.record(

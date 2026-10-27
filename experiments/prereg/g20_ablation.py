@@ -12,7 +12,7 @@ Li's OOD suites, no demonstration, start states set e (G15's episodes reused):
   word-matched sources at the grasp; minus the grasp trigger = practice-chosen sources switched at Li's fixed step; the object
   source only (test instruction after the grasp) and the goal source only (test instruction before the grasp); the policy alone."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero", tag="g20_ablation", seed=13,

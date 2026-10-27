@@ -2,7 +2,7 @@
 the scheme and its baselines scored on 20 NEVER-USED start states per task (experiments/fresh_states.py: LIBERO's placement sampler,
 seeds 100000-100019; every stored init state of LIBERO-90 has been used by earlier reads), noise seed 9, paired by state."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
 print(ledger.record(

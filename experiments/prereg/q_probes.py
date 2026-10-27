@@ -1,6 +1,6 @@
 """Pre-registration of the prototype-PoE plan's offline probes P0-P2 (ledger m3_prereg tag q_probes), written before any of them ran."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
 print(ledger.record(

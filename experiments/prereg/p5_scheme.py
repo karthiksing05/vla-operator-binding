@@ -2,11 +2,11 @@
 rule's output (experiments/carry_read.py, ledger p5_stream dev_carries) before this is recorded."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
 CARRIES = sys.argv[1].split(",")
-dev = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/carry_read.json"))
+dev = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/carry_read.json"))
 
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="p5_scheme", seed=0,

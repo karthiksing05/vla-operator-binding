@@ -3,7 +3,7 @@
 # there) and the W1 stream's LIBERO-90 tasks (symlinked from robot/data/libero_raw; the 9 absent there downloaded), from the HF
 # mirror yifengzhu-hf/LIBERO-datasets.  Idempotent.
 #SBATCH --job-name=g30lotdata
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=04:00:00

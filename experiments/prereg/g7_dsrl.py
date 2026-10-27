@@ -4,7 +4,7 @@
 episodes each on stored states 0-29 (seed 13); then the acceptance test on stored states 0-9 (10 episodes) and E3's fresh test
 states (set b, 20 per task, seed 13), paired with E3's recorded arms."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g7_dsrl", seed=13,

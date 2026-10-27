@@ -5,7 +5,7 @@ serves task t with the weights of tasks up to t.  Task 51 has no demonstration, 
 for PackNet by the weights of the tasks that arrived before it (task 52's served adapter, its predecessor in order a).
 Written after the stage-1 fits, before any episode."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g30_cl", seed=13,

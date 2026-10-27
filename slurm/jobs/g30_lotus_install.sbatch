@@ -6,7 +6,7 @@
 # the user's ~/.libero is untouched.  Also downloads LIBERO-OBJECT's hdf5 (HF mirror yifengzhu-hf/LIBERO-datasets; the Box
 # links in LOTUS's downloader return 404).  Idempotent: each step is skipped once done.
 #SBATCH --job-name=g30lotinst
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=04:00:00

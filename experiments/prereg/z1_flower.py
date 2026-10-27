@@ -4,7 +4,7 @@ whose object and goal are both held inside its suite (goal:4-9), held concepts a
 switched at the grasp (our rule's sources, all in task indices 10-19); nothing is fitted.  Test on set e, 20 per task, noise seed 13
 (experiments/z1_flower.py)."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="z1_flower", seed=13,

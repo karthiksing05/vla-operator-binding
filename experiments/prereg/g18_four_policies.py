@@ -7,7 +7,7 @@ on set a (ties to the switch).  If the TLI port fails its smoke check on a polic
 and its TLI arms are dropped (stated in the read).  Test on set e (20 per task, noise seed 13): the chosen arm, the policy alone,
 Li's hand-chosen pairs switched at the grasp, and Li's TLI (Li's pairs and lambda) where ported."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="g18_four_policies", seed=13,

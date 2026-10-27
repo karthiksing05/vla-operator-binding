@@ -2,7 +2,7 @@
 before any other episode (experiments/g7b_dsrl_library.py).  DSRL (G7's configuration) steering E3's composition on E3's 30
 tasks: 100 practice episodes on stored states 0-29, acceptance on states 0-9, test on E3's fresh set b, noise seed 13."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g7b_dsrl_library", seed=13,

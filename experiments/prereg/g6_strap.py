@@ -4,7 +4,7 @@ demonstration; prior = pi0.5's 40 training tasks' 1,693 demonstrations + the one
 (the library's own data); a rank-16 LoRA, 2,000 steps; the acceptance test on stored states 0-9 (10 episodes, seed 13) as for the
 per-task LoRA; test on E3's fresh start states (set b, 20 per task, seed 13), paired with E3's recorded arms."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g6_strap", seed=13,

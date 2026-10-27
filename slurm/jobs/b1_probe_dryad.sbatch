@@ -1,6 +1,6 @@
 #!/bin/bash
 #SBATCH --job-name=b1probe
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/results/b1/logs/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/results/b1/logs/%j.out
 #SBATCH --cpus-per-task=1
 #SBATCH --mem=2G
 #SBATCH --time=00:10:00

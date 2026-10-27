@@ -66,7 +66,7 @@ def main():
     ap.add_argument("--mode", default="plain", help="plain | reseed (np.random.seed + env.seed before each episode) | "
                     "count (reseed, then `trial` extra resets: the recorded episode's reset count)")
     a = ap.parse_args()
-    R = pathlib.Path("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot")
+    R = pathlib.Path("/coc/flash10/ksingara3/vla-operator-binding/results/robot")
     rec = np.load(a.rec or next(R.glob(f"m5_practice_{a.task}_*_rec/task{a.task}_trial{a.trial}.npz")))
     acts, ref = rec["action"], rec["state"]
     np.random.seed(a.seed)

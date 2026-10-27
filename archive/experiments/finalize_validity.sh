@@ -2,7 +2,7 @@
 # After the validity waves land: statistics, inspection reads, library ablation, figures, audits (login node: numpy / mpl
 # only; the strips and galleries use the openpi venv for PyAV).
 set -euo pipefail
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 PY=~/flash/miniconda3/envs/chunks/bin/python
 OPY=/coc/flash10/ksingara3/robot/openpi/.venv/bin/python
 $PY experiments/m3_stats.py --record 2>&1 | grep -v Warning

@@ -4,7 +4,7 @@ experiment f1_accept; zero-shot practice episodes reused), scored with f1_main's
 stream's incremental consolidation and demonstration requests from training one adapter per step key on all demonstrations and
 keeping it where practice favours it."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="f1_amend2", seed=9,

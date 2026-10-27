@@ -6,7 +6,7 @@ the goal source; 5 episodes per candidate on start states set a; most successes,
 index) with TLI, lambda 24, as the operator.  The chosen pair is tested on set d (20 per task, noise seed 13), paired with G13's
 arms on the same states.  Per policy (pi0, pi0.5)."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="g14_tli_practice", seed=13,

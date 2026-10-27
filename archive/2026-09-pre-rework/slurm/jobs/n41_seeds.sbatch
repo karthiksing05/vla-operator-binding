@@ -1,14 +1,14 @@
 #!/bin/bash
 #SBATCH --job-name=loln41s
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%A_%a.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%A_%a.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%A_%a.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%A_%a.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=06:00:00
 #SBATCH --partition=overcap
 #SBATCH --account=overcap
 #SBATCH --array=0-2
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8
 # All three seeds re-run at --n-score 8, including seed 0: the earlier seed-0 result scored only
 # 4 concepts, so mixing it in would pool two different measurements under one mean.

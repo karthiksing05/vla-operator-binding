@@ -20,7 +20,7 @@ Descriptive only (no per-bin claim from < 6 cells): per-cell success, per-grade 
 FLOWER-C did on its failures (tasks the oracle detected at the end)."""
 import os
 import sys
-ROOT = "/coc/flash10/ksingara3/lifelong-ood-learner"
+ROOT = "/coc/flash10/ksingara3/vla-operator-binding"
 sys.path.insert(0, ROOT)
 sys.path.insert(0, os.path.join(ROOT, "experiments"))
 from lifelong_ood import ledger

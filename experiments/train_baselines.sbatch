@@ -2,8 +2,8 @@
 # The trained one-demo baselines of one task: the equal-bytes adapter (rank 2, last two layers, whole demo: 258 KB), a
 # rank-64 LoRA, and full fine-tuning of the action expert.   sbatch --export=ALL,TID=39 experiments/train_baselines.sbatch
 #SBATCH --job-name=lolbase
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=6
 #SBATCH --mem=64G
@@ -18,7 +18,7 @@ if ! nvidia-smi -L 2>/dev/null | grep -q "GPU "; then
   exit 97
 fi
 set -eo pipefail
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8 PYTHONUNBUFFERED=1 OPENPI_DATA_HOME=/coc/flash10/ksingara3/robot/openpi_cache
 export HF_HOME=/coc/flash10/ksingara3/robot/data/hf/home HF_LEROBOT_HOME=/coc/flash10/ksingara3/robot/data/hf/lerobot
 PY=/coc/flash10/ksingara3/robot/openpi/.venv/bin/python

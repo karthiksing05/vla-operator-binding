@@ -5,7 +5,7 @@ Scheme: compose a new task from a task prototype the policy performs (role code,
 object slot by the form practice selects, practise, fold the successes into an 18.4 KB factor token, practise with the token
 alone, refit; at test the policy gets ONLY the task's own instruction and the token."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 from lifelong_ood.policy import factors as F
 

@@ -9,8 +9,8 @@
 #   * a CUDA PREFLIGHT that fails in seconds instead of burning the allocation.
 # sbatch splits --export on COMMAS: pass lists with colons (--arms a:b:c).
 #SBATCH --job-name=lolc
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=8
 #SBATCH --time=04:00:00
@@ -19,7 +19,7 @@
 #SBATCH --qos=short
 #SBATCH --requeue
 #SBATCH --open-mode=append
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8
 PY=$HOME/flash/miniconda3/envs/chunks/bin/python
 if [ -z "$SCRIPT" ]; then echo "SCRIPT unset -- nothing to run"; exit 2; fi
@@ -37,7 +37,7 @@ if ! $PY -c "import torch,sys; ok=torch.cuda.is_available(); print('[c_gpu] cuda
     echo "[c_gpu] NO GPU on $here -- resubmitting with --exclude=$excl"
     sbatch -p "$SLURM_JOB_PARTITION" -A "$SLURM_JOB_ACCOUNT" --job-name="$SLURM_JOB_NAME" \
       --exclude="$excl" --export=ALL,SCRIPT="$SCRIPT" \
-      /coc/flash10/ksingara3/lifelong-ood-learner/slurm/jobs/c_gpu.sbatch
+      /coc/flash10/ksingara3/vla-operator-binding/slurm/jobs/c_gpu.sbatch
   else
     echo "[c_gpu] NO GPU on $here and $n nodes already excluded -- giving up"
   fi

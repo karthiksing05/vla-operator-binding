@@ -3,9 +3,9 @@
 # demo chunks themselves), lora (few-shot flat adapter; needs results/robot/r3_lora_<task>.pt or a dependency).
 #   TASKS=19,35 TRIALS=20 W0=1.2 ARMS="zeroshot code raw lora" bash experiments/launch_r3.sh
 set -euo pipefail
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 TASKS=${TASKS:?}; TRIALS=${TRIALS:-20}; W0=${W0:-1.2}; ARMS=${ARMS:-"zeroshot code raw"}; TAGX=${TAGX:-}; SCHED=${SCHED:-variance}; TVAR=${TVAR:-}
-R=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot
+R=/coc/flash10/ksingara3/vla-operator-binding/results/robot
 for tid in ${TASKS//,/ }; do
   for arm in $ARMS; do
     case $arm in

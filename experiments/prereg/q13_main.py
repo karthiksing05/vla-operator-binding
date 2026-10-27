@@ -2,7 +2,7 @@
 keeps what its own fresh practice validates -- the policy alone, the binding form, or the folded token -- and the kept arm is
 scored on fresh noise against zero-shot."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
 print(ledger.record(

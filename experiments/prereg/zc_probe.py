@@ -1,6 +1,6 @@
 """Pre-registration of P0b, the offline readability probe (ledger m3_prereg tag zc_probe), written before it runs."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 from lifelong_ood.policy import factors as F
 

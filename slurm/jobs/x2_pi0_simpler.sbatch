@@ -3,8 +3,8 @@
 # (scripts/run.py --config-name=bridge, as in their slurm/eval_simpler_bridge.sh).
 #   sbatch --export=ALL,CKPT=bridge_beta,TASK=widowx_carrot_on_plate,NEP=240,BF16=False slurm/jobs/x2_pi0_simpler.sbatch
 #SBATCH --job-name=x2pi0
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=64G
@@ -13,7 +13,7 @@ set -u
 export PYTHONIOENCODING=utf-8 HYDRA_FULL_ERROR=1 TOKENIZERS_PARALLELISM=false
 PY=/coc/flash10/ksingara3/robot/simpler/.venv_pi0/bin/python
 OPZ=/coc/flash10/ksingara3/robot/ext/openpizero_src/open-pi-zero
-REPO=/coc/flash10/ksingara3/lifelong-ood-learner
+REPO=/coc/flash10/ksingara3/vla-operator-binding
 CKPT=${CKPT:-bridge_beta}; TASK=${TASK:-widowx_carrot_on_plate}; NEP=${NEP:-240}; BF16=${BF16:-False}; SEED=${SEED:-42}
 case $CKPT in
   bridge_beta) CK=/coc/flash10/ksingara3/robot/data/openpizero/bridge_beta_step19296_2024-12-26_22-30_42.pt;;

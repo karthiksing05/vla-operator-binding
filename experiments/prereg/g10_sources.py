@@ -7,7 +7,7 @@ LIBERO-Goal and LIBERO-Spatial; stage 1 tries each as the object source (our goa
 (ties to our rule, then the lowest index); the chosen pair, switched at the grasp, is tested on set c (20 per task) and given
 the acceptance test (10 episodes on set a against the policy's recorded episodes).  On pi0 and pi0.5, Li's 20 tasks."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="g10_sources", seed=13,

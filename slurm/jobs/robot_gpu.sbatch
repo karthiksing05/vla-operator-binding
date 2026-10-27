@@ -7,8 +7,8 @@
 #
 # Headless MuJoCo rendering through EGL on the allocated GPU; PYOPENGL_PLATFORM=egl for robosuite.
 #SBATCH --job-name=lolrobot
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=48G
@@ -24,7 +24,7 @@ if ! nvidia-smi -L 2>/dev/null | grep -q "GPU "; then
   if [ "${SLURM_RESTART_COUNT:-0}" -lt 3 ]; then scontrol requeue $SLURM_JOB_ID; sleep 30; fi
   exit 97
 fi
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8 PYTHONUNBUFFERED=1
 export MUJOCO_GL=${MUJOCO_GL:-egl} PYOPENGL_PLATFORM=${PYOPENGL_PLATFORM:-egl}
 export OPENPI_DATA_HOME=/coc/flash10/ksingara3/robot/openpi_cache

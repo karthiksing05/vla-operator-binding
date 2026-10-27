@@ -1,6 +1,6 @@
 """Pre-registration of the compressed pose reader read (ledger m3_prereg tag reader_compress)."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
 print(ledger.record(

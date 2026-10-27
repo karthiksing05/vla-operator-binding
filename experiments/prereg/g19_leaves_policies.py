@@ -5,7 +5,7 @@ acceptance on pi0.5.  G19 applies the same rule, unchanged, on pi0, SmolVLA and 
 and acceptance episodes (g3_accept, E3's stored states 0-9), on G3's 29 tasks with a demonstration; test on start states set d
 (20 per task, noise seed 13), paired."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g19_leaves_policies", seed=13,

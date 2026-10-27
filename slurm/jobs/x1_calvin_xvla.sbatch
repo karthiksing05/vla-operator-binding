@@ -3,8 +3,8 @@
 # (evaluation/calvin/calvin_client.py via experiments/x1_calvin_xvla_client.py), one server per client as in their launch.sh.
 #   sbatch --export=ALL,START=0,END=50,NPROC=5,EPLEN=720 slurm/jobs/x1_calvin_xvla.sbatch
 #SBATCH --job-name=x1xvla
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=96G
@@ -16,7 +16,7 @@ export OMP_NUM_THREADS=2 MKL_NUM_THREADS=2 PYOPENGL_PLATFORM=egl
 unset http_proxy https_proxy HTTP_PROXY HTTPS_PROXY
 PYC=/coc/flash10/ksingara3/robot/calvin/.venv/bin/python
 PYX=/coc/flash10/ksingara3/robot/calvin/.venv-xvla/bin/python
-REPO=/coc/flash10/ksingara3/lifelong-ood-learner
+REPO=/coc/flash10/ksingara3/vla-operator-binding
 XVLA=/coc/flash10/ksingara3/robot/ext/X-VLA/X-VLA
 CKPT=/coc/flash10/ksingara3/robot/data/hf/home/hub/models--2toINF--X-VLA-Calvin-ABC_D/snapshots/d76710ee314ee1fa8506f421664c989b40bae415
 WORK=/coc/flash10/ksingara3/robot/calvin

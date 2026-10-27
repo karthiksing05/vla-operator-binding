@@ -6,7 +6,7 @@ practice episodes on start states set a (the switch's are G10's acceptance episo
 states); the higher count wins, ties to the grasp switch.  Tested on set e (BASE 800000, 20 per task, noise seed 13), paired with
 the policy alone, Li's TLI and both single operators run on set e.  Per policy (pi0, pi0.5)."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="g15_operator", seed=13,

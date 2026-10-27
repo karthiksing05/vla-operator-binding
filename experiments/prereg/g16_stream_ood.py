@@ -7,7 +7,7 @@ on set a, goal source fixed to our word rule), an unseen goal concept by stage 2
 just-chosen one); this per operator (grasp switch, TLI lambda 24), then the operator by 10 practice episodes each on set a (ties
 to the switch), as G15.  Tested on start states set e (20 per task, noise seed 13), paired with G15's per-task arm."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="g16_stream_ood", seed=13,

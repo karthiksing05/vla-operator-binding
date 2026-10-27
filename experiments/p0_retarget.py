@@ -26,7 +26,7 @@ from multiprocessing import Pool
 
 import numpy as np
 
-REPO = "/coc/flash10/ksingara3/lifelong-ood-learner"
+REPO = "/coc/flash10/ksingara3/vla-operator-binding"
 R = os.path.join(REPO, "results", "robot")
 DUMMY = [0.0] * 6 + [-1.0]
 SEED, WAIT, MAX_STEPS = 7, 10, 400

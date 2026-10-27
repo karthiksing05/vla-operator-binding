@@ -8,7 +8,7 @@ serves the best pair by acceptance (ties: the stored pair, then the switch).  Th
 reversed), pi0 and pi0.5.  Tested on new start states set f (BASE 900000, 20 per task, noise seed 13), paired with G15's per-task
 arm, the policy alone and Li's TLI, all run on set f."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="g17_gated_stream", seed=13,

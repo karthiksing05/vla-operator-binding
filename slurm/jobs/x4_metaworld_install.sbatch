@@ -6,8 +6,8 @@
 #   Also downloads RLinf/RLinf-Pi0-MetaWorld-SFT (7 GB) into the shared HF cache.
 #   sbatch --partition=overcap --account=overcap --qos=short --exclude=hal,tars,t1000,vicki,johnny5,c3po,olivaw slurm/jobs/x4_metaworld_install.sbatch
 #SBATCH --job-name=x4mwinst
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=32G
 #SBATCH --time=04:00:00

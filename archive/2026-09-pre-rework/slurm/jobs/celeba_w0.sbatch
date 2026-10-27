@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --job-name=lolw0
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=03:00:00
 #SBATCH --partition=overcap
 #SBATCH --account=overcap
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8
 # Quantifies infidelity (a) from docs/SETTINGS.md: CelebA guided at w0=1.2 (the paper's
 # Color-MNIST value) instead of its Table 8 CelebA value of 0.5.

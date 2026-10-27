@@ -4,7 +4,7 @@ acceptance test (recorded, stored states 0-9) keeps the best of the policy, the 
 own one-demonstration adapter (ties: policy, then composition); compared with the per-task LoRA given its own acceptance test,
 on 66 tasks, on a NEW set d (sampler seeds 600000+, 20 per task), noise seed 13."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g8_leaves", seed=13,

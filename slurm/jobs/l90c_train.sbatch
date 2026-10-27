@@ -4,8 +4,8 @@
 #          --export=ALL,SCRIPT="experiments/c_train_pi05.py --exp main --steps 30000 --batch 32" slurm/jobs/l90c_train.sbatch
 # Resumable: resubmit the same command (chain with --dependency=afterany:<job>).  sbatch splits --export on COMMAS.
 #SBATCH --job-name=l90c-train
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:4
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=240G
@@ -21,7 +21,7 @@ if [ "$NG" -lt 1 ]; then
   if [ "${SLURM_RESTART_COUNT:-0}" -lt 3 ]; then scontrol requeue $SLURM_JOB_ID; sleep 30; fi
   exit 97
 fi
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8 PYTHONUNBUFFERED=1
 export OPENPI_DATA_HOME=/coc/flash10/ksingara3/robot/openpi_cache
 export HF_HOME=/coc/flash10/ksingara3/robot/data/hf/home HF_LEROBOT_HOME=/coc/flash10/ksingara3/robot/data/hf/lerobot

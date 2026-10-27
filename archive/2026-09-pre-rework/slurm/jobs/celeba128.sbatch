@@ -1,14 +1,14 @@
 #!/bin/bash
 #SBATCH --job-name=lolceleb128
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=30:00:00
 #SBATCH --partition=overcap
 #SBATCH --account=overcap
 #SBATCH --requeue
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 # RETRAINED IN THE CORRECT LAYOUT.  The previous pair ran ~20 h each in the permuted layout,
 # which is the one RESULTS 30a shows produces a measurable seam at rows H/3 and 2H/3 (score
 # 2.509 against real data's 0.906).  n19 now defaults to --layout hwc and records it in the

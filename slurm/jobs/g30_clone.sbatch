@@ -1,7 +1,7 @@
 #!/bin/bash
 # Plan D2: clone the published baselines' code, each into its own directory under robot/ext (untrusted code: nothing is run).
 #SBATCH --job-name=g30clone
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --cpus-per-task=2
 #SBATCH --mem=8G
 #SBATCH --time=01:00:00

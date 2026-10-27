@@ -5,9 +5,9 @@ leave-one-out primitives fitted on the other tasks' demonstrations: plain (c0_fi
 The acceptance test keeps one of {policy, plain, binding-aware} per task."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
-plan = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/q28_plan.json"))
+plan = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/q28_plan.json"))
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="q28_bindprim", seed=10,
     metrics={"tasks": sorted(int(t) for t in plan), "plan": plan,

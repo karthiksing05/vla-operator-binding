@@ -35,7 +35,7 @@ if __name__ == "__main__":
     for k, v in res.items():
         print(f"{k:26} object {v['object']:5} target {v['target']:5} together {v['together']:4}  {v['grade']}")
     if "--record" in sys.argv:
-        sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+        sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
         from lifelong_ood import ledger
         print(ledger.record("x2_bridge_grades", bench="bridge_v2", tag="read", seed=0, metrics=dict(instructions=len(T), pairs=res),
                             bytes=dict(experts=0, tree=0, codes=0, samples=0, teacher_copies=0, total=0), config={},

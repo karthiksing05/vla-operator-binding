@@ -8,7 +8,7 @@ pair (object source, goal source; no new practice) and lambda is fixed at 24 for
 practice-chosen pair (lambda 24), and the practice-chosen pair switched at the grasp (G10's arm).  Start states set d (Li's 20
 tasks, 20 per task, BASE 700000, never used), noise seed 13, paired.  Also descriptive on set c: TLI with Li's pairs on pi0.5."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="g13_tli_sources", seed=13,

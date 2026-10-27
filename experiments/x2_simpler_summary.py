@@ -11,7 +11,7 @@ import json
 import os
 import re
 
-REPO = "/coc/flash10/ksingara3/lifelong-ood-learner"
+REPO = "/coc/flash10/ksingara3/vla-operator-binding"
 RES = f"{REPO}/results/x2_simpler"
 XV_TASKS = {"spoon": ("widowx_spoon_on_towel", 60), "carrot": ("widowx_carrot_on_plate", 60),
             "blocks": ("widowx_stack_cube", 60), "eggplant": ("widowx_put_eggplant_in_basket", 120)}

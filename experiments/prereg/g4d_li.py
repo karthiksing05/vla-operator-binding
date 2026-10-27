@@ -7,7 +7,7 @@ choices with ours: the sources (Li's hand-chosen pairs, their examples/libero/ma
 li_grasp, ours_fixed, on start states set c (20 per task), noise seed 13, on pi0 and pi0.5; ours_grasp and zero-shot are G4c's
 and G4b's recorded episodes on the same states and seed.  Unfiltered (no acceptance), as Li report."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="g4d_li", seed=13,

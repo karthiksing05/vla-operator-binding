@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --job-name=lolf11
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=05:00:00
 #SBATCH --partition=overcap
 #SBATCH --account=overcap
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8
 PY=$HOME/flash/miniconda3/envs/chunks/bin/python
 # F11 with the sample strip: the curves are an abstraction OF these images, so showing both lets a

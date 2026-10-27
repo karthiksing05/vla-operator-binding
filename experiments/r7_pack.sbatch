@@ -14,7 +14,7 @@ if ! nvidia-smi -L 2>/dev/null | grep -q "GPU "; then
   if [ "${SLURM_RESTART_COUNT:-0}" -lt 3 ]; then scontrol requeue $SLURM_JOB_ID; sleep 30; fi
   exit 97
 fi
-REPO=/coc/flash10/ksingara3/lifelong-ood-learner
+REPO=/coc/flash10/ksingara3/vla-operator-binding
 ROBOT=/coc/flash10/ksingara3/robot/openpi
 cd $REPO
 for v in $(env | grep -o '^SLURM_[A-Z_]*' | grep -v -E '^SLURM_(JOB_ID|RESTART_COUNT|CPUS_PER_TASK)$'); do unset $v; done

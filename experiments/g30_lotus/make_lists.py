@@ -9,7 +9,7 @@ import os
 import numpy as np
 import torch
 
-REPO = "/coc/flash10/ksingara3/lifelong-ood-learner"
+REPO = "/coc/flash10/ksingara3/vla-operator-binding"
 OUT = os.path.join(REPO, "results/robot/g30_lotus")
 spec = importlib.util.spec_from_file_location("m", "/coc/flash10/ksingara3/robot/work/lotus/lotus/libero/benchmark/libero_suite_task_map.py")
 m = importlib.util.module_from_spec(spec)

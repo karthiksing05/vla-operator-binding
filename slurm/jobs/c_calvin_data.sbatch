@@ -3,12 +3,12 @@
 # (experiments/c_calvin_extract.py); download mbreuss/flower_vla_pret into the HF cache.  CPU only; resumable (each step
 # skips finished output).
 #SBATCH --job-name=ccalvin-data
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/logs/%j_data.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/logs/%j_data.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/results/calvin_c/logs/%j_data.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/results/calvin_c/logs/%j_data.out
 #SBATCH --cpus-per-task=32
 #SBATCH --mem=64G
 set -u
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8 PYTHONUNBUFFERED=1 OMP_NUM_THREADS=1
 export HF_HOME=/coc/flash10/ksingara3/robot/data/hf/home HF_HUB_OFFLINE=0
 PY=/coc/flash10/ksingara3/robot/calvin/.venv/bin/python

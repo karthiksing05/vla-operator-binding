@@ -4,8 +4,8 @@
 # NPROC processes share one GPU, each a contiguous slice [START, END).
 #   sbatch ... --export=ALL,CKPT=<export dir>,OUT=<dir>,START=0,END=500,NPROC=5 slurm/jobs/c_flower_eval.sbatch
 #SBATCH --job-name=cflower-eval
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/logs/%j_eval.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/logs/%j_eval.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/results/calvin_c/logs/%j_eval.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/results/calvin_c/logs/%j_eval.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=96G
@@ -14,7 +14,7 @@ export PYTHONIOENCODING=utf-8 HYDRA_FULL_ERROR=1 TOKENIZERS_PARALLELISM=false WA
 export HF_HOME=/coc/flash10/ksingara3/robot/data/hf/home HF_HUB_OFFLINE=1
 export OMP_NUM_THREADS=2 MKL_NUM_THREADS=2
 PY=/coc/flash10/ksingara3/robot/calvin/.venv/bin/python
-REPO=/coc/flash10/ksingara3/lifelong-ood-learner
+REPO=/coc/flash10/ksingara3/vla-operator-binding
 FLOWER=/coc/flash10/ksingara3/robot/ext/flower_vla_calvin
 VAL=/coc/flash10/ksingara3/robot/calvin/task_ABC_D/validation
 CKPT=${CKPT:?}; OUT=${OUT:?}; START=${START:-0}; END=${END:-1000}; NPROC=${NPROC:-5}; EPLEN=${EPLEN:-360}

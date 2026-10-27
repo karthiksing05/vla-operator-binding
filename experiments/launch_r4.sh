@@ -4,10 +4,10 @@
 #   expert  (the folded expert switched on everywhere: what the gate buys)
 #   TASKS=39+35 TREE=results/robot/r2b_libero_40_tree.npz LIB=results/robot/r2b_libero_40.npz TRIALS=20 bash experiments/launch_r4.sh
 set -euo pipefail
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 TASKS=${TASKS:?}; TREE=${TREE:?}; LIB=${LIB:?}; TRIALS=${TRIALS:-20}; W0=${W0:-1.0}; SCHED=${SCHED:-const}; TVAR=${TVAR:-0.001}
 RANK=${RANK:-4}; STEPS=${STEPS:-1000}; TAG=${TAG:-}; FOLDARGS=${FOLDARGS:-}; EXP=${EXP:-m4_fold}; FIRST=${FIRST:-0}
-R=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot
+R=/coc/flash10/ksingara3/vla-operator-binding/results/robot
 for tid in ${TASKS//+/ }; do
   f=$(sbatch --parsable --partition=tail-lab --account=tail-lab --export=ALL,ENV=openpi,SCRIPT="experiments/r4_fold.py --task $tid --tree $TREE --library $LIB --rank $RANK --steps $STEPS --tag $TAG $FOLDARGS" slurm/jobs/robot_gpu.sbatch)
   echo "task $tid fold -> job $f"

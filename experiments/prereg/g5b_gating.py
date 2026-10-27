@@ -2,7 +2,7 @@
 (experiments/g5b_gating.py).  E3's library on the stream's 30 tasks with both prototypes on for the whole episode, against E3's
 gated runs (object until the policy's grasp, goal after it), at E3's fresh start states (set b) and noise seed 13; no acceptance."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g5b_gating", seed=13,

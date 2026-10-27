@@ -3,7 +3,7 @@
 #   MODEL=RLinf/RLinf-Pi05-LIBERO-SFT CFG=libero_spatial_openpi_pi05_eval NENV=50 EPOCHS=2
 # HOME redirected (the installer and LIBERO write config / caches under it); the user's ~/.libero stays untouched.
 #SBATCH --job-name=g30rlpar
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=96G

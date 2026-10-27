@@ -3,7 +3,7 @@ any of the U1 segmentation outcome on these tasks' rollouts.  The zero-fine-tune
 goal are both held as words in pi0.5's 40 training instructions, held pointers switched at the grasp, sources chosen by the demo's
 flow loss (the demo is a query only), nothing fitted.  Set d, 20 per task, noise seed 13 (experiments/z3_l90_pointers.py)."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="z3_l90_pointers", seed=13,

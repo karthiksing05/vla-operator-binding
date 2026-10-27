@@ -1,17 +1,17 @@
 #!/bin/bash
 # CALVIN-C P1 throughput diagnosis 2: s/step (log every 10 steps) per setting; one line per setting summarised.
 #SBATCH --job-name=cflower-diag2
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/logs/%j_diag2.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/logs/%j_diag2.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/results/calvin_c/logs/%j_diag2.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/results/calvin_c/logs/%j_diag2.out
 #SBATCH --gres=gpu:a40:4
 #SBATCH --cpus-per-task=40
 #SBATCH --mem=240G
 set -u
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8 PYTHONUNBUFFERED=1 HYDRA_FULL_ERROR=1 WANDB_MODE=disabled OMP_NUM_THREADS=2 MKL_NUM_THREADS=2
 export HF_HOME=/coc/flash10/ksingara3/robot/data/hf/home HF_HUB_OFFLINE=1
 PY=/coc/flash10/ksingara3/robot/calvin/.venv/bin/python
-D=/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c
+D=/coc/flash10/ksingara3/vla-operator-binding/results/calvin_c
 nvidia-smi topo -m | head -6
 run() { # name devices batch find_unused [env]
   R=$D/diag2_$1; rm -rf $R

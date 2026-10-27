@@ -1,14 +1,14 @@
 #!/bin/bash
 #SBATCH --job-name=loln4k
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%A_%a.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%A_%a.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%A_%a.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%A_%a.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=06:00:00
 #SBATCH --partition=overcap
 #SBATCH --account=overcap
 #SBATCH --array=0-14
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8
 KS=(1 2 4 8 12)
 K=${KS[$((SLURM_ARRAY_TASK_ID % 5))]}

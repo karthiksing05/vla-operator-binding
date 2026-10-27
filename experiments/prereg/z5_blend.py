@@ -1,7 +1,7 @@
 """Pre-registration of plan Z's read Z5 (ledger m3_prereg tag z5_blend), written after the offline blend read (ledger zi_blend
 tag read: held-out flow loss only) and before any Z5 episode.  experiments/z5_blend.py."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="z5_blend", seed=13,

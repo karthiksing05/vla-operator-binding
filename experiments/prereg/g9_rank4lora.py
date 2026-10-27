@@ -1,7 +1,7 @@
 """Pre-registration of plan G's read G9 (ledger m3_prereg tag g9_rank4lora), written before its fits and episodes
 (experiments/g9_rank4lora.py): a rank-4 per-task one-demo LoRA with the acceptance test on E3's 29 tasks, against E3's library."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g9_rank4lora", seed=13,

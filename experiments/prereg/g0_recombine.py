@@ -8,9 +8,9 @@ mono (the fold's monolithic LoRA); lora (per-task LoRA on the task's own demonst
 Acceptance on stored states 0-9 (10 episodes, seed 15); test on 20 fresh start states per task (set b), seed 15."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
-pl = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g0_plan.json"))
+pl = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/g0_plan.json"))
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g0_recombine", seed=15,
     metrics={"plan": pl, "eligible": sorted(int(t) for t, v in pl["tasks"].items() if v["eligible"]),

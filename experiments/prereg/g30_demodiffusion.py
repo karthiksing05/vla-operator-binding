@@ -3,7 +3,7 @@ one demonstration's chunk at s* = 0.2 through the frozen pi0.5, 20 integration s
 own-scene demonstration, r3_prepare --tag _lib40g30; arm demodiff@g30).  The M3-era read (36 of 420) used the pre-2026-10-04
 demonstrations and other tasks.  Re-run by the user's decision 7 (2026-10-20).  Written before any G30d episode."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g30_demodiffusion", seed=13,

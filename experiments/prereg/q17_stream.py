@@ -3,10 +3,10 @@ LIBERO-90 tasks with a moved object arrive one at a time; a demonstration is req
 the acceptance test keeps a library form or the policy alone (experiments/q17_stream.py; plan in results/robot/q17_plan.json)."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
-plan = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/q17_plan.json"))
+plan = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/q17_plan.json"))
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="q17_stream", seed=3,
     metrics={

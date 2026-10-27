@@ -1,7 +1,7 @@
 """Pre-registration of the Bind plan's offline probes Q1a (where) and Q1b (does the bias turn the first chunk), ledger
 m3_prereg tag b_bind_q1, written before either probe ran on any frame."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 from lifelong_ood.policy import factors as F
 

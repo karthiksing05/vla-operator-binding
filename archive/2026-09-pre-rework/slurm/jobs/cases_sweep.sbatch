@@ -1,14 +1,14 @@
 #!/bin/bash
 #SBATCH --job-name=lolcasesw
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%A_%a.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%A_%a.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%A_%a.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%A_%a.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=6
 #SBATCH --time=08:00:00
 #SBATCH --partition=overcap
 #SBATCH --account=overcap
 #SBATCH --array=0-2
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 # NOTE: do NOT pass --guidance here.  Its default of 1.5 is what n9's label-free
 # calibration selects on this backbone, and the tables use it.  These scripts previously
 # passed --guidance 2.0, which over-guides the DISTILLATION POOL that `ours` learns from

@@ -22,7 +22,7 @@ import hashlib
 import json
 import os
 import sys
-ROOT = "/coc/flash10/ksingara3/lifelong-ood-learner"
+ROOT = "/coc/flash10/ksingara3/vla-operator-binding"
 sys.path.insert(0, ROOT)
 from lifelong_ood import ledger
 

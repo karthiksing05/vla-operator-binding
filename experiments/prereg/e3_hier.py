@@ -9,9 +9,9 @@ states (results/robot/fresh_states_b: LIBERO's placement sampler at seeds 200000
 seed 13 (e3_main)."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
-plan = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/e3_plan.json"))
+plan = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/e3_plan.json"))
 protos = sorted({v["object_proto"] for v in plan.values()} | {v["goal_proto"] for v in plan.values()})
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="e3_hier", seed=13,

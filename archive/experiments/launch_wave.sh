@@ -7,9 +7,9 @@
 #   TASKS=35+36 SKIP_PREP=1 PRACTICE=0 ARMS="leaf_s5 leaffold_s1_last2 shared_s1" bash experiments/launch_wave.sh   (extra arms)
 #   leaf_* = borrowing from the policy's own chunk means (the marginal's components, r9 "leaf"); shared_* = the t = 0.4 level alone
 set -euo pipefail
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 TASKS=${TASKS:?}; NICE=${NICE:-0}; ARMS=${ARMS:-"zeroshot raw_replay dimcode_s5 dimcode_s1 dimfold_s1_last2 lora"}
-R=/coc/flash10/ksingara3/lifelong-ood-learner/results/robot
+R=/coc/flash10/ksingara3/vla-operator-binding/results/robot
 PY=~/flash/miniconda3/envs/chunks/bin/python
 C="w0=1.0&sched=const&var=0.001&key=pose&stall=3"
 for tid in ${TASKS//+/ }; do

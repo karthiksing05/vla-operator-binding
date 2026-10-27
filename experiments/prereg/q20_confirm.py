@@ -3,7 +3,7 @@ the acceptance test.  A form kept on init states 0-9 is stored only if it again 
 10-19 (10 episodes each, noise seed 5, experiment q20_confirm); otherwise the policy is kept.  The q20_main test episodes (init
 states 30-49) are reused: a dropped form is scored by the zero-shot episodes."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
 print(ledger.record(

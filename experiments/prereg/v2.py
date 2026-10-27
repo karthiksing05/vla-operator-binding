@@ -1,6 +1,6 @@
 """Pre-registration of the v2 read (archive/2026-10-program/PLAN_TRANSFER.md, after P6): the phase rules v2 and their generator."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
 print(ledger.record(

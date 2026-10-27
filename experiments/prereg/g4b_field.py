@@ -6,7 +6,7 @@ grasp and under the goal concept's from the grasp to the release (arm pfield).  
 keeps the best of {policy, prototype composition, policy-field composition}, ties to the policy then the prototypes; test on a
 NEW set c (LIBERO's sampler, seeds 500000+, 20 per task), noise seed 13, Li's modified LIBERO."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="g4b_field", seed=13,

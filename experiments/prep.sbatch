@@ -4,8 +4,8 @@
 #   -> r4_fold (the 258 KB last2 fold on the approach / contact windows; only if the demo grasps) -> r3_fewshot (LoRA rank 16)
 #   sbatch --export=ALL,TID=37,FOLD=1 experiments/prep.sbatch
 #SBATCH --job-name=lolprep
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=48G
@@ -21,7 +21,7 @@ if ! nvidia-smi -L 2>/dev/null | grep -q "GPU "; then
   exit 97
 fi
 set -eo pipefail
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8 PYTHONUNBUFFERED=1
 export OPENPI_DATA_HOME=/coc/flash10/ksingara3/robot/openpi_cache
 export HF_HOME=/coc/flash10/ksingara3/robot/data/hf/home HF_LEROBOT_HOME=/coc/flash10/ksingara3/robot/data/hf/lerobot

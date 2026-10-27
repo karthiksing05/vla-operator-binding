@@ -5,9 +5,9 @@ experiments/g4_ood.py's rule (exact, else content-word Jaccard >= 0.5); acceptan
 seeds 300000+), test on set b (20 per task, seeds 400000+), noise seed 13, Li's modified LIBERO, 300 steps."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
-pl = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/g4_plan.json"))
+pl = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/g4_plan.json"))
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="g4_ood", seed=13,
     metrics={"plan": pl,

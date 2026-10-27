@@ -5,8 +5,8 @@
 #          --export=ALL,SCRIPT="experiments/c_data.py --fetch-base" slurm/jobs/l90c_cpu.sbatch
 # sbatch splits --export on COMMAS: pass lists with colons.
 #SBATCH --job-name=l90c-cpu
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=64G
 #SBATCH --time=04:00:00
@@ -15,7 +15,7 @@
 #SBATCH --qos=short
 #SBATCH --requeue
 #SBATCH --open-mode=append
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8 PYTHONUNBUFFERED=1
 export OPENPI_DATA_HOME=/coc/flash10/ksingara3/robot/openpi_cache
 export HF_HOME=/coc/flash10/ksingara3/robot/data/hf/home HF_LEROBOT_HOME=/coc/flash10/ksingara3/robot/data/hf/lerobot

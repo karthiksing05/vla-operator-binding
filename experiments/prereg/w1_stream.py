@@ -6,9 +6,9 @@ its one demonstration, which refits every concept on its path, and keeps the ref
 Served at the end: the final library's composition where kept, else the policy; tested on E3's fresh start states (set b), seed 13."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
-st = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/w1_state.json"))
+st = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/w1_state.json"))
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="w1_stream", seed=13,
     metrics={"orders": {o: st[o]["order"] for o in ("a", "b")}, "theta": 8,

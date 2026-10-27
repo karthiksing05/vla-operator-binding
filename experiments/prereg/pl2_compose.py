@@ -43,7 +43,7 @@ rand, pos.
   first grasp); the per-repair source sentence, layer span and the action-mode change (endpoint, nearest object, gripper timing;
   lifelong_ood/protos/store.py interpret) at demo-1 frames."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_ood", tag="pl2_compose", seed=13,

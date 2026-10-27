@@ -2,7 +2,7 @@
 (experiments/g5c_rank.py).  E3's 22 prototypes refit at rank 8 and rank 16 (otherwise E3's fit commands, read from the ledger);
 acceptance on stored states 0-9 and test on E3's fresh set b at noise seed 13, paired with E3's episodes."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g5c_rank", seed=13,

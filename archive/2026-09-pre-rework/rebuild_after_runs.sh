@@ -7,7 +7,7 @@
 # re-aliasing leaves the plain names pointing at whatever last wrote them, and test_claims will
 # happily pass against a stale aggregate either way.
 set -u
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8
 PY=$HOME/flash/miniconda3/envs/chunks/bin/python
 

@@ -8,9 +8,9 @@ scheme keeps the best of {zs, goal, goal_bind} (ties: zs, then goal); the baseli
 on the 20 fresh start states per task, noise seed 11 (experiment d1_main)."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
-plan = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/d1_plan.json"))
+plan = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/d1_plan.json"))
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="d1_factored", seed=11,
     metrics={"tasks": sorted(int(t) for t in plan), "plan": plan,

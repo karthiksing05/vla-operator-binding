@@ -3,13 +3,13 @@
 # wall budget, checkpoints, and (if not finished and it advanced) resubmits itself with CHAIN-1.
 #   sbatch ... --export=ALL,RUN=<dir>,SEED=0,FULL=0,CHAIN=6 slurm/jobs/c_train_flower.sbatch
 #SBATCH --job-name=cflower
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/logs/%j_train.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/results/calvin_c/logs/%j_train.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/results/calvin_c/logs/%j_train.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/results/calvin_c/logs/%j_train.out
 #SBATCH --gres=gpu:a40:4
 #SBATCH --cpus-per-task=40
 #SBATCH --mem=240G
 set -u
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8 PYTHONUNBUFFERED=1 HYDRA_FULL_ERROR=1 WANDB_MODE=disabled OMP_NUM_THREADS=2 MKL_NUM_THREADS=2
 export HF_HOME=/coc/flash10/ksingara3/robot/data/hf/home HF_HUB_OFFLINE=1 NCCL_P2P_LEVEL=SYS
 PY=/coc/flash10/ksingara3/robot/calvin/.venv/bin/python

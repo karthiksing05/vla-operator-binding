@@ -1,7 +1,7 @@
 """Amendment to the pi0 generality pre-registration (ledger m3_prereg tag pi0_generality_amend1), written before any pi0 rollout at init
 states 30-49: the smoke test found that pi0_libero's actions are state-relative, so the decoder and the guide both apply that transform."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
 print(ledger.record(

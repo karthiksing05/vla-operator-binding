@@ -3,7 +3,7 @@ task's one own-scene demonstration (experiments/g30_baselines.py full; r3_fewsho
 with E3's acceptance test.  Written after the stage-1 fits (all 29 tasks fitted) and before any episode on set b; the user approved stage 1
 (2026-10-20; whole-model full SFT skipped by decision, the action-expert full SFT stands)."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="g30_full_sft", seed=13,

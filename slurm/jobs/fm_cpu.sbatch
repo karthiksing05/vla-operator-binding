@@ -4,8 +4,8 @@
 #   sbatch --wait -p tail-lab -A tail-lab --qos=short --exclude=... --export=ALL,SCRIPT="experiments/fm_types.py --axes" slurm/jobs/fm_cpu.sbatch
 # sbatch splits --export on COMMAS: pass lists with + or colons.
 #SBATCH --job-name=fmcpu
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --cpus-per-task=4
 #SBATCH --mem=16G
 #SBATCH --time=01:00:00
@@ -13,7 +13,7 @@
 #SBATCH --account=tail-lab
 #SBATCH --qos=short
 #SBATCH --open-mode=append
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 export PYTHONIOENCODING=utf-8 PYTHONUNBUFFERED=1 OMP_NUM_THREADS=2 MKL_NUM_THREADS=2
 ROBOT=/coc/flash10/ksingara3/robot/openpi
 export PYTHONPATH=${PYTHONPATH:-}:$ROBOT/third_party/libero

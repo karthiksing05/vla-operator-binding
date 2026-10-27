@@ -9,10 +9,10 @@ init states 0-9, 10 episodes, noise seed 12 (experiment e1_accept): the scheme k
 lora only if it beats zs.  Test: all arms on the 20 fresh start states per task, noise seed 12 (experiment e1_main)."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 from lifelong_ood.policy import data as D
-plan = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/e1_plan.json"))
+plan = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/e1_plan.json"))
 d90 = D.Demos90()
 donors = sorted({t for v in plan.values() for t in v["obj_tasks"] + v["goal_tasks"] if d90.episodes_of_task(t)})
 protos = sorted({v["obj_name"] for v in plan.values()} | {v["goal_name"] for v in plan.values()})

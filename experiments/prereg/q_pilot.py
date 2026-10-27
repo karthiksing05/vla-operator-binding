@@ -1,7 +1,7 @@
 """Pre-registration of the prototype-PoE pilot P3 (ledger m3_prereg tag q_pilot), written before any of its episodes, with the
 revision P0's kill rule required."""
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
 print(ledger.record(

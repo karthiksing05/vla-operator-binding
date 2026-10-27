@@ -1,7 +1,7 @@
 #!/bin/bash
 #SBATCH --job-name=lolroll
-#SBATCH --output=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
-#SBATCH --error=/coc/flash10/ksingara3/lifelong-ood-learner/slurm/%j.out
+#SBATCH --output=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
+#SBATCH --error=/coc/flash10/ksingara3/vla-operator-binding/slurm/%j.out
 #SBATCH --gres=gpu:a40:1
 #SBATCH --cpus-per-task=8
 #SBATCH --mem=48G
@@ -11,7 +11,7 @@
 #SBATCH --qos=short
 #SBATCH --requeue
 #SBATCH --open-mode=append
-cd /coc/flash10/ksingara3/lifelong-ood-learner
+cd /coc/flash10/ksingara3/vla-operator-binding
 mkdir -p results/robot
 echo "[roll] $(date) on $(hostname): $(nvidia-smi --query-gpu=name --format=csv,noheader | head -1)"
 MODE=${MODE:-openpi} bash experiments/r1_rollout_pi05.sh ${SUITE:-libero_goal} ${TRIALS:-10}

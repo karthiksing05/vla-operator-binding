@@ -25,7 +25,7 @@ from multiprocessing import Pool
 
 import numpy as np
 
-REPO = "/coc/flash10/ksingara3/lifelong-ood-learner"
+REPO = "/coc/flash10/ksingara3/vla-operator-binding"
 R = os.path.join(REPO, "results", "robot")
 TASKS = "35+36+39+42+1+6+34+37+40+52+53+62+3+4+5+32+41+43+48+58+63"
 spec = importlib.util.spec_from_file_location("p3", os.path.join(REPO, "experiments", "p3_compose_sim.py"))

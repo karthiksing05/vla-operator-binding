@@ -4,10 +4,10 @@ shared by >= 3 OTHER LIBERO-90 tasks gets one rank-16 primitive fitted jointly o
 task's own demo never enters); other steps run the policy itself.  The acceptance test keeps the primitive arm or the policy."""
 import json
 import sys
-sys.path.insert(0, "/coc/flash10/ksingara3/lifelong-ood-learner")
+sys.path.insert(0, "/coc/flash10/ksingara3/vla-operator-binding")
 from lifelong_ood import ledger
 
-plan = json.load(open("/coc/flash10/ksingara3/lifelong-ood-learner/results/robot/q27_plan.json"))
+plan = json.load(open("/coc/flash10/ksingara3/vla-operator-binding/results/robot/q27_plan.json"))
 print(ledger.record(
     "m3_prereg", bench="libero_90", tag="q27_joint", seed=7,
     metrics={
